@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Godot
+.godot/
+*.import
+*.uid
+
+# Output
+output/
+
+# Reference files
+ytref
+
+# Claude - ignore subdirectory CLAUDE.md, allow root
+**/CLAUDE.md
+!/CLAUDE.md
+
+# Worktrees
+.worktrees/
+
+# OS
+.DS_Store
