@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqxmr8j4yl5c3"]
+
+[ext_resource type="Script" path="res://tools/avatar_composer/avatar_composer.gd" id="1_avatar"]
+
+[node name="AvatarComposer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_avatar")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ViewportContainer" type="SubViewportContainer" parent="HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HSplitContainer/ViewportContainer"]
+handle_input_locally = false
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="HSplitContainer/ViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1.5, 3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="HSplitContainer/ViewportContainer/SubViewport"]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 3, 0)
+
+[node name="AvatarRoot" type="Node3D" parent="HSplitContainer/ViewportContainer/SubViewport"]
+
+[node name="PanelContainer" type="PanelContainer" parent="HSplitContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GenderLabel" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Gender"
+
+[node name="GenderSelect" type="OptionButton" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PartsLabel" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Body Parts"
+
+[node name="PartsList" type="VBoxContainer" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnimationLabel" type="Label" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Animation"
+
+[node name="AnimationSelect" type="OptionButton" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="HSplitContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RandomizeButton" type="Button" parent="HSplitContainer/PanelContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Randomize"
+
+[node name="ResetButton" type="Button" parent="HSplitContainer/PanelContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Reset"

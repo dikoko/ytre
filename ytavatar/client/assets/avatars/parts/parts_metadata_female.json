@@ -1,0 +1,4311 @@
+{
+  "parts": {
+    "female_hair_F0101": {
+      "type": "hair",
+      "vertices": 418,
+      "region_counts": {
+        "head": 418
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0102": {
+      "type": "hair",
+      "vertices": 418,
+      "region_counts": {
+        "head": 418
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0103": {
+      "type": "hair",
+      "vertices": 418,
+      "region_counts": {
+        "head": 418
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0201": {
+      "type": "hair",
+      "vertices": 320,
+      "region_counts": {
+        "head": 320
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0202": {
+      "type": "hair",
+      "vertices": 320,
+      "region_counts": {
+        "head": 320
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0203": {
+      "type": "hair",
+      "vertices": 320,
+      "region_counts": {
+        "head": 320
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0301": {
+      "type": "hair",
+      "vertices": 219,
+      "region_counts": {
+        "head": 219
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0302": {
+      "type": "hair",
+      "vertices": 219,
+      "region_counts": {
+        "head": 219
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0303": {
+      "type": "hair",
+      "vertices": 219,
+      "region_counts": {
+        "head": 219
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0401": {
+      "type": "hair",
+      "vertices": 185,
+      "region_counts": {
+        "head": 185
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0402": {
+      "type": "hair",
+      "vertices": 185,
+      "region_counts": {
+        "head": 185
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0403": {
+      "type": "hair",
+      "vertices": 185,
+      "region_counts": {
+        "head": 185
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0501": {
+      "type": "hair",
+      "vertices": 199,
+      "region_counts": {
+        "head": 199
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0502": {
+      "type": "hair",
+      "vertices": 199,
+      "region_counts": {
+        "head": 199
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0503": {
+      "type": "hair",
+      "vertices": 199,
+      "region_counts": {
+        "head": 199
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0601": {
+      "type": "hair",
+      "vertices": 193,
+      "region_counts": {
+        "head": 193
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0602": {
+      "type": "hair",
+      "vertices": 193,
+      "region_counts": {
+        "head": 193
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0603": {
+      "type": "hair",
+      "vertices": 193,
+      "region_counts": {
+        "head": 193
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0701": {
+      "type": "hair",
+      "vertices": 255,
+      "region_counts": {
+        "head": 255
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0702": {
+      "type": "hair",
+      "vertices": 255,
+      "region_counts": {
+        "head": 255
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0703": {
+      "type": "hair",
+      "vertices": 255,
+      "region_counts": {
+        "head": 255
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0801": {
+      "type": "hair",
+      "vertices": 428,
+      "region_counts": {
+        "head": 428
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0802": {
+      "type": "hair",
+      "vertices": 428,
+      "region_counts": {
+        "head": 428
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0803": {
+      "type": "hair",
+      "vertices": 428,
+      "region_counts": {
+        "head": 428
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0901": {
+      "type": "hair",
+      "vertices": 366,
+      "region_counts": {
+        "head": 366
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0902": {
+      "type": "hair",
+      "vertices": 366,
+      "region_counts": {
+        "head": 366
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_hair_F0903": {
+      "type": "hair",
+      "vertices": 366,
+      "region_counts": {
+        "head": 366
+      },
+      "hides_regions": [
+        "hair_strands"
+      ]
+    },
+    "female_upper_F0001": {
+      "type": "upper",
+      "vertices": 401,
+      "region_counts": {
+        "torso": 234,
+        "arm_upper": 124,
+        "neck": 16,
+        "head": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0002": {
+      "type": "upper",
+      "vertices": 487,
+      "region_counts": {
+        "torso": 291,
+        "arm_upper": 88,
+        "waist": 16,
+        "forearm": 60,
+        "neck": 26,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0003": {
+      "type": "upper",
+      "vertices": 583,
+      "region_counts": {
+        "torso": 234,
+        "arm_upper": 156,
+        "neck": 17,
+        "head": 6,
+        "forearm": 104
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0008": {
+      "type": "upper",
+      "vertices": 332,
+      "region_counts": {
+        "torso": 166,
+        "neck": 10,
+        "head": 6,
+        "arm_upper": 120,
+        "forearm": 30
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        16,
+        19,
+        27,
+        28,
+        107,
+        110
+      ],
+      "hides_arm_vertices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        17,
+        18,
+        20,
+        22,
+        26,
+        28
+      ]
+    },
+    "female_upper_F0009": {
+      "type": "upper",
+      "vertices": 346,
+      "region_counts": {
+        "torso": 127,
+        "arm_upper": 144,
+        "neck": 12,
+        "forearm": 30,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        22,
+        23,
+        25,
+        27,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "female_upper_F0011": {
+      "type": "upper",
+      "vertices": 240,
+      "region_counts": {
+        "torso": 112,
+        "head": 6,
+        "neck": 6,
+        "arm_upper": 89
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        21,
+        22,
+        113,
+        114,
+        119,
+        120,
+        121,
+        122,
+        123
+      ]
+    },
+    "female_upper_F0012": {
+      "type": "upper",
+      "vertices": 441,
+      "region_counts": {
+        "torso": 228,
+        "arm_upper": 68,
+        "forearm": 76,
+        "head": 9,
+        "neck": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0013": {
+      "type": "upper",
+      "vertices": 395,
+      "region_counts": {
+        "torso": 165,
+        "neck": 23,
+        "arm_upper": 70,
+        "forearm": 78,
+        "head": 9
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0016": {
+      "type": "upper",
+      "vertices": 365,
+      "region_counts": {
+        "torso": 270,
+        "arm_upper": 61,
+        "head": 8,
+        "neck": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F0018": {
+      "type": "upper",
+      "vertices": 444,
+      "region_counts": {
+        "torso": 150,
+        "arm_upper": 210,
+        "head": 6,
+        "neck": 6,
+        "forearm": 38
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        5,
+        6,
+        7,
+        25
+      ]
+    },
+    "female_upper_F0019": {
+      "type": "upper",
+      "vertices": 502,
+      "region_counts": {
+        "torso": 274,
+        "arm_upper": 122,
+        "head": 6,
+        "neck": 14,
+        "forearm": 86
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        68,
+        69,
+        80,
+        85,
+        96,
+        97,
+        99,
+        102,
+        103,
+        106,
+        108
+      ]
+    },
+    "female_upper_F0023": {
+      "type": "upper",
+      "vertices": 418,
+      "region_counts": {
+        "torso": 288,
+        "arm_upper": 114,
+        "head": 8,
+        "neck": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        24,
+        25,
+        26,
+        33,
+        38,
+        39
+      ]
+    },
+    "female_upper_F0025": {
+      "type": "upper",
+      "vertices": 380,
+      "region_counts": {
+        "torso": 210,
+        "arm_upper": 120,
+        "head": 6,
+        "neck": 6,
+        "forearm": 38
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        39,
+        42,
+        73,
+        76,
+        89,
+        92,
+        95,
+        101,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    "female_upper_F0026": {
+      "type": "upper",
+      "vertices": 390,
+      "region_counts": {
+        "torso": 226,
+        "arm_upper": 131,
+        "head": 6,
+        "neck": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        20,
+        21,
+        24,
+        27
+      ]
+    },
+    "female_upper_F0031": {
+      "type": "upper",
+      "vertices": 271,
+      "region_counts": {
+        "arm_upper": 67,
+        "head": 6,
+        "torso": 192,
+        "neck": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    "female_upper_F0032": {
+      "type": "upper",
+      "vertices": 418,
+      "region_counts": {
+        "torso": 310,
+        "arm_upper": 92,
+        "neck": 8,
+        "head": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        91,
+        92,
+        93,
+        96,
+        101
+      ],
+      "hides_arm_vertices": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        48,
+        49,
+        50
+      ]
+    },
+    "female_upper_F1002": {
+      "type": "upper",
+      "vertices": 383,
+      "region_counts": {
+        "torso": 192,
+        "arm_upper": 80,
+        "forearm": 49,
+        "neck": 18,
+        "waist": 37,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F1009": {
+      "type": "upper",
+      "vertices": 367,
+      "region_counts": {
+        "torso": 131,
+        "arm_upper": 155,
+        "forearm": 42,
+        "head": 6,
+        "neck": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        22,
+        23,
+        25,
+        27,
+        31,
+        33,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "female_upper_F1012": {
+      "type": "upper",
+      "vertices": 315,
+      "region_counts": {
+        "torso": 138,
+        "waist": 14,
+        "arm_upper": 94,
+        "forearm": 54,
+        "head": 6,
+        "neck": 9
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F1013": {
+      "type": "upper",
+      "vertices": 360,
+      "region_counts": {
+        "torso": 159,
+        "arm_upper": 75,
+        "forearm": 73,
+        "neck": 6,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F1014": {
+      "type": "upper",
+      "vertices": 604,
+      "region_counts": {
+        "torso": 220,
+        "arm_upper": 132,
+        "forearm": 60,
+        "head": 6,
+        "neck": 7,
+        "waist": 179
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        24,
+        25,
+        26,
+        29,
+        33,
+        34
+      ]
+    },
+    "female_upper_F1016": {
+      "type": "upper",
+      "vertices": 391,
+      "region_counts": {
+        "torso": 256,
+        "arm_upper": 111,
+        "neck": 18,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "hides_arm_vertices": [
+        10,
+        11,
+        17,
+        21
+      ]
+    },
+    "female_upper_F1018": {
+      "type": "upper",
+      "vertices": 284,
+      "region_counts": {
+        "torso": 151,
+        "waist": 27,
+        "head": 6,
+        "neck": 6,
+        "arm_upper": 94
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        23,
+        24,
+        124,
+        125
+      ],
+      "hides_arm_vertices": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "female_upper_F1021": {
+      "type": "upper",
+      "vertices": 571,
+      "region_counts": {
+        "torso": 309,
+        "neck": 9,
+        "arm_upper": 145,
+        "waist": 54,
+        "forearm": 48,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "female_upper_F1026": {
+      "type": "upper",
+      "vertices": 525,
+      "region_counts": {
+        "torso": 208,
+        "arm_upper": 180,
+        "head": 6,
+        "neck": 6,
+        "waist": 125
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        103,
+        104,
+        107,
+        108
+      ]
+    },
+    "female_upper_F1029": {
+      "type": "upper",
+      "vertices": 276,
+      "region_counts": {
+        "torso": 164,
+        "arm_upper": 100,
+        "head": 6,
+        "neck": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ]
+    },
+    "female_upper_F1031": {
+      "type": "upper",
+      "vertices": 327,
+      "region_counts": {
+        "arm_upper": 99,
+        "head": 6,
+        "torso": 154,
+        "neck": 6,
+        "waist": 27,
+        "forearm": 35
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_upper_vertices": [
+        4,
+        5,
+        6,
+        7,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ],
+      "hides_arm_vertices": [
+        36,
+        37
+      ]
+    },
+    "female_upper_F1032": {
+      "type": "upper",
+      "vertices": 344,
+      "region_counts": {
+        "torso": 171,
+        "arm_upper": 139,
+        "neck": 8,
+        "head": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        14,
+        15,
+        16,
+        19,
+        26,
+        28,
+        29,
+        34,
+        36,
+        37,
+        38
+      ]
+    },
+    "female_upper_F9002": {
+      "type": "upper",
+      "vertices": 347,
+      "region_counts": {
+        "torso": 224,
+        "arm_upper": 100,
+        "waist": 7,
+        "head": 8,
+        "neck": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "neck",
+        "torso"
+      ],
+      "hides_arm_vertices": [
+        38,
+        39,
+        40,
+        47,
+        52,
+        53
+      ]
+    },
+    "female_lower_F0001": {
+      "type": "lower",
+      "vertices": 249,
+      "region_counts": {
+        "leg_upper": 62,
+        "waist": 156,
+        "torso": 30
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        89,
+        90,
+        91,
+        102,
+        115,
+        116,
+        123,
+        124
+      ],
+      "hides_arm_vertices": [
+        18,
+        19,
+        20,
+        21,
+        27,
+        28,
+        32,
+        41,
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    "female_lower_F0002": {
+      "type": "lower",
+      "vertices": 244,
+      "region_counts": {
+        "waist": 145,
+        "leg_upper": 66,
+        "torso": 32
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        54,
+        55,
+        62,
+        63,
+        76,
+        77,
+        82,
+        88,
+        90,
+        91,
+        92,
+        101,
+        102,
+        108,
+        114,
+        122,
+        123,
+        124,
+        129
+      ],
+      "hides_arm_vertices": [
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        20,
+        21,
+        50
+      ]
+    },
+    "female_lower_F0003": {
+      "type": "lower",
+      "vertices": 491,
+      "region_counts": {
+        "waist": 361,
+        "torso": 66,
+        "leg_upper": 63
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        10,
+        13,
+        21,
+        22,
+        23,
+        24,
+        25,
+        35,
+        38,
+        51,
+        60
+      ]
+    },
+    "female_lower_F0008": {
+      "type": "lower",
+      "vertices": 171,
+      "region_counts": {
+        "waist": 55,
+        "leg_upper": 104,
+        "torso": 12
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        17,
+        18,
+        50,
+        51,
+        52,
+        53,
+        54,
+        84,
+        85,
+        89,
+        90,
+        92,
+        93,
+        94,
+        95,
+        127,
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1,
+        27,
+        28,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38
+      ]
+    },
+    "female_lower_F0009": {
+      "type": "lower",
+      "vertices": 227,
+      "region_counts": {
+        "torso": 36,
+        "waist": 31,
+        "leg_upper": 144,
+        "leg_lower": 15
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        16,
+        17,
+        46,
+        47,
+        48,
+        49,
+        50,
+        90,
+        91,
+        92,
+        96,
+        98,
+        99,
+        100,
+        101
+      ]
+    },
+    "female_lower_F0011": {
+      "type": "lower",
+      "vertices": 194,
+      "region_counts": {
+        "waist": 53,
+        "leg_upper": 127,
+        "torso": 14
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        13,
+        14,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        80,
+        84,
+        85,
+        86,
+        90,
+        91,
+        92
+      ],
+      "hides_arm_vertices": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        41,
+        45,
+        46,
+        47,
+        51,
+        52,
+        53
+      ]
+    },
+    "female_lower_F0012": {
+      "type": "lower",
+      "vertices": 256,
+      "region_counts": {
+        "waist": 25,
+        "leg_upper": 63,
+        "torso": 12,
+        "leg_lower": 104
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        33,
+        34,
+        39,
+        44,
+        47,
+        48,
+        51
+      ],
+      "hides_arm_vertices": [
+        27,
+        28,
+        33,
+        36,
+        39
+      ]
+    },
+    "female_lower_F0016": {
+      "type": "lower",
+      "vertices": 183,
+      "region_counts": {
+        "waist": 63,
+        "leg_upper": 108,
+        "torso": 12
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        15,
+        16,
+        52,
+        53,
+        54,
+        55,
+        56,
+        89,
+        90,
+        94,
+        95,
+        97,
+        98,
+        99,
+        100
+      ],
+      "hides_arm_vertices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        39,
+        40,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "female_lower_F0018": {
+      "type": "lower",
+      "vertices": 217,
+      "region_counts": {
+        "waist": 114,
+        "leg_upper": 91,
+        "torso": 12
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        12,
+        13,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "hides_arm_vertices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "female_lower_F0019": {
+      "type": "lower",
+      "vertices": 202,
+      "region_counts": {
+        "waist": 136,
+        "leg_upper": 50,
+        "torso": 12
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        22,
+        23,
+        26,
+        27,
+        32,
+        33,
+        37,
+        43,
+        45,
+        46,
+        47
+      ]
+    },
+    "female_lower_F0023": {
+      "type": "lower",
+      "vertices": 315,
+      "region_counts": {
+        "waist": 226,
+        "torso": 52,
+        "leg_upper": 26
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        72,
+        73,
+        74,
+        87,
+        88,
+        101,
+        102,
+        117,
+        118,
+        119,
+        127
+      ],
+      "hides_arm_vertices": [
+        22,
+        23,
+        24,
+        25,
+        32,
+        33,
+        37,
+        46,
+        53
+      ]
+    },
+    "female_lower_F0025": {
+      "type": "lower",
+      "vertices": 343,
+      "region_counts": {
+        "leg_upper": 114,
+        "waist": 182,
+        "torso": 16,
+        "leg_lower": 30
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        76,
+        77,
+        78,
+        79,
+        80,
+        96,
+        97,
+        98,
+        110,
+        125,
+        126
+      ],
+      "hides_arm_vertices": [
+        5,
+        6,
+        30,
+        31,
+        32,
+        33,
+        39,
+        40,
+        44,
+        53
+      ]
+    },
+    "female_lower_F0026": {
+      "type": "lower",
+      "vertices": 237,
+      "region_counts": {
+        "waist": 140,
+        "leg_upper": 64,
+        "torso": 32
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        49,
+        54,
+        55,
+        60,
+        61,
+        63,
+        64,
+        69,
+        87,
+        92,
+        94,
+        95,
+        98,
+        99
+      ],
+      "hides_arm_vertices": [
+        46,
+        47,
+        52,
+        53
+      ]
+    },
+    "female_lower_F0031": {
+      "type": "lower",
+      "vertices": 225,
+      "region_counts": {
+        "torso": 12,
+        "waist": 139,
+        "leg_upper": 70
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "hides_arm_vertices": [
+        0,
+        1,
+        5,
+        9,
+        10,
+        11,
+        12,
+        30,
+        31,
+        35,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    "female_lower_F0032": {
+      "type": "lower",
+      "vertices": 328,
+      "region_counts": {
+        "waist": 236,
+        "torso": 26,
+        "leg_upper": 64
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        18,
+        19,
+        20,
+        21,
+        27,
+        28,
+        33,
+        40,
+        41,
+        48,
+        49,
+        57,
+        58,
+        59
+      ],
+      "hides_arm_vertices": [
+        39,
+        40,
+        41,
+        48,
+        49
+      ]
+    },
+    "female_lower_F1002": {
+      "type": "lower",
+      "vertices": 249,
+      "region_counts": {
+        "torso": 40,
+        "waist": 151,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        2,
+        11,
+        12,
+        21,
+        30,
+        40,
+        46,
+        52,
+        84,
+        85,
+        94,
+        103,
+        118,
+        124
+      ],
+      "hides_arm_vertices": [
+        44,
+        45,
+        50,
+        51,
+        52
+      ]
+    },
+    "female_lower_F1009": {
+      "type": "lower",
+      "vertices": 180,
+      "region_counts": {
+        "waist": 53,
+        "leg_upper": 112,
+        "torso": 12
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        16,
+        17,
+        46,
+        47,
+        48,
+        49,
+        50,
+        88,
+        89,
+        93,
+        95,
+        96,
+        97,
+        98
+      ],
+      "hides_arm_vertices": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        35,
+        39,
+        40,
+        41,
+        45,
+        46,
+        47
+      ]
+    },
+    "female_lower_F1012": {
+      "type": "lower",
+      "vertices": 352,
+      "region_counts": {
+        "waist": 25,
+        "leg_upper": 68,
+        "torso": 12,
+        "leg_lower": 212
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        24,
+        26,
+        27,
+        31,
+        33,
+        34,
+        39,
+        44,
+        47,
+        48,
+        51,
+        124,
+        126,
+        127
+      ],
+      "hides_arm_vertices": [
+        1,
+        3,
+        4,
+        9,
+        12,
+        15
+      ]
+    },
+    "female_lower_F1014": {
+      "type": "lower",
+      "vertices": 249,
+      "region_counts": {
+        "waist": 154,
+        "torso": 28,
+        "leg_upper": 60
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        4,
+        13,
+        14,
+        15,
+        22,
+        36,
+        43,
+        50,
+        65,
+        66,
+        67,
+        74,
+        90,
+        97,
+        126,
+        127
+      ],
+      "hides_arm_vertices": [
+        4,
+        5,
+        6,
+        13,
+        20,
+        21,
+        22,
+        29,
+        30,
+        37,
+        46,
+        50
+      ]
+    },
+    "female_lower_F1016": {
+      "type": "lower",
+      "vertices": 168,
+      "region_counts": {
+        "leg_upper": 98,
+        "waist": 32,
+        "torso": 14
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        19,
+        20,
+        21,
+        22,
+        31,
+        32,
+        40,
+        41,
+        66,
+        73,
+        81,
+        82,
+        98,
+        99,
+        100,
+        103,
+        104,
+        105,
+        109,
+        114,
+        115,
+        116,
+        117,
+        120,
+        121,
+        125
+      ],
+      "hides_arm_vertices": [
+        0,
+        2,
+        6,
+        7
+      ]
+    },
+    "female_lower_F1017": {
+      "type": "lower",
+      "vertices": 248,
+      "region_counts": {
+        "waist": 144,
+        "torso": 44,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        6,
+        11,
+        31,
+        32,
+        33,
+        39,
+        45,
+        46,
+        47,
+        83,
+        84,
+        85,
+        90,
+        96,
+        97
+      ]
+    },
+    "female_lower_F1018": {
+      "type": "lower",
+      "vertices": 184,
+      "region_counts": {
+        "waist": 53,
+        "leg_upper": 117,
+        "torso": 14
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        17,
+        18,
+        19,
+        20,
+        65,
+        66,
+        67,
+        68,
+        69,
+        79,
+        83,
+        84,
+        85,
+        89,
+        90,
+        91
+      ],
+      "hides_arm_vertices": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        33,
+        37,
+        38,
+        39,
+        43,
+        44,
+        45
+      ]
+    },
+    "female_lower_F1026": {
+      "type": "lower",
+      "vertices": 196,
+      "region_counts": {
+        "waist": 31,
+        "leg_upper": 57,
+        "torso": 39,
+        "leg_lower": 66
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        25,
+        26,
+        31,
+        36,
+        39,
+        40,
+        43,
+        120,
+        121,
+        128
+      ],
+      "hides_arm_vertices": [
+        1,
+        2,
+        5
+      ]
+    },
+    "female_lower_F1029": {
+      "type": "lower",
+      "vertices": 334,
+      "region_counts": {
+        "waist": 255,
+        "torso": 14,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        31,
+        32,
+        42,
+        43,
+        44,
+        48,
+        52,
+        53,
+        65,
+        66,
+        67,
+        71,
+        75,
+        76
+      ]
+    },
+    "female_lower_F1031": {
+      "type": "lower",
+      "vertices": 208,
+      "region_counts": {
+        "waist": 120,
+        "leg_upper": 57,
+        "torso": 26
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        97,
+        98,
+        101,
+        102,
+        105,
+        110,
+        116
+      ],
+      "hides_arm_vertices": [
+        29,
+        30,
+        33,
+        34,
+        37,
+        42,
+        46
+      ]
+    },
+    "female_lower_F1032": {
+      "type": "lower",
+      "vertices": 382,
+      "region_counts": {
+        "torso": 44,
+        "waist": 282,
+        "leg_upper": 54
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_lower_F9002": {
+      "type": "lower",
+      "vertices": 253,
+      "region_counts": {
+        "leg_upper": 64,
+        "waist": 155,
+        "torso": 26
+      },
+      "hides_regions": [
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        32,
+        33,
+        34,
+        35,
+        43,
+        44,
+        48,
+        56,
+        57,
+        64,
+        65,
+        71,
+        72,
+        73,
+        74,
+        80,
+        81,
+        84,
+        93,
+        102,
+        103,
+        104,
+        105,
+        111,
+        112,
+        119,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1,
+        5
+      ]
+    },
+    "female_hand_F0004": {
+      "type": "hands",
+      "vertices": 104,
+      "region_counts": {
+        "forearm": 12,
+        "hand": 92
+      },
+      "hides_regions": [
+        "hand"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    "female_hand_F0019": {
+      "type": "hands",
+      "vertices": 324,
+      "region_counts": {
+        "forearm": 110,
+        "hand": 214
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F0022": {
+      "type": "hands",
+      "vertices": 156,
+      "region_counts": {
+        "forearm": 60,
+        "hand": 96
+      },
+      "hides_regions": [
+        "hand"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    "female_hand_F0023": {
+      "type": "hands",
+      "vertices": 194,
+      "region_counts": {
+        "forearm": 56,
+        "hand": 138
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F0032": {
+      "type": "hands",
+      "vertices": 342,
+      "region_counts": {
+        "forearm": 225,
+        "hand": 117
+      },
+      "hides_regions": [
+        "hand"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "hides_arm_vertices": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "female_hand_F1004": {
+      "type": "hands",
+      "vertices": 140,
+      "region_counts": {
+        "forearm": 38,
+        "hand": 102
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1005": {
+      "type": "hands",
+      "vertices": 300,
+      "region_counts": {
+        "forearm": 152,
+        "hand": 148
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1019": {
+      "type": "hands",
+      "vertices": 420,
+      "region_counts": {
+        "forearm": 288,
+        "hand": 108,
+        "arm_upper": 24
+      },
+      "hides_regions": [
+        "hand"
+      ],
+      "hides_arm_vertices": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "female_hand_F1020": {
+      "type": "hands",
+      "vertices": 176,
+      "region_counts": {
+        "forearm": 80,
+        "hand": 96
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1025": {
+      "type": "hands",
+      "vertices": 164,
+      "region_counts": {
+        "forearm": 48,
+        "hand": 116
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1026": {
+      "type": "hands",
+      "vertices": 224,
+      "region_counts": {
+        "forearm": 106,
+        "hand": 118
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1027": {
+      "type": "hands",
+      "vertices": 186,
+      "region_counts": {
+        "forearm": 50,
+        "hand": 136
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F1029": {
+      "type": "hands",
+      "vertices": 130,
+      "region_counts": {
+        "forearm": 34,
+        "hand": 96
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_hand_F9001": {
+      "type": "hands",
+      "vertices": 232,
+      "region_counts": {
+        "forearm": 88,
+        "hand": 144
+      },
+      "hides_regions": [
+        "hand"
+      ]
+    },
+    "female_foot_GMF0001": {
+      "type": "feet",
+      "vertices": 226,
+      "region_counts": {
+        "leg_upper": 32,
+        "leg_lower": 66,
+        "foot": 128
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        126,
+        127
+      ]
+    },
+    "female_foot_F0001": {
+      "type": "feet",
+      "vertices": 288,
+      "region_counts": {
+        "leg_upper": 40,
+        "leg_lower": 116,
+        "foot": 132
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    "female_foot_F0002": {
+      "type": "feet",
+      "vertices": 246,
+      "region_counts": {
+        "leg_upper": 40,
+        "leg_lower": 100,
+        "foot": 106
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "hides_arm_vertices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "female_foot_F0003": {
+      "type": "feet",
+      "vertices": 266,
+      "region_counts": {
+        "leg_lower": 152,
+        "foot": 114
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0004": {
+      "type": "feet",
+      "vertices": 320,
+      "region_counts": {
+        "foot": 180,
+        "leg_lower": 102,
+        "leg_upper": 38
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "female_foot_F0005": {
+      "type": "feet",
+      "vertices": 268,
+      "region_counts": {
+        "foot": 130,
+        "leg_lower": 104,
+        "leg_upper": 34
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0006": {
+      "type": "feet",
+      "vertices": 287,
+      "region_counts": {
+        "foot": 146,
+        "leg_lower": 74,
+        "leg_upper": 67
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "female_foot_F0007": {
+      "type": "feet",
+      "vertices": 348,
+      "region_counts": {
+        "leg_upper": 27,
+        "leg_lower": 111,
+        "foot": 210
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    "female_foot_F0008": {
+      "type": "feet",
+      "vertices": 321,
+      "region_counts": {
+        "leg_lower": 130,
+        "foot": 108,
+        "leg_upper": 83
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0009": {
+      "type": "feet",
+      "vertices": 202,
+      "region_counts": {
+        "foot": 150,
+        "leg_lower": 52
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0014": {
+      "type": "feet",
+      "vertices": 230,
+      "region_counts": {
+        "leg_upper": 32,
+        "leg_lower": 61,
+        "foot": 137
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1
+      ]
+    },
+    "female_foot_F0018": {
+      "type": "feet",
+      "vertices": 389,
+      "region_counts": {
+        "leg_upper": 124,
+        "leg_lower": 83,
+        "foot": 182
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "female_foot_F0019": {
+      "type": "feet",
+      "vertices": 334,
+      "region_counts": {
+        "leg_lower": 128,
+        "leg_upper": 36,
+        "foot": 170
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "hides_arm_vertices": [
+        49,
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    "female_foot_F0022": {
+      "type": "feet",
+      "vertices": 578,
+      "region_counts": {
+        "leg_upper": 40,
+        "leg_lower": 172,
+        "foot": 366
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "female_foot_F0023": {
+      "type": "feet",
+      "vertices": 274,
+      "region_counts": {
+        "leg_upper": 28,
+        "leg_lower": 68,
+        "foot": 178
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    "female_foot_F0024": {
+      "type": "feet",
+      "vertices": 485,
+      "region_counts": {
+        "foot": 161,
+        "leg_lower": 286,
+        "leg_upper": 38
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    "female_foot_F0025": {
+      "type": "feet",
+      "vertices": 216,
+      "region_counts": {
+        "foot": 168,
+        "leg_lower": 48
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0026": {
+      "type": "feet",
+      "vertices": 401,
+      "region_counts": {
+        "foot": 308,
+        "leg_lower": 48,
+        "leg_upper": 45
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        2,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "female_foot_F0031": {
+      "type": "feet",
+      "vertices": 232,
+      "region_counts": {
+        "foot": 106,
+        "leg_lower": 126
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F0032": {
+      "type": "feet",
+      "vertices": 340,
+      "region_counts": {
+        "foot": 256,
+        "leg_lower": 48,
+        "leg_upper": 36
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1001": {
+      "type": "feet",
+      "vertices": 302,
+      "region_counts": {
+        "leg_upper": 32,
+        "leg_lower": 102,
+        "foot": 168
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "hides_arm_vertices": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    "female_foot_F1002": {
+      "type": "feet",
+      "vertices": 250,
+      "region_counts": {
+        "leg_upper": 42,
+        "leg_lower": 66,
+        "foot": 142
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1
+      ]
+    },
+    "female_foot_F1003": {
+      "type": "feet",
+      "vertices": 378,
+      "region_counts": {
+        "leg_upper": 32,
+        "leg_lower": 166,
+        "foot": 180
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "female_foot_F1004": {
+      "type": "feet",
+      "vertices": 286,
+      "region_counts": {
+        "leg_lower": 144,
+        "foot": 114,
+        "leg_upper": 28
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    "female_foot_F1005": {
+      "type": "feet",
+      "vertices": 350,
+      "region_counts": {
+        "leg_lower": 240,
+        "foot": 110
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1006": {
+      "type": "feet",
+      "vertices": 198,
+      "region_counts": {
+        "leg_lower": 74,
+        "foot": 124
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1007": {
+      "type": "feet",
+      "vertices": 300,
+      "region_counts": {
+        "foot": 120,
+        "leg_lower": 146,
+        "leg_upper": 34
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "hides_arm_vertices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    "female_foot_F1009": {
+      "type": "feet",
+      "vertices": 162,
+      "region_counts": {
+        "foot": 110,
+        "leg_lower": 52
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1014": {
+      "type": "feet",
+      "vertices": 256,
+      "region_counts": {
+        "leg_upper": 42,
+        "leg_lower": 66,
+        "foot": 148
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0
+      ]
+    },
+    "female_foot_F1018": {
+      "type": "feet",
+      "vertices": 352,
+      "region_counts": {
+        "leg_lower": 88,
+        "foot": 228,
+        "leg_upper": 36
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1019": {
+      "type": "feet",
+      "vertices": 338,
+      "region_counts": {
+        "leg_upper": 156,
+        "leg_lower": 48,
+        "foot": 134
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    "female_foot_F1020": {
+      "type": "feet",
+      "vertices": 166,
+      "region_counts": {
+        "foot": 98,
+        "leg_lower": 68
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1023": {
+      "type": "feet",
+      "vertices": 290,
+      "region_counts": {
+        "leg_upper": 32,
+        "foot": 202,
+        "leg_lower": 56
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "hides_arm_vertices": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    "female_foot_F1024": {
+      "type": "feet",
+      "vertices": 250,
+      "region_counts": {
+        "foot": 238,
+        "leg_lower": 12
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ]
+    },
+    "female_foot_F1025": {
+      "type": "feet",
+      "vertices": 252,
+      "region_counts": {
+        "leg_upper": 36,
+        "leg_lower": 74,
+        "foot": 142
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "hides_arm_vertices": [
+        0,
+        1
+      ]
+    },
+    "female_foot_F1026": {
+      "type": "feet",
+      "vertices": 220,
+      "region_counts": {
+        "leg_lower": 108,
+        "foot": 112
+      },
+      "hides_regions": [
+        "foot"
+      ]
+    },
+    "female_foot_F1027": {
+      "type": "feet",
+      "vertices": 94,
+      "region_counts": {
+        "leg_lower": 12,
+        "foot": 82
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    },
+    "female_foot_F1029": {
+      "type": "feet",
+      "vertices": 255,
+      "region_counts": {
+        "leg_upper": 32,
+        "leg_lower": 115,
+        "foot": 108
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    "female_foot_F1031": {
+      "type": "feet",
+      "vertices": 250,
+      "region_counts": {
+        "leg_upper": 36,
+        "leg_lower": 48,
+        "foot": 166
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    "female_foot_F1032": {
+      "type": "feet",
+      "vertices": 335,
+      "region_counts": {
+        "leg_lower": 62,
+        "leg_upper": 36,
+        "foot": 237
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "hides_arm_vertices": [
+        41,
+        42,
+        43,
+        45,
+        46,
+        47
+      ]
+    },
+    "female_foot_F9001": {
+      "type": "feet",
+      "vertices": 408,
+      "region_counts": {
+        "leg_upper": 34,
+        "leg_lower": 222,
+        "foot": 152
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "female_foot_F9002": {
+      "type": "feet",
+      "vertices": 274,
+      "region_counts": {
+        "leg_upper": 36,
+        "leg_lower": 82,
+        "foot": 156
+      },
+      "hides_regions": [
+        "foot"
+      ],
+      "hides_upper_vertices": [
+        10,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        42,
+        43,
+        44,
+        45,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "female_special_GMF0001": {
+      "type": "special",
+      "vertices": 555,
+      "region_counts": {
+        "torso": 217,
+        "arm_upper": 82,
+        "forearm": 32,
+        "neck": 40,
+        "head": 9,
+        "waist": 119,
+        "leg_upper": 50
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        86,
+        87,
+        88,
+        89,
+        98,
+        99
+      ]
+    },
+    "female_special_F0004": {
+      "type": "special",
+      "vertices": 565,
+      "region_counts": {
+        "torso": 155,
+        "neck": 45,
+        "waist": 123,
+        "arm_upper": 141,
+        "forearm": 30,
+        "leg_upper": 62,
+        "head": 9
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        2
+      ]
+    },
+    "female_special_F0005": {
+      "type": "special",
+      "vertices": 526,
+      "region_counts": {
+        "torso": 149,
+        "neck": 15,
+        "head": 6,
+        "waist": 163,
+        "leg_upper": 58,
+        "arm_upper": 86,
+        "forearm": 48
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_arm_vertices": [
+        5,
+        6,
+        7,
+        13,
+        14,
+        21,
+        28,
+        29
+      ]
+    },
+    "female_special_F0006": {
+      "type": "special",
+      "vertices": 622,
+      "region_counts": {
+        "torso": 213,
+        "arm_upper": 106,
+        "head": 8,
+        "waist": 192,
+        "neck": 32,
+        "leg_upper": 70
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        63,
+        64,
+        92,
+        93,
+        94
+      ]
+    },
+    "female_special_F0007": {
+      "type": "special",
+      "vertices": 766,
+      "region_counts": {
+        "arm_upper": 119,
+        "head": 6,
+        "torso": 350,
+        "neck": 9,
+        "waist": 226,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        5,
+        6,
+        7,
+        8,
+        92,
+        93
+      ]
+    },
+    "female_special_F0010": {
+      "type": "special",
+      "vertices": 744,
+      "region_counts": {
+        "torso": 200,
+        "arm_upper": 132,
+        "forearm": 54,
+        "waist": 246,
+        "neck": 12,
+        "head": 6,
+        "leg_upper": 91
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F0014": {
+      "type": "special",
+      "vertices": 671,
+      "region_counts": {
+        "torso": 336,
+        "arm_upper": 76,
+        "forearm": 44,
+        "head": 6,
+        "neck": 7,
+        "leg_upper": 46,
+        "waist": 149
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F0015": {
+      "type": "special",
+      "vertices": 326,
+      "region_counts": {
+        "waist": 54,
+        "leg_upper": 44,
+        "torso": 112,
+        "arm_upper": 64,
+        "head": 8,
+        "neck": 16
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        16,
+        17,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        42,
+        43,
+        44,
+        45,
+        66,
+        67,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        78,
+        87,
+        88,
+        89,
+        90,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ]
+    },
+    "female_special_F0017": {
+      "type": "special",
+      "vertices": 541,
+      "region_counts": {
+        "torso": 137,
+        "waist": 174,
+        "arm_upper": 80,
+        "neck": 22,
+        "head": 7,
+        "forearm": 30,
+        "leg_upper": 54
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_arm_vertices": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "female_special_F0021": {
+      "type": "special",
+      "vertices": 850,
+      "region_counts": {
+        "torso": 326,
+        "waist": 175,
+        "arm_upper": 152,
+        "neck": 32,
+        "head": 6,
+        "forearm": 62,
+        "leg_upper": 95
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F0022": {
+      "type": "special",
+      "vertices": 1064,
+      "region_counts": {
+        "torso": 515,
+        "arm_upper": 215,
+        "head": 6,
+        "neck": 20,
+        "forearm": 32,
+        "waist": 213,
+        "leg_upper": 61
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F0024": {
+      "type": "special",
+      "vertices": 1222,
+      "region_counts": {
+        "torso": 507,
+        "head": 6,
+        "neck": 8,
+        "arm_upper": 112,
+        "waist": 522,
+        "leg_upper": 61
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        24,
+        25,
+        90,
+        91
+      ]
+    },
+    "female_special_F1001": {
+      "type": "special",
+      "vertices": 699,
+      "region_counts": {
+        "waist": 242,
+        "torso": 271,
+        "arm_upper": 108,
+        "neck": 12,
+        "head": 6,
+        "leg_upper": 58
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F1003": {
+      "type": "special",
+      "vertices": 717,
+      "region_counts": {
+        "torso": 169,
+        "arm_upper": 86,
+        "neck": 14,
+        "head": 6,
+        "forearm": 56,
+        "waist": 328,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        101,
+        102,
+        103,
+        108
+      ]
+    },
+    "female_special_F1004": {
+      "type": "special",
+      "vertices": 764,
+      "region_counts": {
+        "torso": 281,
+        "head": 6,
+        "arm_upper": 120,
+        "neck": 6,
+        "waist": 232,
+        "forearm": 54,
+        "leg_upper": 65
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "female_special_F1005": {
+      "type": "special",
+      "vertices": 778,
+      "region_counts": {
+        "torso": 161,
+        "arm_upper": 87,
+        "neck": 38,
+        "head": 6,
+        "forearm": 92,
+        "waist": 306,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        71,
+        75,
+        76,
+        117
+      ]
+    },
+    "female_special_F1006": {
+      "type": "special",
+      "vertices": 564,
+      "region_counts": {
+        "torso": 186,
+        "waist": 154,
+        "arm_upper": 146,
+        "leg_upper": 66,
+        "head": 6,
+        "neck": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "hides_arm_vertices": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "female_special_F1007": {
+      "type": "special",
+      "vertices": 401,
+      "region_counts": {
+        "waist": 53,
+        "leg_upper": 101,
+        "torso": 135,
+        "arm_upper": 88,
+        "neck": 17,
+        "head": 7
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        70,
+        71,
+        75,
+        76,
+        78,
+        79,
+        80,
+        81
+      ],
+      "hides_arm_vertices": [
+        45,
+        46,
+        51
+      ]
+    },
+    "female_special_F1010": {
+      "type": "special",
+      "vertices": 903,
+      "region_counts": {
+        "torso": 269,
+        "arm_upper": 101,
+        "waist": 296,
+        "neck": 27,
+        "forearm": 78,
+        "head": 6,
+        "leg_upper": 113
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F1011": {
+      "type": "special",
+      "vertices": 467,
+      "region_counts": {
+        "head": 6,
+        "torso": 261,
+        "neck": 12,
+        "arm_upper": 89,
+        "waist": 37,
+        "leg_upper": 62
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        25,
+        26
+      ],
+      "hides_arm_vertices": [
+        42,
+        43
+      ]
+    },
+    "female_special_F1015": {
+      "type": "special",
+      "vertices": 288,
+      "region_counts": {
+        "waist": 54,
+        "leg_upper": 44,
+        "torso": 100,
+        "arm_upper": 54,
+        "head": 8,
+        "neck": 8
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        16,
+        17,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        42,
+        43,
+        44,
+        45,
+        66,
+        67,
+        71,
+        72,
+        74,
+        75,
+        76,
+        77,
+        78,
+        87,
+        88,
+        89,
+        90,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ]
+    },
+    "female_special_F1019": {
+      "type": "special",
+      "vertices": 484,
+      "region_counts": {
+        "leg_upper": 74,
+        "waist": 84,
+        "torso": 212,
+        "arm_upper": 69,
+        "neck": 20,
+        "head": 9
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ]
+    },
+    "female_special_F1020": {
+      "type": "special",
+      "vertices": 394,
+      "region_counts": {
+        "leg_upper": 63,
+        "leg_lower": 48,
+        "arm_upper": 58,
+        "forearm": 30,
+        "head": 6,
+        "torso": 124,
+        "neck": 6,
+        "waist": 59
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_lower",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        32,
+        33,
+        35,
+        37,
+        41,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    "female_special_F1023": {
+      "type": "special",
+      "vertices": 709,
+      "region_counts": {
+        "torso": 215,
+        "arm_upper": 91,
+        "waist": 271,
+        "head": 6,
+        "neck": 15,
+        "forearm": 54,
+        "leg_upper": 56
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        0,
+        1,
+        2,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "hides_arm_vertices": [
+        5,
+        6,
+        13,
+        14
+      ]
+    },
+    "female_special_F1024": {
+      "type": "special",
+      "vertices": 648,
+      "region_counts": {
+        "torso": 114,
+        "head": 6,
+        "arm_upper": 92,
+        "forearm": 32,
+        "waist": 344,
+        "leg_upper": 60
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        7,
+        9,
+        92,
+        93
+      ]
+    },
+    "female_special_F1025": {
+      "type": "special",
+      "vertices": 552,
+      "region_counts": {
+        "arm_upper": 77,
+        "torso": 212,
+        "waist": 188,
+        "neck": 12,
+        "head": 6,
+        "leg_upper": 57
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F1027": {
+      "type": "special",
+      "vertices": 718,
+      "region_counts": {
+        "torso": 236,
+        "waist": 178,
+        "head": 6,
+        "neck": 6,
+        "arm_upper": 130,
+        "forearm": 26,
+        "leg_upper": 60,
+        "leg_lower": 64
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_lower",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_upper_vertices": [
+        18,
+        19,
+        105,
+        106,
+        112,
+        113,
+        114,
+        115,
+        116
+      ]
+    },
+    "female_special_F9001": {
+      "type": "special",
+      "vertices": 782,
+      "region_counts": {
+        "torso": 260,
+        "arm_upper": 120,
+        "neck": 34,
+        "forearm": 72,
+        "waist": 233,
+        "leg_upper": 56,
+        "head": 6
+      },
+      "hides_regions": [
+        "arm_upper",
+        "forearm",
+        "leg_upper",
+        "torso",
+        "waist"
+      ]
+    },
+    "female_special_F9004": {
+      "type": "special",
+      "vertices": 910,
+      "region_counts": {
+        "waist": 292,
+        "torso": 155,
+        "leg_upper": 88,
+        "arm_upper": 117,
+        "head": 6,
+        "neck": 6,
+        "leg_lower": 70,
+        "foot": 170
+      },
+      "hides_regions": [
+        "arm_upper",
+        "leg_lower",
+        "leg_upper",
+        "torso",
+        "waist"
+      ],
+      "hides_arm_vertices": [
+        20,
+        21,
+        22,
+        23,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        39,
+        40,
+        46,
+        47
+      ]
+    },
+    "female_glorb_A0001": {
+      "type": "glorb",
+      "vertices": 406,
+      "region_counts": {
+        "forearm": 138,
+        "hand": 268
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0002": {
+      "type": "glorb",
+      "vertices": 471,
+      "region_counts": {
+        "forearm": 62,
+        "hand": 409
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0003": {
+      "type": "glorb",
+      "vertices": 348,
+      "region_counts": {
+        "forearm": 80,
+        "hand": 268
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0005": {
+      "type": "glorb",
+      "vertices": 450,
+      "region_counts": {
+        "forearm": 222,
+        "hand": 228
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0007": {
+      "type": "glorb",
+      "vertices": 242,
+      "region_counts": {
+        "hand": 242
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0008": {
+      "type": "glorb",
+      "vertices": 668,
+      "region_counts": {
+        "forearm": 86,
+        "hand": 582
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0009": {
+      "type": "glorb",
+      "vertices": 236,
+      "region_counts": {
+        "forearm": 96,
+        "hand": 140
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0010": {
+      "type": "glorb",
+      "vertices": 288,
+      "region_counts": {
+        "forearm": 88,
+        "hand": 200
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0011": {
+      "type": "glorb",
+      "vertices": 256,
+      "region_counts": {
+        "hand": 256
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0013": {
+      "type": "glorb",
+      "vertices": 242,
+      "region_counts": {
+        "forearm": 50,
+        "hand": 192
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0014": {
+      "type": "glorb",
+      "vertices": 328,
+      "region_counts": {
+        "forearm": 152,
+        "hand": 176
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0015": {
+      "type": "glorb",
+      "vertices": 530,
+      "region_counts": {
+        "hand": 290,
+        "forearm": 240
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0016": {
+      "type": "glorb",
+      "vertices": 778,
+      "region_counts": {
+        "forearm": 256,
+        "hand": 522
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0019": {
+      "type": "glorb",
+      "vertices": 410,
+      "region_counts": {
+        "forearm": 88,
+        "hand": 322
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A0021": {
+      "type": "glorb",
+      "vertices": 156,
+      "region_counts": {
+        "forearm": 30,
+        "hand": 126
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1001": {
+      "type": "glorb",
+      "vertices": 406,
+      "region_counts": {
+        "forearm": 138,
+        "hand": 268
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1002": {
+      "type": "glorb",
+      "vertices": 471,
+      "region_counts": {
+        "forearm": 62,
+        "hand": 409
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1003": {
+      "type": "glorb",
+      "vertices": 348,
+      "region_counts": {
+        "forearm": 80,
+        "hand": 268
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1005": {
+      "type": "glorb",
+      "vertices": 450,
+      "region_counts": {
+        "forearm": 222,
+        "hand": 228
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1007": {
+      "type": "glorb",
+      "vertices": 242,
+      "region_counts": {
+        "hand": 242
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1009": {
+      "type": "glorb",
+      "vertices": 236,
+      "region_counts": {
+        "forearm": 96,
+        "hand": 140
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1013": {
+      "type": "glorb",
+      "vertices": 242,
+      "region_counts": {
+        "forearm": 50,
+        "hand": 192
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1014": {
+      "type": "glorb",
+      "vertices": 328,
+      "region_counts": {
+        "forearm": 152,
+        "hand": 176
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1015": {
+      "type": "glorb",
+      "vertices": 530,
+      "region_counts": {
+        "hand": 290,
+        "forearm": 240
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1019": {
+      "type": "glorb",
+      "vertices": 410,
+      "region_counts": {
+        "forearm": 88,
+        "hand": 322
+      },
+      "hides_regions": []
+    },
+    "female_glorb_A1021": {
+      "type": "glorb",
+      "vertices": 156,
+      "region_counts": {
+        "forearm": 30,
+        "hand": 126
+      },
+      "hides_regions": []
+    }
+  }
+}
