@@ -1,0 +1,167 @@
+[gd_scene load_steps=2 format=3 uid="uid://bglp8mre6du7f"]
+
+[ext_resource type="PackedScene" uid="uid://bwmnnqxfmxk28" path="res://assets/avatars/debug/debug_anim.glb" id="1_41ox1"]
+
+[node name="debug_anim" instance=ExtResource("1_41ox1")]
+
+[node name="_Root" parent="." index="0"]
+transform = Transform3D(-1.4742228e-06, 0, -1, 0, 1, 0, 1, 0, -1.4742228e-06, 0, 0.861417, 0)
+
+[node name="_Pelvis" parent="_Root" index="0"]
+transform = Transform3D(3.93168e-12, -1.9828465e-06, 1, 1, 1.9828465e-06, 0, -1.9828465e-06, 1, 1.9828465e-06, 0, 0, 0)
+
+[node name="_Spine1" parent="_Root/_Pelvis" index="0"]
+transform = Transform3D(0.9999057, -2.0274178e-06, -0.013731685, 1.9724898e-06, 1, -4.0136397e-06, 0.013731685, 3.9861757e-06, 0.9999057, 0.053328276, 6.927958e-08, 0.0033718552)
+
+[node name="_Spine2" parent="_Root/_Pelvis/_Spine1" index="0"]
+transform = Transform3D(0.9997696, 0, 0.021464773, 0, 1, 0, -0.021464773, 0, 0.9997696, 0.12070118, -2.6759653e-10, -9.647953e-05)
+
+[node name="_Spine3" parent="_Root/_Pelvis/_Spine1/_Spine2" index="0"]
+transform = Transform3D(0.9999996, 0, -0.0008179998, 0, 1, 0, 0.0008179998, 0, 0.9999996, 0.1211944, -2.963173e-10, -0.00010683488)
+
+[node name="_Neck" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3" index="0"]
+transform = Transform3D(0.9118453, -1.955426e-06, -0.4105339, 1.955426e-06, 1, -4.1989202e-07, 0.4105339, -4.1989205e-07, 0.9118453, 0.16795619, -1.456178e-07, -0.05250137)
+
+[node name="_Head" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck" index="0"]
+transform = Transform3D(0.9460031, 0, 0.32415763, 0, 1, 0, -0.32415763, 0, 0.9460031, 0.061380133, 1.9028236e-14, 8.253646e-09)
+
+[node name="_Hair01B" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head" index="0"]
+transform = Transform3D(-0.98911864, 4.4256612e-07, 0.14712016, -4.4256595e-07, 1, -5.9836552e-06, -0.14712016, -5.9836552e-06, -0.98911864, 0.049876582, -4.2247547e-07, -0.15232016)
+
+[node name="_Hair02B" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head/_Hair01B" index="0"]
+transform = Transform3D(0.9621264, 0, 0.27260375, 0, 1, 0, -0.27260375, 0, 0.9621264, 0.22819136, -4.849082e-10, -0.0001748397)
+
+[node name="_Hair01RF" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head" index="1"]
+transform = Transform3D(-0.98689336, 0.16137338, 7.0538544e-09, 0, -4.371139e-08, 1, 0.16137336, 0.9868934, 4.313848e-08, 0.27400428, -0.13549984, 0.13348521)
+
+[node name="_Hair00RF" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head/_Hair01RF" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999988, -2.4762613e-08, -1.4737827e-08)
+
+[node name="_Hair01LF" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head" index="2"]
+transform = Transform3D(-0.98689336, 0.16137338, 7.0538544e-09, 0, -4.371139e-08, 1, 0.16137336, 0.9868934, 4.313848e-08, 0.27400446, 0.134974, 0.13348484)
+
+[node name="_Hair00LF" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_Head/_Hair01LF" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999988, -2.4762613e-08, -1.4737827e-08)
+
+[node name="_ClavicleL" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck" index="1"]
+transform = Transform3D(-0.18302813, 0.8930948, -0.41095278, 0.9822604, 0.18347782, -0.03873477, 0.040806912, -0.41075224, -0.91083306, -0.046219025, 0.04251212, 0.040003497)
+
+[node name="_Arm1L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL" index="0"]
+transform = Transform3D(0.44114488, 0.89347357, -0.08423887, -0.87059927, 0.44884676, 0.20147814, 0.21782576, -0.015542753, 0.9758639, 0.11838399, 1.0848734e-08, -5.1710105e-11)
+
+[node name="_Arm2L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L" index="0"]
+transform = Transform3D(0.8668287, 0, 0.49860597, 0, 1, 0, -0.49860597, 0, 0.8668287, 0.20875098, -5.3602783e-08, 3.068464e-10)
+
+[node name="_HandL" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L/_Arm2L" index="0"]
+transform = Transform3D(0.9321496, -0.050489333, 0.3585357, 0.36207318, 0.12998344, -0.9230424, 5.960464e-08, 0.9902298, 0.13944486, 0.18822497, 8.702242e-09, -8.742053e-10)
+
+[node name="_Finger1L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L/_Arm2L/_HandL" index="0"]
+transform = Transform3D(0.7294209, 0.6131046, 0.30339402, -0.15209661, -0.287057, 0.94576156, 0.66694206, -0.7360035, -0.11613427, 0.043220025, -0.06315512, 0.026506715)
+
+[node name="_Finger2L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L/_Arm2L/_HandL/_Finger1L" index="0"]
+transform = Transform3D(0.8042409, 0, -0.5943034, 0, 1, 0, 0.5943034, 0, 0.8042409, 0.05440294, -1.6351846e-08, 7.120155e-10)
+
+[node name="_Finger3L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L/_Arm2L/_HandL" index="1"]
+transform = Transform3D(0.6871582, -1.1083321e-06, -0.7265078, -0.00057790446, 0.99999964, -0.0005481292, 0.72650754, 0.0007965036, 0.687158, 0.105530985, 1.3319935e-06, 0.0008390213)
+
+[node name="_Finger4L" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleL/_Arm1L/_Arm2L/_HandL/_Finger3L" index="0"]
+transform = Transform3D(0.6000672, 0, -0.79994947, 0, 1, 0, 0.79994947, 0, 0.6000672, 0.040716976, -3.9483455e-10, 2.5298805e-08)
+
+[node name="_ClavicleR" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck" index="2"]
+transform = Transform3D(-0.18302874, -0.893095, -0.41095233, -0.9822602, 0.1834802, 0.038730923, 0.04081122, 0.41075087, -0.9108339, -0.046219025, -0.042511895, 0.04000373)
+
+[node name="_Arm1R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR" index="0"]
+transform = Transform3D(0.44114488, -0.89347357, -0.084238864, 0.87059927, 0.44884676, -0.20147815, 0.21782577, 0.015542768, 0.9758639, 0.118384, -1.0044882e-08, 5.2948723e-10)
+
+[node name="_Arm2R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R" index="0"]
+transform = Transform3D(0.8668287, 0, 0.49860597, 0, 1, 0, -0.49860597, 0, 0.8668287, 0.20875098, 5.3582543e-08, 1.7413537e-09)
+
+[node name="_HandR" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R" index="0"]
+transform = Transform3D(0.9321496, 0.050489422, 0.35853568, -0.36207318, 0.12998344, 0.9230424, 2.0861624e-07, -0.9902298, 0.1394449, 0.18822499, -8.887646e-09, -9.0701535e-10)
+
+[node name="_Finger1R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R/_HandR" index="0"]
+transform = Transform3D(0.7294209, -0.6131045, 0.303394, 0.15209661, -0.28705698, -0.94576144, 0.66694206, 0.73600346, -0.116134256, 0.043219984, 0.06315513, 0.026506705)
+
+[node name="_Finger2R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R/_HandR/_Finger1R" index="0"]
+transform = Transform3D(0.8042409, 0, -0.5943034, 0, 1, 0, 0.5943034, 0, 0.8042409, 0.05440295, 1.231778e-08, 9.43419e-09)
+
+[node name="_Finger3R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R/_HandR" index="1"]
+transform = Transform3D(0.6871582, 1.1083612e-06, -0.7265078, 0.00057790446, 0.99999964, 0.00054812926, 0.72650754, -0.0007965036, 0.687158, 0.105531, -1.331161e-06, 0.00083902164)
+
+[node name="_Finger4R" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R/_HandR/_Finger3R" index="0"]
+transform = Transform3D(0.6000672, 0, -0.79994947, 0, 1, 0, 0.79994947, 0, 0.6000672, 0.040716983, -6.7539245e-11, 2.439932e-08)
+
+[node name="_Sword" parent="_Root/_Pelvis/_Spine1/_Spine2/_Spine3/_Neck/_ClavicleR/_Arm1R/_Arm2R/_HandR" index="2"]
+transform = Transform3D(-0.07457146, 0.041262183, -0.99636173, 0.006539587, 0.99914235, 0.040887896, 0.99719423, -0.0034667235, -0.07477735, 0.10404903, -0.004237455, 0.018884063)
+
+[node name="_Leg1L" parent="_Root/_Pelvis/_Spine1" index="1"]
+transform = Transform3D(-0.99796027, -0.03034169, 0.056165576, 0.033377524, -0.9979869, 0.05392701, 0.05441627, 0.055691686, 0.99696404, -0.053369552, 0.07686599, -0.0026394625)
+
+[node name="_Leg2L" parent="_Root/_Pelvis/_Spine1/_Leg1L" index="0"]
+transform = Transform3D(0.9754596, 0, 0.2201786, 0, 1, 0, -0.2201786, 0, 0.9754596, 0.38623297, -7.221125e-09, 5.870261e-10)
+
+[node name="_FootL" parent="_Root/_Pelvis/_Spine1/_Leg1L/_Leg2L" index="0"]
+transform = Transform3D(0.98345804, -0.040922172, -0.17645293, 0.031102411, 0.99782825, -0.05806301, 0.1784458, 0.05161442, 0.982595, 0.35992002, -2.4288935e-08, 6.5440644e-09)
+
+[node name="_ToeL" parent="_Root/_Pelvis/_Spine1/_Leg1L/_Leg2L/_FootL" index="0"]
+transform = Transform3D(-1.6292036e-07, 0.002749229, -0.9999962, 1.1641532e-10, 0.99999624, 0.0027492289, 1, 3.3149053e-10, -1.6292006e-07, 0.111702, -0.0013409958, 0.135188)
+
+[node name="_Leg1R" parent="_Root/_Pelvis/_Spine1" index="2"]
+transform = Transform3D(-0.99796045, 0.030340027, 0.056167424, -0.03337564, -0.99798757, -0.05392104, 0.05441842, -0.0556857, 0.99696434, -0.053369552, -0.07686601, -0.0026390362)
+
+[node name="_Leg2R" parent="_Root/_Pelvis/_Spine1/_Leg1R" index="0"]
+transform = Transform3D(0.9754596, 0, 0.2201786, 0, 1, 0, -0.2201786, 0, 0.9754596, 0.38623297, -9.409795e-09, -1.008616e-09)
+
+[node name="_FootR" parent="_Root/_Pelvis/_Spine1/_Leg1R/_Leg2R" index="0"]
+transform = Transform3D(0.9834577, 0.040922225, -0.17645489, -0.031102354, 0.9978283, 0.05806303, 0.17844775, -0.05161437, 0.98259467, 0.35992002, -1.6933624e-08, -2.0457054e-09)
+
+[node name="_ToeR" parent="_Root/_Pelvis/_Spine1/_Leg1R/_Leg2R/_FootR" index="0"]
+transform = Transform3D(-1.6292037e-07, -0.002749229, -0.99999624, -1.1641534e-10, 0.99999624, -0.002749229, 1.0000001, -3.3149053e-10, -1.6292007e-07, 0.111702, 0.001340991, 0.135188)
+
+[node name="_Skirt01RF" parent="_Root" index="1"]
+transform = Transform3D(0.07873452, 0.9119317, 0.40271756, -0.9748368, 0.1549419, -0.16026893, -0.20855212, -0.37996525, 0.90118384, 0.10364485, 0.09630597, -0.061000153)
+
+[node name="_Skirt02RF" parent="_Root/_Skirt01RF" index="0"]
+transform = Transform3D(0.9818293, 0.08420071, -0.1700631, -0.08015205, 0.99631447, 0.030546058, 0.17200832, -0.016360108, 0.9849596, 0.21915832, -2.6951574e-09, 6.095134e-08)
+
+[node name="_Skirt03RF" parent="_Root/_Skirt01RF/_Skirt02RF" index="0"]
+transform = Transform3D(0.99948364, 0.02739271, 0.016793638, -0.027380206, 0.9996246, -0.00097406184, -0.016814016, 0.00051374565, 0.9998585, 0.26966727, -1.9234438e-08, 2.6334387e-08)
+
+[node name="_Skirt00RF" parent="_Root/_Skirt01RF/_Skirt02RF/_Skirt03RF" index="0"]
+transform = Transform3D(0.9999969, 0.0021679988, -0.0012079992, -0.0021679986, 0.9999977, 1.3094725e-06, 0.0012079991, 1.3094722e-06, 0.9999993, 0.28081575, 3.2111345e-08, 1.0027066e-08)
+
+[node name="_Skirt01LB" parent="_Root" index="2"]
+transform = Transform3D(-0.33581355, 0.8656718, 0.37127015, -0.9291665, -0.36910895, 0.02020219, 0.15452759, -0.3381876, 0.9283051, -0.08098461, 0.100306034, 0.07400012)
+
+[node name="_Skirt02LB" parent="_Root/_Skirt01LB" index="0"]
+transform = Transform3D(0.928131, -0.37204096, 0.012582852, 0.37201858, 0.92821586, 0.004163234, -0.013228497, 0.0008170278, 0.9999122, 0.21915829, 9.7115285e-09, -1.6679575e-08)
+
+[node name="_Skirt03LB" parent="_Root/_Skirt01LB/_Skirt02LB" index="0"]
+transform = Transform3D(0.9954219, 0.0955784, -5.9931276e-06, -0.0955784, 0.9954219, 2.8706387e-07, 5.9931276e-06, 2.8706393e-07, 1, 0.25077617, 2.120338e-08, 2.2175277e-08)
+
+[node name="_Skirt00LB" parent="_Root/_Skirt01LB/_Skirt02LB/_Skirt03LB" index="0"]
+transform = Transform3D(1, 0, 4e-06, 0, 1, 0, -4e-06, 0, 1, 0.29970184, 7.736969e-08, 4.6683324e-10)
+
+[node name="_Skirt01RB" parent="_Root" index="3"]
+transform = Transform3D(-0.33581576, 0.86567384, -0.3712633, -0.9291661, -0.36910996, -0.020201892, -0.15452524, 0.33818114, 0.92830783, -0.08098483, 0.100306034, -0.07399988)
+
+[node name="_Skirt02RB" parent="_Root/_Skirt01RB" index="0"]
+transform = Transform3D(0.928137, -0.3720257, -0.012584843, 0.3720033, 0.92822206, -0.004163507, 0.01323046, -0.0008172977, 0.9999121, 0.21915843, -3.4152492e-08, 4.9401777e-08)
+
+[node name="_Skirt03RB" parent="_Root/_Skirt01RB/_Skirt02RB" index="0"]
+transform = Transform3D(0.99542344, 0.09556248, 3.9954216e-06, -0.09556248, 0.99542344, -1.9134406e-07, -3.9954216e-06, -1.9134403e-07, 1, 0.2508186, -3.7562515e-08, 9.388423e-09)
+
+[node name="_Skirt00RB" parent="_Root/_Skirt01RB/_Skirt02RB/_Skirt03RB" index="0"]
+transform = Transform3D(1, 0, -2e-06, 0, 1, 0, 2e-06, 0, 1, 0.2996596, -9.689019e-09, -8.260611e-09)
+
+[node name="_Skirt01LF" parent="_Root" index="4"]
+transform = Transform3D(0.07873594, 0.9119338, -0.40271246, -0.9748361, 0.15494335, 0.16027176, 0.20855485, 0.3799595, 0.9011857, 0.10364503, 0.09630597, 0.06099984)
+
+[node name="_Skirt02LF" parent="_Root/_Skirt01LF" index="0"]
+transform = Transform3D(0.98181635, 0.0842742, 0.17010158, -0.08022529, 0.99630845, -0.03055, -0.17204824, 0.01634804, 0.9849528, 0.21915843, 1.01889434e-07, 4.2902446e-08)
+
+[node name="_Skirt03LF" parent="_Root/_Skirt01LF/_Skirt02LF" index="0"]
+transform = Transform3D(0.99948645, 0.02723479, -0.016881665, -0.027222188, 0.9996289, 0.00097593234, 0.01690198, -0.00051587535, 0.999857, 0.27037057, 6.3955696e-08, -2.3369607e-08)
+
+[node name="_Skirt00LF" parent="_Root/_Skirt01LF/_Skirt02LF/_Skirt03LF" index="0"]
+transform = Transform3D(0.99999666, 0.0022499987, 0.0012559993, -0.0022499983, 0.9999975, -1.4130005e-06, -0.0012559992, -1.4130006e-06, 0.9999992, 0.2801131, 1.1790613e-07, -3.6340488e-08)

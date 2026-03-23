@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bomadmbwf0wrj"]
+
+[ext_resource type="PackedScene" uid="uid://dky0uqscwdwmx" path="res://assets/avatars/debug/debug_axes.glb" id="1_t83n2"]
+
+[node name="debug_axes" instance=ExtResource("1_t83n2")]
+
+[node name="_Spine1" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8235353e-09, 0.9147453, 0.0033718552)
+
+[node name="_Spine2" parent="." index="3"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -7.0566384e-09, 1.0354364, 0.0049329028)

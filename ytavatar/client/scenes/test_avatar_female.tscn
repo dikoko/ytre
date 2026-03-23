@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/avatar_tool.gd" id="1_script"]
+[ext_resource type="Script" path="res://scripts/test_avatar_female.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/avatars/base/female_base_materials.glb" id="2_base"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
 size = Vector2(10, 10)
 
-[node name="AvatarTool" type="Node3D"]
+[node name="TestAvatarFemale" type="Node3D"]
 script = ExtResource("1_script")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -22,8 +23,10 @@ shadow_enabled = true
 transform = Transform3D(-0.866025, -0.25, -0.433013, 0, 0.866025, -0.5, 0.5, -0.433013, -0.75, -2, 3, -2)
 light_energy = 0.6
 
+
+
 [node name="GroundPlane" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
 mesh = SubResource("PlaneMesh_ground")
 
-[node name="MonsterRoot" type="Node3D" parent="."]
+[node name="female_base_materials" parent="." instance=ExtResource("2_base")]
