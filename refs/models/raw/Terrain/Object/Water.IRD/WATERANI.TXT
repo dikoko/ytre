@@ -1,0 +1,12 @@
+80
+10
+ff0010.bmp
+ff0020.bmp
+ff0030.bmp
+ff0040.bmp
+ff0050.bmp
+ff0060.bmp
+ff0070.bmp
+ff0080.bmp
+ff0090.bmp
+ff0100.bmp
