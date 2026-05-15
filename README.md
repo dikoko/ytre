@@ -17,3 +17,9 @@ Avatar, monster, and NPC model viewer and asset pipeline. Converts proprietary g
 ## Requirements
 
 - [Godot 4.6](https://godotengine.org/) or newer
+
+## License
+
+This project's original code and content is licensed under **CC BY-NC-SA 4.0** — non-commercial use only, share-alike for derivatives. See [`LICENSE`](LICENSE) for the full text.
+
+The game assets under `refs/` (and their derivatives under `ytavatar/client/assets/`) are © Neowiz and are included under a separate non-commercial redistribution permission. See [`NOTICE.md`](NOTICE.md) for the full breakdown of what is licensed how, and what non-commercial means in practice.
