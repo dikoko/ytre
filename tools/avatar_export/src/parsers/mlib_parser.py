@@ -5,9 +5,9 @@ Parses Yogurting MLIB animation files containing bone hierarchy and motion data.
 
 MLIB Format (MLIB_HEADER_EX = 0x2385adce):
 1. Header (4 bytes): Magic number
-2. Bone data (CGaBone)
+2. Bone data
 3. Motion count (4 bytes)
-4. Motion data (CGaMotion) for each motion
+4. Motion data for each motion
 5. Ground vector (12 bytes)
 """
 
@@ -20,15 +20,15 @@ from typing import BinaryIO
 # Constants
 MLIB_HEADER = 0x2385ADBF
 MLIB_HEADER_EX = 0x2385ADCE
-MAX_MNAME = 40
+MAX_MOTION_NAME = 40
 M_INFO_SU = 50
 
 # Motion types
-MOTION_TYPE_BASIC = 0      # CGaMotion
-MOTION_TYPE_EX = 1         # CGaMotionEx (with translation per bone)
-MOTION_TYPE_EX2 = 2        # CGaMotionEx2 (with translation + scale)
-MOTION_TYPE_EX3 = 3        # CGaMotionEx3 (extended)
-MOTION_TYPE_KEY = 4        # CGaKeyMotion (keyframe-based)
+MOTION_TYPE_BASIC = 0      # rotations only
+MOTION_TYPE_EX = 1         # + per-bone translations
+MOTION_TYPE_EX2 = 2        # + per-bone scales
+MOTION_TYPE_EX3 = 3        # + scale axes
+MOTION_TYPE_KEY = 4        # keyframe tracks
 
 
 @dataclass
@@ -72,10 +72,10 @@ class MLIBMotion:
     # Per-frame, per-bone rotations: rotations[frame][bone]
     rotations: list[list[Quaternion]] = field(default_factory=list)
 
-    # Per-frame, per-bone translations (for CGaMotionEx types)
+    # Per-frame, per-bone translations (extended motion types)
     translations: list[list[Vector3]] = field(default_factory=list)
 
-    # Per-frame, per-bone scales (for CGaMotionEx2/Ex3 types)
+    # Per-frame, per-bone scales (extended motion types 2/3)
     scales: list[list[Vector3]] = field(default_factory=list)
 
     # Origin and orientation
@@ -171,7 +171,7 @@ class MLIBParser:
         return result
 
     def _parse_bones(self, f: BinaryIO) -> list[MLIBBone]:
-        """Parse CGaBone data."""
+        """Parse one bone record."""
         bones = []
 
         bone_count = struct.unpack('<I', f.read(4))[0]
@@ -188,7 +188,7 @@ class MLIBParser:
 
         names = []
         for i in range(bone_count):
-            name_bytes = f.read(MAX_MNAME)
+            name_bytes = f.read(MAX_MOTION_NAME)
             name = name_bytes.split(b'\x00')[0].decode('utf-8', errors='replace')
             names.append(name)
 
@@ -203,20 +203,20 @@ class MLIBParser:
         return bones
 
     def _parse_motion(self, f: BinaryIO, motion_type: int, bone_count: int) -> MLIBMotion:
-        """Parse CGaMotion data based on motion type."""
+        """Parse one motion record based on motion type."""
         if motion_type == MOTION_TYPE_KEY:
             return self._parse_key_motion(f)
         else:
             return self._parse_basic_motion(f, motion_type)
 
     def _parse_basic_motion(self, f: BinaryIO, motion_type: int) -> MLIBMotion:
-        """Parse CGaMotion (and Ex variants) data."""
+        """Parse a basic/extended motion record."""
         motion = MLIBMotion()
 
         motion.frame_count = struct.unpack('<I', f.read(4))[0]
         motion.bone_count = struct.unpack('<I', f.read(4))[0]
 
-        name_bytes = f.read(MAX_MNAME)
+        name_bytes = f.read(MAX_MOTION_NAME)
         motion.name = name_bytes.split(b'\x00')[0].decode('utf-8', errors='replace')
 
         motion.option = struct.unpack('<I', f.read(4))[0]
@@ -275,13 +275,13 @@ class MLIBParser:
         return motion
 
     def _parse_key_motion(self, f: BinaryIO) -> MLIBMotion:
-        """Parse CGaKeyMotion (keyframe-based animation)."""
+        """Parse a keyframe-track motion record."""
         motion = MLIBMotion()
 
         motion.frame_count = struct.unpack('<I', f.read(4))[0]
         motion.bone_count = struct.unpack('<I', f.read(4))[0]
 
-        name_bytes = f.read(MAX_MNAME)
+        name_bytes = f.read(MAX_MOTION_NAME)
         motion.name = name_bytes.split(b'\x00')[0].decode('utf-8', errors='replace')
 
         motion.option = struct.unpack('<I', f.read(4))[0]
@@ -404,7 +404,7 @@ class MLIBParser:
         )
 
     def _parse_motion_ex(self, f: BinaryIO, motion: MLIBMotion) -> None:
-        """Parse CGaMotionEx additional data (per-bone translations)."""
+        """Parse extended motion data (per-bone translations)."""
         for frame in range(motion.frame_count):
             frame_translations = []
             for bone in range(motion.bone_count):
@@ -413,7 +413,7 @@ class MLIBParser:
             motion.translations.append(frame_translations)
 
     def _parse_motion_scales(self, f: BinaryIO, motion: MLIBMotion) -> None:
-        """Parse CGaMotionEx2 additional data (per-bone scales)."""
+        """Parse extended motion data (per-bone scales)."""
         for frame in range(motion.frame_count):
             frame_scales = []
             for bone in range(motion.bone_count):
@@ -422,5 +422,5 @@ class MLIBParser:
             motion.scales.append(frame_scales)
 
     def _parse_motion_scale_axes(self, f: BinaryIO, motion: MLIBMotion) -> None:
-        """Parse CGaMotionEx3 additional data (scale axes as quaternions)."""
+        """Parse extended motion data (scale axes as quaternions)."""
         f.read(16 * motion.frame_count * motion.bone_count)

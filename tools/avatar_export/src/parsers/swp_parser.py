@@ -4,11 +4,11 @@ SWP File Parser
 Parses Yogurting .swp (swap) files that define which base mesh vertices
 are replaced by each avatar part.
 
-File format (from GtCSwpReader):
+File format:
 - Header: DefNum (int), DefData[DefNum]
 - Body: PartsNum (int), SwpData[PartsNum]
 
-Each SwpData contains pCloneIdx - vertex indices in base mesh to hide when part equipped.
+Each SwpData record carries the vertex indices in the base mesh to hide when the part is equipped.
 """
 
 import struct

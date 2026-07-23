@@ -28,17 +28,17 @@ Monsters are single-mesh models with embedded skeleton and animations.
 
 ### MLIB Motion Options (Bitmask)
 
-The `motion.option` field is a bitmask from the original engine:
+The `motion.option` field is a bitmask:
 
 ```
-MOP_MOVING   = 1   // Root has locomotion translation
-MOP_LOOP     = 2   // Animation loops
-MOP_ROTATING = 4   // Root has rotation
-MOP_SCALING  = 8   // Bone scaling
-MOP_FIXY     = 16  // Fix Y position
+MOTION_FLAG_MOVING   = 1   // Root has locomotion translation
+MOTION_FLAG_LOOP     = 2   // Animation loops
+MOTION_FLAG_ROTATING = 4   // Root has rotation
+MOTION_FLAG_SCALING  = 8   // Bone scaling
+MOTION_FLAG_FIXY     = 16  // Fix Y position
 ```
 
-All monster MLIB files use `motion_type = 4` (CGaKeyMotion — keyframe rotations, no per-bone translations).
+All monster MLIB files use `motion_type = 4` (keyframe tracks — per-bone rotation keys, no per-bone translations).
 
 ---
 
@@ -153,7 +153,7 @@ Currently applied to: ct0032, ct0037, ct0038
 
 ### Root Translation (RT)
 
-Fixed for most cases with MOP_MOVING Y normalization. Remaining RT monsters have minor height offsets during walk/run — acceptable for gameplay.
+Fixed for most cases with locomotion-flag Y normalization. Remaining RT monsters have minor height offsets during walk/run — acceptable for gameplay.
 
 ### Weapon Detachment (WD)
 

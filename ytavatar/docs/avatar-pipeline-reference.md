@@ -21,11 +21,11 @@ Binary format storing skeleton hierarchy and animation motions.
 - **Header magic**: `0x2385ADCE` (extended) or `0x2385ADBF` (old)
 - **Contains**: bone list with parent IDs, motion clips with per-bone rotations/translations
 - **Motion types**:
-  - `0` CGaMotion — rotations only
-  - `1` CGaMotionEx — rotations + per-bone translations
-  - `2` CGaMotionEx2 — + scales
-  - `3` CGaMotionEx3 — + scale axes
-  - `4` CGaKeyMotion — keyframe-based
+  - `0` basic — rotations only
+  - `1` extended — rotations + per-bone translations
+  - `2` extended — + scales
+  - `3` extended — + scale axes
+  - `4` keyframe tracks — per-bone rotation/translation/scale keys
 
 ### PRT (Part)
 

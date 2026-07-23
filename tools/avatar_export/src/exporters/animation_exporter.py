@@ -864,11 +864,11 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
         if root_tmd_idx < len(model.bones):
             root_bone = model.bones[root_tmd_idx]
             bind_pos = root_bone.world_transform.translation
-            is_moving = (motion.option & 1) != 0  # MOP_MOVING bitmask
+            is_moving = (motion.option & 1) != 0  # locomotion flag
 
             if is_moving:
-                # MOP_MOVING: normalize Y to zero-mean, then add bind position.
-                # Matches original engine's NormalizeYValue() behavior.
+                # Locomotion motions: normalize Y to zero-mean, then add bind position.
+                # Matches the original client's root-height normalization behavior.
                 mean_y = sum(rp.y for rp in motion.root_positions) / len(motion.root_positions)
                 trans_values = []
                 for rp in motion.root_positions:
