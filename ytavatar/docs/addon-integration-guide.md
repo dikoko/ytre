@@ -168,7 +168,7 @@ Displays a single monster from a self-contained GLB file.
 └── models/
     ├── ct0001.glb
     ├── ct0002.glb
-    └── ...            # 116 monster GLBs
+    └── ...            # 135 monster GLBs
 ```
 
 Each GLB contains mesh, skeleton, animations, and embedded textures.

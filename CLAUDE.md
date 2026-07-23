@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**YTAvatar** is a Godot 4 avatar/character viewer and asset pipeline tool for the Yogurting Revival project. It displays customizable male/female avatars with swappable parts and equipment, plus 116 monster models and 58 NPC models — all converted from proprietary binary formats (TMD, MLIB, PRT) to GLTF/GLB.
+**YTAvatar** is a Godot 4 avatar/character viewer and asset pipeline tool for the Yogurting Revival project. It displays customizable male/female avatars with swappable parts and equipment, plus 135 monster models and 78 NPC models — all converted from proprietary binary formats (TMD, MLIB, PRT) to GLTF/GLB.
 
 ## Running the Project
 

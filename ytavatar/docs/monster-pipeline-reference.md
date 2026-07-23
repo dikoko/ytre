@@ -8,7 +8,7 @@ Technical reference for the Yogurting monster model export pipeline.
 Monsters are single-mesh models with embedded skeleton and animations.
 
 - **Total monsters**: 135 in source data
-- **Exported**: 116 (configured in `monsters.yaml`)
+- **Exported**: 135 (all configured in `monsters.yaml`)
 - **Output**: `client/assets/monsters/models/ct####.glb`
 
 ### Differences from Avatar Export
@@ -38,7 +38,11 @@ MOTION_FLAG_SCALING  = 8   // Bone scaling
 MOTION_FLAG_FIXY     = 16  // Fix Y position
 ```
 
-All monster MLIB files use `motion_type = 4` (keyframe tracks — per-bone rotation keys, no per-bone translations).
+All monster MLIB files use `motion_type = 4` (keyframe tracks). Each bone
+carries rotation, translation, scale, and scale-axis key tracks; the exporter
+expands and exports all of them (see the NPC pipeline reference for the
+track-fidelity and scale-axis factor-chain details — monsters use the same
+path). Scale sampling is gated by bit 3 of the motion option flags.
 
 ---
 
@@ -111,16 +115,11 @@ For multi-material monsters, primitives are assigned to materials based on the f
 
 ## Per-Monster Corrections
 
-### Rotation Correction (`_correct_mlib_rotations`)
+### Rotation Correction (retired)
 
-For specific monsters where TMD and MLIB rest-pose rotations differ significantly:
-
-1. Compute TMD rest-pose local rotations
-2. Find reference motion (stand)
-3. Per bone: `correction = TMD_local * inverse(MLIB_stand_f0)`
-4. Apply correction to ALL animation frames: `corrected = correction * MLIB[frame]`
-
-Currently applied to: ct0032, ct0037, ct0038
+Earlier versions corrected TMD/MLIB rest-pose mismatches per monster
+(ct0032, ct0037, ct0038). With full translation tracks exported, the
+correction is no longer needed and is retired.
 
 ### Per-Monster Zoom
 
@@ -137,39 +136,34 @@ Currently applied to: ct0032, ct0037, ct0038
 
 ## Known Issues
 
-### Issue Categories
+The earlier issue census (root translation drift, weapon detachment,
+animation pops, import crashes) predates the full-track exporter; those
+categories are resolved:
 
-| Code | Issue | Count | Description |
-|------|-------|-------|-------------|
-| OK | Good | 85 | No visible issues |
-| RT | Root Translation | 24 | Model floats or clips during walk/run |
-| WD | Weapon Detach | 12 | Weapon/prop drifts from hand |
-| AP | Animation Pop | 10 | Sudden mesh extension in cloth/hair |
-| BN | Bone Name | 5 | TMD/MLIB bone name mismatch |
-| PR | Prop/Static | 3 | Static prop positioning |
-| GC | Godot Crash | 3 | Crashes Godot on import |
-| OR | Orientation | 3 | Model faces wrong direction |
-| RF | Reflected Bone | 1 | Mirrored animation on asymmetric motion |
+- **Weapon detachment** — fixed by exporting per-bone translation tracks
+  (weapon bones are positioned by their own tracks, not by rotation-only
+  FK through the spine).
+- **Root translation drift** — locomotion-flag Y normalization.
+- **Animation pops / cloth shimmer** — full scale + scale-axis tracks with
+  the per-factor node chain; physics-bone smoothing remains only for baked
+  cloth simulation jumps.
+- **Import crashes** — no longer reproduce; all 135 monsters import and
+  play in Godot 4.6+.
 
-### Root Translation (RT)
-
-Fixed for most cases with locomotion-flag Y normalization. Remaining RT monsters have minor height offsets during walk/run — acceptable for gameplay.
-
-### Weapon Detachment (WD)
-
-Weapon bones parented to `@Root` or `@Spine` instead of hand. Positioned by rotation-only animation through the parent chain. Small quaternion precision differences cause drift. Known limitation — would require per-bone translation channels (not available in MLIB type 4).
-
-### Godot Import Crash (GC)
-
-ct0066, ct0074, ct0076 crash the Godot editor during import. Not included in `monsters.yaml`.
+Remaining deliberate deviation: EMA smoothing on physics bone chains
+(skirt/hair/tail prefixes), kept to soften baked-simulation frame jumps.
 
 ---
 
-## Verification Status
+## Verification
 
-Full visual verification completed for all 135 monsters. See `docs/monster-verification.md` for per-monster status codes.
-
-**85 of 135 monsters (63%) look good.** Most issues are minor (RT, AP) or known limitations (WD, BN).
+All 135 monsters pass the same automated checks as NPCs: node-FK parity vs
+a full-track oracle (<= 1 cm, every motion), silhouette match vs a
+software-skinned reference render (>= 0.99), and sub-frame parity of the
+imported Godot animation at arbitrary sample times. The 19 monsters
+previously excluded from the browser (ct0037, ct0038, ct0060, ct0069,
+ct0070, ct0079, ct0083, ct0102, ct0118, ct0119, ct0138-ct0141,
+ct0143-ct0146, ct0151) were re-verified and restored.
 
 ---
 
@@ -184,6 +178,6 @@ client/assets/monsters/monsters.yaml    # Monster list + per-monster zoom/name
 ### Output
 
 ```
-client/assets/monsters/models/ct####.glb    # Exported GLB (116 files)
+client/assets/monsters/models/ct####.glb    # Exported GLB (135 files)
 ```
 

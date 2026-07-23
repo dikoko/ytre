@@ -44,6 +44,8 @@ monsters:
   zoom: 13.5
 - id: ct0035
 - id: ct0036
+- id: ct0037
+- id: ct0038
 - id: ct0039
 - id: ct0046
 - id: ct0047
@@ -57,6 +59,8 @@ monsters:
 - id: ct0058
 - id: ct0059
   zoom: 13.5
+- id: ct0060
+  zoom: 7.0
 - id: ct0061
 - id: ct0062
   zoom: 7.0
@@ -66,6 +70,9 @@ monsters:
 - id: ct0066
 - id: ct0067
 - id: ct0068
+- id: ct0069
+- id: ct0070
+  zoom: 7.0
 - id: ct0071
 - id: ct0072
 - id: ct0073
@@ -75,9 +82,13 @@ monsters:
   zoom: 7.0
 - id: ct0077
 - id: ct0078
+- id: ct0079
+  zoom: 7.0
 - id: ct0080
 - id: ct0081
 - id: ct0082
+- id: ct0083
+  zoom: 13.5
 - id: ct0084
 - id: ct0085
 - id: ct0086
@@ -94,6 +105,8 @@ monsters:
 - id: ct0099
 - id: ct0100
 - id: ct0101
+- id: ct0102
+  zoom: 7.0
 - id: ct0103
 - id: ct0104
 - id: ct0105
@@ -111,6 +124,8 @@ monsters:
   zoom: 7.0
 - id: ct0116
 - id: ct0117
+- id: ct0118
+- id: ct0119
 - id: ct0120
 - id: ct0121
 - id: ct0122
@@ -129,8 +144,18 @@ monsters:
 - id: ct0136
 - id: ct0137
   zoom: 7.0
+- id: ct0138
+- id: ct0139
+- id: ct0140
+- id: ct0141
+  zoom: 7.0
 - id: ct0142
+- id: ct0143
+- id: ct0144
+- id: ct0145
+- id: ct0146
 - id: ct0147
 - id: ct0148
 - id: ct0149
 - id: ct0150
+- id: ct0151
