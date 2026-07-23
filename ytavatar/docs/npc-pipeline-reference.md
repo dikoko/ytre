@@ -18,8 +18,8 @@ NPCs are character models that appear in the game world. Like monsters, they are
 |---------|---------|-----|
 | ID prefix | `ct####` | `cn####` |
 | Source dir | `Monster.IRD` | `NPC.IRD` |
-| Per-model config | Minimal (zoom, 3 corrections) | Extensive (tweaks per NPC) |
-| Equip reparenting | Not used | Auto-detected + manual tweaks |
+| Per-model config | None | Skeleton-approach pin for 3 NPCs |
+| Equip handling | Full key tracks (none needed) | Full key tracks (none needed) |
 | Physics smoothing | Prefix-based only | Prefix + per-model bone indices |
 
 ---
@@ -51,82 +51,82 @@ Both conventions can appear in the same model. Equip bones use both: `@Sword`, `
 
 ---
 
-## Equip Bone Reparenting
+## Animation Track Fidelity
 
-### Problem
+MLIB motion type 4 stores full per-bone key tracks: rotations, translations,
+scales, and scale axes. The exporter expands all four track types and emits
+them as GLTF animation channels, using the same interpolation the retail
+client uses (nearest-previous key lookup + shortest-path slerp for
+rotations/scale-axes, linear for translations/scales; before the first key a
+track evaluates to zero/identity/unit).
 
-Many NPC equip bones (sword, broom, book) are parented to `@Root` or `@Spine3` in the TMD hierarchy instead of the hand bone. The original engine positions these through precise rotation-only animation, but small quaternion differences in GLTF cause the equip to drift from the hand.
+Two details matter for correctness:
 
-### Solution
+- **Skeleton bind offsets are dead data during animated motions** — bone
+  translations come from the motion's own translation tracks. Exports that
+  ignore the translation tracks and reuse bind offsets detach every animated
+  prop (pipes, swords, fans, books) even though the body looks fine.
+- **Scale sampling is gated** by bit 3 of the motion option flags; scale keys
+  in motions without the flag are dead data and must not be applied.
 
-Auto-detect equip chain roots and reparent them to the nearest hand bone:
+With the full tracks exported, equips stay attached through every animation
+with **zero per-NPC configuration** — the earlier reparenting, equip
+correction, and bone-tweak systems are retired.
 
-1. **Detection**: Bones matching `_EQUIP_BONE_PREFIXES` that are NOT already on a hand chain
-2. **Skip**: Bones parented to `@Pelvis` (back-mounted) or `@Head` (head-mounted)
-3. **Chain roots only**: If a bone's ancestor is already reparented, skip it
-4. **Skeleton**: Change parent in GLTF node hierarchy
-5. **Animation**: FK rotation (local rot relative to new hand parent) + bind-pose translation offset
+### Scale-Axis Factor Chain
 
----
+Some bones animate anisotropic scale about a rotated axis: the bone's local
+transform is `T * R * (Rsa * S * Rsa^T)`, which a single GLTF TRS node cannot
+express. The exporter emits a chain of nodes, one per factor:
 
-### Alternative: Blender Refinement
+```
+bone (T * R)  ->  {name}_SAS (Rsa * S)  ->  {name}_SA (Rsa^T)
+```
 
-For complex positioning that's hard to dial in with the export tweak tool, import the GLB into Blender and adjust bone transforms visually in pose mode, then re-export. This is recommended for cases like cn0040 (broom) where the local-space axes don't align intuitively with world directions.
-
----
-
-## Known Issues
-
-### Equip Detachment During Walk
-
-Several NPCs have equips that look correct in stand/idle but detach during walk/move animations. This is caused by accumulated rotation errors in the parent chain (hand → forearm → arm) that compound differently between the original engine and our GLTF export. Constant position/rotation tweaks fix the stand pose but can't account for per-frame variation.
-
-**Affected**: cn0007 (pipe), cn0021 (abacus), cn0009 (sword)
-
-**Workaround**: Accept minor walk detachment. NPCs primarily stand in the game.
-
-### Spine-Chain Weapon Positioning
-
-cn0009's sword is parented to `@Spine3 → @FixBlade → @Sword` and swings between hands during idle animations. This rotation-based positioning can't be perfectly replicated in GLTF due to quaternion precision differences. Reparenting breaks back-mounted swords.
-
-**Status**: Known limitation, recorded as acceptable.
+with the skin joint and child bones attached to the last node. Because each
+factor lives on its own node, Godot's per-node interpolation (slerp for
+rotations, lerp for scales) reproduces the engine-style per-factor
+interpolation exactly — at every playback time, not just on key frames.
+Fusing or re-factorizing these tracks into fewer nodes is only correct ON
+keys and shimmers between them (the factorization gauge can spin quickly
+where scale eigenvalues cross while the composed transform barely moves).
 
 ### Physics-Only Reflections
 
-Some NPCs (cn0007, cn0047, cn0109) have negative determinant rotation matrices only in physics bones (breast, skirt), not structural skeleton. The reflection auto-detection incorrectly triggers MLIB approach for the entire skeleton.
-
-**Fix**: Add to `FORCE_TMD_SCALE` in `_npc_config.py`.
-
-### Generic Bone Names
-
-Some NPCs use `Bone##` and `connectBone##` for physics chains (cn0007 breast ribbons) AND structural skeleton (cn0090). Physics bone smoothing by prefix can't safely use `"Bone"` as a prefix.
-
-**Fix**: Use `smooth_bone_indices` with explicit TMD bone indices per model.
+Some NPCs (cn0007, cn0047, cn0109) have negative-determinant rest rotations
+only in physics bones (breast, skirt), not the structural skeleton. The
+reflection auto-detection would incorrectly switch the whole skeleton to the
+MLIB rest-pose approach; `FORCE_TMD_SCALE` in `_npc_config.py` pins these
+three to the TMD approach. This is the only per-NPC configuration left.
 
 ---
 
-## Verification Status
+## Playback Fidelity in Godot
 
-### Batch 1 (cn0001–cn0047): Verified
+Godot's scene importer runs a lossy animation-key optimizer by default,
+which can remove a large fraction of keys from smooth tracks (observed: a
+61-key track reduced to 12). The committed `.glb.import` files disable it
+(`optimizer/enabled=false` under the AnimationPlayer subresource) and bake
+at 30 fps to match the authored key rate. If you re-import from scratch,
+keep these settings — otherwise animations degrade.
 
-| Status | Count | NPCs |
-|--------|-------|------|
-| OK | 28 | Most NPCs look good |
-| WD (weapon detach) | 9 | cn0009, cn0011, cn0021, cn0024, cn0039, cn0040, cn0042, cn0043, cn0045 |
-| AP (animation pop) | 2 | cn0007 (breast), cn0038 (cape — FIXED) |
-| BN (broken mesh) | 1 | cn0014 (leg) |
+---
 
-All WD issues addressed with equip correction + bone tweaks. cn0042/cn0043 books work perfectly with reparenting.
+## Verification
 
-### Batch 2 (cn0048–cn0110): Partially Verified
+All 78 NPCs pass three automated checks:
 
-Reported issues:
-- cn0047: T-pose fixed (force_tmd_scale), cup detached (known limitation)
-- cn0049: Book reparented to hand
-- cn0062: Sword on pelvis (back-mounted, intentional)
-- cn0069: Cigarette on head (skip reparent for @Head)
-- cn0076: Bucket reparented to hand
-- cn0109: T-pose fixed (force_tmd_scale)
+1. **Node-FK parity** — every bone's world position from the exported GLB
+   matches a full-track FK oracle within 1 cm, all motions.
+2. **Silhouette match** — a Godot screenshot is compared against a software-
+   skinned reference render of the same pose (point/pixel hit >= 0.99).
+3. **Sub-frame parity** — the imported Godot animation is sampled at
+   arbitrary times between key frames and matches the GLB tracks to
+   numerical precision; this catches interpolation and import-baking defects
+   that on-key checks miss.
+
+Equip attachment (pipe, swords, fan, abacus, books, broom, bucket) verified
+visually in the viewer across the fleet.
 
 ---
 
@@ -135,7 +135,7 @@ Reported issues:
 ### Export Config
 
 ```
-tools/avatar_export/scripts/_npc_config.py    # Per-NPC tweaks
+tools/avatar_export/scripts/_npc_config.py    # FORCE_TMD_SCALE only
 client/assets/npcs/npcs.yaml                  # NPC list for avatar tool viewer
 ```
 

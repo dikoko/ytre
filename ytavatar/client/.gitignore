@@ -6,3 +6,7 @@
 /android/
 
 
+# Model imports are committed: they carry required animation settings
+# (key optimizer disabled, 30 fps bake) that Godot defaults would degrade
+!assets/npcs/models/*.glb.import
+!assets/monsters/models/*.glb.import
