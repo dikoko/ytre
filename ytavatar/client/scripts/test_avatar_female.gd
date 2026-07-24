@@ -157,7 +157,7 @@ var variant_index: Dictionary = {
 	"glorb": 0,
 }
 
-# Per-part metadata loaded from JSON (maps part name to hides_regions)
+# Per-part metadata loaded from JSON (maps part name to hides_materials)
 var parts_metadata: Dictionary = {}
 
 # Shared skin material for base mesh fill behind transparent parts
@@ -255,20 +255,6 @@ const MATERIAL_TO_TEXTURE: Dictionary = {
 	"face": null,                      # Face - uses skin color shader
 }
 
-# Materials that require ALL listed regions to be hidden before hiding the material
-const MATERIAL_REQUIRED_REGIONS: Dictionary = {
-	# Hair: Hide both scalp and strands when hair part equipped
-	"hair_scalp": ["hair_strands"],
-	"hair_strands": ["hair_strands"],
-	"upper": ["torso", "arm_upper"],  # Upper hidden only when BOTH covered (prevents pants-only hiding torso)
-	"arm": ["arm_upper", "forearm"],  # ARM hidden only when BOTH regions covered (long sleeves)
-	# Short sleeves only hide arm_upper, so ARM stays visible (no gaps at wrists)
-	"hand": ["hand"],
-	"lower": ["waist"],  # Lower material hidden when waist is hidden
-	"leg": ["leg_upper", "leg_lower"],  # LEG hidden only when BOTH regions covered (long pants)
-	# Short/capri pants only hide leg_upper, so LEG stays visible
-	"foot": ["foot"],
-}
 
 # Face texture configuration
 const TEXTURES_FACES_PATH := "res://assets/avatars/textures/faces/"
@@ -312,10 +298,10 @@ func _load_parts_metadata() -> void:
 		print("Loaded metadata for ", parts_metadata.size(), " parts")
 
 
-func _get_part_hides_regions(part_name: String) -> Array:
-	"""Get the regions that a specific part hides."""
+func _get_part_hides_materials(part_name: String) -> Array:
+	"""Base material meshes replaced by this part (from its .swp slots)."""
 	if parts_metadata.has(part_name):
-		return parts_metadata[part_name].get("hides_regions", [])
+		return parts_metadata[part_name].get("hides_materials", [])
 	# Fallback if metadata not found
 	push_warning("No metadata for part: " + part_name)
 	return []
@@ -747,40 +733,18 @@ func _update_material_visibility() -> void:
 	for mat_name in material_meshes:
 		material_meshes[mat_name].visible = true
 
-	# Collect all hidden regions from all equipped parts
-	var all_hidden_regions: Array[String] = []
+	# Hide exactly the base material meshes each equipped part replaces
+	var hidden_list: Array[String] = []
 	for slot in current_parts:
 		if current_parts[slot] != null:
 			var part_name = current_part_names[slot]
-			var hidden_regions = _get_part_hides_regions(part_name)
-			for region_name in hidden_regions:
-				if not all_hidden_regions.has(region_name):
-					all_hidden_regions.append(region_name)
-
-	# Hide materials if ALL their required regions are hidden
-	var hidden_list: Array[String] = []
-	for mat_name in MATERIAL_REQUIRED_REGIONS:
-		var required_regions = MATERIAL_REQUIRED_REGIONS[mat_name]
-		var all_required_hidden = true
-
-		for region_name in required_regions:
-			if not all_hidden_regions.has(region_name):
-				all_required_hidden = false
-				break
-
-		if all_required_hidden:
-			if material_meshes.has(mat_name):
-				material_meshes[mat_name].visible = false
-				hidden_list.append(mat_name)
-			else:
-				print("WARNING: Material mesh not found: ", mat_name)
+			for mat_name in _get_part_hides_materials(part_name):
+				if material_meshes.has(mat_name) and material_meshes[mat_name].visible:
+					material_meshes[mat_name].visible = false
+					hidden_list.append(mat_name)
 
 	if hidden_list.size() > 0:
 		print("Hidden materials: ", hidden_list)
-
-	# Debug: print all hidden regions
-	if all_hidden_regions.size() > 0:
-		print("All hidden regions: ", all_hidden_regions)
 
 
 
@@ -913,9 +877,9 @@ func _print_debug_state() -> void:
 	for slot in current_parts:
 		if current_parts[slot]:
 			var part_name = current_part_names[slot]
-			var hidden_regions = _get_part_hides_regions(part_name)
+			var hidden_materials = _get_part_hides_materials(part_name)
 			print("  ", slot, ": ", part_name)
-			print("    hides regions: ", hidden_regions)
+			print("    hides materials: ", hidden_materials)
 		else:
 			print("  ", slot, ": (none)")
 

@@ -57,16 +57,9 @@ signal gender_changed(new_gender: String)
 
 # === CONSTANTS ===
 
-const MATERIAL_REQUIRED_REGIONS: Dictionary = {
-	"hair_scalp": ["hair_strands"],
-	"hair_strands": ["hair_strands"],
-	"upper": ["torso", "arm_upper"],
-	"arm": ["arm_upper", "forearm"],
-	"hand": ["hand"],
-	"lower": ["waist"],
-	"leg": ["leg_upper", "leg_lower"],
-	"foot": ["foot"],
-}
+# Part swapping replaces whole base material meshes by swap slot, exactly as
+# the original client does: each part's metadata carries "hides_materials",
+# the base meshes its .swp entry replaces. No region heuristics.
 
 const BLINK_INTERVAL_MIN := 2.0
 const BLINK_INTERVAL_MAX := 5.0
@@ -110,6 +103,10 @@ const _GENDER_DATA: Dictionary = {
 		},
 		"part_prefix": "male",
 		"glorb_prefix": "male",
+		# default skin tone: the authored base-body textures are flat fills
+		# of this color (253, 207, 162) — the artists' preview of the
+		# default table tone
+		"skin_color": Color(0.99216, 0.81176, 0.63529),
 	},
 	"female": {
 		"base_glb": "base/female_base_materials.glb",
@@ -144,6 +141,10 @@ const _GENDER_DATA: Dictionary = {
 		},
 		"part_prefix": "female",
 		"glorb_prefix": "female",
+		# female base-body fill is (255, 221, 183) — a lighter default tone
+		# than the male one; using one shared constant for both genders was
+		# the cause of the female thigh-line tone step
+		"skin_color": Color(1.0, 0.86667, 0.71765),
 	},
 }
 
@@ -437,64 +438,70 @@ func get_parts_path() -> String:
 
 # === INTERNAL: Shader compilation ===
 
-func _compile_shaders() -> void:
-	_hair_shader = Shader.new()
-	_hair_shader.code = """
-shader_type spatial;
-render_mode cull_disabled;
-
-uniform sampler2D hair_texture : source_color;
+# All avatar surfaces use ONE faithful material model, replicating the
+# original client's avatar pass:
+#   - skin tone: the part texture's ALPHA channel is a skin mask; output
+#     is a smooth blend  mix(skin_color, tex.rgb, tex.a)  — the original
+#     blends a 1x1 skin-color texture with the part texture using the
+#     texture's alpha (feathered, NOT a hard threshold). Textures without
+#     an alpha channel read a=1 and pass through untouched.
+#   - lighting: fixed-function portrait rig — world ambient 0.502 + light
+#     ambient 0.1 on material ambient 0.7, one directional light with
+#     diffuse 0.5 on material diffuse 1.0, no specular. Ambient-dominant
+#     shading is what visually welds part-boundary normal differences.
+#   - no transparency: in the avatar pass, alpha means "skin", not "see
+#     through"; meshes render opaque (hair strand shapes are geometry).
+# FF math runs in gamma space (per-vertex, Gouraud-interpolated).
+const _SKIN_BLEND_SHADER_BODY := """
+uniform sampler2D albedo_tex : source_color, filter_linear_mipmap, hint_default_white;
 uniform vec4 skin_color : source_color = vec4(0.992, 0.812, 0.635, 1.0);
-uniform float alpha_threshold : hint_range(0.0, 1.0) = 0.3;
+uniform vec3 light_direction = vec3(-0.31235, -0.15617, -0.93704);
+uniform vec3 light_diffuse = vec3(0.5);
+uniform vec3 light_ambient = vec3(0.1);
+uniform vec3 world_ambient = vec3(0.50196);
+const float MATERIAL_AMBIENT = 0.7;
 
-void fragment() {
-	vec4 tex = texture(hair_texture, UV);
-	ROUGHNESS = 1.0;
-	SPECULAR = 0.0;
-	if (tex.a < alpha_threshold) {
-		ALBEDO = skin_color.rgb;
-	} else {
-		ALBEDO = tex.rgb;
-	}
+varying float ff_diffuse;
+
+vec3 srgb_encode(vec3 c) {
+	return mix(c * 12.92, 1.055 * pow(max(c, vec3(0.0)), vec3(1.0 / 2.4)) - 0.055,
+			greaterThan(c, vec3(0.0031308)));
 }
-"""
 
-	_clothing_shader = Shader.new()
-	_clothing_shader.code = """
-shader_type spatial;
-
-uniform sampler2D clothing_texture : source_color;
-uniform vec4 skin_color : source_color = vec4(0.992, 0.812, 0.635, 1.0);
-uniform float alpha_threshold : hint_range(0.0, 1.0) = 0.5;
+vec3 srgb_decode(vec3 c) {
+	return mix(c / 12.92, pow((c + 0.055) / 1.055, vec3(2.4)),
+			greaterThan(c, vec3(0.04045)));
+}
 
 void vertex() {
-	VERTEX += NORMAL * 0.001;
+	vec3 n = normalize((MODEL_MATRIX * vec4(NORMAL, 0.0)).xyz);
+	float amb = MATERIAL_AMBIENT * (world_ambient.r + light_ambient.r);
+	float diff = light_diffuse.r * max(dot(n, -normalize(light_direction)), 0.0);
+	ff_diffuse = clamp(amb + diff, 0.0, 1.0);
 }
 
 void fragment() {
-	vec4 tex = texture(clothing_texture, UV);
-	ROUGHNESS = 1.0;
-	SPECULAR = 0.0;
-	if (tex.a < alpha_threshold) {
-		ALBEDO = skin_color.rgb;
-	} else {
-		ALBEDO = tex.rgb;
-	}
+	vec4 tex = texture(albedo_tex, UV);
+	vec3 base_g = mix(srgb_encode(skin_color.rgb), srgb_encode(tex.rgb), tex.a);
+	ALBEDO = srgb_decode(base_g * ff_diffuse);
 }
 """
 
-	_skin_shader = Shader.new()
-	_skin_shader.code = """
-shader_type spatial;
 
-uniform vec4 skin_color : source_color = vec4(0.992, 0.812, 0.635, 1.0);
+func _compile_shaders() -> void:
+	# hair keeps two-sided rendering (strand cards); others cull back faces
+	_hair_shader = Shader.new()
+	_hair_shader.code = "shader_type spatial;\nrender_mode unshaded, cull_disabled;\n" \
+		+ _SKIN_BLEND_SHADER_BODY
 
-void fragment() {
-	ALBEDO = skin_color.rgb;
-	ROUGHNESS = 1.0;
-	SPECULAR = 0.0;
-}
-"""
+	_clothing_shader = Shader.new()
+	_clothing_shader.code = "shader_type spatial;\nrender_mode unshaded, cull_back;\n" \
+		+ _SKIN_BLEND_SHADER_BODY
+
+	# bare-skin materials use the same blend shader; their textures are the
+	# authored base-body textures (flat default-tone fills with alpha=0, so
+	# they follow skin_color exactly like the original)
+	_skin_shader = _clothing_shader
 
 
 # === INTERNAL: Blink system ===
@@ -545,6 +552,10 @@ func _play_blink_frame() -> void:
 
 func _build_avatar() -> void:
 	var cfg = _cfg()
+
+	# Per-gender default skin tone (call set_skin_color afterwards for a
+	# custom tone; the authored default differs between genders)
+	skin_color = cfg["skin_color"]
 
 	var base_path = _asset(cfg["base_glb"])
 	var base_scene = load(base_path) as PackedScene
@@ -697,62 +708,37 @@ func _load_parts_metadata() -> void:
 		_parts_metadata = data["parts"]
 
 
-func _get_part_hides_regions(part_name: String) -> Array:
+func _get_part_hides_materials(part_name: String) -> Array:
 	if _parts_metadata.has(part_name):
-		return _parts_metadata[part_name].get("hides_regions", [])
+		return _parts_metadata[part_name].get("hides_materials", [])
 	return []
 
 
 # === INTERNAL: Materials ===
 
-func _create_textured_material(texture_path: String, use_hair_shader: bool = false, use_alpha_scissor: bool = false) -> Material:
+func _create_textured_material(texture_path: String, use_hair_shader: bool = false) -> Material:
 	var texture = load(texture_path) as Texture2D
 	if not texture:
 		push_warning("Could not load texture: " + texture_path)
 		return null
 
-	if use_hair_shader:
-		var mat = ShaderMaterial.new()
-		mat.shader = _hair_shader
-		mat.set_shader_parameter("hair_texture", texture)
-		mat.set_shader_parameter("skin_color", skin_color)
-		mat.set_shader_parameter("alpha_threshold", 0.3)
-		return mat
-
-	if use_alpha_scissor:
-		var mat = ShaderMaterial.new()
-		mat.shader = _clothing_shader
-		mat.set_shader_parameter("clothing_texture", texture)
-		mat.set_shader_parameter("skin_color", skin_color)
-		mat.set_shader_parameter("alpha_threshold", 0.5)
-		return mat
-
-	var material = StandardMaterial3D.new()
-	material.albedo_texture = texture
-	material.roughness = 1.0
-	material.specular_mode = BaseMaterial3D.SPECULAR_DISABLED
-	return material
+	var mat = ShaderMaterial.new()
+	mat.shader = _hair_shader if use_hair_shader else _clothing_shader
+	mat.set_shader_parameter("albedo_tex", texture)
+	mat.set_shader_parameter("skin_color", skin_color)
+	return mat
 
 
 func _apply_material_textures() -> void:
-	_shared_skin_material = ShaderMaterial.new()
-	_shared_skin_material.shader = _skin_shader
-	_shared_skin_material.set_shader_parameter("skin_color", skin_color)
-
 	var mat_to_tex: Dictionary = _cfg()["material_to_texture"]
 	for mat_name in _material_meshes:
-		if mat_name in ["arm", "leg", "hand", "foot"]:
-			_material_meshes[mat_name].material_override = _shared_skin_material
-			continue
-
 		var texture_file = mat_to_tex.get(mat_name)
 		if texture_file == null:
 			continue
 
 		var texture_path = _asset("textures/base/" + texture_file)
 		var use_hair = mat_name in ["hair_scalp", "hair_strands"]
-		var use_clothing = mat_name in ["upper", "lower"]
-		var material = _create_textured_material(texture_path, use_hair, use_clothing)
+		var material = _create_textured_material(texture_path, use_hair)
 		if material:
 			_material_meshes[mat_name].material_override = material
 
@@ -776,27 +762,13 @@ func _update_face_texture() -> void:
 		return
 
 	var material = _material_meshes["face"].material_override as ShaderMaterial
-	if not material:
-		var shader = Shader.new()
-		shader.code = """
-shader_type spatial;
-
-uniform sampler2D face_texture : source_color;
-uniform vec4 skin_color : source_color = vec4(0.992, 0.812, 0.635, 1.0);
-
-void fragment() {
-	vec4 tex = texture(face_texture, UV);
-	ALBEDO = mix(skin_color.rgb, tex.rgb, tex.a);
-	ROUGHNESS = 1.0;
-	SPECULAR = 0.0;
-}
-"""
+	if not material or material.shader != _clothing_shader:
 		material = ShaderMaterial.new()
-		material.shader = shader
+		material.shader = _clothing_shader
 		material.set_shader_parameter("skin_color", skin_color)
 		_material_meshes["face"].material_override = material
 
-	material.set_shader_parameter("face_texture", texture)
+	material.set_shader_parameter("albedo_tex", texture)
 
 
 # === INTERNAL: Part swapping ===
@@ -855,8 +827,7 @@ func _load_and_attach_part(slot: String, glb_path: String, part_name: String) ->
 	var texture_path = _get_part_texture_path(part_name)
 	if texture_path != "":
 		var use_hair = slot == "hair"
-		var use_alpha = slot in ["upper", "lower", "hands", "feet", "glorb"]
-		var material = _create_textured_material(texture_path, use_hair, use_alpha)
+		var material = _create_textured_material(texture_path, use_hair)
 		if material:
 			mesh_instance.material_override = material
 
@@ -879,24 +850,12 @@ func _update_material_visibility() -> void:
 	for mat_name in _material_meshes:
 		_material_meshes[mat_name].visible = true
 
-	var all_hidden_regions: Array[String] = []
 	for slot in _current_parts:
 		if _current_parts[slot] != null:
 			var part_name = _current_part_names[slot]
-			var hidden_regions = _get_part_hides_regions(part_name)
-			for region_name in hidden_regions:
-				if not all_hidden_regions.has(region_name):
-					all_hidden_regions.append(region_name)
-
-	for mat_name in MATERIAL_REQUIRED_REGIONS:
-		var required_regions = MATERIAL_REQUIRED_REGIONS[mat_name]
-		var all_required_hidden = true
-		for region_name in required_regions:
-			if not all_hidden_regions.has(region_name):
-				all_required_hidden = false
-				break
-		if all_required_hidden and _material_meshes.has(mat_name):
-			_material_meshes[mat_name].visible = false
+			for mat_name in _get_part_hides_materials(part_name):
+				if _material_meshes.has(mat_name):
+					_material_meshes[mat_name].visible = false
 
 
 # === INTERNAL: Skin color ===

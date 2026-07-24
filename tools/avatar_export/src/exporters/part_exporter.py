@@ -127,16 +127,18 @@ def _build_skeleton(ctx: ExportContext, model: TMDModel) -> int:
     parent_map = _build_parent_map(model)
 
     # Get world transforms
+    # LH -> RH mirror: conjugate every world transform by S = diag(1,1,-1)
+    S = np.diag([1.0, 1.0, -1.0])
     world_pos = []
     world_rot = []
     for bone in model.bones:
         t = [
             bone.world_transform.translation.x,
             bone.world_transform.translation.y,
-            bone.world_transform.translation.z,
+            -bone.world_transform.translation.z,
         ]
         R = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
-        q = _rotation_matrix_to_quaternion(R)
+        q = _rotation_matrix_to_quaternion(S @ R @ S)
         world_pos.append(t)
         world_rot.append(q)
 
@@ -228,13 +230,15 @@ def _build_inverse_bind_matrices(model: TMDModel) -> list[float]:
     """Build inverse bind matrices from TMD world transforms."""
     ibm_data = []
 
+    S = np.diag([1.0, 1.0, -1.0])
     for bone in model.bones:
+        # LH -> RH mirror, matching the skeleton nodes
         pos = [
             bone.world_transform.translation.x,
             bone.world_transform.translation.y,
-            bone.world_transform.translation.z,
+            -bone.world_transform.translation.z,
         ]
-        R = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
+        R = S @ np.array(bone.world_transform.rotation.data).reshape(3, 3).T @ S
 
         # IBM = inverse of world transform
         R_inv = R.T
@@ -257,6 +261,7 @@ def export_part(
     base_model: TMDModel,
     mlib: MLIBFile,
     output_path: Path | str,
+    swp_entry=None,
 ) -> None:
     """
     Export PRT model as GLB with skeleton and skin from base model.
@@ -269,6 +274,10 @@ def export_part(
         base_model: Parsed base TMD model (male.TMD) for skeleton data
         mlib: Parsed MLIB file for bone index mapping
         output_path: Path to output GLB file
+        swp_entry: Optional SwpData for this part. The original client
+            overwrites specific part-vertex normals with authored weld
+            normals when the part is equipped (boundary shading match with
+            the base body); we bake that here at export time.
     """
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -292,25 +301,34 @@ def export_part(
     all_weights = []
     vertex_offset = 0
 
-    for mesh in model.meshes:
-        # Positions (no X-mirror - TMD/PRT coordinates are GLTF-compatible)
-        for v in mesh.vertices:
-            all_positions.extend([v.x, v.y, v.z])
+    for mesh_idx, mesh in enumerate(model.meshes):
+        # Authored weld normals from the .swp replace the part's own normals
+        # at seam vertices (applied at equip time by the original client)
+        welds = {}
+        if swp_entry is not None and mesh_idx < swp_entry.mesh_num:
+            welds = dict(swp_entry.get_weld_normals(mesh_idx))
 
-        # Normals (no X-mirror)
-        for n in mesh.normals:
-            all_normals.extend([n.x, n.y, n.z])
+        # Positions/normals Z-negated: LH -> RH mirror
+        for v in mesh.vertices:
+            all_positions.extend([v.x, v.y, -v.z])
+
+        for n_idx, n in enumerate(mesh.normals):
+            if n_idx in welds:
+                wx, wy, wz = welds[n_idx]
+                all_normals.extend([wx, wy, -wz])
+            else:
+                all_normals.extend([n.x, n.y, -n.z])
 
         # UVs (no flip - original TMD UV coordinates)
         for uv in mesh.uvs:
             all_uvs.extend([uv.u, uv.v])
 
-        # Faces (original winding - no reversal needed without X-negation)
+        # Faces: winding reversed (the Z mirror flips triangle orientation)
         for face in mesh.faces:
             all_indices.extend([
                 face[0] + vertex_offset,
-                face[1] + vertex_offset,
                 face[2] + vertex_offset,
+                face[1] + vertex_offset,
             ])
 
         # Skinning data

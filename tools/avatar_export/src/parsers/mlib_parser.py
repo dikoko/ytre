@@ -75,8 +75,14 @@ class MLIBMotion:
     # Per-frame, per-bone translations (extended motion types)
     translations: list[list[Vector3]] = field(default_factory=list)
 
-    # Per-frame, per-bone scales (extended motion types 2/3)
+    # Per-frame, per-bone scales (extended types 2/3 and KEY motions).
+    # LIVE only when option bit 3 (value 8) is set; keys with the
+    # gate off are dead data the engine never samples.
     scales: list[list[Vector3]] = field(default_factory=list)
+
+    # Per-frame, per-bone scale-axis quaternions (KEY motions / Ex3).
+    # Engine local matrix is SA^-1 * S * SA * R.
+    scale_axes: list[list[Quaternion]] = field(default_factory=list)
 
     # Origin and orientation
     origin: Vector3 = field(default_factory=Vector3)
@@ -296,6 +302,8 @@ class MLIBParser:
         # Keyframe data per bone
         rotation_keys: list[list[tuple[int, Quaternion]]] = []
         translation_keys: list[list[tuple[int, Vector3]]] = []
+        scale_keys: list[list[tuple[int, Vector3]]] = []
+        scale_axis_keys: list[list[tuple[int, Quaternion]]] = []
 
         for bone_idx in range(motion.bone_count):
             # Rotation keys
@@ -318,19 +326,38 @@ class MLIBParser:
                     bone_trans_keys.append((key_indices[i], Vector3(v[0], v[1], v[2])))
             translation_keys.append(bone_trans_keys)
 
-            # Scale keys (skip)
+            # Scale keys
             scale_key_count = struct.unpack('<I', f.read(4))[0]
+            bone_scale_keys = []
             if scale_key_count > 0:
-                f.read(4 * scale_key_count)
-                f.read(12 * scale_key_count)
+                key_indices = struct.unpack(f'<{scale_key_count}i', f.read(4 * scale_key_count))
+                for i in range(scale_key_count):
+                    v = struct.unpack('<3f', f.read(12))
+                    bone_scale_keys.append((key_indices[i], Vector3(v[0], v[1], v[2])))
+            scale_keys.append(bone_scale_keys)
 
-            # Scale axis keys (skip)
+            # Scale axis keys (w-first quats, like rotation keys)
             scale_axis_key_count = struct.unpack('<I', f.read(4))[0]
+            bone_sa_keys = []
             if scale_axis_key_count > 0:
-                f.read(4 * scale_axis_key_count)
-                f.read(16 * scale_axis_key_count)
+                key_indices = struct.unpack(f'<{scale_axis_key_count}i', f.read(4 * scale_axis_key_count))
+                for i in range(scale_axis_key_count):
+                    q = struct.unpack('<4f', f.read(16))
+                    bone_sa_keys.append((key_indices[i], Quaternion(q[0], q[1], q[2], q[3])))
+            scale_axis_keys.append(bone_sa_keys)
 
         motion.rotations = self._expand_rotation_keys(rotation_keys, motion.frame_count, motion.bone_count)
+        # The engine samples translation keys for EVERY bone i>=1 in
+        # keyframe motions — the skeleton bind offsets are NOT used at
+        # runtime. No keys / before first key -> (0,0,0).
+        motion.translations = self._expand_vector_keys(
+            translation_keys, motion.frame_count, motion.bone_count,
+            Vector3(0.0, 0.0, 0.0))
+        motion.scales = self._expand_vector_keys(
+            scale_keys, motion.frame_count, motion.bone_count,
+            Vector3(1.0, 1.0, 1.0))
+        motion.scale_axes = self._expand_rotation_keys(
+            scale_axis_keys, motion.frame_count, motion.bone_count)
 
         motion.fps = struct.unpack('<I', f.read(4))[0]
         f.read(2 * M_INFO_SU)
@@ -350,6 +377,45 @@ class MLIBParser:
             f.read(8 * motion.frame_count)
 
         return motion
+
+    def _expand_vector_keys(
+        self,
+        vector_keys: list[list[tuple[int, Vector3]]],
+        frame_count: int,
+        bone_count: int,
+        default: Vector3,
+    ) -> list[list[Vector3]]:
+        """Expand keyframed vectors per frame with engine sampling
+        (nearest-previous key + lerp; before first key -> default;
+        past last key -> last value)."""
+        result = []
+        for frame in range(frame_count):
+            frame_vals = []
+            for bone_idx in range(bone_count):
+                keys = vector_keys[bone_idx]
+                if not keys or frame < keys[0][0]:
+                    frame_vals.append(default)
+                    continue
+                prev = keys[0]
+                nxt = None
+                for kf, v in keys:
+                    if kf <= frame:
+                        prev = (kf, v)
+                    else:
+                        nxt = (kf, v)
+                        break
+                if nxt is None or prev[0] == nxt[0]:
+                    frame_vals.append(prev[1])
+                else:
+                    t = (frame - prev[0]) / (nxt[0] - prev[0])
+                    p, n = prev[1], nxt[1]
+                    frame_vals.append(Vector3(
+                        p.x + t * (n.x - p.x),
+                        p.y + t * (n.y - p.y),
+                        p.z + t * (n.z - p.z),
+                    ))
+            result.append(frame_vals)
+        return result
 
     def _expand_rotation_keys(
         self,
@@ -396,11 +462,31 @@ class MLIBParser:
         p = prev_key[1]
         n = next_key[1]
 
+        # Engine-exact: hemisphere correction + shortest-path slerp,
+        # matching the original client. Component lerp WITHOUT
+        # normalization diverges badly on sparse keys (e.g. cn0062's
+        # @Netbag scale-axis keys, 45 degrees apart -> |q| dips to 0.925).
+        import math
+        dot = p.w * n.w + p.x * n.x + p.y * n.y + p.z * n.z
+        if dot < 0:
+            n = Quaternion(w=-n.w, x=-n.x, y=-n.y, z=-n.z)
+            dot = -dot
+        if dot > 1.0 - 1e-6:
+            # near-parallel: nlerp
+            q = [p.w + t * (n.w - p.w), p.x + t * (n.x - p.x),
+                 p.y + t * (n.y - p.y), p.z + t * (n.z - p.z)]
+            norm = math.sqrt(sum(c * c for c in q)) or 1.0
+            return Quaternion(w=q[0] / norm, x=q[1] / norm,
+                              y=q[2] / norm, z=q[3] / norm)
+        theta = math.acos(max(-1.0, min(1.0, dot)))
+        sinom = math.sin(theta)
+        wa = math.sin((1 - t) * theta) / sinom
+        wb = math.sin(t * theta) / sinom
         return Quaternion(
-            w=p.w + t * (n.w - p.w),
-            x=p.x + t * (n.x - p.x),
-            y=p.y + t * (n.y - p.y),
-            z=p.z + t * (n.z - p.z),
+            w=wa * p.w + wb * n.w,
+            x=wa * p.x + wb * n.x,
+            y=wa * p.y + wb * n.y,
+            z=wa * p.z + wb * n.z,
         )
 
     def _parse_motion_ex(self, f: BinaryIO, motion: MLIBMotion) -> None:

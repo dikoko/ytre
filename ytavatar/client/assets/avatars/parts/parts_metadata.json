@@ -2,4790 +2,2014 @@
   "parts": {
     "male_hair_M0101": {
       "type": "hair",
-      "vertices": 186,
-      "region_counts": {
-        "head": 186
-      },
-      "hides_regions": [
-        "hair_strands"
+      "hides_slots": [
+        6
       ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
       ]
     },
     "male_hair_M0102": {
       "type": "hair",
-      "vertices": 186,
-      "region_counts": {
-        "head": 186
-      },
-      "hides_regions": [
-        "hair_strands"
+      "hides_slots": [
+        6
       ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
       ]
     },
     "male_hair_M0103": {
       "type": "hair",
-      "vertices": 186,
-      "region_counts": {
-        "head": 186
-      },
-      "hides_regions": [
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
         "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0201": {
-      "type": "hair",
-      "vertices": 329,
-      "region_counts": {
-        "head": 329
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0202": {
-      "type": "hair",
-      "vertices": 329,
-      "region_counts": {
-        "head": 329
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0203": {
-      "type": "hair",
-      "vertices": 329,
-      "region_counts": {
-        "head": 329
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0301": {
-      "type": "hair",
-      "vertices": 158,
-      "region_counts": {
-        "head": 158
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0302": {
-      "type": "hair",
-      "vertices": 158,
-      "region_counts": {
-        "head": 158
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0303": {
-      "type": "hair",
-      "vertices": 158,
-      "region_counts": {
-        "head": 158
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0401": {
-      "type": "hair",
-      "vertices": 231,
-      "region_counts": {
-        "head": 231
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0402": {
-      "type": "hair",
-      "vertices": 231,
-      "region_counts": {
-        "head": 231
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0403": {
-      "type": "hair",
-      "vertices": 231,
-      "region_counts": {
-        "head": 231
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0501": {
-      "type": "hair",
-      "vertices": 139,
-      "region_counts": {
-        "head": 139
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0502": {
-      "type": "hair",
-      "vertices": 139,
-      "region_counts": {
-        "head": 139
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0503": {
-      "type": "hair",
-      "vertices": 139,
-      "region_counts": {
-        "head": 139
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0601": {
-      "type": "hair",
-      "vertices": 280,
-      "region_counts": {
-        "head": 280
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0602": {
-      "type": "hair",
-      "vertices": 280,
-      "region_counts": {
-        "head": 280
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0603": {
-      "type": "hair",
-      "vertices": 280,
-      "region_counts": {
-        "head": 280
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0701": {
-      "type": "hair",
-      "vertices": 235,
-      "region_counts": {
-        "head": 235
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0702": {
-      "type": "hair",
-      "vertices": 235,
-      "region_counts": {
-        "head": 235
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0703": {
-      "type": "hair",
-      "vertices": 235,
-      "region_counts": {
-        "head": 235
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0801": {
-      "type": "hair",
-      "vertices": 228,
-      "region_counts": {
-        "head": 228
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0802": {
-      "type": "hair",
-      "vertices": 228,
-      "region_counts": {
-        "head": 228
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0803": {
-      "type": "hair",
-      "vertices": 228,
-      "region_counts": {
-        "head": 228
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0901": {
-      "type": "hair",
-      "vertices": 287,
-      "region_counts": {
-        "head": 287
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0902": {
-      "type": "hair",
-      "vertices": 287,
-      "region_counts": {
-        "head": 287
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_hair_M0903": {
-      "type": "hair",
-      "vertices": 287,
-      "region_counts": {
-        "head": 287
-      },
-      "hides_regions": [
-        "hair_strands"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        10,
-        11,
-        12,
-        55,
-        56,
-        62,
-        63,
-        64,
-        66,
-        67,
-        68,
-        69,
-        70,
-        127,
-        128,
-        134,
-        135,
-        136,
-        138,
-        139,
-        140,
-        141,
-        142,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ]
-    },
-    "male_upper_M0001": {
-      "type": "upper",
-      "vertices": 293,
-      "region_counts": {
-        "torso": 206,
-        "arm_upper": 72,
-        "neck": 9,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        101,
-        105,
-        106,
-        109
-      ],
-      "hides_arm_vertices": [
-        33,
-        36
-      ]
-    },
-    "male_upper_M0002": {
-      "type": "upper",
-      "vertices": 245,
-      "region_counts": {
-        "torso": 77,
-        "head": 8,
-        "arm_upper": 104,
-        "forearm": 48,
-        "neck": 8
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        56,
-        57,
-        58,
-        83,
-        124,
-        125,
-        126,
-        148,
-        149
-      ]
-    },
-    "male_upper_M0003": {
-      "type": "upper",
-      "vertices": 491,
-      "region_counts": {
-        "arm_upper": 136,
-        "torso": 241,
-        "neck": 6,
-        "head": 6,
-        "forearm": 68,
-        "waist": 34
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        88,
-        90,
-        93,
-        105,
-        106,
-        107,
-        130,
-        131,
-        132,
-        133,
-        134,
-        137,
-        139,
-        142
-      ],
-      "hides_arm_vertices": [
-        14,
-        15,
-        16,
-        17,
-        18,
-        21,
-        23,
-        26
-      ]
-    },
-    "male_upper_M0004": {
-      "type": "upper",
-      "vertices": 271,
-      "region_counts": {
-        "arm_upper": 144,
-        "torso": 87,
-        "neck": 22,
-        "head": 6,
-        "waist": 12
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        91,
-        92,
-        96
-      ],
-      "hides_arm_vertices": [
-        16,
-        26,
-        27
-      ]
-    },
-    "male_upper_M0008": {
-      "type": "upper",
-      "vertices": 284,
-      "region_counts": {
-        "arm_upper": 116,
-        "torso": 156,
-        "neck": 6,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        107,
-        108,
-        111,
-        113
-      ]
-    },
-    "male_upper_M0009": {
-      "type": "upper",
-      "vertices": 320,
-      "region_counts": {
-        "torso": 122,
-        "arm_upper": 131,
-        "head": 8,
-        "neck": 16,
-        "forearm": 15
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        126,
-        127,
-        128,
-        129,
-        139,
-        141,
-        142,
-        147,
-        148,
-        149
-      ]
-    },
-    "male_upper_M0011": {
-      "type": "upper",
-      "vertices": 190,
-      "region_counts": {
-        "torso": 133,
-        "head": 6,
-        "neck": 3,
-        "arm_upper": 48
-      },
-      "hides_regions": [
-        "arm_upper",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        15,
-        19,
-        79,
-        84,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99
-      ],
-      "hides_arm_vertices": [
-        2,
-        7,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22
-      ]
-    },
-    "male_upper_M0012": {
-      "type": "upper",
-      "vertices": 418,
-      "region_counts": {
-        "torso": 241,
-        "arm_upper": 84,
-        "forearm": 76,
-        "head": 9,
-        "neck": 8
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        17,
-        18,
-        19,
-        20,
-        21,
-        22
-      ]
-    },
-    "male_upper_M0013": {
-      "type": "upper",
-      "vertices": 376,
-      "region_counts": {
-        "torso": 187,
-        "neck": 23,
-        "head": 9,
-        "arm_upper": 38,
-        "forearm": 78
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        44,
-        45,
-        46,
-        47,
-        52,
-        53
-      ]
-    },
-    "male_upper_M0014": {
-      "type": "upper",
-      "vertices": 375,
-      "region_counts": {
-        "torso": 215,
-        "arm_upper": 90,
-        "forearm": 54,
-        "neck": 8,
-        "head": 8
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        76,
-        80,
-        81,
-        82,
-        83,
-        166
-      ],
-      "hides_arm_vertices": [
-        0,
-        1
-      ]
-    },
-    "male_upper_M0016": {
-      "type": "upper",
-      "vertices": 323,
-      "region_counts": {
-        "torso": 184,
-        "arm_upper": 93,
-        "waist": 37,
-        "head": 6,
-        "neck": 3
-      },
-      "hides_regions": [
-        "arm_upper",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        80,
-        84,
-        85,
-        88,
-        158,
-        161
-      ]
-    },
-    "male_upper_M0017": {
-      "type": "upper",
-      "vertices": 306,
-      "region_counts": {
-        "torso": 90,
-        "arm_upper": 84,
-        "waist": 52,
-        "head": 10,
-        "neck": 10,
-        "forearm": 60
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        97,
-        98,
-        99,
-        100,
-        105,
-        106,
-        107
-      ],
-      "hides_arm_vertices": [
-        42,
-        43
-      ]
-    },
-    "male_upper_M0018": {
-      "type": "upper",
-      "vertices": 340,
-      "region_counts": {
-        "torso": 121,
-        "arm_upper": 181,
-        "forearm": 26,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M0019": {
-      "type": "upper",
-      "vertices": 638,
-      "region_counts": {
-        "torso": 397,
-        "arm_upper": 164,
-        "head": 6,
-        "neck": 13,
-        "forearm": 58
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M0022": {
-      "type": "upper",
-      "vertices": 574,
-      "region_counts": {
-        "torso": 370,
-        "head": 6,
-        "neck": 6,
-        "arm_upper": 142,
-        "forearm": 50
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        56,
-        57,
-        62,
-        63,
-        78,
-        79,
-        80,
-        81,
-        82,
-        92,
-        93,
-        104,
-        105,
-        107,
-        109,
-        113,
-        115
-      ]
-    },
-    "male_upper_M0023": {
-      "type": "upper",
-      "vertices": 368,
-      "region_counts": {
-        "torso": 180,
-        "arm_upper": 90,
-        "neck": 14,
-        "head": 6,
-        "forearm": 78
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        78,
-        79,
-        83,
-        156,
-        160,
-        161
-      ]
-    },
-    "male_upper_M0024": {
-      "type": "upper",
-      "vertices": 565,
-      "region_counts": {
-        "torso": 310,
-        "arm_upper": 86,
-        "waist": 72,
-        "neck": 13,
-        "head": 6,
-        "forearm": 76
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M0025": {
-      "type": "upper",
-      "vertices": 507,
-      "region_counts": {
-        "torso": 238,
-        "arm_upper": 146,
-        "waist": 85,
-        "head": 6,
-        "neck": 6,
-        "forearm": 26
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M0026": {
-      "type": "upper",
-      "vertices": 355,
-      "region_counts": {
-        "torso": 252,
-        "arm_upper": 84,
-        "neck": 13,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M0031": {
-      "type": "upper",
-      "vertices": 258,
-      "region_counts": {
-        "torso": 126,
-        "arm_upper": 78,
-        "waist": 20,
-        "head": 6,
-        "neck": 6,
-        "forearm": 22
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        46,
-        47,
-        50,
-        51,
-        54,
-        55
-      ]
-    },
-    "male_upper_M0032": {
-      "type": "upper",
-      "vertices": 582,
-      "region_counts": {
-        "torso": 309,
-        "arm_upper": 261,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M1001": {
-      "type": "upper",
-      "vertices": 270,
-      "region_counts": {
-        "torso": 145,
-        "waist": 27,
-        "arm_upper": 86,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M1002": {
-      "type": "upper",
-      "vertices": 243,
-      "region_counts": {
-        "torso": 76,
-        "head": 6,
-        "neck": 19,
-        "arm_upper": 84,
-        "forearm": 34,
-        "waist": 24
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        7,
-        8,
-        51,
-        52,
-        166
-      ],
-      "hides_arm_vertices": [
-        0
-      ]
-    },
-    "male_upper_M1009": {
-      "type": "upper",
-      "vertices": 392,
-      "region_counts": {
-        "torso": 134,
-        "arm_upper": 138,
-        "head": 8,
-        "neck": 8,
-        "forearm": 76
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        123,
-        124,
-        129,
-        130,
-        131
-      ]
-    },
-    "male_upper_M1011": {
-      "type": "upper",
-      "vertices": 483,
-      "region_counts": {
-        "arm_upper": 154,
-        "torso": 311,
-        "neck": 12,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        77,
-        78,
-        81,
-        91
-      ]
-    },
-    "male_upper_M1012": {
-      "type": "upper",
-      "vertices": 321,
-      "region_counts": {
-        "torso": 140,
-        "arm_upper": 117,
-        "head": 6,
-        "neck": 6,
-        "forearm": 52
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        18,
-        19,
-        25,
-        26,
-        29,
-        30,
-        59
-      ]
-    },
-    "male_upper_M1013": {
-      "type": "upper",
-      "vertices": 358,
-      "region_counts": {
-        "torso": 192,
-        "arm_upper": 78,
-        "forearm": 76,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M1014": {
-      "type": "upper",
-      "vertices": 466,
-      "region_counts": {
-        "torso": 304,
-        "arm_upper": 100,
-        "forearm": 34,
-        "waist": 16,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ]
-    },
-    "male_upper_M1016": {
-      "type": "upper",
-      "vertices": 284,
-      "region_counts": {
-        "torso": 161,
-        "waist": 27,
-        "arm_upper": 84,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        12,
-        13,
-        16,
-        17,
-        20,
-        21,
-        51,
-        52,
-        54,
-        55,
-        56,
-        57
-      ]
-    },
-    "male_upper_M1017": {
-      "type": "upper",
-      "vertices": 249,
-      "region_counts": {
-        "torso": 104,
-        "head": 6,
-        "neck": 19,
-        "arm_upper": 86,
-        "forearm": 34
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        6,
-        7,
-        52,
-        53,
-        148,
-        149
-      ],
-      "hides_arm_vertices": [
-        58,
-        59
-      ]
-    },
-    "male_upper_M1018": {
-      "type": "upper",
-      "vertices": 222,
-      "region_counts": {
-        "torso": 137,
-        "head": 6,
-        "neck": 3,
-        "arm_upper": 76
-      },
-      "hides_regions": [
-        "arm_upper",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        15,
-        19,
-        86,
-        91,
-        101,
-        102,
-        103,
-        104,
-        105,
-        106
-      ],
-      "hides_arm_vertices": [
-        10,
-        15,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30
-      ]
-    },
-    "male_upper_M1021": {
-      "type": "upper",
-      "vertices": 497,
-      "region_counts": {
-        "torso": 256,
-        "arm_upper": 159,
-        "waist": 27,
-        "head": 6,
-        "neck": 15,
-        "forearm": 34
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        98,
-        99,
-        136,
-        137
-      ]
-    },
-    "male_upper_M1024": {
-      "type": "upper",
-      "vertices": 355,
-      "region_counts": {
-        "torso": 168,
-        "arm_upper": 104,
-        "waist": 45,
-        "head": 6,
-        "forearm": 32
-      },
-      "hides_regions": [
-        "arm_upper",
-        "torso"
-      ]
-    },
-    "male_upper_M1026": {
-      "type": "upper",
-      "vertices": 518,
-      "region_counts": {
-        "torso": 201,
-        "arm_upper": 186,
-        "head": 6,
-        "neck": 6,
-        "waist": 109
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        103,
-        104,
-        107,
-        108
-      ],
-      "hides_arm_vertices": [
-        42,
-        44,
-        45,
-        46,
-        50,
-        51,
-        56
-      ]
-    },
-    "male_upper_M1029": {
-      "type": "upper",
-      "vertices": 247,
-      "region_counts": {
-        "torso": 115,
-        "arm_upper": 120,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        125,
-        126,
-        131,
-        132,
-        135,
-        136
-      ]
-    },
-    "male_upper_M1031": {
-      "type": "upper",
-      "vertices": 313,
-      "region_counts": {
-        "torso": 112,
-        "arm_upper": 128,
-        "waist": 26,
-        "head": 6,
-        "neck": 6,
-        "forearm": 35
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_upper_vertices": [
-        100,
-        101,
-        108,
-        109
-      ],
-      "hides_arm_vertices": [
-        37,
-        38
-      ]
-    },
-    "male_upper_M1032": {
-      "type": "upper",
-      "vertices": 417,
-      "region_counts": {
-        "torso": 195,
-        "arm_upper": 74,
-        "forearm": 78,
-        "head": 6,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        6,
-        7,
-        24,
-        25
-      ]
-    },
-    "male_upper_M9002": {
-      "type": "upper",
-      "vertices": 277,
-      "region_counts": {
-        "torso": 153,
-        "waist": 25,
-        "arm_upper": 79,
-        "neck": 14,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "neck",
-        "torso"
-      ],
-      "hides_arm_vertices": [
-        36,
-        37,
-        38,
-        39,
-        40,
-        41
-      ]
-    },
-    "male_lower_M0001": {
-      "type": "lower",
-      "vertices": 243,
-      "region_counts": {
-        "leg_lower": 54,
-        "waist": 69,
-        "leg_upper": 55,
-        "torso": 59
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0002": {
-      "type": "lower",
-      "vertices": 254,
-      "region_counts": {
-        "torso": 84,
-        "waist": 27,
-        "leg_upper": 73,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0003": {
-      "type": "lower",
-      "vertices": 209,
-      "region_counts": {
-        "torso": 37,
-        "waist": 20,
-        "leg_lower": 90,
-        "leg_upper": 58
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0004": {
-      "type": "lower",
-      "vertices": 308,
-      "region_counts": {
-        "torso": 76,
-        "waist": 75,
-        "leg_upper": 81,
-        "leg_lower": 72
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0008": {
-      "type": "lower",
-      "vertices": 188,
-      "region_counts": {
-        "waist": 21,
-        "leg_upper": 118,
-        "torso": 39,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        161,
-        162,
-        163,
-        164,
-        165,
-        166
-      ],
-      "hides_arm_vertices": [
-        0
-      ]
-    },
-    "male_lower_M0009": {
-      "type": "lower",
-      "vertices": 158,
-      "region_counts": {
-        "torso": 21,
-        "waist": 23,
-        "leg_upper": 111,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        100,
-        103,
-        105,
-        108,
-        134,
-        135,
-        136,
-        137,
-        138,
-        139,
-        146
-      ]
-    },
-    "male_lower_M0011": {
-      "type": "lower",
-      "vertices": 177,
-      "region_counts": {
-        "torso": 28,
-        "waist": 27,
-        "leg_upper": 120,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        106,
-        107,
-        109,
-        111,
-        115,
-        116,
-        130,
-        131,
-        132,
-        133,
-        134,
-        140
-      ]
-    },
-    "male_lower_M0012": {
-      "type": "lower",
-      "vertices": 238,
-      "region_counts": {
-        "waist": 31,
-        "leg_upper": 63,
-        "torso": 36,
-        "leg_lower": 104
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        31,
-        32,
-        37,
-        42,
-        45,
-        46,
-        49,
-        153,
-        154,
-        159,
-        162,
-        165
-      ]
-    },
-    "male_lower_M0014": {
-      "type": "lower",
-      "vertices": 229,
-      "region_counts": {
-        "leg_upper": 63,
-        "waist": 24,
-        "torso": 40,
-        "leg_lower": 96
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57
-      ]
-    },
-    "male_lower_M0016": {
-      "type": "lower",
-      "vertices": 255,
-      "region_counts": {
-        "torso": 61,
-        "leg_upper": 79,
-        "leg_lower": 36,
-        "waist": 72
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0018": {
-      "type": "lower",
-      "vertices": 260,
-      "region_counts": {
-        "torso": 98,
-        "waist": 17,
-        "leg_upper": 89,
-        "leg_lower": 50
-      },
-      "hides_regions": [
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        106,
-        107,
-        108,
-        113,
-        114,
-        116,
-        117,
-        118
-      ],
-      "hides_arm_vertices": [
-        48,
-        49,
-        50,
-        55,
-        56,
-        58,
-        59
-      ]
-    },
-    "male_lower_M0019": {
-      "type": "lower",
-      "vertices": 624,
-      "region_counts": {
-        "waist": 84,
-        "torso": 80,
-        "leg_upper": 327,
-        "leg_lower": 130
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0022": {
-      "type": "lower",
-      "vertices": 154,
-      "region_counts": {
-        "waist": 32,
-        "torso": 24,
-        "leg_upper": 51,
-        "leg_lower": 44
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        14,
-        15,
-        73,
-        74,
-        75,
-        76,
-        77,
-        140,
-        141,
-        142,
-        143,
-        144
-      ]
-    },
-    "male_lower_M0023": {
-      "type": "lower",
-      "vertices": 353,
-      "region_counts": {
-        "waist": 154,
-        "leg_upper": 68,
-        "leg_lower": 95,
-        "torso": 28
-      },
-      "hides_regions": [
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0024": {
-      "type": "lower",
-      "vertices": 326,
-      "region_counts": {
-        "torso": 96,
-        "waist": 43,
-        "leg_upper": 93,
-        "leg_lower": 90
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100,
-        101
-      ],
-      "hides_arm_vertices": [
-        41,
-        42,
-        43,
-        44,
-        45
-      ]
-    },
-    "male_lower_M0025": {
-      "type": "lower",
-      "vertices": 330,
-      "region_counts": {
-        "torso": 69,
-        "waist": 69,
-        "leg_upper": 70,
-        "leg_lower": 117
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0026": {
-      "type": "lower",
-      "vertices": 294,
-      "region_counts": {
-        "waist": 73,
-        "torso": 80,
-        "leg_upper": 72,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_lower_M0031": {
-      "type": "lower",
-      "vertices": 207,
-      "region_counts": {
-        "waist": 58,
-        "leg_upper": 134,
-        "torso": 12,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        81,
-        82,
-        83,
-        84,
-        85,
-        149,
-        150,
-        151,
-        152,
-        153,
-        154,
-        155,
-        156,
-        157,
-        158,
-        159,
-        160
-      ]
-    },
-    "male_lower_M0032": {
-      "type": "lower",
-      "vertices": 365,
-      "region_counts": {
-        "torso": 60,
-        "waist": 85,
-        "leg_upper": 134,
-        "leg_lower": 82
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        105,
-        106,
-        107,
-        108,
-        109,
-        110,
-        111,
-        112
-      ],
-      "hides_arm_vertices": [
-        52,
-        53,
-        54,
-        55,
-        56
-      ]
-    },
-    "male_lower_M1001": {
-      "type": "lower",
-      "vertices": 208,
-      "region_counts": {
-        "torso": 36,
-        "waist": 31,
-        "leg_upper": 71,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98
-      ],
-      "hides_arm_vertices": [
-        22,
-        23,
-        24,
-        25,
-        26
-      ]
-    },
-    "male_lower_M1002": {
-      "type": "lower",
-      "vertices": 208,
-      "region_counts": {
-        "torso": 36,
-        "waist": 29,
-        "leg_upper": 71,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98
-      ],
-      "hides_arm_vertices": [
-        22,
-        23,
-        24,
-        25,
-        26
-      ]
-    },
-    "male_lower_M1009": {
-      "type": "lower",
-      "vertices": 158,
-      "region_counts": {
-        "torso": 21,
-        "waist": 25,
-        "leg_upper": 109,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        100,
-        101,
-        103,
-        105,
-        108,
-        134,
-        135,
-        136,
-        137,
-        138,
-        139,
-        146
-      ]
-    },
-    "male_lower_M1011": {
-      "type": "lower",
-      "vertices": 183,
-      "region_counts": {
-        "torso": 49,
-        "leg_upper": 110,
-        "waist": 16,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        156,
-        157,
-        158,
-        159,
-        160,
-        161,
-        162
-      ]
-    },
-    "male_lower_M1012": {
-      "type": "lower",
-      "vertices": 327,
-      "region_counts": {
-        "torso": 42,
-        "waist": 19,
-        "leg_upper": 78,
-        "leg_lower": 182
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        97,
-        98,
-        99,
-        100,
-        101,
-        102,
-        103,
-        104
-      ],
-      "hides_arm_vertices": [
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
-      ]
-    },
-    "male_lower_M1014": {
-      "type": "lower",
-      "vertices": 207,
-      "region_counts": {
-        "waist": 27,
-        "torso": 40,
-        "leg_upper": 71,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28
-      ]
-    },
-    "male_lower_M1016": {
-      "type": "lower",
-      "vertices": 189,
-      "region_counts": {
-        "waist": 32,
-        "torso": 36,
-        "leg_upper": 116,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        81,
-        82,
-        83,
-        84,
-        85,
-        149,
-        150,
-        151,
-        152,
-        153,
-        154,
-        155,
-        156,
-        157,
-        158,
-        159,
-        160,
-        161,
-        162,
-        163,
-        164
-      ]
-    },
-    "male_lower_M1018": {
-      "type": "lower",
-      "vertices": 170,
-      "region_counts": {
-        "torso": 24,
-        "waist": 30,
-        "leg_upper": 112,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        112,
-        113,
-        115,
-        117,
-        120,
-        146,
-        147,
-        148,
-        149,
-        150,
-        151,
-        158
-      ]
-    },
-    "male_lower_M1024": {
-      "type": "lower",
-      "vertices": 251,
-      "region_counts": {
-        "leg_upper": 78,
-        "waist": 33,
-        "leg_lower": 96,
-        "torso": 38
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
-      ]
-    },
-    "male_lower_M1026": {
-      "type": "lower",
-      "vertices": 195,
-      "region_counts": {
-        "waist": 33,
-        "leg_upper": 53,
-        "torso": 39,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        25,
-        26,
-        31,
-        36,
-        39,
-        40,
-        43,
-        123,
-        124,
-        131,
-        134,
-        135,
-        138
-      ]
-    },
-    "male_lower_M1029": {
-      "type": "lower",
-      "vertices": 312,
-      "region_counts": {
-        "waist": 136,
-        "leg_upper": 108,
-        "torso": 14,
-        "leg_lower": 48
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        95,
-        96,
-        97,
-        98,
-        99,
-        100
-      ]
-    },
-    "male_lower_M1031": {
-      "type": "lower",
-      "vertices": 162,
-      "region_counts": {
-        "torso": 21,
-        "leg_upper": 113,
-        "waist": 23,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        71,
-        72,
-        74,
-        76,
-        79,
-        87,
-        88,
-        89,
-        90,
-        91,
-        92,
-        99
-      ]
-    },
-    "male_lower_M1032": {
-      "type": "lower",
-      "vertices": 307,
-      "region_counts": {
-        "waist": 39,
-        "torso": 38,
-        "leg_upper": 97,
-        "leg_lower": 129
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
       ]
     },
     "male_lower_M9002": {
       "type": "lower",
-      "vertices": 226,
-      "region_counts": {
-        "waist": 34,
-        "torso": 58,
-        "leg_upper": 68,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99
-      ],
-      "hides_arm_vertices": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        39
-      ]
-    },
-    "male_hand_M0004": {
-      "type": "hands",
-      "vertices": 174,
-      "region_counts": {
-        "hand": 104,
-        "forearm": 70
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M0019": {
-      "type": "hands",
-      "vertices": 322,
-      "region_counts": {
-        "forearm": 108,
-        "hand": 214
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M0022": {
-      "type": "hands",
-      "vertices": 152,
-      "region_counts": {
-        "forearm": 66,
-        "hand": 86
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M0025": {
-      "type": "hands",
-      "vertices": 194,
-      "region_counts": {
-        "forearm": 60,
-        "hand": 134
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M0032": {
-      "type": "hands",
-      "vertices": 342,
-      "region_counts": {
-        "forearm": 225,
-        "hand": 117
-      },
-      "hides_regions": [
-        "hand"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
+      "hides_slots": [
         4,
         5
       ],
-      "hides_arm_vertices": [
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
+      "hides_materials": [
+        "leg",
+        "lower"
       ]
     },
-    "male_hand_M1004": {
-      "type": "hands",
-      "vertices": 174,
-      "region_counts": {
-        "hand": 104,
-        "forearm": 70
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M1005": {
-      "type": "hands",
-      "vertices": 300,
-      "region_counts": {
-        "forearm": 151,
-        "hand": 149
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M1019": {
-      "type": "hands",
-      "vertices": 582,
-      "region_counts": {
-        "arm_upper": 30,
-        "forearm": 438,
-        "hand": 114
-      },
-      "hides_regions": [
-        "forearm",
-        "hand"
-      ],
-      "hides_upper_vertices": [
+    "male_special_GMM0001": {
+      "type": "special",
+      "hides_slots": [
         0,
         1,
-        2,
-        3,
         4,
-        5,
-        6,
-        14,
-        15,
-        17,
-        19,
-        23,
-        25,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        44,
-        45,
-        47,
-        49,
-        53,
-        55
-      ]
-    },
-    "male_hand_M1020": {
-      "type": "hands",
-      "vertices": 138,
-      "region_counts": {
-        "forearm": 48,
-        "hand": 90
-      },
-      "hides_regions": [
-        "forearm",
-        "hand"
-      ]
-    },
-    "male_hand_M1026": {
-      "type": "hands",
-      "vertices": 224,
-      "region_counts": {
-        "forearm": 106,
-        "hand": 118
-      },
-      "hides_regions": [
-        "hand"
+        5
       ],
-      "hides_upper_vertices": [
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_upper_M9002": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hair_M0601": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0602": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0603": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_glorb_A1001": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1002": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1003": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1005": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1007": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1009": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1013": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1014": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1015": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1019": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1021": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_special_M9001": {
+      "type": "special",
+      "hides_slots": [
         0,
         1,
-        2,
-        3,
         4,
-        5,
-        112,
-        113,
-        114,
-        115,
-        116,
-        117
-      ]
-    },
-    "male_hand_M1027": {
-      "type": "hands",
-      "vertices": 186,
-      "region_counts": {
-        "forearm": 50,
-        "hand": 136
-      },
-      "hides_regions": [
-        "forearm",
-        "hand"
-      ]
-    },
-    "male_hand_M1029": {
-      "type": "hands",
-      "vertices": 130,
-      "region_counts": {
-        "forearm": 34,
-        "hand": 96
-      },
-      "hides_regions": [
-        "hand"
-      ]
-    },
-    "male_hand_M9001": {
-      "type": "hands",
-      "vertices": 232,
-      "region_counts": {
-        "forearm": 88,
-        "hand": 144
-      },
-      "hides_regions": [
-        "forearm",
-        "hand"
-      ]
-    },
-    "male_foot_GMM0001": {
-      "type": "feet",
-      "vertices": 124,
-      "region_counts": {
-        "leg_lower": 32,
-        "foot": 92
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0001": {
-      "type": "feet",
-      "vertices": 280,
-      "region_counts": {
-        "leg_lower": 56,
-        "foot": 224
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0002": {
-      "type": "feet",
-      "vertices": 184,
-      "region_counts": {
-        "leg_lower": 82,
-        "foot": 102
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0003": {
-      "type": "feet",
-      "vertices": 174,
-      "region_counts": {
-        "leg_lower": 82,
-        "foot": 92
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0004": {
-      "type": "feet",
-      "vertices": 282,
-      "region_counts": {
-        "leg_lower": 84,
-        "foot": 198
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0005": {
-      "type": "feet",
-      "vertices": 170,
-      "region_counts": {
-        "leg_lower": 60,
-        "foot": 110
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0006": {
-      "type": "feet",
-      "vertices": 174,
-      "region_counts": {
-        "leg_lower": 82,
-        "foot": 92
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0007": {
-      "type": "feet",
-      "vertices": 248,
-      "region_counts": {
-        "leg_lower": 110,
-        "foot": 138
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0008": {
-      "type": "feet",
-      "vertices": 212,
-      "region_counts": {
-        "leg_lower": 91,
-        "foot": 121
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0009": {
-      "type": "feet",
-      "vertices": 190,
-      "region_counts": {
-        "foot": 110,
-        "leg_lower": 80
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0014": {
-      "type": "feet",
-      "vertices": 246,
-      "region_counts": {
-        "foot": 204,
-        "leg_lower": 42
-      },
-      "hides_regions": [
-        "foot"
+        5
       ],
-      "hides_upper_vertices": [
-        102,
-        103,
-        104,
-        105,
-        106,
-        107,
-        108,
-        109,
-        110
-      ],
-      "hides_arm_vertices": [
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
       ]
     },
-    "male_foot_M0018": {
-      "type": "feet",
-      "vertices": 216,
-      "region_counts": {
-        "foot": 154,
-        "leg_lower": 62
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0019": {
-      "type": "feet",
-      "vertices": 366,
-      "region_counts": {
-        "leg_lower": 34,
-        "foot": 332
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0022": {
-      "type": "feet",
-      "vertices": 306,
-      "region_counts": {
-        "foot": 216,
-        "leg_lower": 90
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0023": {
-      "type": "feet",
-      "vertices": 190,
-      "region_counts": {
-        "foot": 138,
-        "leg_lower": 52
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0024": {
-      "type": "feet",
-      "vertices": 336,
-      "region_counts": {
-        "leg_lower": 58,
-        "foot": 278
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0025": {
-      "type": "feet",
-      "vertices": 192,
-      "region_counts": {
-        "leg_lower": 66,
-        "foot": 126
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0026": {
-      "type": "feet",
-      "vertices": 326,
-      "region_counts": {
-        "leg_lower": 132,
-        "foot": 194
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0031": {
-      "type": "feet",
-      "vertices": 234,
-      "region_counts": {
-        "leg_lower": 128,
-        "foot": 106
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M0032": {
-      "type": "feet",
-      "vertices": 290,
-      "region_counts": {
-        "leg_lower": 92,
-        "foot": 198
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1001": {
-      "type": "feet",
-      "vertices": 256,
-      "region_counts": {
-        "leg_lower": 50,
-        "foot": 206
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1002": {
-      "type": "feet",
-      "vertices": 250,
-      "region_counts": {
-        "leg_lower": 54,
-        "foot": 196
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1003": {
-      "type": "feet",
-      "vertices": 368,
-      "region_counts": {
-        "leg_lower": 178,
-        "foot": 190
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1004": {
-      "type": "feet",
-      "vertices": 274,
-      "region_counts": {
-        "leg_lower": 172,
-        "foot": 102
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1005": {
-      "type": "feet",
-      "vertices": 350,
-      "region_counts": {
-        "leg_lower": 240,
-        "foot": 110
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1006": {
-      "type": "feet",
-      "vertices": 164,
-      "region_counts": {
-        "foot": 152,
-        "leg_lower": 12
-      },
-      "hides_regions": [
-        "foot"
-      ],
-      "hides_upper_vertices": [
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        141,
-        142,
-        143,
-        144,
-        145,
-        146
-      ]
-    },
-    "male_foot_M1007": {
-      "type": "feet",
-      "vertices": 168,
-      "region_counts": {
-        "leg_lower": 58,
-        "foot": 110
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1009": {
-      "type": "feet",
-      "vertices": 190,
-      "region_counts": {
-        "foot": 110,
-        "leg_lower": 80
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1014": {
-      "type": "feet",
-      "vertices": 206,
-      "region_counts": {
-        "foot": 170,
-        "leg_lower": 36
-      },
-      "hides_regions": [
-        "foot"
-      ],
-      "hides_upper_vertices": [
-        85,
-        86,
-        87,
-        88,
-        89,
-        90
-      ],
-      "hides_arm_vertices": [
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ]
-    },
-    "male_foot_M1018": {
-      "type": "feet",
-      "vertices": 314,
-      "region_counts": {
-        "leg_lower": 86,
-        "foot": 228
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1019": {
-      "type": "feet",
-      "vertices": 176,
-      "region_counts": {
-        "leg_lower": 58,
-        "foot": 118
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1020": {
-      "type": "feet",
-      "vertices": 156,
-      "region_counts": {
-        "leg_lower": 50,
-        "foot": 106
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1023": {
-      "type": "feet",
-      "vertices": 210,
-      "region_counts": {
-        "leg_lower": 38,
-        "foot": 172
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1024": {
-      "type": "feet",
-      "vertices": 146,
-      "region_counts": {
-        "leg_lower": 12,
-        "foot": 134
-      },
-      "hides_regions": [
-        "foot"
-      ],
-      "hides_upper_vertices": [
+    "male_special_M9004": {
+      "type": "special",
+      "hides_slots": [
         0,
-        1,
         2,
-        3,
         4,
-        5,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78
-      ]
-    },
-    "male_foot_M1025": {
-      "type": "feet",
-      "vertices": 126,
-      "region_counts": {
-        "leg_lower": 34,
-        "foot": 92
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1026": {
-      "type": "feet",
-      "vertices": 220,
-      "region_counts": {
-        "leg_lower": 108,
-        "foot": 112
-      },
-      "hides_regions": [
-        "foot"
+        5
       ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        110,
-        111,
-        112,
-        113,
-        114,
-        115,
-        116
-      ]
-    },
-    "male_foot_M1027": {
-      "type": "feet",
-      "vertices": 94,
-      "region_counts": {
-        "leg_lower": 12,
-        "foot": 82
-      },
-      "hides_regions": [
-        "foot"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52
-      ]
-    },
-    "male_foot_M1029": {
-      "type": "feet",
-      "vertices": 229,
-      "region_counts": {
-        "leg_lower": 127,
-        "foot": 102
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1031": {
-      "type": "feet",
-      "vertices": 200,
-      "region_counts": {
-        "foot": 118,
-        "leg_lower": 82
-      },
-      "hides_regions": [
-        "foot"
-      ]
-    },
-    "male_foot_M1032": {
-      "type": "feet",
-      "vertices": 284,
-      "region_counts": {
-        "leg_lower": 88,
-        "foot": 196
-      },
-      "hides_regions": [
-        "foot"
+      "hides_materials": [
+        "foot",
+        "leg",
+        "lower",
+        "upper"
       ]
     },
     "male_foot_M9001": {
       "type": "feet",
-      "vertices": 294,
-      "region_counts": {
-        "leg_lower": 128,
-        "foot": 166
-      },
-      "hides_regions": [
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
         "foot"
       ]
     },
     "male_foot_M9002": {
       "type": "feet",
-      "vertices": 212,
-      "region_counts": {
-        "leg_lower": 70,
-        "foot": 142
-      },
-      "hides_regions": [
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
         "foot"
       ]
     },
-    "male_special_GMM0001": {
-      "type": "special",
-      "vertices": 633,
-      "region_counts": {
-        "torso": 189,
-        "neck": 30,
-        "arm_upper": 76,
-        "waist": 75,
-        "head": 8,
-        "forearm": 36,
-        "leg_upper": 80,
-        "leg_lower": 136
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
+    "male_hair_M0401": {
+      "type": "hair",
+      "hides_slots": [
+        6
       ],
-      "hides_upper_vertices": [
-        97,
-        98,
-        101,
-        102,
-        103
-      ],
-      "hides_arm_vertices": [
-        38,
-        39,
-        40
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
       ]
     },
-    "male_special_M0005": {
-      "type": "special",
-      "vertices": 612,
-      "region_counts": {
-        "torso": 158,
-        "neck": 30,
-        "arm_upper": 138,
-        "waist": 120,
-        "head": 6,
-        "leg_upper": 83,
-        "leg_lower": 73
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
+    "male_hair_M0402": {
+      "type": "hair",
+      "hides_slots": [
+        6
       ],
-      "hides_upper_vertices": [
-        150,
-        151,
-        160,
-        161
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
       ]
     },
-    "male_special_M0006": {
-      "type": "special",
-      "vertices": 730,
-      "region_counts": {
-        "torso": 252,
-        "head": 6,
-        "neck": 13,
-        "arm_upper": 82,
-        "forearm": 96,
-        "waist": 101,
-        "leg_upper": 81,
-        "leg_lower": 92
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
+    "male_hair_M0403": {
+      "type": "hair",
+      "hides_slots": [
+        6
       ],
-      "hides_upper_vertices": [
-        21,
-        22,
-        139,
-        140
-      ]
-    },
-    "male_special_M0007": {
-      "type": "special",
-      "vertices": 685,
-      "region_counts": {
-        "waist": 177,
-        "torso": 249,
-        "leg_upper": 79,
-        "leg_lower": 36,
-        "head": 6,
-        "arm_upper": 120,
-        "neck": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        3,
-        4,
-        6,
-        7,
-        11,
-        12,
-        13,
-        14,
-        39,
-        40,
-        42,
-        43,
-        68,
-        69,
-        71,
-        72,
-        74,
-        75,
-        93,
-        94,
-        96,
-        97
-      ],
-      "hides_arm_vertices": [
-        21,
-        22
-      ]
-    },
-    "male_special_M0010": {
-      "type": "special",
-      "vertices": 596,
-      "region_counts": {
-        "torso": 158,
-        "arm_upper": 71,
-        "waist": 140,
-        "head": 6,
-        "neck": 9,
-        "forearm": 98,
-        "leg_lower": 56,
-        "leg_upper": 54
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        91,
-        92,
-        95,
-        96
-      ]
-    },
-    "male_special_M0015": {
-      "type": "special",
-      "vertices": 301,
-      "region_counts": {
-        "torso": 108,
-        "head": 8,
-        "arm_upper": 66,
-        "neck": 8,
-        "leg_upper": 85,
-        "waist": 19,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        9,
-        10,
-        27,
-        28,
-        30,
-        31,
-        32,
-        33,
-        69,
-        70,
-        71,
-        104,
-        105,
-        107,
-        108,
-        109,
-        110,
-        146,
-        147,
-        148
-      ]
-    },
-    "male_special_M0021": {
-      "type": "special",
-      "vertices": 808,
-      "region_counts": {
-        "torso": 322,
-        "arm_upper": 102,
-        "waist": 169,
-        "leg_upper": 66,
-        "leg_lower": 66,
-        "forearm": 60,
-        "head": 6,
-        "neck": 14
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_special_M1003": {
-      "type": "special",
-      "vertices": 789,
-      "region_counts": {
-        "torso": 378,
-        "arm_upper": 101,
-        "waist": 129,
-        "head": 6,
-        "neck": 14,
-        "leg_lower": 42,
-        "leg_upper": 69,
-        "forearm": 46
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        91,
-        92,
-        93,
-        94
-      ],
-      "hides_arm_vertices": [
-        58,
-        59
-      ]
-    },
-    "male_special_M1004": {
-      "type": "special",
-      "vertices": 516,
-      "region_counts": {
-        "torso": 221,
-        "waist": 72,
-        "head": 7,
-        "neck": 10,
-        "arm_upper": 84,
-        "forearm": 34,
-        "leg_lower": 40,
-        "leg_upper": 48
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        8,
-        9,
-        10,
-        101,
-        102
-      ],
-      "hides_arm_vertices": [
-        54,
-        55
-      ]
-    },
-    "male_special_M1005": {
-      "type": "special",
-      "vertices": 659,
-      "region_counts": {
-        "torso": 165,
-        "arm_upper": 84,
-        "waist": 132,
-        "forearm": 92,
-        "neck": 27,
-        "head": 6,
-        "leg_upper": 71,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        29,
-        30,
-        34,
-        35
-      ]
-    },
-    "male_special_M1006": {
-      "type": "special",
-      "vertices": 555,
-      "region_counts": {
-        "torso": 200,
-        "arm_upper": 98,
-        "waist": 129,
-        "head": 6,
-        "neck": 6,
-        "leg_upper": 56,
-        "leg_lower": 60
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_special_M1007": {
-      "type": "special",
-      "vertices": 365,
-      "region_counts": {
-        "torso": 115,
-        "waist": 38,
-        "arm_upper": 82,
-        "leg_upper": 68,
-        "leg_lower": 38,
-        "neck": 15,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        4,
-        8,
-        9,
-        13
-      ]
-    },
-    "male_special_M1010": {
-      "type": "special",
-      "vertices": 804,
-      "region_counts": {
-        "torso": 201,
-        "arm_upper": 96,
-        "waist": 264,
-        "forearm": 62,
-        "neck": 23,
-        "head": 6,
-        "leg_upper": 67,
-        "leg_lower": 66
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        15,
-        16,
-        18,
-        19
-      ]
-    },
-    "male_special_M1015": {
-      "type": "special",
-      "vertices": 301,
-      "region_counts": {
-        "torso": 91,
-        "head": 8,
-        "neck": 23,
-        "arm_upper": 68,
-        "leg_upper": 85,
-        "waist": 19,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        9,
-        10,
-        27,
-        28,
-        30,
-        31,
-        32,
-        33,
-        69,
-        70,
-        71,
-        104,
-        105,
-        107,
-        108,
-        109,
-        110,
-        146,
-        147,
-        148
-      ]
-    },
-    "male_special_M1019": {
-      "type": "special",
-      "vertices": 547,
-      "region_counts": {
-        "torso": 216,
-        "head": 6,
-        "neck": 20,
-        "arm_upper": 132,
-        "leg_lower": 60,
-        "leg_upper": 50,
-        "waist": 63
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        9,
-        10,
-        62,
-        63,
-        80,
-        81,
-        82,
-        83,
-        84,
-        85,
-        86
-      ],
-      "hides_arm_vertices": [
-        23,
-        24,
-        26,
-        27,
-        28,
-        29,
-        39
-      ]
-    },
-    "male_special_M1020": {
-      "type": "special",
-      "vertices": 463,
-      "region_counts": {
-        "leg_lower": 42,
-        "torso": 88,
-        "arm_upper": 78,
-        "neck": 6,
-        "waist": 148,
-        "leg_upper": 65,
-        "forearm": 30,
-        "head": 6
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        53,
-        54,
-        56,
-        57,
-        58,
-        59,
-        111,
-        162,
-        163,
-        164,
-        165,
-        166
-      ],
-      "hides_arm_vertices": [
-        0,
-        1,
-        28,
-        29,
-        31,
-        32,
-        33,
-        34
-      ]
-    },
-    "male_special_M1023": {
-      "type": "special",
-      "vertices": 674,
-      "region_counts": {
-        "torso": 251,
-        "head": 6,
-        "arm_upper": 140,
-        "neck": 12,
-        "waist": 146,
-        "leg_upper": 116,
-        "leg_lower": 2
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        11,
-        12,
-        66,
-        67,
-        166
-      ],
-      "hides_arm_vertices": [
-        0
-      ]
-    },
-    "male_special_M1025": {
-      "type": "special",
-      "vertices": 647,
-      "region_counts": {
-        "waist": 130,
-        "torso": 172,
-        "neck": 17,
-        "arm_upper": 104,
-        "head": 6,
-        "leg_upper": 72,
-        "leg_lower": 108,
-        "forearm": 38
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ]
-    },
-    "male_special_M1027": {
-      "type": "special",
-      "vertices": 832,
-      "region_counts": {
-        "torso": 282,
-        "waist": 160,
-        "head": 6,
-        "neck": 6,
-        "arm_upper": 216,
-        "forearm": 26,
-        "leg_upper": 60,
-        "leg_lower": 64
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        18,
-        19,
-        105,
-        106
-      ],
-      "hides_arm_vertices": [
-        55,
-        57,
-        59
-      ]
-    },
-    "male_special_M9001": {
-      "type": "special",
-      "vertices": 779,
-      "region_counts": {
-        "arm_upper": 170,
-        "torso": 253,
-        "neck": 36,
-        "head": 6,
-        "forearm": 30,
-        "waist": 89,
-        "leg_upper": 69,
-        "leg_lower": 122
-      },
-      "hides_regions": [
-        "arm_upper",
-        "forearm",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_upper_vertices": [
-        150,
-        151,
-        154,
-        156
-      ],
-      "hides_arm_vertices": [
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56
-      ]
-    },
-    "male_special_M9004": {
-      "type": "special",
-      "vertices": 771,
-      "region_counts": {
-        "torso": 316,
-        "waist": 58,
-        "arm_upper": 98,
-        "head": 6,
-        "neck": 18,
-        "leg_upper": 75,
-        "leg_lower": 66,
-        "foot": 130
-      },
-      "hides_regions": [
-        "arm_upper",
-        "leg_lower",
-        "leg_upper",
-        "torso",
-        "waist"
-      ],
-      "hides_arm_vertices": [
-        41,
-        42,
-        43,
-        44,
-        45,
-        46
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
       ]
     },
     "male_glorb_A0001": {
       "type": "glorb",
-      "vertices": 410,
-      "region_counts": {
-        "forearm": 140,
-        "hand": 270
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0002": {
       "type": "glorb",
-      "vertices": 474,
-      "region_counts": {
-        "forearm": 62,
-        "hand": 412
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0003": {
       "type": "glorb",
-      "vertices": 348,
-      "region_counts": {
-        "forearm": 80,
-        "hand": 268
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0005": {
       "type": "glorb",
-      "vertices": 366,
-      "region_counts": {
-        "forearm": 138,
-        "hand": 228
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0007": {
       "type": "glorb",
-      "vertices": 242,
-      "region_counts": {
-        "hand": 242
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0008": {
       "type": "glorb",
-      "vertices": 668,
-      "region_counts": {
-        "forearm": 86,
-        "hand": 582
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0009": {
       "type": "glorb",
-      "vertices": 236,
-      "region_counts": {
-        "forearm": 96,
-        "hand": 140
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0010": {
       "type": "glorb",
-      "vertices": 288,
-      "region_counts": {
-        "forearm": 88,
-        "hand": 200
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0011": {
       "type": "glorb",
-      "vertices": 256,
-      "region_counts": {
-        "hand": 256
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0013": {
       "type": "glorb",
-      "vertices": 242,
-      "region_counts": {
-        "forearm": 50,
-        "hand": 192
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0014": {
       "type": "glorb",
-      "vertices": 326,
-      "region_counts": {
-        "forearm": 154,
-        "hand": 172
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0015": {
       "type": "glorb",
-      "vertices": 530,
-      "region_counts": {
-        "hand": 296,
-        "forearm": 234
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0016": {
       "type": "glorb",
-      "vertices": 778,
-      "region_counts": {
-        "forearm": 256,
-        "hand": 522
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0019": {
       "type": "glorb",
-      "vertices": 410,
-      "region_counts": {
-        "forearm": 88,
-        "hand": 322
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
     "male_glorb_A0021": {
       "type": "glorb",
-      "vertices": 154,
-      "region_counts": {
-        "forearm": 30,
-        "hand": 124
-      },
-      "hides_regions": []
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
-    "male_glorb_A1001": {
-      "type": "glorb",
-      "vertices": 410,
-      "region_counts": {
-        "forearm": 140,
-        "hand": 270
-      },
-      "hides_regions": []
+    "male_hair_M0901": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1002": {
-      "type": "glorb",
-      "vertices": 474,
-      "region_counts": {
-        "forearm": 62,
-        "hand": 412
-      },
-      "hides_regions": []
+    "male_hair_M0902": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1003": {
-      "type": "glorb",
-      "vertices": 348,
-      "region_counts": {
-        "forearm": 80,
-        "hand": 268
-      },
-      "hides_regions": []
+    "male_hair_M0903": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1005": {
-      "type": "glorb",
-      "vertices": 366,
-      "region_counts": {
-        "forearm": 138,
-        "hand": 228
-      },
-      "hides_regions": []
+    "male_hair_M0201": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1007": {
-      "type": "glorb",
-      "vertices": 242,
-      "region_counts": {
-        "hand": 242
-      },
-      "hides_regions": []
+    "male_hair_M0202": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1009": {
-      "type": "glorb",
-      "vertices": 236,
-      "region_counts": {
-        "forearm": 96,
-        "hand": 140
-      },
-      "hides_regions": []
+    "male_hair_M0203": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
     },
-    "male_glorb_A1013": {
-      "type": "glorb",
-      "vertices": 242,
-      "region_counts": {
-        "forearm": 50,
-        "hand": 192
-      },
-      "hides_regions": []
+    "male_hand_M1004": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
-    "male_glorb_A1014": {
-      "type": "glorb",
-      "vertices": 326,
-      "region_counts": {
-        "forearm": 154,
-        "hand": 172
-      },
-      "hides_regions": []
+    "male_hand_M1005": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
-    "male_glorb_A1015": {
-      "type": "glorb",
-      "vertices": 530,
-      "region_counts": {
-        "hand": 296,
-        "forearm": 234
-      },
-      "hides_regions": []
+    "male_hand_M1019": {
+      "type": "hands",
+      "hides_slots": [
+        1,
+        3
+      ],
+      "hides_materials": [
+        "arm",
+        "hand"
+      ]
     },
-    "male_glorb_A1019": {
-      "type": "glorb",
-      "vertices": 410,
-      "region_counts": {
-        "forearm": 88,
-        "hand": 322
-      },
-      "hides_regions": []
+    "male_hand_M1020": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     },
-    "male_glorb_A1021": {
-      "type": "glorb",
-      "vertices": 154,
-      "region_counts": {
-        "forearm": 30,
-        "hand": 124
-      },
-      "hides_regions": []
+    "male_hand_M1026": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1027": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1029": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hair_M0701": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0702": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0703": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_lower_M1001": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1002": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1009": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1011": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1012": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1014": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1016": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1018": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1024": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1026": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1029": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M1001": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1002": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_lower_M1031": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1032": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M1009": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1011": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1012": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1013": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1014": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1016": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1017": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1018": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1021": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1024": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1026": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1029": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hand_M0004": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_upper_M1031": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1032": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hand_M0019": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M0022": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M0025": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_special_M1003": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1004": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1005": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1006": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1007": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hand_M0032": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_foot_M1001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1002": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1003": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1004": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1005": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1006": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1007": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1009": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M1010": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1015": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1019": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hair_M0501": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0502": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0503": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_foot_M1014": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1018": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1019": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M1020": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1023": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1025": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1027": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M1020": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1023": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1024": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1025": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1026": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1027": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1029": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1031": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1032": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_lower_M0001": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0002": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0003": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0004": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0008": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0009": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0011": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0012": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0014": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0016": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0018": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0019": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0022": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0023": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0024": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0025": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0026": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M0001": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0002": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0003": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_lower_M0031": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_upper_M0004": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_lower_M0032": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M0008": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0009": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_foot_GMM0001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_upper_M0011": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0012": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0013": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0014": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0016": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0017": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0018": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0019": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0022": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0023": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0024": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0025": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0026": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0031": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0032": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_special_M0005": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0006": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0007": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hair_M0301": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0302": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0303": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_foot_M0001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0002": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0003": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0004": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0005": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0006": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0007": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0008": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0009": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M0010": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0015": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M0014": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0018": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0019": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M0021": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M0022": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0023": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0024": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0025": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0026": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0031": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0032": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_hair_M0801": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0802": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0803": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hand_M9001": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
     }
   }
 }

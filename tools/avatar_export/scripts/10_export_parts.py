@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from src.parsers.tmd_parser import TMDParser
 from src.parsers.mlib_parser import MLIBParser
 from src.exporters.part_exporter import export_part
-from src.exporters.boundary_normals import build_boundary_map, fix_part_boundary_normals
+from src.parsers.swp_parser import SWPParser
 
 
 # Configuration
@@ -191,7 +191,7 @@ def get_config(gender: str):
             "mlib": AVATAR_IRD / "motion" / "male" / "male.mlib",
             "output_dir": CLIENT_DIR / "assets" / "avatars" / "parts" / "male",
             "parts": MALE_PARTS_TO_EXPORT,
-            "hair_prefix": "male_hair_",
+            "swp": AVATAR_IRD / "male.swp",
         }
     else:
         return {
@@ -200,7 +200,7 @@ def get_config(gender: str):
             "mlib": AVATAR_IRD / "motion" / "female" / "female.mlib",
             "output_dir": CLIENT_DIR / "assets" / "avatars" / "parts" / "female",
             "parts": FEMALE_PARTS_TO_EXPORT,
-            "hair_prefix": "female_hair_",
+            "swp": AVATAR_IRD / "female.swp",
         }
 
 
@@ -226,9 +226,14 @@ def main():
     print(f"  MLIB Bones: {len(mlib.bones)}")
     print()
 
-    # Build face boundary map for hair normal fixing (TMD material index 7 = face)
-    print("Building face boundary map for hair normal fixing...")
-    face_grid, face_cell_size = build_boundary_map(base_model, material_index=7)
+    # Load .swp: per-part authored seam weld normals, baked at export time
+    # (the original client overwrites those part normals at equip time)
+    swp = SWPParser().parse(config["swp"])
+    swp_by_name = {}
+    for entry in swp.swp_data:
+        base_name = entry.tmd_name.split("\\")[-1]
+        swp_by_name[base_name.upper()] = entry
+    print(f"SWP weld entries: {len(swp_by_name)}")
     print()
 
     # Create output directory
@@ -268,14 +273,15 @@ def main():
                         used_bones.add(bone_idx)
             print(f"  Bones used: {len(used_bones)}")
 
-            # Fix boundary normals for hair parts (eliminates forehead seam)
-            if prt_name.startswith(config["hair_prefix"]):
-                fixed = fix_part_boundary_normals(model, face_grid, face_cell_size)
-                if fixed > 0:
-                    print(f"  Boundary normals fixed: {fixed}")
-
-            # Export to GLB (with MLIB for bone index remapping)
-            export_part(model, base_model, mlib, glb_path)
+            # Export to GLB (with MLIB for bone index remapping and the
+            # part's authored seam weld normals from the .swp)
+            swp_entry = swp_by_name.get(prt_name.upper())
+            if swp_entry is not None:
+                weld_count = sum(swp_entry.clone_num[m]
+                                 for m in range(swp_entry.mesh_num))
+                if weld_count:
+                    print(f"  Weld normals: {weld_count}")
+            export_part(model, base_model, mlib, glb_path, swp_entry=swp_entry)
 
             # Report output size
             output_size = glb_path.stat().st_size

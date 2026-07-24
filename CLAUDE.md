@@ -61,4 +61,4 @@ ytavatar/client/assets/
 
 - `monsters.yaml` / `npcs.yaml` — Model registries with optional per-model overrides (zoom, name, bone corrections)
 - `bone_names.json` — 54-bone skeleton definition with positions and parent IDs
-- `parts_metadata.json` / `parts_metadata_female.json` — Part-to-vertex-region hiding maps
+- `parts_metadata.json` / `parts_metadata_female.json` — Per-part swap-slot data: which base material meshes each part replaces

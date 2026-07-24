@@ -234,16 +234,16 @@ def export_monster(monster_id: str) -> tuple[bool, str]:
         tmd = TMDParser().parse(tmd_path)
         mlib = MLIBParser().parse(mlib_path)
 
-        # Apply per-bone rotation correction for specific monsters
-        if monster_id in _MONSTERS_NEEDING_CORRECTION:
-            _correct_mlib_rotations(tmd, mlib)
-
-        # Export GLB (no V-flip for monsters, no avatar validation)
+        # Export GLB (no V-flip for monsters, no avatar validation).
+        # mlib_translations: faithful MLIB pose (translation tracks from the
+        # MLIB skeleton's own offsets) — replaces the retired
+        # _correct_mlib_rotations compensation, same as the NPC pipeline.
         glb_path = OUTPUT_MODELS_DIR / f"{monster_id}.glb"
         export_with_animations(
             tmd, mlib, glb_path,
             animation_names=None, validate=False, v_flip=False,
             anim_correction=True, split_materials=True,
+            mlib_translations=True,
         )
 
         # Embed textures into GLB (supports multi-material monsters)

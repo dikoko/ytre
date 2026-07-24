@@ -48,6 +48,7 @@ def export_npc(npc_id: str) -> tuple[bool, str]:
         equip_correction=cfg.EQUIP_CORRECTION,
         bone_tweaks=cfg.BONE_TWEAKS,
         skip_reparent_ids=cfg.SKIP_REPARENT,
+        mlib_translations=True,
     )
 
 

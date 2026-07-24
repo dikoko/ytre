@@ -287,6 +287,7 @@ def export_model(
     equip_correction: dict[str, set[int]] | None = None,
     bone_tweaks: dict[str, dict[int, dict]] | None = None,
     skip_reparent_ids: set[str] | None = None,
+    mlib_translations: bool = False,
 ) -> tuple[bool, str]:
     """Export a single TMD+MLIB model to GLB with embedded textures."""
     tmd_path = model_dir / f"{model_id}.TMD"
@@ -330,6 +331,7 @@ def export_model(
             smooth_bone_indices=smooth_indices,
             pos_tweaks=pos_tweaks if pos_tweaks else None,
             skip_reparent=bool(skip_reparent_ids and model_id in skip_reparent_ids),
+            mlib_translations=mlib_translations,
         )
 
         embed_textures(glb_path, model_dir, tmd)

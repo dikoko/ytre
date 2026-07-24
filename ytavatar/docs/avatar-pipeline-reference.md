@@ -33,7 +33,14 @@ Same binary format as TMD. Contains a subset mesh (hair, clothing, weapon) with 
 
 ### SWP (Swap Mapping)
 
-Binary format mapping part files to base mesh vertex indices. Used to determine which base mesh vertices a part hides.
+Binary format driving the part-swap system. The original client swaps
+whole meshes by slot: every base-body material mesh is a swap slot, and
+each part's entry lists the slots the part replaces. Equipping removes
+those base meshes entirely (nothing is hidden per-vertex); slots left
+uncovered fall back to the naked default pieces named in the header
+table. Entries also carry authored seam-weld normals: part-vertex
+indices whose normals are replaced at equip time so boundary shading
+matches the base body.
 
 ---
 
@@ -84,12 +91,22 @@ MLIBFile
 
 ### SWP (Parts Swap file)
 
-
 ```
 SWPFile
-  └── swp_data: list[SwpData]
-        └── clone_idx: list[int]  (vertex indices in base mesh hidden by this part)
+  ├── def_data: list[DefData]           (slot -> naked default part table)
+  └── swp_data: list[SwpData]           (one entry per part)
+        ├── swp_id[mesh]: list[int]     (base slots this part mesh replaces)
+        ├── clone_idx/clone_nor[mesh]   (seam-weld: part vertex indices +
+        │                                authored replacement normals)
+        └── tmd_name / obj_name
 ```
+
+Slot ID == base TMD material index. NOTE: the male and female base
+models order their slots differently (male slot 0 = upper, 5 = lower;
+female slot 0 = lower, 5 = upper) — always derive the mapping from the
+base TMD's material order. Shipped weld counts can exceed the format's
+fixed 50-entry per-mesh rows; the values continue row-major into the
+next row (read them with flat indexing, exactly as the game does).
 
 ---
 
@@ -115,22 +132,23 @@ SWPFile
 [50] @Skirt01LF      [51] @Skirt02LF      [52] @Skirt03LF      [53] @Skirt00LF
 ```
 
-### Body Regions (12 regions)
+### Swap Slots (8 per gender)
 
-| Region | Bones | Hidden By |
-|--------|-------|-----------|
-| HEAD | @Head, @Hair0* | — (always visible) |
-| HAIR_SCALP | (material 6, near center) | Hair parts |
-| HAIR_STRANDS | (material 6, outer) | Hair parts |
-| NECK | @Neck | Upper parts |
-| ARM_UPPER | @ClavicleL/R, @Arm1L/R | Upper parts (long sleeves) |
-| FOREARM | @Arm2L/R | Upper parts (long sleeves) |
-| HAND | @HandL/R, @Finger*L/R | Hand parts |
-| TORSO | @Spine1-3 | Upper parts |
-| WAIST | @Pelvis, @Skirt* | Lower parts |
-| LEG_UPPER | @Leg1L/R | Lower parts |
-| LEG_LOWER | @Leg2L/R | Lower parts (long pants) |
-| FOOT | @FootL/R, @ToeL/R | Foot parts |
+The base body is split into 8 material meshes; each is one swap slot.
+Parts replace whole slots (from their SWP entries), e.g. a sleeveless
+shirt replaces only `upper` while a long coat replaces `upper` + `arm`;
+thigh-high boots replace `foot` + `leg`.
+
+| Slot (male) | Slot (female) | Material mesh |
+|------|------|------|
+| 0 | 5 | upper (default top + torso/neck skin) |
+| 1 | 1 | arm |
+| 2 | 2 | foot |
+| 3 | 3 | hand |
+| 4 | 4 | leg |
+| 5 | 0 | lower (default bottom) |
+| 6 | 6 | hair (viewer splits into scalp cap + strands) |
+| 7 | 7 | face |
 
 ### Bone Hierarchy Construction
 
@@ -156,19 +174,28 @@ IBM = [R^T | -R^T * t]  # 4x4, stored column-major for GLTF
 
 ---
 
-## Coordinate Conventions
+## Coordinate Conventions (left-handed source -> right-handed glTF)
 
-| Component | TMD/PRT Format | GLTF Output | Notes |
-|-----------|---------------|-------------|-------|
-| Positions | [x, y, z] | [x, y, z] | No conversion needed |
-| Normals | [x, y, z] | [x, y, z] | No conversion needed |
-| UVs | [u, v] | [u, v] | No V-flip in part/material exporters |
-| Face winding | CCW | CCW | Original winding preserved |
-| Quaternion (TMD) | [x, y, z, w] | [x, y, z, w] | Same order |
-| Quaternion (MLIB) | [w, x, y, z] | [x, y, z, w] | Reorder needed |
-| X-negation | — | — | NOT applied anywhere |
+The game's renderer is a left-handed Direct3D pipeline that draws the
+authored data verbatim. Importing that data unchanged into right-handed
+glTF/Godot renders every model left-right mirrored (visible on clothing
+text). All character exporters therefore apply one coherent Z-mirror:
 
-**Critical**: X-negation was removed from all exporters. It broke skinning because vertices ended up in a different coordinate space than the skeleton/IBMs.
+| Component | Conversion |
+|-----------|------------|
+| Positions / normals | `(x, y, -z)` |
+| Triangle winding | reversed `(v0, v2, v1)` |
+| Rig transforms / IBMs | conjugated by `S = diag(1, 1, -1)`: matrices `S*M*S` |
+| Quaternions | `(x, y, z, w) -> (-x, -y, z, w)` |
+| Translations (bind + tracks) | `(x, y, -z)` |
+| Weapon bone-local vertices | `(x, y, -z)` |
+| Quaternion (MLIB) | `[w, x, y, z] -> [x, y, z, w]` reorder |
+
+Models face -Z after conversion; viewers rotate them PI about Y to face
+the camera. The mirror must be applied to EVERY factor coherently
+(mesh, bind pose, inverse bind matrices, all animation tracks) or
+skinning breaks — mirroring only the mesh is how the old
+"X-negation broke skinning" conclusion came about.
 
 **UV V-flip**: Only `skeleton_exporter` applies V-flip (`v = 1.0 - v`). Part exporter, material exporter, and weapon exporter do NOT flip.
 
@@ -182,8 +209,9 @@ IBM = [R^T | -R^T * t]  # 4x4, stored column-major for GLTF
 2. Find MeshInstance3D in scene
 3. Reparent mesh to shared Skeleton3D (remove from part's own skeleton)
 4. Restore skin reference (bone names must match)
-5. Apply texture material (hair shader or clothing alpha shader)
-6. Update base mesh material visibility based on regions hidden
+5. Apply texture material (skin-blend shader; hair variant is two-sided)
+6. Hide exactly the base material meshes the part's swap slots replace
+   (`hides_materials` in the parts metadata)
 
 ---
 
@@ -260,6 +288,30 @@ Categories by prefix:
 
 ---
 
+## Materials & Lighting (viewer)
+
+### Skin tone: alpha-mask blend
+
+The original engine colors avatar skin by blending a 1x1 skin-color
+texture into every part material, using the part texture's ALPHA channel
+as a smooth mask: `rgb = mix(skin_color, tex.rgb, tex.a)`, then the
+lighting modulate. In the avatar pass alpha means "skin", never
+transparency (hair strands are geometry). Hard alpha thresholds turn the
+authored feathering (hairlines, armholes) into visible seam lines — keep
+the blend smooth. Default tones are authored per gender (the flat fills
+of the base-body textures): male (253, 207, 162), female (255, 221, 183).
+
+### Portrait lighting: fixed-function, gamma space
+
+Character shading replicates the original fixed-function rig in gamma
+space (unshaded shader, per-vertex diffuse): material ambient 0.7 x
+(world ambient 0.502 + light ambient 0.1) + 0.5 * max(N.L, 0), one
+directional light direction (-1, -0.5, -3), specular disabled. Ambient
+dominance visually welds most part-boundary normal differences; the SWP
+weld normals handle the rest.
+
+---
+
 ## File Paths & Naming
 
 ### Output Files (client/)
@@ -267,10 +319,13 @@ Categories by prefix:
 ```
 client/assets/avatars/
 ├── base/
-│   └── male_base_materials.glb       # Material-split base + 223 anims
+│   ├── male_base_materials.glb       # Material-split base + 223 anims
+│   └── female_base_materials.glb     # Female base + animations
 ├── parts/
-│   ├── male/male_*.glb               # Skinned part GLBs
-│   └── parts_metadata.json           # Region/visibility metadata
+│   ├── male/male_*.glb               # Skinned part GLBs (weld normals baked)
+│   ├── female/female_*.glb           # Female part GLBs
+│   ├── parts_metadata.json           # Per-part swap-slot data (male)
+│   └── parts_metadata_female.json    # Per-part swap-slot data (female)
 ├── weapons/
 │   ├── blade/weapon_blade_*.glb      # 27 blade GLBs
 │   ├── mura/weapon_mura_*.glb        # 24 mura GLBs
@@ -285,9 +340,9 @@ client/assets/avatars/
 ### Naming Conventions
 
 - Male parts: `male_{type}_M{NNNN}.PRT` (M-prefix = male, NNNN = variant)
+- Female parts: `female_{type}_F{NNNN}.PRT`
 - Weapons: `weapon_{type}_A{NNNN}.PRT` (A-prefix = shared, NNNN = variant)
 - A0xxx = base variants, A1xxx = upgraded/alternate variants
-- Female parts would follow: `female_{type}_F{NNNN}.PRT`
 
 ---
 

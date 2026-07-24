@@ -303,19 +303,25 @@ def _build_parent_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
 def _build_skeleton(ctx: ExportContext, model: TMDModel, mlib: MLIBFile) -> int:
     """Build skeleton nodes and return armature index."""
     gltf = ctx.gltf
-    parent_map = _build_parent_map(model, mlib)
+    from src.exporters.animation_exporter import (
+        _build_parent_map as _anim_parent_map,
+    )
+    parent_map = _anim_parent_map(model, mlib, ordinal=True)
+    ctx.original_parent_map = dict(parent_map)
 
-    # Get world transforms
+    # Get world transforms, conjugated by the LH -> RH mirror
+    # S = diag(1,1,-1) (same convention as animation/part exporters)
+    S = np.diag([1.0, 1.0, -1.0])
     world_pos = []
     world_rot = []
     for bone in model.bones:
         t = [
             bone.world_transform.translation.x,
             bone.world_transform.translation.y,
-            bone.world_transform.translation.z,
+            -bone.world_transform.translation.z,
         ]
         R = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
-        q = _rotation_matrix_to_quaternion(R)
+        q = _rotation_matrix_to_quaternion(S @ R @ S)
         world_pos.append(t)
         world_rot.append(q)
 
@@ -407,13 +413,15 @@ def _build_inverse_bind_matrices(model: TMDModel) -> list[float]:
     """Build inverse bind matrices from TMD world transforms."""
     ibm_data = []
 
+    S = np.diag([1.0, 1.0, -1.0])
     for bone in model.bones:
+        # LH -> RH mirror, matching the skeleton nodes
         pos = [
             bone.world_transform.translation.x,
             bone.world_transform.translation.y,
-            bone.world_transform.translation.z,
+            -bone.world_transform.translation.z,
         ]
-        R = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
+        R = S @ np.array(bone.world_transform.rotation.data).reshape(3, 3).T @ S
         R_inv = R.T
         t_inv = -R_inv @ np.array(pos)
 
@@ -449,10 +457,10 @@ def _build_material_mesh(
 
     for old_idx in material_mesh.vertex_indices:
         v = original_mesh.vertices[old_idx]
-        positions.extend([v.x, v.y, v.z])
+        positions.extend([v.x, v.y, -v.z])  # LH -> RH mirror
 
         n = original_mesh.normals[old_idx]
-        normals.extend([n.x, n.y, n.z])
+        normals.extend([n.x, n.y, -n.z])
 
         uv = original_mesh.uvs[old_idx]
         # No V-flip - original TMD UV coordinates are correct
@@ -474,11 +482,12 @@ def _build_material_mesh(
             joints_data.append(tmd_bone_idx)
             weights_data.append(weight)
 
-    # Remap face indices
+    # Remap face indices, winding reversed (the Z mirror flips
+    # triangle orientation)
     indices = []
     for face in material_mesh.faces:
         v0, v1, v2 = face
-        indices.extend([old_to_new[v0], old_to_new[v1], old_to_new[v2]])
+        indices.extend([old_to_new[v0], old_to_new[v2], old_to_new[v1]])
 
     # Calculate bounds
     vertex_count = len(material_mesh.vertex_indices)
@@ -576,14 +585,19 @@ def export_with_materials(
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     gltf = GLTF2(asset=Asset(version="2.0", generator="avatar_export.material_exporter"))
-    ctx = ExportContext(gltf=gltf, buffer=bytearray())
-
-    # Build MLIB to TMD bone index mapping
-    tmd_name_to_idx = {b.name.strip(): i for i, b in enumerate(model.bones)}
-    for mlib_idx, mlib_bone in enumerate(mlib.bones):
-        tmd_idx = tmd_name_to_idx.get(mlib_bone.name.strip(), -1)
-        if tmd_idx >= 0:
-            ctx.mlib_to_tmd[mlib_idx] = tmd_idx
+    # Faithful MLIB-pose path (same engine model as NPC/monster pipelines):
+    # full animation-exporter context, dummy animation targets included,
+    # ordinal mlib<->tmd binding (the engine binds bone i to object i).
+    from src.exporters.animation_exporter import (
+        ExportContext as AnimExportContext,
+        _build_mlib_to_tmd_map, _build_tmd_to_mlib_map,
+        _extend_bones_with_animation_targets,
+    )
+    _extend_bones_with_animation_targets(model, mlib)
+    ctx = AnimExportContext(gltf=gltf, buffer=bytearray(),
+                            mlib_translations=True, mlib=mlib)
+    ctx.mlib_to_tmd = _build_mlib_to_tmd_map(model, mlib, ordinal=True)
+    ctx.tmd_to_mlib = _build_tmd_to_mlib_map(model, mlib, ordinal=True)
 
     # Build skeleton
     armature_idx = _build_skeleton(ctx, model, mlib)

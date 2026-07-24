@@ -484,6 +484,8 @@ func _initialize_avatar() -> void:
 	_avatar = AvatarCharacter.new()
 	_avatar.gender = gender_name
 	_avatar.default_animation = ""  # We manage animation
+	# exported data faces -Z (map-consistent handedness); face the camera
+	_avatar.rotation.y = PI
 	add_child(_avatar)
 
 	# Load part variants for cycling UI
@@ -553,6 +555,8 @@ func _enter_model_viewer(mode: int) -> void:
 		var nc = NPCCharacter.new()
 		nc.auto_play = ""
 		_model_char = nc
+	# exported data faces -Z (map-consistent handedness); face the camera
+	_model_char.rotation.y = PI
 	monster_root.add_child(_model_char)
 
 	# Load first model

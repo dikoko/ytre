@@ -142,18 +142,20 @@ def export_weapon(
             v_bone = R_inv @ v_world + t_inv
             n_bone = R_inv @ n_world
 
-            positions.extend(v_bone.tolist())
-            normals.extend(n_bone.tolist())
+            # LH -> RH mirror: the exported rig is conjugated by
+            # S = diag(1,1,-1), and bone-local vectors transform as S*l
+            positions.extend([v_bone[0], v_bone[1], -v_bone[2]])
+            normals.extend([n_bone[0], n_bone[1], -n_bone[2]])
 
         # UVs (no conversion needed)
         uvs = []
         for uv in mesh.uvs:
             uvs.extend([uv.u, uv.v])
 
-        # Faces (original winding)
+        # Faces: winding reversed (the Z mirror flips triangle orientation)
         indices = []
         for face in mesh.faces:
-            indices.extend([face[0], face[1], face[2]])
+            indices.extend([face[0], face[2], face[1]])
 
         # Calculate bounds
         vertex_count = len(mesh.vertices)

@@ -1,14 +1,25 @@
 """
 SWP File Parser
 
-Parses Yogurting .swp (swap) files that define which base mesh vertices
-are replaced by each avatar part.
+Parses Yogurting .swp (swap) files that drive the avatar part-swap system.
+
+The original client swaps WHOLE MESHES by slot ID:
+- Every base-body mesh gets a sequential swap-slot ID in mesh-list
+  order — slot ID == base TMD material index (8 slots per gender;
+  NOTE male and female orders differ, always derive from the base TMD).
+- The header DefData table maps each slot to its naked default part
+  ({gender}PartN.PRT) restored when nothing covers the slot.
+- Each part's SwpData lists, per part mesh, the slot IDs that mesh
+  REPLACES. Equipping deletes the base meshes occupying those slots
+  outright — vertices are never individually hidden.
+- The clone index/normal arrays are a seam weld: indices into the
+  PART's own mesh whose normals are overwritten with authored
+  replacement normals at equip time, matching base-body shading at
+  the boundary.
 
 File format:
 - Header: DefNum (int), DefData[DefNum]
 - Body: PartsNum (int), SwpData[PartsNum]
-
-Each SwpData record carries the vertex indices in the base mesh to hide when the part is equipped.
 """
 
 import struct
@@ -35,27 +46,40 @@ class SwpData:
     """Swap data for a single part."""
     int_id: int  # Interface/Part ID
     mesh_num: int
-    swp_num: list[int]  # [MAX_MESH]
-    swp_id: list[list[int]]  # [MAX_MESH][MAX_SWP_NUM]
-    clone_num: list[int]  # [MAX_MESH] - vertex counts per mesh
-    clone_idx: list[list[int]]  # [MAX_MESH][MAX_CLONE_NUM] - vertex indices to hide
-    # clone_nor: list[list[tuple]] - normals, not needed for region mapping
+    swp_num: list[int]  # [MAX_MESH] - slot count per part mesh
+    swp_id: list[list[int]]  # [MAX_MESH][MAX_SWP_NUM] - slots each part mesh replaces
+    clone_num: list[int]  # [MAX_MESH] - weld-normal counts per part mesh
+    clone_idx: list[list[int]]  # [MAX_MESH][MAX_CLONE_NUM] - PART vertex indices to re-normal
+    clone_nor: list[list[tuple[float, float, float]]]  # [MAX_MESH][MAX_CLONE_NUM] - authored weld normals
     chain_num: list[int]  # [MAX_MESH]
     chain_idx: list[list[int]]  # [MAX_MESH][MAX_CLONE_NUM]
     tmd_name: str
     obj_name: str
 
-    def get_all_clone_indices(self) -> set[int]:
-        """Get all vertex indices that this part replaces (across all meshes)."""
-        indices = set()
-        for mesh_idx in range(min(self.mesh_num, len(self.clone_idx))):
-            count = self.clone_num[mesh_idx] if mesh_idx < len(self.clone_num) else 0
-            mesh_clone_idx = self.clone_idx[mesh_idx] if mesh_idx < len(self.clone_idx) else []
-            for i in range(min(count, len(mesh_clone_idx))):
-                idx = mesh_clone_idx[i]
-                if idx >= 0:  # Valid index
-                    indices.add(idx)
-        return indices
+    def get_slot_ids(self) -> list[int]:
+        """All base swap-slot IDs this part replaces (union across its meshes)."""
+        slots = set()
+        for m in range(self.mesh_num):
+            for j in range(self.swp_num[m]):
+                slots.add(self.swp_id[m][j])
+        return sorted(slots)
+
+    def get_weld_normals(self, mesh_idx: int) -> list[tuple[int, tuple[float, float, float]]]:
+        """(part vertex index, authored normal) pairs for one part mesh.
+
+        Shipped data contains clone counts above the fixed per-mesh array
+        size (50); the original engine indexes the contiguous 2D struct
+        arrays past the row end, spilling into the next row. Replicate that
+        with flat row-major indexing.
+        """
+        if mesh_idx >= self.mesh_num:
+            return []
+        n = self.clone_num[mesh_idx]
+        flat_idx = [x for row in self.clone_idx for x in row]
+        flat_nor = [x for row in self.clone_nor for x in row]
+        base = mesh_idx * MAX_CLONE_NUM
+        return [(flat_idx[base + i], flat_nor[base + i])
+                for i in range(min(n, len(flat_idx) - base))]
 
 
 @dataclass
@@ -131,48 +155,54 @@ class SWPParser:
         mesh_num = struct.unpack_from("<i", data, offset)[0]
         offset += 4
 
-        # pSwpNum[MAX_MESH]
+        # per-mesh slot counts [MAX_MESH]
         swp_num = list(struct.unpack_from(f"<{MAX_MESH}i", data, offset))
         offset += MAX_MESH * 4
 
-        # pSwpID[MAX_MESH][MAX_SWP_NUM]
+        # replaced slot IDs [MAX_MESH][MAX_SWP_NUM]
         swp_id = []
         for _ in range(MAX_MESH):
             ids = list(struct.unpack_from(f"<{MAX_SWP_NUM}i", data, offset))
             swp_id.append(ids)
             offset += MAX_SWP_NUM * 4
 
-        # nCloneNum[MAX_MESH]
+        # weld counts [MAX_MESH]
         clone_num = list(struct.unpack_from(f"<{MAX_MESH}i", data, offset))
         offset += MAX_MESH * 4
 
-        # pCloneIdx[MAX_MESH][MAX_CLONE_NUM]
+        # weld vertex indices [MAX_MESH][MAX_CLONE_NUM]
         clone_idx = []
         for _ in range(MAX_MESH):
             indices = list(struct.unpack_from(f"<{MAX_CLONE_NUM}i", data, offset))
             clone_idx.append(indices)
             offset += MAX_CLONE_NUM * 4
 
-        # pCloneNor[MAX_MESH][MAX_CLONE_NUM] - GtVector3 (3 floats each)
-        # Skip normals, we don't need them
-        offset += MAX_MESH * MAX_CLONE_NUM * 12
+        # weld normals [MAX_MESH][MAX_CLONE_NUM] - 3 floats each:
+        # authored replacement normals for the part's clone_idx vertices
+        clone_nor = []
+        for _ in range(MAX_MESH):
+            nors = []
+            for _ in range(MAX_CLONE_NUM):
+                nors.append(struct.unpack_from("<3f", data, offset))
+                offset += 12
+            clone_nor.append(nors)
 
-        # pChainNum[MAX_MESH]
+        # chain counts [MAX_MESH]
         chain_num = list(struct.unpack_from(f"<{MAX_MESH}i", data, offset))
         offset += MAX_MESH * 4
 
-        # pChainIdx[MAX_MESH][MAX_CLONE_NUM]
+        # chain indices [MAX_MESH][MAX_CLONE_NUM]
         chain_idx = []
         for _ in range(MAX_MESH):
             indices = list(struct.unpack_from(f"<{MAX_CLONE_NUM}i", data, offset))
             chain_idx.append(indices)
             offset += MAX_CLONE_NUM * 4
 
-        # szTMDName[MAX_NAME]
+        # TMD file name [MAX_NAME]
         tmd_name = self._read_string(data, offset, MAX_NAME)
         offset += MAX_NAME
 
-        # szObjName[MAX_NAME]
+        # object name [MAX_NAME]
         obj_name = self._read_string(data, offset, MAX_NAME)
         offset += MAX_NAME
 
@@ -183,6 +213,7 @@ class SWPParser:
             swp_id=swp_id,
             clone_num=clone_num,
             clone_idx=clone_idx,
+            clone_nor=clone_nor,
             chain_num=chain_num,
             chain_idx=chain_idx,
             tmd_name=tmd_name,

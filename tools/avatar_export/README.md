@@ -43,11 +43,11 @@ tools/avatar_export/
 ├── scripts/             # runnable pipeline + debug scripts (see below)
 ├── src/
 │   ├── parsers/         # tmd_parser, mlib_parser, swp_parser
-│   ├── exporters/       # mesh / skeleton / animation / part / region / material /
-│   │                    # weapon / prop / boundary_normals
+│   ├── exporters/       # mesh / skeleton / animation / part / material /
+│   │                    # weapon / prop
 │   ├── validators/      # mesh + skeleton sanity checks (used by tests)
 │   └── debug/           # axis / skeleton / bone-name visualizers
-├── tests/               # pytest suite — 91 tests, runs against real `refs/` data
+├── tests/               # pytest suite, runs against real `refs/` data
 └── output/              # debug-script GLB outputs
 ```
 
@@ -61,7 +61,6 @@ uv run python scripts/01_debug_axes.py
 
 # Full avatar pipeline (run in order; each writes into ytavatar/client/assets/)
 uv run python scripts/10_export_parts.py
-uv run python scripts/11_export_regions.py
 uv run python scripts/12_export_textures.py
 uv run python scripts/13_export_materials.py
 uv run python scripts/14_generate_metadata.py
@@ -83,7 +82,6 @@ uv run python scripts/21_export_npcs.py
 | `02_debug_skeleton.py` | GLB with 3 cm cubes at each bone position to verify skeleton structure |
 | `03_debug_bone_names.py` | JSON of bone names + positions — pair with `debug_skeleton.glb` to identify bones |
 | `06_debug_anim.py` | Skeleton cubes + `basic_pick` animation — isolates animation math from mesh skinning |
-| `debug_boundary_normals.py` | Visualizes boundary normal blending between base and part meshes |
 
 ### Standalone exports (incremental verification, write to `output/`)
 
@@ -99,10 +97,9 @@ uv run python scripts/21_export_npcs.py
 | Script | Purpose |
 | --- | --- |
 | `10_export_parts.py` | Convert PRT files (hair, upper, lower, hands, feet — male + female) to GLB |
-| `11_export_regions.py` | Export base mesh split by body region (one mesh node per region) |
 | `12_export_textures.py` | Copy avatar base + part textures into Godot assets |
 | `13_export_materials.py` | Export base mesh split by material index (for correct UV mapping) |
-| `14_generate_metadata.py` | Generate `parts_metadata.json` — maps each part to the regions it hides |
+| `14_generate_metadata.py` | Generate `parts_metadata.json` — per-part swap slots (base meshes each part replaces) |
 | `15_export_faces.py` | Copy face textures (with blink-frame variants) into Godot assets |
 | `16_export_weapons.py` | Convert weapon PRT files to GLB and copy weapon textures |
 

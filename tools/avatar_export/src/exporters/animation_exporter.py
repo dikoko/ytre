@@ -46,10 +46,65 @@ class ExportContext:
     skip_reparent: bool = False
     equip_reparent: dict[int, int] = field(default_factory=dict)  # tmd_idx -> new_parent_tmd_idx
     original_parent_map: dict[int, int] = field(default_factory=dict)  # original parents before reparent
+    # Faithful MLIB-pose mode (NPCs): translation tracks from the MLIB
+    # skeleton's parent-local offsets, no equip reparenting, no node scale
+    # on MLIB-driven bones (scale/reflection lives only in the IBMs, so
+    # joint globals stay pure R*T like the engine's bone matrices)
+    mlib_translations: bool = False
+    mlib: object = None  # MLIBFile, needed for bone offsets in _add_animation
+    # MLIB bone indices with live scale keys (option & MOTION_FLAG_SCALING) in ANY
+    # motion — these get a scale track in EVERY animation (constant 1s when
+    # the motion's gate is off) so scale never leaks across animations.
+    scale_track_bones: set[int] = field(default_factory=set)
+    # Subset of scale_track_bones whose scale axis is not identity: the
+    # engine local is T*R*(Rsa*S*Rsa^T), which one TRS node cannot express.
+    # These bones get a factor chain of two extra nodes: bone node T*R ->
+    # "{name}_SAS" node Rsa*S -> "{name}_SA" carrier Rsa^T, with the skin
+    # joint and child bones on the carrier. Each engine factor lives on
+    # its OWN node so Godot's per-node interpolation (slerp rotations,
+    # lerp scale) equals the engine's per-factor interpolation at EVERY
+    # time, not just on keys: slerp(Rsa^T) == slerp(Rsa)^T, so the
+    # carrier cancellation holds mid-key. (A single fused node was only
+    # exact ON keys; re-diagonalized gauges spin at scale-eigenvalue
+    # crossings and flicker between keys — cn0007's sleeves.)
+    sa_track_bones: set[int] = field(default_factory=set)
+    # Per-TMD-bone node used as skin joint / parent for children: the SA
+    # carrier where one exists, else the bone node itself.
+    joint_node_indices: list[int] = field(default_factory=list)
+    # TMD bone idx -> "{name}_SAS" node idx (Rsa*S factor node)
+    sas_node_indices: dict[int, int] = field(default_factory=dict)
+
+
+# Motion option bit 3: scale/scale-axis tracks are live only when the
+# bit is set; keys with the bit off are dead data the engine never
+# samples.
+MOTION_FLAG_SCALING = 8
+
+# D3D LH -> glTF RH handedness conversion (same as the ytlevel prop
+# pipeline): the whole model is mirrored about Z. Positions/normals get
+# z negated, triangle winding reverses, and every transform conjugates by
+# S = diag(1,1,-1): rotation matrices R -> S R S, quaternions
+# (x,y,z,w) -> (-x,-y,z,w), translations (x,y,z) -> (x,y,-z). Without
+# this the render is left-right mirrored (visible on clothing text).
+_MIRROR_S = np.diag([1.0, 1.0, -1.0])
+
+
+def _mirror_quat_xyzw(q):
+    return [-q[0], -q[1], q[2], q[3]]
 
 
 def _base64_encode(data: bytes) -> str:
     return base64.b64encode(data).decode('utf-8')
+
+
+def _quat_xyzw_to_matrix(q: list[float]) -> np.ndarray:
+    """[x, y, z, w] quaternion to 3x3 rotation matrix (column-major math)."""
+    x, y, z, w = q
+    return np.array([
+        [1-2*(y*y+z*z), 2*(x*y-w*z), 2*(x*z+w*y)],
+        [2*(x*y+w*z), 1-2*(x*x+z*z), 2*(y*z-w*x)],
+        [2*(x*z-w*y), 2*(y*z+w*x), 1-2*(x*x+y*y)],
+    ])
 
 
 def _rotation_matrix_to_quaternion(R: np.ndarray) -> list[float]:
@@ -137,8 +192,11 @@ _PHYSICS_BONE_PREFIXES = (
     "@Skirt", "@skirt", "@Hair", "@Breast",              # Avatar
     "@necktie", "@upper", "@ribon", "@Cloth", "@Cover",  # Monster cloth/string
     "@Cap", "@Tail", "@Mantle", "@Feeler",               # Monster appendages
-    "@Manteau", "@Rosary", "@Pipe",                      # NPC cloth/accessories
+    "@Manteau", "@Rosary",                               # NPC cloth/accessories
 )
+# NOTE: "@Pipe" was smoothed here until 2026-07-19 — a compensation for the
+# pre-MLIB-translations FK drift. It is a rigid held prop; smoothing blurs
+# its authored hand-tracking motion.
 
 # EMA smoothing factor for physics bones (0=no smoothing, 1=full smoothing)
 _PHYSICS_SMOOTHING = 0.5
@@ -266,14 +324,17 @@ def _smooth_physics_rotations(quats: list[list[float]]) -> list[list[float]]:
     return result
 
 
-def _build_parent_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
+def _build_parent_map(model: TMDModel, mlib: MLIBFile,
+                      ordinal: bool = False) -> dict[int, int]:
     """Build parent map using MLIB hierarchy.
 
     Uses _build_tmd_to_mlib_map for TMD→MLIB mapping (handles name mismatches
     and duplicate names). For parent lookup, uses the inverse of that mapping
-    (MLIB parent index → TMD index).
+    (MLIB parent index → TMD index). ordinal=True uses pure index identity
+    (engine binding) — required when MLIB and TMD name the same bone
+    differently (ct0079's '@Stage1' is the TMD's '@Root').
     """
-    tmd_to_mlib = _build_tmd_to_mlib_map(model, mlib)
+    tmd_to_mlib = _build_tmd_to_mlib_map(model, mlib, ordinal=ordinal)
     # Build reverse map: MLIB index → TMD index
     mlib_to_tmd = {v: k for k, v in tmd_to_mlib.items()}
 
@@ -293,11 +354,19 @@ def _build_parent_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
     return parent_map
 
 
-def _build_mlib_to_tmd_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
+def _build_mlib_to_tmd_map(model: TMDModel, mlib: MLIBFile,
+                           ordinal: bool = False) -> dict[int, int]:
     """Build MLIB bone index to TMD bone index mapping.
 
-    Primary: match by name. Fallback: match by index when names differ.
+    ordinal=True (faithful/mlib_translations mode): identity over the
+    shared range — the engine binds MLIB bone i to object i
+    unconditionally; names are labels only (ct0079's MLIB reuses
+    '@Root' for four sub-roots the TMD disambiguates).
+    Otherwise: match by name, index fallback (legacy avatar/monster path).
     """
+    if ordinal:
+        n = min(len(model.bones), len(mlib.bones))
+        return {i: i for i in range(n)}
     tmd_name_to_idx = {b.name.strip(): i for i, b in enumerate(model.bones)}
     mlib_to_tmd = {}
     unmatched_mlib = []
@@ -321,12 +390,16 @@ def _build_mlib_to_tmd_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
     return mlib_to_tmd
 
 
-def _build_tmd_to_mlib_map(model: TMDModel, mlib: MLIBFile) -> dict[int, int]:
+def _build_tmd_to_mlib_map(model: TMDModel, mlib: MLIBFile,
+                           ordinal: bool = False) -> dict[int, int]:
     """Build TMD bone index to MLIB bone index mapping.
 
-    Primary: match by name (1:1 only). Fallback: match by index when names
-    differ or when multiple TMD bones share the same name.
+    ordinal=True: identity over the shared range (see _build_mlib_to_tmd_map).
+    Otherwise: match by name (1:1 only), index fallback.
     """
+    if ordinal:
+        n = min(len(model.bones), len(mlib.bones))
+        return {i: i for i in range(n)}
     mlib_name_to_idx = {b.name.strip(): i for i, b in enumerate(mlib.bones)}
     tmd_to_mlib = {}
     unmatched_tmd = []
@@ -392,22 +465,27 @@ def _build_skeleton(
     can be deformed by animations.
     """
     gltf = ctx.gltf
-    parent_map = _build_parent_map(model, mlib)
+    parent_map = _build_parent_map(model, mlib, ordinal=ctx.mlib_translations)
     ctx.original_parent_map = dict(parent_map)
 
-    # Detect and apply equip bone reparenting (unless skipped)
-    ctx.equip_reparent = {} if ctx.skip_reparent else _detect_equip_reparents(model, parent_map)
+    # Detect and apply equip bone reparenting (unless skipped).
+    # mlib_translations mode never reparents: the MLIB hierarchy already
+    # parents equips correctly and translation tracks carry the offsets.
+    if ctx.mlib_translations or ctx.skip_reparent:
+        ctx.equip_reparent = {}
+    else:
+        ctx.equip_reparent = _detect_equip_reparents(model, parent_map)
     if ctx.equip_reparent:
         for bone_idx, new_parent_idx in ctx.equip_reparent.items():
             parent_map[bone_idx] = new_parent_idx
 
-    # Get world positions from TMD
+    # Get world positions from TMD (z negated: LH -> RH mirror)
     world_pos = []
     for bone in model.bones:
         world_pos.append([
             bone.world_transform.translation.x,
             bone.world_transform.translation.y,
-            bone.world_transform.translation.z,
+            -bone.world_transform.translation.z,
         ])
 
     if use_mlib_rotations:
@@ -425,7 +503,7 @@ def _build_skeleton(
             mlib_idx = ctx.tmd_to_mlib.get(tmd_idx)
             if ref_motion and mlib_idx is not None and mlib_idx < ref_motion.bone_count:
                 r = ref_motion.rotations[0][mlib_idx]
-                local_rot = [r.x, r.y, r.z, r.w]
+                local_rot = _mirror_quat_xyzw([r.x, r.y, r.z, r.w])
             else:
                 local_rot = [0.0, 0.0, 0.0, 1.0]
             parent_idx = parent_map.get(tmd_idx, -1)
@@ -456,6 +534,7 @@ def _build_skeleton(
         ctx.world_rot_full = []
         for bone in model.bones:
             R_full = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
+            R_full = _MIRROR_S @ R_full @ _MIRROR_S
             R_clean = _normalize_rotation_matrix(R_full)
             world_rot.append(_rotation_matrix_to_quaternion(R_clean))
             ctx.world_rot_full.append(R_full)
@@ -512,6 +591,11 @@ def _build_skeleton(
     for i, bone in enumerate(model.bones):
         s = local_scale[i]
         has_scale = any(abs(v - 1.0) > 0.001 for v in s)
+        if ctx.mlib_translations and ctx.tmd_to_mlib.get(i) is not None:
+            # Engine joint globals are pure R*T (MLIB); TMD scale/reflection
+            # enters only through the IBMs. Node scale would distort the
+            # MLIB translation tracks under Godot's TRS composition.
+            has_scale = False
         lp = local_pos[i]
         # Apply position tweaks (per-bone offset in parent-local space)
         if i in ctx.pos_tweaks:
@@ -541,6 +625,31 @@ def _build_skeleton(
                 gltf.nodes[parent_node_idx].children = []
             gltf.nodes[parent_node_idx].children.append(node_idx)
 
+    # SA factor chain: bone node T*R -> "{name}_SAS" (Rsa*S) ->
+    # "{name}_SA" carrier (Rsa^T), children + skin joint on the carrier —
+    # composing to the exact engine T*R*(Rsa*S*Rsa^T) at every
+    # interpolated time (each factor interpolates on its own node exactly
+    # as the engine interpolates it).
+    ctx.joint_node_indices = list(ctx.bone_node_indices)
+    if ctx.mlib_translations and ctx.sa_track_bones:
+        for bone_idx in range(len(model.bones)):
+            mlib_idx = ctx.tmd_to_mlib.get(bone_idx)
+            if mlib_idx is None or mlib_idx not in ctx.sa_track_bones:
+                continue
+            bone_node_idx = ctx.bone_node_indices[bone_idx]
+            bone_node = gltf.nodes[bone_node_idx]
+            carrier = Node(name=bone_node.name + "_SA",
+                           children=bone_node.children)
+            gltf.nodes.append(carrier)
+            carrier_idx = len(gltf.nodes) - 1
+            sas = Node(name=bone_node.name + "_SAS",
+                       children=[carrier_idx])
+            gltf.nodes.append(sas)
+            sas_idx = len(gltf.nodes) - 1
+            bone_node.children = [sas_idx]
+            ctx.sas_node_indices[bone_idx] = sas_idx
+            ctx.joint_node_indices[bone_idx] = carrier_idx
+
     # Build inverse bind matrices
     ibm_data = _build_inverse_bind_matrices(model, world_pos, ctx.world_rot_full)
 
@@ -561,10 +670,11 @@ def _build_skeleton(
     gltf.accessors.append(acc)
     ibm_accessor = len(gltf.accessors) - 1
 
-    # Create skin
+    # Create skin (joints are the SA carriers where present — their world
+    # transform is the full engine bone matrix)
     skin = Skin(
         name="AvatarSkin",
-        joints=ctx.bone_node_indices,
+        joints=ctx.joint_node_indices,
         skeleton=armature_idx,
         inverseBindMatrices=ibm_accessor,
     )
@@ -711,6 +821,44 @@ def _quat_to_matrix(q: list[float]) -> list[list[float]]:
     ]
 
 
+def _slerp_xyzw(a, b, t):
+    """Slerp with hemisphere correction, [x,y,z,w] lists/arrays."""
+    a = np.asarray(a, dtype=float)
+    b = np.asarray(b, dtype=float)
+    d = float(np.dot(a, b))
+    if d < 0:
+        b, d = -b, -d
+    if d > 1 - 1e-9:
+        q = a + t * (b - a)
+    else:
+        th = np.arccos(min(1.0, d))
+        q = (np.sin((1 - t) * th) * a + np.sin(t * th) * b) / np.sin(th)
+    return q / np.linalg.norm(q)
+
+
+def _sample_expanded(motion: MLIBMotion, mlib_idx: int, fr: float):
+    """(rotation quat [x,y,z,w], scale-axis quat, scale vec) at fractional
+    frame fr — slerp/lerp of the expanded per-frame tracks, which matches
+    the engine's key interpolation (subdividing a slerp geodesic stays on
+    the geodesic; keys sit on integer frames)."""
+    f0 = int(fr)
+    f1 = min(f0 + 1, motion.frame_count - 1)
+    t = fr - f0
+    r0, r1 = motion.rotations[f0][mlib_idx], motion.rotations[f1][mlib_idx]
+    q = _slerp_xyzw([r0.x, r0.y, r0.z, r0.w], [r1.x, r1.y, r1.z, r1.w], t)
+    sa = None
+    if motion.scale_axes:
+        a0, a1 = motion.scale_axes[f0][mlib_idx], motion.scale_axes[f1][mlib_idx]
+        sa = _slerp_xyzw([a0.x, a0.y, a0.z, a0.w], [a1.x, a1.y, a1.z, a1.w], t)
+    s0, s1 = motion.scales[f0][mlib_idx], motion.scales[f1][mlib_idx]
+    sv = np.array([
+        (1 - t) * s0.x + t * s1.x,
+        (1 - t) * s0.y + t * s1.y,
+        (1 - t) * s0.z + t * s1.z,
+    ])
+    return q, sa, sv
+
+
 def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> None:
     """Add animation to GLTF."""
     gltf = ctx.gltf
@@ -756,6 +904,34 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
         # Collect quaternions (and translations for reparented) per frame
         quats = []
         translations = [] if is_reparented else None
+        sa_live = (bool(motion.option & MOTION_FLAG_SCALING) and bool(motion.scales)
+                   and bool(motion.scale_axes)
+                   and mlib_idx is not None
+                   and mlib_idx < motion.bone_count)
+        is_sa_bone = (mlib_idx is not None
+                      and tmd_idx in ctx.sas_node_indices)
+
+        # Faithful MLIB-pose mode: every MLIB-driven bone gets a translation
+        # track from the MLIB skeleton's parent-local offsets (per-frame for
+        # extended motions, else the constant bind offset). The engine
+        # FKs the MLIB hierarchy with exactly these offsets.
+        # Bone 0 is excluded when root_positions provides its channel.
+        if (
+            ctx.mlib_translations
+            and mlib_idx is not None
+            and mlib_idx < motion.bone_count
+            and not (tmd_idx == 0 and motion.root_positions)
+        ):
+            b = ctx.mlib.bones[mlib_idx]
+            if motion.translations:
+                translations = [
+                    [t.x, t.y, -t.z]
+                    for t in (motion.translations[f][mlib_idx]
+                              for f in range(motion.frame_count))
+                ]
+            else:
+                translations = [[b.position.x, b.position.y, -b.position.z]
+                                ] * motion.frame_count
         prev_q = None
         for frame in range(motion.frame_count):
             if is_reparented and fk_world_rot is not None:
@@ -783,8 +959,10 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
                 translations.append(local_t)
             elif mlib_idx is not None and mlib_idx < motion.bone_count:
                 mlib_rot = motion.rotations[frame][mlib_idx]
-                # MLIB [w,x,y,z] -> GLTF [x,y,z,w] (no X-mirror)
-                q = [mlib_rot.x, mlib_rot.y, mlib_rot.z, mlib_rot.w]
+                # MLIB [w,x,y,z] -> GLTF [x,y,z,w], conjugated by the
+                # LH -> RH mirror
+                q = _mirror_quat_xyzw(
+                    [mlib_rot.x, mlib_rot.y, mlib_rot.z, mlib_rot.w])
             else:
                 q = list(ctx.local_rot[tmd_idx])
 
@@ -797,12 +975,16 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
             prev_q = q
             quats.append(q)
 
-        # Smooth physics bones (skirt, hair, breast) to reduce baked cloth sim pops
+        # Smooth physics bones (skirt, hair, breast) to reduce baked cloth
+        # sim pops. NEVER smooth SA bones: their rotation couples with the
+        # Rsa*S*Rsa^T factor chain and their engine-truth motion is
+        # already smooth now that real key tracks are exported (cn0007
+        # cape).
         is_physics = (
             any(bone_name.startswith(p) for p in _PHYSICS_BONE_PREFIXES)
             or tmd_idx in ctx.smooth_bone_indices
         )
-        if is_physics:
+        if is_physics and not is_sa_bone:
             quats = _smooth_physics_rotations(quats)
 
         rot_values = []
@@ -819,7 +1001,7 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
         gltf.accessors.append(Accessor(
             bufferView=rot_bv,
             componentType=FLOAT,
-            count=motion.frame_count,
+            count=len(quats),
             type=VEC4,
         ))
         rot_acc = len(gltf.accessors) - 1
@@ -856,6 +1038,100 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
                 target=AnimationChannelTarget(node=ctx.bone_node_indices[tmd_idx], path="translation"),
             ))
 
+        # Scale channel (plain scale bones, identity Rsa): engine FK
+        # composes S*R locals through the parent's full matrix,
+        # matching glTF TRS with a scale track. SA
+        # bones carry their scale on the _SAS factor node instead.
+        if (mlib_idx is not None and mlib_idx in ctx.scale_track_bones
+                and not is_sa_bone):
+            live = bool(motion.option & MOTION_FLAG_SCALING) and bool(motion.scales)
+            scale_values = []
+            for frame in range(motion.frame_count):
+                if live and mlib_idx < motion.bone_count:
+                    s = motion.scales[frame][mlib_idx]
+                    scale_values.extend([s.x, s.y, s.z])
+                else:
+                    scale_values.extend([1.0, 1.0, 1.0])
+            scale_bin = np.array(scale_values, dtype=np.float32).tobytes()
+            scale_offset = len(ctx.buffer)
+            ctx.buffer.extend(scale_bin)
+
+            gltf.bufferViews.append(BufferView(
+                buffer=0, byteOffset=scale_offset, byteLength=len(scale_bin)))
+            gltf.accessors.append(Accessor(
+                bufferView=len(gltf.bufferViews) - 1,
+                componentType=FLOAT,
+                count=motion.frame_count,
+                type=VEC3,
+            ))
+            anim.samplers.append(AnimationSampler(
+                input=time_acc, output=len(gltf.accessors) - 1))
+            anim.channels.append(AnimationChannel(
+                sampler=len(anim.samplers) - 1,
+                target=AnimationChannelTarget(
+                    node=ctx.bone_node_indices[tmd_idx], path="scale"),
+            ))
+
+        # SA factor-chain channels: the AUTHORED factors, each on its own
+        # node — _SAS rotation = Rsa, _SAS scale = S, carrier rotation =
+        # Rsa^T (identity/unit when the motion's scale gate is off;
+        # tracked in every animation to avoid leaks). Godot slerps Rsa
+        # and Rsa^T and lerps S per node exactly as the engine does per
+        # factor, so the composed
+        # product matches engine truth at EVERY playback time. Do NOT
+        # fuse or re-diagonalize these factors: fused gauges spin at
+        # scale-eigenvalue crossings and flicker between keys.
+        if is_sa_bone:
+            sa_quats = []
+            scale_vals = []
+            prev_sq = None
+            for frame in range(motion.frame_count):
+                if sa_live:
+                    a = motion.scale_axes[frame][mlib_idx]
+                    # scale-axis rotation conjugates with the LH -> RH
+                    # mirror like every other rotation (S Rsa S); the
+                    # diagonal scale values are mirror-invariant
+                    sq = _mirror_quat_xyzw([a.x, a.y, a.z, a.w])
+                    s = motion.scales[frame][mlib_idx]
+                    scale_vals.extend([s.x, s.y, s.z])
+                else:
+                    sq = [0.0, 0.0, 0.0, 1.0]
+                    scale_vals.extend([1.0, 1.0, 1.0])
+                if prev_sq is not None and sum(
+                        a_ * b_ for a_, b_ in zip(prev_sq, sq)) < 0:
+                    sq = [-c for c in sq]
+                prev_sq = sq
+                sa_quats.append(sq)
+
+            sas_rot = []
+            carrier_rot = []
+            for sq in sa_quats:
+                sas_rot.extend(sq)
+                carrier_rot.extend([-sq[0], -sq[1], -sq[2], sq[3]])
+
+            for vals, ncomp, vtype, node, path in (
+                (sas_rot, 4, VEC4, ctx.sas_node_indices[tmd_idx], "rotation"),
+                (scale_vals, 3, VEC3, ctx.sas_node_indices[tmd_idx], "scale"),
+                (carrier_rot, 4, VEC4, ctx.joint_node_indices[tmd_idx], "rotation"),
+            ):
+                vbin = np.array(vals, dtype=np.float32).tobytes()
+                voff = len(ctx.buffer)
+                ctx.buffer.extend(vbin)
+                gltf.bufferViews.append(BufferView(
+                    buffer=0, byteOffset=voff, byteLength=len(vbin)))
+                gltf.accessors.append(Accessor(
+                    bufferView=len(gltf.bufferViews) - 1,
+                    componentType=FLOAT,
+                    count=motion.frame_count,
+                    type=vtype,
+                ))
+                anim.samplers.append(AnimationSampler(
+                    input=time_acc, output=len(gltf.accessors) - 1))
+                anim.channels.append(AnimationChannel(
+                    sampler=len(anim.samplers) - 1,
+                    target=AnimationChannelTarget(node=node, path=path),
+                ))
+
     # Root bone translation channel
     if motion.root_positions:
         # Root translation applies to bone index 0 (hierarchy root),
@@ -864,24 +1140,25 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
         if root_tmd_idx < len(model.bones):
             root_bone = model.bones[root_tmd_idx]
             bind_pos = root_bone.world_transform.translation
-            is_moving = (motion.option & 1) != 0  # locomotion flag
+            is_moving = (motion.option & 1) != 0  # locomotion (moving) bitmask
 
             if is_moving:
-                # Locomotion motions: normalize Y to zero-mean, then add bind position.
-                # Matches the original client's root-height normalization behavior.
+                # Locomotion flag: normalize Y to zero-mean, then add
+                # bind position, matching the engine's height handling.
+                # z negated: LH -> RH mirror.
                 mean_y = sum(rp.y for rp in motion.root_positions) / len(motion.root_positions)
                 trans_values = []
                 for rp in motion.root_positions:
                     trans_values.extend([
                         rp.x + bind_pos.x,
                         (rp.y - mean_y) + bind_pos.y,
-                        rp.z + bind_pos.z,
+                        -(rp.z + bind_pos.z),
                     ])
             else:
                 # Non-moving: root positions are absolute world positions
                 trans_values = []
                 for rp in motion.root_positions:
-                    trans_values.extend([rp.x, rp.y, rp.z])
+                    trans_values.extend([rp.x, rp.y, -rp.z])
 
             trans_bin = np.array(trans_values, dtype=np.float32).tobytes()
             trans_offset = len(ctx.buffer)
@@ -949,9 +1226,9 @@ def _build_primitive(ctx, mesh, face_list, v_flip: bool) -> Primitive:
 
     for old_idx in sorted(old_indices):
         v = mesh.vertices[old_idx]
-        positions.extend([v.x, v.y, v.z])
+        positions.extend([v.x, v.y, -v.z])
         n = mesh.normals[old_idx]
-        normals_list.extend([n.x, n.y, n.z])
+        normals_list.extend([n.x, n.y, -n.z])
         uv = mesh.uvs[old_idx]
         uvs.extend([uv.u, 1.0 - uv.v if v_flip else uv.v])
 
@@ -972,10 +1249,11 @@ def _build_primitive(ctx, mesh, face_list, v_flip: bool) -> Primitive:
             joints_data.extend([0, 0, 0, 0])
             weights_data.extend([1.0, 0.0, 0.0, 0.0])
 
-    # Re-indexed face indices
+    # Re-indexed face indices (winding reversed: the Z mirror flips
+    # triangle orientation)
     indices = []
     for face in face_list:
-        indices.extend([old_to_new[face[0]], old_to_new[face[1]], old_to_new[face[2]]])
+        indices.extend([old_to_new[face[0]], old_to_new[face[2]], old_to_new[face[1]]])
 
     vertex_count = len(old_to_new)
     pos_array = np.array(positions, dtype=np.float32).reshape(-1, 3)
@@ -1023,6 +1301,43 @@ def _build_primitive(ctx, mesh, face_list, v_flip: bool) -> Primitive:
     )
 
 
+def _extend_bones_with_animation_targets(model: TMDModel, mlib: MLIBFile) -> None:
+    """Rebuild model.bones as bone AND dummy objects in object order when
+    that aligns the list ordinally with the MLIB skeleton.
+
+    The engine binds MLIB tracks by ordinal over the FULL object
+    list; DUMMY-chunk objects
+    (e.g. cn0090's Dummy01 animation root) are animation targets too.
+    The parser's filtered bone list drops them, shifting every later bone
+    out of the MLIB index space — name matching papered over most of this,
+    but fails when dummy targets carry unique animated transforms.
+
+    Only swaps the list when it strictly improves ordinal name agreement,
+    so models without interleaved dummies are untouched.
+    """
+    from src.parsers.tmd_parser import TMDBone
+
+    mlib_names = [b.name.strip() for b in mlib.bones]
+    cur_names = [b.name.strip() for b in model.bones]
+    ext_objs = [o for o in model.objects if o.object_type in ("bone", "dummy")]
+    ext_names = [o.name.strip() for o in ext_objs]
+
+    score_cur = sum(1 for a, b in zip(mlib_names, cur_names) if a == b)
+    score_ext = sum(1 for a, b in zip(mlib_names, ext_names) if a == b)
+    if score_ext <= score_cur:
+        return
+
+    model.bones = [
+        TMDBone(
+            name=o.name,
+            object_id=o.object_id,
+            world_transform=o.world_transform,
+            local_transform=o.local_transform,
+        )
+        for o in ext_objs
+    ]
+
+
 def export_with_animations(
     model: TMDModel,
     mlib: MLIBFile,
@@ -1036,6 +1351,7 @@ def export_with_animations(
     smooth_bone_indices: set[int] | None = None,
     pos_tweaks: dict[int, list[float]] | None = None,
     skip_reparent: bool = False,
+    mlib_translations: bool = False,
 ) -> None:
     """
     Export TMD model with skeleton and animations as GLB.
@@ -1055,6 +1371,9 @@ def export_with_animations(
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    if mlib_translations:
+        _extend_bones_with_animation_targets(model, mlib)
+
     if validate:
         result = validate_mesh(model)
         if not result.valid:
@@ -1067,11 +1386,32 @@ def export_with_animations(
     ctx = ExportContext(gltf=gltf, buffer=bytearray(),
                         smooth_bone_indices=smooth_bone_indices or set(),
                         pos_tweaks=pos_tweaks or {},
-                        skip_reparent=skip_reparent)
-    ctx.mlib_to_tmd = _build_mlib_to_tmd_map(model, mlib)
-    ctx.tmd_to_mlib = _build_tmd_to_mlib_map(model, mlib)
+                        skip_reparent=skip_reparent,
+                        mlib_translations=mlib_translations, mlib=mlib)
+    ctx.mlib_to_tmd = _build_mlib_to_tmd_map(model, mlib,
+                                             ordinal=mlib_translations)
+    ctx.tmd_to_mlib = _build_tmd_to_mlib_map(model, mlib,
+                                             ordinal=mlib_translations)
     ctx.tmd_name_to_idx = {b.name.strip(): i for i, b in enumerate(model.bones)}
     ctx.mlib_name_to_idx = {b.name.strip(): i for i, b in enumerate(mlib.bones)}
+
+    # Bones with live scale keys anywhere get scale tracks in every anim
+    for m in mlib.motions:
+        if not (m.option & MOTION_FLAG_SCALING) or not m.scales:
+            continue
+        for fr in m.scales:
+            for bi, s in enumerate(fr):
+                if (abs(s.x - 1) > 1e-4 or abs(s.y - 1) > 1e-4
+                        or abs(s.z - 1) > 1e-4):
+                    ctx.scale_track_bones.add(bi)
+    # Scaled bones with a non-identity scale axis need the SA carrier chain
+    for m in mlib.motions:
+        if not (m.option & MOTION_FLAG_SCALING) or not m.scale_axes:
+            continue
+        for fr in m.scale_axes:
+            for bi, q in enumerate(fr):
+                if bi in ctx.scale_track_bones and abs(abs(q.w) - 1.0) > 1e-4:
+                    ctx.sa_track_bones.add(bi)
 
     # Build skeleton. For monsters (anim_correction=True), auto-detect:
     # - Reflected bones (det < 0): MLIB rotations (quaternions can't represent
@@ -1106,14 +1446,15 @@ def export_with_animations(
                 primitive_materials.append(mat_idx)
             continue
 
-        # Default path: one primitive per mesh (avatar behavior)
+        # Default path: one primitive per mesh (avatar behavior).
+        # Z negated + winding reversed: LH -> RH mirror.
         positions = []
         for v in mesh.vertices:
-            positions.extend([v.x, v.y, v.z])
+            positions.extend([v.x, v.y, -v.z])
 
         normals = []
         for n in mesh.normals:
-            normals.extend([n.x, n.y, n.z])
+            normals.extend([n.x, n.y, -n.z])
 
         uvs = []
         for uv in mesh.uvs:
@@ -1121,7 +1462,7 @@ def export_with_animations(
 
         indices = []
         for face in mesh.faces:
-            indices.extend([face[0], face[1], face[2]])
+            indices.extend([face[0], face[2], face[1]])
 
         joints_data, weights_data = _build_skinning_data(ctx, model, mesh)
 
