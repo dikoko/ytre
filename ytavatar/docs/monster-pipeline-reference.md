@@ -11,7 +11,15 @@ Monsters are single-mesh models with embedded skeleton and animations.
 - **Exported**: 135 (all configured in `monsters.yaml`)
 - **Output**: `client/assets/monsters/models/ct####.glb`
 
-### Differences from Avatar Export
+#### Handedness (2026-07 refresh)
+
+The source data is authored for a left-handed renderer; all models are
+now exported with a coherent Z-mirror into right-handed glTF (positions,
+winding, rig conjugation, all animation tracks — see the avatar pipeline
+reference for the full convention). Textures with text read correctly,
+and models face -Z (viewers rotate them PI to face the camera).
+
+## Differences from Avatar Export
 
 | Feature | Avatar | Monster |
 |---------|--------|---------|
