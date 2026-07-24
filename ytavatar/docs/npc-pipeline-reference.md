@@ -12,6 +12,15 @@ NPCs are character models that appear in the game world. Like monsters, they are
 - **Exported**: 78 (all)
 - **Output**: `client/assets/npcs/models/cn####.glb`
 
+
+### Handedness (2026-07 refresh)
+
+The source data is authored for a left-handed renderer; all models are
+now exported with a coherent Z-mirror into right-handed glTF (positions,
+winding, rig conjugation, all animation tracks — see the avatar pipeline
+reference for the full convention). Textures with text read correctly,
+and models face -Z (viewers rotate them PI to face the camera).
+
 ### Differences from Monster Export
 
 | Feature | Monster | NPC |
