@@ -2,6 +2,8 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
+**Current release: 0.4.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+
 ## Projects
 
 ### [YTAvatar](ytavatar/)
