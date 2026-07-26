@@ -45,10 +45,14 @@ PILOT_MONSTERS = ["ct0001", "ct0003", "ct0005", "ct0010", "ct0100"]
 
 
 def discover_monsters() -> list[str]:
-    """Find all monster directories in Monster.IRD."""
+    """Find all monster directories in Monster.IRD.
+
+    Requires the TMD to actually exist, so stray non-model directories in
+    an extracted dump can't become phantom entries in every sweep."""
     dirs = sorted(
         d.name for d in MONSTER_IRD.iterdir()
         if d.is_dir() and d.name.startswith("ct")
+        and (d / f"{d.name}.TMD").exists()
     )
     return dirs
 

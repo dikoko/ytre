@@ -105,6 +105,15 @@ var monster_anim_index: int = 0
 var monster_cache: Dictionary = {}
 const MONSTER_CACHE_RADIUS := 5
 const MONSTER_DEFAULT_ZOOM := 4.0
+const MONSTER_ZOOM_MAX := 30.0   # shared by wheel/pinch zoom and auto-fit
+var _fit_frames_pending := 0     # camera auto-fit runs this many frames after load
+
+
+func _process(_delta: float) -> void:
+	if _fit_frames_pending > 0:
+		_fit_frames_pending -= 1
+		if _fit_frames_pending == 0:
+			_camera_auto_fit()
 
 const MODEL_VIEWER_CONFIG := {
 	CharacterMode.MONSTER: {
@@ -435,13 +444,118 @@ func _update_camera_position() -> void:
 func _camera_auto_fit() -> void:
 	if not _model_char or not camera:
 		return
-	var aabb := _compute_aabb(_model_char)
-	if aabb.size == Vector3.ZERO:
+	# Fit from the POSED SKELETON, not mesh AABBs: MeshInstance3D.get_aabb()
+	# on skinned meshes is the BIND-pose box, which sits wherever the source
+	# data authored it — up to a meter beside the animated body (ct0002
+	# framed at the frame edge). Bone global positions track the actual pose
+	# every frame; pad for mesh thickness around the bones.
+	var fit := _compute_pose_bounds(_model_char)
+	if fit.size == Vector3.ZERO:
 		return
-	camera_pivot.position.y = aabb.get_center().y
+	# Full-center pivot (not just Y): off-center models (tails, side
+	# appendages) otherwise frame half out of view.
+	camera_pivot.position = fit.get_center()
+	# Consistent initial view per model — a rotation left over from the
+	# previous model made "the camera looks wrong on the next monster".
+	camera_angle_x = 0.0
+	camera_angle_y = 15.0
 	var mid := monster_list[monster_index]
-	camera_distance = _monster_zoom(mid)
+	if monster_zooms.has(mid):
+		camera_distance = monster_zooms[mid]
+	else:
+		# Auto-fit distance so the body spans roughly half the frame
+		# height: d ~= 1.5 x the largest padded extent (fov 75:
+		# span_frac = h / (2 d tan(fov/2)) -> ~0.45 at d = 1.5 h), plus
+		# a depth term — the NEAR face of a deep model sits size.z/2
+		# closer than the pivot and magnifies accordingly. Floor keeps
+		# tiny critters from face-filling close-ups; cap shared with
+		# wheel/pinch zoom.
+		var h: float = max(fit.size.x, fit.size.y, fit.size.z)
+		camera_distance = clampf(1.7 * h + 0.4 * fit.size.z, 2.4, MONSTER_ZOOM_MAX)
 	_update_camera_position()
+
+
+func _compute_pose_bounds(node: Node) -> AABB:
+	# TRUE posed bounds: CPU-skin a sparse vertex sample with the current
+	# skeleton pose. Every cheaper proxy lies for some rig class —
+	# skinned-mesh AABBs are BIND-pose boxes that can sit a meter beside
+	# the animated body (ct0002), bone clouds collapse on blob rigs
+	# (slimes) and balloon on rigs with anchor bones parked overhead
+	# (cn0086 framed top-down). ~150 skinned samples per mesh are exact
+	# and cost nothing at model-switch frequency.
+	var pts := PackedVector3Array()
+	var meshes: Array[MeshInstance3D] = []
+	_find_all_meshes(node, meshes)
+	for mi in meshes:
+		var skel := mi.get_node_or_null(mi.skeleton) as Skeleton3D
+		if skel == null or mi.skin == null or mi.mesh == null \
+				or mi.mesh.get_surface_count() == 0:
+			if mi.mesh != null:
+				var bb_m := mi.global_transform * mi.get_aabb()
+				pts.append(bb_m.position)
+				pts.append(bb_m.position + bb_m.size)
+			continue
+		# skin matrix per bind: skeleton-global bone pose x inverse bind
+		var skin_res: Skin = mi.skin
+		var mats: Array[Transform3D] = []
+		for bi in skin_res.get_bind_count():
+			var bone := skin_res.get_bind_bone(bi)
+			if bone < 0:
+				bone = skel.find_bone(skin_res.get_bind_name(bi))
+			var pose := skel.get_bone_global_pose(bone) if bone >= 0 \
+					else Transform3D.IDENTITY
+			mats.append(skel.global_transform * pose * skin_res.get_bind_pose(bi))
+		for si in mi.mesh.get_surface_count():
+			_sample_skinned_surface(mi.mesh.surface_get_arrays(si), mats, pts)
+	if pts.size() < 2:
+		return _compute_aabb(node)
+	var bb := AABB(pts[0], Vector3.ZERO)
+	for p in pts:
+		bb = bb.expand(p)
+	# small pad: the sparse sample misses some extremities
+	var pad := bb.size * 0.09 + Vector3(0.05, 0.05, 0.05)
+	return AABB(bb.position - pad, bb.size + pad * 2.0)
+
+
+func _sample_skinned_surface(arrays: Array, mats: Array[Transform3D],
+		pts: PackedVector3Array) -> void:
+	var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+	var bones = arrays[Mesh.ARRAY_BONES]
+	var weights = arrays[Mesh.ARRAY_WEIGHTS]
+	if verts.is_empty() or bones == null or weights == null:
+		return
+	var influences: int = weights.size() / verts.size()
+	var stride: int = maxi(1, verts.size() / 400)
+	# Always include the bind-space extreme vertices — stride sampling
+	# skips small extremities (spire tips) and shortens the box.
+	var sample_idx := PackedInt32Array()
+	for vi in range(0, verts.size(), stride):
+		sample_idx.append(vi)
+	var ext := [0, 0, 0, 0, 0, 0]
+	for vi in verts.size():
+		var v := verts[vi]
+		if v.x < verts[ext[0]].x: ext[0] = vi
+		if v.x > verts[ext[1]].x: ext[1] = vi
+		if v.y < verts[ext[2]].y: ext[2] = vi
+		if v.y > verts[ext[3]].y: ext[3] = vi
+		if v.z < verts[ext[4]].z: ext[4] = vi
+		if v.z > verts[ext[5]].z: ext[5] = vi
+	for e in ext:
+		sample_idx.append(e)
+	for vi in sample_idx:
+		var out := Vector3.ZERO
+		var tot := 0.0
+		for k in influences:
+			var w: float = weights[vi * influences + k]
+			if w <= 0.0:
+				continue
+			var b: int = bones[vi * influences + k]
+			if b < mats.size():
+				out += (mats[b] * verts[vi]) * w
+				tot += w
+		if tot > 0.001:
+			pts.append(out / tot)
+
 
 func _compute_aabb(node: Node) -> AABB:
 	var meshes: Array[MeshInstance3D] = []
@@ -815,13 +929,17 @@ func _load_monster(index: int) -> void:
 			break
 	_play_monster_animation()
 
-	# Camera auto-fit
-	_camera_auto_fit()
+	# Camera auto-fit — deferred two frames: at load time skinned AABBs
+	# still reflect the pre-animation state (bind-pose effect meshes etc.
+	# inflate them 5-10x on some models); fitting against that framed the
+	# settled pose as a speck.
+	_fit_frames_pending = 2
 
 	var display := _monster_display_name(mid)
 	var label := display if display == mid else "%s (%s)" % [display, mid]
-	print("Monster: %s (%d/%d) - %d anims, zoom=%.1f" % [
-		label, index + 1, monster_list.size(), monster_anim_names.size(), _monster_zoom(mid)
+	print("Monster: %s (%d/%d) - %d anims, zoom=%.1f%s" % [
+		label, index + 1, monster_list.size(), monster_anim_names.size(),
+		camera_distance, "" if monster_zooms.has(mid) else " (auto)"
 	])
 
 func _play_monster_animation() -> void:
@@ -1258,7 +1376,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera_distance = max(1.0, camera_distance - 0.3)
 			_update_camera_position()
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
-			var max_zoom := 30.0 if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] else 10.0
+			var max_zoom := MONSTER_ZOOM_MAX if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] else 10.0
 			camera_distance = min(max_zoom, camera_distance + 0.3)
 			_update_camera_position()
 
@@ -1268,8 +1386,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera_angle_y = clamp(camera_angle_y, -80.0, 80.0)
 		_update_camera_position()
 
+	if event is InputEventPanGesture:
+		# macOS trackpads emit PanGesture for two-finger drags (never wheel
+		# events) — without this branch trackpad rotation only "worked" when
+		# the user happened to click-drag. Constants match the ytlevel
+		# run-camera feel.
+		camera_angle_x -= event.delta.x * 1.2
+		camera_angle_y = clamp(camera_angle_y + event.delta.y * 0.8, -80.0, 80.0)
+		_update_camera_position()
+
 	if event is InputEventMagnifyGesture:
-		var max_zoom := 30.0 if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] else 10.0
+		var max_zoom := MONSTER_ZOOM_MAX if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] else 10.0
 		camera_distance = clamp(camera_distance / event.factor, 1.0, max_zoom)
 		_update_camera_position()
 

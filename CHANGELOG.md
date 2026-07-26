@@ -4,6 +4,41 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.5.0] - 2026-07-26
+
+Character skinning and locomotion now match the original game; the viewer
+frames every model correctly.
+
+### Fixed
+- **Skinning distortion on reflection rigs**: models whose rigs contain
+  mirrored bones (the ct0016/cn0090 "walking library" bosses, ct0024, and
+  seven others) rendered with collapsed, faceted limbs and tentacles, and
+  shimmering where mis-skinned faces overlapped. Their inverse bind
+  matrices were derived from a re-posed skeleton; the original client
+  skins against the authored static bind (embedded scale and reflections
+  included), and the exporter now does the same. All 135 monsters, 78
+  NPCs, and both avatar bases were re-exported.
+- **Walk/run height**: every moving animation hovered at standing height
+  (ct0021 floated 0.45 above its feet). The skeleton root now follows the
+  authored per-frame root pose — the separate root-position track is
+  entity displacement (per-frame travel deltas), which viewers play in
+  place, matching retail client behavior. Crouched walk cycles and ground
+  contact are restored across the fleet.
+- **Viewer initial camera**: models without a hand-tuned zoom entry could
+  spawn the camera inside their geometry (large monsters were invisible).
+  The viewer now auto-frames each model from its bounding sphere, centers
+  the pivot, and resets rotation on model switch; the fit waits for the
+  animated pose to settle so effect meshes can't inflate the framing.
+- **Trackpad camera rotate**: two-finger drag now orbits the camera on
+  macOS trackpads (they emit pan gestures, not mouse-wheel events); pinch
+  zoom limits unified.
+
+### Added
+- Two pipeline verification gates: inverse-bind parity against the
+  authored static bind for all 213 rigged models, and an automated
+  initial-view framing check that drives the real viewer across the whole
+  fleet.
+
 ## [0.4.0] - 2026-07-24
 
 The character fleets now render as the original game intended.

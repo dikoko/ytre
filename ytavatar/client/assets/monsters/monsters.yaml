@@ -13,11 +13,9 @@ monsters:
 - id: ct0010
 - id: ct0011
 - id: ct0012
-  zoom: 4.0
 - id: ct0013
   zoom: 13.0
 - id: ct0016
-  zoom: 13.5
 - id: ct0017
 - id: ct0018
 - id: ct0019
@@ -29,7 +27,6 @@ monsters:
 - id: ct0024
 - id: ct0025
 - id: ct0026
-  zoom: 6.0
 - id: ct0027
   zoom: 4.0
 - id: ct0028
@@ -41,7 +38,6 @@ monsters:
 - id: ct0032
 - id: ct0033
 - id: ct0034
-  zoom: 13.5
 - id: ct0035
 - id: ct0036
 - id: ct0037
@@ -58,7 +54,6 @@ monsters:
 - id: ct0057
 - id: ct0058
 - id: ct0059
-  zoom: 13.5
 - id: ct0060
   zoom: 7.0
 - id: ct0061
@@ -83,12 +78,10 @@ monsters:
 - id: ct0077
 - id: ct0078
 - id: ct0079
-  zoom: 7.0
 - id: ct0080
 - id: ct0081
 - id: ct0082
 - id: ct0083
-  zoom: 13.5
 - id: ct0084
 - id: ct0085
 - id: ct0086

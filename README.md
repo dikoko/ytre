@@ -2,7 +2,7 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
-**Current release: 0.4.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+**Current release: 0.5.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
 
 ## Projects
 
@@ -35,7 +35,7 @@ The main Godot 4 project. Contains the avatar / monster / NPC viewer scene, runt
 
 Developer tooling. Currently contains a single subproject:
 
-- [`tools/avatar_export/`](tools/avatar_export/) — Python (uv-managed) pipeline that converts Yogurting's proprietary `.TMD`, `.mlib`, `.PRT`, `.SWP`, and `.BMP` files from `refs/` into the GLB / PNG / JSON assets consumed by the Godot client. Includes 17 numbered pipeline scripts, debug visualizers, and a pytest suite. See [`tools/avatar_export/README.md`](tools/avatar_export/README.md).
+- [`tools/avatar_export/`](tools/avatar_export/) — Python (uv-managed) pipeline that converts Yogurting's proprietary `.TMD`, `.mlib`, `.PRT`, `.SWP`, and `.BMP` files from `refs/` into the GLB / PNG / JSON assets consumed by the Godot client. Includes 19 numbered pipeline scripts (export + verification gates), debug visualizers, and a pytest suite. See [`tools/avatar_export/README.md`](tools/avatar_export/README.md).
 
 ### [`refs/`](refs/) — original game assets
 

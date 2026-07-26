@@ -688,12 +688,32 @@ def _build_inverse_bind_matrices(
     world_pos: list[list[float]],
     world_rot_full: list,
 ) -> list[float]:
-    """Build inverse bind matrices from world transforms (including scale)."""
+    """Build inverse bind matrices from the TMD STATIC world transforms.
+
+    The original client skins vertices with W_runtime @ inv(static world) —
+    the authored TMD bone world transforms VERBATIM, embedded scale and
+    reflections included. Node rest poses in the GLB are cosmetic
+    (animation tracks overwrite them), but the IBMs are load-bearing:
+    deriving them from any re-posed or cleaned rotation set (the old
+    stand-frame-0 hybrid for reflection rigs, or SVD-polished matrices)
+    skews every skinned vertex even while node FK stays exact — the
+    ct0016/cn0090 "walking library" distortion, 10 reflection rigs
+    fleet-wide (2026-07-26). glTF allows arbitrary IBM matrices, so the
+    authored transform goes in untouched, mirrored by S=diag(1,1,-1) like
+    all rig data. Scale-axis carrier joints share the bone's static bind:
+    at bind time scale is 1, so the carrier world equals the bone world.
+
+    world_pos/world_rot_full are unused now (kept for signature stability
+    with the node-rest builder, which still needs them).
+    """
     ibm_data = []
 
     for bone_idx in range(len(model.bones)):
-        pos = np.array(world_pos[bone_idx])
-        R = np.array(world_rot_full[bone_idx])
+        bone = model.bones[bone_idx]
+        R_authored = np.array(bone.world_transform.rotation.data).reshape(3, 3).T
+        R = _MIRROR_S @ R_authored @ _MIRROR_S
+        t = bone.world_transform.translation
+        pos = np.array([t.x, t.y, -t.z])
 
         R_inv = np.linalg.inv(R)
         t_inv = -R_inv @ pos
@@ -1138,27 +1158,40 @@ def _add_animation(ctx: ExportContext, model: TMDModel, motion: MLIBMotion) -> N
         # not necessarily the bone named @Root (which may be deeper).
         root_tmd_idx = 0
         if root_tmd_idx < len(model.bones):
-            root_bone = model.bones[root_tmd_idx]
-            bind_pos = root_bone.world_transform.translation
-            is_moving = (motion.option & 1) != 0  # locomotion (moving) bitmask
-
-            if is_moving:
-                # Locomotion flag: normalize Y to zero-mean, then add
-                # bind position, matching the engine's height handling.
-                # z negated: LH -> RH mirror.
-                mean_y = sum(rp.y for rp in motion.root_positions) / len(motion.root_positions)
-                trans_values = []
-                for rp in motion.root_positions:
-                    trans_values.extend([
-                        rp.x + bind_pos.x,
-                        (rp.y - mean_y) + bind_pos.y,
-                        -(rp.z + bind_pos.z),
-                    ])
-            else:
-                # Non-moving: root positions are absolute world positions
-                trans_values = []
-                for rp in motion.root_positions:
-                    trans_values.extend([rp.x, rp.y, -rp.z])
+            # Root rule, matching retail client behavior: the skeleton
+            # root's X/Y come from bone 0's own translation track — the
+            # authored absolute pose (walk/run crouches live here). The
+            # separate root-position track is the ENTITY displacement
+            # track: per-frame deltas when the locomotion flag (bit 0) is
+            # set (equal to the frame-derivative of bone 0's track in
+            # shipped data), which the original client integrates into
+            # entity movement with X/Y zeroed — never applied to the
+            # skeleton. Root Z pins at the motion origin while moving
+            # (viewers play in place; forward travel belongs to the
+            # entity) and follows the root-position track otherwise. The
+            # fixed-Y flag (bit 4) freezes Y the same way (no shipped
+            # motion sets it). The previous "zero-mean + bind height"
+            # normalization was an invention — every moving walk/run
+            # hovered at standing height (ct0021: +0.45 too high).
+            is_moving = (motion.option & 1) != 0    # locomotion flag
+            fix_y = (motion.option & 16) != 0       # fixed-Y flag
+            origin = motion.origin
+            trans_values = []
+            for f, rp in enumerate(motion.root_positions):
+                frame_tk = motion.translations[f] if motion.translations else None
+                if frame_tk:
+                    x, y = frame_tk[0].x, frame_tk[0].y
+                else:
+                    x, y = rp.x, rp.y   # no translation tracks: legacy absolute root
+                if is_moving:
+                    z = origin.z
+                    if fix_y:
+                        y = origin.y
+                else:
+                    z = rp.z
+                    if fix_y:
+                        y = rp.y
+                trans_values.extend([x, y, -z])  # z negated: LH -> RH
 
             trans_bin = np.array(trans_values, dtype=np.float32).tobytes()
             trans_offset = len(ctx.buffer)

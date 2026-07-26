@@ -13,6 +13,7 @@ npcs:
 - id: cn0010
 - id: cn0011
 - id: cn0012
+  zoom: 3.4
 - id: cn0013
 - id: cn0014
 - id: cn0015
@@ -72,6 +73,7 @@ npcs:
 - id: cn0094
 - id: cn0096
 - id: cn0098
+  zoom: 8.5
 - id: cn0099
 - id: cn0101
 - id: cn0102
