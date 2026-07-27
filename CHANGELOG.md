@@ -4,6 +4,16 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.6.2] - 2026-07-26
+
+### Added
+- **Server architecture overview**
+  (`docs/original/protocol/ARCHITECTURE.md`) — the original service's
+  server components and what each owned (session, world, battle,
+  community, the in-memory authority tier, service broker, admin control
+  plane), how they discovered and routed to each other, a session from
+  login to logout, and how the roles map onto modern components.
+
 ## [0.6.1] - 2026-07-26
 
 ### Added

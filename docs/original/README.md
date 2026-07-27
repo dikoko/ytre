@@ -11,7 +11,7 @@ authenticity; everything else is left to the implementer.
 | Folder | Contents |
 |---|---|
 | [`design/`](design/) | Game system specifications — rules, data models, state machines, and the UI flows that go with them. |
-| [`protocol/`](protocol/) | Network protocol: packet framing, serialization, message catalogue. |
+| [`protocol/`](protocol/) | Server architecture and the network protocol: components, packet framing, serialization, message catalogue. |
 
 ## Index
 
@@ -23,5 +23,9 @@ authenticity; everything else is left to the implementer.
 
 ### Protocol
 
+- [Server architecture](protocol/ARCHITECTURE.md) — the server processes and
+  what each one owned, service discovery and routing, the authority tier, a
+  session end to end, and how the roles map onto modern components. **Start
+  here.**
 - [Legacy network protocol (2006)](protocol/LEGACY_PROTOCOL.md) — packet
   structure, encryption, serialization rules, message ID ranges and catalogue.
