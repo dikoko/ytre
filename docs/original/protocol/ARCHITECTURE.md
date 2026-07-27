@@ -26,7 +26,9 @@ Characteristics of the era that explain most of the design:
 - **IOCP-based C++ on Windows**, thread-pool per process, with a custom binary
   protocol over raw TCP for both client and server-to-server traffic.
 - **An in-memory authority tier in front of the database.** A relational
-  database (Oracle) sits behind a gateway and is reached almost exclusively
+  database (Microsoft SQL Server for the game and log databases; the account
+  database was Oracle, and the gateway supports both) sits behind a gateway and
+  is reached almost exclusively
   through stored procedures; live player state lives in a dedicated cache
   process, and writes are asynchronous.
 - **A message broker for service discovery and routing**, so processes address
