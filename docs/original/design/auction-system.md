@@ -158,7 +158,9 @@ per server, because **browse order is listing-id order** (§6.2).
 ### 3.4 Persistence
 
 Two tables mirror the two records. Suggested columns, in the order the original
-loader read them (useful only as a sanity check on completeness):
+loader read them (useful only as a sanity check on completeness); the original
+column names and types are in the
+[game state schema](db/game-state-schema.md#56-auction--t_auction--t_auction_bidding--verified):
 
 **`auction`** — `listing_id`, `category`, `item_type_sn`, `item_category`,
 `item_unique_id`, `item_count`, `current_price`, `buyout_price`, `seller_id`,

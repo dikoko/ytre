@@ -20,6 +20,10 @@ authenticity; everything else is left to the implementer.
 - [Auction house](design/auction-system.md) — timed auctions with escrowed
   bidding, buyout, and desk-claim delivery: data model, state machines, fee and
   timer rules, protocol, and client UX.
+- [Game state schema](design/db/game-state-schema.md) — the live per-character
+  database: characters, inventory, quests, episodes, social systems, guilds, the
+  auction book and account-scoped premium state, with types, keys, relationships
+  and a per-table confidence tag.
 
 ### Protocol
 

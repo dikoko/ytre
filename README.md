@@ -2,7 +2,7 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
-**Current release: 0.6.2** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+**Current release: 0.6.3** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
 
 ## Projects
 

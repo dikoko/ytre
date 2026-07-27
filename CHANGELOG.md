@@ -4,6 +4,19 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.6.3] - 2026-07-26
+
+### Added
+- **Game state database schema**
+  (`docs/original/design/db/game-state-schema.md`) — the live
+  per-character schema of the original service: character, stats,
+  equipment, the five inventory classes, upgrade slots, locker, quests,
+  episode records and high scores, the phone-based social layer, guilds,
+  the auction book, and account-scoped premium state. Each table carries
+  its columns, types, keys, meaning and a confidence tag, plus the
+  procedure-level access pattern, the 2005 → 2006 schema evolution, and
+  notes on what to do differently in a re-implementation.
+
 ## [0.6.2] - 2026-07-26
 
 ### Added
