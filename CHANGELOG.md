@@ -4,6 +4,22 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.6.4] - 2026-07-26
+
+### Added
+- **Static content database schema**
+  (`docs/original/design/db/static-content-schema.md`) — the ~110 content
+  tables the original game was authored in: schools, fields and lobbies;
+  episodes with their scoring, pacing, party-scaling and calorie rules;
+  monsters, their stat templates and field spawning; the levelled skill
+  trees; item, socket and upgrade-stone types; NPCs, dialogue and shops;
+  quests and their grade-scaled rewards; progression curves, promotion
+  conditions and titles; and the live-ops event, promotion and scheduling
+  tables. Documents the shared enumerations (item categories, equip
+  bitmasks, weapon classes, status effects, time-of-day flags) that every
+  content table depends on, and the formula columns evaluated by the
+  script engine.
+
 ## [0.6.3] - 2026-07-26
 
 ### Added

@@ -24,6 +24,11 @@ authenticity; everything else is left to the implementer.
   database: characters, inventory, quests, episodes, social systems, guilds, the
   auction book and account-scoped premium state, with types, keys, relationships
   and a per-table confidence tag.
+- [Static content schema](design/db/static-content-schema.md) — the content
+  database the game is authored in: schools and fields, episodes and their
+  scoring rules, monsters, the skill trees, item and upgrade-stone types, NPCs
+  and dialogue, quests, progression curves, titles, and the live-ops scheduling
+  tables — including the shared enumerations every content table uses.
 
 ### Protocol
 

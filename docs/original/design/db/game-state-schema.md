@@ -4,7 +4,8 @@ The live per-character database of the original Yogurting service: characters,
 inventory, quests, episode records, social systems, the auction book, and the
 account-scoped premium state. This is the schema a server needs in order to run
 the game — static content tables (episodes, monsters, NPCs, item types, skills,
-fields) are a separate tier and are not covered here.
+fields) are covered by the companion
+[static content schema](static-content-schema.md).
 
 ## How to read this document
 
