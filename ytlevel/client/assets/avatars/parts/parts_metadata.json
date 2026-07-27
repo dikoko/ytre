@@ -1,0 +1,2015 @@
+{
+  "parts": {
+    "male_hair_M0101": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0102": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0103": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_lower_M9002": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_special_GMM0001": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_upper_M9002": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hair_M0601": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0602": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0603": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_glorb_A1001": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1002": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1003": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1005": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1007": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1009": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1013": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1014": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1015": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1019": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A1021": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_special_M9001": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M9004": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "foot",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M9001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M9002": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_hair_M0401": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0402": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0403": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_glorb_A0001": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0002": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0003": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0005": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0007": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0008": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0009": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0010": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0011": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0013": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0014": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0015": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0016": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0019": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_glorb_A0021": {
+      "type": "glorb",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hair_M0901": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0902": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0903": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0201": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0202": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0203": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hand_M1004": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1005": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1019": {
+      "type": "hands",
+      "hides_slots": [
+        1,
+        3
+      ],
+      "hides_materials": [
+        "arm",
+        "hand"
+      ]
+    },
+    "male_hand_M1020": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1026": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1027": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M1029": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hair_M0701": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0702": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0703": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_lower_M1001": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1002": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1009": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1011": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1012": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1014": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1016": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1018": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1024": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1026": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M1029": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M1001": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1002": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_lower_M1031": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M1032": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M1009": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1011": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1012": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1013": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1014": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1016": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1017": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1018": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1021": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1024": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M1026": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1029": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hand_M0004": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_upper_M1031": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M1032": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_hand_M0019": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M0022": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_hand_M0025": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_special_M1003": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1004": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1005": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1006": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1007": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hand_M0032": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    },
+    "male_foot_M1001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1002": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1003": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1004": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1005": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1006": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1007": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1009": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M1010": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1015": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1019": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hair_M0501": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0502": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0503": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_foot_M1014": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1018": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1019": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M1020": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1023": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1025": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M1027": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M1020": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1023": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1024": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1025": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1026": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1027": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1029": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1031": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M1032": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_lower_M0001": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0002": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0003": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0004": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0008": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0009": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0011": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0012": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0014": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0016": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0018": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0019": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0022": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_lower_M0023": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0024": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0025": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_lower_M0026": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M0001": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0002": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0003": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_lower_M0031": {
+      "type": "lower",
+      "hides_slots": [
+        5
+      ],
+      "hides_materials": [
+        "lower"
+      ]
+    },
+    "male_upper_M0004": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_lower_M0032": {
+      "type": "lower",
+      "hides_slots": [
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower"
+      ]
+    },
+    "male_upper_M0008": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0009": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_foot_GMM0001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_upper_M0011": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0012": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0013": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0014": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0016": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0017": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0018": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0019": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0022": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0023": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0024": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0025": {
+      "type": "upper",
+      "hides_slots": [
+        0,
+        1
+      ],
+      "hides_materials": [
+        "arm",
+        "upper"
+      ]
+    },
+    "male_upper_M0026": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0031": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_upper_M0032": {
+      "type": "upper",
+      "hides_slots": [
+        0
+      ],
+      "hides_materials": [
+        "upper"
+      ]
+    },
+    "male_special_M0005": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0006": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0007": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_hair_M0301": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0302": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0303": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_foot_M0001": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0002": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0003": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0004": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0005": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0006": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0007": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0008": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0009": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M0010": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_special_M0015": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        5
+      ],
+      "hides_materials": [
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M0014": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0018": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0019": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_special_M0021": {
+      "type": "special",
+      "hides_slots": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "hides_materials": [
+        "arm",
+        "leg",
+        "lower",
+        "upper"
+      ]
+    },
+    "male_foot_M0022": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0023": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0024": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0025": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0026": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0031": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_foot_M0032": {
+      "type": "feet",
+      "hides_slots": [
+        2
+      ],
+      "hides_materials": [
+        "foot"
+      ]
+    },
+    "male_hair_M0801": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0802": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hair_M0803": {
+      "type": "hair",
+      "hides_slots": [
+        6
+      ],
+      "hides_materials": [
+        "hair_scalp",
+        "hair_strands"
+      ]
+    },
+    "male_hand_M9001": {
+      "type": "hands",
+      "hides_slots": [
+        3
+      ],
+      "hides_materials": [
+        "hand"
+      ]
+    }
+  }
+}

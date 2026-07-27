@@ -1,0 +1,8196 @@
+props:
+- id: A_SWGgirl
+  category: artificial
+  textures:
+  - ct0129
+- id: CT0061_a
+  category: artificial
+  textures:
+  - CT0061
+- id: CT0061_b
+  category: artificial
+  textures:
+  - CT0061
+- id: CT0062_a
+  category: artificial
+  textures:
+  - CT0062
+- id: CT0062_b
+  category: artificial
+  textures:
+  - CT0062
+- id: E_SCwallfire_1
+  category: artificial
+  textures:
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: a_ENTcontrol
+  category: artificial
+  textures:
+  - a_ENTcontrol
+  - sfx_common_flashwall1_yellow
+  - sfx_common_particlebeam_pink
+  - sfx_common_flashring1_blue
+- id: a_ENTfreezer
+  category: artificial
+  textures:
+  - a_ENTfreezer
+- id: a_ESDcrack01
+  category: artificial
+  textures:
+  - a_ESDcrack01
+- id: a_ESDdesk01
+  category: artificial
+  textures:
+  - c_SCchair04
+- id: a_ESDdeskp01
+  category: artificial
+  textures:
+  - c_ESDchair01
+- id: a_ESDdeskp02
+  category: artificial
+  textures:
+  - c_ESDchair01
+- id: a_ESDdoor01
+  category: artificial
+  textures:
+  - a_SCwall01
+  - a_SCdoor01
+- id: a_ESDdoor02a
+  category: artificial
+  textures:
+  - a_ESDdoor02b01
+  - a_ESDdoor02b02
+  - sfx_common_flashlight1_purple
+  - a_ESDdoor02a01
+  - a_ESDdoor02a02
+- id: a_ESDdoor02b
+  category: artificial
+  textures:
+  - a_ESDdoor02b01
+  - a_ESDdoor02b02
+- id: a_ESDground01a
+  category: artificial
+  textures:
+  - a_ESDground01
+  - a_ESDwall01b
+- id: a_ESDground01b
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDground01
+- id: a_ESDground01c
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDground01
+- id: a_ESDground01d
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDground01
+- id: a_ESDground01e
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDground01
+- id: a_ESDground01f
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDground01
+- id: a_ESDground01g
+  category: artificial
+  textures:
+  - a_ESDground01
+  - a_ESDwall01b
+- id: a_ESDground02
+  category: artificial
+  textures:
+  - a_SEground02
+- id: a_ESDlamp
+  category: artificial
+  textures:
+  - a_SElamp01-alpa
+  - a_SElamp01
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_cyan_01
+- id: a_ESDmashin01
+  category: artificial
+  textures:
+  - a_ESDmashin01a
+  - a_ESDmashin01b
+  - a_ESDmashin01c
+- id: a_ESDplatform01
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_SEplatform01b
+  - a_ESDplatform01
+- id: a_ESDstair01
+  category: artificial
+  textures:
+  - a_ESDstair01a
+  - a_ESDstair01b
+  - a_ESDwall01b
+  - a_globe01B
+- id: a_ESDstair01a
+  category: artificial
+  textures:
+  - a_ESDstair01a
+  - a_ESDstair01b
+  - a_ESDwall01b
+  - a_FANpan05
+- id: a_ESDstair02
+  category: artificial
+  textures:
+  - a_ESDstair01a
+  - a_ESDstair01b
+  - a_ESDwall01b
+- id: a_ESDstair02a
+  category: artificial
+  textures:
+  - a_ESDstair01a
+  - a_ESDstair01b
+  - a_ESDwall01b
+  - a_globe01B
+- id: a_ESDstair03
+  category: artificial
+  textures:
+  - a_ESDstair01a
+  - a_ESDstair01b
+  - a_ESDwall01b
+  - a_globe01B
+- id: a_ESDstand01
+  category: artificial
+  textures:
+  - a_SEstand01
+  - a_ESDwall01b
+- id: a_ESDstand02
+  category: artificial
+  textures:
+  - a_SEstand01
+  - a_ESDwall01b
+- id: a_ESDtoilet01
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDtoilet01
+  - a_ESDtoilet02
+- id: a_ESDtoilet02
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDtoilet01
+  - a_ESDtoilet02
+- id: a_ESDtoilet03
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDtoilet01
+  - a_ESDtoilet02
+- id: a_ESDtoilet04
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDtoilet01
+  - a_ESDtoilet02
+- id: a_ESDtoilet05
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDtoilet01
+  - a_ESDtoilet02
+- id: a_ESDtoilet06
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01c
+  - a_ESDtoilet01
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_ESDtrack01a
+  category: artificial
+  textures:
+  - a_SEtrack01
+  - a_ESDwall01b
+- id: a_ESDtrack01b
+  category: artificial
+  textures:
+  - a_ESDtrack01a
+  - a_ESDwall01b
+- id: a_ESDtrack01c
+  category: artificial
+  textures:
+  - a_ESDtrack01a
+  - a_ESDwall01b
+- id: a_ESDtrack01d
+  category: artificial
+  textures:
+  - a_ESDtrack01a
+  - a_ESDwall01b
+- id: a_ESDtrack01e
+  category: artificial
+  textures:
+  - a_SEtrack01
+  - a_ESDwall01b
+- id: a_ESDwall01a
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01b
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01c
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01d
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01e
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01f
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01a
+- id: a_ESDwall01g
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01c
+  - a_ESDwall01a
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_ESDwall02a
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01e
+  - a_ESDwall01f
+- id: a_ESDwall02b
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01e
+  - a_ESDwall01f
+- id: a_ESDwall02c
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01e
+  - a_ESDwall01f
+- id: a_ESDwall02d
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01e
+  - a_ESDwall01f
+- id: a_ESDwall02e
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01e
+  - a_ESDwall01f
+- id: a_ESDway01
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+- id: a_ESDway02
+  category: artificial
+  textures:
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_ESDwall01b
+- id: a_ESDway03
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+- id: a_ESDway04
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+- id: a_ESDway05
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_ESDway01
+- id: a_ESDway06
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_ESDway07
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_ESDway08
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_ESDwin01
+  category: artificial
+  textures:
+  - a_SCwall05
+  - a_SCwall01
+- id: a_FANbottle
+  category: artificial
+  textures:
+  - a_FANbottle_01
+  - a_FANbottle_01a
+  - a_FANbottle_02a
+  - a_FANbottle_03
+  - a_FANbottle_04
+  - a_FANbottle_02
+  - a_FANbottle_ef
+- id: a_FANcircle01
+  category: artificial
+  textures:
+  - a_FANcircle01
+- id: a_FANcircle02
+  category: artificial
+  textures:
+  - a_FANcircle02
+- id: a_FANpan01
+  category: artificial
+  textures:
+  - a_FANwallp04
+- id: a_FANpan02
+  category: artificial
+  textures:
+  - a_FANwallp05
+  - a_FANneon
+- id: a_FANpan03
+  category: artificial
+  textures:
+  - a_FANwallg03
+- id: a_FANpan04
+  category: artificial
+  textures:
+  - a_FANwally03
+- id: a_FANpan05
+  category: artificial
+  textures:
+  - a_FANpan05
+  - a_FANneon
+- id: a_FANpan06
+  category: artificial
+  textures:
+  - a_FANpan06
+  - a_FANneon
+- id: a_FANpan07
+  category: artificial
+  textures:
+  - a_FANwallo04
+- id: a_FANpan08
+  category: artificial
+  textures:
+  - a_FANpan08
+  - a_FANneon
+- id: a_FANpan09
+  category: artificial
+  textures:
+  - a_FANwallo04
+  - a_FANwallp04
+  - a_FANwally03
+- id: a_FANwallg01
+  category: artificial
+  textures:
+  - a_FANwallg03
+  - a_FANwallg01
+  - a_FANwallg05
+  - a_FANwallg02
+  - a_ESDwall01b
+  - a_ESDwall01c
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_FANwallo
+  category: artificial
+  textures:
+  - a_FANwallo03
+  - a_ESDwall01c
+  - a_FANwallo01
+  - a_ESDwall01d
+  - a_ESDway01
+  - a_FANwallo02
+  - a_FANwallo04
+- id: a_FANwallo01
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway02
+- id: a_FANwallp01
+  category: artificial
+  textures:
+  - a_FANwallp01
+  - a_FANwallp02
+  - a_FANwallp04
+  - a_FANwallp03
+  - a_ESDwall01c
+  - a_ESDwall01d
+  - a_ESDway01
+- id: a_FANwally01
+  category: artificial
+  textures:
+  - a_FANwally01
+  - a_FANwally02
+  - a_FANwally03
+  - a_FANwally04
+  - a_ESDwall01c
+  - a_ESDway01
+  - a_ESDwall01d
+- id: a_FANway01
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway01
+- id: a_FANway02
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway02
+- id: a_FANway03
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway01
+- id: a_FANway04
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway02
+- id: a_FANway05
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway01
+- id: a_FANway06
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway01
+- id: a_FANway07
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_ESDwall01d
+  - a_ESDwall01c
+  - a_FANway01
+- id: a_SBstand01L
+  category: artificial
+  textures:
+  - s_SEmainm
+  - a_SEstairs01
+  - n_e3gardentree04
+- id: a_SCabox01
+  category: artificial
+  textures:
+  - a_SCcabinet01
+- id: a_SCart02
+  category: artificial
+  textures:
+  - a_SCart02
+- id: a_SCart03
+  category: artificial
+  textures:
+  - a_SCtable04
+  - a_SCart04
+  - a_SCart03
+  - a_SCbrush01
+- id: a_SCart04
+  category: artificial
+  textures:
+  - a_SCart04
+- id: a_SCbed01
+  category: artificial
+  textures:
+  - a_SCbed01
+- id: a_SCbed02
+  category: artificial
+  textures:
+  - a_SCbed01
+- id: a_SCboard01
+  category: artificial
+  textures:
+  - a_SCboard01
+- id: a_SCboard02
+  category: artificial
+  textures:
+  - a_SCboard02
+- id: a_SCboard03
+  category: artificial
+  textures:
+  - a_SCboard03
+  - a_SCgen02
+- id: a_SCboard04
+  category: artificial
+  textures:
+  - a_SCboard04
+- id: a_SCboard06
+  category: artificial
+  textures:
+  - a_SCboard06
+- id: a_SCbook01
+  category: artificial
+  textures:
+  - a_SCbook01
+- id: a_SCbookcase01
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase01_1
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase01_2
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase01_3
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase01_4
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase01_5
+  category: artificial
+  textures:
+  - a_SCbookcase01
+- id: a_SCbookcase02
+  category: artificial
+  textures:
+  - a_SCbookcase02
+  - a_SCwall05f
+  - a_SCwall05a
+- id: a_SCbookcase03
+  category: artificial
+  textures:
+  - a_SCbookcase03
+- id: a_SCbrush01
+  category: artificial
+  textures:
+  - a_SCbrush01
+- id: a_SCbucket01
+  category: artificial
+  textures:
+  - a_SCbucket01
+- id: a_SCcabinet01
+  category: artificial
+  textures:
+  - a_SCcabinet01
+- id: a_SCcabinet02
+  category: artificial
+  textures:
+  - a_SCcabinet01
+- id: a_SCcabinet03
+  category: artificial
+  textures:
+  - a_SCcabinet03
+- id: a_SCcabinet04
+  category: artificial
+  textures:
+  - a_SCcabinet01
+- id: a_SCchair01a
+  category: artificial
+  textures:
+  - c_SCchair01
+- id: a_SCchest01
+  category: artificial
+  textures:
+  - a_SCchest01
+- id: a_SCchest02_1
+  category: artificial
+  textures:
+  - a_SCchest02
+- id: a_SCchest03
+  category: artificial
+  textures:
+  - a_SCchest03
+- id: a_SCchest04
+  category: artificial
+  textures:
+  - a_SCchest04
+- id: a_SCchest06
+  category: artificial
+  textures:
+  - a_SCtstair02
+- id: a_SCclock01
+  category: artificial
+  textures:
+  - a_SCclock01
+- id: a_SCcook01A
+  category: artificial
+  textures:
+  - a_SCcook01A
+  - a_SCoven01
+  - a_SCcook04
+  - a_SCtable06
+  - a_SCpan01
+  - a_SCpan02
+  - a_SCtstair01
+- id: a_SCcook02a
+  category: artificial
+  textures:
+  - a_SCtable06
+  - a_SCgrill01
+  - a_SCpan01
+  - a_SCcook04
+  - a_SCcook01A
+  - a_SCpan02
+- id: a_SCcook02b
+  category: artificial
+  textures:
+  - a_SCcook01A
+  - a_SCwine01
+  - a_SCtable06
+  - a_SCoven01
+  - a_SCpan02
+  - a_SCpan01
+- id: a_SCcook03
+  category: artificial
+  textures:
+  - a_SCcook01A
+- id: a_SCcook05
+  category: artificial
+  textures:
+  - a_SCoven01
+- id: a_SCcook06
+  category: artificial
+  textures:
+  - a_SCtable06
+  - a_SCpan02
+  - a_SCcook04
+- id: a_SCdesk01
+  category: artificial
+  textures:
+  - a_SCtable01
+- id: a_SCdesk02
+  category: artificial
+  textures:
+  - a_SCdesk02
+- id: a_SCdesk03
+  category: artificial
+  textures:
+  - c_SCchair04
+- id: a_SCdesk03_a
+  category: artificial
+  textures:
+  - c_SCchair04
+- id: a_SCdesk04
+  category: artificial
+  textures:
+  - a_SCdesk04
+- id: a_SCdesk06
+  category: artificial
+  textures:
+  - a_SCdesk06
+- id: a_SCdest05
+  category: artificial
+  textures:
+  - a_SCdesk05
+  - a_SCgen34
+- id: a_SCdoor01
+  category: artificial
+  textures:
+  - a_SCdoor01
+- id: a_SCdoor02_1
+  category: artificial
+  textures:
+  - a_SCdoor01
+- id: a_SCdoor02_2
+  category: artificial
+  textures:
+  - a_SCdoor01
+- id: a_SCdoor05
+  category: artificial
+  textures:
+  - a_SCdoor05_1
+- id: a_SCdoor05_1
+  category: artificial
+  textures:
+  - a_SCwall01
+  - s_SEmainj
+- id: a_SCfloor00
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+  - a_SCfloor01
+- id: a_SCfloor01
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+  - s_SEmaina
+  - a_SCfloor01
+- id: a_SCfloor01_01
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+  - s_SEmaina
+  - a_SCfloor01
+- id: a_SCfloor01_02
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+  - s_SEmainj
+  - a_SCfloor01
+- id: a_SCfloor01_03
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCwall01
+  - a_SCfloor01
+- id: a_SCfloor02
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+  - s_SEmainj
+  - a_SCfloor01
+- id: a_SCfloor03
+  category: artificial
+  textures:
+  - a_SCstairs02
+  - a_SCwall01
+  - a_SCfloor01
+- id: a_SCfloor_1
+  category: artificial
+  textures:
+  - a_SCstairsTile
+  - a_SCwall01
+- id: a_SCflwall01
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCframe01
+  category: artificial
+  textures:
+  - a_SCframe04
+- id: a_SCframe01A
+  category: artificial
+  textures:
+  - a_SCframe01A
+- id: a_SCframe02
+  category: artificial
+  textures:
+  - a_SCframe02
+- id: a_SCframe03
+  category: artificial
+  textures:
+  - a_SCframe01A
+- id: a_SCfwpot01
+  category: artificial
+  textures:
+  - a_SCfwpot01
+- id: a_SCfwpot02
+  category: artificial
+  textures:
+  - a_SCfwpot02
+- id: a_SCfwpot02_1
+  category: artificial
+  textures:
+  - a_SCfwpot02
+- id: a_SCfwpot03
+  category: artificial
+  textures:
+  - a_SCfwpot03
+  - a_SCfwpot03_a
+- id: a_SCgen02
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+- id: a_SCgen03
+  category: artificial
+  textures:
+  - a_SCgen03
+- id: a_SCgen04
+  category: artificial
+  textures:
+  - a_SCgen04
+- id: a_SCgen12
+  category: artificial
+  textures:
+  - a_SCgen12
+- id: a_SCgen13
+  category: artificial
+  textures:
+  - a_SCgen13
+- id: a_SCgen14
+  category: artificial
+  textures:
+  - a_SCgen14
+- id: a_SCgen15
+  category: artificial
+  textures:
+  - a_SCgen15
+- id: a_SCgen16
+  category: artificial
+  textures:
+  - a_SCgen16
+- id: a_SCgen17
+  category: artificial
+  textures:
+  - a_SCgen17
+- id: a_SCgen18
+  category: artificial
+  textures:
+  - a_SCgen18
+- id: a_SCgen19
+  category: artificial
+  textures:
+  - a_SCgen19
+- id: a_SCgen20
+  category: artificial
+  textures:
+  - a_SCgen20
+- id: a_SCgen21
+  category: artificial
+  textures:
+  - a_SCgen21
+  - a_SCgen21_1
+- id: a_SCgen22
+  category: artificial
+  textures:
+  - a_SCgen22
+- id: a_SCgen23
+  category: artificial
+  textures:
+  - a_SCgen22
+- id: a_SCgen23_1
+  category: artificial
+  textures:
+  - a_SCgen22
+  - a_SCgen24
+- id: a_SCgen24
+  category: artificial
+  textures:
+  - a_SCgen24
+- id: a_SCgen26
+  category: artificial
+  textures:
+  - a_SCgen26
+- id: a_SCgen27
+  category: artificial
+  textures:
+  - a_SCgen27
+- id: a_SCgen29
+  category: artificial
+  textures:
+  - a_SCgen29
+- id: a_SCgen30
+  category: artificial
+  textures:
+  - a_SCgen30
+- id: a_SCgen32
+  category: artificial
+  textures:
+  - a_SCgen32
+- id: a_SCgen33
+  category: artificial
+  textures:
+  - a_SCdesk05
+- id: a_SCgen34
+  category: artificial
+  textures:
+  - a_SCgen34
+- id: a_SCgen37
+  category: artificial
+  textures:
+  - a_SCgen37
+- id: a_SCgen39
+  category: artificial
+  textures:
+  - a_SCgen39
+- id: a_SCgen41
+  category: artificial
+  textures:
+  - a_SCgen34
+- id: a_SCgen43
+  category: artificial
+  textures:
+  - a_SCgen45
+- id: a_SCgen44
+  category: artificial
+  textures:
+  - a_SCgen45
+- id: a_SCgen45
+  category: artificial
+  textures:
+  - a_SCgen45
+- id: a_SCgen47
+  category: artificial
+  textures:
+  - a_SCgen47
+- id: a_SCgen49
+  category: artificial
+  textures:
+  - a_SCgen49
+- id: a_SCgen_31_1
+  category: artificial
+  textures:
+  - a_SCgen30
+- id: a_SCglobe01
+  category: artificial
+  textures:
+  - a_SCglobe01
+- id: a_SCglove01
+  category: artificial
+  textures:
+  - a_SCglove01
+- id: a_SCglove02
+  category: artificial
+  textures:
+  - a_SCglove02
+- id: a_SCguitar
+  category: artificial
+  textures:
+  - a_SCguitar
+- id: a_SCicebox01
+  category: artificial
+  textures:
+  - a_SCicebox02
+- id: a_SCicebox02
+  category: artificial
+  textures:
+  - a_SCicebox02
+  - a_SCpan01
+  - a_SCpan02
+- id: a_SClamp01
+  category: artificial
+  textures:
+  - a_SClamp01
+  - sfx_common_flashlight1_cyan_04
+  - sfx_common_flashlight1_cyan_03
+- id: a_SClamp02
+  category: artificial
+  textures:
+  - a_SClamp02
+- id: a_SCmusic01
+  category: artificial
+  textures:
+  - a_SCmusic01
+  - a_SCmusic02
+- id: a_SCoven01
+  category: artificial
+  textures:
+  - a_SCoven01
+  - a_SCpan01
+  - a_SCpan02
+- id: a_SCpan01
+  category: artificial
+  textures:
+  - a_SCoven01
+  - a_SCpan02
+  - a_SCpan01
+  - a_SCtable06
+- id: a_SCpar02
+  category: artificial
+  textures:
+  - a_SCpart02
+- id: a_SCpart01
+  category: artificial
+  textures:
+  - a_SCpart01
+- id: a_SCpart01_2
+  category: artificial
+  textures:
+  - a_SCpart01
+- id: a_SCpart03
+  category: artificial
+  textures:
+  - a_SCpart02
+- id: a_SCpart03_1
+  category: artificial
+  textures:
+  - a_SCpart02
+- id: a_SCpart03_2
+  category: artificial
+  textures:
+  - a_SCpart02
+- id: a_SCpiano01
+  category: artificial
+  textures:
+  - a_SCpiano01
+- id: a_SCpic03
+  category: artificial
+  textures:
+  - a_scpic03
+- id: a_SCpillar _1
+  category: artificial
+  textures:
+  - a_SCstairs02A
+- id: a_SCpillar01
+  category: artificial
+  textures:
+  - a_SCpillar01
+- id: a_SCpot01
+  category: artificial
+  textures:
+  - a_SCpot01
+- id: a_SCsign01
+  category: artificial
+  textures:
+  - a_SCsign01
+- id: a_SCsign01_a2
+  category: artificial
+  textures:
+  - a_SCsign01a
+- id: a_SCsign01_b3
+  category: artificial
+  textures:
+  - a_SCsign01b
+- id: a_SCsign02
+  category: artificial
+  textures:
+  - a_SCsign02
+- id: a_SCsign03
+  category: artificial
+  textures:
+  - a_SCsign03
+- id: a_SCspeaker01
+  category: artificial
+  textures:
+  - a_SCspeaker01
+- id: a_SCstair02_1
+  category: artificial
+  textures:
+  - a_SCstair02a
+- id: a_SCstair02_2
+  category: artificial
+  textures:
+  - a_SCstair02b
+- id: a_SCstand01
+  category: artificial
+  textures:
+  - a_SCstand01
+- id: a_SCstand02
+  category: artificial
+  textures:
+  - a_SCstand02
+- id: a_SCstaridown_02
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_stairkc
+- id: a_SCstaridown_1
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_stairkc
+- id: a_SCstariline_02
+  category: artificial
+  textures:
+  - a_scstairs02
+- id: a_SCstariline_1
+  category: artificial
+  textures:
+  - a_scstairs02
+- id: a_SCstariup_1
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_stairkc
+- id: a_SCstatue01
+  category: artificial
+  textures:
+  - a_SCstatue01
+- id: a_SCstatue02
+  category: artificial
+  textures:
+  - a_SCchest01
+  - a_SCstatue02
+- id: a_SCstatue03
+  category: artificial
+  textures:
+  - a_SCchest01
+  - a_SCstatue03
+  - a_SCstatue04
+- id: a_SCstatue04
+  category: artificial
+  textures:
+  - a_SCart01
+  - a_SCstatue03
+  - a_SCstatue04
+- id: a_SCstatue05
+  category: artificial
+  textures:
+  - a_SCart01
+  - a_SCstatue05
+  - a_SCbrush01
+  - a_SCart04
+  - a_SCstatue03
+  - a_SCstatue02
+- id: a_SCtable01
+  category: artificial
+  textures:
+  - a_SCtable04
+- id: a_SCtable03
+  category: artificial
+  textures:
+  - a_SCtable03
+  - a_SCstand02
+- id: a_SCtable04
+  category: artificial
+  textures:
+  - a_SCtable04
+- id: a_SCtable05
+  category: artificial
+  textures:
+  - a_SCtable05
+- id: a_SCtable06
+  category: artificial
+  textures:
+  - a_SCtable06a
+- id: a_SCtable06_1
+  category: artificial
+  textures:
+  - a_SCtable06
+  - a_SCpan01
+  - a_SCwine01
+- id: a_SCtable07
+  category: artificial
+  textures:
+  - a_SCtable07
+  - a_SEcenter01_c
+  - a_SEcenter01_d
+- id: a_SCtdesk01
+  category: artificial
+  textures:
+  - a_SCtdesk01
+- id: a_SCtile_1
+  category: artificial
+  textures:
+  - a_SCtile_1
+- id: a_SCtile_2
+  category: artificial
+  textures:
+  - a_SCtile_1a
+- id: a_SCtr01
+  category: artificial
+  textures:
+  - a_SCtr01
+- id: a_SCtr02
+  category: artificial
+  textures:
+  - a_sctr02
+- id: a_SCtr04
+  category: artificial
+  textures:
+  - a_SCtr04
+- id: a_SCtr05
+  category: artificial
+  textures:
+  - a_SCtr05
+- id: a_SCtrtile01
+  category: artificial
+  textures:
+  - a_SCtrtile01
+- id: a_SCtstair01
+  category: artificial
+  textures:
+  - a_SCtstair01
+- id: a_SCtstair02
+  category: artificial
+  textures:
+  - a_SCtstair02
+- id: a_SCtv01
+  category: artificial
+  textures:
+  - a_SCtv01
+- id: a_SCwall01
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall01_1
+  category: artificial
+  textures:
+  - a_SCwall05
+- id: a_SCwall01_2
+  category: artificial
+  textures:
+  - a_SCwall05
+- id: a_SCwall02
+  category: artificial
+  textures:
+  - a_SCwall01
+  - a_SCdoor02
+- id: a_SCwall02_1
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall03
+  category: artificial
+  textures:
+  - a_SCwall05
+- id: a_SCwall03_02
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall03_1
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall03_1a
+  category: artificial
+  textures:
+  - a_SCwall01
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: a_SCwall03_2
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall03_3
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall03_4
+  category: artificial
+  textures:
+  - a_SCwall01
+- id: a_SCwall04
+  category: artificial
+  textures:
+  - a_SCwall04
+- id: a_SCwall04A
+  category: artificial
+  textures:
+  - a_SCwall04
+- id: a_SCwall04_1
+  category: artificial
+  textures:
+  - a_SCwin01
+  - a_SCwall04
+- id: a_SCwall04_2
+  category: artificial
+  textures:
+  - a_SCwall04
+  - a_SCdoor02
+  - a_SCwall01
+- id: a_SCwall05
+  category: artificial
+  textures:
+  - a_scwall051
+- id: a_SCwall05_stari
+  category: artificial
+  textures:
+  - a_scstairs02
+  - a_SCstairsTile
+  - a_SCwall01
+- id: a_SCwall05a
+  category: artificial
+  textures:
+  - a_SCwall05a
+- id: a_SCwall05a_1
+  category: artificial
+  textures:
+  - a_SCwall05a_1
+  - a_SCwall05a
+- id: a_SCwall05b
+  category: artificial
+  textures:
+  - a_SCwall05a
+- id: a_SCwall05c
+  category: artificial
+  textures:
+  - a_SCwall05d
+  - a_SCwall05a
+- id: a_SCwall05e
+  category: artificial
+  textures:
+  - a_SCwall05f
+  - a_SCwall05a
+- id: a_SCwall05f
+  category: artificial
+  textures:
+  - a_SCwall05a
+  - a_SCdoor02
+  - a_SCwall01
+- id: a_SCwall05f_1
+  category: artificial
+  textures:
+  - a_SCwall05a
+  - a_SCdoor02
+  - a_SCwall01
+- id: a_SCwall06a
+  category: artificial
+  textures:
+  - a_scwall051
+- id: a_SCwall06b
+  category: artificial
+  textures:
+  - a_scwall051
+- id: a_SCwall06c
+  category: artificial
+  textures:
+  - a_scwall051
+- id: a_SCwash01
+  category: artificial
+  textures:
+  - a_SCwash01
+- id: a_SCwash02
+  category: artificial
+  textures:
+  - a_SCwash02
+- id: a_SCwash03
+  category: artificial
+  textures:
+  - a_SCwash03
+- id: a_SCwashWall_1
+  category: artificial
+  textures:
+  - a_SCwashWall
+- id: a_SCwashWall_2
+  category: artificial
+  textures:
+  - a_SCwashWall
+- id: a_SCwashWall_3
+  category: artificial
+  textures:
+  - a_SCwashWall
+- id: a_SCwashWall_4
+  category: artificial
+  textures:
+  - a_SCwashWall
+  - a_SCwashdoor
+- id: a_SCwashdoor_1
+  category: artificial
+  textures:
+  - a_SCwashdoor
+- id: a_SCwater01
+  category: artificial
+  textures:
+  - a_SCwater01
+- id: a_SCwb01
+  category: artificial
+  textures:
+  - a_SCwb01
+- id: a_SCwb02
+  category: artificial
+  textures:
+  - a_SCwb02
+- id: a_SCwb03
+  category: artificial
+  textures:
+  - a_SCwb03
+- id: a_SCwdoor01
+  category: artificial
+  textures:
+  - a_SCwdoor01
+  - a_SCwall01
+  - a_SCdoor02
+- id: a_SCwin02
+  category: artificial
+  textures:
+  - a_SCwall01
+  - a_SCdoor02
+- id: a_SCwin02_1
+  category: artificial
+  textures:
+  - a_SCgen45
+- id: a_SETway01
+  category: artificial
+  textures:
+  - a_SWTway01
+  - a_stairkc
+- id: a_SETway01a
+  category: artificial
+  textures:
+  - a_SWTway01
+- id: a_SEbasket05_1
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_SEstairs01
+- id: a_SEbasket05_2
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_stairkc
+- id: a_SEbasket05_3
+  category: artificial
+  textures:
+  - a_sebasket05
+  - a_SEwalls01
+  - a_SEplatform01a
+  - a_SEstairs01
+  - a_sewirefence01
+  - a_SEwirefence02
+- id: a_SEbasket05_4
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_SEstairs01
+- id: a_SEbbus01
+  category: artificial
+  textures:
+  - a_SEbbus01A
+  - a_SEbbus01B
+  - a_SEbbus01C
+- id: a_SEbike01
+  category: artificial
+  textures:
+  - a_SEbike01
+- id: a_SEbike01_1
+  category: artificial
+  textures:
+  - a_SEbike01
+- id: a_SEbike01_2
+  category: artificial
+  textures:
+  - a_SEbike01
+- id: a_SEbike02
+  category: artificial
+  textures:
+  - a_SEbike02A
+  - a_SEbike02B
+- id: a_SEbike03
+  category: artificial
+  textures:
+  - a_SEbike03A
+  - a_SEbike02B
+- id: a_SEbike04
+  category: artificial
+  textures:
+  - a_SEbike02A
+  - a_SEbike02B
+- id: a_SEblockA01
+  category: artificial
+  textures:
+  - a_SEblockA
+- id: a_SEblockA02
+  category: artificial
+  textures:
+  - a_SEblockA
+- id: a_SEblockB01
+  category: artificial
+  textures:
+  - a_SEblockB
+- id: a_SEblockB02
+  category: artificial
+  textures:
+  - a_SEblockB
+- id: a_SEblockB03
+  category: artificial
+  textures:
+  - a_SEblockB
+- id: a_SEblockB04
+  category: artificial
+  textures:
+  - a_SEblockB
+- id: a_SEblockB05
+  category: artificial
+  textures:
+  - a_SEblockB
+- id: a_SEboard01
+  category: artificial
+  textures:
+  - a_SEboard01
+- id: a_SEbooth01
+  category: artificial
+  textures:
+  - a_SEbooth01
+  - a_SEbooth02
+- id: a_SEbooth02
+  category: artificial
+  textures:
+  - a_SEbooth02
+- id: a_SEbooth03
+  category: artificial
+  textures:
+  - a_SEbooth03A
+  - a_SEbooth03B
+  - a_SEbooth02
+  - a_SEwbox01
+- id: a_SEbstair01
+  category: artificial
+  textures:
+  - a_SEbstair01a
+  - a_SEbstair01b
+  - a_SEbstair01c
+  - a_stairkc
+- id: a_SEbstop01
+  category: artificial
+  textures:
+  - a_SEbstop02
+- id: a_SEbstop02
+  category: artificial
+  textures:
+  - a_SEbstop02
+  - a_SEbstop02a
+- id: a_SEbwall01
+  category: artificial
+  textures:
+  - a_SEbwall01
+- id: a_SEbwall01_1
+  category: artificial
+  textures:
+  - a_SEbwall01
+- id: a_SEbwall01a
+  category: artificial
+  textures:
+  - a_SEbwall01
+- id: a_SEcage01
+  category: artificial
+  textures:
+  - a_SEcage01
+  - s_SEfarm01
+  - s_SEfarm01_02
+  - s_SEfarm01_01
+  - a_SEcage01a
+  - a_SEcage01_02
+- id: a_SEcage02
+  category: artificial
+  textures:
+  - a_SEcage02_01
+  - n_treevine01
+  - a_SEcage02_02
+  - sfx_common_flashlight1_cyan
+- id: a_SEcall01
+  category: artificial
+  textures:
+  - a_SEcall01a
+  - a_SEcall01b
+- id: a_SEcdoor01
+  category: artificial
+  textures:
+  - s_SEfarm01_01
+  - a_SEcdoor01
+  - s_SEfarm01
+  - s_SEfarm01_02
+  - a_SEcfence01
+- id: a_SEcenter01
+  category: artificial
+  textures:
+  - a_SEcenter01
+  - a_SEcenter01_a
+  - a_SEcenter01_c
+  - a_SEcenter01_d
+  - a_SEbstair01c
+  - a_stairkc
+- id: a_SEcenter02
+  category: artificial
+  textures:
+  - a_SEcenter
+  - a_SEbstair01c
+  - a_SEcenter02b
+- id: a_SEcenter03
+  category: artificial
+  textures:
+  - a_SEcenter03
+  - a_SEcenter01_d
+  - a_SEcenter01_a
+  - a_SEcenter01_b
+  - a_SEcenter01_c
+- id: a_SEcenter03a
+  category: artificial
+  textures:
+  - a_SEcenter03_a
+- id: a_SEcenter03b
+  category: artificial
+  textures:
+  - a_SEcenter01_d
+  - a_SEcenter01_a
+  - a_SEbstair01c
+  - a_SEcenter01_c
+- id: a_SEcenter03c
+  category: artificial
+  textures:
+  - a_SEcenter01_d
+  - a_SEcenter01_a
+  - a_SEbstair01c
+  - a_SEcenter01_c
+- id: a_SEcenter03d
+  category: artificial
+  textures:
+  - a_SEcenter01_d
+  - a_SEcenter01_a
+  - a_SEbstair01c
+  - a_SEcenter01_c
+- id: a_SEcfence01
+  category: artificial
+  textures:
+  - a_SEcfence01
+- id: a_SEcfence02
+  category: artificial
+  textures:
+  - a_SEcfence01
+- id: a_SEcfence03
+  category: artificial
+  textures:
+  - a_SEcfence01
+- id: a_SEcfence04
+  category: artificial
+  textures:
+  - a_SEcfence01
+- id: a_SEfarm01
+  category: artificial
+  textures:
+  - a_SEfarm01
+- id: a_SEfarm01_1
+  category: artificial
+  textures:
+  - a_SEfarm01
+- id: a_SEfarm02
+  category: artificial
+  textures:
+  - a_SEfarm02
+- id: a_SEferry01
+  category: artificial
+  textures:
+  - a_SEferry01a
+  - a_SEferry01
+- id: a_SEferry02
+  category: artificial
+  textures:
+  - a_SEferry02
+  - a_SEferry02a
+  - a_SEferry03a
+- id: a_SEferry03
+  category: artificial
+  textures:
+  - a_SEferry03c
+  - a_SEferry03a
+  - a_SEferry03
+  - a_SEbstair01c
+- id: a_SEffence01
+  category: artificial
+  textures:
+  - a_SEffence01
+- id: a_SEffence01a
+  category: artificial
+  textures:
+  - a_SEffence01
+- id: a_SEffence1b
+  category: artificial
+  textures:
+  - a_SEffence01
+- id: a_SEgarden01
+  category: artificial
+  textures:
+  - a_SEgarden01a
+  - a_SEgarden01b
+  - a_SEbstair01c
+- id: a_SEgate
+  category: artificial
+  textures:
+  - a_SEgate
+  - a_SEgatea
+  - a_SEwall02
+- id: a_SEgrass01
+  category: artificial
+  textures:
+  - a_SEbstair01b
+  - a_SEbstair01c
+- id: a_SEgrass02
+  category: artificial
+  textures:
+  - a_SEbstair01b
+  - a_SEbstair01c
+- id: a_SEground01
+  category: artificial
+  textures:
+  - a_SEground02
+- id: a_SEground02
+  category: artificial
+  textures:
+  - a_SEground02
+  - a_SEground02a
+- id: a_SEground02_01
+  category: artificial
+  textures:
+  - a_SEground02b
+  - a_SEground02
+  - a_SEground02a
+  - a_SEground02a_01a
+- id: a_SEground02_02
+  category: artificial
+  textures:
+  - a_SEground02a_02a
+  - a_SEground02b
+  - a_SEground02
+  - a_SEground02a
+- id: a_SElamp02
+  category: artificial
+  textures:
+  - a_SElamp02
+- id: a_SElaneA01
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SElaneA02
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SElaneB01
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SElaneC01
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SElaneC02
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SElawn01
+  category: artificial
+  textures:
+  - a_SElawn01a
+- id: a_SElawn01_1
+  category: artificial
+  textures:
+  - a_SElawn01a
+- id: a_SElawn02
+  category: artificial
+  textures:
+  - a_SElawn01a
+- id: a_SElawn03
+  category: artificial
+  textures:
+  - a_SElawn01a
+- id: a_SElawn04
+  category: artificial
+  textures:
+  - a_SElawn01a
+  - a_SExing01
+  - a_SEbbus01B
+- id: a_SEparasol01
+  category: artificial
+  textures:
+  - a_SEparasol01
+- id: a_SEplatform01
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_SEplatform01b
+  - a_stairkc
+- id: a_SEplatform02
+  category: artificial
+  textures:
+  - a_SEplatform01a
+  - a_SEplatform01b
+- id: a_SEpool01
+  category: artificial
+  textures:
+  - a_SEpool01A
+  - a_SEpool01B
+  - a_SEpool01C
+  - a_SEpool01D
+  - a_SEpool01E
+  - a_SEpool01F
+  - a_SEpool01G
+- id: a_SEsign01
+  category: artificial
+  textures:
+  - a_SEsign01
+- id: a_SEsignal01
+  category: artificial
+  textures:
+  - a_SEsignal01a
+  - a_SEsignal01b
+- id: a_SEsignal02
+  category: artificial
+  textures:
+  - a_SEsignal02a
+  - a_SEsignal02b
+- id: a_SEstairs01
+  category: artificial
+  textures:
+  - a_SEstairs01
+  - s_SEmainm
+  - a_stairkc
+- id: a_SEstairs04
+  category: artificial
+  textures:
+  - a_SWEstair01a
+  - a_SEcenter01_a
+- id: a_SEstairs04a
+  category: artificial
+  textures:
+  - a_SWEstair01
+  - a_SWEstair01-a
+- id: a_SEstairs04b
+  category: artificial
+  textures:
+  - a_SWEstair01
+  - a_SWEstair01-a
+- id: a_SEstand01
+  category: artificial
+  textures:
+  - a_SEstand01
+- id: a_SEstand02
+  category: artificial
+  textures:
+  - a_SEstand01
+- id: a_SEstand02_1
+  category: artificial
+  textures:
+  - a_SEstand01
+- id: a_SEstand03
+  category: artificial
+  textures:
+  - a_SEstairs01
+- id: a_SEstand03_1
+  category: artificial
+  textures:
+  - a_SEstairs01
+- id: a_SEstand04
+  category: artificial
+  textures:
+  - a_SEstand01
+- id: a_SEswim01
+  category: artificial
+  textures:
+  - a_SEswim01
+- id: a_SEswim02
+  category: artificial
+  textures:
+  - a_SEswim02
+- id: a_SEswim02_2
+  category: artificial
+  textures:
+  - a_SEswim02
+- id: a_SEswim03
+  category: artificial
+  textures:
+  - a_SEswim03
+- id: a_SEswim04
+  category: artificial
+  textures:
+  - a_SEswim04
+- id: a_SEtile_SC005
+  category: artificial
+  textures:
+  - a_SEtile_SC005
+- id: a_SEtile_SWGI001
+  category: artificial
+  textures:
+  - a_SEtile_SWGI001
+- id: a_SEtrack01
+  category: artificial
+  textures:
+  - a_SEtrack01
+- id: a_SEtrack02
+  category: artificial
+  textures:
+  - a_SEtrack01
+- id: a_SEtrack03
+  category: artificial
+  textures:
+  - a_SEtrack01
+- id: a_SEvine01
+  category: artificial
+  textures:
+  - a_SEvine01
+  - a_SEvine01_a
+  - a_SEvine01_b
+- id: a_SEwall01
+  category: artificial
+  textures:
+  - a_SEwall01
+  - a_SEwall01b
+  - a_SEwall01a
+- id: a_SEwall02
+  category: artificial
+  textures:
+  - a_SEwall02
+- id: a_SEwalls01
+  category: artificial
+  textures:
+  - a_SEwalls01
+  - a_SEwall01b
+  - a_SEwall01a
+- id: a_SEwalls02
+  category: artificial
+  textures:
+  - a_SEwalls02
+- id: a_SEwalls02_a
+  category: artificial
+  textures:
+  - a_SEwalls02
+- id: a_SEwater01
+  category: artificial
+  textures:
+  - a_SEwater01a
+  - a_SEwater01b
+- id: a_SEwater02
+  category: artificial
+  textures:
+  - a_SEwater01a
+  - a_SEwater01b
+- id: a_SEwater03
+  category: artificial
+  textures:
+  - a_SEwater01a
+  - a_SEwater02
+  - a_SEwater01b
+- id: a_SEwater04
+  category: artificial
+  textures:
+  - a_SEwater01a
+  - a_SEwater01b
+- id: a_SEwater05
+  category: artificial
+  textures:
+  - a_SEwater01a
+  - a_SEwater01b
+- id: a_SEwirefence01_a
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SEwirefenceC
+- id: a_SEwirefence01_a01
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+- id: a_SEwirefence01_a02
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SEwirefenceC
+- id: a_SEwirefence04
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+- id: a_SEwirefence05
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+- id: a_SExing01
+  category: artificial
+  textures:
+  - a_SElawn01a
+  - a_SExing01
+  - a_SEbbus01B
+- id: a_SExing02
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SExing03
+  category: artificial
+  textures:
+  - a_SElane01
+- id: a_SWAantigue01
+  category: artificial
+  textures:
+  - a_SWAantique01a
+  - a_SWAantique01b
+  - a_SWAantigue01c
+  - sfx_common_thunder1
+- id: a_SWAantigue01a
+  category: artificial
+  textures:
+  - a_SWAantique01a
+  - a_SWAantique01b
+  - a_SWAantigue01c
+  - sfx_common_thunder1
+- id: a_SWAantigue02
+  category: artificial
+  textures:
+  - sfx_common_thunder1
+  - a_SWAantigue01c
+  - a_SWAantique01b
+  - a_SWAantique01a
+- id: a_SWAantique03a
+  category: artificial
+  textures:
+  - a_SWAantigue01c
+  - n_ESWtree02effect01a
+- id: a_SWAantique03b
+  category: artificial
+  textures:
+  - n_ESWtree02effect01a
+- id: a_SWAantique03c
+  category: artificial
+  textures:
+  - a_SWAantigue01c
+  - sfx_common_flashwall1_cyan
+  - sfx_common_flashring3_blue2
+- id: a_SWAball01
+  category: artificial
+  textures:
+  - a_SWAball01
+- id: a_SWAball02
+  category: artificial
+  textures:
+  - a_SWAball02
+- id: a_SWAball03
+  category: artificial
+  textures:
+  - a_SWAball03
+- id: a_SWAbari01
+  category: artificial
+  textures:
+  - a_SWAbari01
+- id: a_SWAbari01A
+  category: artificial
+  textures:
+  - a_SWAbari01
+- id: a_SWAbari04
+  category: artificial
+  textures:
+  - a_SWAbari04
+- id: a_SWAbari05
+  category: artificial
+  textures:
+  - a_SWAbari04
+- id: a_SWAbari06
+  category: artificial
+  textures:
+  - a_SWAbari04
+- id: a_SWAbath01
+  category: artificial
+  textures:
+  - a_SWAbath01
+  - a_SWAladder01
+- id: a_SWAbedquilt01
+  category: artificial
+  textures:
+  - a_SWAbedquilt01
+- id: a_SWAbigkey01
+  category: artificial
+  textures:
+  - a_SWAbigkey01
+- id: a_SWAbigkey01a
+  category: artificial
+  textures:
+  - a_SWAbigkey01a
+- id: a_SWAbigpot
+  category: artificial
+  textures:
+  - a_SWAbigpot_A
+  - a_SWAbigpot_b
+  - a_stairkc
+- id: a_SWAbigstone01
+  category: artificial
+  textures:
+  - a_SWAbigstone01
+- id: a_SWAblack01
+  category: artificial
+  textures:
+  - a_SWAblack01
+- id: a_SWAboard01
+  category: artificial
+  textures:
+  - a_SWAboard01
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01c
+  - a_ESWAboard01d
+  - a_ESWAboard01e
+  - a_ESWAboard01h
+  - a_ESWAboard01g
+  - a_ESWAboard01f
+- id: a_SWAbox01
+  category: artificial
+  textures:
+  - a_SWAbox01
+- id: a_SWAbran01
+  category: artificial
+  textures:
+  - a_SWAbran01
+- id: a_SWAbran02
+  category: artificial
+  textures:
+  - a_SWAbran01
+- id: a_SWAbroom
+  category: artificial
+  textures:
+  - a_SWAbroom
+- id: a_SWAbusr02
+  category: artificial
+  textures:
+  - a_SWAbusr02a
+  - a_SWAbusr02b
+  - a_SWAbusr02c
+  - a_SWAbusr02d
+- id: a_SWAbusy01
+  category: artificial
+  textures:
+  - a_SWAbusy01A
+  - a_SWAbusy01B
+  - a_SWAbusy01C
+  - a_SWAbusy01D
+- id: a_SWAcabinet01
+  category: artificial
+  textures:
+  - a_SWAcabinet01
+  - a_SWAcabinet01a
+- id: a_SWAcage01
+  category: artificial
+  textures:
+  - a_SWAcage01
+- id: a_SWAchip
+  category: artificial
+  textures:
+  - a_SWAchip
+- id: a_SWAct0005
+  category: artificial
+  textures:
+  - a_SWAct0005
+- id: a_SWAdesk
+  category: artificial
+  textures:
+  - a_SCdesk02_1
+- id: a_SWAdesk01
+  category: artificial
+  textures:
+  - a_SWldesk01
+- id: a_SWAdesk02
+  category: artificial
+  textures:
+  - a_SWldesk01
+- id: a_SWAdiary01
+  category: artificial
+  textures:
+  - a_SWAdiary01
+- id: a_SWAdice01
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdice01a
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdice01b
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdice01c
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdice01d
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdice01e
+  category: artificial
+  textures:
+  - a_SWAdice01
+- id: a_SWAdog
+  category: artificial
+  textures:
+  - a_SWAdog
+- id: a_SWAdoll03
+  category: artificial
+  textures:
+  - a_SWAdoll03
+- id: a_SWAdoor01
+  category: artificial
+  textures:
+  - a_SWAdoor01a
+  - a_SWAdoor01b
+- id: a_SWAdoor01a
+  category: artificial
+  textures:
+  - s_viancahousee
+- id: a_SWAdoor02
+  category: artificial
+  textures:
+  - a_SWAdoor01a
+  - sfx_common_dust04
+  - sfx_common_dust03
+  - sfx_common_flashwall1_cyan
+- id: a_SWAdrum01
+  category: artificial
+  textures:
+  - a_SCwb03
+- id: a_SWAexit01
+  category: artificial
+  textures:
+  - a_SWAexit01
+- id: a_SWAfire01
+  category: artificial
+  textures:
+  - a_SCwall01
+  - a_SCgen16
+  - a_SWAfire01
+- id: a_SWAfirehole01
+  category: artificial
+  textures:
+  - a_SWAfirehole01a
+  - a_SWAfirehole01b
+- id: a_SWAfirewood01
+  category: artificial
+  textures:
+  - a_SWGdesk01b
+  - c_SWGchair01A_b
+  - c_SWGchair04A
+- id: a_SWAflag
+  category: artificial
+  textures:
+  - a_SWAflag
+- id: a_SWAflag01
+  category: artificial
+  textures:
+  - a_SWAflag
+- id: a_SWAfood01
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood02
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood03
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood04
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood05
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood06
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAfood07
+  category: artificial
+  textures:
+  - a_SWAfood
+- id: a_SWAhandle01
+  category: artificial
+  textures:
+  - a_SWAhandle01
+- id: a_SWAhole01
+  category: artificial
+  textures:
+  - a_SWAhole01
+- id: a_SWAhole01_a
+  category: artificial
+  textures:
+  - a_SWAhole01_a
+- id: a_SWAhole02_a
+  category: artificial
+  textures:
+  - a_SWAhole02_a
+- id: a_SWAhole02_b
+  category: artificial
+  textures:
+  - a_SWAhole02_b
+- id: a_SWAhole02_c
+  category: artificial
+  textures:
+  - a_SWAhole02_a
+  - a_SWCwallA01_a02
+- id: a_SWAhole03
+  category: artificial
+  textures:
+  - a_ESDwall01b
+  - a_SWAhole03
+- id: a_SWAhole04
+  category: artificial
+  textures:
+  - a_SWAhole04
+- id: a_SWAhose01
+  category: artificial
+  textures:
+  - a_SWAhose01
+- id: a_SWAirondoor01
+  category: artificial
+  textures:
+  - a_SWAirondoor01a
+  - a_SWAirondoor01b
+- id: a_SWAladder01
+  category: artificial
+  textures:
+  - a_SWAladder01
+- id: a_SWAlever01
+  category: artificial
+  textures:
+  - a_SWAlever01
+- id: a_SWAlobby01
+  category: artificial
+  textures:
+  - a_SWAlobby02
+  - a_SWAlobby01
+  - a_SWAboard01
+  - E_SWAlobby01
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01h
+  - E_SWAlobby02
+- id: a_SWAmakeup01
+  category: artificial
+  textures:
+  - a_SWAmakeup01
+- id: a_SWAmaoshaoping
+  category: artificial
+  textures:
+  - a_SWAmaoshaoping_1
+  - a_SWAmaoshaoping
+- id: a_SWAmeat01
+  category: artificial
+  textures:
+  - a_SWAmeat01
+- id: a_SWAmilk01
+  category: artificial
+  textures:
+  - a_SWAmilk01
+- id: a_SWAmilk01_01
+  category: artificial
+  textures:
+  - a_SWAmilk01
+- id: a_SWAmilkdoor01
+  category: artificial
+  textures:
+  - a_SWAmilkdoor01
+- id: a_SWAmilkmake
+  category: artificial
+  textures:
+  - a_SWAmilkmake
+- id: a_SWAmine01
+  category: artificial
+  textures:
+  - a_SWAwire01a
+- id: a_SWAmusic
+  category: artificial
+  textures:
+  - a_SWAmusic
+- id: a_SWAorgel01
+  category: artificial
+  textures:
+  - a_SWAorgel01
+- id: a_SWApan
+  category: artificial
+  textures:
+  - a_SWApan02
+  - red light
+- id: a_SWApan01
+  category: artificial
+  textures:
+  - a_SWApan01
+  - yellow light
+- id: a_SWApan03
+  category: artificial
+  textures:
+  - a_SWApan03
+  - a_SWApan03-
+  - blue light
+- id: a_SWApan_a
+  category: artificial
+  textures:
+  - a_SWApan02_02
+- id: a_SWApan_b
+  category: artificial
+  textures:
+  - a_SWApan02_02
+  - blue light
+- id: a_SWApan_c
+  category: artificial
+  textures:
+  - a_SWApan02_03
+  - green light
+- id: a_SWApan_d
+  category: artificial
+  textures:
+  - a_SWApan02_01
+  - yellow light
+- id: a_SWApart01
+  category: artificial
+  textures:
+  - a_SWApart01
+- id: a_SWApot01
+  category: artificial
+  textures:
+  - a_SWAbigpot_b
+- id: a_SWApot02
+  category: artificial
+  textures:
+  - a_bonfire02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+  - a_SWApot04
+  - n_SWTgrass02
+  - a_SWApot02
+- id: a_SWApot02_1
+  category: artificial
+  textures:
+  - a_SWApot02
+  - a_SWApot03
+- id: a_SWApump01
+  category: artificial
+  textures:
+  - a_SWApump01
+- id: a_SWApurifier01-01
+  category: artificial
+  textures:
+  - a_SWApurifier01-01a
+  - a_SWApurifier01-01b
+  - sfx_bonefire_smoke02
+- id: a_SWApurifier01-02
+  category: artificial
+  textures:
+  - a_SWApurifier01-01a
+  - a_SWApurifier01-01b
+  - sfx_bonefire_smoke02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: a_SWArepairkit01
+  category: artificial
+  textures:
+  - sfx_common_flashwall1_cyan
+  - a_SWAantique01a
+  - a_SWIsand01
+  - a_SWIsand02a
+  - a_SWGutele01
+  - a_SWGutele03
+- id: a_SWArice
+  category: artificial
+  textures:
+  - a_SWArice
+- id: a_SWArock01
+  category: artificial
+  textures:
+  - a_SWCwallA01_a02
+- id: a_SWAsecret01
+  category: artificial
+  textures:
+  - a_SWAsecret01
+- id: a_SWAsflag
+  category: artificial
+  textures:
+  - a_SWAflag
+- id: a_SWAsflag01
+  category: artificial
+  textures:
+  - a_SWAflag
+- id: a_SWAshaoring
+  category: artificial
+  textures:
+  - a_SWAshaoring
+- id: a_SWAsinkhole
+  category: artificial
+  textures:
+  - a_SWAbath01
+  - SF0051_0
+- id: a_SWAsonic01
+  category: artificial
+  textures:
+  - a_SWAsonic01
+  - a_SWAball02a
+- id: a_SWAspring01
+  category: artificial
+  textures:
+  - a_SWAspring01
+- id: a_SWAstatue01
+  category: artificial
+  textures:
+  - a_SWAstatue01
+- id: a_SWAswitch01
+  category: artificial
+  textures:
+  - a_SWAwire01a
+- id: a_SWAtable01
+  category: artificial
+  textures:
+  - a_SWAtable01
+- id: a_SWAteam_b
+  category: artificial
+  textures:
+  - a_SWAanna_b
+- id: a_SWAteam_g
+  category: artificial
+  textures:
+  - a_SWAanna_g
+- id: a_SWAteam_r
+  category: artificial
+  textures:
+  - a_SWAanna_r
+- id: a_SWAteam_y
+  category: artificial
+  textures:
+  - a_SWAanna_y
+- id: a_SWAtent01a
+  category: artificial
+  textures:
+  - a_SWAtent01a
+  - a_SWAtent01a_01
+- id: a_SWAtent01b
+  category: artificial
+  textures:
+  - a_SWAtent01a
+- id: a_SWAtent02
+  category: artificial
+  textures:
+  - a_SWAtent02a
+  - a_SWAtent02b
+- id: a_SWAtestimonial
+  category: artificial
+  textures:
+  - a_SWAtestimonial
+- id: a_SWAtestimonial01
+  category: artificial
+  textures:
+  - a_SWAtestimonial
+- id: a_SWAtile01a
+  category: artificial
+  textures:
+  - a_SWAtile01a
+- id: a_SWAtomb01
+  category: artificial
+  textures:
+  - a_SWAtomb01
+- id: a_SWAtrash01
+  category: artificial
+  textures:
+  - a_SWAtrash01
+- id: a_SWAtrash01_n01
+  category: artificial
+  textures:
+  - a_SWAtrash01_n01
+- id: a_SWAtrash01_n02
+  category: artificial
+  textures:
+  - a_SWAtrash01_n02
+- id: a_SWAtrash01_n03
+  category: artificial
+  textures:
+  - a_SWAtrash01_n03
+- id: a_SWAtreasure01
+  category: artificial
+  textures:
+  - a_SWAtreasure01
+- id: a_SWAtreasure01_effect
+  category: artificial
+  textures:
+  - sfx_common_flashwall1_cyan
+  - a_SWAtreasure01_effect
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_pink
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_yellow
+- id: a_SWAtunnel01
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_post
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+  - a_tunnelwall_projection
+  - a_tunnelwall_wall03
+  - a_tunnelwall_wall04
+  - a_tunnelwall_wall05
+  - a_tunnelwall_floor_02
+  - a_tunnelwall_coner02
+  - sfx_common_flashdust1_brown1
+- id: a_SWAwall01a
+  category: artificial
+  textures:
+  - a_SWAwall01a
+  - a_SWAwall01b
+- id: a_SWAwall01b
+  category: artificial
+  textures:
+  - a_SWAwall01a
+  - a_SWAwall01b
+- id: a_SWAwhite
+  category: artificial
+  textures:
+  - a_SWAwhite
+- id: a_SWAwire01a
+  category: artificial
+  textures:
+  - a_SWAwire01a
+- id: a_SWAwire01b
+  category: artificial
+  textures:
+  - a_SWAwire01a
+- id: a_SWAwire01c
+  category: artificial
+  textures:
+  - a_SWAwire01a
+  - a_SEwirefence02
+- id: a_SWAwire01d
+  category: artificial
+  textures:
+  - a_SWAwire01a
+  - a_SEwirefence02
+- id: a_SWAwire02a
+  category: artificial
+  textures:
+  - a_SWAwire02a
+  - a_SEwirefence02
+- id: a_SWAwire02b
+  category: artificial
+  textures:
+  - a_SWAwire02a
+  - a_SEwirefence02
+- id: a_SWAwire02c
+  category: artificial
+  textures:
+  - a_SWAwire02a
+  - a_SEwirefence02
+- id: a_SWAwire02d
+  category: artificial
+  textures:
+  - a_SWAwire02a
+  - a_SEwirefence02
+- id: a_SWCash01
+  category: artificial
+  textures:
+  - s_SWCash01F
+- id: a_SWCash02
+  category: artificial
+  textures:
+  - s_SWCash01F
+- id: a_SWCash03
+  category: artificial
+  textures:
+  - s_SWCash01F
+- id: a_SWCash04
+  category: artificial
+  textures:
+  - s_SWCash01F
+- id: a_SWCdoor01
+  category: artificial
+  textures:
+  - n_SWCgrass01
+  - a_SWCdoor01
+  - a_SWCdoor01b
+  - a_SWCdoor01a
+- id: a_SWCdoor02
+  category: artificial
+  textures:
+  - a_SWCdoor01b
+  - a_SWCdoor01a
+  - n_SWCgrass01
+- id: a_SWCstair01
+  category: artificial
+  textures:
+  - a_SWCstair01
+  - a_SWCstate01A
+  - a_stairkc
+- id: a_SWCstate01A
+  category: artificial
+  textures:
+  - a_SWCstate01A
+- id: a_SWCstate01B
+  category: artificial
+  textures:
+  - a_SWCstate01A
+- id: a_SWCstate02A
+  category: artificial
+  textures:
+  - a_SWCstate01A
+- id: a_SWCstate02B
+  category: artificial
+  textures:
+  - a_SWCstate01A
+- id: a_SWCstomb
+  category: artificial
+  textures:
+  - a_SWCstomb
+- id: a_SWCswall01
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+  - a_SWCwallA01_a02
+  - a_SWCwallA01_a03
+  - a_SWCswall01
+- id: a_SWCtomb03
+  category: artificial
+  textures:
+  - a_SWCtomb03
+- id: a_SWCtomb03_01
+  category: artificial
+  textures:
+  - a_SWCtomb03_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCtomb04
+  category: artificial
+  textures:
+  - a_SWCtomb04
+- id: a_SWCtomb04_01
+  category: artificial
+  textures:
+  - a_SWCtomb04_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCtomb05
+  category: artificial
+  textures:
+  - a_SWCtomb05
+- id: a_SWCtomb05_01
+  category: artificial
+  textures:
+  - a_SWCtomb05_01
+  - n_SWCgrass01
+- id: a_SWCtomb06
+  category: artificial
+  textures:
+  - a_SWCtomb06
+- id: a_SWCtomb06_01
+  category: artificial
+  textures:
+  - a_SWCtomb06_01
+  - n_SWCgrass01
+- id: a_SWCtomb07
+  category: artificial
+  textures:
+  - a_SWCtomb07
+- id: a_SWCtomb07_01
+  category: artificial
+  textures:
+  - a_SWCtomb07_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCtomb08
+  category: artificial
+  textures:
+  - a_SWCtomb08
+- id: a_SWCtomb08_01
+  category: artificial
+  textures:
+  - a_SWCtomb08_01
+  - n_SWCgrass01
+- id: a_SWCtomb09
+  category: artificial
+  textures:
+  - a_SWCtomb09
+- id: a_SWCtomb09_01
+  category: artificial
+  textures:
+  - a_SWCtomb09_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCtomb10
+  category: artificial
+  textures:
+  - a_SWCtomb10
+  - a_SWCtomb12a
+- id: a_SWCtomb10_01
+  category: artificial
+  textures:
+  - a_SWCtomb10_01
+  - a_SWCtomb12a
+  - a_SEbstair01c
+  - a_SWCtomb05_01
+- id: a_SWCtomb11
+  category: artificial
+  textures:
+  - a_SWCtomb11
+- id: a_SWCtomb11_01
+  category: artificial
+  textures:
+  - a_SWCtomb11_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCtomb12
+  category: artificial
+  textures:
+  - a_SWCtomb12
+  - a_SWCtomb05_01
+- id: a_SWCtomb12_01
+  category: artificial
+  textures:
+  - a_SWCtomb12_01
+  - n_SWCgrass01
+  - a_SWCtomb05_01
+- id: a_SWCwallA01-2
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA01
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA01_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA01_a
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a01
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a02
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a03
+  category: artificial
+  textures:
+  - a_SWCwallA01_a01
+  - a_SWCwallA01_a
+  - a_SWCwallA01_a02
+  - a_SWCwallA01_a03
+- id: a_SWCwallA01_a04
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a05
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a06
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a07
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a08
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA01_a09
+  category: artificial
+  textures:
+  - a_SWCwallA01_a
+- id: a_SWCwallA02
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA02_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA03
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA03_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA03_2
+  category: artificial
+  textures:
+  - a_SWCwallA01
+  - n_SWCgrass01
+- id: a_SWCwallA04
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA04_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA05
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA05_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA06
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA06_1
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA07
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA08
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA09
+  category: artificial
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallB01
+  category: artificial
+  textures:
+  - a_SWCdoor01
+- id: a_SWCwallB02
+  category: artificial
+  textures:
+  - a_SWCdoor01
+- id: a_SWCwater
+  category: artificial
+  textures:
+  - a_SWCwater
+  - a_SWCwater_a
+- id: a_SWEbwall01
+  category: artificial
+  textures:
+  - a_SWEbwall01a
+  - a_SWEstair01a
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SWEbwall01c
+  - a_SWEbwall01b
+- id: a_SWEbwall01_1
+  category: artificial
+  textures:
+  - a_SWEbwall01a
+  - a_SWEstair01a
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SWEbwall01c
+- id: a_SWEbwall01_2
+  category: artificial
+  textures:
+  - a_SWEbwall01a
+  - a_SWEstair01a
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SWEbwall01c
+- id: a_SWEbwall01_3
+  category: artificial
+  textures:
+  - a_SWEbwall01a
+  - a_SWEstair01a
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SWEbwall01c
+- id: a_SWEbwall01_4
+  category: artificial
+  textures:
+  - a_SWEbwall01b
+- id: a_SWEbwall01_4a
+  category: artificial
+  textures:
+  - a_SWEbwall01b
+- id: a_SWEbwall01_5
+  category: artificial
+  textures:
+  - a_SWEbwall01b
+- id: a_SWEbwall01_5a
+  category: artificial
+  textures:
+  - a_SWEbwall01b
+- id: a_SWEcstair01
+  category: artificial
+  textures:
+  - s_SWEcstair01
+  - a_stairkc
+- id: a_SWEcstone01
+  category: artificial
+  textures:
+  - a_SWEcstone03
+  - a_SWEcstone03_b
+  - a_SEbstair01c
+- id: a_SWEcstone02
+  category: artificial
+  textures:
+  - a_SWEcstone03
+  - a_SWEcstone03_b
+  - a_SEbstair01c
+- id: a_SWEcstone03
+  category: artificial
+  textures:
+  - a_SWEcstone03
+  - a_SEbstair01c
+  - a_SWEcstone03_b
+- id: a_SWEcway02
+  category: artificial
+  textures:
+  - s_SWEcway
+- id: a_SWEfire01
+  category: artificial
+  textures:
+  - a_SWEfire01a
+  - a_SWEfire01b
+  - a_SWEfire01c
+  - a_SWEfire01d
+- id: a_SWEfire02
+  category: artificial
+  textures:
+  - a_SWEfire02
+  - a_SWEfire02a
+- id: a_SWEfire03
+  category: artificial
+  textures:
+  - a_SWEfire03
+- id: a_SWEfire04
+  category: artificial
+  textures:
+  - a_SWEfire04
+- id: a_SWEfire05
+  category: artificial
+  textures:
+  - a_sefire05
+- id: a_SWEgate01
+  category: artificial
+  textures:
+  - a_SWEgate01a
+  - a_SWEgate01b
+  - a_SWEwall01a
+- id: a_SWEgrass01
+  category: artificial
+  textures:
+  - a_SWEgrass01
+- id: a_SWElamp01
+  category: artificial
+  textures:
+  - a_SWElamp01
+  - a_SWElamp01a
+  - sfx_common_flashlight1_yellow1
+  - sfx_common_flashlight1_yellow
+- id: a_SWEpform01
+  category: artificial
+  textures:
+  - a_SWEpform01
+- id: a_SWEstair01
+  category: artificial
+  textures:
+  - a_SWEstair01a
+  - a_SEcenter01_a
+  - a_SWEstair01
+  - a_SWEstair01-a
+  - a_stairkc
+- id: a_SWEstair01a
+  category: artificial
+  textures:
+  - a_SWEstair01a
+  - a_stairkc
+- id: a_SWEstair02
+  category: artificial
+  textures:
+  - a_SEcenter01_a
+  - a_SWEstair01a
+  - a_SWEstair01
+  - a_SWEstair01-a
+- id: a_SWEstair03
+  category: artificial
+  textures:
+  - a_SWEstair01a
+  - a_SEcenter01_a
+  - a_SWEstair01-a
+  - a_SWEstair01
+- id: a_SWEstair03a
+  category: artificial
+  textures:
+  - a_SWEstair01a
+- id: a_SWEstair03b
+  category: artificial
+  textures:
+  - a_SWEstair01a
+- id: a_SWEwall01
+  category: artificial
+  textures:
+  - a_SWEwall01a
+  - a_SWEgate01a
+- id: a_SWEwall02
+  category: artificial
+  textures:
+  - a_SWEwall01a
+  - a_SWEgate01a
+- id: a_SWEwgate01
+  category: artificial
+  textures:
+  - a_SWEsgate01
+  - a_SWEsgate01a
+- id: a_SWEwgen01
+  category: artificial
+  textures:
+  - a_SWEwgen01
+  - a_SWEwgen01a
+  - a_SWEwgen01b
+- id: a_SWEwgen02
+  category: artificial
+  textures:
+  - a_SWEwgen02
+- id: a_SWEwgen03
+  category: artificial
+  textures:
+  - a_SWEwgen03
+- id: a_SWEwgen04
+  category: artificial
+  textures:
+  - a_SWEwgen04
+- id: a_SWEwsign01
+  category: artificial
+  textures:
+  - a_SWEwgen02
+- id: a_SWEwstair01
+  category: artificial
+  textures:
+  - s_SWEcstair01
+  - a_SWEwstairs01-a
+  - a_stairkc
+- id: a_SWFaltar01
+  category: artificial
+  textures:
+  - a_SWFaltar01
+- id: a_SWFaltar01a
+  category: artificial
+  textures:
+  - a_SWFaltar01
+- id: a_SWFbook01
+  category: artificial
+  textures:
+  - a_SWFbook01
+- id: a_SWFbook02
+  category: artificial
+  textures:
+  - a_SWFbook02
+- id: a_SWFbook03
+  category: artificial
+  textures:
+  - a_SWFbook03
+- id: a_SWFbox01
+  category: artificial
+  textures:
+  - a_SWIbox01
+- id: a_SWFbox02
+  category: artificial
+  textures:
+  - a_SWIbox02
+- id: a_SWFbridge06
+  category: artificial
+  textures:
+  - a_SWFbridge01
+  - a_SWFbridge01a
+- id: a_SWFchest
+  category: artificial
+  textures:
+  - a_SWFchest
+- id: a_SWFcrys01
+  category: artificial
+  textures:
+  - a_SWFcrys01-1
+  - sfx_common_flashlight1_cyan
+- id: a_SWFcrys02
+  category: artificial
+  textures:
+  - a_SWFcrys01-1
+  - sfx_common_flashlight1_cyan_01
+- id: a_SWFcrys03
+  category: artificial
+  textures:
+  - a_SWFgotree_c
+  - sfx_common_flashlight1_cyan
+- id: a_SWFcrys04
+  category: artificial
+  textures:
+  - a_SWFgotree_c
+  - sfx_common_flashlight1_cyan_01
+- id: a_SWFdoor01
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFdoor02
+  category: artificial
+  textures:
+  - a_SWAbigstone01
+  - sfx_common_flashdust1_brown1
+- id: a_SWFfox01
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SWFfox01
+  - a_SWFire01
+  - a_SWTrgate01b
+  - a_SWFfox01a
+- id: a_SWFgate01
+  category: artificial
+  textures:
+  - a_SWFgate01
+  - a_SWFgate01a
+  - a_SWFstair01
+  - a_SWFpill01
+- id: a_SWFgate02
+  category: artificial
+  textures:
+  - a_SWFgate02
+  - a_SWFswall01a
+  - n_SWFgogra04
+  - n_SWFgogra05
+- id: a_SWFgotree
+  category: artificial
+  textures:
+  - a_SWFgotree
+  - a_SWFgotree_b
+  - a_SWFgotree_a
+  - a_SWFcrys01-1
+  - a_SWFgrass01
+  - a_worldtree04
+  - n_SEctree01_a
+- id: a_SWFgotree01
+  category: artificial
+  textures:
+  - a_SWFgotree
+  - a_SWFgotree_b
+  - a_SWFgotree_a
+  - a_SWFcrys01-1
+  - a_SWFgrass01
+  - a_worldtree04
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_yellow
+  - n_SEctree01_a
+- id: a_SWFire01
+  category: artificial
+  textures:
+  - a_SWFire01
+- id: a_SWFlag01
+  category: artificial
+  textures:
+  - a_SWFlag01
+- id: a_SWFlamp01
+  category: artificial
+  textures:
+  - a_SWFlamp01
+  - a_SWFgotree_c
+  - sfx_common_flashlight1_cyan
+- id: a_SWFlamp02
+  category: artificial
+  textures:
+  - a_SWFlamp02
+  - LampFire
+  - sfx_common_flashlight1_pink
+- id: a_SWFlamp03
+  category: artificial
+  textures:
+  - a_SWFlamp03
+- id: a_SWFloor01
+  category: artificial
+  textures:
+  - a_SWFloor01_a
+  - a_SWFloor01_b
+  - a_SWFloor01_c
+  - a_SWFloor01_d
+- id: a_SWFloor01a
+  category: artificial
+  textures:
+  - a_SWFloor01_a
+  - a_SWFloor01_b
+  - a_SWFloor01_c
+  - a_SWFloor01_d
+  - a_SWFloor01_aa
+- id: a_SWFpill01
+  category: artificial
+  textures:
+  - a_SWFpill01
+  - a_SWFstair01
+- id: a_SWFpillar01
+  category: artificial
+  textures:
+  - a_SWFpillar03
+  - a_SWEwgate01_b
+  - a_SWCswall01
+- id: a_SWFpillar01_a
+  category: artificial
+  textures:
+  - a_SWFpillar03
+- id: a_SWFpillar02
+  category: artificial
+  textures:
+  - a_SWFpillar03
+  - a_SWFpillar03a
+  - a_SWCswall01
+  - a_SWEwgate01_b
+- id: a_SWFpillar03
+  category: artificial
+  textures:
+  - a_SWFpillar03
+  - a_SWFpillar03a
+  - a_SWCswall01
+  - a_SWEwgate01_b
+- id: a_SWFscreen
+  category: artificial
+  textures:
+  - a_SWFscreen
+- id: a_SWFshrine
+  category: artificial
+  textures:
+  - a_SWFshrine_a
+  - a_SWFshrine_b
+  - a_SWFshrine_c
+  - a_SWFshrine_d
+  - a_SWFbook03
+  - a_SWFbook01
+  - a_SWFbook02
+  - n_SWFgogra04
+  - n_SWFgogra05
+  - a_SWFgrass01
+- id: a_SWFstair01
+  category: artificial
+  textures:
+  - a_SWCstair01
+  - a_stairkc
+- id: a_SWFstair02
+  category: artificial
+  textures:
+  - a_SWFstair01
+  - a_SWFpill01
+  - a_SWFwall02
+  - a_SWFwall02a
+  - a_stairkc
+- id: a_SWFstone01
+  category: artificial
+  textures:
+  - a_SWFstone01
+- id: a_SWFstone02
+  category: artificial
+  textures:
+  - a_SWFstone01
+- id: a_SWFswall01a
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01b
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01b_1
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01c
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01d
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01e
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01f
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01g
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01h
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01i
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01j
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SWFswall01b
+  - a_SEbstair01c
+  - a_SWFpillar03
+  - a_SWFswall01j
+- id: a_SWFswall01j_a
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SEbstair01c
+  - a_SWFswall01b
+  - a_SWFswall01j
+- id: a_SWFswall01j_b
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SEbstair01c
+  - a_SWFswall01b
+  - a_SWFswall01j
+- id: a_SWFswall01j_c
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SEbstair01c
+  - a_SWFswall01b
+  - a_SWFswall01j
+- id: a_SWFswall01j_d
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SWFswall01b
+  - a_SEbstair01c
+  - a_SWFswall01j
+- id: a_SWFswall01k
+  category: artificial
+  textures:
+  - a_SWFswall01a
+  - a_SWFire01
+- id: a_SWFswall01l
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01m
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFswall01n
+  category: artificial
+  textures:
+  - a_SWFswall01a
+- id: a_SWFtower01
+  category: artificial
+  textures:
+  - a_SWFtower01
+  - a_SWEwgate01_b
+- id: a_SWFtower02
+  category: artificial
+  textures:
+  - a_SWFtower01
+- id: a_SWFtower03
+  category: active
+  textures:
+  - sfx_common_flashlight1_purple
+  - a_SWAball02a
+  - a_SWFtower01
+- id: a_SWFume01
+  category: artificial
+  textures:
+  - a_SWFume01
+- id: a_SWFwall02
+  category: artificial
+  textures:
+  - a_SWFwall02
+  - a_SWFpill01
+- id: a_SWFwall02a
+  category: artificial
+  textures:
+  - a_SWFwall02a
+  - a_SWFpill01
+- id: a_SWFwall02b
+  category: artificial
+  textures:
+  - a_SWFwall02
+  - a_SWFpill01
+- id: a_SWFwall02c
+  category: artificial
+  textures:
+  - a_SWFwall02
+  - a_SWFpill01
+- id: a_SWFwall05
+  category: artificial
+  textures:
+  - a_SWFwall05
+  - a_SWFstair01
+  - a_SWFpill01
+- id: a_SWFwall05a
+  category: artificial
+  textures:
+  - a_SWFwall05
+  - a_SWFstair01
+  - a_SWFpill01
+  - a_gate01
+- id: a_SWFwall05b
+  category: artificial
+  textures:
+  - a_SWFwall05
+  - a_SWFstair01
+  - a_SWFpill01
+  - a_gate01
+- id: a_SWFwall05c
+  category: artificial
+  textures:
+  - a_SWFwall05
+  - a_SWFstair01
+  - a_SWFpill01
+  - a_gate01
+- id: a_SWGbod01A_a
+  category: artificial
+  textures:
+  - a_SWGbod01A_a01
+  - a_SWGbod01A_a02
+- id: a_SWGbod03A
+  category: artificial
+  textures:
+  - a_SWGbod03A
+- id: a_SWGbridge
+  category: artificial
+  textures:
+  - a_SWGbridge
+- id: a_SWGcase01A_a
+  category: artificial
+  textures:
+  - a_SWGcase01A_a
+- id: a_SWGcase02a
+  category: artificial
+  textures:
+  - a_SWGcase02a
+- id: a_SWGcase03a
+  category: artificial
+  textures:
+  - a_SWGcase03a
+- id: a_SWGcwall01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGcwall02A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGcwall03A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGcwall03B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGcwall04A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGcwall04B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGdesk01A
+  category: artificial
+  textures:
+  - a_SWGdesk01A
+- id: a_SWGdesk02A
+  category: artificial
+  textures:
+  - a_SWGdesk02A
+- id: a_SWGdesk03A
+  category: artificial
+  textures:
+  - a_SWGdesk03A
+- id: a_SWGdoor01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGdoor01A_1
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGfoot01a
+  category: artificial
+  textures:
+  - a_SWGfoot01a
+- id: a_SWGframe01
+  category: artificial
+  textures:
+  - a_SWGframe01
+- id: a_SWGgate01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01C
+  - s_SWGschool_e01
+  - a_SWGwall01B
+- id: a_SWGgate01B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02C
+  - s_SWGschool_e02
+  - a_SWGwall02B
+- id: a_SWGgate03A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01C
+  - s_SWGschool_a01
+  - a_SWGwall01B
+- id: a_SWGgate03B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02C
+  - s_SWGschool_a02
+  - a_SWGwall02B
+- id: a_SWGiwall01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGiwall02A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01C
+- id: a_SWGiwall03A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGiwall03B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGiwall04A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01C
+- id: a_SWGiwall04B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02C
+- id: a_SWGmap
+  category: artificial
+  textures:
+  - a_SWGmap
+- id: a_SWGmap02
+  category: artificial
+  textures:
+  - a_SWGmap02
+- id: a_SWGorgana
+  category: artificial
+  textures:
+  - a_SWGorgana
+- id: a_SWGowall01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGowall01B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGowall01_light
+  category: artificial
+  textures:
+  - sfx_common_flashlight1_cyan_01
+- id: a_SWGowall02A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGowall02B
+  category: artificial
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGrabbit
+  category: artificial
+  textures:
+  - a_SWGrabbitA
+  - a_SWGrabbitB
+- id: a_SWGstair1A
+  category: artificial
+  textures:
+  - a_SWGstair1A
+  - a_SWCwallA01_a03
+- id: a_SWGstair1B
+  category: artificial
+  textures:
+  - a_SWGstair1B
+  - a_SWCwallA01_a03
+- id: a_SWGstair2A
+  category: artificial
+  textures:
+  - a_SWGstair1A
+  - a_SWGstairA
+  - a_SWCwallA01_a03
+- id: a_SWGstair2B
+  category: artificial
+  textures:
+  - a_SWGstair1B
+  - a_SWGstairB
+  - a_SWCwallA01_a03
+- id: a_SWGstair2B_01
+  category: artificial
+  textures:
+  - a_SWGstair1B
+  - a_SWGstairB
+  - a_SWCwallA01_a03
+- id: a_SWGtable01A_a
+  category: artificial
+  textures:
+  - c_SWGtable01A_a
+  - c_SWGtable01A_a01
+- id: a_SWGtdesk01A
+  category: artificial
+  textures:
+  - a_SWGtdesk01A
+- id: a_SWGubag01
+  category: artificial
+  textures:
+  - a_SWGubag01
+- id: a_SWGubarrier
+  category: artificial
+  textures:
+  - a_SWGubarrier
+  - n_ESWtree02effect01a
+- id: a_SWGuboard01
+  category: artificial
+  textures:
+  - a_SWGuboard01
+- id: a_SWGubox01_s1
+  category: artificial
+  textures:
+  - a_SWGubox01a
+- id: a_SWGubox01_s2
+  category: artificial
+  textures:
+  - a_SWGubox01a
+- id: a_SWGubox01a
+  category: artificial
+  textures:
+  - a_SWAball02a
+  - a_SWGubox01a
+- id: a_SWGubox01b
+  category: artificial
+  textures:
+  - a_SWAball02a
+  - a_SWGubox01a
+- id: a_SWGubox01c
+  category: artificial
+  textures:
+  - a_SWGubox01a
+  - a_SWAball02a
+- id: a_SWGubox02a
+  category: artificial
+  textures:
+  - a_SWAball02a
+  - a_SWGubox02a
+- id: a_SWGubox02b
+  category: artificial
+  textures:
+  - a_SWAball02a
+  - a_SWGubox02a
+- id: a_SWGubox02c
+  category: artificial
+  textures:
+  - a_SWGubox02a
+  - a_SWAball02a
+- id: a_SWGubox03A
+  category: artificial
+  textures:
+  - a_SWGubox03A
+- id: a_SWGubox03A_1
+  category: artificial
+  textures:
+  - a_SWGubox03A
+- id: a_SWGubox03A_2
+  category: artificial
+  textures:
+  - a_SWGubox03A
+- id: a_SWGubox03A_3
+  category: artificial
+  textures:
+  - a_SWGubox03A
+- id: a_SWGubox03B
+  category: artificial
+  textures:
+  - a_SWGubox03A
+- id: a_SWGubox03C
+  category: artificial
+  textures:
+  - a_SWGubox03A
+  - a_SWGubox03C
+- id: a_SWGucave01
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+  - a_SWGucave01a
+  - a_SWGucave01
+- id: a_SWGudoor01
+  category: artificial
+  textures:
+  - a_SWGudoor01
+  - a_SWGudoor01a
+- id: a_SWGudoor02a
+  category: artificial
+  textures:
+  - a_SWGudoor02a
+  - a_SWGudoor02b
+- id: a_SWGudoor02a_01a
+  category: artificial
+  textures:
+  - a_SWGudoor02a
+  - a_SWGudoor02b
+- id: a_SWGudoor02b
+  category: artificial
+  textures:
+  - a_SWGudoor02c
+  - a_SWGudoor02a
+  - a_SWGudoor02d
+  - a_SWAball02a
+- id: a_SWGumirror01
+  category: artificial
+  textures:
+  - a_SWGumirror01
+- id: a_SWGusafe01
+  category: artificial
+  textures:
+  - a_SWGusafe01
+- id: a_SWGushelf01
+  category: artificial
+  textures:
+  - a_SWGushelf01
+  - a_SWGushelf02
+- id: a_SWGushelf02
+  category: artificial
+  textures:
+  - a_SWGushelf02
+- id: a_SWGushovel01
+  category: artificial
+  textures:
+  - a_SWGushovel01
+- id: a_SWGushovel02
+  category: artificial
+  textures:
+  - a_SWGushovel02
+- id: a_SWGushovel02a
+  category: artificial
+  textures:
+  - a_SWAball02a
+  - a_SWGushovel02
+- id: a_SWGutele01
+  category: artificial
+  textures:
+  - a_SWGutele01
+  - a_SWGutele02
+  - a_SWGutele03
+  - a_SWGutele04
+- id: a_SWGuthunder
+  category: artificial
+  textures:
+  - s_poolpost03
+- id: a_SWGuthunder01
+  category: artificial
+  textures:
+  - s_poolpost03
+- id: a_SWGutile01
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutile02
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutile03
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutile04
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutileffence01
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutileffence02
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutileffence03
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutilestair
+  category: artificial
+  textures:
+  - a_SWGutile01
+- id: a_SWGutorch01
+  category: artificial
+  textures:
+  - a_SWFstair01
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: a_SWGutorch02
+  category: artificial
+  textures:
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+  - a_SWFstair01
+  - a_bonfire02
+- id: a_SWGuwall01
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+  - sfx_common_flashlight1_yellow
+- id: a_SWGuwall01a
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall01b
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall01c
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall01d
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall01e
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall01f
+  category: artificial
+  textures:
+  - a_SWGuwall01a
+- id: a_SWGuwall01g
+  category: artificial
+  textures:
+  - a_SWGuwall01a
+  - a_SWGuwall01
+- id: a_SWGuwall01h
+  category: artificial
+  textures:
+  - a_SWGuwall01
+  - a_SWGuwall01a
+- id: a_SWGuwall02a
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+- id: a_SWGuwall02b
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02c
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02c
+- id: a_SWGuwall02d
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02e
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02f
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02g
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02h
+  category: artificial
+  textures:
+  - a_SWGuwall02d
+- id: a_SWGuwall02i
+  category: artificial
+  textures:
+  - a_SWGuwall02c
+- id: a_SWGuwall02j
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+- id: a_SWGuwall02k
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWGuwall02b
+- id: a_SWGuwall02l
+  category: artificial
+  textures:
+  - a_SWGuwall02a
+  - a_SWAball02a
+- id: a_SWGuwallcloth
+  category: artificial
+  textures:
+  - a_SWGuwall01a
+  - a_SWGuwallcloth
+- id: a_SWGuwood01A
+  category: artificial
+  textures:
+  - a_SWGuwood01A
+- id: a_SWGuwood01B
+  category: artificial
+  textures:
+  - a_SWGuwood01A
+- id: a_SWGuwood01C
+  category: artificial
+  textures:
+  - a_SWGuwood01A
+- id: a_SWGwall01A
+  category: artificial
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: a_SWGwell01
+  category: artificial
+  textures:
+  - a_SWGwell01
+- id: a_SWIbed01
+  category: artificial
+  textures:
+  - a_SWIbed01
+  - a_SWIbed02
+- id: a_SWIbed02
+  category: artificial
+  textures:
+  - a_SWIbed01
+  - a_SWIbed02
+- id: a_SWIbook01
+  category: artificial
+  textures:
+  - a_SWIbook02
+- id: a_SWIbook02
+  category: artificial
+  textures:
+  - a_SWIbook02
+- id: a_SWIbook02_02
+  category: artificial
+  textures:
+  - a_SWIbook02
+- id: a_SWIbooks03
+  category: artificial
+  textures:
+  - a_SWIchest02
+- id: a_SWIbooks04
+  category: artificial
+  textures:
+  - a_SWIbooks04
+- id: a_SWIbooks04_01
+  category: artificial
+  textures:
+  - a_SWIbooks04_01
+- id: a_SWIbooks04_02
+  category: artificial
+  textures:
+  - a_SWIbooks04_01
+- id: a_SWIbooth01
+  category: artificial
+  textures:
+  - a_SWIbooth01a
+  - a_SWIbooth01b
+  - s_SEstall_i
+  - a_SEshop01
+  - a_SEshop02
+  - a_SWItable02
+- id: a_SWIbooth01_1
+  category: artificial
+  textures:
+  - a_SWIbooth01a
+  - a_SWIbooth01b
+  - s_SEstall_i
+  - a_SEshop01
+  - a_SEshop02
+  - a_SWItable02
+  - s_SEstall_j
+  - s_SEstall_k
+- id: a_SWIbooth01_a
+  category: artificial
+  textures:
+  - s_SEstall_k
+- id: a_SWIbooth01_b
+  category: artificial
+  textures:
+  - s_SEstall_i
+- id: a_SWIbooth01_c
+  category: artificial
+  textures:
+  - s_SEstall_d
+- id: a_SWIbooth01_d
+  category: artificial
+  textures:
+  - s_SEstall_j
+- id: a_SWIbooth01_e
+  category: artificial
+  textures:
+  - a_SEshop02
+  - s_SEstall_f
+  - a_SEshop01
+  - a_SEnote
+- id: a_SWIbooth01_f
+  category: artificial
+  textures:
+  - s_SEstall_f
+- id: a_SWIchest01
+  category: artificial
+  textures:
+  - a_SWIbooks03
+- id: a_SWIchest02
+  category: artificial
+  textures:
+  - a_SWIchest02
+- id: a_SWIchest03
+  category: artificial
+  textures:
+  - a_SWIbooks03
+- id: a_SWIchest04
+  category: artificial
+  textures:
+  - a_SWIbooks03
+- id: a_SWIclean01
+  category: artificial
+  textures:
+  - a_SWIclean01
+- id: a_SWIclean01_01
+  category: artificial
+  textures:
+  - a_SWIclean01_01
+- id: a_SWIclean01_02
+  category: artificial
+  textures:
+  - a_SWIclean01_02
+- id: a_SWIclin01
+  category: artificial
+  textures:
+  - a_SWIclin01
+- id: a_SWIclin02
+  category: artificial
+  textures:
+  - a_SWIclin02
+- id: a_SWIclock01
+  category: artificial
+  textures:
+  - a_SWIclock01
+- id: a_SWIclock02
+  category: artificial
+  textures:
+  - c_SWIclock02
+- id: a_SWIclock03
+  category: artificial
+  textures:
+  - a_SWIclock03
+- id: a_SWIcook01
+  category: artificial
+  textures:
+  - a_SWIcook01
+  - a_SWIcook01-a
+- id: a_SWIcook02
+  category: artificial
+  textures:
+  - a_SWIcook02
+- id: a_SWIdesk04
+  category: artificial
+  textures:
+  - a_SWIdesk04
+- id: a_SWIdesk05
+  category: artificial
+  textures:
+  - a_SWIdesk05
+- id: a_SWIdesk06
+  category: artificial
+  textures:
+  - a_SWIdesk05
+- id: a_SWIdoor01
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+  - a_SWIwall02_01
+- id: a_SWIdoor01_01
+  category: artificial
+  textures:
+  - a_SCwall02
+  - a_SCwall01_02
+  - a_SWIdoor01
+- id: a_SWIdoor01_01_01
+  category: artificial
+  textures:
+  - a_SWIwashWall03
+  - a_SWIwashWall05
+  - a_SWIdoor01
+  - a_SWIwashWall01
+- id: a_SWIdoor01_02
+  category: artificial
+  textures:
+  - a_SWIdoor01
+- id: a_SWIdoor01_03
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+- id: a_SWIdoor01_03a
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor02
+- id: a_SWIdoor01_04
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+  - a_SWIdoor02
+- id: a_SWIdoor01_04aa
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+  - a_SWIdoor02
+  - a_SWIwall02_01
+- id: a_SWIdoor01_04aaa
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+  - a_SWIdoor02
+  - a_SWIwall02_01
+- id: a_SWIdrug02
+  category: artificial
+  textures:
+  - a_SWIdrug02
+- id: a_SWIfan01
+  category: artificial
+  textures:
+  - a_SWIfan01
+- id: a_SWIfan02
+  category: artificial
+  textures:
+  - a_SWIfan02
+  - a_SWIfan02_a
+- id: a_SWIflat01
+  category: artificial
+  textures:
+  - a_SWIflat01
+- id: a_SWIfoot01
+  category: artificial
+  textures:
+  - a_SWIfoot01
+  - a_SWIfoot01a
+- id: a_SWIframe02
+  category: artificial
+  textures:
+  - a_SWIframe02
+- id: a_SWIframe03
+  category: artificial
+  textures:
+  - a_SWIframe03
+- id: a_SWIframe04
+  category: artificial
+  textures:
+  - a_SWIframe04
+- id: a_SWIframe05
+  category: artificial
+  textures:
+  - a_SWIframe05
+- id: a_SWIfwpot02
+  category: artificial
+  textures:
+  - a_SWIfwpot02
+  - a_SWIfwpot02a
+- id: a_SWIfwpot03
+  category: artificial
+  textures:
+  - a_SWIfwpot03
+  - a_SWIfwpot04
+  - a_SWIfwpot04a
+- id: a_SWIfwpot04
+  category: artificial
+  textures:
+  - a_SWIfwpot04b
+  - a_SWIfwpot04
+  - a_SWIfwpot04a
+- id: a_SWIgen01
+  category: artificial
+  textures:
+  - a_SWIgen01
+- id: a_SWIgen02
+  category: artificial
+  textures:
+  - a_SWIgen02
+- id: a_SWIgen03
+  category: artificial
+  textures:
+  - a_SWIgen03
+- id: a_SWImap01
+  category: artificial
+  textures:
+  - a_SWImap02
+- id: a_SWImap02
+  category: artificial
+  textures:
+  - a_SWImap02_01
+- id: a_SWImap02_01
+  category: artificial
+  textures:
+  - a_SWImap02_01
+- id: a_SWImap03
+  category: artificial
+  textures:
+  - a_SWImap03
+  - a_SWImap03_02
+- id: a_SWImap03_02
+  category: artificial
+  textures:
+  - a_SWImap03_02
+- id: a_SWImap03_03
+  category: artificial
+  textures:
+  - a_SWImap03_02
+- id: a_SWImap04
+  category: artificial
+  textures:
+  - a_SWImap04
+  - a_SWImap04_a
+- id: a_SWImap05 _01
+  category: artificial
+  textures:
+  - a_SWImap05_01
+- id: a_SWImap05
+  category: artificial
+  textures:
+  - a_SWImap05
+  - a_SWImap05_a
+- id: a_SWIoven01
+  category: artificial
+  textures:
+  - a_SWIoven01
+  - a_SWIoven01_a
+- id: a_SWIpart01
+  category: artificial
+  textures:
+  - a_SWIbed01
+  - a_SWIbed02
+- id: a_SWIpart01_01
+  category: artificial
+  textures:
+  - a_SWIpart01
+- id: a_SWIrack01
+  category: artificial
+  textures:
+  - a_SWIrack01
+- id: a_SWIrack02
+  category: artificial
+  textures:
+  - a_SWIrack02
+- id: a_SWIrack03
+  category: artificial
+  textures:
+  - a_SWIrack03
+- id: a_SWIsafe01
+  category: artificial
+  textures:
+  - a_SWlsafe01
+- id: a_SWIsand01
+  category: artificial
+  textures:
+  - a_SWIsand01
+  - a_SWIsand02a
+- id: a_SWIsand02
+  category: artificial
+  textures:
+  - a_SWIsand02
+  - a_SWIsand02a
+- id: a_SWIscien01
+  category: artificial
+  textures:
+  - a_SWIdesk05
+- id: a_SWIsport01
+  category: artificial
+  textures:
+  - a_SWIsport01
+  - a_SEbasket03
+  - a_SWIsport03
+  - a_SWIsport02
+- id: a_SWIsport02
+  category: artificial
+  textures:
+  - a_SWIsport02
+- id: a_SWIsport03
+  category: artificial
+  textures:
+  - a_SWIsport03
+- id: a_SWIstair01
+  category: artificial
+  textures:
+  - a_SWIstair01a
+  - a_SWIstair01Tile
+  - a_SWIwall01_02
+  - s_SEmaina
+  - a_SCfloor01
+- id: a_SWIstair02
+  category: artificial
+  textures:
+  - a_SWIstair01a
+  - a_SWIstair01Tile
+  - a_SWIwall01_02
+  - s_SEmainj
+  - a_SCfloor01
+- id: a_SWIstair03
+  category: artificial
+  textures:
+  - a_SWIstair01a
+  - a_SCwall01
+  - a_SCfloor01
+- id: a_SWIstool01
+  category: artificial
+  textures:
+  - a_SWIstool01
+- id: a_SWItable01
+  category: artificial
+  textures:
+  - a_SWItable01
+- id: a_SWItable02
+  category: artificial
+  textures:
+  - a_SWItable02
+- id: a_SWItalk01
+  category: artificial
+  textures:
+  - a_SWItalk01
+- id: a_SWItalk02
+  category: artificial
+  textures:
+  - a_SWItalk02
+- id: a_SWItalk03
+  category: artificial
+  textures:
+  - a_SWItalk03
+- id: a_SWItstair01
+  category: artificial
+  textures:
+  - a_SWItstair01
+- id: a_SWIwall01
+  category: artificial
+  textures:
+  - a_SCwall01_02
+- id: a_SWIwall02
+  category: artificial
+  textures:
+  - a_SCwall01_02
+- id: a_SWIwall02_02
+  category: artificial
+  textures:
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_03
+  category: artificial
+  textures:
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_04
+  category: artificial
+  textures:
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_05
+  category: artificial
+  textures:
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+- id: a_SWIwall02_05a
+  category: artificial
+  textures:
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+- id: a_SWIwall02_06
+  category: artificial
+  textures:
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+- id: a_SWIwall02_07
+  category: artificial
+  textures:
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+- id: a_SWIwall02_08
+  category: artificial
+  textures:
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_09
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SCwall02
+  - a_SCwall01_02
+  - a_SWIwall02b
+- id: a_SWIwall02_10
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SCwall02
+  - a_SCwall01_02
+  - a_SWIwall02b
+- id: a_SWIwall02_11
+  category: artificial
+  textures:
+  - a_SWIwall02b
+  - a_SCwall01_02
+- id: a_SWIwall02_12
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_13
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SCwall02
+  - a_SCwall01_02
+  - a_SWIwall02b
+- id: a_SWIwall02_13a
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+  - a_SWIwall02b
+- id: a_SWIwall02_14
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SWIwall01_02
+  - a_SWIwall02b
+  - a_SCwall01_02
+- id: a_SWIwall02_15
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SCwall02
+  - a_SCwall01_02
+- id: a_SWIwall02_15a
+  category: artificial
+  textures:
+  - a_SWIwall02_01
+  - a_SWIwall01_01
+  - a_SWIwall01_02
+- id: a_SWIwash01
+  category: artificial
+  textures:
+  - a_SWIwash01
+- id: a_SWIwashWall01
+  category: artificial
+  textures:
+  - a_SWIwashWall03
+  - a_SWIwashWall01
+- id: a_SWIwashWall02
+  category: artificial
+  textures:
+  - a_SWIwashWall01
+- id: a_SWIwashWall03
+  category: artificial
+  textures:
+  - a_SWIwashWall03
+  - a_SWIwashWall01
+- id: a_SWIwashWall04
+  category: artificial
+  textures:
+  - a_SWIwashWall04
+- id: a_SWIwashWall05
+  category: artificial
+  textures:
+  - a_SWIwashWall01
+- id: a_SWIwashWall06
+  category: artificial
+  textures:
+  - a_SWIwashWall02
+- id: a_SWIwat04
+  category: artificial
+  textures:
+  - a_SWIwat04
+  - a_SWIwat04a
+  - a_SWIwat04b
+- id: a_SWIwater01
+  category: artificial
+  textures:
+  - a_SWIwater01
+- id: a_SWIwater02
+  category: artificial
+  textures:
+  - a_SWIwater02
+- id: a_SWIwater03
+  category: artificial
+  textures:
+  - a_SWIwater03
+- id: a_SWIwb01
+  category: artificial
+  textures:
+  - a_SWlsafe01
+- id: a_SWIwb02
+  category: artificial
+  textures:
+  - a_SWldesk01
+- id: a_SWTc01
+  category: artificial
+  textures:
+  - a_SWTc01
+- id: a_SWTc02
+  category: artificial
+  textures:
+  - a_SWTc02
+- id: a_SWTcen01
+  category: artificial
+  textures:
+  - a_SWTcen01
+  - a_SWTcen01a
+  - a_SWTcen01b
+  - a_SWTpart01a
+  - a_SEbstair01c
+- id: a_SWTcen01_a_SWTpart01~a_SWTcen01_a_SWTpart05
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+  - a_SWTcen01
+  - a_SWTcen01a
+  - a_SWTcen01b
+- id: a_SWTcgen01
+  category: artificial
+  textures:
+  - a_SWTcgen01_a
+  - a_SWTcgen01_b
+- id: a_SWTcwall
+  category: artificial
+  textures:
+  - s_SWTcwall
+- id: a_SWTcwall01
+  category: artificial
+  textures:
+  - s_SWTcwall
+  - n_SWTivy
+  - n_SWTgrass02
+- id: a_SWTcwall02
+  category: artificial
+  textures:
+  - s_SWTcwall
+  - n_SWTivy
+  - n_SWTgrass02
+- id: a_SWTcwall03
+  category: artificial
+  textures:
+  - s_SWTcwall
+  - n_SWTivy
+  - n_SWTgrass02
+- id: a_SWTcwall04
+  category: artificial
+  textures:
+  - s_SWTcwall
+  - n_SWTivy
+  - n_SWTgrass02
+- id: a_SWTcwall05
+  category: artificial
+  textures:
+  - s_SWTcwall
+- id: a_SWTgate01
+  category: artificial
+  textures:
+  - a_SWTgate01A
+  - a_SWTgate01B
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTgate01C
+  - a_SWTwall01D
+- id: a_SWTgate02
+  category: artificial
+  textures:
+  - a_SWTwall01C
+  - a_SWTgate01B
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01D
+- id: a_SWTgen01
+  category: artificial
+  textures:
+  - a_SWTgen01
+  - n_SWTgrass01
+  - a_SWTwall01D
+  - a_SWTwall01E
+  - a_SWTwall01F
+- id: a_SWTgen02
+  category: artificial
+  textures:
+  - a_SWTgen02_a
+  - a_SWTgen02
+- id: a_SWTlamp01
+  category: artificial
+  textures:
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_cyan_02
+  - a_SWTlamp01
+- id: a_SWTomb01
+  category: artificial
+  textures:
+  - a_SWTomb01
+  - n_SWTgrass01
+- id: a_SWTomb02
+  category: artificial
+  textures:
+  - a_SWTomb02
+  - n_SWTgrass01
+- id: a_SWTomb04
+  category: artificial
+  textures:
+  - a_SWTomb04
+  - n_SWTgrass01
+- id: a_SWTomb05
+  category: artificial
+  textures:
+  - a_SWTomb05
+  - n_SWTgrass01
+- id: a_SWTomb06
+  category: artificial
+  textures:
+  - a_SWTomb06
+  - n_SWTgrass01
+- id: a_SWTomb07
+  category: artificial
+  textures:
+  - a_SWTomb07
+  - n_SWTgrass01
+- id: a_SWTomb08
+  category: artificial
+  textures:
+  - a_SWTomb08
+  - n_SWTgrass01
+- id: a_SWTomb09
+  category: artificial
+  textures:
+  - a_SWTomb09
+  - n_SWTgrass01
+- id: a_SWTomb10
+  category: artificial
+  textures:
+  - a_SWTomb10
+  - n_SWTgrass01
+- id: a_SWTomb11
+  category: artificial
+  textures:
+  - a_SWTomb08
+  - n_SWTgrass01
+- id: a_SWTpart01
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+- id: a_SWTpart01a
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb08
+  - a_SWTomb07
+  - a_SWTomb10
+  - n_SWTgrass01
+  - a_SWTomb04a
+- id: a_SWTpart02
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+- id: a_SWTpart02a
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+  - n_SWTgrass01
+  - a_SWTomb08
+  - a_SWTomb09
+  - a_SWTomb07
+  - a_SWTomb10
+  - a_SWTomb02
+- id: a_SWTpart03
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+- id: a_SWTpart03a
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTomb02
+  - a_SWTomb04a
+  - a_SWTomb09
+  - n_SWTgrass01
+  - a_SWTomb04
+  - a_SWTomb08
+  - a_SWTpart01a
+  - a_SWTomb10
+- id: a_SWTpart04
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+- id: a_SWTpart04a
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+  - a_SWTomb08
+  - n_SWTgrass01
+  - a_SWTomb09
+  - a_SWTomb05
+- id: a_SWTpart05
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+- id: a_SWTpart05a
+  category: artificial
+  textures:
+  - a_SWTpart01
+  - a_SWTpart01a
+  - a_SWTomb04a
+  - a_SWTomb01
+  - n_SWTgrass01
+  - a_SWTomb04
+  - a_SWTomb06
+- id: a_SWTrgate01
+  category: artificial
+  textures:
+  - a_SWTrgate01A
+  - a_SWTrgate01B
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWTsetA
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - a_SWTsetB02
+  - a_stairkc
+- id: a_SWTsetB01
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - n_grass02
+- id: a_SWTsetB02
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - n_grass02
+- id: a_SWTsetB03
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - n_grass02
+- id: a_SWTsetB04
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - n_grass02
+- id: a_SWTsetB05
+  category: artificial
+  textures:
+  - a_SWTsetB01
+  - n_grass02
+- id: a_SWTudoor02
+  category: artificial
+  textures:
+  - a_SWTudoor02
+  - a_SWTudoor02a
+- id: a_SWTudoor02c
+  category: artificial
+  textures:
+  - a_SWFwall02
+- id: a_SWTwall01
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01D
+  - n_SWTgrass02
+- id: a_SWTwall02
+  category: artificial
+  textures:
+  - a_SWTwall01C
+- id: a_SWTwall03
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - n_SWTgrass02
+- id: a_SWTwall04
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01D
+  - n_SWTgrass02
+- id: a_SWTwall05
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01C
+  - a_SWTwall01D
+  - n_SWTgrass02
+- id: a_SWTwall06
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01C
+  - a_SWTwall01D
+  - n_SWTgrass02
+- id: a_SWTwall07
+  category: artificial
+  textures:
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01C
+  - a_SWTwall01D
+  - n_SWTgrass02
+- id: a_SWWgate01
+  category: artificial
+  textures:
+  - a_SWWgate
+  - n_SWEwtree01d
+  - sfx_common_flashlight1_cyan_02
+- id: a_SWWgate02
+  category: artificial
+  textures:
+  - a_SWWgate
+  - n_SWEwtree01d
+  - sfx_common_flashlight1_cyan_02
+- id: a_SWlaff01
+  category: artificial
+  textures:
+  - a_SWlaff01
+- id: a_SWldesk01
+  category: artificial
+  textures:
+  - a_SWldesk01
+- id: a_SWldesk02
+  category: artificial
+  textures:
+  - a_SWldesk02
+- id: a_SWldesk03
+  category: artificial
+  textures:
+  - a_SWldesk03
+- id: a_SWldoor01_05
+  category: artificial
+  textures:
+  - a_SCwall01_02
+  - a_SWIdoor01
+  - s_SWEmain01b
+- id: a_SWltdesk01
+  category: artificial
+  textures:
+  - a_SWltdesk01
+- id: a_Seffence01c
+  category: artificial
+  textures:
+  - a_SEffence01
+- id: a_Seffence01d
+  category: artificial
+  textures:
+  - a_SEffence01
+- id: a_SwTgate01_1
+  category: artificial
+  textures:
+  - a_SWTgate01A
+  - a_SWTgate01B
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTgate01C
+  - a_SWTwall01D
+- id: a_SwTgate02_1
+  category: artificial
+  textures:
+  - a_SWTwall01C
+  - a_SWTgate01B
+  - a_SWTwall01A
+  - a_SWTwall01B
+  - a_SWTwall01D
+- id: a_book01
+  category: artificial
+  textures:
+  - a_bookcounter_04
+- id: a_book02
+  category: artificial
+  textures:
+  - a_bookcounter_04
+- id: a_book03
+  category: artificial
+  textures:
+  - a_bookcounter_04
+- id: a_book04
+  category: artificial
+  textures:
+  - a_bookcounter_04
+- id: a_bookcase01
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+- id: a_bookcase02
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase03
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+  - a_bookcase_04
+- id: a_bookcase04
+  category: artificial
+  textures:
+  - a_bookcase_05
+  - a_bookcase_02
+  - a_bookcase_06
+  - a_bookcase_03
+- id: a_bookcase05
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase06
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase07
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase08
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase09
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase10
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+- id: a_bookcase11
+  category: artificial
+  textures:
+  - a_bookcase_01
+  - a_bookcase_04
+- id: a_bookcounter
+  category: artificial
+  textures:
+  - a_bookcounter_01
+  - a_bookcounter_02
+  - a_bookcounter_03
+  - a_bookcounter_04
+  - a_bookcounter_05
+- id: a_bookgate
+  category: artificial
+  textures:
+  - a_bookgate
+- id: a_bookgate01
+  category: artificial
+  textures:
+  - a_bookgate
+  - a_bookgate01b
+- id: a_bookgate02
+  category: artificial
+  textures:
+  - a_bookgate01b
+- id: a_bridge01
+  category: artificial
+  textures:
+  - a_bridge01
+- id: a_bridge02
+  category: artificial
+  textures:
+  - a_bridge02
+- id: a_enpillar01
+  category: artificial
+  textures:
+  - a_enpillar01
+- id: a_fd05door01
+  category: artificial
+  textures:
+  - a_gate01
+  - a_stairs13
+  - a_stairs14
+  - a_stairs_1
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+  - a_bonfire02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire03
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_cyan_02
+- id: a_fd05door01a
+  category: artificial
+  textures:
+  - a_gate01
+  - a_stairs13
+  - a_stairs14
+  - a_stairs_1
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+  - a_bonfire02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire03
+  - sfx_common_flashlight1_cyan_02
+  - sfx_common_flashlight1_cyan
+- id: a_fd05door02
+  category: artificial
+  textures:
+  - a_gate01
+  - a_stairs13
+  - a_stairs14
+  - a_stairs_1
+  - a_bookcase_01
+  - a_bookcase_02
+  - a_bookcase_03
+  - a_bonfire02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire03
+  - sfx_common_flashlight1_cyan_02
+  - sfx_common_flashlight1_cyan
+- id: a_fd05stair
+  category: artificial
+  textures:
+  - a_fd05stair
+- id: a_flat01
+  category: artificial
+  textures:
+  - a_flat01
+- id: a_flowerbed01
+  category: artificial
+  textures:
+  - a_flowerbed01
+- id: a_flowerbed02
+  category: artificial
+  textures:
+  - a_flowerbed01
+- id: a_flowerbed03
+  category: artificial
+  textures:
+  - a_flowerbed02a
+  - a_flowerbed02
+  - a_flowerbed03
+  - a_flowerbed04
+  - a_flowerbed05
+  - a_flowerbed06
+  - a_flowerbed07
+- id: a_fountain01
+  category: artificial
+  textures:
+  - a_fountain01
+  - sfx_fountain01
+  - sfx_fountain04_longparticle
+  - sfx_fountain03
+  - sfx_fountain02
+  - sfx_bucket02
+  - sfx_fountain_particle
+  - a_fountain02
+- id: a_garden01
+  category: artificial
+  textures:
+  - a_garden01a
+  - a_garden01b
+  - a_garden01c
+  - a_garden01d
+  - a_garden01e
+  - a_garden01f
+- id: a_garden02
+  category: artificial
+  textures:
+  - a_garden01c
+  - a_garden01f
+  - a_garden01e
+- id: a_garden03_1
+  category: artificial
+  textures:
+  - a_garden03a
+  - a_garden03b
+- id: a_garden03_2
+  category: artificial
+  textures:
+  - a_garden03a
+- id: a_garden04
+  category: artificial
+  textures:
+  - a_garden04
+- id: a_globe01
+  category: artificial
+  textures:
+  - a_globe01A
+  - a_globe01B
+- id: a_greendoor01
+  category: artificial
+  textures:
+  - a_greendoor01
+- id: a_greendoor02
+  category: artificial
+  textures:
+  - a_greendoor02
+- id: a_greenwall01
+  category: artificial
+  textures:
+  - a_greenpillar
+  - a_greenwall01
+- id: a_keypillar01
+  category: artificial
+  textures:
+  - a_keypillar01
+- id: a_lamp02
+  category: artificial
+  textures:
+  - a_lamp02A
+  - a_lamp02B
+- id: a_manhole01
+  category: artificial
+  textures:
+  - a_manhole01
+- id: a_paper01
+  category: artificial
+  textures:
+  - a_paper01
+- id: a_paper02
+  category: artificial
+  textures:
+  - a_paper01
+- id: a_paper03
+  category: artificial
+  textures:
+  - a_paper03
+- id: a_paper04
+  category: artificial
+  textures:
+  - a_paper03
+- id: a_scare01
+  category: artificial
+  textures:
+  - a_scare01
+- id: a_scare02
+  category: artificial
+  textures:
+  - a_scare01
+- id: a_sccelling01
+  category: artificial
+  textures:
+  - a_sccelling01
+- id: a_sccelling02
+  category: artificial
+  textures:
+  - a_sccelling01
+- id: a_sccelling03
+  category: artificial
+  textures:
+  - a_sccelling01
+- id: a_sccelling04
+  category: artificial
+  textures:
+  - a_sccelling01
+- id: a_scgen46
+  category: artificial
+  textures:
+  - a_SCgen46
+- id: a_scgen48
+  category: artificial
+  textures:
+  - a-scgen48
+- id: a_scpic01
+  category: artificial
+  textures:
+  - a_SCpic01
+- id: a_scpic02
+  category: artificial
+  textures:
+  - a_SCpic02
+- id: a_sctr03
+  category: artificial
+  textures:
+  - a_sctr03
+- id: a_sctr03_1
+  category: artificial
+  textures:
+  - a_sctr03
+- id: a_sebasket01
+  category: artificial
+  textures:
+  - a_SEbasket01
+- id: a_sebasket02
+  category: artificial
+  textures:
+  - a_SEbasket02A
+  - a_SEbasket02B
+- id: a_sebasket03
+  category: artificial
+  textures:
+  - a_SEbasket03
+- id: a_sebasket04
+  category: artificial
+  textures:
+  - a_sebasket04
+- id: a_sebasket05
+  category: artificial
+  textures:
+  - a_sebasket05
+  - a_SEwalls01
+  - a_sewirefence01
+  - a_SEwirefence02
+- id: a_sebigwb01
+  category: artificial
+  textures:
+  - a_sebigw01
+- id: a_sefire01
+  category: artificial
+  textures:
+  - a_SEfire01
+  - a_SEfire01_1
+  - a_SEfire01_2
+- id: a_sefire02
+  category: artificial
+  textures:
+  - a_SEfire02
+- id: a_sefire03
+  category: artificial
+  textures:
+  - a_sefire04
+- id: a_sefire04
+  category: artificial
+  textures:
+  - a_sefire03
+- id: a_selamp01
+  category: artificial
+  textures:
+  - a_SElamp01-alpa
+  - a_SElamp01
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_cyan_01
+- id: a_separt01
+  category: artificial
+  textures:
+  - a_separt02
+- id: a_separt02
+  category: artificial
+  textures:
+  - a_separt02
+- id: a_sewb02
+  category: artificial
+  textures:
+  - a_SEwb02
+- id: a_sewirefence01
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SEwirefenceC
+- id: a_sewirefence02
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+- id: a_sewirefence03
+  category: artificial
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+- id: a_spiderline01
+  category: artificial
+  textures:
+  - a_spiderline01
+- id: a_spiderline02
+  category: artificial
+  textures:
+  - a_spiderline01
+- id: a_spiderline03
+  category: artificial
+  textures:
+  - a_spiderline01
+- id: a_spiderline04
+  category: artificial
+  textures:
+  - a_spiderline01
+- id: a_spiderline05
+  category: artificial
+  textures:
+  - a_spiderline01
+- id: a_stairs05
+  category: artificial
+  textures:
+  - a_stairs12
+  - a_bookgate02_1
+  - a_stairkc
+- id: a_stairs05_1
+  category: artificial
+  textures:
+  - a_stairs12
+  - a_bookgate02_1
+  - a_stairkc
+- id: a_treefence01
+  category: artificial
+  textures:
+  - a_treefence01
+  - a_treefence02
+- id: a_tube01
+  category: artificial
+  textures:
+  - a_tube01a
+  - a_tube01
+  - ct0011
+  - a_tube03a
+- id: a_tube01_01
+  category: artificial
+  textures:
+  - a_tube01a
+  - a_tube01
+  - ct0011
+  - a_tube03a
+- id: a_tube01_02
+  category: artificial
+  textures:
+  - a_tube01a
+  - a_tube01
+  - ct0011
+  - a_tube03a
+- id: a_tube02
+  category: artificial
+  textures:
+  - a_tube04a
+  - a_tube04
+  - ct0011
+  - a_tube02a
+- id: a_tube02_01
+  category: artificial
+  textures:
+  - a_tube04a
+  - a_tube04
+  - ct0011
+  - a_tube02a
+- id: a_tube02_02
+  category: artificial
+  textures:
+  - a_tube04a
+  - a_tube04
+  - ct0011
+  - a_tube02a
+- id: a_tunnelmachine01
+  category: artificial
+  textures:
+  - a_tunnelmachine01
+- id: a_tunnelmachine02
+  category: artificial
+  textures:
+  - a_tunnelmachine02_01
+  - a_tunnelmachine02_02
+  - a_tunnelmachine02_button
+  - a_tunnelmachine02_dust
+- id: a_tunnelmachine03
+  category: artificial
+  textures:
+  - a_tunnelmachine03_1
+  - a_tunnelmachine03_2
+- id: a_tunnelmachine04
+  category: artificial
+  textures:
+  - a_tunnelmachine04_01
+  - a_tunnelmachine04_02
+- id: a_tunnelroom_wall01
+  category: artificial
+  textures:
+  - a_tunnelroom_wall01
+  - a_tunnelroom_wall02
+  - a_tunnelroom_wall03
+  - a_tunnelwall_wirenet
+- id: a_tunnelroom_wall02
+  category: artificial
+  textures:
+  - a_tunnelroom_wall01
+  - a_tunnelroom_wall02
+  - a_tunnelroom_wall03
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_pipe
+- id: a_tunnelroom_wall03
+  category: artificial
+  textures:
+  - a_tunnelroom_wall01
+  - a_tunnelroom_wall02
+  - a_tunnelroom_wall03
+  - a_tunnelwall_wirenet
+- id: a_tunnelroom_wall04
+  category: artificial
+  textures:
+  - a_tunnelroom_wall01
+  - a_tunnelroom_wall02
+  - a_tunnelroom_wall03
+  - a_tunnelwall_wirenet
+- id: a_tunnelwall01
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_projection
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+- id: a_tunnelwall02
+  category: artificial
+  textures:
+  - a_tunnelwall_wall02
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_post
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+  - a_tunnelwall_lamp
+- id: a_tunnelwall03
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_coner02
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+  - a_tunnelwall_projection
+- id: a_tunnelwall04
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_coner01
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+- id: a_tunnelwall05
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_projection
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+- id: a_tunnelwall06
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_post
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+  - a_tunnelwall_projection
+  - a_tunnelwall_wall03
+  - a_tunnelwall_wall04
+  - a_tunnelwall_wall05
+  - a_tunnelwall_floor_02
+- id: a_tunnelwall06_1
+  category: artificial
+  textures:
+  - a_tunnelwall_wall01
+  - a_tunnelwall_pipe
+  - a_tunnelwall_floor
+  - a_tunnelwall_post
+  - a_tunnelwall_wirenet
+  - a_tunnelwall_back
+  - a_tunnelwall_projection
+  - a_tunnelwall_wall03
+  - a_tunnelwall_wall04
+  - a_tunnelwall_wall05
+  - a_tunnelwall_floor_02
+- id: a_viancagate
+  category: artificial
+  textures:
+  - a_viancagate_1
+  - a_viancagate_2
+  - a_viancawall02
+  - a_viancawall03
+- id: a_viancawall01
+  category: artificial
+  textures:
+  - a_viancagate_1
+  - a_viancawall01
+  - a_viancawall02
+  - a_viancawall03
+- id: a_viancawall01_1
+  category: artificial
+  textures:
+  - a_viancagate_1
+  - a_viancawall01
+  - a_viancawall02
+  - a_viancawall03
+- id: a_viancawall01_2
+  category: artificial
+  textures:
+  - a_viancagate_1
+  - a_viancawall01
+  - a_viancawall02
+  - a_viancawall03
+- id: a_wbucket01
+  category: artificial
+  textures:
+  - a_wbucket01
+  - sfx_fountain02
+  - sfx_bucket01
+  - sfx_bucket02
+- id: a_wbucket01_a
+  category: artificial
+  textures:
+  - a_wbucket01
+- id: bf_01
+  category: artificial
+  textures:
+  - bf_01
+  - bf_01a
+  - bf_a
+- id: c_SCchair04_a
+  category: artificial
+  textures:
+  - c_SCchair04
+- id: fish_01
+  category: artificial
+  textures:
+  - fish
+- id: fish_02
+  category: artificial
+  textures:
+  - fish
+- id: lightningbug_01
+  category: artificial
+  textures:
+  - bf_a
+- id: m_endoor01
+  category: artificial
+  textures:
+  - m_endoor01
+- id: n_ESWpond01
+  category: artificial
+  textures:
+  - n_ESWpond01a
+  - n_ESWpond01b
+  - n_ESWtree01d
+- id: n_ESWtree01
+  category: artificial
+  textures:
+  - n_ESWtree01a
+  - n_ESWtree01d
+  - n_ESWtree01e
+  - n_ESWtree01f
+  - n_ESWtree01g
+  - yellow light
+  - n_ESWtree02effect01a
+- id: n_ESWtree02
+  category: artificial
+  textures:
+  - n_ESWtree01a
+  - n_ESWtree01b
+  - n_ESWtree01c
+- id: n_ESWtree02a
+  category: artificial
+  textures:
+  - n_ESWtree02effect01a
+- id: n_SWCgrass01
+  category: artificial
+  textures:
+  - n_SWCgrass01
+- id: n_SWCgrass02
+  category: artificial
+  textures:
+  - n_SWCgrass01
+- id: n_SWCgrass03
+  category: artificial
+  textures:
+  - n_SWCgrass01
+- id: n_SWEtree03-a
+  category: artificial
+  textures:
+  - n_SWEtree03-a
+- id: n_SWEtree03-b
+  category: artificial
+  textures:
+  - n_SWEtree03-a
+- id: n_SWWtree_e
+  category: artificial
+  textures:
+  - sfx_sunlight
+  - sfx_common_flashlight1_cyan_02
+- id: sunlight
+  category: artificial
+  textures:
+  - sfx_sunlight
+  - sfx_common_flashlight1_cyan
+- id: wground
+  category: artificial
+  textures:
+  - a_fountain02
+- id: n_ESDantique
+  category: nature
+  textures:
+  - n_ESDantique09
+  - n_ESDantique02
+  - n_ESDantique03
+  - n_ESDantique05
+  - n_ESDantique01
+  - n_ESDantique04
+  - n_ESDantique06
+  - n_ESDantique07
+  - n_ESWtree01b
+  - n_ESWtree01c
+  - n_ESDantique12
+  - n_ESDantique16
+  - n_ESDantique17
+  - n_ESDantique13
+  - n_ESDantique14
+  - n_ESDantique15
+  - n_ESDantique11
+- id: n_ESDbranch01
+  category: nature
+  textures:
+  - n_ESDbranch01
+  - n_ESDtree01_a
+  - n_ESDtree01_o2
+- id: n_ESDtree01
+  category: nature
+  textures:
+  - n_ESDtree01_g4
+  - n_ESDtree01_g1
+  - n_ESDtree01_g2
+  - n_ESDtree01_g3
+  - n_ESDtree01_o2
+  - n_ESDtree01_d1
+  - n_ESDtree01_c2
+  - n_ESDtree01_e2
+  - n_ESDtree01_a
+  - n_ESDtree01_b
+  - n_ESDtree01_f1
+  - a_ESDmachine01
+- id: n_SEatree01
+  category: nature
+  textures:
+  - n_SEatree01
+  - n_SEatree01_c
+- id: n_SEatree01_01
+  category: nature
+  textures:
+  - n_SEatree01_01
+  - n_SEatree01_c_01
+  - n_SEbtree01_b
+- id: n_SEatree02
+  category: nature
+  textures:
+  - n_SEatree02
+  - n_SEatree01_c
+- id: n_SEatree02_01
+  category: nature
+  textures:
+  - n_SEatree01_01
+  - n_SEatree01_c_01
+  - n_SEbtree01_b
+- id: n_SEatree03
+  category: nature
+  textures:
+  - n_SEatree03
+  - n_SEatree01_c
+- id: n_SEatree03_01
+  category: nature
+  textures:
+  - n_SEatree01_01
+  - n_SEatree01_c_01
+  - n_SEbtree01_b
+- id: n_SEbtree01
+  category: nature
+  textures:
+  - n_SEbtree01_e
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_SEbtree02
+  category: nature
+  textures:
+  - n_SEbtree01_e
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_SEbtree02_event01
+  category: nature
+  textures:
+  - n_SEbtree01_e_chrirtmas
+  - n_SEbtree01_e_chrirtmas01
+  - sfx_common_flashlight1_yellow
+  - sfx_common_lightstar2_yellow
+  - sfx_common_lightstar2_cyan
+  - sfx_common_flashlight1_blue
+  - sfx_common_flashlight1_red
+  - n_SEbtree01_e_chrirtmas02
+  - n_SEbtree01_e_chrirtmas03
+  - sfx_common_flashlight1_cyan
+- id: n_SEbtree03
+  category: nature
+  textures:
+  - n_SEbtree01_e
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_SEctree01
+  category: nature
+  textures:
+  - n_SEctree01_c
+  - n_SEctree01_a
+- id: n_SEctree02
+  category: nature
+  textures:
+  - n_SEctree01_c
+  - n_SEctree01_a
+- id: n_SEctree03
+  category: nature
+  textures:
+  - n_SEctree01_c
+  - n_SEctree01_a
+- id: n_SEgarden01
+  category: nature
+  textures:
+  - a_SEgarden01
+  - n_e3gardentree01
+- id: n_SWCdtree01
+  category: nature
+  textures:
+  - s_SWCdtree01
+  - s_SWCdtree01-a
+- id: n_SWCdtree02
+  category: nature
+  textures:
+  - s_SWCdtree01
+  - s_SWCdtree01-a
+- id: n_SWCdtree03
+  category: nature
+  textures:
+  - s_SWCdtree01
+  - s_SWCdtree01-a
+- id: n_SWCroot02
+  category: nature
+  textures:
+  - s_SWCdtree01
+  - n_SWCroot02
+- id: n_SWEtree03-a
+  category: nature
+  textures:
+  - n_SWEtree03-a
+- id: n_SWEtree03-b
+  category: nature
+  textures:
+  - n_SWEtree03-a
+- id: n_SWEwtree01
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+  - n_SWEwtree01d
+  - n_SEbtree01_b
+- id: n_SWEwtree02
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWEwtree03
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01e
+  - n_SWEwtree01f
+- id: n_SWEwtree04
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWEwtree04a
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWEwtree04a_01
+  category: nature
+  textures:
+  - a_SWEwtree_c
+- id: n_SWEwtree04a_02
+  category: nature
+  textures:
+  - a_SWEwtree_c
+- id: n_SWEwtree05
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWEwtree06
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWEwtree07
+  category: nature
+  textures:
+  - n_SWEwtree01a
+  - n_SWEwtree01f
+  - n_SWEwtree01e
+- id: n_SWFgogra01
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+- id: n_SWFgogra01a
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+- id: n_SWFgogra01b
+  category: nature
+  textures:
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - n_SWFgogra01
+- id: n_SWFgogra01c
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+- id: n_SWFgogra02
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra02a
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra02b
+  category: nature
+  textures:
+  - n_SWFgogra01
+  - n_SWFgogra02
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra02c
+  category: nature
+  textures:
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+  - n_SWFgogra01
+  - n_SWFgogra02
+- id: n_SWFgogra03
+  category: nature
+  textures:
+  - n_SWFgogra02
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra03a
+  category: nature
+  textures:
+  - n_SWFgogra02
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra03b
+  category: nature
+  textures:
+  - n_SWFgogra02
+- id: n_SWFgogra03c
+  category: nature
+  textures:
+  - n_SWFgogra02
+- id: n_SWFgogra03d
+  category: nature
+  textures:
+  - n_SWFgogra02
+- id: n_SWFgogra04a
+  category: nature
+  textures:
+  - n_SWFgogra04
+  - n_SWFgogra05
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+- id: n_SWFgogra04b
+  category: nature
+  textures:
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - n_SWFgogra04
+  - n_SWFgogra05
+- id: n_SWFgogra04c
+  category: nature
+  textures:
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - n_SWFgogra04
+  - n_SWFgogra05
+- id: n_SWFgogra05a
+  category: nature
+  textures:
+  - n_SWFgogra04
+  - n_SWFgogra05
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra05b
+  category: nature
+  textures:
+  - sfx_common_flashlight1_purple
+  - sfx_common_flashlight1_red
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+  - n_SWFgogra04
+  - n_SWFgogra05
+- id: n_SWFgogra05c
+  category: nature
+  textures:
+  - n_SWFgogra04
+  - n_SWFgogra05
+- id: n_SWFgogra06a
+  category: nature
+  textures:
+  - n_SWFgogra05
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_yellow
+- id: n_SWFgogra06b
+  category: nature
+  textures:
+  - n_SWFgogra05
+- id: n_SWFgogra06c
+  category: nature
+  textures:
+  - n_SWFgogra05
+- id: n_SWFgogra06d
+  category: nature
+  textures:
+  - n_SWFgogra05
+- id: n_SWFgomush03
+  category: nature
+  textures:
+  - n_SWFgomush
+- id: n_SWFgomush04
+  category: nature
+  textures:
+  - n_SWFgomush
+- id: n_SWFgomush05
+  category: nature
+  textures:
+  - n_SWFgomush
+- id: n_SWGplant01
+  category: nature
+  textures:
+  - n_SWGplant01
+- id: n_SWGplant02
+  category: nature
+  textures:
+  - n_SWGplant01
+- id: n_SWGplant03
+  category: nature
+  textures:
+  - n_SWGplant01
+- id: n_SWGptree01
+  category: nature
+  textures:
+  - n_SWGptree01
+  - n_SWGptree01a
+  - n_SWGptree01b
+- id: n_SWGptree02
+  category: nature
+  textures:
+  - n_SWGptree01
+  - n_SWGptree01a
+  - n_SWGptree01b
+- id: n_SWGreed01
+  category: nature
+  textures:
+  - n_SWGreed01
+- id: n_SWGreed02
+  category: nature
+  textures:
+  - n_SWGreed01
+- id: n_SWTgrass01
+  category: nature
+  textures:
+  - n_SWTgrass01
+- id: n_SWTgrass02a
+  category: nature
+  textures:
+  - n_SWTgrass02
+- id: n_SWTgrass02b
+  category: nature
+  textures:
+  - n_SWTgrass02
+- id: n_SWTgrass02c
+  category: nature
+  textures:
+  - n_SWTgrass02
+- id: n_SWTstone01a
+  category: nature
+  textures:
+  - n_SWTstone01
+- id: n_SWTstone01b
+  category: nature
+  textures:
+  - n_SWTstone01
+- id: n_SWTstone01c
+  category: nature
+  textures:
+  - n_SWTstone01
+- id: n_SWTstone01d
+  category: nature
+  textures:
+  - n_SWTstone01
+- id: n_SWWduckweed
+  category: nature
+  textures:
+  - n_SWWduckweed
+- id: n_SWWpool01
+  category: nature
+  textures:
+  - n_SWWpool01
+  - n_SWWpool03
+- id: n_SWWpool02
+  category: nature
+  textures:
+  - n_SWWpool02
+  - n_SWWpool03
+- id: n_SWWtree
+  category: nature
+  textures:
+  - n_SWWtree01
+  - n_SWWtree02
+  - n_SWEwtree01b
+  - n_SWWtree03
+  - n_SWEwtree01d
+  - n_SWTstone02
+  - n_SWWtree04
+  - a_SWEwtree_c
+- id: n_bigrock01
+  category: nature
+  textures:
+  - n_bigrock01
+- id: n_bigrock02
+  category: nature
+  textures:
+  - n_bigrock01
+- id: n_bigtree01
+  category: nature
+  textures:
+  - n_bigtree01a
+  - n_bigtree01b
+  - n_bigtree01c
+  - n_bigtree01d
+- id: n_bigtree02
+  category: nature
+  textures:
+  - n_bigtree01c
+  - n_bigtree02a
+  - n_bigtree02b
+  - n_bigtree01a
+  - n_bigtree01d
+  - n_bigtree02c
+- id: n_bigtree03
+  category: nature
+  textures:
+  - n_bigtree03a
+  - n_bigtree03b
+  - n_bigtree03c
+- id: n_deadtree01
+  category: nature
+  textures:
+  - n_deadtree01
+  - n_grass02
+- id: n_deadtree02
+  category: nature
+  textures:
+  - n_deadtree01
+  - n_grass02
+- id: n_deadtree03
+  category: nature
+  textures:
+  - n_deadtree01
+  - n_grass02
+- id: n_duckweed01
+  category: nature
+  textures:
+  - n_duckweed01
+- id: n_duckweed01A
+  category: nature
+  textures:
+  - n_duckweed01
+- id: n_duckweed01B
+  category: nature
+  textures:
+  - n_duckweed01B
+- id: n_duckweed01C
+  category: nature
+  textures:
+  - n_duckweed01C
+- id: n_duckweed02
+  category: nature
+  textures:
+  - n_duckweed02
+- id: n_duckweed02_a
+  category: nature
+  textures:
+  - n_duckweed02
+- id: n_e3gadentree02_01
+  category: nature
+  textures:
+  - n_SEbtree01_a_01
+  - n_SEbtree01_b
+  - n_e3gardentree02
+- id: n_e3gardentree02
+  category: nature
+  textures:
+  - n_e3gardentree02
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_e3gardentree02_01
+  category: nature
+  textures:
+  - n_e3gardentree02
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_e3gardentree02_02
+  category: nature
+  textures:
+  - n_e3gardentree02_02
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_e3gardentree02_03
+  category: nature
+  textures:
+  - n_e3gardentree02_02
+  - n_SEbtree01_d
+  - n_SEbtree01_b
+- id: n_e3gardentree03
+  category: nature
+  textures:
+  - n_e3gardentree01
+- id: n_e3gardentree03_1
+  category: nature
+  textures:
+  - n_e3gardentree01
+  - a_garden01h
+  - a_garden01i
+- id: n_e3gardentree04
+  category: nature
+  textures:
+  - n_e3gardentree01
+- id: n_e3gardentree04_1
+  category: nature
+  textures:
+  - n_e3gardentree01
+- id: n_e3gardentree04_2
+  category: nature
+  textures:
+  - n_e3gardentree01
+- id: n_e3gardentree05
+  category: nature
+  textures:
+  - n_e3gardentree05
+- id: n_e3gardentree06
+  category: nature
+  textures:
+  - n_e3gardentree06
+- id: n_flower01
+  category: nature
+  textures:
+  - n_flower01
+  - n_flower02
+- id: n_flower02
+  category: nature
+  textures:
+  - n_flower03
+  - n_flower04
+- id: n_flower03
+  category: nature
+  textures:
+  - n_flower05
+- id: n_gardentree01
+  category: nature
+  textures:
+  - n_gardentree01
+- id: n_gardentree02
+  category: nature
+  textures:
+  - n_gardentree02
+- id: n_gardentree03
+  category: nature
+  textures:
+  - n_gardentree03
+- id: n_grass01
+  category: nature
+  textures:
+  - n_grass01a
+  - n_grass01b
+- id: n_grass02
+  category: nature
+  textures:
+  - n_grass02a
+- id: n_grass02A
+  category: nature
+  textures:
+  - n_grass02
+- id: n_grass02_1
+  category: nature
+  textures:
+  - n_grass02a
+- id: n_grass02_2
+  category: nature
+  textures:
+  - n_grass02
+- id: n_hottree01
+  category: nature
+  textures:
+  - n_hottree01
+- id: n_hottree02a
+  category: nature
+  textures:
+  - n_hottree02a
+- id: n_hottree02b
+  category: nature
+  textures:
+  - n_hottree02a
+- id: n_hottree02c
+  category: nature
+  textures:
+  - n_hottree02a
+- id: n_hottree03
+  category: nature
+  textures:
+  - n_hottree03a
+  - n_hottree03b
+- id: n_hottree04a
+  category: nature
+  textures:
+  - n_hottree04a
+- id: n_hottree04b
+  category: nature
+  textures:
+  - n_hottree04a
+- id: n_hottree05
+  category: nature
+  textures:
+  - n_hottree05a
+  - n_hottree05b
+- id: n_lotus01
+  category: nature
+  textures:
+  - n_lotus01
+- id: n_mushroom01
+  category: nature
+  textures:
+  - n_mushroom01
+- id: n_plant01
+  category: nature
+  textures:
+  - n_plant01
+- id: n_plant02
+  category: nature
+  textures:
+  - n_flower02
+- id: n_plant03
+  category: nature
+  textures:
+  - n_flower02
+- id: n_plant04
+  category: nature
+  textures:
+  - n_plant02
+- id: n_plant05
+  category: nature
+  textures:
+  - n_grass02
+- id: n_raretree01
+  category: nature
+  textures:
+  - n_raretree01a
+  - n_raretree01b
+- id: n_reed01
+  category: nature
+  textures:
+  - n_reed01
+- id: n_root01
+  category: nature
+  textures:
+  - n_root02a
+  - n_root02c
+- id: n_root02
+  category: nature
+  textures:
+  - n_root02a
+  - n_root02c
+- id: n_sign01
+  category: nature
+  textures:
+  - n_sign01
+- id: n_sign01_a
+  category: nature
+  textures:
+  - n_sign01_a
+- id: n_stree01
+  category: nature
+  textures:
+  - n_stree03a
+  - n_stree01b
+- id: n_stree02
+  category: nature
+  textures:
+  - n_stree03a
+  - n_stree02b
+- id: n_stree03
+  category: nature
+  textures:
+  - n_stree03a
+  - n_stree03b
+- id: n_tilewallA_1
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_2
+  category: nature
+  textures:
+  - n_tilewallA01
+- id: n_tilewallA_3
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_4
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_5
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_6
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_7
+  category: nature
+  textures:
+  - n_tilewallA01
+  - n_tilewallA02
+- id: n_tilewallA_8
+  category: nature
+  textures:
+  - n_tilewallA01
+- id: n_tilewallB_1
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_2
+  category: nature
+  textures:
+  - n_tilewallB01
+- id: n_tilewallB_3
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_4
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_5
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_6
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_7
+  category: nature
+  textures:
+  - n_tilewallB01
+  - n_tilewallB02
+- id: n_tilewallB_8
+  category: nature
+  textures:
+  - n_tilewallB01
+- id: n_tilewallC_1
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_2
+  category: nature
+  textures:
+  - n_tilewallC01
+- id: n_tilewallC_3
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_4
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_5
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_6
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_7
+  category: nature
+  textures:
+  - n_tilewallC01
+  - n_tilewallC02
+- id: n_tilewallC_8
+  category: nature
+  textures:
+  - n_tilewallC01
+- id: n_tilewallD_1
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_2
+  category: nature
+  textures:
+  - n_tilewallD01
+- id: n_tilewallD_3
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_4
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_5
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_6
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_7
+  category: nature
+  textures:
+  - n_tilewallD01
+  - n_tilewallD02
+- id: n_tilewallD_8
+  category: nature
+  textures:
+  - n_tilewallD01
+- id: n_tree01
+  category: nature
+  textures:
+  - n_tree01
+  - n_tree02
+- id: n_tree02
+  category: nature
+  textures:
+  - n_tree03
+  - n_tree02
+- id: n_tree03
+  category: nature
+  textures:
+  - n_tree04
+  - n_tree02
+- id: n_tree04
+  category: nature
+  textures:
+  - n_tree05
+  - n_tree02
+- id: n_tree05
+  category: nature
+  textures:
+  - n_tree06
+  - n_tree07
+- id: n_treevine01
+  category: nature
+  textures:
+  - n_treevine01
+- id: n_treevine02
+  category: nature
+  textures:
+  - n_treevine01
+- id: n_treevine03
+  category: nature
+  textures:
+  - n_treevine01
+- id: n_treevine04
+  category: nature
+  textures:
+  - n_treevine01
+- id: n_variant01
+  category: nature
+  textures:
+  - n_variant01A
+  - n_variant01B
+- id: n_variant02
+  category: nature
+  textures:
+  - n_variant02a
+  - n_variant02b
+- id: n_variant03
+  category: nature
+  textures:
+  - n_variant03A
+  - n_variant01B
+- id: n_variant04
+  category: nature
+  textures:
+  - n_variant04a
+  - n_variant04b
+- id: n_variant04A
+  category: nature
+  textures:
+  - n_variant04A
+  - n_variant04B
+- id: n_vine01
+  category: nature
+  textures:
+  - n_vine01
+- id: E_SCfire_1
+  category: active
+  textures:
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: E_SCfire_2
+  category: active
+  textures:
+  - sfx_bonefire_smoke01
+  - sfx_bonefire_smoke02
+- id: a_SEbooth04
+  category: active
+  textures:
+  - a_SEbooth01
+  - a_SEbooth02
+- id: a_SEwirefence01_a
+  category: active
+  textures:
+  - a_SEwirefenceA
+  - a_SEwirefenceB
+  - a_SEwirefenceC
+- id: a_SWAarrow
+  category: active
+  textures:
+  - a_keypillar01
+- id: a_SWAattack01
+  category: active
+  textures:
+  - sfx_common_flashbeam1_red
+  - sfx_common_flashbeam1_pink
+  - sfx_common_flashring1_red
+  - sfx_common_flashblade1_red
+- id: a_SWAball02_01
+  category: active
+  textures:
+  - a_SWAball02
+  - a_SWAball02a
+  - a_SWAball02b
+- id: a_SWAball03_01
+  category: active
+  textures:
+  - a_SWAball02b
+  - a_SWAball02a
+  - a_SWAball03
+- id: a_SWAbari01
+  category: active
+  textures:
+  - a_SWAbari01
+- id: a_SWAbari02
+  category: active
+  textures:
+  - a_SWAbari01
+- id: a_SWAbari03
+  category: active
+  textures:
+  - a_SWAbari01
+- id: a_SWAboard01a
+  category: active
+  textures:
+  - a_SWAboard01
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01c
+  - a_ESWAboard01d
+  - a_ESWAboard01e
+  - a_ESWAboard01h
+  - a_ESWAboard01g
+  - a_ESWAboard01f
+- id: a_SWAbomb01
+  category: active
+  textures:
+  - a_SWAbomb01
+  - E_bomb01
+  - sfx_common_flashlight1_cyan_03
+- id: a_SWAbook01A
+  category: active
+  textures:
+  - a_SWAbook01A
+- id: a_SWAbook01B
+  category: active
+  textures:
+  - a_SWAbook01B
+- id: a_SWAbook01C
+  category: active
+  textures:
+  - a_SWAbook01C
+- id: a_SWAbook02A
+  category: active
+  textures:
+  - a_SWAbook02A
+  - a_SWAball02a
+- id: a_SWAbook02B
+  category: active
+  textures:
+  - a_SWAbook02B
+- id: a_SWAbook02c
+  category: active
+  textures:
+  - a_SWAbook02B
+- id: a_SWAbucket
+  category: active
+  textures:
+  - a_wbucket01
+  - sfx_fountain02
+  - a_SWGbucket
+- id: a_SWAcircuit
+  category: active
+  textures:
+  - a_SWAcircuit
+- id: a_SWAdoll01_a
+  category: active
+  textures:
+  - a_SWAdoll01_a
+  - sfx_common_flashdust1_brown1
+  - a_SWAball02a
+- id: a_SWAdoll01_b
+  category: active
+  textures:
+  - a_SWAdoll01_a
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWAdoll01_c
+  category: active
+  textures:
+  - a_SWAdoll02_b
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWAdoll02_a
+  category: active
+  textures:
+  - a_SWAdoll01_a
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWAdoll02_b
+  category: active
+  textures:
+  - a_SWAdoll02_b
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWAdoll02_c
+  category: active
+  textures:
+  - a_SWAdoll02_b
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWAlobby01a
+  category: active
+  textures:
+  - a_SWAlobby02
+  - a_SWAlobby01
+  - E_SWAlobby02
+  - E_SWAlobby01
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01h
+- id: a_SWAlobby01b
+  category: active
+  textures:
+  - E_SWAlobby01
+  - a_SWAlobby02
+  - a_SWAlobby01
+  - E_SWAlobby02
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01h
+- id: a_SWAlobby01c
+  category: active
+  textures:
+  - E_SWAlobby01
+  - a_SWAlobby02
+  - a_SWAlobby01
+  - a_SWAboard01
+  - E_SWAlobby02
+  - a_ESWAboard01b
+  - a_ESWAboard01a
+  - a_ESWAboard01h
+- id: a_SWAmachine01
+  category: active
+  textures:
+  - a_SWAmachine01
+- id: a_SWApot03
+  category: active
+  textures:
+  - a_bonfire02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+  - a_SWApot03b
+  - a_SWApot03a
+  - a_SWApot03
+  - a_SWAheart01a
+  - a_stairkc
+- id: a_SWApta01
+  category: active
+  textures:
+  - a_SWApta01
+- id: a_SWAptameet01
+  category: active
+  textures:
+  - a_SCdesk05
+  - c_SWIchair02
+  - ct0118
+  - ct0119
+  - cn0070
+  - cn0069
+- id: a_SWArugby
+  category: active
+  textures:
+  - a_SWArugby
+- id: a_SWAseal01a
+  category: active
+  textures:
+  - a_SWAseal01
+  - a_SWAseal01c
+  - a_SWAseal01b
+  - a_SWAball02a
+- id: a_SWAteam_b
+  category: active
+  textures:
+  - a_SWAanna_b
+- id: a_SWAteam_g
+  category: active
+  textures:
+  - a_SWAanna_g
+- id: a_SWAteam_gray
+  category: active
+  textures:
+  - a_SWAanna_gray
+- id: a_SWAteam_r
+  category: active
+  textures:
+  - a_SWAanna_r
+- id: a_SWAteam_y
+  category: active
+  textures:
+  - a_SWAanna_y
+- id: a_SWAtomb01
+  category: active
+  textures:
+  - a_SWAtomb01
+- id: a_SWAwater01
+  category: active
+  textures:
+  - a_SWAwater01
+- id: a_SWAwha
+  category: active
+  textures:
+  - a_SWAaha
+- id: a_SWCwallA06a
+  category: active
+  textures:
+  - a_SWCwallA01
+- id: a_SWCwallA06b
+  category: active
+  textures:
+  - a_SWCwallA01
+- id: a_SWFgate01a
+  category: active
+  textures:
+  - a_SWFgate01
+- id: a_SWFire01a
+  category: active
+  textures:
+  - a_SWFire01
+- id: a_SWFtower03
+  category: active
+  textures:
+  - sfx_common_flashlight1_purple
+  - a_SWAball02a
+  - a_SWFtower01
+- id: a_SWFwall02a
+  category: active
+  textures:
+  - a_SWFwall02a
+  - a_SWFpill01
+- id: a_SWFwall02d
+  category: active
+  textures:
+  - a_SWFwall02
+  - a_SWFpill01
+- id: a_SWGbod01A_b
+  category: active
+  textures:
+  - a_SWGbod01A_b01
+  - a_SWGbod01A_b02
+- id: a_SWGbod03B
+  category: active
+  textures:
+  - a_SWGbod03B
+  - a_SWAball02a
+  - sfx_common_flashdust1_brown1
+- id: a_SWGbucket
+  category: active
+  textures:
+  - a_SWGbucket
+  - a_SWAball02a
+- id: a_SWGbucket01
+  category: active
+  textures:
+  - a_SWGbucket
+- id: a_SWGcase01A_b
+  category: active
+  textures:
+  - a_SWGcase01A_b
+  - a_SWAball02a
+- id: a_SWGcase02b
+  category: active
+  textures:
+  - a_SWGcase02b
+  - a_SWAball02a
+- id: a_SWGcase02b_01
+  category: active
+  textures:
+  - a_SWGcase02b
+  - a_SWAball02a
+- id: a_SWGcase03b
+  category: active
+  textures:
+  - a_SWGcase03b
+  - a_SWAball02a
+- id: a_SWGcase03b01
+  category: active
+  textures:
+  - a_SWGcase03b
+  - a_SWAball02a
+- id: a_SWGchair01A_B01
+  category: active
+  textures:
+  - c_SWGchair01A_b
+  - a_SWAball02a
+- id: a_SWGchair01A_b
+  category: active
+  textures:
+  - c_SWGchair01A_b
+  - a_SWAball02a
+- id: a_SWGcwall01B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGcwall02B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGdesk01b
+  category: active
+  textures:
+  - a_SWGdesk01b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk01b01
+  category: active
+  textures:
+  - a_SWGtdesk01b
+- id: a_SWGdesk01b02
+  category: active
+  textures:
+  - a_SWGtdesk01b
+- id: a_SWGdesk01b_01
+  category: active
+  textures:
+  - a_SWGdesk01b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk02b
+  category: active
+  textures:
+  - a_SWGdesk02b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b01
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b02
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b03
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b04
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+- id: a_SWGdesk03b05
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+  - a_SWAball02a
+- id: a_SWGdoor01B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGdoor01B_1
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGdoor02B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGdoor03B
+  category: active
+  textures:
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGfoot01b
+  category: active
+  textures:
+  - a_SWGfoot01b
+- id: a_SWGfoot01b01
+  category: active
+  textures:
+  - a_SWGfoot01b
+  - a_SWAball02a
+- id: a_SWGfoot01b02
+  category: active
+  textures:
+  - a_SWGfoot01b
+- id: a_SWGfoot01b03
+  category: active
+  textures:
+  - a_SWGfoot01b
+- id: a_SWGfoot01b04
+  category: active
+  textures:
+  - a_SWGfoot01b
+- id: a_SWGfoot01b05
+  category: active
+  textures:
+  - a_SWGfoot01b
+- id: a_SWGgarbage01
+  category: active
+  textures:
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+  - a_SWGbucket
+  - c_SWGchair02A_b01
+  - a_SWGstick
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWAball02a
+- id: a_SWGiall01B_03
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWGbod03B
+  - a_SWGbod01A_b01
+  - a_SWGbod01A_b02
+  - a_SWGframe01
+- id: a_SWGiall01B_04
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWGmap02
+  - a_SWGmap
+- id: a_SWGiwall01B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWGiwall01B_01
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWAball02a
+- id: a_SWGiwall01B_02
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWAball02a
+- id: a_SWGiwall01B_03
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWGbod03B
+  - a_SWGbod01A_b01
+  - a_SWGbod01A_b02
+  - a_SWGframe01
+- id: a_SWGiwall01B_04
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWGmap02
+  - a_SWGmap
+- id: a_SWGiwall02B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02C
+- id: a_SWGmap
+  category: active
+  textures:
+  - a_SWGmap
+- id: a_SWGmap02
+  category: active
+  textures:
+  - a_SWGmap02
+- id: a_SWGorganb
+  category: active
+  textures:
+  - a_SWGorganb
+- id: a_SWGstick
+  category: active
+  textures:
+  - a_SWGstick
+- id: a_SWGstick01
+  category: active
+  textures:
+  - a_SWGstick
+- id: a_SWGtable01A_b
+  category: active
+  textures:
+  - c_SWGtable01A_b01
+  - c_SWGtable01A_b
+- id: a_SWGtdesk01b
+  category: active
+  textures:
+  - a_SWGtdesk01b
+  - a_SWAball02a
+- id: a_SWGtdesk01b01
+  category: active
+  textures:
+  - a_SWGtdesk01b
+- id: a_SWGtdesk01b02
+  category: active
+  textures:
+  - a_SWGtdesk01b
+  - a_SWAball02a
+- id: a_SWGutile_1
+  category: active
+  textures:
+  - A_SWGutile_1
+- id: a_SWGwall01B
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWAball02a
+- id: a_SWGwall01B_01
+  category: active
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: a_SWIdoor01_03c
+  category: active
+  textures:
+  - sfx_common_flashdust1_brown1
+  - a_SWIdoor02
+  - a_SWAball02a
+- id: a_SWIframe05a
+  category: active
+  textures:
+  - a_SWIframe05
+- id: a_bonfire01
+  category: active
+  textures:
+  - sfx_bonefire_smoke02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - a_bonfire02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+- id: a_bonfire02
+  category: active
+  textures:
+  - sfx_bonefire_smoke02
+  - sfx_bonefire01
+  - sfx_bonefire02
+  - sfx_bonefire_smoke01
+  - sfx_bonefire03
+  - a_bonfire02
+  - a_bonfire02a
+- id: a_bookcase04
+  category: active
+  textures:
+  - CT0016
+- id: a_brockenwall
+  category: active
+  textures:
+  - a_SWFwall02
+  - a_tunnelwall_floor
+- id: a_greendoor02
+  category: active
+  textures:
+  - a_greendoor02
+- id: a_greendoor02open
+  category: active
+  textures:
+  - a_greendoor02
+- id: c_SWGchair01A_b
+  category: active
+  textures:
+  - c_SWGchair01A_b
+- id: c_SWGchair02A_b01
+  category: chair
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair02A_b02
+  category: chair
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair02A_b03
+  category: active
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair02A_b04
+  category: active
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair02A_b05
+  category: active
+  textures:
+  - c_SWGchair02A_b01
+  - a_SWAball02a
+- id: c_SWGchair03b
+  category: active
+  textures:
+  - c_SWGchair03b
+- id: c_SWGchair03b01
+  category: active
+  textures:
+  - c_SWGchair03b
+- id: c_SWGchair04b
+  category: active
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair04b01
+  category: active
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair04b02
+  category: active
+  textures:
+  - c_SWGchair04b
+  - a_SWAball02a
+- id: c_SWGchair04b03
+  category: active
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair04b04
+  category: active
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair04b05
+  category: active
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair05A_b
+  category: chair
+  textures:
+  - c_SWGchair05A_b
+- id: c_SWGchair05Ab01
+  category: active
+  textures:
+  - c_SWGchair05A_b
+  - a_SWAball02a
+- id: m_stepbutton01
+  category: active
+  textures:
+  - m_stepbutton01
+- id: m_tunneldoor00
+  category: active
+  textures:
+  - m_tunneldoor00_3
+  - m_tunneldoor00_1
+  - m_tunneldoor00_2
+- id: m_tunnellever00
+  category: active
+  textures:
+  - m_tunnellever
+- id: m_tunnellever00_open
+  category: active
+  textures:
+  - m_tunneldoor00_3
+  - m_tunneldoor00_1
+  - m_tunneldoor00_2
+- id: yang_big
+  category: active
+  textures:
+  - cn0015
+- id: yang_small
+  category: active
+  textures:
+  - yang_small
+- id: a_SWGclass02b
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - a_SWIclock03
+  - c_SWGtable01A_b
+  - a_SWGfoot01b
+  - c_SWGchair05A_b
+  - a_SWGcase01A_b
+  - c_SWGchair01A_b
+  - a_SWGbucket
+  - a_SWGmap
+  - a_SWGcase03b
+  - a_SWGcase02b
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+  - c_SWGchair04b
+  - a_paper03
+  - c_SWGchair02A_b01
+  - a_SWGstick
+  - a_SWGdesk02b
+  - a_SWGtdesk01b
+  - a_SWGbod01A_b01
+  - a_SWGbod01A_b02
+  - a_SWGframe01
+  - a_SWIframe05
+- id: s_SEfarm01
+  category: structure
+  textures:
+  - s_SEfarm01_01
+  - s_SEfarm01
+  - s_SEfarm01_02
+- id: s_SEglass01
+  category: structure
+  textures:
+  - s_SEglass01_a
+  - s_SEglass01_b
+  - s_SEglass01_c
+  - s_SEglass01_d
+  - s_SEglass01_e
+  - s_SEglass01_f
+  - s_SEglass01_g
+  - s_SEglass01_h
+  - s_SEglass01_i
+  - sfx_common_flashlight1_yellow
+- id: s_SEglass01a
+  category: structure
+  textures:
+  - s_SEglass01_c
+  - s_SEglass01_d
+  - s_SEglass01_b
+  - s_SEglass01_f
+- id: s_SEglass02
+  category: structure
+  textures:
+  - s_SEglass02a
+  - s_SEglass02b
+  - s_SEglass02c
+- id: s_SEhall
+  category: structure
+  textures:
+  - s_SEhall_a
+  - s_SEhall_b
+  - s_SEhall_c
+  - s_SEhall_d
+  - s_SEhall_e
+  - s_SEhall_f
+  - s_SEhall_g
+- id: s_SEhouse01
+  category: structure
+  textures:
+  - s_SEhouse01a
+  - s_SEhouse01
+  - s_SEhouse01c
+  - s_SEhouse01b
+  - s_SEhouse01d
+  - a_SEvine01_b
+  - a_SEgarden01c
+- id: s_SElodge
+  category: structure
+  textures:
+  - s_SElodge
+- id: s_SEmain
+  category: structure
+  textures:
+  - s_SEmainj
+  - s_SEmainf
+  - s_SEmaina
+  - s_SEmaine
+  - s_SEmainb
+  - s_SEmainh
+  - s_SEmaind
+  - s_SEmainc
+  - s_SEmainm
+  - s_SEmainl
+- id: s_SEmain_1
+  category: structure
+  textures:
+  - s_SEmaink
+- id: s_SEmotion
+  category: structure
+  textures:
+  - s_SEmotion_a
+  - s_SEmotion_b
+  - s_SEmotion_c
+  - s_SEmotion_d
+  - a_SEswim01
+- id: s_SEstall
+  category: structure
+  textures:
+  - s_SEstall_a
+  - s_SEstall_g
+  - s_SEstall_c
+  - s_SEstall_d
+  - s_SEstall_b
+  - s_SEstall_f
+  - s_SEstall_e
+  - s_SEstall_i
+  - s_SEstall_j
+  - s_SEstall_h
+  - s_SEstall_k
+  - a_SEshop01
+  - a_SEshop02
+  - a_SEnote
+- id: s_SEsubway01
+  category: structure
+  textures:
+  - s_SEsubway01a
+  - s_SEsubway01b
+  - s_SEsubway01c
+  - s_SEsubway01d
+  - s_SEsubway01e
+  - a_SEbbus01A
+- id: s_SEticket01
+  category: structure
+  textures:
+  - s_SEticket01
+- id: s_SEticket02
+  category: structure
+  textures:
+  - s_SEticket01
+- id: s_SEticket03
+  category: structure
+  textures:
+  - s_SEticket01
+- id: s_SWCash01
+  category: structure
+  textures:
+  - s_SWCash01A
+  - s_SWCash01B
+  - s_SWCash01C
+  - s_SWCash01D
+  - s_SWCash01E
+  - s_SWCash01F
+  - s_SWCash01G
+- id: s_SWCshrine
+  category: structure
+  textures:
+  - s_SWCshrine
+  - s_SWCshrine_a
+  - sfx_common_flashlight1_cyan
+  - sfx_common_flashlight1_purple
+- id: s_SWEhall01
+  category: structure
+  textures:
+  - s_SWEhall01b
+  - s_SWEhall01c
+  - s_SWEhall01f
+  - s_SWEhall01a
+  - s_SWEhall01e
+  - s_SWEhall01d
+- id: s_SWElodge01
+  category: structure
+  textures:
+  - s_SWElodge01
+  - a_SWEgate01a
+  - a_SWEwall01a
+- id: s_SWEmain01
+  category: structure
+  textures:
+  - s_SWEmain01a
+  - s_SWEmain01b
+  - s_SWEmain01j
+  - s_SWEmain01c
+  - s_SWEmain01d
+  - s_SWEmain01i
+  - s_SWEmain01e
+  - s_SWEhall01c
+  - s_SWEmain01k
+  - s_SWEmain01g
+  - s_SWEhall01f
+  - s_SWEmain01L
+  - s_SEmainj
+  - s_SEmaina
+  - s_SWEmain01m
+  - a_SWTomb04a
+  - s_SWEmain01n
+- id: s_SWEstore01
+  category: structure
+  textures:
+  - s_SWEstore01_a
+  - s_SWEstore01_b
+  - s_SWEstore01_c
+  - s_SWEstore01_d
+  - s_SWEstore01_e
+- id: s_SWGclass01a
+  category: structure
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+  - c_SWGchair05A_a
+  - a_SWGbod01A_a01
+  - a_SWGbod01A_a02
+  - a_SWGbod03A
+  - a_SWGbucket
+  - a_SWGcase01A_a
+  - a_SWGcase02a
+  - a_SWGcase03a
+  - a_SWGdesk01A
+  - a_SWGdesk02A
+  - a_SWGdesk03A
+  - a_SWGfoot01a
+  - a_SWGframe01
+  - a_SWGmap
+  - a_SWGstick
+  - c_SWGtable01A_a
+  - c_SWGtable01A_a01
+  - a_SWGtdesk01A
+  - a_SWIclock03
+  - a_SWIframe05
+  - c_SWGchair01A_a
+  - c_SWGchair02A_a
+  - c_SWGchair04A
+- id: s_SWGclass01a_1
+  category: structure
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+  - s_SWGschool_e01
+- id: s_SWGclass01a_2
+  category: structure
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: s_SWGclass01a_3
+  category: structure
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+  - s_SWGschool_e01
+- id: s_SWGclass01a_4
+  category: structure
+  textures:
+  - a_SWGwall01A
+  - a_SWGwall01B
+  - a_SWGwall01C
+- id: s_SWGclass01b
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - c_SWGtable01A_b
+  - a_SWGfoot01b
+  - c_SWGchair05A_b
+  - a_SWGcase01A_b
+  - c_SWGchair01A_b
+  - a_SWGbucket
+  - a_SWGmap
+  - a_SWGcase03b
+  - a_SWGcase02b
+  - a_SWGdesk03b
+  - a_SWGdesk01b_a
+  - c_SWGchair04b
+  - a_paper03
+  - c_SWGchair02A_b01
+  - a_SWGstick
+  - a_SWGdesk02b
+  - a_SWGtdesk01b
+  - a_SWGbod01A_b01
+  - a_SWGbod01A_b02
+  - a_SWGframe01
+  - a_SWIframe05
+  - a_SWIclock03
+- id: s_SWGclass01b_1
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - s_SWGschool_e02
+  - a_SWGmap
+- id: s_SWGclass01b_2
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: s_SWGclass01b_3
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+  - s_SWGschool_e02
+- id: s_SWGclass01b_4
+  category: structure
+  textures:
+  - a_SWGwall02A
+  - a_SWGwall02B
+  - a_SWGwall02C
+- id: s_SWGfarm
+  category: structure
+  textures:
+  - s_SWGfarm
+  - s_SWGfarm_b
+  - s_SWGfarm_c
+- id: s_SWGschool
+  category: structure
+  textures:
+  - s_SWGschool_a
+  - s_SWGschool_b
+  - s_SWGschool_c
+  - s_SWGschool_d
+  - s_SWGschool_e
+  - s_SWGschool_g
+  - s_SWGschool_h
+  - s_SWGschool_i
+  - s_SWGschool_f
+- id: s_SWGtoilet
+  category: structure
+  textures:
+  - s_SWGtoilet
+  - s_SWGtoilet01
+  - a_SWEwgate01_b
+- id: s_SWGtoilet01
+  category: structure
+  textures:
+  - s_SWGtoilet01
+- id: s_SWGtoilet02
+  category: structure
+  textures:
+  - s_SWGtoilet01
+  - s_SWGtoilet
+- id: s_SWGtoilet_a
+  category: structure
+  textures:
+  - s_SWGtoilet
+  - s_SWGtoilet_a
+- id: s_SWTchurch
+  category: structure
+  textures:
+  - s_SWTchurch_a
+  - s_SWTchurch_b
+  - s_SWTchurch_c
+  - s_SWTchurch_e
+  - s_SWTchurch_f
+  - n_SWTivy
+  - n_SWTivy02
+  - n_SWTgrass02
+  - a_SClamp01
+  - a_SClamp01_1
+  - sfx_common_flashlight1_yellow1
+  - sfx_common_flashlight1_yellow
+- id: s_SWThut01
+  category: structure
+  textures:
+  - s_SWThut01
+  - a_SWTwall01D
+  - n_SWTgrass02
+  - a_SWTwall01E
+- id: s_viancahouse
+  category: structure
+  textures:
+  - s_viancahousec
+  - s_viancahousef
+  - s_viancahouseb
+  - s_viancahousea
+  - s_viancahouseh
+  - s_viancahousei
+  - s_viancahouseg
+  - s_viancahousee
+  - s_viancahoused
+- id: c_ESDchair01
+  category: chair
+  textures:
+  - c_SCchair04
+- id: c_ESDchairp01
+  category: chair
+  textures:
+  - c_ESDchair01
+- id: c_ESDchairp02
+  category: chair
+  textures:
+  - c_ESDchair01
+- id: c_SCchair01
+  category: chair
+  textures:
+  - c_SCchair01
+- id: c_SCchair02
+  category: chair
+  textures:
+  - c_SCchair02
+- id: c_SCchair03
+  category: chair
+  textures:
+  - a_SCtable03
+- id: c_SCchair04
+  category: chair
+  textures:
+  - c_SCchair04
+- id: c_SCchair05
+  category: chair
+  textures:
+  - c_SCchair05
+- id: c_SCchair06
+  category: chair
+  textures:
+  - c_SCchair06
+- id: c_SCchair06A
+  category: chair
+  textures:
+  - c_SCchair06
+- id: c_SCchair07
+  category: chair
+  textures:
+  - a_SCdesk05
+- id: c_SCchair08
+  category: chair
+  textures:
+  - c_SCchair08
+- id: c_SEbench02
+  category: chair
+  textures:
+  - c_SEbench02
+- id: c_SEbench03
+  category: chair
+  textures:
+  - c_SEbench03
+- id: c_SEbench04
+  category: chair
+  textures:
+  - a_SEvine01
+- id: c_SEbstop01
+  category: chair
+  textures:
+  - a_SEbstop02
+- id: c_SWEbench01
+  category: chair
+  textures:
+  - c_SWEbench01
+- id: c_SWEbench01a
+  category: chair
+  textures:
+  - c_SWEbench01
+- id: c_SWGchair01A_a
+  category: chair
+  textures:
+  - c_SWGchair01A_a
+- id: c_SWGchair01A_b
+  category: chair
+  textures:
+  - c_SWGchair01A_b
+- id: c_SWGchair02A_a
+  category: chair
+  textures:
+  - c_SWGchair02A_a
+- id: c_SWGchair02A_b01
+  category: chair
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair02A_b02
+  category: chair
+  textures:
+  - c_SWGchair02A_b01
+- id: c_SWGchair03a
+  category: chair
+  textures:
+  - c_SWGchair03a
+- id: c_SWGchair03b
+  category: chair
+  textures:
+  - c_SWGchair03b
+- id: c_SWGchair04A
+  category: chair
+  textures:
+  - c_SWGchair04A
+- id: c_SWGchair04b
+  category: chair
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair04b01
+  category: chair
+  textures:
+  - c_SWGchair04b
+- id: c_SWGchair05A_a
+  category: chair
+  textures:
+  - c_SWGchair05A_a
+- id: c_SWGchair05A_b
+  category: chair
+  textures:
+  - c_SWGchair05A_b
+- id: c_SWIchair01
+  category: chair
+  textures:
+  - a_SWldesk01
+- id: c_SWIchair02
+  category: chair
+  textures:
+  - c_SWIchair02
+- id: c_SWIchair02a
+  category: chair
+  textures:
+  - c_SWIchair02
+- id: c_SWIchair03
+  category: chair
+  textures:
+  - c_SWIchair03
+- id: c_SWIchair04
+  category: chair
+  textures:
+  - c_SWIchair04
+- id: c_SWIchair04a
+  category: chair
+  textures:
+  - c_SWIchair04
+- id: c_SWIchair05
+  category: chair
+  textures:
+  - c_SWIchair05
+- id: c_SWIchair05a
+  category: chair
+  textures:
+  - c_SWIchair05
+- id: c_SWIchair06
+  category: chair
+  textures:
+  - a_SWIdesk05
+- id: c_SWIchair07
+  category: chair
+  textures:
+  - a_SWItable02
+- id: c_SWIchair07a
+  category: chair
+  textures:
+  - a_SWItable02
+- id: c_sebench01
+  category: chair
+  textures:
+  - c_sebench01A
+  - c_SEbench01B
+- id: p_portal001a
+  category: portal
+  textures:
+  - p_portal001_00
+  - p_portal001_01
+  - p_portal001_04
+  - p_portal001_03
+  - p_portal001_02
+- id: p_portal001b
+  category: portal
+  textures:
+  - p_portal001_00
+  - p_portal001_01
+  - p_portal001_04
+  - p_portal001_03
+  - p_portal001_02
+- id: p_portal002a
+  category: portal
+  textures:
+  - p_portal002_00
+  - p_portal001_02
+  - p_portal001_04
+- id: p_portal002b
+  category: portal
+  textures:
+  - p_portal002_00
+  - p_portal001_02
+  - p_portal001_04
+- id: p_portal003a
+  category: portal
+  textures:
+  - portal_3
+  - portal_3a
+  - portal_1
+  - portal_2
+  - portal_2a
+  - a_ESWAboard01b
+  - a_ESWAboard01h
+  - portal_1a
+- id: p_portal003b
+  category: portal
+  textures:
+  - light
+- id: sky_Aurora
+  category: sky
+  textures:
+  - sky_Aurora
+- id: sky_Cloud0001
+  category: sky
+  textures:
+  - sky_Cloud0001
+- id: sky_Cloud0002
+  category: sky
+  textures:
+  - sky_Cloud0002
+- id: sky_Dome0001
+  category: sky
+  textures:
+  - sky_Dome0001_day
+  - sky_Dome0001_night
+  - sky_Dome0001_sunset
+- id: sky_Dome0002
+  category: sky
+  textures:
+  - sky_Dome0002
+- id: sky_Star0001
+  category: sky
+  textures:
+  - sky_Star0001
+- id: sky_distant0001
+  category: sky
+  textures:
+  - distant-alpa0001
+  - distant-alpa0002
+- id: sky_distant0002
+  category: sky
+  textures:
+  - distant-alpa0003
+  - distant-alpa0002
+- id: sky_distant0003
+  category: sky
+  textures:
+  - distant-alpa0004
+- id: sky_dome002
+  category: sky
+  textures:
+  - sky_dome002
+- id: sky_moon0001
+  category: sky
+  textures:
+  - sky_Star0001
+  - moon
+- id: effect
+  category: effect
+  textures:
+  - light
+- id: light
+  category: pointlight
+  textures:
+  - light
+- id: light
+  category: pointlight
+  textures:
+  - light

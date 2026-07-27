@@ -4,14 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**YTAvatar** is a Godot 4 avatar/character viewer and asset pipeline tool for the Yogurting Revival project. It displays customizable male/female avatars with swappable parts and equipment, plus 135 monster models and 78 NPC models — all converted from proprietary binary formats (TMD, MLIB, PRT) to GLTF/GLB.
+The Yogurting Revival project, two Godot 4 sub-projects plus their asset pipelines:
 
-## Running the Project
+- **YTAvatar** — avatar/character viewer: customizable male/female avatars with swappable parts and equipment, plus 135 monster models and 78 NPC models, converted from proprietary binary formats (TMD, MLIB, PRT) to GLTF/GLB.
+- **YTLevel** — level/map viewer: the school and early-episode maps converted from proprietary terrain data (QQQ, OCG, CVS, TCG) into Godot scenes, browsable and walkable via an in-game level tool.
+
+## Running the Projects
 
 - Requires **Godot 4.6+**
-- Open `ytavatar/client/project.godot` in the Godot editor
-- Main scene: `ytavatar/client/scenes/avatar_tool.tscn` — press F5 to run
-- No build step, package manager, or test framework — testing is visual/manual in the editor
+- Avatar tool: open `ytavatar/client/project.godot`; main scene `ytavatar/client/scenes/avatar_tool.tscn` — press F5
+- Level tool: open `ytlevel/client/project.godot`; main scene `ytlevel/client/scenes/level_tool.tscn` — press F5
+- User guides (UI + keys): `ytavatar/docs/user-guide.md`, `ytlevel/docs/user-guide.md`
+- The Python pipelines under `tools/` have pytest suites (`cd tools/level_export && pytest tests/ -v`, same for `tools/avatar_export`)
 
 ## Architecture
 
@@ -34,6 +38,15 @@ Avatars are assembled from:
 - **Face types**: Switchable with blink animation support
 
 Part metadata (`parts_metadata.json`, `parts_metadata_female.json`) maps which base mesh vertices each part hides.
+
+### Level Pipeline (YTLevel)
+
+`tools/level_export/` converts terrain data from `refs/models/raw/Terrain/` into the level tool's assets:
+- **QQQ** → prop placements (quadtree binary, 4x4 transforms), **OCG** → model index, **CVS/TCG** → terrain tile canvas + registry, **WTR** → water, **PLT** → lighting, `{code}_h.bmp` → heightmaps
+- Key scripts: `22_export_props.py` (prop GLBs), `30_export_map.py` (map scene assembly), `31_export_terrain.py` (tiles), `34_export_navmesh.py` (navmesh + wall grids), `35_export_heightmaps.py`
+- `mapeval/` — evaluation harness: data invariants + Godot rendered-capture detectors
+- The shipped level catalog (`ytlevel/client/assets/levels/levels.yaml`/`.json`) is pre-generated data
+- Tile texture folders (`ytlevel/client/assets/maps/*/*_tiles/`) are `.gdignore`d on purpose — the runtime loads them raw; do not route them through the Godot importer
 
 ### Code Structure
 

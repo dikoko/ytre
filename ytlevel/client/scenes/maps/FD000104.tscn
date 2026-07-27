@@ -1,0 +1,1103 @@
+[gd_scene load_steps=27 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelmachine04.glb" id="ext_1"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelwall02.glb" id="ext_10"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelwall03.glb" id="ext_11"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelwall04.glb" id="ext_12"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelroom_wall04.glb" id="ext_13"]
+[ext_resource type="PackedScene" path="res://assets/props/models/nature/n_treevine04.glb" id="ext_14"]
+[ext_resource type="PackedScene" path="res://assets/props/models/nature/n_treevine01.glb" id="ext_15"]
+[ext_resource type="PackedScene" path="res://assets/props/models/nature/n_treevine02.glb" id="ext_16"]
+[ext_resource type="PackedScene" path="res://assets/props/models/nature/n_treevine03.glb" id="ext_17"]
+[ext_resource type="PackedScene" path="res://assets/props/models/active/m_tunneldoor00.glb" id="ext_18"]
+[ext_resource type="PackedScene" path="res://assets/props/models/active/m_tunnellever00.glb" id="ext_19"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelmachine01.glb" id="ext_2"]
+[ext_resource type="PackedScene" path="res://assets/props/models/pointlight/light.glb" id="ext_20"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelmachine02.glb" id="ext_3"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelmachine03.glb" id="ext_4"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelwall05.glb" id="ext_5"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelroom_wall01.glb" id="ext_6"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelroom_wall02.glb" id="ext_7"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelroom_wall03.glb" id="ext_8"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_tunnelwall01.glb" id="ext_9"]
+[ext_resource type="Script" path="res://scripts/terrain_loader.gd" id="ext_21"]
+[ext_resource type="Script" path="res://scripts/fly_camera.gd" id="ext_22"]
+[ext_resource type="Script" path="res://scripts/map_editor.gd" id="ext_23"]
+[ext_resource type="Script" path="res://scripts/prop_lighting.gd" id="ext_24"]
+[ext_resource type="Script" path="res://scripts/water_loader.gd" id="ext_25"]
+
+[sub_resource type="Environment" id="env_1"]
+background_mode = 1
+background_color = Color(0.6, 0.75, 0.9, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.7, 0.75, 1)
+ambient_light_energy = 0.6
+
+[node name="FD000104" type="Node3D"]
+script = ExtResource("ext_23")
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+script = ExtResource("ext_21")
+metadata/heightmap_path = "res://assets/maps/FD000104/FD000104.png"
+metadata/tilemap_path = "res://assets/maps/FD000104/FD000104_tilemap.png"
+metadata/tiles_dir = "res://assets/maps/FD000104/FD000104_tiles"
+metadata/visibility_path = "res://assets/maps/FD000104/FD000104_visibility.png"
+metadata/sun_direction = Vector3(-0.5, -1, -0)
+metadata/sun_diffuse = Color(1, 1, 1, 1)
+metadata/sun_ambient = Color(0.517647, 0.654902, 0.756863, 1)
+metadata/point_light_count = 8
+metadata/point_lights = PackedFloat32Array(19, 3, -25, 0, 1, 0, 0, 0.25098, 0.25098, 20, 0, 1, 0, 7, 3, -15, 0, 1, 0.25098, 0, 0.25098, 0, 15, 0, 1, 0, 31, 3, -35, 0, 1, 0.25098, 0, 0.501961, 0.501961, 20, 0, 1, 0, 43, 3, -19, 1, 1, 0, 1, 0.501961, 0.25098, 20, 0, 1, 0, 56, 3, -13, 1, 0.501961, 0.25098, 1, 0, 0, 20, 0, 1, 0, 55, 3, -49, 1, 0.501961, 0.25098, 1, 0, 0, 20, 0, 1, 0, 43, 3, -51, 0, 1, 1, 0, 1, 0, 20, 0, 1, 0, 19, 3, -62, 0, 1, 0, 0, 0.501961, 0, 20, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("ext_22")
+transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 75, 60, -40)
+current = true
+fov = 60.0
+far = 500.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 50, 50, 50)
+light_energy = 0.8
+shadow_enabled = true
+shadow_opacity = 0.4
+
+[node name="Water" type="Node3D" parent="."]
+script = ExtResource("ext_25")
+metadata/water_json = "res://assets/maps/FD000104/water.json"
+
+[node name="Props" type="Node3D" parent="."]
+script = ExtResource("ext_24")
+metadata/sun_direction = Vector3(-0.5, -1, -0)
+metadata/sun_diffuse = Color(1, 1, 1, 1)
+metadata/sun_ambient = Color(0.517647, 0.654902, 0.756863, 1)
+metadata/point_light_count = 8
+metadata/point_lights = PackedFloat32Array(19, 3, -25, 0, 1, 0, 0, 0.25098, 0.25098, 20, 0, 1, 0, 7, 3, -15, 0, 1, 0.25098, 0, 0.25098, 0, 15, 0, 1, 0, 31, 3, -35, 0, 1, 0.25098, 0, 0.501961, 0.501961, 20, 0, 1, 0, 43, 3, -19, 1, 1, 0, 1, 0.501961, 0.25098, 20, 0, 1, 0, 56, 3, -13, 1, 0.501961, 0.25098, 1, 0, 0, 20, 0, 1, 0, 55, 3, -49, 1, 0.501961, 0.25098, 1, 0, 0, 20, 0, 1, 0, 43, 3, -51, 0, 1, 1, 0, 1, 0, 20, 0, 1, 0, 19, 3, -62, 0, 1, 0, 0, 0.501961, 0, 20, 0, 1, 0)
+
+[node name="obj_a_tunnelwall03_0" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6, 0, -5)
+
+[node name="obj_a_tunnelwall02_1" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 8, 0, -5)
+
+[node name="obj_a_tunnelwall03_2" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -6)
+
+[node name="obj_a_tunnelwall02_3" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -10)
+
+[node name="obj_a_tunnelwall01_4" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -12)
+
+[node name="obj_a_tunnelwall01_5" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -10)
+
+[node name="obj_a_tunnelwall02_6" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -8)
+
+[node name="obj_a_tunnelwall03_7" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -26)
+
+[node name="obj_a_tunnelwall02_8" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -12)
+
+[node name="obj_a_tunnelwall02_9" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -14)
+
+[node name="obj_a_tunnelwall01_10" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -14)
+
+[node name="obj_a_tunnelwall01_11" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -16)
+
+[node name="obj_a_tunnelwall01_12" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -20)
+
+[node name="obj_a_tunnelwall01_13" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -18)
+
+[node name="obj_a_tunnelwall02_14" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -16)
+
+[node name="obj_a_tunnelwall02_15" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -18)
+
+[node name="obj_a_tunnelwall02_16" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -20)
+
+[node name="obj_a_tunnelwall05_17" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -22)
+
+[node name="obj_a_tunnelwall02_18" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -24)
+
+[node name="obj_a_tunnelwall02_19" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6, 0, -27)
+
+[node name="obj_a_tunnelwall05_20" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 8, 0, -27)
+
+[node name="obj_a_tunnelwall04_21" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -23)
+
+[node name="obj_a_tunnelwall02_22" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10, 0, -27)
+
+[node name="obj_a_tunnelwall02_23" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -27)
+
+[node name="obj_a_tunnelwall02_24" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 14, 0, -23)
+
+[node name="obj_a_tunnelwall04_25" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -20)
+
+[node name="obj_a_tunnelwall04_26" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -27)
+
+[node name="obj_a_tunnelwall02_27" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -16)
+
+[node name="obj_a_tunnelwall02_28" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -12)
+
+[node name="obj_a_tunnelwall02_29" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -6)
+
+[node name="obj_a_tunnelwall01_30" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -8)
+
+[node name="obj_a_tunnelwall03_31" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -5)
+
+[node name="obj_a_tunnelwall01_32" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -10)
+
+[node name="obj_a_tunnelwall02_33" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -8)
+
+[node name="obj_a_tunnelwall02_34" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 20, 0, -5)
+
+[node name="obj_a_tunnelwall03_35" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -6)
+
+[node name="obj_a_tunnelwall02_36" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -22)
+
+[node name="obj_a_tunnelwall02_37" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -26)
+
+[node name="obj_a_tunnelwall02_38" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -30)
+
+[node name="obj_a_tunnelwall05_39" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -28)
+
+[node name="obj_a_tunnelwall05_40" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -24)
+
+[node name="obj_a_tunnelwall01_41" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -36)
+
+[node name="obj_a_tunnelwall01_42" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -34)
+
+[node name="obj_a_tunnelwall02_43" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -30)
+
+[node name="obj_a_tunnelwall02_44" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -32)
+
+[node name="obj_a_tunnelwall02_45" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -34)
+
+[node name="obj_a_tunnelwall02_46" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -32)
+
+[node name="obj_a_tunnelwall01_47" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -38)
+
+[node name="obj_a_tunnelwall01_48" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -42)
+
+[node name="obj_a_tunnelwall01_49" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 2e-06, -46)
+
+[node name="obj_a_tunnelwall01_50" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -50)
+
+[node name="obj_a_tunnelwall01_51" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -40)
+
+[node name="obj_a_tunnelwall01_52" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -44)
+
+[node name="obj_a_tunnelwall01_53" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -48)
+
+[node name="obj_a_tunnelwall01_54" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 2e-06, -52)
+
+[node name="obj_a_tunnelwall02_55" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -48)
+
+[node name="obj_a_tunnelwall02_56" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 2e-06, -44)
+
+[node name="obj_a_tunnelwall02_57" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -40)
+
+[node name="obj_a_tunnelwall02_58" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -36)
+
+[node name="obj_a_tunnelwall02_59" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -38)
+
+[node name="obj_a_tunnelwall02_60" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -42)
+
+[node name="obj_a_tunnelwall02_61" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 2e-06, -46)
+
+[node name="obj_a_tunnelwall02_62" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -50)
+
+[node name="obj_a_tunnelwall02_63" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 2e-06, -54)
+
+[node name="obj_a_tunnelwall02_64" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -52)
+
+[node name="obj_a_tunnelwall01_65" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -54)
+
+[node name="obj_a_tunnelwall01_66" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 2e-06, -56)
+
+[node name="obj_a_tunnelwall02_67" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -56)
+
+[node name="obj_a_tunnelwall02_68" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, 0, -58)
+
+[node name="obj_a_tunnelwall04_69" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -58)
+
+[node name="obj_a_tunnelwall01_70" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 14, 0, -61)
+
+[node name="obj_a_tunnelwall01_71" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -65)
+
+[node name="obj_a_tunnelwall01_72" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 8, 0, -65)
+
+[node name="obj_a_tunnelwall01_73" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 10, 0, -61)
+
+[node name="obj_a_tunnelwall02_74" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10, 0, -65)
+
+[node name="obj_a_tunnelwall02_75" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6, 0, -65)
+
+[node name="obj_a_tunnelwall02_76" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 8, 0, -61)
+
+[node name="obj_a_tunnelwall02_77" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -61)
+
+[node name="obj_a_tunnelwall02_78" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -65)
+
+[node name="obj_a_tunnelwall02_79" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -65)
+
+[node name="obj_a_tunnelwall02_80" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 22, 0, -65)
+
+[node name="obj_a_tunnelwall04_81" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 24, 0, -61)
+
+[node name="obj_a_tunnelwall03_82" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -64)
+
+[node name="obj_a_tunnelwall03_83" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6, 0, -61)
+
+[node name="obj_a_tunnelwall02_84" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -62)
+
+[node name="obj_a_tunnelwall05_85" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 16, 0, -65)
+
+[node name="obj_a_tunnelwall05_86" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 20, 0, -65)
+
+[node name="obj_a_tunnelwall02_87" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -65)
+
+[node name="obj_a_tunnelwall02_88" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 34, 0, -65)
+
+[node name="obj_a_tunnelwall02_89" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 38, 0, -65)
+
+[node name="obj_a_tunnelwall02_90" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 42, 0, -65)
+
+[node name="obj_a_tunnelwall01_91" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -54)
+
+[node name="obj_a_tunnelwall02_92" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -56)
+
+[node name="obj_a_tunnelwall02_93" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -52)
+
+[node name="obj_a_tunnelwall02_94" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -48)
+
+[node name="obj_a_tunnelwall02_95" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -44)
+
+[node name="obj_a_tunnelwall02_96" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, -4e-06, -40)
+
+[node name="obj_a_tunnelwall02_97" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, -4e-06, -36)
+
+[node name="obj_a_tunnelwall02_98" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -32)
+
+[node name="obj_a_tunnelwall02_99" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -28)
+
+[node name="obj_a_tunnelwall02_100" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 4e-06, -24)
+
+[node name="obj_a_tunnelwall02_101" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -20)
+
+[node name="obj_a_tunnelwall02_102" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -58)
+
+[node name="obj_a_tunnelwall02_103" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -54)
+
+[node name="obj_a_tunnelwall02_104" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, -4e-06, -50)
+
+[node name="obj_a_tunnelwall02_105" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, -4e-06, -46)
+
+[node name="obj_a_tunnelwall02_106" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -42)
+
+[node name="obj_a_tunnelwall02_107" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, -4e-06, -38)
+
+[node name="obj_a_tunnelwall02_108" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 4e-06, -34)
+
+[node name="obj_a_tunnelwall02_109" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, -4e-06, -30)
+
+[node name="obj_a_tunnelwall02_110" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -26)
+
+[node name="obj_a_tunnelwall02_111" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -22)
+
+[node name="obj_a_tunnelwall02_112" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -56)
+
+[node name="obj_a_tunnelwall02_113" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -52)
+
+[node name="obj_a_tunnelwall02_114" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -48)
+
+[node name="obj_a_tunnelwall02_115" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, -4e-06, -44)
+
+[node name="obj_a_tunnelwall02_116" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -40)
+
+[node name="obj_a_tunnelwall04_117" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 36, 0, -61)
+
+[node name="obj_a_tunnelwall04_118" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -58)
+
+[node name="obj_a_tunnelwall01_119" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -56)
+
+[node name="obj_a_tunnelwall01_120" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -52)
+
+[node name="obj_a_tunnelwall01_121" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -48)
+
+[node name="obj_a_tunnelwall01_122" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 4e-06, -44)
+
+[node name="obj_a_tunnelwall01_123" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 4e-06, -40)
+
+[node name="obj_a_tunnelwall01_124" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -36)
+
+[node name="obj_a_tunnelwall01_125" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 4e-06, -32)
+
+[node name="obj_a_tunnelwall01_126" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, -4e-06, -28)
+
+[node name="obj_a_tunnelwall01_127" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -24)
+
+[node name="obj_a_tunnelwall01_128" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -54)
+
+[node name="obj_a_tunnelwall01_129" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -50)
+
+[node name="obj_a_tunnelwall01_130" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -46)
+
+[node name="obj_a_tunnelwall01_131" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 4e-06, -42)
+
+[node name="obj_a_tunnelwall01_132" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -38)
+
+[node name="obj_a_tunnelwall01_133" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 4e-06, -34)
+
+[node name="obj_a_tunnelwall01_134" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -30)
+
+[node name="obj_a_tunnelwall01_135" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 4e-06, -56)
+
+[node name="obj_a_tunnelwall01_136" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -52)
+
+[node name="obj_a_tunnelwall01_137" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, -4e-06, -48)
+
+[node name="obj_a_tunnelwall01_138" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -44)
+
+[node name="obj_a_tunnelwall01_139" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -40)
+
+[node name="obj_a_tunnelwall01_140" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 4e-06, -36)
+
+[node name="obj_a_tunnelwall01_141" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 4e-06, -32)
+
+[node name="obj_a_tunnelwall02_142" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, -4e-06, -58)
+
+[node name="obj_a_tunnelwall02_143" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, -4e-06, -54)
+
+[node name="obj_a_tunnelwall02_144" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 4e-06, -50)
+
+[node name="obj_a_tunnelwall02_145" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, -4e-06, -46)
+
+[node name="obj_a_tunnelwall02_146" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -42)
+
+[node name="obj_a_tunnelwall02_147" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -38)
+
+[node name="obj_a_tunnelwall02_148" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 4e-06, -34)
+
+[node name="obj_a_tunnelwall02_149" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -30)
+
+[node name="obj_a_tunnelwall02_150" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -36)
+
+[node name="obj_a_tunnelwall02_151" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 0, -32)
+
+[node name="obj_a_tunnelwall02_152" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41, 4e-06, -28)
+
+[node name="obj_a_tunnelwall04_153" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 26, 0, -17)
+
+[node name="obj_a_tunnelwall03_154" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -14)
+
+[node name="obj_a_tunnelwall04_155" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 21, -4e-06, -20)
+
+[node name="obj_a_tunnelwall02_156" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 24, 0, -17)
+
+[node name="obj_a_tunnelwall05_157" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -18)
+
+[node name="obj_a_tunnelwall05_158" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -14)
+
+[node name="obj_a_tunnelwall05_159" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17, 0, -10)
+
+[node name="obj_a_tunnelwall04_160" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 24, 0, -13)
+
+[node name="obj_a_tunnelwall02_161" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 26, 0, -13)
+
+[node name="obj_a_tunnelwall02_162" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 30, 0, -13)
+
+[node name="obj_a_tunnelwall02_163" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -18)
+
+[node name="obj_a_tunnelwall05_164" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 28, 0, -13)
+
+[node name="obj_a_tunnelwall05_165" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 32, 0, -13)
+
+[node name="obj_a_tunnelwall05_166" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -16)
+
+[node name="obj_a_tunnelwall05_167" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -20)
+
+[node name="obj_a_tunnelwall01_168" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -50)
+
+[node name="obj_a_tunnelwall01_169" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -46)
+
+[node name="obj_a_tunnelwall01_170" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -42)
+
+[node name="obj_a_tunnelwall01_171" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -38)
+
+[node name="obj_a_tunnelwall01_172" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -34)
+
+[node name="obj_a_tunnelwall01_173" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 4e-06, -30)
+
+[node name="obj_a_tunnelwall01_174" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -26)
+
+[node name="obj_a_tunnelwall01_175" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -22)
+
+[node name="obj_a_tunnelroom_wall01_176" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -26)
+
+[node name="obj_a_tunnelroom_wall01_177" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 4e-06, -24)
+
+[node name="obj_a_tunnelroom_wall01_178" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -18)
+
+[node name="obj_a_tunnelroom_wall01_179" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -16)
+
+[node name="obj_a_tunnelroom_wall01_180" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -14)
+
+[node name="obj_a_tunnelroom_wall01_181" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -8)
+
+[node name="obj_a_tunnelroom_wall03_182" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -7)
+
+[node name="obj_a_tunnelroom_wall03_183" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 46, 0, -7)
+
+[node name="obj_a_tunnelroom_wall01_184" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 43, 0, -7)
+
+[node name="obj_a_tunnelroom_wall01_185" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 45, 0, -7)
+
+[node name="obj_a_tunnelroom_wall01_186" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, -4e-06, -28)
+
+[node name="obj_a_tunnelroom_wall01_187" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -26)
+
+[node name="obj_a_tunnelroom_wall01_188" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -10)
+
+[node name="obj_a_tunnelwall05_189" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -60)
+
+[node name="obj_a_tunnelwall03_190" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 44, 0, -65)
+
+[node name="obj_a_tunnelwall02_191" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -64)
+
+[node name="obj_a_tunnelwall02_192" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 45, 0, -62)
+
+[node name="obj_a_tunnelwall05_193" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -65)
+
+[node name="obj_a_tunnelwall05_194" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -65)
+
+[node name="obj_a_tunnelwall01_195" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36, 0, -65)
+
+[node name="obj_a_tunnelwall01_196" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 38, 0, -61)
+
+[node name="obj_a_tunnelroom_wall01_197" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -28)
+
+[node name="obj_a_tunnelroom_wall01_198" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48, 0, -18)
+
+[node name="obj_a_tunnelroom_wall01_199" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 50, 0, -16)
+
+[node name="obj_a_tunnelroom_wall01_200" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -12)
+
+[node name="obj_a_tunnelroom_wall01_201" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -10)
+
+[node name="obj_a_tunnelroom_wall01_202" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -8)
+
+[node name="obj_a_tunnelroom_wall01_203" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -6)
+
+[node name="obj_a_tunnelroom_wall01_204" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -4)
+
+[node name="obj_a_tunnelroom_wall03_205" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, -4e-06, -3)
+
+[node name="obj_a_tunnelroom_wall01_206" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 55, 0, -3)
+
+[node name="obj_a_tunnelroom_wall01_207" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 57, 0, -3)
+
+[node name="obj_a_tunnelroom_wall01_208" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, -2e-06, -8)
+
+[node name="obj_a_tunnelroom_wall01_209" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -6)
+
+[node name="obj_a_tunnelroom_wall03_210" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 58, 0, -3)
+
+[node name="obj_a_tunnelroom_wall01_211" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 64, 0, -10)
+
+[node name="obj_a_tunnelroom_wall03_212" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -10)
+
+[node name="obj_a_tunnelroom_wall01_213" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -13)
+
+[node name="obj_a_tunnelroom_wall01_214" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -15)
+
+[node name="obj_a_tunnelroom_wall03_215" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -16)
+
+[node name="obj_a_tunnelroom_wall01_216" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -28)
+
+[node name="obj_a_tunnelroom_wall01_217" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -20)
+
+[node name="obj_a_tunnelroom_wall01_218" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 62, 0, -16)
+
+[node name="obj_a_tunnelroom_wall01_219" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -26)
+
+[node name="obj_a_tunnelroom_wall01_220" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -33)
+
+[node name="obj_a_tunnelroom_wall01_221" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -39)
+
+[node name="obj_a_tunnelroom_wall01_222" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -30)
+
+[node name="obj_a_tunnelroom_wall01_223" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -32)
+
+[node name="obj_a_tunnelroom_wall01_224" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -34)
+
+[node name="obj_a_tunnelroom_wall01_225" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -36)
+
+[node name="obj_a_tunnelroom_wall01_226" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -38)
+
+[node name="obj_a_tunnelroom_wall01_227" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -40)
+
+[node name="obj_a_tunnelroom_wall01_228" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -42)
+
+[node name="obj_a_tunnelroom_wall01_229" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, -2e-06, -48)
+
+[node name="obj_a_tunnelroom_wall01_230" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -35)
+
+[node name="obj_a_tunnelroom_wall01_231" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -37)
+
+[node name="obj_a_tunnelroom_wall01_232" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -44)
+
+[node name="obj_a_tunnelroom_wall01_233" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -50)
+
+[node name="obj_a_tunnelroom_wall01_234" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, -2e-06, -62)
+
+[node name="obj_a_tunnelroom_wall01_235" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -64)
+
+[node name="obj_a_tunnelroom_wall01_236" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -50)
+
+[node name="obj_a_tunnelroom_wall01_237" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -52)
+
+[node name="obj_a_tunnelroom_wall01_238" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -54)
+
+[node name="obj_a_tunnelroom_wall01_239" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -56)
+
+[node name="obj_a_tunnelroom_wall01_240" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -58)
+
+[node name="obj_a_tunnelroom_wall01_241" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -60)
+
+[node name="obj_a_tunnelroom_wall01_242" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 2e-06, -62)
+
+[node name="obj_a_tunnelroom_wall03_243" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, 0, -65)
+
+[node name="obj_a_tunnelroom_wall01_244" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 53, 0, -65)
+
+[node name="obj_a_tunnelroom_wall01_245" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 55, 2e-06, -65)
+
+[node name="obj_a_tunnelroom_wall03_246" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 2e-06, -65)
+
+[node name="obj_a_tunnelroom_wall01_247" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60, 0, -58)
+
+[node name="obj_a_tunnelroom_wall01_248" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62, 0, -52)
+
+[node name="obj_a_tunnelroom_wall01_249" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 64, 0, -52)
+
+[node name="obj_a_tunnelroom_wall03_250" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -52)
+
+[node name="obj_a_tunnelroom_wall01_251" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -55)
+
+[node name="obj_a_tunnelroom_wall01_252" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -57)
+
+[node name="obj_a_tunnelroom_wall03_253" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -58)
+
+[node name="obj_a_tunnelroom_wall04_254" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 51, 0, -19)
+
+[node name="obj_a_tunnelroom_wall04_255" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -15)
+
+[node name="obj_a_tunnelroom_wall04_256" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 47, 0, -15)
+
+[node name="obj_a_tunnelroom_wall04_257" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 47, 0, -19)
+
+[node name="obj_a_tunnelroom_wall04_258" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 59, 0, -17)
+
+[node name="obj_a_tunnelroom_wall04_259" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 59, 0, -9)
+
+[node name="obj_a_tunnelroom_wall04_260" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 59, 0, -51)
+
+[node name="obj_a_tunnelroom_wall04_261" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 59, 0, -59)
+
+[node name="obj_a_tunnelroom_wall01_262" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 62, 2e-06, -58)
+
+[node name="obj_a_tunnelwall05_263" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 9, 0, -8)
+
+[node name="obj_a_tunnelroom_wall03_264" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -40)
+
+[node name="obj_a_tunnelroom_wall03_265" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -30)
+
+[node name="obj_a_tunnelroom_wall04_266" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 59, 2e-06, -41)
+
+[node name="obj_a_tunnelroom_wall01_267" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 62, 0, -40)
+
+[node name="obj_a_tunnelroom_wall04_268" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 59, 0, -29)
+
+[node name="obj_a_tunnelroom_wall01_269" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 64, 0, -30)
+
+[node name="obj_a_tunnelmachine02_270" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 54, 0, -33)
+
+[node name="obj_a_tunnelmachine04_271" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 63, 0, -56)
+
+[node name="obj_a_tunnelmachine04_272" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 63, 2e-06, -52)
+
+[node name="obj_a_tunnelmachine01_273" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, 0, -40)
+
+[node name="obj_a_tunnelmachine01_274" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, -2e-06, -38)
+
+[node name="obj_a_tunnelmachine01_275" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, -2e-06, -36)
+
+[node name="obj_a_tunnelmachine01_276" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, 0, -32)
+
+[node name="obj_a_tunnelmachine01_277" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, -2e-06, -34)
+
+[node name="obj_a_tunnelmachine02_278" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 56, 0, -33)
+
+[node name="obj_a_tunnelmachine04_279" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 56, 0, -63)
+
+[node name="obj_a_tunnelmachine04_280" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, 2e-06, -63)
+
+[node name="obj_a_tunnelmachine04_281" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 44, 0, -7)
+
+[node name="obj_a_tunnelmachine04_282" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -7)
+
+[node name="obj_a_tunnelmachine02_283" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, 0, -14)
+
+[node name="obj_a_tunnelmachine04_284" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 63, 0, -14)
+
+[node name="obj_a_tunnelmachine04_285" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 63, 0, -10)
+
+[node name="obj_a_tunnelmachine02_286" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 44, 0, -9)
+
+[node name="obj_a_tunnelmachine02_287" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 54, 2e-06, -63)
+
+[node name="obj_a_tunnelmachine02_288" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 63, 0, -56)
+
+[node name="obj_a_tunnelmachine02_289" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, -2e-06, -33)
+
+[node name="obj_a_tunnelmachine02_290" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 58, -2e-06, -37)
+
+[node name="obj_a_tunnelmachine02_291" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 56, -2e-06, -37)
+
+[node name="obj_a_tunnelmachine02_292" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 54, -2e-06, -37)
+
+[node name="obj_a_tunnelroom_wall02_293" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -26)
+
+[node name="obj_a_tunnelroom_wall02_294" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -22)
+
+[node name="obj_a_tunnelroom_wall02_295" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -24)
+
+[node name="obj_a_tunnelroom_wall02_296" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -24)
+
+[node name="obj_a_tunnelroom_wall02_297" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -22)
+
+[node name="obj_a_tunnelroom_wall02_298" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -20)
+
+[node name="obj_a_tunnelroom_wall02_299" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, 0, -46)
+
+[node name="obj_a_tunnelroom_wall02_300" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 52, -2e-06, -44)
+
+[node name="obj_a_tunnelroom_wall02_301" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -48)
+
+[node name="obj_a_tunnelroom_wall02_302" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 58, 0, -46)
+
+[node name="obj_a_tunnelmachine03_303" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 54, 0, -53)
+
+[node name="obj_a_tunnelmachine03_304" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 54, -2e-06, -55)
+
+[node name="obj_a_tunnelroom_wall02_305" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60, 0, -40)
+
+[node name="obj_a_tunnelroom_wall02_306" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62, 0, -30)
+
+[node name="obj_a_tunnelroom_wall02_307" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60, 0, -16)
+
+[node name="obj_a_tunnelroom_wall02_308" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62, 0, -10)
+
+[node name="obj_a_tunnelroom_wall02_309" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -12)
+
+[node name="obj_a_tunnelroom_wall02_310" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -10)
+
+[node name="obj_a_tunnelroom_wall02_311" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -14)
+
+[node name="obj_a_tunnelroom_wall02_312" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -12)
+
+[node name="obj_a_tunnelroom_wall02_313" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -22)
+
+[node name="obj_a_tunnelroom_wall02_314" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -20)
+
+[node name="obj_a_tunnelroom_wall02_315" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -24)
+
+[node name="obj_a_tunnelroom_wall02_316" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -22)
+
+[node name="obj_a_tunnelwall05_317" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 5, 0, -6)
+
+[node name="obj_a_tunnelwall05_318" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 2e-06, -58)
+
+[node name="obj_a_tunnelwall05_319" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 2e-06, -62)
+
+[node name="obj_a_tunnelwall02_320" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 2e-06, -60)
+
+[node name="obj_a_tunnelwall03_321" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -64)
+
+[node name="obj_a_tunnelwall03_322" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 24, 0, -65)
+
+[node name="obj_a_tunnelwall03_323" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 25, 0, -62)
+
+[node name="obj_a_tunnelwall02_324" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 25, 0, -64)
+
+[node name="obj_n_treevine01_325" parent="Props" instance=ExtResource("ext_15")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -25)
+
+[node name="obj_n_treevine02_326" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 32, 0, -29)
+
+[node name="obj_n_treevine02_327" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 29, 0, -32)
+
+[node name="obj_n_treevine03_328" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -25)
+
+[node name="obj_n_treevine04_329" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 32, 2e-06, -29)
+
+[node name="obj_n_treevine04_330" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -32)
+
+[node name="obj_n_treevine04_331" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 33, 0, -35)
+
+[node name="obj_n_treevine01_332" parent="Props" instance=ExtResource("ext_15")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 33, 0, -35)
+
+[node name="obj_a_tunnelmachine01_350" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -26)
+
+[node name="obj_a_tunnelmachine01_351" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 44, 0, -26)
+
+[node name="obj_a_tunnelmachine01_352" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 58, 0, -10)
+
+[node name="obj_a_tunnelmachine01_353" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 54, 0, -10)
+
+[node name="trigger_m_tunnellever00_336" parent="Props" instance=ExtResource("ext_19")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, -2e-06, -14)
+
+[node name="trigger_m_tunnellever00_337" parent="Props" instance=ExtResource("ext_19")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 7, 0, -7)
+
+[node name="trigger_m_tunneldoor00_349" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 43, 0, -28)
+
+[node name="trigger_m_tunneldoor00_347" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 19, 0, -32)
+
+[node name="trigger_m_tunneldoor00_354" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 55, 0, -8)

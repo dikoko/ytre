@@ -11,6 +11,8 @@ Open `client/project.godot` in Godot 4.6. (or above)
 
 The main viewer scene: **`client/scenes/avatar_tool.tscn`**
 
+**→ [Avatar Tool User Guide](docs/user-guide.md)** — all UI and key bindings in one page.
+
 ### Character Modes
 
 Select from the top-left dropdown:

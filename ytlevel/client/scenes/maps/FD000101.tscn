@@ -1,0 +1,833 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase01.glb" id="ext_1"]
+[ext_resource type="PackedScene" path="res://assets/props/models/pointlight/light.glb" id="ext_10"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase02.glb" id="ext_2"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase03.glb" id="ext_3"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase04.glb" id="ext_4"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase05.glb" id="ext_5"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase06.glb" id="ext_6"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcounter.glb" id="ext_7"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookgate.glb" id="ext_8"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookgate01.glb" id="ext_9"]
+[ext_resource type="Script" path="res://scripts/terrain_loader.gd" id="ext_11"]
+[ext_resource type="Script" path="res://scripts/fly_camera.gd" id="ext_12"]
+[ext_resource type="Script" path="res://scripts/map_editor.gd" id="ext_13"]
+[ext_resource type="Script" path="res://scripts/prop_lighting.gd" id="ext_14"]
+
+[sub_resource type="Environment" id="env_1"]
+background_mode = 1
+background_color = Color(0.6, 0.75, 0.9, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.7, 0.75, 1)
+ambient_light_energy = 0.6
+
+[node name="FD000101" type="Node3D"]
+script = ExtResource("ext_13")
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+script = ExtResource("ext_11")
+metadata/heightmap_path = "res://assets/maps/FD000101/FD000101.png"
+metadata/tilemap_path = "res://assets/maps/FD000101/FD000101_tilemap.png"
+metadata/tiles_dir = "res://assets/maps/FD000101/FD000101_tiles"
+metadata/visibility_path = "res://assets/maps/FD000101/FD000101_visibility.png"
+metadata/sun_direction = Vector3(-0.11, -1, 0.32)
+metadata/sun_diffuse = Color(0.854902, 0.807843, 0.92549, 1)
+metadata/sun_ambient = Color(0.776471, 0.705882, 0.854902, 1)
+metadata/point_light_count = 12
+metadata/point_lights = PackedFloat32Array(34.0254, 3, -38.7638, 1, 0.501961, 0.25098, 1, 0.501961, 0.25098, 10, 0, 0.3, 0, 42.0752, 3, -30.9706, 1, 0.501961, 0.501961, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 26, 3, -31, 1, 0, 0.501961, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 34, 3, -23, 0.501961, 0, 1, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 34, 3, -60, 0.501961, 0.501961, 0.752941, 0, 0, 0.25098, 15, 0, 0.3, 0, 10, 3, -62, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 10, 0, 0.5, 0, 10, 3, -35, 0.501961, 0.501961, 0.752941, 0.501961, 0.25098, 0, 15, 0, 0.3, 0, 11.4961, 3, -16.0035, 1, 0.501961, 0, 0.501961, 0.247059, 0.247059, 10, 0, 0.3, 0, 34, 3, -9, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 53, 3, -17, 1, 1, 0, 0.25098, 0, 0, 15, 0, 0.5, 0, 57, 3, -38, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 15, 0, 0.3, 0, 58, 3, -62, 1, 1, 0, 0.501961, 0.25098, 0, 10, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("ext_12")
+transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 75, 60, -40)
+current = true
+fov = 60.0
+far = 500.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 50, 50, 50)
+light_energy = 0.8
+shadow_enabled = true
+shadow_opacity = 0.4
+
+[node name="Props" type="Node3D" parent="."]
+script = ExtResource("ext_14")
+metadata/sun_direction = Vector3(-0.11, -1, 0.32)
+metadata/sun_diffuse = Color(0.854902, 0.807843, 0.92549, 1)
+metadata/sun_ambient = Color(0.776471, 0.705882, 0.854902, 1)
+metadata/point_light_count = 12
+metadata/point_lights = PackedFloat32Array(34.0254, 3, -38.7638, 1, 0.501961, 0.25098, 1, 0.501961, 0.25098, 10, 0, 0.3, 0, 42.0752, 3, -30.9706, 1, 0.501961, 0.501961, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 26, 3, -31, 1, 0, 0.501961, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 34, 3, -23, 0.501961, 0, 1, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 34, 3, -60, 0.501961, 0.501961, 0.752941, 0, 0, 0.25098, 15, 0, 0.3, 0, 10, 3, -62, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 10, 0, 0.5, 0, 10, 3, -35, 0.501961, 0.501961, 0.752941, 0.501961, 0.25098, 0, 15, 0, 0.3, 0, 11.4961, 3, -16.0035, 1, 0.501961, 0, 0.501961, 0.247059, 0.247059, 10, 0, 0.3, 0, 34, 3, -9, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 10, 0, 0.3, 0, 53, 3, -17, 1, 1, 0, 0.25098, 0, 0, 15, 0, 0.5, 0, 57, 3, -38, 1, 0.501961, 0.25098, 0.501961, 0.25098, 0, 15, 0, 0.3, 0, 58, 3, -62, 1, 1, 0, 0.501961, 0.25098, 0, 10, 0, 0.5, 0)
+
+[node name="obj_a_bookcase05_0" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 41, -2e-06, -50)
+
+[node name="obj_a_bookcase05_1" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 31, 0, -50)
+
+[node name="obj_a_bookcase06_2" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 31, 0, -50)
+
+[node name="obj_a_bookcase06_3" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 31, -1e-06, -46)
+
+[node name="obj_a_bookcase06_4" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 37, 0, -46)
+
+[node name="obj_a_bookcase06_5" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 37, 0, -42)
+
+[node name="obj_a_bookgate_6" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -51)
+
+[node name="obj_a_bookgate_7" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -42)
+
+[node name="obj_a_bookcase05_8" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -68)
+
+[node name="obj_a_bookcase05_9" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 2e-06, -68)
+
+[node name="obj_a_bookcase05_10" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 26, 0, -63)
+
+[node name="obj_a_bookcase05_11" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 26, 0, -51)
+
+[node name="obj_a_bookcase05_12" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 26, 0, -59)
+
+[node name="obj_a_bookcase05_13" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 26, 0, -55)
+
+[node name="obj_a_bookcase05_14" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 42, 0, -55)
+
+[node name="obj_a_bookcase05_15" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 42, 0, -59)
+
+[node name="obj_a_bookcase05_16" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 42, 0, -63)
+
+[node name="obj_a_bookcase05_17" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 42, 0, -67)
+
+[node name="obj_a_bookcase05_18" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -43)
+
+[node name="obj_a_bookcase05_19" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -43)
+
+[node name="obj_a_bookcase05_20" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 23, 0, -43)
+
+[node name="obj_a_bookcase05_21" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -43)
+
+[node name="obj_a_bookcase05_22" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 22, 0, -38)
+
+[node name="obj_a_bookcase05_23" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 22, 0, -34)
+
+[node name="obj_a_bookcase05_24" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 27, 0, -18)
+
+[node name="obj_a_bookcase05_25" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 31, 0, -18)
+
+[node name="obj_a_bookcase05_26" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 41, 0, -18)
+
+[node name="obj_a_bookcase05_27" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 45, 0, -18)
+
+[node name="obj_a_bookcase05_28" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -23)
+
+[node name="obj_a_bookcase05_29" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -38)
+
+[node name="obj_a_bookcase05_30" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -42)
+
+[node name="obj_a_bookgate_31" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -19)
+
+[node name="obj_a_bookgate_32" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 23, 0, -28)
+
+[node name="obj_a_bookgate_33" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 45, 0, -28)
+
+[node name="obj_a_bookcase05_34" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 22, 0, -19)
+
+[node name="obj_a_bookcase03_35" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 21, 0, -22)
+
+[node name="obj_a_bookcase03_36" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 47, 0, -29)
+
+[node name="obj_a_bookcase04_37" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39, -1e-06, -38)
+
+[node name="obj_a_bookcase01_38" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -24)
+
+[node name="obj_a_bookcase01_39" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -24)
+
+[node name="obj_a_bookcase01_40" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -27)
+
+[node name="obj_a_bookcase01_41" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -27)
+
+[node name="obj_a_bookcounter_42" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 29.5, 0, -39)
+
+[node name="obj_a_bookcase01_43" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39, 0, -24)
+
+[node name="obj_a_bookcase01_44" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -24)
+
+[node name="obj_a_bookcase01_45" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -27)
+
+[node name="obj_a_bookcase01_46" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39, 0, -27)
+
+[node name="obj_a_bookcase02_47" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 20, -2e-06, -35)
+
+[node name="obj_a_bookcase02_48" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -35)
+
+[node name="obj_a_bookcase02_49" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 22, 0, -27)
+
+[node name="obj_a_bookcase02_50" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 20, 0, -27)
+
+[node name="obj_a_bookcase02_51" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -27)
+
+[node name="obj_a_bookcase02_52" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16, 0, -27)
+
+[node name="obj_a_bookcase01_53" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -49)
+
+[node name="obj_a_bookcase01_54" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -49)
+
+[node name="obj_a_bookcase06_55" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 14, 0, -53)
+
+[node name="obj_a_bookcase06_56" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 14, 0, -57)
+
+[node name="obj_a_bookcase02_57" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 17, 0, -59)
+
+[node name="obj_a_bookcase02_58" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 17, 0, -61)
+
+[node name="obj_a_bookcase02_59" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 17, 0, -63)
+
+[node name="obj_a_bookcase02_60" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 17, 0, -65)
+
+[node name="obj_a_bookcase06_61" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -67)
+
+[node name="obj_a_bookcase06_62" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 8, 0, -67)
+
+[node name="obj_a_bookcase06_63" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4, 0, -67)
+
+[node name="obj_a_bookcase02_64" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 17, 0, -67)
+
+[node name="obj_a_bookcase02_65" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -65)
+
+[node name="obj_a_bookcase02_66" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, -1e-06, -63)
+
+[node name="obj_a_bookcase02_67" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -61)
+
+[node name="obj_a_bookcase02_68" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -59)
+
+[node name="obj_a_bookcase02_69" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -57)
+
+[node name="obj_a_bookcase06_70" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, 1e-06, -53)
+
+[node name="obj_a_bookcase06_71" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, -1e-06, -49)
+
+[node name="obj_a_bookcase03_72" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -34)
+
+[node name="obj_a_bookcase02_73" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 8, 0, -57)
+
+[node name="obj_a_bookcase02_74" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6, 1e-06, -57)
+
+[node name="obj_a_bookcase02_75" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 14, -1e-06, -57)
+
+[node name="obj_a_bookcase02_76" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16, 0, -57)
+
+[node name="obj_a_bookcase01_77" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 16, 0, -49)
+
+[node name="obj_a_bookcase01_78" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, -1e-06, -49)
+
+[node name="obj_a_bookcase01_79" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 0, -47)
+
+[node name="obj_a_bookcase01_80" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 0, -45)
+
+[node name="obj_a_bookcase01_81" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 0, -43)
+
+[node name="obj_a_bookcase01_82" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 1e-06, -41)
+
+[node name="obj_a_bookcase01_83" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 0, -39)
+
+[node name="obj_a_bookcase01_84" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 19, 0, -37)
+
+[node name="obj_a_bookcase06_85" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, 0, -40)
+
+[node name="obj_a_bookcase01_86" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -39)
+
+[node name="obj_a_bookcase01_87" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -41)
+
+[node name="obj_a_bookcase01_88" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -37)
+
+[node name="obj_a_bookcase01_89" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -35)
+
+[node name="obj_a_bookcase01_90" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -33)
+
+[node name="obj_a_bookcase01_91" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -31)
+
+[node name="obj_a_bookcase01_92" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -29)
+
+[node name="obj_a_bookcase01_93" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 13, 0, -27)
+
+[node name="obj_a_bookcase06_94" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, 0, -27)
+
+[node name="obj_a_bookcase02_95" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6, 0, -21)
+
+[node name="obj_a_bookcase02_96" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4, 2e-06, -21)
+
+[node name="obj_a_bookcase02_97" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -15)
+
+[node name="obj_a_bookcase02_98" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -13)
+
+[node name="obj_a_bookcase02_99" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -11)
+
+[node name="obj_a_bookcase02_100" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -9)
+
+[node name="obj_a_bookcase02_101" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -7)
+
+[node name="obj_a_bookcase02_102" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -5)
+
+[node name="obj_a_bookcase02_103" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -3)
+
+[node name="obj_a_bookcase06_104" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 8, 0, -3)
+
+[node name="obj_a_bookcase06_105" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -3)
+
+[node name="obj_a_bookcase02_106" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 14, 0, -27)
+
+[node name="obj_a_bookcase02_107" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 14, 0, -25)
+
+[node name="obj_a_bookcase02_108" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 14, 0, -23)
+
+[node name="obj_a_bookcase06_109" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16, 0, -3)
+
+[node name="obj_a_bookcase06_110" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 20, 0, -3)
+
+[node name="obj_a_bookcase02_111" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13, 0, -21)
+
+[node name="obj_a_bookcase02_112" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 15, 0, -21)
+
+[node name="obj_a_bookcase02_113" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 17, 0, -21)
+
+[node name="obj_a_bookcase02_114" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, -2e-06, -17)
+
+[node name="obj_a_bookcase02_115" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 3, 0, -19)
+
+[node name="obj_a_bookcase02_116" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -21)
+
+[node name="obj_a_bookcase02_117" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -19)
+
+[node name="obj_a_bookcase02_118" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -17)
+
+[node name="obj_a_bookcase02_119" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -9)
+
+[node name="obj_a_bookcase02_120" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -7)
+
+[node name="obj_a_bookcase02_121" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 20, 0, -5)
+
+[node name="obj_a_bookcase01_122" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 19, 0, -15)
+
+[node name="obj_a_bookcase01_123" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 21, 0, -15)
+
+[node name="obj_a_bookcase01_124" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 23, 0, -15)
+
+[node name="obj_a_bookcase01_125" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -15)
+
+[node name="obj_a_bookcase01_126" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -15)
+
+[node name="obj_a_bookcase01_127" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 21, 0, -9)
+
+[node name="obj_a_bookcase01_128" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 23, 0, -9)
+
+[node name="obj_a_bookcase01_129" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1e-06, 0, 1, 0, 1, -0, -1, -0, 1e-06, 22, 0, -7)
+
+[node name="obj_a_bookcase01_130" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1e-06, 0, 1, 0, 1, -0, -1, -0, 1e-06, 22, 0, -5)
+
+[node name="obj_a_bookcase01_131" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 22, 0, -3)
+
+[node name="obj_a_bookcase06_132" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 27, -2e-06, -3)
+
+[node name="obj_a_bookcase06_133" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 31, 0, -3)
+
+[node name="obj_a_bookcase01_134" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -15)
+
+[node name="obj_a_bookcase01_135" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 31, -2e-06, -16)
+
+[node name="obj_a_bookcase01_136" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 31, 0, -14)
+
+[node name="obj_a_bookcase01_137" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 27, 0, -12)
+
+[node name="obj_a_bookcase01_138" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 27, -2e-06, -10)
+
+[node name="obj_a_bookcase01_139" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 27, 0, -8)
+
+[node name="obj_a_bookcase04_140" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, -2e-06, -9)
+
+[node name="obj_a_bookcase01_141" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 10, -2e-06, -9)
+
+[node name="obj_a_bookcase01_142" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 10, 0, -7)
+
+[node name="obj_a_bookcase01_143" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 10, -2e-06, -5)
+
+[node name="obj_a_bookcase01_144" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 10, 0, -11)
+
+[node name="obj_a_bookcase01_145" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 10, 0, -13)
+
+[node name="obj_a_bookcase02_146" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46, 0, -35)
+
+[node name="obj_a_bookcase02_147" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48, 0, -35)
+
+[node name="obj_a_bookcase01_148" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -35)
+
+[node name="obj_a_bookcase01_149" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -37)
+
+[node name="obj_a_bookcase01_150" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -39)
+
+[node name="obj_a_bookcase01_151" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -41)
+
+[node name="obj_a_bookcase01_152" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -43)
+
+[node name="obj_a_bookcase01_153" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -45)
+
+[node name="obj_a_bookcase01_154" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49, 0, -47)
+
+[node name="obj_a_bookcase01_155" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 50, 0, -49)
+
+[node name="obj_a_bookcase01_156" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, 0, -49)
+
+[node name="obj_a_bookcase01_157" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 54, 0, -49)
+
+[node name="obj_a_bookcase02_158" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 48, 0, -27)
+
+[node name="obj_a_bookcase02_159" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 50, 0, -27)
+
+[node name="obj_a_bookcase02_160" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 52, 0, -27)
+
+[node name="obj_a_bookcase02_161" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 54, 0, -27)
+
+[node name="obj_a_bookcase02_162" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -25)
+
+[node name="obj_a_bookcase02_163" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -23)
+
+[node name="obj_a_bookcase02_164" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -21)
+
+[node name="obj_a_bookcase02_165" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 53, 0, -21)
+
+[node name="obj_a_bookcase02_166" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 51, 0, -21)
+
+[node name="obj_a_bookcase02_167" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 49, 0, -21)
+
+[node name="obj_a_bookcase02_168" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -19)
+
+[node name="obj_a_bookcase02_169" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -17)
+
+[node name="obj_a_bookcase02_170" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -15)
+
+[node name="obj_a_bookcase01_171" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 47, 0, -15)
+
+[node name="obj_a_bookcase01_172" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -15)
+
+[node name="obj_a_bookcase01_173" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 43, 0, -15)
+
+[node name="obj_a_bookcase01_174" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -15)
+
+[node name="obj_a_bookcase01_175" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39, 0, -15)
+
+[node name="obj_a_bookcase01_176" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -15)
+
+[node name="obj_a_bookcase01_177" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 37, 0, -16)
+
+[node name="obj_a_bookcase01_178" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 37, 0, -18)
+
+[node name="obj_a_bookcase06_179" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 41, 0, -3)
+
+[node name="obj_a_bookcase06_180" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 45, 0, -3)
+
+[node name="obj_a_bookcase01_181" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -5)
+
+[node name="obj_a_bookcase01_182" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -7)
+
+[node name="obj_a_bookcase01_183" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 46, 0, -9)
+
+[node name="obj_a_bookcase01_184" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 47, 0, -9)
+
+[node name="obj_a_bookcase01_185" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 49, 0, -9)
+
+[node name="obj_a_bookcase02_186" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -7)
+
+[node name="obj_a_bookcase02_187" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -5)
+
+[node name="obj_a_bookcase02_188" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -3)
+
+[node name="obj_a_bookcase06_189" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 52, 0, -3)
+
+[node name="obj_a_bookcase06_190" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 56, 0, -3)
+
+[node name="obj_a_bookcase06_191" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 60, 0, -3)
+
+[node name="obj_a_bookcase06_192" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 64, 0, -3)
+
+[node name="obj_a_bookcase02_193" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -5)
+
+[node name="obj_a_bookcase02_194" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -7)
+
+[node name="obj_a_bookcase02_195" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -9)
+
+[node name="obj_a_bookcase02_196" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -11)
+
+[node name="obj_a_bookcase02_197" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -13)
+
+[node name="obj_a_bookcase02_198" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -15)
+
+[node name="obj_a_bookcase02_199" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -17)
+
+[node name="obj_a_bookcase02_200" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -19)
+
+[node name="obj_a_bookcase02_201" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -21)
+
+[node name="obj_a_bookcase02_202" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 62, -2e-06, -21)
+
+[node name="obj_a_bookcase02_203" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60, 2e-06, -21)
+
+[node name="obj_a_bookcase06_204" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, 2e-06, -31)
+
+[node name="obj_a_bookcase06_205" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, -2e-06, -35)
+
+[node name="obj_a_bookcase03_206" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 64, 0, -41)
+
+[node name="obj_a_bookcase06_207" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, 0, -44)
+
+[node name="obj_a_bookcase06_208" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, 0, -53)
+
+[node name="obj_a_bookcase06_209" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 62, 0, -57)
+
+[node name="obj_a_bookcase06_210" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 2e-06, -49)
+
+[node name="obj_a_bookcase06_211" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, -2e-06, -53)
+
+[node name="obj_a_bookcase06_212" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, -2e-06, -31)
+
+[node name="obj_a_bookcase03_213" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -43)
+
+[node name="obj_a_bookcase02_214" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 7, 0, -21)
+
+[node name="obj_a_bookcase02_215" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 7, 0, -23)
+
+[node name="obj_a_bookcase02_216" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 7, 0, -25)
+
+[node name="obj_a_bookcase02_217" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 61, 0, -23)
+
+[node name="obj_a_bookcase02_218" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 61, 0, -25)
+
+[node name="obj_a_bookcase02_219" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 61, 0, -27)
+
+[node name="obj_a_bookcase03_220" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 64, 0, -50)
+
+[node name="obj_a_bookcase01_221" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -12)
+
+[node name="obj_a_bookcase01_222" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 2e-06, -10)
+
+[node name="obj_a_bookcase01_223" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 40, 0, -8)
+
+[node name="obj_a_bookcase01_224" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 57, -2e-06, -5)
+
+[node name="obj_a_bookcase01_225" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 57, -2e-06, -7)
+
+[node name="obj_a_bookcase01_226" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 57, 0, -9)
+
+[node name="obj_a_bookcase01_227" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 57, 0, -11)
+
+[node name="obj_a_bookcase01_228" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 57, 0, -13)
+
+[node name="obj_a_bookcase01_229" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -27)
+
+[node name="obj_a_bookcase01_230" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 4e-06, -29)
+
+[node name="obj_a_bookcase01_231" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, -4e-06, -31)
+
+[node name="obj_a_bookcase01_232" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -33)
+
+[node name="obj_a_bookcase01_233" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -35)
+
+[node name="obj_a_bookcase01_234" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, -4e-06, -37)
+
+[node name="obj_a_bookcase01_235" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -39)
+
+[node name="obj_a_bookcase01_236" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 54, 0, -41)
+
+[node name="obj_a_bookcase04_237" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, -4e-06, -9)
+
+[node name="obj_a_bookcase02_238" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 56, 0, -57)
+
+[node name="obj_a_bookcase02_239" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 54, 0, -57)
+
+[node name="obj_a_bookcase02_240" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62, 2e-06, -57)
+
+[node name="obj_a_bookcase02_241" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 64, 2e-06, -57)
+
+[node name="obj_a_bookcase02_242" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -59)
+
+[node name="obj_a_bookcase02_243" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -61)
+
+[node name="obj_a_bookcase02_244" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 0, -63)
+
+[node name="obj_a_bookcase02_245" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, -2e-06, -65)
+
+[node name="obj_a_bookcase02_246" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, -1, 0, 1, -0, 1, -0, 0, 65, 2e-06, -67)
+
+[node name="obj_a_bookcase02_247" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -57)
+
+[node name="obj_a_bookcase02_248" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -59)
+
+[node name="obj_a_bookcase02_249" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -61)
+
+[node name="obj_a_bookcase02_250" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -63)
+
+[node name="obj_a_bookcase02_251" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 51, 0, -65)
+
+[node name="obj_a_bookcase06_252" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60, -4e-06, -67)
+
+[node name="obj_a_bookcase06_253" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 56, 0, -67)
+
+[node name="obj_a_bookcase06_254" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 52, 0, -67)
+
+[node name="obj_a_bookgate01_255" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -67)
+
+[node name="obj_a_bookgate01_256" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -5)

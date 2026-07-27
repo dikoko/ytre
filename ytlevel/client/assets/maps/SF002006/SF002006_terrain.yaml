@@ -1,0 +1,1413 @@
+# SF002006_terrain.yaml
+# Terrain tile data — parsed from SF002006.cvs + tileregistry.tcg
+
+grid: {rows: 149, cols: 149}
+tile_sets:
+- id: 0
+  kind: 107
+  name: SWI001
+  textures: {'1_0': SWI0011_0.tga, '2_0': SWI0012_0.tga, '3_0': SWI0013_0.tga, '4_0': SWI0014_0.tga, '5_0': SWI0015_0.tga, '6_0': SWI0016_0.tga, '7_0': SWI0017_0.tga, '8_0': SWI0018_0.tga, '9_0': SWI0019_0.tga,
+    '10_0': SWI00110_0.tga, '11_0': SWI00111_0.tga, '12_0': SWI00112_0.tga, '13_0': SWI00113_0.tga, '14_0': SWI00114_0.tga, '15_0': SWI00115_0.tga, '15_1': SWI00115_1.tga}
+- id: 1
+  kind: 108
+  name: SWI002
+  textures: {'1_0': SWI0021_0.tga, '2_0': SWI0022_0.tga, '3_0': SWI0023_0.tga, '4_0': SWI0024_0.tga, '5_0': SWI0025_0.tga, '6_0': SWI0026_0.tga, '7_0': SWI0027_0.tga, '8_0': SWI0028_0.tga, '9_0': SWI0029_0.tga,
+    '10_0': SWI00210_0.tga, '11_0': SWI00211_0.tga, '12_0': SWI00212_0.tga, '13_0': SWI00213_0.tga, '14_0': SWI00214_0.tga, '15_0': SWI00215_0.tga, '15_1': SWI00215_1.tga}
+- id: 2
+  kind: 109
+  name: SWI003
+  textures: {'1_0': SWI0031_0.tga, '2_0': SWI0032_0.tga, '3_0': SWI0033_0.tga, '4_0': SWI0034_0.tga, '5_0': SWI0035_0.tga, '6_0': SWI0036_0.tga, '7_0': SWI0037_0.tga, '8_0': SWI0038_0.tga, '9_0': SWI0039_0.tga,
+    '10_0': SWI00310_0.tga, '11_0': SWI00311_0.tga, '12_0': SWI00312_0.tga, '13_0': SWI00313_0.tga, '14_0': SWI00314_0.tga, '15_0': SWI00315_0.tga, '15_1': SWI00315_1.tga}
+- id: 3
+  kind: 110
+  name: SWI004
+  textures: {'1_0': SWI0041_0.tga, '2_0': SWI0042_0.tga, '3_0': SWI0043_0.tga, '4_0': SWI0044_0.tga, '5_0': SWI0045_0.tga, '6_0': SWI0046_0.tga, '7_0': SWI0047_0.tga, '8_0': SWI0048_0.tga, '9_0': SWI0049_0.tga,
+    '10_0': SWI00410_0.tga, '11_0': SWI00411_0.tga, '12_0': SWI00412_0.tga, '13_0': SWI00413_0.tga, '14_0': SWI00414_0.tga, '15_0': SWI00415_0.tga, '15_1': SWI00415_1.tga}
+- id: 4
+  kind: 111
+  name: SWI005
+  textures: {'1_0': SWI0051_0.tga, '2_0': SWI0052_0.tga, '3_0': SWI0053_0.tga, '4_0': SWI0054_0.tga, '5_0': SWI0055_0.tga, '6_0': SWI0056_0.tga, '7_0': SWI0057_0.tga, '8_0': SWI0058_0.tga, '9_0': SWI0059_0.tga,
+    '10_0': SWI00510_0.tga, '11_0': SWI00511_0.tga, '12_0': SWI00512_0.tga, '13_0': SWI00513_0.tga, '14_0': SWI00514_0.tga, '15_0': SWI00515_0.tga, '15_1': SWI00515_1.tga}
+- id: 5
+  kind: 112
+  name: SWI00644
+  textures: {'15_0': SWI0064415_0.tga, '15_1': SWI0064415_1.tga, '15_2': SWI0064415_2.tga, '15_3': SWI0064415_3.tga, '15_4': SWI0064415_4.tga, '15_5': SWI0064415_5.tga, '15_6': SWI0064415_6.tga, '15_7': SWI0064415_7.tga,
+    '15_8': SWI0064415_8.tga, '15_9': SWI0064415_9.tga, '15_10': SWI0064415_10.tga, '15_11': SWI0064415_11.tga, '15_12': SWI0064415_12.tga, '15_13': SWI0064415_13.tga, '15_14': SWI0064415_14.tga, '15_15': SWI0064415_15.tga}
+- id: 6
+  kind: 113
+  name: SWI00744
+  textures: {'15_0': SWI0074415_0.tga, '15_1': SWI0074415_1.tga, '15_2': SWI0074415_2.tga, '15_3': SWI0074415_3.tga, '15_4': SWI0074415_4.tga, '15_5': SWI0074415_5.tga, '15_6': SWI0074415_6.tga, '15_7': SWI0074415_7.tga,
+    '15_8': SWI0074415_8.tga, '15_9': SWI0074415_9.tga, '15_10': SWI0074415_10.tga, '15_11': SWI0074415_11.tga, '15_12': SWI0074415_12.tga, '15_13': SWI0074415_13.tga, '15_14': SWI0074415_14.tga, '15_15': SWI0074415_15.tga}
+palette:
+- index: 0
+  layers: [SWI003]
+  tile_ids: ['0x6DF1', '0x0000', '0x0000', '0x0000']
+- index: 1
+  layers: [SWI003]
+  tile_ids: ['0x6DF0', '0x0000', '0x0000', '0x0000']
+- index: 2
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E10', '0x0000', '0x0000']
+- index: 3
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E30', '0x0000', '0x0000']
+- index: 4
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E20', '0x0000', '0x0000']
+- index: 5
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E90', '0x0000', '0x0000']
+- index: 6
+  layers: [SWI004]
+  tile_ids: ['0x6EF0', '0x0000', '0x0000', '0x0000']
+- index: 7
+  layers: [SWI004]
+  tile_ids: ['0x6EF1', '0x0000', '0x0000', '0x0000']
+- index: 8
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E70', '0x0000', '0x0000']
+- index: 9
+  layers: [SWI003, SWI001, SWI004]
+  tile_ids: ['0x6DF0', '0x6B10', '0x6E80', '0x0000']
+- index: 10
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x0000', '0x0000']
+- index: 11
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6ED0', '0x0000', '0x0000']
+- index: 12
+  layers: [SWI003, SWI001]
+  tile_ids: ['0x6DF0', '0x6B90', '0x0000', '0x0000']
+- index: 13
+  layers: [SWI001]
+  tile_ids: ['0x6BF1', '0x0000', '0x0000', '0x0000']
+- index: 14
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E90', '0x0000', '0x0000']
+- index: 15
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E60', '0x0000', '0x0000']
+- index: 16
+  layers: [SWI001]
+  tile_ids: ['0x6BF0', '0x0000', '0x0000', '0x0000']
+- index: 17
+  layers: [SWI003, SWI001, SWI004]
+  tile_ids: ['0x6DF0', '0x6B10', '0x6E20', '0x0000']
+- index: 18
+  layers: [SWI003, SWI001]
+  tile_ids: ['0x6DF0', '0x6B30', '0x0000', '0x0000']
+- index: 19
+  layers: [SWI003, SWI001]
+  tile_ids: ['0x6DF0', '0x6B20', '0x0000', '0x0000']
+- index: 20
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E60', '0x0000', '0x0000']
+- index: 21
+  layers: [SWI003, SWI001]
+  tile_ids: ['0x6DF0', '0x6B60', '0x0000', '0x0000']
+- index: 22
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B90', '0x7190', '0x0000']
+- index: 23
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6EB0', '0x0000', '0x0000']
+- index: 24
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F0', '0x0000', '0x0000']
+- index: 25
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F1', '0x0000', '0x0000']
+- index: 26
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F2', '0x0000', '0x0000']
+- index: 27
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B60', '0x7160', '0x0000']
+- index: 28
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E80', '0x71F1', '0x0000']
+- index: 29
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6ED0', '0x71F2', '0x0000']
+- index: 30
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71F3', '0x0000', '0x0000']
+- index: 31
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71F0', '0x0000', '0x0000']
+- index: 32
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71F1', '0x0000', '0x0000']
+- index: 33
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71F2', '0x0000', '0x0000']
+- index: 34
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F4', '0x0000', '0x0000']
+- index: 35
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F5', '0x0000', '0x0000']
+- index: 36
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F6', '0x0000', '0x0000']
+- index: 37
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B60', '0x71F9', '0x0000']
+- index: 38
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF0', '0x71F7', '0x0000', '0x0000']
+- index: 39
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF1', '0x71FE', '0x0000', '0x0000']
+- index: 40
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF1', '0x71F7', '0x0000', '0x0000']
+- index: 41
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF0', '0x71F0', '0x0000', '0x0000']
+- index: 42
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF1', '0x71F8', '0x0000', '0x0000']
+- index: 43
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF0', '0x71F4', '0x0000', '0x0000']
+- index: 44
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B90', '0x71F4', '0x0000']
+- index: 45
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F4', '0x0000', '0x0000']
+- index: 46
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F5', '0x0000', '0x0000']
+- index: 47
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E80', '0x71F6', '0x0000']
+- index: 48
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F7', '0x0000']
+- index: 49
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F4', '0x0000']
+- index: 50
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6ED0', '0x71F5', '0x0000']
+- index: 51
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71F6', '0x0000', '0x0000']
+- index: 52
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71F7', '0x0000', '0x0000']
+- index: 53
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F8', '0x0000', '0x0000']
+- index: 54
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F9', '0x0000', '0x0000']
+- index: 55
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FA', '0x0000', '0x0000']
+- index: 56
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B70', '0x71F9', '0x0000']
+- index: 57
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B30', '0x71FB', '0x0000']
+- index: 58
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B30', '0x71F8', '0x0000']
+- index: 59
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B30', '0x71F4', '0x0000']
+- index: 60
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B30', '0x71F0', '0x0000']
+- index: 61
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6B30', '0x71FD', '0x0000']
+- index: 62
+  layers: [SWI003, SWI001, SWI00744]
+  tile_ids: ['0x6DF0', '0x6BB0', '0x71FB', '0x0000']
+- index: 63
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F8', '0x0000', '0x0000']
+- index: 64
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F9', '0x0000', '0x0000']
+- index: 65
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FB', '0x0000', '0x0000']
+- index: 66
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71F9', '0x0000']
+- index: 67
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71FA', '0x0000', '0x0000']
+- index: 68
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71FB', '0x0000', '0x0000']
+- index: 69
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6EE0', '0x0000', '0x0000']
+- index: 70
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6EC0', '0x0000', '0x0000']
+- index: 71
+  layers: [SWI001, SWI002, SWI004]
+  tile_ids: ['0x6BF0', '0x6C20', '0x6E40', '0x0000']
+- index: 72
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FC', '0x0000', '0x0000']
+- index: 73
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FD', '0x0000', '0x0000']
+- index: 74
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FE', '0x0000', '0x0000']
+- index: 75
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FF', '0x0000', '0x0000']
+- index: 76
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FC', '0x0000', '0x0000']
+- index: 77
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FD', '0x0000', '0x0000']
+- index: 78
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FE', '0x0000', '0x0000']
+- index: 79
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71FF', '0x0000', '0x0000']
+- index: 80
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71FD', '0x0000']
+- index: 81
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71FE', '0x0000', '0x0000']
+- index: 82
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71FF', '0x0000', '0x0000']
+- index: 83
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E60', '0x71F0', '0x0000']
+- index: 84
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F1', '0x0000', '0x0000']
+- index: 85
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F2', '0x0000', '0x0000']
+- index: 86
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F3', '0x0000', '0x0000']
+- index: 87
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F0', '0x0000', '0x0000']
+- index: 88
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C70', '0x71F2', '0x0000']
+- index: 89
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C30', '0x71F3', '0x0000']
+- index: 90
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C20', '0x71F0', '0x0000']
+- index: 91
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F1', '0x0000', '0x0000']
+- index: 92
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F3', '0x0000', '0x0000']
+- index: 93
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F0', '0x0000', '0x0000']
+- index: 94
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F2', '0x0000', '0x0000']
+- index: 95
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F3', '0x0000', '0x0000']
+- index: 96
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F2', '0x0000']
+- index: 97
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F3', '0x0000']
+- index: 98
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F0', '0x0000']
+- index: 99
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6ED0', '0x71F1', '0x0000']
+- index: 100
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E60', '0x71F2', '0x0000']
+- index: 101
+  layers: [SWI003, SWI00744]
+  tile_ids: ['0x6DF1', '0x71F3', '0x0000', '0x0000']
+- index: 102
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E60', '0x71F4', '0x0000']
+- index: 103
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F5', '0x0000', '0x0000']
+- index: 104
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F6', '0x0000', '0x0000']
+- index: 105
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71F7', '0x0000', '0x0000']
+- index: 106
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F4', '0x0000', '0x0000']
+- index: 107
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71F5', '0x0000', '0x0000']
+- index: 108
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71F6', '0x0000', '0x0000']
+- index: 109
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F7', '0x0000', '0x0000']
+- index: 110
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x71F4', '0x0000']
+- index: 111
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F7', '0x0000', '0x0000']
+- index: 112
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF1', '0x71F7', '0x0000', '0x0000']
+- index: 113
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71F6', '0x0000', '0x0000']
+- index: 114
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71F5', '0x0000']
+- index: 115
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E70', '0x71F6', '0x0000']
+- index: 116
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E20', '0x71F7', '0x0000']
+- index: 117
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E60', '0x71F8', '0x0000']
+- index: 118
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F9', '0x0000', '0x0000']
+- index: 119
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71FA', '0x0000', '0x0000']
+- index: 120
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FB', '0x0000', '0x0000']
+- index: 121
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71F8', '0x0000', '0x0000']
+- index: 122
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71F9', '0x0000', '0x0000']
+- index: 123
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FA', '0x0000', '0x0000']
+- index: 124
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71FB', '0x0000', '0x0000']
+- index: 125
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x71F8', '0x0000']
+- index: 126
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FA', '0x0000', '0x0000']
+- index: 127
+  layers: [SWI001, SWI00744]
+  tile_ids: ['0x6BF0', '0x71FB', '0x0000', '0x0000']
+- index: 128
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E10', '0x71FB', '0x0000']
+- index: 129
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71F8', '0x0000']
+- index: 130
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71F9', '0x0000']
+- index: 131
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71FA', '0x0000']
+- index: 132
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E20', '0x71FB', '0x0000']
+- index: 133
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E60', '0x71FB', '0x0000']
+- index: 134
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E70', '0x71FC', '0x0000']
+- index: 135
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E30', '0x71FD', '0x0000']
+- index: 136
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E20', '0x71FE', '0x0000']
+- index: 137
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FF', '0x0000', '0x0000']
+- index: 138
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FC', '0x0000', '0x0000']
+- index: 139
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FD', '0x0000', '0x0000']
+- index: 140
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71FE', '0x0000', '0x0000']
+- index: 141
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x71FC', '0x0000']
+- index: 142
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F1', '0x0000']
+- index: 143
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F8', '0x0000']
+- index: 144
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71FC', '0x0000']
+- index: 145
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E40', '0x71F7', '0x0000']
+- index: 146
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E60', '0x71FF', '0x0000']
+- index: 147
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E80', '0x0000', '0x0000']
+- index: 148
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6EC0', '0x0000', '0x0000']
+- index: 149
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6ED0', '0x0000', '0x0000']
+- index: 150
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6E60', '0x0000', '0x0000']
+- index: 151
+  layers: [SWI002]
+  tile_ids: ['0x6CF1', '0x0000', '0x0000', '0x0000']
+- index: 152
+  layers: [SWI002]
+  tile_ids: ['0x6CF0', '0x0000', '0x0000', '0x0000']
+- index: 153
+  layers: [SWI001, SWI002, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x71F0', '0x0000']
+- index: 154
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71F2', '0x0000']
+- index: 155
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71F6', '0x0000']
+- index: 156
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71FA', '0x0000']
+- index: 157
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E10', '0x71FD', '0x0000']
+- index: 158
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EB0', '0x71FE', '0x0000']
+- index: 159
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71F1', '0x0000']
+- index: 160
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71F2', '0x0000', '0x0000']
+- index: 161
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71F6', '0x0000', '0x0000']
+- index: 162
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71F7', '0x0000', '0x0000']
+- index: 163
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71FA', '0x0000', '0x0000']
+- index: 164
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71FB', '0x0000', '0x0000']
+- index: 165
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6EE0', '0x71F3', '0x0000']
+- index: 166
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6E40', '0x0000', '0x0000']
+- index: 167
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6E40', '0x0000', '0x0000']
+- index: 168
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E10', '0x71F1', '0x0000']
+- index: 169
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71F1', '0x0000']
+- index: 170
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71F6', '0x0000']
+- index: 171
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71F5', '0x0000']
+- index: 172
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E20', '0x71F1', '0x0000']
+- index: 173
+  layers: [SWI003, SWI004, SWI00744]
+  tile_ids: ['0x6DF0', '0x6E60', '0x71F7', '0x0000']
+- index: 174
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E80', '0x71FB', '0x0000']
+- index: 175
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71F9', '0x0000']
+- index: 176
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6EC0', '0x71FA', '0x0000']
+- index: 177
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E40', '0x71FB', '0x0000']
+- index: 178
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF1', '0x71FE', '0x0000', '0x0000']
+- index: 179
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF1', '0x71F3', '0x0000', '0x0000']
+- index: 180
+  layers: [SWI001, SWI002, SWI00644, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x7090', '0x71F4']
+- index: 181
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E90', '0x71F8', '0x0000']
+- index: 182
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E10', '0x71F8', '0x0000']
+- index: 183
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E30', '0x71FB', '0x0000']
+- index: 184
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6EB0', '0x0000', '0x0000']
+- index: 185
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E60', '0x71FC', '0x0000']
+- index: 186
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71FD', '0x0000', '0x0000']
+- index: 187
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71FE', '0x0000', '0x0000']
+- index: 188
+  layers: [SWI002, SWI00744]
+  tile_ids: ['0x6CF0', '0x71FF', '0x0000', '0x0000']
+- index: 189
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E10', '0x71FC', '0x0000']
+- index: 190
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E30', '0x71FE', '0x0000']
+- index: 191
+  layers: [SWI002, SWI004, SWI00744]
+  tile_ids: ['0x6CF0', '0x6E30', '0x71FF', '0x0000']
+- index: 192
+  layers: [SWI001, SWI002, SWI00644, SWI00744]
+  tile_ids: ['0x6BF0', '0x6C60', '0x7090', '0x71FC']
+- index: 193
+  layers: [SWI001, SWI004, SWI00744]
+  tile_ids: ['0x6BF0', '0x6E90', '0x71FC', '0x0000']
+- index: 194
+  layers: [SWI004, SWI00744]
+  tile_ids: ['0x6EF0', '0x71FD', '0x0000', '0x0000']
+- index: 195
+  layers: [SWI003, SWI004]
+  tile_ids: ['0x6DF0', '0x6EE0', '0x0000', '0x0000']
+- index: 196
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E70', '0x70F0', '0x0000']
+- index: 197
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70F1', '0x0000']
+- index: 198
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70F2', '0x0000']
+- index: 199
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70F3', '0x0000']
+- index: 200
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6EB0', '0x70F0', '0x0000']
+- index: 201
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F1', '0x0000', '0x0000']
+- index: 202
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F2', '0x0000', '0x0000']
+- index: 203
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F3', '0x0000', '0x0000']
+- index: 204
+  layers: [SWI001, SWI004, SWI00644]
+  tile_ids: ['0x6BF0', '0x6E60', '0x70F0', '0x0000']
+- index: 205
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF0', '0x70F1', '0x0000', '0x0000']
+- index: 206
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF0', '0x70F2', '0x0000', '0x0000']
+- index: 207
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF1', '0x70F3', '0x0000', '0x0000']
+- index: 208
+  layers: [SWI003, SWI001, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6B60', '0x6E80', '0x7010']
+- index: 209
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF1', '0x70F4', '0x0000', '0x0000']
+- index: 210
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F5', '0x0000', '0x0000']
+- index: 211
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F6', '0x0000', '0x0000']
+- index: 212
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF1', '0x70F7', '0x0000', '0x0000']
+- index: 213
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70F7', '0x0000', '0x0000']
+- index: 214
+  layers: [SWI001, SWI004, SWI00644]
+  tile_ids: ['0x6BF0', '0x6E60', '0x70F4', '0x0000']
+- index: 215
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF1', '0x70F5', '0x0000', '0x0000']
+- index: 216
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF1', '0x70F6', '0x0000', '0x0000']
+- index: 217
+  layers: [SWI001, SWI00644]
+  tile_ids: ['0x6BF1', '0x70F7', '0x0000', '0x0000']
+- index: 218
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E10', '0x0000', '0x0000']
+- index: 219
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E30', '0x0000', '0x0000']
+- index: 220
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E20', '0x0000', '0x0000']
+- index: 221
+  layers: [SWI003, SWI001, SWI00644]
+  tile_ids: ['0x6DF0', '0x6B60', '0x7090', '0x0000']
+- index: 222
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF1', '0x70F8', '0x0000', '0x0000']
+- index: 223
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF1', '0x70F9', '0x0000', '0x0000']
+- index: 224
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6EE0', '0x70FA', '0x0000']
+- index: 225
+  layers: [SWI002, SWI004, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6EC0', '0x6F10', '0x70FB']
+- index: 226
+  layers: [SWI004, SWI005, SWI00644]
+  tile_ids: ['0x6EF0', '0x6F30', '0x70F8', '0x0000']
+- index: 227
+  layers: [SWI004, SWI005, SWI00644]
+  tile_ids: ['0x6EF0', '0x6F30', '0x70F9', '0x0000']
+- index: 228
+  layers: [SWI004, SWI005, SWI00644]
+  tile_ids: ['0x6EF0', '0x6F30', '0x70FA', '0x0000']
+- index: 229
+  layers: [SWI002, SWI004, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6EC0', '0x6F20', '0x70FB']
+- index: 230
+  layers: [SWI001, SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6BF0', '0x6C30', '0x6E40', '0x70F8']
+- index: 231
+  layers: [SWI001, SWI002, SWI00644]
+  tile_ids: ['0x6BF0', '0x6C30', '0x70F9', '0x0000']
+- index: 232
+  layers: [SWI001, SWI002, SWI00644]
+  tile_ids: ['0x6BF0', '0x6C30', '0x70FA', '0x0000']
+- index: 233
+  layers: [SWI001, SWI002, SWI00644]
+  tile_ids: ['0x6BF0', '0x6C30', '0x70FB', '0x0000']
+- index: 234
+  layers: [SWI001, SWI002, SWI004]
+  tile_ids: ['0x6BF0', '0x6C20', '0x6E90', '0x0000']
+- index: 235
+  layers: [SWI001, SWI004]
+  tile_ids: ['0x6BF0', '0x6E70', '0x0000', '0x0000']
+- index: 236
+  layers: [SWI003, SWI001, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6B40', '0x6E20', '0x7090']
+- index: 237
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF1', '0x70FC', '0x0000', '0x0000']
+- index: 238
+  layers: [SWI004, SWI00644]
+  tile_ids: ['0x6EF0', '0x70FD', '0x0000', '0x0000']
+- index: 239
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E60', '0x70FE', '0x0000']
+- index: 240
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F80', '0x70FF', '0x0000']
+- index: 241
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6FC0', '0x70FC', '0x0000']
+- index: 242
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6FC0', '0x70FD', '0x0000']
+- index: 243
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6FD0', '0x70FE', '0x0000']
+- index: 244
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F70', '0x70FF', '0x0000']
+- index: 245
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F30', '0x70FC', '0x0000']
+- index: 246
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F20', '0x70FD', '0x0000']
+- index: 247
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70FE', '0x0000', '0x0000']
+- index: 248
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70FF', '0x0000', '0x0000']
+- index: 249
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6E80', '0x0000', '0x0000']
+- index: 250
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6ED0', '0x0000', '0x0000']
+- index: 251
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6E60', '0x7090', '0x0000']
+- index: 252
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6EC0', '0x70F0', '0x0000']
+- index: 253
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6EC0', '0x70F1', '0x0000']
+- index: 254
+  layers: [SWI003, SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6C90', '0x6E40', '0x70F2']
+- index: 255
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70F3', '0x0000', '0x0000']
+- index: 256
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F0', '0x0000', '0x0000']
+- index: 257
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70F1', '0x0000', '0x0000']
+- index: 258
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F90', '0x70F2', '0x0000']
+- index: 259
+  layers: [SWI005, SWI00644]
+  tile_ids: ['0x6FF0', '0x70F3', '0x0000', '0x0000']
+- index: 260
+  layers: [SWI005, SWI00644]
+  tile_ids: ['0x6FF1', '0x70F0', '0x0000', '0x0000']
+- index: 261
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F60', '0x70F1', '0x0000']
+- index: 262
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F2', '0x0000', '0x0000']
+- index: 263
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6E90', '0x0000', '0x0000']
+- index: 264
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70F4', '0x0000', '0x0000']
+- index: 265
+  layers: [SWI003, SWI002, SWI00644]
+  tile_ids: ['0x6DF0', '0x6C10', '0x70F5', '0x0000']
+- index: 266
+  layers: [SWI003, SWI002, SWI00644]
+  tile_ids: ['0x6DF0', '0x6CB0', '0x70F6', '0x0000']
+- index: 267
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F7', '0x0000', '0x0000']
+- index: 268
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F4', '0x0000', '0x0000']
+- index: 269
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70F5', '0x0000', '0x0000']
+- index: 270
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F80', '0x70F6', '0x0000']
+- index: 271
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6FD0', '0x70F7', '0x0000']
+- index: 272
+  layers: [SWI005, SWI00644]
+  tile_ids: ['0x6FF1', '0x70F4', '0x0000', '0x0000']
+- index: 273
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F60', '0x70F5', '0x0000']
+- index: 274
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F6', '0x0000', '0x0000']
+- index: 275
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70F7', '0x0000', '0x0000']
+- index: 276
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6E70', '0x7080', '0x0000']
+- index: 277
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70F8', '0x0000', '0x0000']
+- index: 278
+  layers: [SWI003, SWI002, SWI00644]
+  tile_ids: ['0x6DF0', '0x6C90', '0x70F9', '0x0000']
+- index: 279
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70FA', '0x0000', '0x0000']
+- index: 280
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70FB', '0x0000', '0x0000']
+- index: 281
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F8', '0x0000', '0x0000']
+- index: 282
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF0', '0x70F9', '0x0000', '0x0000']
+- index: 283
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F80', '0x70FB', '0x0000']
+- index: 284
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6FC0', '0x70F8', '0x0000']
+- index: 285
+  layers: [SWI002, SWI005, SWI00644]
+  tile_ids: ['0x6CF0', '0x6F40', '0x70F9', '0x0000']
+- index: 286
+  layers: [SWI002, SWI00644]
+  tile_ids: ['0x6CF1', '0x70FA', '0x0000', '0x0000']
+- index: 287
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E10', '0x70FB', '0x0000']
+- index: 288
+  layers: [SWI002, SWI004]
+  tile_ids: ['0x6CF0', '0x6EB0', '0x0000', '0x0000']
+- index: 289
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FC', '0x0000', '0x0000']
+- index: 290
+  layers: [SWI003, SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6C80', '0x6E10', '0x70FD']
+- index: 291
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70FE', '0x0000']
+- index: 292
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70FF', '0x0000']
+- index: 293
+  layers: [SWI003, SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6CC0', '0x6E20', '0x70FC']
+- index: 294
+  layers: [SWI003, SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6CC0', '0x6E10', '0x70FD']
+- index: 295
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70FC', '0x0000']
+- index: 296
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6E30', '0x70FD', '0x0000']
+- index: 297
+  layers: [SWI002, SWI004, SWI00644]
+  tile_ids: ['0x6CF0', '0x6EB0', '0x70FF', '0x0000']
+- index: 298
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6EE0', '0x7010', '0x0000']
+- index: 299
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6EC0', '0x7030', '0x0000']
+- index: 300
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FA', '0x0000', '0x0000']
+- index: 301
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FB', '0x0000', '0x0000']
+- index: 302
+  layers: [SWI003, SWI004, SWI00644]
+  tile_ids: ['0x6DF0', '0x6E40', '0x70B0', '0x0000']
+- index: 303
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FE', '0x0000', '0x0000']
+- index: 304
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF1', '0x70FF', '0x0000', '0x0000']
+- index: 305
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF1', '0x70FC', '0x0000', '0x0000']
+- index: 306
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FD', '0x0000', '0x0000']
+- index: 307
+  layers: [SWI003, SWI00644]
+  tile_ids: ['0x6DF0', '0x70FF', '0x0000', '0x0000']
+cells:
+- [0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
+  0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0,
+  0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1]
+- [1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+  1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1,
+  1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0]
+- [1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1,
+  1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+  1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1]
+- [1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+  0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0,
+  0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1]
+- [0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
+  0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
+  1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0]
+- [1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0,
+  0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0,
+  0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1]
+- [0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1,
+  1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0,
+  0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+- [0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0,
+  1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1,
+  0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1]
+- [1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0,
+  1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1,
+  0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1]
+- [1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1,
+  1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1,
+  1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1]
+- [0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1,
+  1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1,
+  0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1]
+- [0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1,
+  0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1,
+  1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1]
+- [0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0,
+  1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1,
+  0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1]
+- [1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
+  0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0,
+  1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1]
+- [1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0,
+  1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1,
+  0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1]
+- [1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1,
+  1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1,
+  0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0]
+- [1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1,
+  0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1,
+  0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0,
+  0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+  1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1]
+- [0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1,
+  1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1,
+  1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0]
+- [1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0,
+  0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1,
+  1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0]
+- [0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0,
+  0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0,
+  1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1]
+- [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1,
+  0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0,
+  1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0]
+- [1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0,
+  1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0,
+  1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1]
+- [1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0,
+  1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1,
+  0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+- [1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+  0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1,
+  1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1]
+- [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+  1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
+  0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1]
+- [0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1,
+  0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1,
+  1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1]
+- [1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0,
+  1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0,
+  0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
+- [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1,
+  0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0]
+- [1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0,
+  1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0,
+  1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1]
+- [1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0,
+  0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1,
+  1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0]
+- [0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1,
+  0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1,
+  0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1]
+- [0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+  1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1,
+  1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1]
+- [0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1,
+  1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0,
+  0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0]
+- [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0,
+  1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0,
+  0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1]
+- [0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 5, 6, 6, 7, 8, 3, 3, 4, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1,
+  0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0,
+  0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0]
+- [0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 9, 10, 11, 6, 6, 6, 7, 8, 3, 4, 0, 1, 0, 0, 1, 0, 1, 1, 1,
+  0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0,
+  0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+- [1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 12, 13, 14, 6, 7, 6, 6, 7, 7, 15, 1, 1, 0, 1, 0, 1, 1, 1,
+  1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1,
+  0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
+- [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 12, 13, 14, 6, 6, 6, 6, 7, 7, 15, 1, 1, 0, 1, 1, 1, 1, 1,
+  0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1,
+  0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0]
+- [1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 12, 16, 14, 6, 6, 7, 6, 6, 7, 15, 1, 0, 1, 1, 0, 1, 1, 1,
+  1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0,
+  1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1]
+- [1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 2, 3, 3, 17, 18, 18, 18, 18, 19, 1, 0, 1, 1, 0, 0, 1, 12, 13, 14, 7, 6, 7, 6, 6, 7, 15, 1, 1, 1, 1, 1, 1,
+  0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1,
+  0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0]
+- [0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 5, 6, 7, 20, 13, 16, 13, 13, 21, 1, 1, 0, 0, 0, 0, 1, 22, 16, 14, 6, 7, 7, 7, 7, 6, 8, 3, 4, 1, 0, 1, 0, 1,
+  0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1,
+  1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1]
+- [1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 23, 7, 7, 20, 13, 24, 25, 26, 27, 1, 1, 0, 0, 0, 0, 0, 22, 24, 28, 29, 30, 31, 32, 33, 30, 6, 7, 15, 1, 0,
+  0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1,
+  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0]
+- [0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 2, 23, 7, 7, 6, 7, 7, 20, 13, 34, 35, 36, 37, 38, 39, 40, 41, 38, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 7, 7, 15,
+  0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1,
+  1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+- [1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 5, 6, 6, 6, 7, 6, 7, 20, 13, 53, 54, 55, 56, 57, 57, 58, 57, 59, 60, 61, 62, 63, 64, 55, 65, 53, 66, 67, 68, 7, 7, 15,
+  0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1,
+  0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0]
+- [0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 5, 69, 70, 70, 70, 70, 70, 71, 16, 72, 73, 74, 75, 76, 73, 74, 75, 76, 77, 78, 79, 76, 77, 74, 75, 72, 80, 81, 82, 7,
+  7, 15, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1,
+  0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1]
+- [0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 2, 3, 3, 3, 3, 23, 83, 84, 85, 86, 87, 84, 88, 89, 90, 91, 26, 92, 93, 91, 94, 95, 24, 25, 26, 95, 93, 25, 26, 92, 93, 28, 96, 97, 98,
+  99, 100, 101, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1,
+  1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1]
+- [1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 5, 7, 7, 6, 7, 7, 102, 103, 104, 105, 106, 107, 108, 109, 110, 35, 36, 111, 34, 46, 36, 112, 45, 46, 113, 111, 45, 46, 113, 112, 34,
+  35, 36, 111, 45, 114, 115, 116, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1,
+  1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0]
+- [0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 5, 7, 7, 6, 6, 6, 117, 118, 119, 120, 121, 122, 123, 124, 125, 64, 126, 127, 63, 64, 126, 127, 53, 64, 55, 127, 53, 64, 126, 128, 129,
+  130, 131, 132, 63, 66, 67, 133, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1,
+  0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0]
+- [1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 5, 7, 7, 6, 6, 6, 134, 135, 136, 137, 138, 139, 140, 137, 141, 73, 78, 75, 76, 73, 78, 75, 76, 73, 78, 75, 72, 77, 74, 28, 142, 143,
+  144, 145, 76, 80, 81, 146, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0]
+- [1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 147, 148, 148, 149, 6, 7, 7, 7, 150, 151, 151, 151, 151, 152, 153, 91, 94, 92, 93, 91, 26, 95, 24, 25, 26, 92, 93, 91, 26, 13, 13, 13,
+  16, 13, 25, 154, 30, 15, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1,
+  0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1]
+- [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 5, 7, 6, 6, 7, 150, 152, 152, 152, 151, 152, 110, 35, 113, 111, 45, 46, 36, 111, 34, 46, 36, 111, 45, 35, 36, 13, 16, 16, 16,
+  16, 35, 155, 52, 15, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0,
+  1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0]
+- [1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 5, 7, 7, 7, 7, 150, 151, 151, 151, 151, 151, 125, 54, 126, 127, 63, 64, 126, 65, 53, 64, 55, 65, 53, 54, 126, 13, 13, 13, 13,
+  16, 64, 156, 68, 15, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1,
+  0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1]
+- [1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 5, 6, 6, 6, 7, 150, 152, 151, 152, 152, 152, 141, 73, 78, 75, 72, 73, 74, 79, 72, 73, 74, 75, 76, 73, 74, 13, 13, 13, 16, 16,
+  157, 158, 82, 15, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1,
+  1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1]
+- [1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 5, 6, 7, 7, 6, 150, 151, 152, 152, 151, 151, 153, 25, 26, 95, 24, 91, 94, 92, 24, 91, 94, 95, 93, 91, 26, 16, 13, 16, 16, 16,
+  159, 160, 30, 15, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1,
+  1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1]
+- [1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 5, 7, 6, 7, 6, 150, 151, 151, 152, 151, 152, 110, 35, 36, 112, 45, 46, 113, 111, 34, 46, 113, 112, 34, 46, 36, 16, 16, 13, 13,
+  16, 114, 161, 162, 15, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0,
+  0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+- [0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 5, 7, 7, 7, 7, 150, 151, 152, 152, 151, 152, 125, 54, 55, 65, 53, 64, 55, 127, 53, 64, 55, 65, 63, 54, 55, 16, 13, 16, 16, 16,
+  66, 163, 164, 15, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0,
+  0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0]
+- [0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 5, 7, 7, 7, 6, 150, 151, 152, 152, 151, 152, 141, 73, 78, 75, 72, 73, 78, 79, 76, 77, 78, 79, 76, 73, 78, 16, 16, 16, 16, 13,
+  80, 81, 82, 15, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0,
+  0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0]
+- [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 2, 23, 7, 7, 7, 7, 150, 151, 151, 151, 152, 152, 153, 91, 94, 92, 93, 91, 94, 92, 24, 91, 26, 95, 93, 91, 26, 13, 16, 13, 16, 13,
+  159, 160, 165, 166, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0,
+  1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1]
+- [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 5, 6, 7, 7, 69, 70, 167, 152, 151, 151, 152, 151, 110, 35, 36, 111, 45, 46, 113, 112, 34, 35, 36, 111, 34, 35, 113, 168, 169, 170,
+  171, 172, 114, 51, 173, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
+  0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1]
+- [1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 5, 6, 7, 7, 150, 151, 151, 152, 152, 151, 152, 151, 125, 54, 55, 127, 63, 64, 55, 127, 53, 54, 126, 127, 53, 64, 126, 174, 143,
+  175, 176, 177, 66, 163, 133, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0,
+  1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0]
+- [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 5, 6, 7, 7, 150, 151, 151, 152, 152, 152, 151, 151, 141, 77, 74, 75, 76, 73, 78, 75, 72, 73, 78, 75, 72, 77, 78, 75, 76, 77, 78,
+  79, 80, 178, 146, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1,
+  0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1]
+- [1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 5, 6, 6, 6, 83, 84, 85, 179, 87, 84, 85, 86, 153, 25, 94, 92, 93, 91, 94, 95, 24, 91, 26, 95, 24, 91, 26, 92, 93, 25, 94, 95, 14,
+  7, 15, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1,
+  0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0]
+- [0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 5, 6, 6, 7, 102, 103, 104, 109, 106, 103, 108, 109, 180, 35, 113, 111, 34, 46, 113, 111, 45, 35, 113, 112, 34, 35, 113, 111, 34,
+  35, 113, 111, 14, 7, 15, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0,
+  1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0]
+- [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 5, 6, 7, 6, 117, 118, 119, 120, 121, 118, 119, 124, 181, 64, 126, 127, 63, 64, 126, 127, 63, 64, 55, 65, 53, 64, 55, 65, 182, 130,
+  131, 183, 184, 7, 15, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+  1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+- [1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 5, 6, 6, 7, 185, 186, 187, 188, 189, 135, 190, 191, 192, 73, 78, 75, 72, 73, 78, 79, 72, 73, 78, 75, 76, 73, 74, 79, 193, 194,
+  81, 82, 195, 148, 166, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0,
+  1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+- [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 5, 7, 7, 6, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 16, 16, 16, 13, 16, 13, 16, 16, 13, 16, 13, 13, 208, 149,
+  6, 7, 15, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1,
+  0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0]
+- [1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 5, 7, 7, 7, 209, 210, 211, 212, 209, 210, 211, 213, 214, 215, 216, 217, 218, 219, 219, 219, 220, 16, 16, 16, 16, 16, 13, 13, 221,
+  5, 6, 195, 166, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1,
+  1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1]
+- [1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 5, 7, 6, 6, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 6, 7, 7, 235, 219, 219, 219, 219, 219, 219, 219, 236,
+  5, 7, 15, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0,
+  0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1]
+- [1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 147, 148, 148, 149, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 6, 7, 7, 6, 6, 7, 7, 7, 6, 6, 251, 147,
+  148, 166, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1,
+  1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+- [1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 147, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 255, 255, 263, 6, 6, 6, 7, 6, 7, 6, 7, 6, 7, 251, 0, 1, 0,
+  1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0,
+  1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0]
+- [0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 275, 263, 7, 7, 7, 7, 6, 7, 7, 7, 6, 6, 276, 4, 1, 0, 1,
+  0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1,
+  1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0]
+- [0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 277, 278, 279, 280, 281, 282, 279, 283, 284, 285, 286, 280, 287, 288, 7, 7, 6, 7, 6, 6, 7, 7, 6, 6, 7, 15, 0, 0, 1,
+  1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1,
+  1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0]
+- [1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 289, 290, 291, 292, 293, 294, 291, 292, 295, 296, 291, 292, 297, 6, 6, 6, 7, 7, 7, 7, 6, 7, 7, 7, 7, 15, 1, 1, 1, 0,
+  0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+  1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1]
+- [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 147, 148, 148, 166, 5, 7, 7, 6, 6, 6, 7, 7, 6, 6, 6, 7, 7, 7, 7, 7, 6, 6, 7, 7, 15, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0,
+  0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0,
+  1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0]
+- [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 5, 6, 6, 6, 6, 6, 7, 7, 6, 6, 6, 6, 6, 7, 6, 7, 7, 298, 299, 299, 166, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1,
+  1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0,
+  1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0]
+- [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 5, 6, 6, 6, 195, 149, 6, 7, 6, 7, 7, 6, 7, 7, 6, 6, 6, 251, 300, 301, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0,
+  0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+  1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
+- [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 6, 6, 6, 15, 147, 148, 148, 299, 299, 299, 299, 299, 299, 299, 299, 299, 302, 303, 304, 1, 1, 0,
+  0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1,
+  1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0]
+- [1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 147, 148, 148, 148, 166, 0, 0, 0, 1, 0, 0, 0, 305, 306, 303, 307, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0,
+  1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1,
+  0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+- [0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0,
+  0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1,
+  0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0]
+- [1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0,
+  0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1,
+  0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1]
+- [0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0,
+  0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+  1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1]
+- [0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0,
+  0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0,
+  0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+- [1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0,
+  1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1,
+  0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0]
+- [1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0,
+  0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1,
+  0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0]
+- [0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+  1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1,
+  0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0]
+- [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1,
+  1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0,
+  1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0]
+- [1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0,
+  0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1,
+  1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0]
+- [1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1,
+  1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0,
+  0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+- [0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0,
+  1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0,
+  0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0]
+- [0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1,
+  0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0,
+  1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1]
+- [0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1,
+  1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0,
+  1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1]
+- [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1,
+  1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0,
+  0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1]
+- [1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1,
+  0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0,
+  0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1]
+- [0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0,
+  1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+  0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0]
+- [1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+  0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1,
+  1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1]
+- [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1,
+  1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0]
+- [1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1,
+  0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0,
+  0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+- [0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+  1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0,
+  1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0]
+- [1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0,
+  0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0,
+  1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0]
+- [1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1,
+  1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0,
+  1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
+- [1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1,
+  1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0,
+  1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1]
+- [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1,
+  1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0,
+  1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1]
+- [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0,
+  0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0,
+  1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1]
+- [0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+  0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0,
+  0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1]
+- [0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0,
+  0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0,
+  0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0]
+- [1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1,
+  0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1,
+  0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1]
+- [0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1,
+  1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0,
+  0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1]
+- [0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0,
+  1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1,
+  1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0]
+- [1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0,
+  0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,
+  0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0]
+- [0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1,
+  0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0,
+  1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0]
+- [1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1,
+  1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1,
+  1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0]
+- [1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0,
+  1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1,
+  0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0]
+- [1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0,
+  0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1,
+  0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1]
+- [1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+  0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0,
+  1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1]
+- [0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1,
+  1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1,
+  1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0]
+- [0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1,
+  1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0,
+  1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0]
+- [1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0,
+  0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1,
+  0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0]
+- [0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0,
+  0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,
+  0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0]
+- [1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1,
+  0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1,
+  1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1]
+- [0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+  1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0,
+  1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1]
+- [0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+  0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0,
+  0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0]
+- [1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1,
+  0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1,
+  1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0]
+- [0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0,
+  0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0,
+  1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0]
+- [1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1,
+  0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1,
+  0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1]
+- [0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0,
+  0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+  0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0]
+- [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0,
+  1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1,
+  1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1]
+- [0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1,
+  0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0,
+  1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0]
+- [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1,
+  1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0,
+  0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0]
+- [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
+  0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0,
+  1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0]
+- [1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1,
+  0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+  1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1]
+- [0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1,
+  0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0,
+  0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1]
+- [1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0,
+  1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0,
+  0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1]
+- [1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1,
+  0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0,
+  1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0]
+- [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1,
+  1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1,
+  1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1]
+- [0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0,
+  0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1,
+  1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1]
+- [0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1,
+  0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1,
+  0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0]
+- [1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+  0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1,
+  1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1]
+- [1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1,
+  1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1,
+  0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1]
+- [0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0,
+  0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0,
+  0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0]
+- [0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1,
+  1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1,
+  1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1]
+- [1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1,
+  0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0,
+  0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1]
+- [1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0,
+  0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+  1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]
+- [0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0,
+  0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+  1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0]
+- [1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0,
+  1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1,
+  1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1]
+- [1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1,
+  0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+  0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0]
+- [1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0,
+  0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1,
+  1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1]
+- [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1,
+  1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+  0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0]
+- [1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1,
+  0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0,
+  1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1]

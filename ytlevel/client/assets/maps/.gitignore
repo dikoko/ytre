@@ -1,0 +1,5 @@
+# Sweep-exported maps stay untracked; promote deliberately with git add -f.
+/*/
+!/SF0*/
+!/LW0*/
+!/FD0001*/

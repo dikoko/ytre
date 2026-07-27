@@ -1,0 +1,16 @@
+[project]
+name = "level-export"
+version = "0.1.0"
+description = "Map/level export pipeline for Yogurting revival"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.1",
+    "pillow>=12.1.1",
+    "pygltflib>=1.16.5",
+    "pytest>=8.0.0",
+    "pyyaml>=6.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

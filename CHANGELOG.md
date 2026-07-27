@@ -4,6 +4,38 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.6.0] - 2026-07-26
+
+First public release of **YTLevel** — the level/map viewer and its export
+pipeline — plus user guides for both Godot tools.
+
+### Added
+- **`ytlevel/` Godot client**: the in-game level tool. Browse the school
+  and early-episode maps with Korean level names, fly around with the
+  explore camera, click portals to travel between maps, and press Tab to
+  walk the map in Run mode (navmesh ground contact, wall blocking, portal
+  dwell travel, gender-switchable runner avatar).
+- **Map assets** for the school maps and first episode: terrain meshes
+  with the original tile textures, ~5,200 placed props per campus map,
+  water surfaces with animated flow and beach shore-waves, per-map
+  minimaps, and the fixed-function sun / point-light model matching
+  retail client rendering.
+- **1,576 static prop models** exported from TMD with embedded textures
+  (including mirrored variants and additive self-illuminated glows).
+- **`tools/level_export/` pipeline**: parsers for QQQ / OCG / CVS / TCG /
+  WTR / PLT / height-BMP data, prop exporter, map assembly, terrain tile
+  compositor, navmesh + wall-grid export, and a map evaluation harness
+  (data invariants + rendered-capture detectors). Terrain reference data
+  ships under `refs/models/raw/Terrain/`, so any of the 325 maps can be
+  exported locally.
+- **User guides**: `ytavatar/docs/user-guide.md` and
+  `ytlevel/docs/user-guide.md` — every UI element and key binding for the
+  avatar tool and the level tool.
+
+### Changed
+- Street-lamp glow sprites are dimmed to 40% of authored strength in the
+  level viewer — at full strength they read as daylight spotlights.
+
 ## [0.5.0] - 2026-07-26
 
 Character skinning and locomotion now match the original game; the viewer

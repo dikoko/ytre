@@ -1,0 +1,6 @@
+# Sweep-exported maps stay untracked; curated set below is tracked.
+/*.tscn
+!/SF001001.tscn
+!/SF0*.tscn
+!/LW0*.tscn
+!/FD0001*.tscn

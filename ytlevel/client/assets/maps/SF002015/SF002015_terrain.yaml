@@ -1,0 +1,2470 @@
+# SF002015_terrain.yaml
+# Terrain tile data — parsed from SF002015.cvs + tileregistry.tcg
+
+grid: {rows: 175, cols: 175}
+tile_sets:
+- id: 0
+  kind: 50
+  name: GRASS01
+  textures: {'1_0': grass011_0.tga, '2_0': grass012_0.tga, '3_0': grass013_0.tga, '4_0': grass014_0.tga, '5_0': grass015_0.tga, '6_0': grass016_0.tga, '7_0': grass017_0.tga, '8_0': grass018_0.tga, '9_0': grass019_0.tga,
+    '10_0': grass0110_0.tga, '11_0': grass0111_0.tga, '12_0': grass0112_0.tga, '13_0': grass0113_0.tga, '14_0': grass0114_0.tga, '15_0': grass0115_0.tga}
+- id: 1
+  kind: 52
+  name: SAND02
+  textures: {'1_0': sand021_0.tga, '2_0': sand022_0.tga, '3_0': sand023_0.tga, '4_0': sand024_0.tga, '5_0': sand025_0.tga, '6_0': sand026_0.tga, '7_0': sand027_0.tga, '8_0': sand028_0.tga, '9_0': sand029_0.tga,
+    '10_0': sand0210_0.tga, '11_0': sand0211_0.tga, '12_0': sand0212_0.tga, '13_0': sand0213_0.tga, '14_0': sand0214_0.tga, '15_0': sand0215_0.tga}
+- id: 2
+  kind: 71
+  name: GRASS03
+  textures: {'1_0': grass031_0.tga, '2_0': grass032_0.tga, '3_0': grass033_0.tga, '4_0': grass034_0.tga, '5_0': grass035_0.tga, '6_0': grass036_0.tga, '7_0': grass037_0.tga, '8_0': grass038_0.tga, '9_0': grass039_0.tga,
+    '10_0': grass0310_0.tga, '11_0': grass0311_0.tga, '12_0': grass0312_0.tga, '13_0': grass0313_0.tga, '14_0': grass0314_0.tga, '15_0': grass0315_0.tga}
+- id: 3
+  kind: 80
+  name: SE00144
+  textures: {'15_0': SE0014415_0.tga, '15_1': SE0014415_1.tga, '15_2': SE0014415_2.tga, '15_3': SE0014415_3.tga, '15_4': SE0014415_4.tga, '15_5': SE0014415_5.tga, '15_6': SE0014415_6.tga, '15_7': SE0014415_7.tga,
+    '15_8': SE0014415_8.tga, '15_9': SE0014415_9.tga, '15_10': SE0014415_10.tga, '15_11': SE0014415_11.tga, '15_12': SE0014415_12.tga, '15_13': SE0014415_13.tga, '15_14': SE0014415_14.tga, '15_15': SE0014415_15.tga}
+- id: 4
+  kind: 81
+  name: SE004
+  textures: {'1_0': SE0041_0.tga, '2_0': SE0042_0.tga, '3_0': SE0043_0.tga, '4_0': SE0044_0.tga, '5_0': SE0045_0.tga, '6_0': SE0046_0.tga, '7_0': SE0047_0.tga, '8_0': SE0048_0.tga, '9_0': SE0049_0.tga,
+    '10_0': SE00410_0.tga, '11_0': SE00411_0.tga, '12_0': SE00412_0.tga, '13_0': SE00413_0.tga, '14_0': SE00414_0.tga, '15_0': SE00415_0.tga, '15_1': SE00415_1.tga}
+- id: 5
+  kind: 82
+  name: GRASS04
+  textures: {'1_0': grass041_0.tga, '2_0': grass042_0.tga, '3_0': grass043_0.tga, '4_0': grass044_0.tga, '5_0': grass045_0.tga, '6_0': grass046_0.tga, '7_0': grass047_0.tga, '8_0': grass048_0.tga, '9_0': grass049_0.tga,
+    '10_0': grass0410_0.tga, '11_0': grass0411_0.tga, '12_0': grass0412_0.tga, '13_0': grass0413_0.tga, '14_0': grass0414_0.tga, '15_0': grass0415_0.tga, '15_1': grass0415_1.tga}
+- id: 6
+  kind: 84
+  name: GRASS05
+  textures: {'1_0': grass051_0.tga, '2_0': grass052_0.tga, '3_0': grass053_0.tga, '4_0': grass054_0.tga, '5_0': grass055_0.tga, '6_0': grass056_0.tga, '7_0': grass057_0.tga, '8_0': grass058_0.tga, '9_0': grass059_0.tga,
+    '10_0': grass0510_0.tga, '11_0': grass0511_0.tga, '12_0': grass0512_0.tga, '13_0': grass0513_0.tga, '14_0': grass0514_0.tga, '15_0': grass0515_0.tga, '15_1': grass0515_1.tga}
+- id: 7
+  kind: 85
+  name: GRASS06
+  textures: {'1_0': grass061_0.tga, '2_0': grass062_0.tga, '3_0': grass063_0.tga, '4_0': grass064_0.tga, '5_0': grass065_0.tga, '6_0': grass066_0.tga, '7_0': grass067_0.tga, '8_0': grass068_0.tga, '9_0': grass069_0.tga,
+    '10_0': grass0610_0.tga, '11_0': grass0611_0.tga, '12_0': grass0612_0.tga, '13_0': grass0613_0.tga, '14_0': grass0614_0.tga, '15_0': grass0615_0.tga, '15_1': grass0615_1.tga}
+- id: 8
+  kind: 90
+  name: SB003
+  textures: {'1_0': SB0031_0.tga, '2_0': SB0032_0.tga, '3_0': SB0033_0.tga, '4_0': SB0034_0.tga, '5_0': SB0035_0.tga, '6_0': SB0036_0.tga, '7_0': SB0037_0.tga, '8_0': SB0038_0.tga, '9_0': SB0039_0.tga,
+    '10_0': SB00310_0.tga, '11_0': SB00311_0.tga, '12_0': SB00312_0.tga, '13_0': SB00313_0.tga, '14_0': SB00314_0.tga, '15_0': SB00315_0.tga, '15_1': SB00315_1.tga}
+- id: 9
+  kind: 134
+  name: SWA001
+  textures: {'1_0': SWA0011_0.tga, '2_0': SWA0012_0.tga, '3_0': SWA0013_0.tga, '4_0': SWA0014_0.tga, '5_0': SWA0015_0.tga, '6_0': SWA0016_0.tga, '7_0': SWA0017_0.tga, '8_0': SWA0018_0.tga, '9_0': SWA0019_0.tga,
+    '10_0': SWA00110_0.tga, '11_0': SWA00111_0.tga, '12_0': SWA00112_0.tga, '13_0': SWA00113_0.tga, '14_0': SWA00114_0.tga, '15_0': SWA00115_0.tga, '15_1': SWA00115_1.tga, '15_2': SWA00115_2.tga}
+- id: 10
+  kind: 135
+  name: SWA002
+  textures: {'1_0': SWA0021_0.tga, '2_0': SWA0022_0.tga, '3_0': SWA0023_0.tga, '4_0': SWA0024_0.tga, '5_0': SWA0025_0.tga, '6_0': SWA0026_0.tga, '7_0': SWA0027_0.tga, '8_0': SWA0028_0.tga, '9_0': SWA0029_0.tga,
+    '10_0': SWA00210_0.tga, '11_0': SWA00211_0.tga, '12_0': SWA00212_0.tga, '13_0': SWA00213_0.tga, '14_0': SWA00214_0.tga, '15_0': SWA00215_0.tga, '15_1': SWA00215_1.tga}
+palette:
+- index: 0
+  layers: [SE004]
+  tile_ids: ['0x51F0', '0x0000', '0x0000', '0x0000']
+- index: 1
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5210', '0x0000', '0x0000']
+- index: 2
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5230', '0x0000', '0x0000']
+- index: 3
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5220', '0x0000', '0x0000']
+- index: 4
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x52A0', '0x0000', '0x0000']
+- index: 5
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x52D0', '0x0000', '0x0000']
+- index: 6
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5260', '0x0000', '0x0000']
+- index: 7
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5290', '0x0000', '0x0000']
+- index: 8
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5280', '0x0000', '0x0000']
+- index: 9
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5240', '0x0000', '0x0000']
+- index: 10
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3210', '0x0000', '0x0000']
+- index: 11
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3220', '0x0000', '0x0000']
+- index: 12
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3230', '0x0000', '0x0000']
+- index: 13
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5250', '0x0000', '0x0000']
+- index: 14
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x52B0', '0x0000', '0x0000']
+- index: 15
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3280', '0x0000', '0x0000']
+- index: 16
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3250', '0x0000', '0x0000']
+- index: 17
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x32B0', '0x0000', '0x0000']
+- index: 18
+  layers: [GRASS01]
+  tile_ids: ['0x32F0', '0x0000', '0x0000', '0x0000']
+- index: 19
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x3260', '0x0000', '0x0000']
+- index: 20
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x5270', '0x0000', '0x0000']
+- index: 21
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x32C0', '0x0000', '0x0000']
+- index: 22
+  layers: [SE004, GRASS01]
+  tile_ids: ['0x51F0', '0x32D0', '0x0000', '0x0000']
+- index: 23
+  layers: [SE004, GRASS01, GRASS04]
+  tile_ids: ['0x51F0', '0x3280', '0x5230', '0x0000']
+- index: 24
+  layers: [SE004, GRASS01, GRASS04]
+  tile_ids: ['0x51F0', '0x3240', '0x5230', '0x0000']
+- index: 25
+  layers: [GRASS04]
+  tile_ids: ['0x52F0', '0x0000', '0x0000', '0x0000']
+- index: 26
+  layers: [GRASS04]
+  tile_ids: ['0x52F1', '0x0000', '0x0000', '0x0000']
+- index: 27
+  layers: [SE004, GRASS01, GRASS04]
+  tile_ids: ['0x51F0', '0x3210', '0x5260', '0x0000']
+- index: 28
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5270', '0x0000', '0x0000']
+- index: 29
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8710', '0x0000', '0x0000']
+- index: 30
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8730', '0x0000', '0x0000']
+- index: 31
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8720', '0x0000', '0x0000']
+- index: 32
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8790', '0x0000', '0x0000']
+- index: 33
+  layers: [SWA002]
+  tile_ids: ['0x87F0', '0x0000', '0x0000', '0x0000']
+- index: 34
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8760', '0x0000', '0x0000']
+- index: 35
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x87B0', '0x0000', '0x0000']
+- index: 36
+  layers: [SWA002]
+  tile_ids: ['0x87F1', '0x0000', '0x0000', '0x0000']
+- index: 37
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x87E0', '0x0000', '0x0000']
+- index: 38
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x87D0', '0x0000', '0x0000']
+- index: 39
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8770', '0x0000', '0x0000']
+- index: 40
+  layers: [SE004, GRASS04, SWA002]
+  tile_ids: ['0x51F0', '0x52C0', '0x8720', '0x0000']
+- index: 41
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x87C0', '0x0000', '0x0000']
+- index: 42
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8770', '0x0000', '0x0000']
+- index: 43
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8720', '0x0000', '0x0000']
+- index: 44
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8780', '0x0000', '0x0000']
+- index: 45
+  layers: [SE004]
+  tile_ids: ['0x51F1', '0x0000', '0x0000', '0x0000']
+- index: 46
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x87E0', '0x0000', '0x0000']
+- index: 47
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x87C0', '0x0000', '0x0000']
+- index: 48
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x87D0', '0x0000', '0x0000']
+- index: 49
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8760', '0x0000', '0x0000']
+- index: 50
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8790', '0x0000', '0x0000']
+- index: 51
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8740', '0x0000']
+- index: 52
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x52C0', '0x0000', '0x0000']
+- index: 53
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8790', '0x0000']
+- index: 54
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8760', '0x0000', '0x0000']
+- index: 55
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8740', '0x0000', '0x0000']
+- index: 56
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8710', '0x0000', '0x0000']
+- index: 57
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8730', '0x0000', '0x0000']
+- index: 58
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x87B0', '0x0000', '0x0000']
+- index: 59
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8770', '0x0000', '0x0000']
+- index: 60
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x8720', '0x0000']
+- index: 61
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5230', '0x0000', '0x0000']
+- index: 62
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x8790', '0x0000']
+- index: 63
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8740', '0x0000', '0x0000']
+- index: 64
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x87A0', '0x0000']
+- index: 65
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x87E0', '0x0000', '0x0000']
+- index: 66
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x87C0', '0x0000', '0x0000']
+- index: 67
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8740', '0x0000', '0x0000']
+- index: 68
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x8750', '0x0000', '0x0000']
+- index: 69
+  layers: [GRASS04, SWA002]
+  tile_ids: ['0x52F0', '0x87A0', '0x0000', '0x0000']
+- index: 70
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8730', '0x0000', '0x0000']
+- index: 71
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8610', '0x0000', '0x0000']
+- index: 72
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8630', '0x0000', '0x0000']
+- index: 73
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8620', '0x0000', '0x0000']
+- index: 74
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x87E0', '0x0000', '0x0000']
+- index: 75
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8620', '0x87C0', '0x0000']
+- index: 76
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x86A0', '0x8710', '0x0000']
+- index: 77
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8730', '0x0000', '0x0000']
+- index: 78
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8650', '0x8720', '0x0000']
+- index: 79
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8680', '0x8740', '0x0000']
+- index: 80
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x8710', '0x0000']
+- index: 81
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8680', '0x8710', '0x0000']
+- index: 82
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x87B0', '0x0000', '0x0000']
+- index: 83
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8680', '0x8760', '0x0000']
+- index: 84
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x86C0', '0x8710', '0x0000']
+- index: 85
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x8730', '0x0000']
+- index: 86
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5260', '0x8780', '0x0000']
+- index: 87
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x87C0', '0x0000', '0x0000']
+- index: 88
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8610', '0x87C0', '0x0000']
+- index: 89
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8630', '0x8740', '0x0000']
+- index: 90
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x52C0', '0x8620', '0x0000']
+- index: 91
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5250', '0x8780', '0x0000']
+- index: 92
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x87C0', '0x0000']
+- index: 93
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8750', '0x0000']
+- index: 94
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x87A0', '0x0000']
+- index: 95
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8740', '0x0000']
+- index: 96
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x8790', '0x0000']
+- index: 97
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x87C0', '0x0000']
+- index: 98
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x87A0', '0x0000']
+- index: 99
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x87D0', '0x0000', '0x0000']
+- index: 100
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x8760', '0x0000']
+- index: 101
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8620', '0x8790', '0x0000']
+- index: 102
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x87E0', '0x0000', '0x0000']
+- index: 103
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x87D0', '0x0000', '0x0000']
+- index: 104
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8760', '0x0000']
+- index: 105
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x52C0', '0x0000', '0x0000']
+- index: 106
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5240', '0x0000', '0x0000']
+- index: 107
+  layers: [GRASS03]
+  tile_ids: ['0x47F0', '0x0000', '0x0000', '0x0000']
+- index: 108
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x8680', '0x0000', '0x0000']
+- index: 109
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5210', '0x86C0', '0x0000']
+- index: 110
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5230', '0x8640', '0x0000']
+- index: 111
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x52B0', '0x0000', '0x0000']
+- index: 112
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x52E0', '0x0000', '0x0000']
+- index: 113
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5210', '0x0000', '0x0000']
+- index: 114
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x8780', '0x0000']
+- index: 115
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8740', '0x0000', '0x0000']
+- index: 116
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8780', '0x0000', '0x0000']
+- index: 117
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5250', '0x8680', '0x0000']
+- index: 118
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x86C0', '0x0000', '0x0000']
+- index: 119
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8640', '0x0000', '0x0000']
+- index: 120
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8690', '0x8740', '0x0000']
+- index: 121
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8660', '0x8780', '0x0000']
+- index: 122
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x8740', '0x0000']
+- index: 123
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8750', '0x0000', '0x0000']
+- index: 124
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8720', '0x0000', '0x0000']
+- index: 125
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8710', '0x0000', '0x0000']
+- index: 126
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5280', '0x0000', '0x0000']
+- index: 127
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5290', '0x8720', '0x0000']
+- index: 128
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x8740', '0x0000']
+- index: 129
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x86A0', '0x0000', '0x0000']
+- index: 130
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5260', '0x8680', '0x0000']
+- index: 131
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5280', '0x8640', '0x0000']
+- index: 132
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x8790', '0x0000']
+- index: 133
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5210', '0x8760', '0x0000']
+- index: 134
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8770', '0x0000', '0x0000']
+- index: 135
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8730', '0x0000', '0x0000']
+- index: 136
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5230', '0x0000', '0x0000']
+- index: 137
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x8710', '0x0000']
+- index: 138
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5210', '0x8720', '0x0000']
+- index: 139
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8620', '0x8710', '0x0000']
+- index: 140
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x8720', '0x0000']
+- index: 141
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x87D0', '0x0000', '0x0000']
+- index: 142
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x52E0', '0x0000', '0x0000']
+- index: 143
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x52D0', '0x0000', '0x0000']
+- index: 144
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8680', '0x0000', '0x0000']
+- index: 145
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x52A0', '0x8640', '0x0000']
+- index: 146
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5250', '0x0000', '0x0000']
+- index: 147
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5220', '0x0000', '0x0000']
+- index: 148
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5230', '0x8740', '0x0000']
+- index: 149
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8760', '0x0000', '0x0000']
+- index: 150
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8710', '0x0000', '0x0000']
+- index: 151
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x87A0', '0x0000']
+- index: 152
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8790', '0x0000', '0x0000']
+- index: 153
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x52B0', '0x0000', '0x0000']
+- index: 154
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5260', '0x0000', '0x0000']
+- index: 155
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5210', '0x0000', '0x0000']
+- index: 156
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5230', '0x8780', '0x0000']
+- index: 157
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5260', '0x0000', '0x0000']
+- index: 158
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5290', '0x0000', '0x0000']
+- index: 159
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x87A0', '0x0000', '0x0000']
+- index: 160
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x52D0', '0x0000', '0x0000']
+- index: 161
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x52C0', '0x8710', '0x0000']
+- index: 162
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8760', '0x0000']
+- index: 163
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x52C0', '0x8720', '0x0000']
+- index: 164
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8780', '0x0000']
+- index: 165
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8690', '0x8740', '0x0000']
+- index: 166
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8780', '0x0000', '0x0000']
+- index: 167
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5250', '0x0000', '0x0000']
+- index: 168
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5220', '0x0000', '0x0000']
+- index: 169
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8710', '0x0000']
+- index: 170
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x87B0', '0x0000', '0x0000']
+- index: 171
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x52A0', '0x8710', '0x0000']
+- index: 172
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8720', '0x0000']
+- index: 173
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8780', '0x0000', '0x0000']
+- index: 174
+  layers: [GRASS01, SWA001]
+  tile_ids: ['0x32F0', '0x8680', '0x0000', '0x0000']
+- index: 175
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5280', '0x8650', '0x0000']
+- index: 176
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8630', '0x8780', '0x0000']
+- index: 177
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8710', '0x0000', '0x0000']
+- index: 178
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x87B0', '0x0000', '0x0000']
+- index: 179
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5260', '0x8710', '0x0000']
+- index: 180
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x8710', '0x0000']
+- index: 181
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x8750', '0x0000']
+- index: 182
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8720', '0x0000', '0x0000']
+- index: 183
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5220', '0x8690', '0x0000']
+- index: 184
+  layers: [SWA001]
+  tile_ids: ['0x86F0', '0x0000', '0x0000', '0x0000']
+- index: 185
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x8750', '0x0000', '0x0000']
+- index: 186
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x52A0', '0x8740', '0x0000']
+- index: 187
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5230', '0x8740', '0x0000']
+- index: 188
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4730', '0x5240', '0x0000']
+- index: 189
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4720', '0x5290', '0x0000']
+- index: 190
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8690', '0x0000', '0x0000']
+- index: 191
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8790', '0x0000', '0x0000']
+- index: 192
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4780', '0x5260', '0x0000']
+- index: 193
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x47C0', '0x0000', '0x0000']
+- index: 194
+  layers: [GRASS01, GRASS03, SWA002]
+  tile_ids: ['0x32F0', '0x4740', '0x8790', '0x0000']
+- index: 195
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5260', '0x8610', '0x0000']
+- index: 196
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x8630', '0x0000', '0x0000']
+- index: 197
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x8620', '0x0000', '0x0000']
+- index: 198
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8710', '0x0000']
+- index: 199
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8680', '0x8720', '0x0000']
+- index: 200
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x86D0', '0x0000', '0x0000']
+- index: 201
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8620', '0x8740', '0x0000']
+- index: 202
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8710', '0x0000']
+- index: 203
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x52C0', '0x8720', '0x0000']
+- index: 204
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5240', '0x8680', '0x0000']
+- index: 205
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5210', '0x86C0', '0x0000']
+- index: 206
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5230', '0x8780', '0x0000']
+- index: 207
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x8790', '0x0000']
+- index: 208
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x52C0', '0x0000', '0x0000']
+- index: 209
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8670', '0x0000', '0x0000']
+- index: 210
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8690', '0x8720', '0x0000']
+- index: 211
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8760', '0x0000', '0x0000']
+- index: 212
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4710', '0x5260', '0x0000']
+- index: 213
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4720', '0x0000', '0x0000']
+- index: 214
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x86E0', '0x0000', '0x0000']
+- index: 215
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5290', '0x8640', '0x0000']
+- index: 216
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x8780', '0x0000']
+- index: 217
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8680', '0x8750', '0x0000']
+- index: 218
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8640', '0x87A0', '0x0000']
+- index: 219
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4760', '0x0000', '0x0000']
+- index: 220
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5290', '0x0000', '0x0000']
+- index: 221
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5240', '0x8680', '0x0000']
+- index: 222
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8640', '0x8780', '0x0000']
+- index: 223
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x86B0', '0x0000', '0x0000']
+- index: 224
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x8660', '0x0000', '0x0000']
+- index: 225
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3410', '0x0000', '0x0000']
+- index: 226
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5240', '0x3430', '0x0000']
+- index: 227
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3420', '0x0000', '0x0000']
+- index: 228
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4770', '0x0000', '0x0000']
+- index: 229
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4730', '0x5280', '0x0000']
+- index: 230
+  layers: [SE004, SWA002]
+  tile_ids: ['0x51F0', '0x87A0', '0x0000', '0x0000']
+- index: 231
+  layers: [GRASS03, SAND02, SWA001]
+  tile_ids: ['0x47F0', '0x3410', '0x86C0', '0x0000']
+- index: 232
+  layers: [GRASS03, SAND02, SWA001]
+  tile_ids: ['0x47F0', '0x3430', '0x8640', '0x0000']
+- index: 233
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x3430', '0x0000', '0x0000']
+- index: 234
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5280', '0x3430', '0x0000']
+- index: 235
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3420', '0x0000', '0x0000']
+- index: 236
+  layers: [GRASS04, GRASS06, SAND02]
+  tile_ids: ['0x52F0', '0x5510', '0x3480', '0x0000']
+- index: 237
+  layers: [GRASS06, SAND02]
+  tile_ids: ['0x55F0', '0x34D0', '0x0000', '0x0000']
+- index: 238
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3460', '0x0000', '0x0000']
+- index: 239
+  layers: [GRASS03, SWA002]
+  tile_ids: ['0x47F0', '0x8790', '0x0000', '0x0000']
+- index: 240
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x3480', '0x0000', '0x0000']
+- index: 241
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5210', '0x34C0', '0x0000']
+- index: 242
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5220', '0x34C0', '0x0000']
+- index: 243
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x34C0', '0x0000', '0x0000']
+- index: 244
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5280', '0x3450', '0x0000']
+- index: 245
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3430', '0x0000', '0x0000']
+- index: 246
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3420', '0x8710', '0x0000']
+- index: 247
+  layers: [GRASS04, GRASS06, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x5580', '0x3410', '0x8720']
+- index: 248
+  layers: [GRASS06, SAND02, SWA002]
+  tile_ids: ['0x55F0', '0x34A0', '0x8710', '0x0000']
+- index: 249
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3440', '0x8730', '0x0000']
+- index: 250
+  layers: [GRASS03, GRASS05, SWA002]
+  tile_ids: ['0x47F0', '0x5410', '0x8780', '0x0000']
+- index: 251
+  layers: [GRASS05, SWA001, SWA002]
+  tile_ids: ['0x54F0', '0x8680', '0x8740', '0x0000']
+- index: 252
+  layers: [GRASS05, SWA001, SWA002]
+  tile_ids: ['0x54F0', '0x8640', '0x8790', '0x0000']
+- index: 253
+  layers: [SWA001]
+  tile_ids: ['0x86F1', '0x0000', '0x0000', '0x0000']
+- index: 254
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8780', '0x0000', '0x0000']
+- index: 255
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8740', '0x0000', '0x0000']
+- index: 256
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8610', '0x8780', '0x0000']
+- index: 257
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8620', '0x8780', '0x0000']
+- index: 258
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8660', '0x0000', '0x0000']
+- index: 259
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x8730', '0x0000']
+- index: 260
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5210', '0x3480', '0x0000']
+- index: 261
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x34C0', '0x8710', '0x0000']
+- index: 262
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x87A0', '0x0000', '0x0000']
+- index: 263
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8740', '0x0000', '0x0000']
+- index: 264
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8780', '0x0000', '0x0000']
+- index: 265
+  layers: [GRASS06, SAND02, SWA002]
+  tile_ids: ['0x55F0', '0x3420', '0x87C0', '0x0000']
+- index: 266
+  layers: [GRASS04, GRASS06, SWA002]
+  tile_ids: ['0x52F0', '0x5520', '0x8740', '0x0000']
+- index: 267
+  layers: [GRASS03, GRASS05]
+  tile_ids: ['0x47F0', '0x5480', '0x0000', '0x0000']
+- index: 268
+  layers: [GRASS03, GRASS05]
+  tile_ids: ['0x47F0', '0x54D0', '0x0000', '0x0000']
+- index: 269
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8780', '0x0000', '0x0000']
+- index: 270
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x87D0', '0x0000', '0x0000']
+- index: 271
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8720', '0x0000', '0x0000']
+- index: 272
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x8650', '0x0000', '0x0000']
+- index: 273
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5240', '0x8620', '0x0000']
+- index: 274
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8730', '0x0000']
+- index: 275
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3480', '0x8740', '0x0000']
+- index: 276
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x34D0', '0x0000', '0x0000']
+- index: 277
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x34E0', '0x0000', '0x0000']
+- index: 278
+  layers: [GRASS01, GRASS06, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5580', '0x3440', '0x8710']
+- index: 279
+  layers: [GRASS04, GRASS06, SWA002]
+  tile_ids: ['0x52F0', '0x5540', '0x8730', '0x0000']
+- index: 280
+  layers: [GRASS03, GRASS04]
+  tile_ids: ['0x47F0', '0x5270', '0x0000', '0x0000']
+- index: 281
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A10', '0x0000', '0x0000']
+- index: 282
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A30', '0x0000', '0x0000']
+- index: 283
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A20', '0x0000', '0x0000']
+- index: 284
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x3410', '0x0000', '0x0000']
+- index: 285
+  layers: [GRASS03, GRASS05, SAND02]
+  tile_ids: ['0x47F0', '0x5480', '0x3430', '0x0000']
+- index: 286
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3420', '0x0000', '0x0000']
+- index: 287
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3410', '0x8780', '0x0000']
+- index: 288
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3430', '0x8740', '0x0000']
+- index: 289
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3420', '0x8790', '0x0000']
+- index: 290
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x87C0', '0x0000', '0x0000']
+- index: 291
+  layers: [GRASS04, SWA001]
+  tile_ids: ['0x52F0', '0x86E0', '0x0000', '0x0000']
+- index: 292
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8770', '0x0000', '0x0000']
+- index: 293
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8640', '0x8720', '0x0000']
+- index: 294
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x34B0', '0x0000', '0x0000']
+- index: 295
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3460', '0x8710', '0x0000']
+- index: 296
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A90', '0x0000', '0x0000']
+- index: 297
+  layers: [SB003]
+  tile_ids: ['0x5AF0', '0x0000', '0x0000', '0x0000']
+- index: 298
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A60', '0x0000', '0x0000']
+- index: 299
+  layers: [GRASS03, GRASS05]
+  tile_ids: ['0x47F0', '0x5410', '0x0000', '0x0000']
+- index: 300
+  layers: [GRASS03, GRASS05, SAND02]
+  tile_ids: ['0x47F0', '0x5420', '0x3410', '0x0000']
+- index: 301
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x34B0', '0x0000', '0x0000']
+- index: 302
+  layers: [SAND02]
+  tile_ids: ['0x34F0', '0x0000', '0x0000', '0x0000']
+- index: 303
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3460', '0x0000', '0x0000']
+- index: 304
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5460', '0x3480', '0x0000']
+- index: 305
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x87C0', '0x0000', '0x0000']
+- index: 306
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x87D0', '0x0000', '0x0000']
+- index: 307
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3480', '0x8720', '0x0000']
+- index: 308
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8790', '0x0000', '0x0000']
+- index: 309
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8680', '0x8750', '0x0000']
+- index: 310
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A80', '0x0000', '0x0000']
+- index: 311
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5AC0', '0x0000', '0x0000']
+- index: 312
+  layers: [GRASS03, SB003]
+  tile_ids: ['0x47F0', '0x5A40', '0x0000', '0x0000']
+- index: 313
+  layers: [GRASS03, GRASS05]
+  tile_ids: ['0x47F0', '0x5430', '0x0000', '0x0000']
+- index: 314
+  layers: [GRASS03, GRASS05]
+  tile_ids: ['0x47F0', '0x54B0', '0x0000', '0x0000']
+- index: 315
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3490', '0x0000', '0x0000']
+- index: 316
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x34E0', '0x0000', '0x0000']
+- index: 317
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x34C0', '0x0000', '0x0000']
+- index: 318
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5420', '0x34C0', '0x0000']
+- index: 319
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5490', '0x3440', '0x0000']
+- index: 320
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5460', '0x0000', '0x0000']
+- index: 321
+  layers: [GRASS04, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x3480', '0x8610', '0x0000']
+- index: 322
+  layers: [GRASS04, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x34C0', '0x8620', '0x0000']
+- index: 323
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x34D0', '0x0000', '0x0000']
+- index: 324
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3490', '0x8720', '0x0000']
+- index: 325
+  layers: [GRASS03, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8640', '0x8720']
+- index: 326
+  layers: [GRASS03, GRASS05, SAND02]
+  tile_ids: ['0x47F0', '0x54C0', '0x3410', '0x0000']
+- index: 327
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x34E0', '0x0000', '0x0000']
+- index: 328
+  layers: [GRASS04, GRASS05, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x5480', '0x3440', '0x8610']
+- index: 329
+  layers: [GRASS05, SWA001]
+  tile_ids: ['0x54F0', '0x8620', '0x0000', '0x0000']
+- index: 330
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5490', '0x0000', '0x0000']
+- index: 331
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5470', '0x0000', '0x0000']
+- index: 332
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5420', '0x8680', '0x0000']
+- index: 333
+  layers: [GRASS04, GRASS05, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x5410', '0x3480', '0x8620']
+- index: 334
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3440', '0x0000', '0x0000']
+- index: 335
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5280', '0x0000', '0x0000']
+- index: 336
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3490', '0x8740', '0x0000']
+- index: 337
+  layers: [GRASS06, SAND02, SWA002]
+  tile_ids: ['0x55F0', '0x3460', '0x8780', '0x0000']
+- index: 338
+  layers: [GRASS06, SWA002]
+  tile_ids: ['0x55F0', '0x87D0', '0x0000', '0x0000']
+- index: 339
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x3490', '0x0000', '0x0000']
+- index: 340
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3470', '0x0000', '0x0000']
+- index: 341
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x34A0', '0x0000', '0x0000']
+- index: 342
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5420', '0x3440', '0x0000']
+- index: 343
+  layers: [GRASS05, SWA001]
+  tile_ids: ['0x54F0', '0x8660', '0x0000', '0x0000']
+- index: 344
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x54B0', '0x0000', '0x0000']
+- index: 345
+  layers: [GRASS05]
+  tile_ids: ['0x54F0', '0x0000', '0x0000', '0x0000']
+- index: 346
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5420', '0x8690', '0x0000']
+- index: 347
+  layers: [GRASS05]
+  tile_ids: ['0x54F1', '0x0000', '0x0000', '0x0000']
+- index: 348
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3480', '0x8710', '0x0000']
+- index: 349
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8730', '0x0000', '0x0000']
+- index: 350
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8720', '0x0000', '0x0000']
+- index: 351
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3410', '0x8760', '0x0000']
+- index: 352
+  layers: [GRASS06, SAND02]
+  tile_ids: ['0x55F0', '0x3460', '0x0000', '0x0000']
+- index: 353
+  layers: [GRASS06, SWA002]
+  tile_ids: ['0x55F0', '0x8790', '0x0000', '0x0000']
+- index: 354
+  layers: [GRASS03, SAND02]
+  tile_ids: ['0x47F0', '0x34D0', '0x0000', '0x0000']
+- index: 355
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5480', '0x3460', '0x0000']
+- index: 356
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5450', '0x0000', '0x0000']
+- index: 357
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5430', '0x8680', '0x0000']
+- index: 358
+  layers: [GRASS05, SWA001]
+  tile_ids: ['0x54F0', '0x8640', '0x0000', '0x0000']
+- index: 359
+  layers: [GRASS05, SWA001]
+  tile_ids: ['0x54F0', '0x8680', '0x0000', '0x0000']
+- index: 360
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8760', '0x0000', '0x0000']
+- index: 361
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3460', '0x8780', '0x0000']
+- index: 362
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x3480', '0x8740']
+- index: 363
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x34D0', '0x0000', '0x0000']
+- index: 364
+  layers: [GRASS01, GRASS06, SAND02]
+  tile_ids: ['0x32F0', '0x5580', '0x3460', '0x0000']
+- index: 365
+  layers: [GRASS01, GRASS06, SWA002]
+  tile_ids: ['0x32F0', '0x5550', '0x8780', '0x0000']
+- index: 366
+  layers: [GRASS04, GRASS06, SWA002]
+  tile_ids: ['0x52F0', '0x5520', '0x8750', '0x0000']
+- index: 367
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3460', '0x0000', '0x0000']
+- index: 368
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8790', '0x0000', '0x0000']
+- index: 369
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x87A0', '0x0000', '0x0000']
+- index: 370
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3490', '0x0000', '0x0000']
+- index: 371
+  layers: [GRASS01, GRASS05, SAND02]
+  tile_ids: ['0x32F0', '0x5410', '0x3460', '0x0000']
+- index: 372
+  layers: [GRASS01, GRASS05, GRASS06]
+  tile_ids: ['0x32F0', '0x5430', '0x5580', '0x0000']
+- index: 373
+  layers: [GRASS05, GRASS06, SWA002]
+  tile_ids: ['0x54F0', '0x5540', '0x8790', '0x0000']
+- index: 374
+  layers: [SAND02, SWA001]
+  tile_ids: ['0x34F0', '0x8610', '0x0000', '0x0000']
+- index: 375
+  layers: [GRASS04, GRASS05, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x5410', '0x3440', '0x8620']
+- index: 376
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x52A0', '0x0000', '0x0000']
+- index: 377
+  layers: [GRASS01, GRASS04]
+  tile_ids: ['0x32F0', '0x5240', '0x0000', '0x0000']
+- index: 378
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5210', '0x8780', '0x0000']
+- index: 379
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5260', '0x8780', '0x0000']
+- index: 380
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3410', '0x8740', '0x0000']
+- index: 381
+  layers: [GRASS01, GRASS05, SAND02]
+  tile_ids: ['0x32F0', '0x5410', '0x34A0', '0x0000']
+- index: 382
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3440', '0x8710', '0x0000']
+- index: 383
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8720', '0x0000', '0x0000']
+- index: 384
+  layers: [GRASS03, SAND02, SWA001]
+  tile_ids: ['0x47F0', '0x34A0', '0x8610', '0x0000']
+- index: 385
+  layers: [GRASS04, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x3440', '0x86A0', '0x0000']
+- index: 386
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5480', '0x8650', '0x0000']
+- index: 387
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3480', '0x0000', '0x0000']
+- index: 388
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5260', '0x3410', '0x0000']
+- index: 389
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x34B0', '0x0000', '0x0000']
+- index: 390
+  layers: [GRASS01, GRASS05, SAND02]
+  tile_ids: ['0x32F0', '0x5480', '0x3460', '0x0000']
+- index: 391
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5440', '0x8790', '0x0000']
+- index: 392
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8760', '0x0000', '0x0000']
+- index: 393
+  layers: [GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x52F0', '0x5420', '0x8750', '0x0000']
+- index: 394
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5240', '0x8720', '0x0000']
+- index: 395
+  layers: [SB003]
+  tile_ids: ['0x5AF1', '0x0000', '0x0000', '0x0000']
+- index: 396
+  layers: [SAND02, SWA001]
+  tile_ids: ['0x34F0', '0x8680', '0x0000', '0x0000']
+- index: 397
+  layers: [GRASS04, SAND02, SWA001]
+  tile_ids: ['0x52F0', '0x3420', '0x8640', '0x0000']
+- index: 398
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5490', '0x8640', '0x0000']
+- index: 399
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3440', '0x8730', '0x0000']
+- index: 400
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4760', '0x5280', '0x0000']
+- index: 401
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3480', '0x8710', '0x0000']
+- index: 402
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5410', '0x8780', '0x0000']
+- index: 403
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8740', '0x0000', '0x0000']
+- index: 404
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5460', '0x8780', '0x0000']
+- index: 405
+  layers: [GRASS01, GRASS03, SWA002]
+  tile_ids: ['0x32F0', '0x4780', '0x8740', '0x0000']
+- index: 406
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x47D0', '0x0000', '0x0000']
+- index: 407
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3470', '0x0000', '0x0000']
+- index: 408
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x3410', '0x0000', '0x0000']
+- index: 409
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3430', '0x8780', '0x0000']
+- index: 410
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4760', '0x5210', '0x0000']
+- index: 411
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x52A0', '0x8710', '0x0000']
+- index: 412
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3480', '0x8760', '0x0000']
+- index: 413
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3440', '0x0000', '0x0000']
+- index: 414
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5480', '0x8710', '0x0000']
+- index: 415
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8710', '0x0000', '0x0000']
+- index: 416
+  layers: [GRASS01, GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x5440', '0x8720']
+- index: 417
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4790', '0x0000', '0x0000']
+- index: 418
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5480', '0x0000', '0x0000']
+- index: 419
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x54D0', '0x0000', '0x0000']
+- index: 420
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3490', '0x8720', '0x0000']
+- index: 421
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8660', '0x8710', '0x0000']
+- index: 422
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3410', '0x8760', '0x0000']
+- index: 423
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x8770', '0x0000', '0x0000']
+- index: 424
+  layers: [GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x52F0', '0x5440', '0x87A0', '0x0000']
+- index: 425
+  layers: [GRASS01, GRASS03, GRASS04]
+  tile_ids: ['0x32F0', '0x4790', '0x5220', '0x0000']
+- index: 426
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3490', '0x0000', '0x0000']
+- index: 427
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3440', '0x0000', '0x0000']
+- index: 428
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3410', '0x87A0', '0x0000']
+- index: 429
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8710', '0x0000', '0x0000']
+- index: 430
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8620', '0x8740', '0x0000']
+- index: 431
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3410', '0x8780', '0x0000']
+- index: 432
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x34A0', '0x8740', '0x0000']
+- index: 433
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5250', '0x8720', '0x0000']
+- index: 434
+  layers: [GRASS01, GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x4780', '0x5240', '0x8720']
+- index: 435
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x5240', '0x3490', '0x0000']
+- index: 436
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5410', '0x0000', '0x0000']
+- index: 437
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5430', '0x0000', '0x0000']
+- index: 438
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x54A0', '0x8610', '0x0000']
+- index: 439
+  layers: [GRASS05, SWA002]
+  tile_ids: ['0x54F0', '0x87B0', '0x0000', '0x0000']
+- index: 440
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x87B0', '0x0000', '0x0000']
+- index: 441
+  layers: [SWA001, SWA002]
+  tile_ids: ['0x86F0', '0x8750', '0x0000', '0x0000']
+- index: 442
+  layers: [GRASS03, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x5210', '0x8640', '0x8720']
+- index: 443
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3450', '0x8720', '0x0000']
+- index: 444
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x8740', '0x0000']
+- index: 445
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3450', '0x0000', '0x0000']
+- index: 446
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5480', '0x3430', '0x0000']
+- index: 447
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x54C0', '0x3420', '0x0000']
+- index: 448
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5440', '0x8680', '0x0000']
+- index: 449
+  layers: [GRASS03, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x5280', '0x8620', '0x8740']
+- index: 450
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x87C0', '0x0000']
+- index: 451
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5490', '0x3420', '0x0000']
+- index: 452
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5410', '0x87A0', '0x0000']
+- index: 453
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5420', '0x8650', '0x0000']
+- index: 454
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5240', '0x8620', '0x0000']
+- index: 455
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x3480', '0x0000', '0x0000']
+- index: 456
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x54E0', '0x0000', '0x0000']
+- index: 457
+  layers: [GRASS03, SWA001]
+  tile_ids: ['0x47F0', '0x8670', '0x0000', '0x0000']
+- index: 458
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8620', '0x8710', '0x0000']
+- index: 459
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5240', '0x3490', '0x0000']
+- index: 460
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x8780', '0x0000']
+- index: 461
+  layers: [GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x52F0', '0x5480', '0x8740', '0x0000']
+- index: 462
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x5460', '0x8680', '0x0000']
+- index: 463
+  layers: [GRASS01, GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x32F0', '0x5220', '0x5410', '0x8640']
+- index: 464
+  layers: [GRASS01, GRASS05]
+  tile_ids: ['0x32F0', '0x5420', '0x0000', '0x0000']
+- index: 465
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4710', '0x0000', '0x0000']
+- index: 466
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x47B0', '0x0000', '0x0000']
+- index: 467
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x34C0', '0x8720', '0x0000']
+- index: 468
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x54A0', '0x3440', '0x0000']
+- index: 469
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5440', '0x3410', '0x0000']
+- index: 470
+  layers: [SWA001]
+  tile_ids: ['0x86F2', '0x0000', '0x0000', '0x0000']
+- index: 471
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3480', '0x8710', '0x0000']
+- index: 472
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8730', '0x0000']
+- index: 473
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x54A0', '0x0000', '0x0000']
+- index: 474
+  layers: [GRASS01, GRASS04, GRASS05]
+  tile_ids: ['0x32F0', '0x5220', '0x5440', '0x0000']
+- index: 475
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4780', '0x0000', '0x0000']
+- index: 476
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3460', '0x8780', '0x0000']
+- index: 477
+  layers: [GRASS04, GRASS05, SAND02]
+  tile_ids: ['0x52F0', '0x5460', '0x3410', '0x0000']
+- index: 478
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x34A0', '0x8710', '0x0000']
+- index: 479
+  layers: [GRASS05, SAND02, SWA002]
+  tile_ids: ['0x54F0', '0x3450', '0x8720', '0x0000']
+- index: 480
+  layers: [GRASS05, SAND02]
+  tile_ids: ['0x54F0', '0x34B0', '0x0000', '0x0000']
+- index: 481
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x3410', '0x8720']
+- index: 482
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3420', '0x8780', '0x0000']
+- index: 483
+  layers: [GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x52F0', '0x5410', '0x8760', '0x0000']
+- index: 484
+  layers: [GRASS04, GRASS05]
+  tile_ids: ['0x52F0', '0x5440', '0x0000', '0x0000']
+- index: 485
+  layers: [GRASS03, GRASS04, SAND02]
+  tile_ids: ['0x47F0', '0x52C0', '0x3410', '0x0000']
+- index: 486
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x34A0', '0x0000', '0x0000']
+- index: 487
+  layers: [GRASS04, GRASS05, SWA001]
+  tile_ids: ['0x52F0', '0x54C0', '0x8620', '0x0000']
+- index: 488
+  layers: [GRASS04, GRASS05, SWA002]
+  tile_ids: ['0x52F0', '0x54C0', '0x8710', '0x0000']
+- index: 489
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8750', '0x0000', '0x0000']
+- index: 490
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x86C0', '0x8720', '0x0000']
+- index: 491
+  layers: [SAND02, SWA002]
+  tile_ids: ['0x34F0', '0x8770', '0x0000', '0x0000']
+- index: 492
+  layers: [GRASS01, GRASS05, SWA002]
+  tile_ids: ['0x32F0', '0x5490', '0x8740', '0x0000']
+- index: 493
+  layers: [GRASS01, GRASS03, SWA001]
+  tile_ids: ['0x32F0', '0x47C0', '0x8610', '0x0000']
+- index: 494
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x47E0', '0x0000', '0x0000']
+- index: 495
+  layers: [GRASS01, GRASS03, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x4740', '0x3480', '0x8710']
+- index: 496
+  layers: [GRASS04, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x3480', '0x8750', '0x0000']
+- index: 497
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x3480', '0x8740']
+- index: 498
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5220', '0x3450', '0x0000']
+- index: 499
+  layers: [GRASS01, GRASS05]
+  tile_ids: ['0x32F0', '0x5490', '0x0000', '0x0000']
+- index: 500
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8680', '0x8710', '0x0000']
+- index: 501
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8640', '0x8730', '0x0000']
+- index: 502
+  layers: [GRASS01, GRASS03, SWA001]
+  tile_ids: ['0x32F0', '0x4740', '0x8610', '0x0000']
+- index: 503
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8620', '0x8790', '0x0000']
+- index: 504
+  layers: [GRASS01, GRASS05, GRASS06]
+  tile_ids: ['0x32F0', '0x5480', '0x5510', '0x0000']
+- index: 505
+  layers: [GRASS05, GRASS06, SWA002]
+  tile_ids: ['0x54F0', '0x5520', '0x8710', '0x0000']
+- index: 506
+  layers: [GRASS04, GRASS05, GRASS06, SWA002]
+  tile_ids: ['0x52F0', '0x5440', '0x5510', '0x8720']
+- index: 507
+  layers: [GRASS04, GRASS06]
+  tile_ids: ['0x52F0', '0x5530', '0x0000', '0x0000']
+- index: 508
+  layers: [GRASS01, GRASS04, GRASS06]
+  tile_ids: ['0x32F0', '0x5250', '0x5520', '0x0000']
+- index: 509
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8610', '0x8780', '0x0000']
+- index: 510
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8620', '0x87C0', '0x0000']
+- index: 511
+  layers: [GRASS01, GRASS03, SWA001]
+  tile_ids: ['0x32F0', '0x47C0', '0x8620', '0x0000']
+- index: 512
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8640', '0x8790', '0x0000']
+- index: 513
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x3480', '0x8710']
+- index: 514
+  layers: [GRASS01, GRASS06, SAND02]
+  tile_ids: ['0x32F0', '0x5590', '0x3420', '0x0000']
+- index: 515
+  layers: [GRASS06, SWA002]
+  tile_ids: ['0x55F0', '0x8780', '0x0000', '0x0000']
+- index: 516
+  layers: [GRASS06, SWA002]
+  tile_ids: ['0x55F0', '0x8750', '0x0000', '0x0000']
+- index: 517
+  layers: [GRASS06, SWA002]
+  tile_ids: ['0x55F0', '0x8720', '0x0000', '0x0000']
+- index: 518
+  layers: [GRASS04, GRASS06]
+  tile_ids: ['0x52F0', '0x5560', '0x0000', '0x0000']
+- index: 519
+  layers: [GRASS01, GRASS04, SWA001]
+  tile_ids: ['0x32F0', '0x5220', '0x8680', '0x0000']
+- index: 520
+  layers: [GRASS01, SWA001]
+  tile_ids: ['0x32F0', '0x8640', '0x0000', '0x0000']
+- index: 521
+  layers: [GRASS01, GRASS03, SWA002]
+  tile_ids: ['0x32F0', '0x4780', '0x8720', '0x0000']
+- index: 522
+  layers: [GRASS01, GRASS03]
+  tile_ids: ['0x32F0', '0x4740', '0x0000', '0x0000']
+- index: 523
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8640', '0x8720', '0x0000']
+- index: 524
+  layers: [GRASS01, GRASS03, SWA002]
+  tile_ids: ['0x32F0', '0x47C0', '0x8710', '0x0000']
+- index: 525
+  layers: [GRASS01, GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x4740', '0x5210', '0x8720']
+- index: 526
+  layers: [GRASS06, SAND02]
+  tile_ids: ['0x55F0', '0x3470', '0x0000', '0x0000']
+- index: 527
+  layers: [GRASS06, SAND02]
+  tile_ids: ['0x55F0', '0x3430', '0x0000', '0x0000']
+- index: 528
+  layers: [GRASS06, SAND02, SWA002]
+  tile_ids: ['0x55F0', '0x3420', '0x8790', '0x0000']
+- index: 529
+  layers: [GRASS06, SAND02, SWA002]
+  tile_ids: ['0x55F0', '0x3410', '0x8760', '0x0000']
+- index: 530
+  layers: [GRASS04, GRASS06, SAND02, SWA002]
+  tile_ids: ['0x52F0', '0x5540', '0x3420', '0x8710']
+- index: 531
+  layers: [GRASS01, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x8610', '0x8780']
+- index: 532
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8620', '0x8750', '0x0000']
+- index: 533
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8610', '0x8720', '0x0000']
+- index: 534
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8620', '0x8710', '0x0000']
+- index: 535
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3440', '0x8790', '0x0000']
+- index: 536
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8650', '0x8780', '0x0000']
+- index: 537
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x86A0', '0x8740', '0x0000']
+- index: 538
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x8780', '0x0000']
+- index: 539
+  layers: [SAND02, SWA001, SWA002]
+  tile_ids: ['0x34F0', '0x8630', '0x8740', '0x0000']
+- index: 540
+  layers: [GRASS04, SAND02, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x3440', '0x8620', '0x8780']
+- index: 541
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5220', '0x3440', '0x8710']
+- index: 542
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3410', '0x87A0', '0x0000']
+- index: 543
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3420', '0x87C0', '0x0000']
+- index: 544
+  layers: [GRASS01, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8680', '0x8710']
+- index: 545
+  layers: [GRASS04, SWA001, SWA002]
+  tile_ids: ['0x52F0', '0x8640', '0x8720', '0x0000']
+- index: 546
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3430', '0x8780', '0x0000']
+- index: 547
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x87A0', '0x0000']
+- index: 548
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3410', '0x8780', '0x0000']
+- index: 549
+  layers: [GRASS01, GRASS04, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x3420', '0x8740']
+- index: 550
+  layers: [GRASS01, GRASS04, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8620', '0x8740']
+- index: 551
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5250', '0x8780', '0x0000']
+- index: 552
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5220', '0x34C0', '0x0000']
+- index: 553
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3430', '0x0000', '0x0000']
+- index: 554
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x87A0', '0x0000', '0x0000']
+- index: 555
+  layers: [GRASS01, SWA001]
+  tile_ids: ['0x32F0', '0x8660', '0x0000', '0x0000']
+- index: 556
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5240', '0x3410', '0x0000']
+- index: 557
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x34A0', '0x0000', '0x0000']
+- index: 558
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5210', '0x34C0', '0x0000']
+- index: 559
+  layers: [GRASS01, SAND02]
+  tile_ids: ['0x32F0', '0x3450', '0x0000', '0x0000']
+- index: 560
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x34C0', '0x8710', '0x0000']
+- index: 561
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8640', '0x8730', '0x0000']
+- index: 562
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3410', '0x8720', '0x0000']
+- index: 563
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5210', '0x34A0', '0x0000']
+- index: 564
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5230', '0x3440', '0x0000']
+- index: 565
+  layers: [GRASS01, GRASS04, SAND02]
+  tile_ids: ['0x32F0', '0x5230', '0x3480', '0x0000']
+- index: 566
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3440', '0x8720', '0x0000']
+- index: 567
+  layers: [GRASS01, SAND02, SWA002]
+  tile_ids: ['0x32F0', '0x3480', '0x8740', '0x0000']
+- index: 568
+  layers: [GRASS04, SAND02]
+  tile_ids: ['0x52F0', '0x34C0', '0x0000', '0x0000']
+- index: 569
+  layers: [GRASS01, SWA001, SWA002]
+  tile_ids: ['0x32F0', '0x8630', '0x8780', '0x0000']
+- index: 570
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x52C0', '0x8710', '0x0000']
+- index: 571
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8720', '0x0000']
+- index: 572
+  layers: [GRASS01, SWA002]
+  tile_ids: ['0x32F0', '0x8750', '0x0000', '0x0000']
+- index: 573
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5220', '0x8750', '0x0000']
+- index: 574
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5210', '0x8760', '0x0000']
+- index: 575
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8660', '0x8710', '0x0000']
+- index: 576
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8610', '0x8720', '0x0000']
+- index: 577
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8630', '0x8780', '0x0000']
+- index: 578
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5240', '0x8730', '0x0000']
+- index: 579
+  layers: [GRASS03, GRASS04, SWA002]
+  tile_ids: ['0x47F0', '0x5210', '0x87C0', '0x0000']
+- index: 580
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8610', '0x8760', '0x0000']
+- index: 581
+  layers: [GRASS03, GRASS04, SWA001]
+  tile_ids: ['0x47F0', '0x5210', '0x8620', '0x0000']
+- index: 582
+  layers: [GRASS03, SWA001, SWA002]
+  tile_ids: ['0x47F0', '0x8610', '0x87A0', '0x0000']
+- index: 583
+  layers: [SE004, GRASS04, SWA002]
+  tile_ids: ['0x51F0', '0x5230', '0x8740', '0x0000']
+- index: 584
+  layers: [GRASS01, GRASS04, SWA002]
+  tile_ids: ['0x32F0', '0x5280', '0x8750', '0x0000']
+- index: 585
+  layers: [GRASS04, SE00144, SWA002]
+  tile_ids: ['0x52F0', '0x5060', '0x8760', '0x0000']
+- index: 586
+  layers: [GRASS04, SE00144, SWA002]
+  tile_ids: ['0x52F0', '0x50C0', '0x87C0', '0x0000']
+- index: 587
+  layers: [GRASS04, SE00144, SWA002]
+  tile_ids: ['0x52F0', '0x5040', '0x8740', '0x0000']
+- index: 588
+  layers: [SE004, GRASS04]
+  tile_ids: ['0x51F0', '0x52E0', '0x0000', '0x0000']
+- index: 589
+  layers: [GRASS04, SE00144, SWA002]
+  tile_ids: ['0x52F0', '0x5010', '0x8710', '0x0000']
+- index: 590
+  layers: [SE004, GRASS04, SE00144, SWA002]
+  tile_ids: ['0x51F0', '0x5260', '0x5010', '0x8780']
+- index: 591
+  layers: [SE004, SE00144, SWA002]
+  tile_ids: ['0x51F0', '0x5020', '0x87D0', '0x0000']
+- index: 592
+  layers: [SE004, SE00144, SWA002]
+  tile_ids: ['0x51F0', '0x5010', '0x87E0', '0x0000']
+- index: 593
+  layers: [SE004, SE00144, SWA002]
+  tile_ids: ['0x51F0', '0x5030', '0x87C0', '0x0000']
+- index: 594
+  layers: [SE004, GRASS04, SE00144, SWA002]
+  tile_ids: ['0x51F0', '0x5290', '0x5020', '0x8740']
+cells:
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 0, 8, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 11, 10, 12, 12, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 13, 14, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 16, 17, 18, 18, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 20, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 21, 21, 22, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2,
+  3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 23, 24, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 14, 25, 25, 25, 25, 26, 26, 26,
+  26, 20, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 13, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 14, 25, 26, 26, 26, 25, 25, 26, 25, 27, 11, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 14, 26, 25, 25, 25, 25, 25, 25, 25, 25,
+  25, 26, 26, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 14, 25, 26, 26, 25, 25, 25, 25, 25, 20, 2, 2, 3, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 26, 26, 25, 25, 25, 25, 26, 25, 26, 25, 28, 24, 2, 3, 1, 14, 26, 25, 25, 26, 26, 26, 26, 25, 26, 25, 25, 26, 25, 26,
+  26, 26, 26, 26, 26, 26, 26, 25, 26, 26, 25, 26, 26, 26, 26, 26, 25, 26, 26, 20, 2, 2, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 26, 26, 26, 26, 26, 25, 25, 26, 26, 26, 26, 26, 26, 25, 25, 6,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 26, 26, 26, 25, 26, 26, 26, 25, 26, 26, 20, 14, 25, 25, 26, 26, 25, 25, 25, 25, 26, 26, 25, 25, 26, 25,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 26, 26, 20, 2, 2, 2, 2, 2, 2, 2, 14, 26, 26, 26, 26, 25, 25, 25, 25, 26, 25, 26, 25, 25, 25, 26, 26, 25,
+  26, 26, 20, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 26, 25, 25, 25, 26, 25, 25, 26, 25, 26, 25, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 25, 25, 25, 26, 26, 25, 25, 26, 25,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 26, 25, 25, 26, 26, 25, 26, 25, 26, 26, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 25, 25, 25, 26, 25, 25, 26, 26, 26, 25,
+  25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 14, 25, 25, 25, 26, 25, 25, 26, 26, 26, 26, 26, 25, 26, 26, 25, 26, 25, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 25, 25, 26,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 26, 25, 25, 26, 26, 26, 26, 25, 26, 26, 25, 25, 26, 26, 25, 26, 25, 25, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 25, 26, 26, 25, 25, 25, 26, 26, 26,
+  25, 25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 26, 26, 25, 25, 25, 26, 26, 25, 25, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 25, 26, 25, 25, 25, 25, 26, 26, 26, 26, 25, 26, 25, 26,
+  26, 25, 26, 26, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 26, 26, 25, 26, 25, 25, 26, 25, 25, 25, 25, 26, 25, 29, 30, 30, 31, 25, 25, 26, 25, 25, 26,
+  26, 26, 25, 25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 26, 26, 25, 26, 25, 25, 26, 26, 26, 25, 25, 25, 25, 25, 26, 26, 26, 25, 25, 25, 26, 25, 26, 25,
+  26, 25, 26, 26, 25, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 32, 33, 33, 34, 29, 31, 26, 25, 25, 26,
+  26, 26, 25, 25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 26, 25, 25, 25, 26, 25, 26, 25, 26, 26, 26, 25, 25, 25, 26, 26, 25, 26, 26, 26, 25,
+  26, 25, 26, 25, 26, 26, 26, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 29, 30, 35, 33, 33, 34, 32, 34, 26, 25, 25, 26,
+  26, 26, 25, 25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 25, 25, 26, 26, 25, 26, 26, 26, 26, 26, 25, 25, 26, 26, 26, 25, 26, 25, 25, 25, 25, 26, 26, 25, 26, 26, 25, 26,
+  25, 26, 25, 26, 25, 25, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 29, 30, 30, 31, 29, 30, 30, 30, 31, 26, 25, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 32, 36, 36, 37, 38, 39, 35, 34, 26, 25, 25, 26,
+  26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 25, 25, 26, 25, 25, 26, 25, 26, 25, 26, 25, 25, 25, 25, 26, 25, 26, 26, 25, 25, 25, 25,
+  26, 26, 25, 26, 26, 25, 26, 25, 25, 26, 26, 25, 26, 25, 25, 29, 30, 35, 33, 33, 39, 35, 36, 36, 33, 39, 30, 30, 31, 26, 25, 25, 26, 25, 25, 26, 29, 30, 35, 36, 33, 39, 35, 33, 36, 34, 25, 25, 25, 25,
+  25, 25, 26, 26, 25, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 25, 25, 26, 26, 25, 25, 26, 26, 26, 26, 25, 25, 26, 26, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25,
+  25, 29, 30, 30, 31, 26, 26, 26, 25, 25, 25, 26, 26, 25, 29, 35, 33, 36, 36, 36, 33, 36, 36, 36, 36, 33, 36, 36, 34, 26, 26, 26, 25, 25, 29, 30, 35, 33, 36, 36, 36, 33, 33, 33, 36, 34, 26, 26, 26, 26,
+  26, 26, 25, 25, 25, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 29, 30,
+  30, 35, 33, 36, 39, 30, 30, 30, 31, 25, 25, 25, 26, 25, 32, 36, 36, 33, 33, 33, 36, 33, 33, 36, 36, 36, 33, 36, 34, 25, 25, 26, 26, 26, 32, 33, 36, 36, 33, 36, 33, 33, 33, 33, 33, 39, 30, 30, 30, 30,
+  30, 30, 30, 30, 30, 30, 30, 30, 30, 40, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 25, 26, 25, 25, 26, 32, 33,
+  36, 33, 36, 33, 36, 33, 36, 36, 39, 30, 31, 26, 25, 26, 32, 33, 33, 37, 41, 41, 41, 41, 41, 41, 38, 36, 36, 33, 34, 25, 25, 26, 25, 26, 32, 33, 36, 36, 33, 36, 36, 36, 33, 33, 36, 36, 36, 36, 33, 36,
+  36, 36, 36, 33, 33, 36, 33, 33, 36, 42, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 25, 26, 25, 26, 26, 26, 26, 25, 26, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 29, 30, 30, 30, 35, 33,
+  36, 33, 33, 36, 33, 33, 36, 33, 33, 36, 34, 25, 26, 29, 35, 36, 36, 34, 25, 25, 26, 26, 26, 25, 32, 33, 36, 36, 34, 25, 25, 26, 25, 26, 44, 41, 38, 33, 36, 36, 36, 33, 33, 36, 36, 33, 33, 33, 33, 36,
+  33, 33, 36, 36, 33, 36, 33, 36, 36, 36, 42, 43, 45, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 45, 0, 45, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 26, 25, 26, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 26, 26, 26, 26, 26, 25, 26, 26, 26, 26, 25, 29, 35, 46, 47, 47, 48, 33,
+  33, 36, 37, 41, 41, 41, 38, 36, 33, 36, 34, 25, 26, 32, 33, 36, 36, 39, 30, 31, 25, 25, 25, 26, 44, 38, 36, 36, 34, 25, 25, 26, 25, 26, 26, 29, 35, 36, 33, 36, 36, 36, 36, 33, 36, 33, 36, 36, 36, 36,
+  36, 36, 36, 36, 33, 36, 36, 36, 36, 33, 33, 42, 43, 45, 0, 45, 0, 45, 0, 0, 45, 0, 45, 0, 45, 45, 45, 0, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 26, 25, 25, 26, 26, 25, 26, 26, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 25, 29, 35, 36, 49, 18, 18, 50, 36,
+  36, 46, 51, 52, 52, 52, 53, 33, 33, 33, 34, 26, 25, 32, 33, 36, 36, 36, 33, 34, 25, 25, 25, 25, 26, 32, 33, 33, 34, 29, 30, 30, 30, 30, 30, 35, 36, 36, 33, 36, 33, 36, 36, 36, 33, 36, 36, 33, 33, 33,
+  33, 36, 36, 36, 36, 36, 33, 36, 33, 36, 33, 36, 54, 45, 0, 45, 45, 0, 0, 45, 45, 0, 0, 45, 0, 45, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 25, 26, 25, 26, 25, 26, 32, 46, 47, 55, 56, 57, 58, 33,
+  36, 59, 60, 61, 61, 61, 62, 36, 33, 33, 39, 31, 29, 35, 33, 33, 33, 36, 33, 34, 26, 26, 26, 25, 26, 44, 41, 41, 63, 32, 36, 36, 33, 33, 33, 36, 33, 33, 33, 36, 36, 36, 33, 36, 33, 33, 33, 36, 33, 33,
+  33, 36, 33, 33, 33, 33, 33, 36, 33, 36, 33, 33, 54, 0, 0, 45, 0, 45, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 25, 26, 25, 26, 25, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 25, 26, 25, 25, 26, 26, 26, 26, 25, 26, 32, 59, 57, 57, 64, 41, 41, 41,
+  41, 41, 63, 26, 26, 25, 32, 36, 33, 33, 33, 39, 35, 33, 36, 36, 36, 36, 36, 34, 26, 25, 25, 25, 26, 26, 26, 25, 29, 35, 33, 36, 33, 33, 33, 33, 33, 36, 36, 36, 33, 36, 36, 33, 36, 33, 36, 33, 36, 36,
+  36, 36, 33, 36, 36, 36, 33, 33, 33, 33, 33, 33, 54, 45, 0, 0, 45, 0, 0, 45, 0, 45, 45, 45, 0, 0, 45, 45, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 25, 25, 26, 25, 25, 25, 25, 25, 26, 26, 44, 41, 41, 41, 63, 26, 26, 26,
+  26, 26, 29, 30, 30, 30, 35, 33, 36, 33, 36, 33, 33, 33, 36, 36, 36, 36, 36, 34, 26, 25, 25, 25, 26, 26, 26, 26, 32, 33, 33, 36, 36, 36, 33, 37, 38, 36, 36, 33, 33, 33, 36, 36, 33, 36, 33, 36, 36, 33,
+  33, 33, 36, 36, 33, 36, 33, 33, 33, 33, 65, 66, 67, 45, 0, 45, 45, 45, 45, 0, 45, 0, 0, 45, 45, 0, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25,
+  26, 26, 44, 38, 36, 33, 33, 37, 41, 41, 38, 36, 36, 36, 36, 33, 37, 41, 41, 63, 25, 25, 26, 26, 25, 25, 25, 25, 32, 36, 36, 36, 36, 36, 36, 39, 35, 33, 33, 33, 33, 33, 36, 36, 33, 36, 36, 36, 33, 33,
+  33, 36, 33, 33, 36, 36, 36, 36, 36, 33, 54, 0, 0, 45, 0, 45, 45, 0, 0, 45, 45, 45, 45, 0, 45, 0, 0, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 26, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 25, 25, 26, 26, 26, 25, 26, 26, 26, 29, 30,
+  30, 30, 30, 35, 33, 37, 41, 68, 30, 30, 69, 38, 33, 33, 36, 37, 68, 31, 25, 25, 25, 25, 25, 26, 26, 25, 29, 31, 32, 33, 33, 37, 38, 33, 33, 36, 36, 33, 36, 33, 33, 36, 36, 33, 36, 36, 33, 33, 33, 36,
+  33, 36, 33, 33, 33, 33, 33, 36, 33, 36, 42, 70, 43, 45, 45, 45, 0, 0, 45, 45, 0, 45, 45, 0, 45, 45, 45, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 26, 25, 26, 25, 26, 25, 25, 26, 26, 25, 25, 25, 26, 26, 25, 25, 26, 26, 25, 25, 26, 26, 26, 25, 25, 25, 26, 25, 26, 25, 25, 32, 36,
+  36, 37, 41, 38, 36, 34, 25, 44, 41, 41, 63, 44, 41, 38, 33, 39, 35, 39, 31, 25, 26, 25, 26, 25, 25, 26, 44, 68, 35, 33, 36, 39, 35, 37, 38, 33, 33, 36, 36, 36, 36, 33, 33, 33, 36, 33, 36, 33, 33, 33,
+  33, 36, 33, 33, 36, 33, 33, 33, 36, 33, 33, 36, 42, 70, 43, 45, 0, 0, 45, 0, 45, 45, 0, 45, 0, 45, 0, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 26, 26, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 26, 26, 26, 25, 29, 30, 30, 35, 33,
+  33, 39, 30, 35, 37, 63, 26, 25, 25, 25, 71, 72, 73, 44, 41, 41, 38, 36, 34, 29, 31, 26, 25, 26, 25, 25, 29, 69, 38, 36, 37, 38, 37, 63, 44, 38, 36, 33, 36, 36, 36, 33, 36, 36, 36, 33, 33, 33, 33, 33,
+  36, 36, 33, 33, 33, 33, 33, 33, 36, 33, 33, 33, 33, 36, 42, 70, 43, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 26, 26, 26, 25, 26, 26, 25, 26, 26, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 26, 26, 26, 32, 36, 36, 33, 36,
+  36, 33, 74, 75, 63, 29, 31, 25, 26, 71, 76, 77, 78, 72, 73, 26, 32, 33, 39, 69, 63, 26, 25, 29, 30, 31, 32, 34, 32, 37, 63, 44, 68, 31, 25, 32, 37, 38, 36, 33, 33, 33, 36, 36, 33, 33, 33, 33, 36, 33,
+  33, 33, 33, 36, 33, 33, 33, 33, 33, 36, 36, 36, 33, 33, 33, 36, 54, 0, 45, 45, 45, 0, 45, 0, 45, 0, 45, 0, 45, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 25, 26, 25, 25, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 25, 25, 26, 26, 26, 26, 25, 26, 26, 25, 25, 29, 30, 35, 36, 37, 38, 36,
+  33, 37, 79, 80, 31, 32, 39, 30, 31, 81, 82, 33, 83, 84, 85, 30, 69, 41, 38, 39, 30, 31, 26, 32, 36, 34, 44, 63, 32, 39, 30, 31, 44, 63, 25, 44, 68, 35, 36, 33, 36, 36, 36, 36, 36, 36, 36, 36, 33, 33,
+  33, 36, 33, 36, 36, 33, 33, 33, 33, 36, 36, 36, 33, 33, 36, 33, 42, 70, 43, 45, 0, 45, 45, 45, 45, 45, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 26, 25, 25, 25, 26, 26, 29, 30, 30, 30, 30, 31, 25, 25, 26, 26, 29, 30, 31, 32, 33, 33, 37, 63, 86, 87,
+  88, 89, 90, 91, 63, 44, 92, 87, 93, 94, 87, 87, 95, 96, 37, 97, 89, 73, 44, 41, 38, 39, 31, 32, 36, 39, 31, 29, 69, 38, 33, 34, 25, 25, 29, 31, 32, 36, 36, 33, 33, 33, 36, 33, 33, 33, 36, 33, 36, 33,
+  33, 36, 33, 33, 33, 36, 36, 33, 33, 33, 33, 33, 36, 36, 33, 33, 36, 36, 54, 45, 0, 45, 45, 0, 0, 0, 45, 0, 0, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 25, 26, 26, 26, 26, 25, 26, 25, 26, 26, 26, 25, 26, 25, 26, 25, 32, 36, 37, 38, 33, 39, 31, 26, 29, 30, 98, 99, 100, 101, 102, 103, 104, 105, 106,
+  107, 108, 109, 110, 111, 112, 105, 106, 113, 114, 115, 107, 107, 107, 116, 95, 117, 118, 119, 25, 29, 35, 37, 68, 35, 33, 33, 34, 32, 39, 35, 33, 39, 30, 31, 32, 34, 32, 36, 36, 36, 33, 33, 33, 36, 36,
+  36, 33, 33, 36, 33, 36, 36, 37, 38, 33, 33, 33, 36, 36, 33, 33, 33, 33, 36, 33, 33, 36, 36, 54, 0, 0, 45, 0, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 25, 26, 26, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26, 44, 41, 68, 35, 36, 37, 63, 29, 35, 37, 120, 121, 120, 121, 122, 116, 123, 124, 125,
+  124, 107, 126, 105, 105, 106, 107, 107, 126, 106, 107, 107, 107, 107, 107, 125, 127, 26, 25, 25, 44, 38, 39, 69, 38, 33, 37, 68, 35, 33, 37, 41, 38, 36, 39, 35, 39, 35, 33, 36, 36, 36, 36, 36, 33, 33,
+  33, 36, 33, 33, 36, 36, 36, 39, 35, 33, 33, 36, 33, 33, 36, 36, 36, 33, 36, 33, 36, 36, 33, 42, 70, 70, 70, 43, 0, 0, 45, 45, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 26, 29, 35, 33, 33, 39, 31, 32, 37, 128, 129, 119, 130, 131, 106, 113, 132, 133,
+  132, 134, 135, 124, 107, 107, 113, 136, 136, 136, 137, 135, 138, 136, 137, 138, 132, 100, 72, 139, 140, 73, 44, 38, 39, 35, 33, 39, 35, 33, 33, 39, 31, 32, 36, 36, 33, 36, 36, 36, 33, 33, 36, 36, 33,
+  33, 33, 36, 36, 33, 33, 36, 36, 36, 36, 33, 36, 36, 33, 33, 36, 33, 36, 33, 65, 66, 141, 36, 36, 33, 33, 36, 36, 36, 54, 45, 0, 45, 0, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 142, 143, 142, 52, 52, 53, 33, 36, 33, 36, 34, 32, 34, 144, 145, 105, 146, 147, 113, 111, 32, 39,
+  94, 103, 37, 148, 136, 136, 111, 26, 26, 29, 35, 37, 63, 25, 44, 63, 32, 149, 150, 151, 79, 119, 29, 35, 33, 33, 36, 33, 33, 33, 36, 36, 39, 35, 33, 36, 36, 36, 36, 36, 33, 33, 33, 36, 33, 36, 33, 36,
+  36, 36, 33, 36, 33, 36, 33, 36, 33, 36, 36, 33, 36, 33, 33, 36, 54, 45, 152, 36, 36, 36, 33, 36, 36, 36, 54, 45, 0, 45, 45, 45, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 25, 28, 153, 154, 18, 155, 156, 38, 36, 33, 37, 68, 35, 34, 26, 157, 107, 126, 106, 158, 25, 86, 87,
+  123, 159, 95, 160, 142, 161, 30, 31, 29, 35, 33, 162, 52, 161, 163, 52, 164, 165, 121, 63, 29, 30, 35, 33, 36, 33, 33, 36, 33, 36, 37, 41, 38, 36, 36, 33, 36, 33, 36, 36, 33, 33, 36, 33, 33, 33, 33, 36,
+  33, 33, 36, 33, 36, 33, 33, 33, 36, 33, 33, 33, 33, 36, 33, 36, 42, 43, 166, 66, 141, 33, 36, 33, 65, 66, 67, 45, 45, 0, 0, 45, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 142, 52, 167, 168, 169, 30, 69, 38, 33, 34, 32, 37, 63, 112, 106, 107, 125, 135, 127, 25, 157, 125,
+  170, 133, 136, 171, 172, 173, 47, 51, 164, 47, 47, 55, 18, 173, 55, 155, 168, 174, 175, 72, 176, 99, 36, 36, 36, 33, 33, 36, 36, 33, 34, 25, 44, 38, 33, 33, 36, 33, 36, 36, 33, 36, 33, 36, 33, 33, 33,
+  36, 36, 36, 33, 36, 33, 36, 36, 33, 36, 36, 36, 36, 33, 33, 33, 36, 36, 54, 177, 70, 178, 33, 33, 33, 42, 43, 0, 0, 0, 45, 45, 0, 45, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 25, 25, 26, 25, 26, 26, 26, 25, 25, 28, 61, 153, 179, 58, 33, 34, 32, 36, 39, 69, 63, 112, 106, 113, 136, 132, 37, 63, 112, 180, 170,
+  33, 39, 30, 69, 181, 57, 57, 182, 56, 57, 57, 57, 60, 61, 61, 153, 154, 155, 183, 184, 150, 82, 33, 33, 33, 36, 36, 33, 36, 33, 34, 25, 29, 35, 33, 33, 36, 33, 33, 33, 33, 36, 33, 36, 33, 36, 33, 36,
+  33, 36, 33, 36, 33, 36, 33, 33, 36, 33, 36, 33, 36, 33, 65, 66, 66, 185, 178, 33, 36, 33, 33, 36, 36, 54, 0, 45, 0, 45, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 25, 26, 25, 26, 25, 26, 26, 25, 26, 26, 26, 25, 32, 33, 33, 39, 35, 37, 41, 63, 112, 106, 107, 158, 26, 44, 186, 105, 180, 170, 37, 38,
+  33, 36, 34, 44, 41, 41, 187, 156, 41, 41, 41, 63, 25, 112, 105, 188, 189, 190, 184, 191, 33, 33, 37, 41, 41, 38, 36, 33, 36, 34, 25, 44, 41, 38, 36, 33, 36, 36, 33, 33, 33, 36, 36, 33, 36, 33, 36, 36,
+  36, 33, 36, 36, 33, 36, 33, 33, 33, 33, 33, 33, 33, 54, 177, 70, 178, 33, 36, 36, 33, 33, 33, 33, 42, 43, 45, 0, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 29, 35, 36, 36, 33, 33, 34, 26, 26, 157, 107, 113, 111, 25, 25, 192, 193, 194, 33, 39, 35,
+  33, 36, 39, 31, 26, 25, 26, 25, 25, 25, 25, 25, 26, 195, 196, 197, 198, 199, 200, 191, 33, 33, 34, 26, 25, 32, 33, 33, 36, 39, 31, 25, 25, 32, 36, 36, 33, 33, 36, 33, 33, 36, 36, 33, 36, 36, 33, 33, 33,
+  33, 33, 33, 33, 36, 33, 36, 33, 36, 36, 36, 36, 42, 178, 36, 65, 141, 36, 33, 36, 33, 33, 33, 33, 42, 43, 0, 45, 0, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 25, 25, 25, 25, 32, 36, 33, 36, 36, 74, 201, 26, 26, 157, 113, 111, 142, 52, 52, 202, 57, 58, 36, 36, 33,
+  37, 41, 41, 128, 139, 203, 105, 160, 25, 26, 142, 52, 52, 204, 205, 110, 206, 68, 199, 207, 33, 33, 34, 26, 25, 44, 38, 33, 36, 33, 39, 31, 25, 44, 38, 33, 33, 33, 33, 36, 36, 33, 36, 33, 33, 36, 36,
+  36, 36, 33, 36, 36, 36, 36, 33, 36, 33, 33, 33, 36, 33, 36, 33, 36, 54, 166, 66, 141, 36, 65, 141, 36, 36, 36, 54, 45, 45, 45, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 5, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 26, 25, 32, 36, 33, 36, 37, 120, 209, 73, 112, 106, 126, 160, 154, 18, 18, 50, 33, 33, 37, 41, 41,
+  63, 25, 29, 210, 191, 211, 107, 158, 25, 25, 212, 213, 155, 61, 153, 25, 71, 101, 39, 35, 36, 33, 34, 29, 31, 29, 35, 33, 33, 36, 37, 63, 29, 31, 32, 33, 33, 33, 37, 41, 41, 38, 33, 36, 33, 36, 36, 36,
+  36, 36, 33, 36, 33, 33, 33, 33, 37, 38, 33, 36, 33, 36, 33, 36, 54, 177, 70, 178, 33, 54, 152, 36, 33, 36, 42, 70, 70, 43, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 26, 26, 25, 25, 26, 25, 26, 25, 26, 26, 26, 25, 44, 41, 38, 37, 63, 190, 214, 215, 157, 113, 136, 111, 28, 168, 18, 173, 48, 36, 34, 25, 25,
+  25, 112, 216, 217, 218, 115, 107, 126, 105, 105, 106, 219, 220, 112, 105, 105, 221, 222, 87, 103, 33, 33, 39, 35, 39, 35, 33, 36, 33, 36, 39, 140, 101, 39, 35, 36, 36, 36, 39, 31, 25, 32, 36, 33, 36,
+  36, 36, 36, 33, 33, 36, 33, 36, 33, 36, 36, 39, 35, 33, 33, 33, 33, 33, 33, 54, 152, 36, 33, 36, 42, 178, 36, 33, 36, 33, 33, 33, 42, 43, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 26, 26, 25, 26, 25, 26, 25, 26, 25, 29, 30, 35, 34, 71, 223, 224, 126, 146, 111, 25, 26, 225, 226, 227, 18, 50, 33, 34, 26, 25,
+  112, 106, 107, 116, 115, 107, 107, 107, 107, 107, 107, 228, 229, 106, 107, 107, 107, 107, 125, 170, 36, 33, 36, 36, 36, 33, 33, 36, 33, 36, 33, 83, 207, 36, 33, 33, 36, 36, 37, 68, 30, 35, 36, 33, 36,
+  36, 33, 36, 36, 36, 33, 33, 36, 36, 36, 36, 36, 36, 33, 36, 33, 36, 36, 36, 42, 230, 141, 33, 65, 141, 33, 33, 36, 33, 33, 33, 36, 33, 54, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 25, 25, 26, 26, 25, 26, 26, 25, 29, 30, 69, 41, 97, 201, 130, 231, 232, 233, 234, 235, 26, 25, 236, 237, 238, 56, 58, 33, 39, 31,
+  112, 146, 147, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 113, 147, 107, 107, 239, 74, 99, 33, 36, 36, 36, 33, 36, 33, 36, 33, 74, 89, 101, 74, 99, 33, 36, 36, 34, 32, 36, 37, 38, 33,
+  36, 33, 36, 36, 36, 36, 36, 33, 36, 33, 36, 37, 38, 33, 33, 36, 33, 33, 36, 33, 36, 54, 166, 141, 42, 230, 141, 33, 33, 33, 33, 36, 36, 33, 54, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 25, 25, 25, 26, 26, 25, 26, 29, 69, 38, 34, 71, 129, 119, 157, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 64, 38, 33, 36, 104,
+  106, 126, 106, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 126, 146, 147, 107, 250, 251, 252, 33, 36, 33, 33, 36, 36, 33, 36, 36, 149, 253, 254, 255, 254, 99, 33, 33, 39, 35, 33, 39, 35,
+  36, 36, 36, 36, 36, 36, 33, 33, 36, 36, 36, 33, 39, 35, 36, 33, 33, 33, 33, 33, 36, 33, 42, 43, 152, 36, 54, 152, 36, 33, 33, 36, 36, 36, 33, 54, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 25, 25, 25, 25, 26, 26, 26, 256, 89, 257, 63, 190, 258, 112, 106, 113, 171, 259, 124, 260, 261, 262, 263, 264, 265, 266, 32, 36, 37,
+  122, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 158, 157, 107, 267, 268, 269, 270, 37, 38, 33, 36, 36, 33, 36, 36, 149, 184, 150, 77, 271, 191, 33, 33, 36, 33, 33,
+  36, 36, 33, 36, 36, 36, 36, 33, 33, 36, 33, 33, 36, 36, 33, 36, 33, 36, 36, 33, 36, 33, 33, 33, 36, 54, 152, 36, 42, 178, 36, 33, 33, 33, 36, 65, 66, 67, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 25, 25, 25, 26, 25, 26, 26, 144, 118, 272, 73, 190, 209, 273, 125, 274, 35, 36, 134, 274, 69, 275, 276, 277, 278, 279, 35, 36, 34,
+  280, 137, 124, 107, 107, 107, 107, 107, 281, 282, 283, 107, 107, 107, 107, 107, 107, 126, 106, 284, 233, 285, 286, 287, 288, 289, 33, 33, 33, 33, 74, 290, 255, 291, 207, 36, 292, 82, 36, 36, 36, 33, 33,
+  36, 36, 36, 33, 33, 36, 33, 36, 33, 36, 36, 36, 33, 33, 33, 36, 36, 36, 33, 33, 33, 36, 33, 36, 33, 42, 178, 33, 36, 33, 33, 33, 36, 33, 33, 42, 43, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 26, 25, 26, 26, 26, 26, 25, 190, 209, 76, 77, 293, 239, 36, 33, 33, 33, 36, 34, 225, 294, 295, 64, 38, 33, 74, 89, 139, 35,
+  211, 107, 107, 107, 107, 107, 296, 297, 298, 107, 107, 107, 107, 107, 299, 300, 233, 301, 302, 302, 303, 304, 276, 264, 305, 305, 305, 306, 292, 77, 271, 258, 32, 36, 36, 33, 33, 36, 33, 33, 33, 33, 36,
+  33, 33, 36, 33, 33, 36, 33, 33, 36, 36, 33, 33, 33, 33, 33, 36, 33, 33, 36, 36, 33, 33, 36, 33, 36, 65, 141, 36, 36, 33, 36, 33, 36, 36, 42, 43, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 25, 26, 26, 26, 26, 26, 142, 52, 143, 25, 144, 118, 207, 102, 115, 239, 102, 103, 36, 36, 36, 39, 307, 276, 308, 39, 35, 37, 309, 271,
+  121, 92, 115, 107, 107, 107, 107, 107, 310, 311, 312, 107, 107, 107, 299, 313, 314, 315, 302, 316, 317, 318, 319, 320, 321, 322, 276, 316, 323, 308, 36, 36, 292, 85, 35, 33, 33, 36, 36, 33, 33, 36, 36,
+  33, 33, 33, 36, 36, 37, 38, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 36, 65, 141, 42, 178, 65, 66, 66, 141, 36, 33, 33, 33, 54, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 26, 26, 26, 26, 25, 154, 18, 220, 26, 26, 26, 32, 134, 124, 116, 115, 116, 103, 33, 36, 33, 39, 324, 308, 36, 37, 63, 32, 292, 325,
+  106, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 267, 326, 286, 315, 327, 328, 329, 320, 330, 331, 332, 272, 333, 334, 315, 264, 305, 306, 36, 36, 37, 38, 36, 33, 33, 36, 36, 33, 36, 36,
+  33, 33, 33, 33, 39, 35, 36, 33, 33, 36, 33, 36, 33, 33, 33, 33, 36, 36, 36, 36, 36, 36, 33, 33, 54, 152, 33, 36, 54, 0, 45, 166, 141, 36, 36, 33, 54, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 25, 25, 28, 168, 335, 52, 143, 25, 256, 99, 211, 107, 107, 107, 116, 103, 36, 36, 37, 336, 337, 338, 34, 25, 44, 92, 115,
+  107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 339, 340, 341, 342, 190, 343, 331, 344, 345, 331, 346, 343, 347, 348, 349, 350, 308, 36, 36, 34, 32, 36, 36, 36, 36, 36, 33, 36, 33,
+  36, 36, 33, 33, 36, 36, 33, 36, 36, 36, 36, 36, 33, 33, 36, 36, 33, 36, 33, 33, 33, 36, 36, 36, 42, 230, 141, 36, 42, 43, 0, 177, 178, 36, 33, 36, 54, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 25, 26, 26, 26, 25, 25, 154, 155, 61, 153, 25, 81, 82, 134, 135, 135, 124, 107, 239, 33, 33, 351, 294, 352, 353, 34, 25, 26, 157, 107,
+  107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 240, 354, 355, 356, 357, 358, 345, 347, 345, 345, 359, 358, 345, 269, 270, 360, 361, 38, 36, 34, 32, 33, 33, 36, 33, 33, 33, 36, 36,
+  33, 33, 33, 33, 36, 36, 33, 36, 33, 36, 33, 36, 33, 36, 36, 33, 33, 33, 33, 36, 33, 36, 36, 36, 36, 42, 178, 33, 36, 42, 43, 152, 36, 33, 33, 36, 54, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 26, 26, 154, 335, 52, 143, 25, 256, 290, 290, 99, 33, 211, 107, 239, 33, 37, 362, 363, 364, 365, 366, 31, 26, 157, 107,
+  107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 284, 301, 367, 330, 345, 347, 345, 345, 345, 345, 345, 345, 345, 345, 368, 360, 367, 32, 37, 63, 44, 38, 33, 33, 36, 36, 36, 33, 33,
+  33, 36, 33, 33, 36, 33, 33, 33, 36, 36, 33, 33, 36, 33, 33, 33, 33, 33, 33, 33, 36, 33, 36, 33, 36, 33, 36, 33, 33, 36, 54, 152, 33, 36, 36, 33, 54, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 25, 25, 25, 25, 26, 142, 167, 168, 18, 335, 143, 81, 271, 150, 369, 99, 211, 107, 239, 37, 68, 172, 370, 371, 372, 373, 34, 112, 106,
+  107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 339, 374, 375, 344, 345, 345, 345, 347, 345, 347, 347, 345, 345, 345, 287, 263, 367, 32, 39, 31, 29, 35, 33, 36, 36, 36, 36,
+  33, 33, 36, 36, 33, 33, 36, 36, 36, 36, 33, 33, 36, 36, 36, 36, 33, 33, 33, 33, 36, 36, 33, 33, 36, 33, 33, 33, 33, 33, 33, 33, 42, 178, 33, 33, 65, 66, 67, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 26, 25, 25, 25, 25, 26, 28, 376, 377, 18, 155, 153, 256, 255, 191, 292, 82, 211, 107, 378, 63, 379, 380, 381, 382, 383, 368, 34, 280, 147,
+  107, 107, 107, 107, 107, 107, 107, 107, 281, 282, 283, 107, 107, 107, 284, 384, 385, 386, 329, 345, 347, 345, 345, 345, 347, 345, 347, 345, 345, 387, 323, 367, 256, 99, 34, 44, 38, 33, 36, 33, 33, 33,
+  33, 33, 36, 36, 33, 33, 36, 33, 33, 33, 36, 36, 33, 36, 33, 33, 36, 36, 36, 36, 36, 33, 33, 36, 33, 36, 33, 36, 33, 36, 33, 36, 36, 33, 33, 33, 42, 43, 0, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 25, 25, 142, 143, 154, 18, 18, 335, 143, 144, 84, 369, 290, 75, 122, 107, 158, 26, 388, 389, 390, 391, 392, 269, 393, 30, 394,
+  107, 107, 107, 107, 107, 107, 107, 107, 296, 395, 298, 107, 107, 107, 339, 396, 397, 144, 398, 345, 345, 345, 347, 347, 345, 345, 345, 347, 345, 345, 348, 399, 210, 121, 63, 25, 32, 36, 33, 36, 33, 33,
+  33, 33, 33, 36, 33, 36, 33, 36, 36, 33, 36, 33, 36, 33, 33, 36, 36, 36, 36, 33, 36, 36, 33, 33, 36, 33, 36, 33, 36, 33, 33, 36, 36, 36, 33, 33, 33, 54, 45, 45, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 26, 25, 25, 154, 335, 167, 168, 18, 155, 153, 26, 32, 149, 184, 258, 157, 107, 400, 143, 401, 350, 238, 402, 403, 347, 404, 47,
+  405, 406, 107, 107, 107, 107, 107, 107, 107, 296, 395, 298, 107, 107, 107, 339, 302, 407, 235, 330, 347, 347, 345, 347, 345, 345, 347, 345, 345, 345, 408, 409, 306, 149, 209, 139, 30, 35, 36, 36, 33,
+  36, 36, 36, 36, 33, 33, 36, 33, 33, 36, 36, 36, 33, 33, 33, 36, 36, 36, 33, 33, 33, 36, 36, 33, 36, 33, 36, 33, 33, 33, 33, 33, 33, 33, 36, 33, 33, 36, 33, 54, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 25, 26, 26, 26, 25, 25, 154, 18, 335, 167, 168, 335, 52, 143, 256, 255, 184, 258, 157, 107, 410, 411, 35, 412, 413, 414, 383, 415, 416, 168,
+  18, 417, 107, 107, 107, 107, 107, 107, 107, 310, 311, 312, 107, 107, 107, 260, 276, 302, 367, 418, 419, 345, 345, 345, 345, 347, 345, 345, 347, 415, 420, 302, 361, 309, 271, 254, 290, 99, 36, 36, 36,
+  33, 33, 36, 33, 36, 36, 33, 33, 36, 33, 36, 33, 33, 36, 36, 36, 36, 33, 33, 33, 37, 38, 36, 33, 33, 36, 33, 33, 33, 36, 36, 36, 36, 33, 33, 33, 36, 65, 66, 67, 0, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 25, 25, 26, 25, 25, 26, 26, 154, 18, 155, 376, 377, 18, 155, 153, 81, 77, 271, 421, 394, 107, 158, 44, 38, 422, 227, 50, 423, 424, 63, 154, 155,
+  425, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 158, 426, 327, 427, 26, 330, 345, 347, 345, 347, 347, 345, 347, 415, 428, 263, 429, 399, 35, 292, 77, 77, 369, 99, 36, 36, 36, 36,
+  33, 36, 36, 33, 33, 36, 36, 33, 36, 36, 36, 36, 36, 36, 33, 33, 33, 36, 34, 32, 36, 33, 36, 33, 36, 33, 33, 36, 36, 33, 33, 36, 36, 65, 66, 67, 0, 45, 0, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 26, 26, 26, 26, 28, 168, 335, 377, 18, 155, 153, 29, 98, 99, 292, 369, 430, 107, 158, 26, 431, 432, 413, 50, 33, 34, 29, 433, 411,
+  434, 406, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 126, 435, 367, 436, 437, 438, 329, 347, 345, 345, 347, 347, 415, 439, 360, 429, 440, 36, 36, 36, 36, 74, 441, 82, 74, 99, 36, 33,
+  33, 36, 36, 36, 36, 36, 36, 36, 33, 36, 33, 33, 36, 36, 33, 33, 36, 36, 34, 32, 33, 36, 33, 33, 33, 36, 33, 33, 33, 33, 33, 65, 66, 67, 45, 45, 0, 0, 45, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 26, 26, 26, 25, 25, 26, 28, 168, 18, 155, 153, 25, 32, 292, 82, 74, 441, 442, 147, 158, 25, 401, 443, 227, 50, 33, 34, 32, 39, 69, 444,
+  417, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 260, 445, 446, 447, 448, 398, 345, 347, 345, 347, 415, 428, 305, 263, 308, 36, 36, 36, 36, 33, 292, 369, 99, 149, 254, 99, 33, 36,
+  36, 36, 36, 36, 36, 33, 33, 33, 33, 36, 33, 36, 36, 33, 36, 33, 33, 39, 35, 36, 33, 36, 36, 33, 33, 33, 33, 33, 33, 36, 54, 0, 45, 45, 45, 45, 0, 45, 45, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 25, 26, 26, 142, 143, 142, 377, 18, 335, 52, 143, 32, 36, 36, 149, 254, 449, 106, 126, 160, 32, 360, 238, 173, 48, 100, 257, 450,
+  51, 377, 417, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 158, 426, 302, 407, 245, 451, 345, 345, 345, 345, 287, 263, 429, 349, 440, 36, 33, 36, 33, 36, 36, 292, 369, 255, 184, 191,
+  37, 38, 36, 36, 36, 33, 33, 36, 37, 41, 41, 38, 36, 36, 36, 36, 33, 33, 33, 33, 36, 33, 33, 36, 36, 33, 33, 36, 33, 36, 36, 33, 54, 0, 0, 0, 0, 45, 45, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 25, 142, 52, 167, 376, 167, 61, 61, 168, 18, 220, 32, 36, 33, 292, 271, 224, 107, 125, 127, 44, 336, 238, 56, 452, 251, 453, 454,
+  18, 18, 417, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 113, 111, 455, 276, 302, 302, 340, 286, 456, 419, 347, 348, 350, 264, 306, 33, 36, 33, 37, 38, 33, 74, 290, 255, 184, 253, 191,
+  100, 101, 36, 36, 36, 33, 36, 36, 39, 30, 30, 35, 33, 36, 36, 36, 33, 33, 33, 36, 36, 36, 36, 33, 33, 36, 33, 33, 36, 33, 33, 36, 54, 0, 0, 0, 45, 45, 0, 45, 45, 45, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 142, 167, 61, 153, 28, 153, 25, 25, 154, 18, 220, 44, 38, 36, 33, 149, 457, 458, 170, 34, 142, 459, 238, 460, 461, 419, 462, 463,
+  464, 465, 466, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 158, 25, 25, 426, 429, 467, 317, 468, 469, 451, 408, 409, 263, 429, 440, 33, 74, 290, 89, 176, 99, 292, 271, 470, 184, 184, 254,
+  441, 82, 33, 33, 36, 33, 36, 33, 33, 36, 33, 33, 36, 33, 33, 33, 33, 33, 33, 33, 36, 33, 36, 36, 36, 33, 33, 33, 33, 36, 36, 36, 54, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 26, 26, 28, 153, 25, 25, 25, 25, 26, 26, 28, 61, 153, 25, 32, 33, 33, 292, 271, 191, 37, 63, 154, 471, 249, 472, 31, 330, 331, 473, 474, 475,
+  406, 107, 107, 107, 107, 107, 107, 281, 282, 283, 107, 107, 107, 126, 160, 25, 426, 476, 403, 347, 477, 478, 479, 480, 429, 349, 440, 33, 33, 149, 184, 184, 150, 82, 74, 255, 184, 150, 77, 77, 82, 36,
+  36, 36, 33, 33, 33, 33, 36, 36, 33, 33, 36, 36, 33, 33, 33, 36, 33, 36, 33, 33, 36, 36, 33, 36, 33, 33, 33, 33, 36, 33, 42, 43, 45, 45, 0, 0, 0, 45, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 25, 26, 29, 30, 35, 36, 37, 38, 292, 82, 34, 29, 481, 482, 48, 36, 483, 344, 456, 484, 154, 18, 417,
+  107, 107, 107, 107, 107, 107, 296, 395, 298, 107, 107, 107, 107, 126, 485, 486, 328, 487, 488, 420, 264, 489, 349, 440, 36, 36, 33, 33, 292, 77, 271, 121, 38, 292, 490, 118, 207, 33, 33, 33, 33, 33, 33,
+  36, 33, 36, 33, 37, 38, 33, 36, 36, 36, 33, 33, 33, 33, 33, 33, 36, 36, 36, 36, 33, 33, 36, 36, 33, 33, 36, 33, 36, 54, 45, 45, 45, 0, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 29, 30, 35, 36, 33, 36, 34, 44, 38, 36, 34, 32, 491, 443, 482, 47, 492, 345, 320, 142, 377, 18, 475,
+  493, 197, 107, 107, 107, 107, 310, 311, 312, 107, 107, 107, 107, 494, 495, 399, 199, 119, 44, 496, 349, 440, 33, 33, 33, 36, 33, 33, 33, 36, 292, 85, 35, 33, 39, 31, 44, 38, 33, 33, 36, 36, 36, 36, 33,
+  36, 33, 34, 44, 38, 36, 36, 36, 36, 33, 36, 33, 36, 36, 36, 36, 36, 36, 33, 33, 36, 36, 36, 36, 36, 33, 33, 42, 70, 43, 45, 45, 0, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 32, 36, 33, 36, 37, 41, 63, 29, 35, 36, 34, 44, 450, 497, 498, 227, 499, 345, 320, 28, 168, 18, 18,
+  500, 501, 124, 107, 107, 107, 107, 107, 107, 107, 107, 107, 494, 502, 503, 33, 34, 71, 73, 44, 41, 38, 33, 36, 36, 37, 41, 38, 33, 33, 37, 41, 41, 38, 74, 201, 71, 101, 36, 36, 36, 36, 36, 33, 36, 36,
+  37, 63, 25, 44, 38, 33, 36, 33, 36, 33, 33, 36, 36, 36, 36, 36, 36, 33, 33, 36, 36, 33, 33, 33, 33, 33, 36, 36, 54, 45, 0, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 26, 26, 26, 26, 26, 26, 26, 26, 32, 36, 33, 36, 39, 30, 30, 35, 33, 36, 39, 30, 433, 376, 459, 238, 504, 505, 506, 507, 508, 61, 168,
+  509, 510, 405, 193, 406, 107, 494, 493, 511, 193, 406, 107, 219, 174, 512, 74, 201, 144, 119, 25, 29, 35, 33, 36, 33, 34, 25, 44, 38, 33, 100, 73, 26, 256, 255, 209, 223, 191, 33, 33, 33, 33, 33, 36,
+  33, 37, 63, 25, 29, 30, 35, 33, 33, 33, 33, 36, 33, 33, 33, 36, 33, 33, 36, 36, 36, 33, 36, 33, 33, 36, 33, 33, 36, 33, 54, 45, 45, 45, 45, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 25, 25, 26, 25, 25, 25, 26, 25, 32, 36, 33, 33, 36, 33, 36, 33, 33, 33, 36, 36, 34, 28, 513, 443, 514, 515, 516, 517, 518, 26, 28,
+  519, 520, 18, 56, 521, 193, 522, 500, 523, 18, 475, 524, 525, 61, 62, 83, 119, 29, 30, 30, 35, 36, 36, 36, 36, 39, 30, 30, 35, 37, 309, 85, 30, 210, 150, 77, 77, 82, 36, 33, 36, 36, 36, 36, 33, 39, 31,
+  25, 32, 33, 33, 36, 33, 33, 33, 33, 33, 33, 36, 36, 33, 33, 33, 36, 33, 36, 33, 33, 33, 36, 36, 33, 33, 33, 54, 0, 45, 45, 45, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 25, 25, 26, 25, 26, 26, 25, 26, 26, 26, 26, 32, 36, 33, 33, 36, 33, 36, 36, 33, 33, 36, 33, 39, 30, 35, 360, 526, 527, 528, 529, 530, 30, 31,
+  28, 61, 61, 62, 59, 60, 61, 531, 532, 533, 534, 58, 34, 25, 256, 201, 29, 35, 37, 38, 33, 36, 33, 33, 36, 36, 36, 36, 36, 39, 35, 74, 290, 441, 369, 99, 33, 33, 36, 33, 74, 99, 36, 33, 33, 33, 34, 25,
+  44, 41, 41, 38, 33, 33, 36, 33, 33, 33, 33, 33, 33, 33, 33, 33, 36, 36, 33, 36, 36, 36, 36, 36, 36, 36, 54, 45, 45, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 25, 25, 26, 26, 25, 25, 26, 26, 32, 36, 36, 37, 38, 33, 33, 36, 33, 33, 36, 33, 74, 99, 36, 491, 350, 429, 262, 432, 535, 33, 39,
+  30, 31, 25, 32, 37, 63, 25, 144, 536, 537, 207, 37, 63, 29, 210, 421, 69, 41, 63, 44, 38, 36, 37, 38, 33, 33, 33, 33, 33, 36, 36, 292, 271, 254, 441, 369, 99, 36, 36, 74, 255, 191, 33, 33, 33, 33, 39,
+  31, 25, 25, 26, 32, 33, 33, 36, 33, 33, 36, 33, 36, 33, 33, 33, 33, 33, 33, 33, 36, 33, 33, 36, 33, 33, 33, 54, 0, 0, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 26, 44, 38, 36, 39, 35, 36, 33, 33, 36, 33, 33, 36, 83, 538, 41, 97, 539, 540, 275, 541, 542, 543, 48,
+  36, 39, 31, 44, 68, 31, 29, 163, 544, 545, 44, 63, 25, 32, 83, 207, 39, 31, 25, 25, 32, 33, 39, 35, 36, 36, 33, 33, 33, 36, 36, 33, 292, 77, 82, 292, 82, 33, 36, 292, 77, 82, 33, 36, 33, 33, 36, 39, 30,
+  30, 30, 35, 33, 36, 36, 36, 36, 33, 36, 36, 36, 33, 36, 36, 33, 36, 36, 33, 33, 36, 36, 36, 33, 65, 67, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 32, 36, 33, 33, 33, 36, 33, 33, 36, 33, 36, 39, 30, 30, 210, 184, 209, 139, 69, 496, 443, 546,
+  305, 306, 39, 30, 35, 39, 547, 55, 548, 549, 143, 25, 25, 32, 39, 35, 37, 63, 112, 160, 32, 33, 36, 33, 36, 33, 33, 33, 33, 36, 36, 33, 33, 36, 36, 33, 33, 36, 36, 33, 36, 36, 36, 36, 36, 36, 37, 38,
+  33, 36, 33, 33, 33, 33, 36, 36, 33, 36, 36, 36, 36, 33, 33, 36, 36, 36, 33, 36, 65, 66, 66, 66, 66, 67, 0, 0, 0, 0, 0, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 44, 41, 38, 36, 36, 33, 33, 33, 36, 36, 46, 48, 33, 36, 292, 490, 200, 254, 550, 551, 275, 552,
+  363, 264, 305, 543, 47, 47, 380, 553, 389, 238, 169, 31, 25, 32, 33, 37, 68, 31, 280, 171, 35, 33, 33, 36, 36, 36, 36, 37, 41, 38, 33, 33, 36, 36, 36, 33, 36, 33, 36, 36, 36, 36, 33, 37, 41, 41, 63, 32,
+  33, 36, 33, 36, 33, 36, 36, 36, 36, 33, 33, 36, 36, 36, 33, 36, 33, 36, 36, 65, 67, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 26, 32, 36, 36, 36, 36, 37, 38, 36, 59, 554, 48, 36, 36, 34, 81, 271, 555, 335, 52, 556,
+  557, 558, 552, 559, 553, 553, 557, 560, 350, 295, 58, 34, 29, 35, 33, 34, 44, 68, 30, 35, 33, 36, 36, 36, 36, 36, 36, 34, 29, 35, 36, 33, 33, 33, 33, 37, 41, 41, 38, 33, 36, 36, 37, 68, 30, 30, 31, 44,
+  38, 33, 36, 36, 33, 33, 33, 36, 33, 33, 36, 33, 33, 33, 36, 36, 36, 36, 65, 67, 45, 0, 45, 0, 45, 45, 0, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 44, 41, 41, 41, 41, 63, 44, 41, 38, 49, 173, 47, 48, 39, 35, 292, 561, 562, 553, 563,
+  564, 153, 28, 565, 552, 560, 566, 173, 567, 535, 74, 201, 32, 37, 41, 63, 25, 44, 38, 33, 36, 36, 33, 33, 36, 33, 33, 34, 32, 33, 33, 36, 36, 36, 33, 34, 25, 29, 35, 36, 33, 36, 39, 35, 33, 33, 34, 25,
+  44, 41, 38, 36, 36, 33, 33, 33, 36, 36, 33, 33, 33, 36, 36, 36, 33, 36, 54, 0, 45, 45, 45, 0, 0, 45, 45, 45, 0, 0, 45, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 5, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 25, 25, 25, 25, 25, 25, 25, 142, 52, 52, 551, 181, 57, 182, 50, 33, 33, 37, 41, 275, 568, 427,
+  26, 26, 26, 26, 28, 156, 181, 57, 533, 569, 441, 545, 32, 39, 31, 25, 25, 29, 35, 33, 33, 33, 33, 36, 36, 36, 33, 39, 35, 36, 36, 36, 33, 36, 33, 39, 31, 44, 38, 36, 33, 36, 36, 36, 36, 33, 39, 30, 30,
+  30, 35, 33, 33, 36, 36, 33, 36, 33, 33, 33, 36, 36, 36, 33, 36, 36, 54, 45, 0, 45, 0, 0, 45, 0, 45, 0, 0, 0, 45, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 25, 26, 25, 25, 25, 26, 26, 26, 25, 25, 26, 26, 26, 26, 28, 168, 18, 335, 53, 36, 49, 460, 41, 41, 63, 25, 25, 29, 30, 203,
+  105, 105, 570, 31, 25, 44, 38, 149, 184, 121, 63, 44, 38, 39, 30, 30, 35, 36, 33, 36, 36, 33, 33, 36, 37, 41, 92, 103, 102, 103, 36, 36, 33, 36, 36, 39, 30, 35, 36, 37, 38, 36, 33, 33, 33, 33, 33, 36,
+  33, 33, 36, 36, 33, 33, 33, 36, 33, 33, 33, 33, 33, 36, 36, 33, 33, 54, 45, 45, 45, 0, 0, 45, 0, 45, 0, 0, 45, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 25, 25, 25, 28, 61, 168, 173, 48, 59, 571, 52, 143, 26, 29, 30, 35, 102, 115,
+  107, 107, 116, 95, 105, 160, 44, 309, 271, 258, 26, 29, 35, 33, 36, 33, 36, 102, 103, 36, 36, 33, 33, 37, 63, 25, 280, 114, 115, 239, 36, 33, 36, 36, 36, 33, 33, 33, 33, 34, 44, 38, 36, 33, 33, 36, 33,
+  36, 36, 36, 33, 36, 33, 33, 33, 36, 33, 33, 33, 36, 36, 33, 36, 33, 36, 54, 0, 45, 0, 45, 45, 0, 45, 0, 0, 0, 0, 45, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 5, 25, 25, 25, 25, 26, 25, 26, 26, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 154, 18, 173, 47, 572, 182, 220, 25, 32, 74, 290, 430,
+  107, 125, 124, 107, 107, 107, 126, 105, 91, 79, 145, 570, 35, 33, 33, 33, 36, 37, 573, 170, 33, 33, 33, 33, 34, 25, 112, 105, 106, 107, 239, 33, 36, 36, 33, 33, 33, 36, 37, 41, 63, 29, 35, 33, 36, 33,
+  33, 36, 37, 41, 38, 33, 33, 33, 36, 36, 33, 33, 36, 33, 36, 36, 33, 36, 36, 33, 54, 45, 45, 0, 45, 45, 0, 45, 45, 45, 0, 45, 0, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 25, 25, 25, 26, 26, 26, 25, 25, 25, 25, 25, 25, 25, 25, 154, 155, 168, 56, 58, 574, 153, 25, 32, 149, 184, 575, 576,
+  577, 430, 107, 107, 107, 107, 107, 126, 105, 106, 378, 38, 33, 33, 33, 33, 39, 35, 33, 33, 33, 36, 33, 34, 112, 106, 107, 107, 107, 239, 33, 33, 33, 36, 33, 33, 36, 39, 30, 30, 35, 36, 36, 33, 33, 33,
+  37, 63, 25, 32, 36, 33, 36, 36, 36, 33, 33, 33, 36, 36, 33, 36, 33, 65, 66, 67, 45, 45, 45, 45, 0, 0, 0, 45, 45, 45, 45, 45, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 25, 25, 26, 25, 26, 25, 26, 25, 25, 25, 25, 25, 25, 26, 29, 172, 169, 578, 58, 36, 34, 26, 25, 44, 309, 77, 82, 292, 271,
+  457, 458, 576, 458, 124, 107, 107, 107, 107, 126, 216, 103, 33, 36, 33, 36, 33, 33, 36, 33, 36, 36, 34, 280, 147, 107, 113, 136, 114, 87, 579, 41, 41, 41, 41, 41, 38, 33, 33, 33, 33, 33, 33, 36, 37, 63,
+  25, 26, 32, 33, 33, 33, 33, 33, 33, 36, 33, 36, 36, 36, 33, 65, 67, 45, 0, 0, 0, 45, 0, 0, 0, 0, 45, 45, 45, 45, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 14, 26, 26, 25, 26, 26, 26, 26, 25, 26, 25, 26, 25, 25, 25, 25, 25, 26, 32, 574, 62, 33, 33, 36, 39, 31, 25, 26, 44, 41, 38, 33, 292,
+  77, 82, 292, 82, 211, 107, 107, 107, 107, 107, 107, 239, 33, 33, 36, 36, 33, 33, 36, 36, 36, 36, 34, 112, 106, 107, 198, 30, 259, 138, 111, 25, 26, 26, 25, 29, 35, 36, 33, 33, 33, 33, 36, 36, 39, 31,
+  29, 30, 35, 33, 36, 36, 36, 36, 33, 33, 33, 33, 36, 36, 65, 67, 45, 45, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 26, 26, 26, 25, 26, 32, 34, 44, 41, 41, 38, 36, 39, 31, 25, 25, 26, 32, 33, 33,
+  36, 33, 74, 99, 580, 196, 197, 125, 576, 196, 581, 132, 33, 33, 36, 33, 37, 41, 41, 41, 38, 33, 34, 157, 107, 113, 132, 33, 33, 39, 31, 26, 26, 26, 25, 44, 38, 36, 33, 33, 36, 36, 33, 33, 36, 34, 32,
+  33, 33, 36, 33, 36, 33, 33, 33, 33, 36, 33, 36, 33, 54, 45, 45, 45, 45, 0, 0, 0, 0, 0, 45, 0, 45, 0, 45, 0, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 25, 26, 25, 26, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 25, 25, 26, 44, 63, 26, 25, 29, 35, 33, 36, 34, 26, 26, 26, 32, 36, 36,
+  33, 36, 292, 82, 292, 271, 575, 582, 255, 150, 85, 35, 33, 33, 33, 33, 39, 30, 30, 31, 32, 33, 34, 157, 113, 111, 32, 33, 33, 33, 34, 25, 26, 29, 30, 30, 35, 33, 36, 33, 33, 36, 36, 33, 36, 39, 35, 37,
+  41, 41, 41, 41, 41, 41, 38, 36, 33, 36, 36, 65, 67, 0, 45, 45, 45, 45, 0, 45, 0, 0, 0, 0, 45, 0, 0, 45, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 26, 25, 25, 25, 26, 25, 25, 25, 25, 25, 29, 30, 35, 33, 33, 36, 34, 26, 25, 25, 44, 38, 36,
+  36, 33, 33, 33, 36, 149, 191, 149, 150, 82, 33, 33, 36, 37, 41, 41, 38, 33, 33, 39, 35, 33, 39, 259, 274, 30, 69, 38, 36, 36, 34, 26, 25, 32, 33, 33, 33, 33, 36, 33, 33, 33, 36, 36, 36, 33, 33, 34, 25,
+  26, 26, 26, 26, 25, 44, 41, 41, 41, 41, 583, 3, 45, 0, 45, 45, 0, 45, 0, 0, 45, 0, 0, 45, 45, 0, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 26, 26, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 26, 26, 26, 26, 25, 32, 33, 33, 37, 41, 41, 63, 29, 30, 31, 26, 44, 41,
+  38, 33, 33, 37, 41, 79, 538, 79, 538, 41, 38, 33, 46, 584, 31, 29, 35, 36, 36, 33, 36, 36, 33, 36, 36, 36, 39, 35, 33, 36, 34, 25, 26, 32, 33, 33, 33, 36, 36, 33, 33, 33, 36, 36, 33, 33, 33, 34, 25, 25,
+  25, 25, 26, 25, 25, 25, 25, 25, 26, 25, 6, 0, 0, 0, 0, 0, 45, 0, 45, 45, 45, 45, 0, 45, 0, 45, 0, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 26, 25, 26, 26, 26, 25, 25, 25, 26, 26, 25, 25, 26, 26, 25, 25, 25, 25, 26, 32, 36, 33, 39, 31, 26, 25, 32, 46, 51, 52, 143, 25,
+  32, 33, 36, 34, 26, 26, 25, 26, 25, 26, 379, 47, 55, 173, 584, 35, 33, 36, 33, 33, 36, 36, 33, 37, 38, 37, 38, 36, 33, 33, 34, 25, 26, 32, 36, 33, 33, 36, 36, 36, 36, 33, 36, 36, 33, 33, 33, 34, 25, 26,
+  25, 25, 26, 25, 25, 26, 25, 25, 26, 25, 6, 45, 45, 45, 45, 45, 45, 0, 0, 45, 0, 0, 45, 45, 0, 0, 45, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 26, 25, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 26, 25, 26, 26, 26, 26, 25, 26, 44, 38, 36, 36, 39, 30, 30, 35, 59, 60, 168, 335,
+  52, 551, 38, 36, 34, 25, 25, 26, 25, 26, 142, 377, 18, 18, 56, 58, 36, 36, 33, 36, 33, 33, 36, 36, 34, 44, 63, 32, 36, 36, 33, 34, 25, 26, 32, 36, 33, 36, 33, 36, 33, 36, 33, 36, 36, 36, 36, 37, 63, 26,
+  26, 26, 26, 26, 26, 26, 25, 26, 25, 26, 25, 6, 0, 0, 0, 0, 45, 45, 0, 45, 45, 0, 0, 45, 0, 0, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 5, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26, 25, 32, 33, 33, 33, 36, 33, 33, 36, 162, 377, 155,
+  61, 376, 53, 36, 34, 25, 25, 26, 26, 25, 154, 18, 18, 155, 62, 36, 36, 33, 33, 33, 33, 33, 33, 36, 34, 25, 25, 32, 33, 33, 33, 39, 31, 26, 32, 36, 36, 33, 36, 36, 33, 33, 36, 36, 33, 33, 33, 34, 26, 26,
+  25, 25, 25, 25, 25, 25, 25, 26, 25, 26, 25, 6, 0, 45, 45, 45, 45, 0, 0, 45, 45, 0, 45, 45, 0, 0, 45, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 25, 25, 26, 26, 26, 25, 26, 26, 26, 26, 26, 26, 25, 25, 25, 25, 26, 26, 32, 33, 33, 33, 33, 36, 33, 36, 574, 168, 169, 30,
+  578, 58, 37, 63, 25, 25, 26, 26, 25, 28, 61, 61, 153, 32, 36, 36, 33, 36, 33, 33, 37, 41, 41, 63, 29, 30, 35, 36, 33, 36, 33, 34, 26, 32, 36, 36, 33, 33, 36, 36, 36, 36, 33, 33, 36, 33, 585, 25, 26, 25,
+  26, 26, 26, 25, 25, 25, 26, 25, 26, 25, 6, 45, 0, 0, 45, 0, 45, 0, 45, 0, 0, 45, 45, 0, 0, 45, 45, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 26, 26, 25, 26, 26, 44, 41, 41, 41, 41, 41, 38, 37, 63, 28, 156, 41, 41,
+  38, 34, 25, 25, 25, 26, 26, 25, 25, 26, 26, 26, 44, 38, 36, 36, 33, 33, 36, 39, 30, 30, 31, 32, 36, 36, 36, 36, 33, 36, 34, 25, 32, 36, 36, 36, 36, 36, 36, 36, 37, 41, 586, 586, 586, 587, 26, 26, 26,
+  25, 25, 25, 25, 25, 26, 25, 26, 588, 208, 9, 45, 0, 45, 0, 45, 45, 0, 0, 45, 45, 45, 45, 45, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 25, 26, 25, 32, 34, 25, 25, 25, 26, 26,
+  44, 63, 26, 26, 26, 25, 25, 26, 26, 26, 26, 26, 26, 44, 41, 41, 38, 37, 38, 33, 37, 38, 39, 35, 36, 36, 36, 36, 33, 36, 34, 25, 32, 36, 33, 33, 36, 33, 33, 36, 34, 25, 25, 25, 25, 26, 26, 26, 25, 26,
+  25, 26, 26, 25, 26, 25, 25, 6, 45, 45, 45, 45, 45, 0, 0, 0, 0, 45, 45, 0, 0, 45, 0, 45, 0, 0, 0, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 26, 25, 25, 26, 26, 26, 25, 26, 25, 25, 25, 25, 26, 25, 44, 63, 25, 26, 25, 25, 25,
+  25, 26, 25, 25, 26, 26, 26, 25, 25, 25, 25, 25, 25, 26, 26, 25, 32, 34, 32, 33, 34, 44, 38, 36, 36, 33, 36, 36, 36, 37, 63, 25, 44, 41, 41, 41, 41, 41, 38, 33, 34, 25, 25, 25, 25, 26, 26, 26, 26, 26,
+  25, 26, 26, 25, 25, 26, 26, 6, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 45, 45, 0, 45, 45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 26, 26, 25, 25, 25, 25, 26, 26, 25, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 25, 26, 26,
+  25, 25, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 25, 25, 29, 30, 69, 68, 35, 33, 39, 30, 35, 36, 33, 33, 36, 33, 36, 34, 26, 26, 25, 26, 26, 26, 25, 26, 44, 41, 63, 25, 25, 25, 25, 25, 589, 31, 25, 25,
+  26, 26, 25, 25, 25, 25, 25, 6, 45, 45, 45, 45, 45, 0, 45, 45, 45, 0, 45, 45, 0, 0, 45, 0, 0, 0, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 26, 25, 26, 26, 26,
+  25, 25, 26, 25, 25, 25, 25, 26, 26, 26, 26, 26, 25, 25, 44, 41, 63, 44, 41, 38, 36, 33, 36, 33, 36, 36, 36, 33, 33, 34, 26, 26, 25, 26, 25, 26, 25, 26, 26, 25, 26, 25, 26, 25, 25, 25, 32, 34, 26, 26,
+  25, 25, 26, 26, 25, 25, 25, 6, 0, 45, 0, 45, 45, 45, 0, 0, 0, 45, 45, 45, 45, 0, 0, 0, 45, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 25, 25, 25, 26, 26, 26, 26, 26, 26, 25, 26, 26, 25, 25, 25, 26, 26, 26, 26, 26, 25, 26, 26, 26, 26, 26, 26, 26, 26, 26,
+  25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 44, 41, 41, 38, 36, 33, 33, 33, 36, 36, 34, 26, 26, 25, 26, 25, 26, 26, 25, 25, 26, 26, 25, 26, 25, 25, 25, 32, 34, 26, 25,
+  26, 26, 25, 25, 25, 25, 25, 6, 45, 0, 45, 0, 45, 0, 0, 0, 45, 0, 45, 45, 0, 45, 45, 45, 0, 0, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 5, 25, 25, 26, 26, 26, 26, 25, 25, 26, 26, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 26,
+  25, 25, 25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26, 25, 32, 36, 33, 33, 33, 36, 33, 34, 26, 26, 25, 26, 25, 26, 26, 25, 25, 26, 25, 26, 29, 30, 30, 30, 35, 39, 31, 26,
+  25, 25, 25, 25, 25, 26, 26, 6, 45, 45, 45, 45, 45, 0, 45, 45, 0, 45, 0, 0, 0, 45, 0, 45, 0, 0, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 26, 26, 25, 25, 26, 26, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 26, 25, 25,
+  25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26, 25, 44, 41, 41, 41, 41, 41, 38, 34, 26, 26, 25, 26, 25, 26, 26, 25, 25, 26, 25, 26, 590, 591, 33, 33, 592, 593, 594, 26, 26,
+  26, 26, 26, 588, 208, 208, 9, 45, 45, 0, 0, 45, 0, 0, 0, 45, 45, 45, 0, 45, 45, 0, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 26, 26, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 26, 25, 26, 26, 25, 25, 26, 26, 25, 25, 26, 25,
+  25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 26, 26, 44, 63, 25, 26, 26, 26, 25, 26, 25, 26, 26, 26, 25, 26, 6, 166, 66, 66, 67, 0, 8, 208, 208, 208,
+  208, 208, 9, 45, 0, 45, 45, 0, 0, 0, 45, 45, 45, 0, 0, 45, 0, 0, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 25, 26, 26, 26, 26, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25, 25, 26, 26, 25, 26, 25,
+  26, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 26, 588, 208, 5, 26, 26, 26, 26, 26, 26, 6, 45, 0, 0, 0, 45, 0, 0, 0, 45, 0, 45,
+  45, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 45, 45, 0, 45, 0, 0, 0, 45, 0, 0, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 5, 26, 26, 25, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 25, 26, 25,
+  26, 26, 26, 25, 25, 25, 25, 25, 26, 26, 26, 25, 25, 25, 26, 26, 26, 25, 26, 26, 26, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 20, 2, 4, 208, 208, 208, 208, 208, 208, 9, 0, 45, 45, 45, 0, 0, 45, 45, 45,
+  0, 45, 0, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 45, 0, 45, 0, 45, 0, 0, 0, 45, 0, 45, 0, 45, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 5, 25, 25, 25, 25, 25, 588, 208, 208, 208, 5, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26,
+  26, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 45, 45, 45, 0, 0, 0, 45, 45, 0, 0, 45, 45, 0, 45,
+  0, 0, 45, 0, 0, 0, 45, 45, 0, 45, 45, 0, 0, 45, 45, 45, 45, 0, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 208, 9, 45, 0, 45, 8, 208, 208, 208, 208, 208, 208, 208, 208, 208, 208, 208,
+  208, 208, 5, 25, 25, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 26, 25, 26, 25, 26, 25, 25, 26, 26, 25, 6, 45, 0, 0, 0, 45, 0, 0, 45, 0, 45, 45, 45, 45, 45, 45, 0,
+  0, 0, 45, 0, 45, 45, 45, 45, 0, 45, 0, 45, 45, 45, 45, 0, 45, 45, 45, 45, 45, 0, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 45, 45, 0, 45, 0, 0, 0, 0, 45, 45, 0, 45, 45, 0, 0, 0, 45, 45, 7, 25, 25, 26,
+  25, 25, 25, 25, 25, 25, 26, 26, 26, 26, 588, 208, 5, 26, 25, 26, 25, 26, 26, 26, 25, 26, 26, 26, 25, 26, 25, 25, 26, 20, 2, 3, 45, 0, 0, 45, 0, 45, 45, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 45, 0, 0,
+  45, 0, 0, 45, 45, 45, 45, 45, 45, 45, 0, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 45, 0, 0, 0, 0, 45, 45, 0, 0, 0, 0, 45, 45, 45, 45, 45, 45, 7, 26, 26, 26,
+  25, 25, 25, 25, 25, 25, 26, 25, 26, 26, 6, 45, 7, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 26, 25, 25, 25, 26, 25, 6, 45, 45, 0, 45, 0, 45, 45, 45, 0, 45, 45, 45, 0, 45, 45, 0, 0, 45, 45, 0, 45,
+  0, 0, 45, 0, 45, 0, 45, 45, 0, 0, 0, 45, 45, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 45, 0, 0, 45, 45, 45, 45, 0, 45, 0, 0, 0, 45, 45, 45, 0, 45, 0, 7, 26, 26, 25,
+  26, 25, 25, 25, 25, 26, 25, 25, 26, 26, 6, 45, 7, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 25, 26, 26, 26, 25, 26, 20, 3, 45, 0, 45, 0, 0, 45, 45, 45, 0, 45, 45, 45, 45, 45, 0, 0, 0, 0, 0, 45,
+  45, 0, 45, 45, 45, 0, 45, 45, 0, 45, 0, 45, 0, 45, 45, 45, 0, 45, 45, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 45, 0, 45, 45, 0, 45, 45, 0, 0, 45, 45, 0, 7, 26, 26, 25, 26,
+  25, 25, 25, 25, 26, 25, 25, 26, 26, 6, 45, 7, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 26, 26, 25, 26, 25, 20, 3, 45, 45, 0, 0, 45, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 45, 0, 0, 0, 0, 45, 0,
+  45, 0, 45, 0, 45, 45, 0, 0, 0, 0, 0, 45, 45, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 45, 0, 0, 0, 45, 45, 45, 45, 45, 0, 0, 0, 45, 45, 45, 45, 0, 7, 26, 26, 25,
+  26, 25, 25, 25, 25, 26, 25, 25, 26, 26, 6, 45, 7, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 26, 25, 25, 25, 26, 25, 26, 26, 6, 45, 0, 45, 0, 0, 0, 45, 45, 45, 45, 45, 45, 45, 0, 0, 0, 0, 45, 45,
+  0, 0, 45, 0, 45, 45, 45, 45, 45, 45, 0, 45, 45, 0, 45, 0, 45, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 45, 45, 45, 45, 45, 0, 45, 0, 0, 0, 1, 2, 14, 25, 25, 26, 25,
+  26, 26, 26, 25, 26, 25, 26, 25, 25, 20, 2, 14, 25, 25, 25, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 26, 26, 26, 25, 26, 25, 25, 6, 0, 0, 0, 45, 45, 0, 0, 45, 0, 45, 45, 45, 45, 45, 0, 45, 45, 45, 45, 0,
+  0, 45, 0, 0, 0, 45, 45, 45, 0, 0, 45, 0, 0, 0, 0, 45, 45, 45, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 45, 45, 45, 0, 0, 45, 45, 0, 0, 0, 45, 0, 0, 0, 45, 45, 7, 25, 26, 25, 25, 26,
+  25, 25, 25, 26, 25, 26, 25, 26, 25, 26, 25, 25, 26, 26, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 26, 25, 25, 6, 0, 45, 0, 45, 45, 0, 0, 0, 45, 45, 45, 45, 0, 45, 45, 0, 45, 0, 0,
+  0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 0, 0, 0, 45, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 45, 45, 45, 0, 45, 45, 45, 45, 0, 0, 0, 1, 2, 2, 14, 25, 25, 26, 26, 25,
+  25, 25, 26, 26, 25, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 25, 26, 26, 25, 26, 26, 25, 26, 26, 25, 25, 25, 25, 25, 26, 25, 26, 26, 6, 45, 0, 45, 45, 0, 45, 0, 45, 45, 45, 0, 45, 0, 45, 45, 0, 0, 45,
+  0, 0, 0, 0, 45, 45, 45, 45, 0, 0, 45, 45, 0, 45, 45, 0, 0, 0, 45, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 45, 45, 45, 0, 0, 0, 0, 45, 0, 0, 45, 0, 45, 45, 7, 25, 26, 26, 25, 25, 26, 25, 26,
+  26, 25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 25, 26, 26, 25, 26, 25, 25, 26, 25, 26, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 6, 0, 0, 0, 0, 45, 45, 45, 45, 45, 0, 0, 0, 45, 45, 0, 45, 0, 0, 0,
+  0, 0, 0, 45, 45, 0, 45, 0, 45, 45, 0, 45, 45, 45, 0, 45, 45, 0, 0, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 45, 45, 45, 0, 45, 0, 45, 45, 45, 45, 0, 7, 25, 26, 26, 25, 26, 25, 26,
+  25, 25, 26, 25, 25, 26, 26, 25, 25, 26, 25, 25, 26, 25, 25, 26, 25, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 26, 26, 26, 25, 25, 25, 6, 45, 45, 0, 45, 0, 0, 45, 0, 45, 0, 0, 45, 0, 0, 0, 45, 45, 45,
+  0, 45, 0, 45, 0, 45, 45, 0, 45, 45, 45, 45, 45, 0, 0, 45, 45, 45, 45, 0, 0, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 45, 0, 45, 45, 0, 45, 0, 45, 0, 1, 2, 2, 14, 26, 25, 25, 26, 25, 26, 25, 25,
+  25, 26, 25, 25, 26, 26, 25, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 25, 25, 25, 6, 45, 0, 0, 0, 0, 45, 45, 0, 45, 0, 45, 0, 45, 0, 0, 45, 0, 0, 45,
+  45, 45, 0, 0, 45, 0, 45, 0, 0, 0, 0, 0, 45, 0, 45, 45, 45, 0, 45, 45, 45, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26,
+  25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 25, 26, 26, 25, 26, 25, 26, 26, 26, 25, 26, 26, 25, 26, 26, 25, 25, 26, 26, 25, 25, 25, 20, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 26, 26, 25, 26, 25, 26, 26, 26, 25, 25,
+  26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 25, 26, 26, 26, 26, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 25, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 14, 26, 26, 26, 26, 25, 26, 25, 26, 26, 26, 25, 25,
+  26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 26, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 26, 26, 25, 26, 26, 26, 25, 26, 26, 25, 25, 25,
+  26, 26, 26, 25, 25, 25, 26, 26, 25, 26, 26, 25, 26, 25, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 26, 26, 26, 26, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 26, 26, 26, 25, 25, 26, 26, 25, 25, 26, 26, 25,
+  26, 26, 25, 25, 26, 26, 25, 25, 26, 25, 25, 26, 26, 26, 26, 26, 25, 26, 26, 25, 25, 26, 26, 26, 26, 26, 26, 25, 25, 26, 26, 26, 26, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25,
+  25, 25, 26, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 25, 26, 26, 26, 25, 26, 26, 25, 25, 26, 26, 25, 26, 26, 25, 25, 26, 26, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 25, 25, 25, 25, 26, 26, 25, 25, 26, 26, 25, 25, 25,
+  25, 26, 25, 26, 25, 26, 25, 26, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 26, 25, 26, 26, 26, 25, 26, 25, 25, 26, 26, 25, 25, 25,
+  25, 25, 26, 26, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 26, 25, 26, 26, 26, 25, 26, 26, 25, 26, 26, 25, 26, 25,
+  25, 25, 26, 25, 26, 26, 26, 26, 25, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 26, 25, 26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 26, 26, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 26,
+  26, 25, 25, 25, 26, 26, 26, 25, 26, 25, 25, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 26, 25, 26, 26, 25, 26, 26, 25, 25, 26, 26, 26, 25, 26, 26, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 25, 25, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 25,
+  25, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26, 26, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 26, 26, 26, 25, 26, 26, 26, 25, 26, 26, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 25, 25, 26, 26, 26, 26, 26, 26, 25, 26, 25, 26, 25, 25, 25, 26,
+  26, 26, 25, 25, 25, 26, 26, 26, 25, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 26, 25, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26, 26, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 26, 25, 26, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 26, 25, 26,
+  25, 26, 26, 26, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 25, 25, 26, 25, 25, 25, 25, 26, 25, 25, 26, 25, 26, 26, 26, 26, 588, 208, 208, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 26, 26, 25, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26,
+  25, 26, 25, 25, 26, 26, 26, 26, 26, 25, 26, 25, 25, 26, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 25, 25, 25, 26, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 26, 26, 25, 26, 26, 25, 26, 25, 25, 25, 25, 25, 26,
+  25, 26, 25, 26, 25, 25, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 25, 25, 26, 25, 25, 25, 26, 25, 25, 25, 588, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 25, 25, 26, 25, 25, 25, 26, 26, 26, 26, 26, 25, 26,
+  25, 26, 26, 26, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 25, 26, 26, 25, 26, 26, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 26, 25, 25, 26, 25, 25, 25, 26, 26, 25, 25, 26, 25,
+  26, 26, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 25, 25, 26, 25, 25, 26, 26, 26, 25, 26, 25, 26, 26, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 26, 25, 26, 26, 26, 25, 25, 26, 26, 25, 25, 26, 25, 26, 25,
+  26, 26, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 25, 26, 26, 25, 25, 26, 26, 26, 25, 25, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 26, 25, 26, 25, 25, 25, 26, 25, 26, 26, 25, 26, 25, 25, 26, 25,
+  25, 25, 26, 25, 25, 25, 26, 25, 26, 25, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 26, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 25, 25, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 25, 25,
+  25, 25, 26, 26, 26, 25, 25, 26, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 25, 25, 25, 26, 26, 26, 25, 25, 25, 26, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25,
+  25, 25, 26, 26, 26, 26, 26, 25, 25, 25, 25, 25, 26, 26, 26, 26, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 26, 25, 26, 25, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 208, 5, 26, 26, 26, 26, 26, 26, 26, 25,
+  25, 26, 26, 25, 25, 25, 25, 25, 26, 26, 25, 25, 25, 25, 25, 26, 26, 25, 26, 26, 25, 25, 25, 26, 25, 25, 26, 26, 25, 26, 25, 26, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 208, 208, 5, 25, 26,
+  26, 26, 26, 26, 26, 26, 26, 25, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 26, 25, 25, 26, 25, 26, 25, 26, 25, 26, 25, 25, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25, 26, 26, 26, 26,
+  26, 26, 26, 26, 25, 25, 26, 26, 25, 25, 25, 26, 26, 25, 26, 25, 26, 26, 25, 25, 26, 26, 25, 26, 25, 25, 588, 208, 208, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 5, 25, 25, 25,
+  25, 25, 25, 25, 25, 588, 208, 208, 5, 25, 25, 26, 26, 25, 25, 25, 25, 26, 26, 26, 25, 25, 26, 25, 588, 208, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208,
+  208, 208, 208, 208, 208, 9, 0, 0, 7, 25, 25, 26, 26, 25, 25, 25, 26, 25, 25, 25, 26, 26, 25, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 7, 25, 25, 25, 25, 25, 25, 25, 26, 25, 25, 25, 25, 25, 25, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 208, 5, 26, 25, 25, 25, 25, 25, 25, 25, 26, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 208, 208, 208, 208, 208, 208, 208, 208, 208, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

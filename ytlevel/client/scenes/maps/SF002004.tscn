@@ -1,0 +1,3267 @@
+[gd_scene load_steps=93 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbooks03.glb" id="ext_1"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIclock03.glb" id="ext_10"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIdesk05.glb" id="ext_11"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIdesk06.glb" id="ext_12"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIdoor01_01.glb" id="ext_13"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIdoor01_02.glb" id="ext_14"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIframe04.glb" id="ext_15"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIfwpot03.glb" id="ext_16"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIfwpot04.glb" id="ext_17"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIgen02.glb" id="ext_18"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIgen03.glb" id="ext_19"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbook01.glb" id="ext_2"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIsafe01.glb" id="ext_20"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIpart01.glb" id="ext_21"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall01.glb" id="ext_22"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIscien01.glb" id="ext_23"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIsport01.glb" id="ext_24"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWItalk02.glb" id="ext_25"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWItalk03.glb" id="ext_26"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWItstair01.glb" id="ext_27"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02.glb" id="ext_28"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_02.glb" id="ext_29"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbook02.glb" id="ext_3"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_03.glb" id="ext_30"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_04.glb" id="ext_31"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_05.glb" id="ext_32"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_06.glb" id="ext_33"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_07.glb" id="ext_34"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwall02_08.glb" id="ext_35"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwat04.glb" id="ext_36"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwb01.glb" id="ext_37"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwb02.glb" id="ext_38"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWltdesk01.glb" id="ext_39"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbooks04_01.glb" id="ext_4"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWldesk01.glb" id="ext_40"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWldesk02.glb" id="ext_41"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCcabinet01.glb" id="ext_42"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_book01.glb" id="ext_43"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCboard01.glb" id="ext_44"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCboard02.glb" id="ext_45"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCboard03.glb" id="ext_46"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen03.glb" id="ext_47"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen16.glb" id="ext_48"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen17.glb" id="ext_49"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbooks04_02.glb" id="ext_5"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen49.glb" id="ext_50"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCspeaker01.glb" id="ext_51"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCframe03.glb" id="ext_52"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen33.glb" id="ext_53"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen34.glb" id="ext_54"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen37.glb" id="ext_55"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen39.glb" id="ext_56"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SCgen41.glb" id="ext_57"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SClamp01.glb" id="ext_58"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_sefire04.glb" id="ext_59"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIchest01.glb" id="ext_6"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_sefire02.glb" id="ext_60"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_sefire03.glb" id="ext_61"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_spiderline01.glb" id="ext_62"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_spiderline03.glb" id="ext_63"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_spiderline04.glb" id="ext_64"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIbook02_02.glb" id="ext_65"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIfan02.glb" id="ext_66"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwashWall05.glb" id="ext_67"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIclean01_02.glb" id="ext_68"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIclean01_01.glb" id="ext_69"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIchest02.glb" id="ext_7"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIclean01.glb" id="ext_70"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwashWall03.glb" id="ext_71"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIframe05.glb" id="ext_72"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIpart01_01.glb" id="ext_73"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIstool01.glb" id="ext_74"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwashWall01.glb" id="ext_75"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwashWall02.glb" id="ext_76"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwashWall04.glb" id="ext_77"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwater02.glb" id="ext_78"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIwater03.glb" id="ext_79"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIchest03.glb" id="ext_8"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWItalk01.glb" id="ext_80"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIstair02.glb" id="ext_81"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIdoor01_01_01.glb" id="ext_82"]
+[ext_resource type="PackedScene" path="res://assets/props/models/chair/c_SWIchair06.glb" id="ext_83"]
+[ext_resource type="PackedScene" path="res://assets/props/models/chair/c_SWIchair01.glb" id="ext_84"]
+[ext_resource type="PackedScene" path="res://assets/props/models/chair/c_SWIchair05a.glb" id="ext_85"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWAlobby01.glb" id="ext_86"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_spiderline01_mirrorx.glb" id="ext_87"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWIchest04.glb" id="ext_9"]
+[ext_resource type="Script" path="res://scripts/terrain_loader.gd" id="ext_88"]
+[ext_resource type="Script" path="res://scripts/fly_camera.gd" id="ext_89"]
+[ext_resource type="Script" path="res://scripts/map_editor.gd" id="ext_90"]
+[ext_resource type="Script" path="res://scripts/prop_lighting.gd" id="ext_91"]
+
+[sub_resource type="Environment" id="env_1"]
+background_mode = 1
+background_color = Color(0.6, 0.75, 0.9, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.7, 0.75, 1)
+ambient_light_energy = 0.6
+
+[node name="SF002004" type="Node3D"]
+script = ExtResource("ext_90")
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+script = ExtResource("ext_88")
+metadata/heightmap_path = "res://assets/maps/SF002004/SF002004.png"
+metadata/tilemap_path = "res://assets/maps/SF002004/SF002004_tilemap.png"
+metadata/tiles_dir = "res://assets/maps/SF002004/SF002004_tiles"
+metadata/visibility_path = "res://assets/maps/SF002004/SF002004_visibility.png"
+metadata/sun_direction = Vector3(-0.00999999, -0.91, -0.04)
+metadata/sun_diffuse = Color(0.8, 1, 1, 1)
+metadata/sun_ambient = Color(1, 1, 1, 1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("ext_89")
+transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 75, 60, -40)
+current = true
+fov = 60.0
+far = 500.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 50, 50, 50)
+light_energy = 0.8
+shadow_enabled = true
+shadow_opacity = 0.4
+
+[node name="Props" type="Node3D" parent="."]
+script = ExtResource("ext_91")
+metadata/sun_direction = Vector3(-0.00999999, -0.91, -0.04)
+metadata/sun_diffuse = Color(0.8, 1, 1, 1)
+metadata/sun_ambient = Color(1, 1, 1, 1)
+
+[node name="obj_a_SWIwall02_02_85" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -66)
+
+[node name="obj_a_SWIwall02_03_67" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 2e-06, -66)
+
+[node name="obj_a_SWIwall02_06_62" parent="Props" instance=ExtResource("ext_33")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -64)
+
+[node name="obj_a_SWIwall02_06_55" parent="Props" instance=ExtResource("ext_33")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -58)
+
+[node name="obj_a_SWIwall02_06_51" parent="Props" instance=ExtResource("ext_33")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -55)
+
+[node name="obj_a_SWIdoor01_01_61" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -45)
+
+[node name="obj_a_SWIdoor01_02_63" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -47)
+
+[node name="obj_a_SWIdoor01_01_113" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -31)
+
+[node name="obj_a_SWIdoor01_02_114" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -33)
+
+[node name="obj_a_SWIdoor01_01_118" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -61)
+
+[node name="obj_a_SWIwall02_07_99" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -35)
+
+[node name="obj_a_SWIwall02_07_53" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -49)
+
+[node name="obj_a_SWIdoor01_01_57" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -41)
+
+[node name="obj_a_SWIdoor01_02_66" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -43)
+
+[node name="obj_a_SWIwall02_07_82" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -53)
+
+[node name="obj_a_SWIwall02_07_83" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -39)
+
+[node name="obj_a_SWIwall02_124" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -44)
+
+[node name="obj_a_SWIwall02_125" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15, 0, -44)
+
+[node name="obj_a_SWIwall02_126" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -44)
+
+[node name="obj_a_SWIwall02_05_132" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, 0, -46)
+
+[node name="obj_a_SWIwall02_05_136" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, 0, -55)
+
+[node name="obj_a_SWIwall02_05_140" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, -1e-06, -50.5)
+
+[node name="obj_a_SWIwall02_86" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4, 0, -58)
+
+[node name="obj_a_SWIwall02_87" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -58)
+
+[node name="obj_a_SWIwall02_88" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10, 0, -58)
+
+[node name="obj_a_SWIwall02_58" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13, 0, -58)
+
+[node name="obj_a_SWIwall02_89" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0, -44)
+
+[node name="obj_a_SWIwall02_90" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 5, 0, -44)
+
+[node name="obj_a_SWIwall02_91" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -44)
+
+[node name="obj_a_SWIwall02_92" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10, 0, -44)
+
+[node name="obj_a_SWIwall02_93" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13, 0, -44)
+
+[node name="obj_a_SWIwall02_05_98" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, 0, -32)
+
+[node name="obj_a_SWIwall02_05_100" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, 0, -41)
+
+[node name="obj_a_SWIwall02_101" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -30)
+
+[node name="obj_a_SWIwall02_102" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15, 0, -30)
+
+[node name="obj_a_SWIwall02_103" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -30)
+
+[node name="obj_a_SWIwall02_104" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0, -30)
+
+[node name="obj_a_SWIwall02_05_120" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 4, 0, -36.5)
+
+[node name="obj_a_SWIwall02_07_150" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -54)
+
+[node name="obj_a_SWIwall02_07_151" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -50)
+
+[node name="obj_a_SWIdoor01_01_153" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -58)
+
+[node name="obj_a_SWIdoor01_01_154" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -48)
+
+[node name="obj_a_SWIdoor01_01_156" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -44)
+
+[node name="obj_a_SWIdoor01_01_157" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -34)
+
+[node name="obj_a_SWIwall02_07_160" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -40)
+
+[node name="obj_a_SWIwall02_07_161" parent="Props" instance=ExtResource("ext_34")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -36)
+
+[node name="obj_a_SWIwall02_03_197" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 61, 0, -25)
+
+[node name="obj_a_SWIwall02_03_194" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -25)
+
+[node name="obj_a_SWIwall02_03_170" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -28)
+
+[node name="obj_a_SWIwall02_03_96" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -30)
+
+[node name="obj_a_SWIwall02_03_97" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -44)
+
+[node name="obj_a_SWIwall02_03_95" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4, 0, -44)
+
+[node name="obj_a_SWIwall02_03_106" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4, 0, -58)
+
+[node name="obj_a_SWIdoor01_01_134" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -34)
+
+[node name="obj_a_SWIdoor01_02_195" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -32)
+
+[node name="obj_a_SWIdoor01_01_171" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -40)
+
+[node name="obj_a_SWIdoor01_01_238" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -49)
+
+[node name="obj_a_SWIdoor01_01_239" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -49)
+
+[node name="obj_a_SWIdoor01_01_243" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -54)
+
+[node name="obj_a_SWIwall02_03_258" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -72)
+
+[node name="obj_a_SWIwall02_03_259" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 69, 0, -72)
+
+[node name="obj_a_SWIdoor01_01_303" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -31)
+
+[node name="obj_a_SWIdoor01_01_304" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -37)
+
+[node name="obj_a_SWIdoor01_01_305" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -46)
+
+[node name="obj_a_SWIdoor01_01_306" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -51)
+
+[node name="obj_a_SWIwall02_309" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -26)
+
+[node name="obj_a_SWIwall02_310" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -23)
+
+[node name="obj_a_SWIwall02_316" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -54)
+
+[node name="obj_a_SWIwall02_317" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -57)
+
+[node name="obj_a_SWIwall02_02_311" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -22)
+
+[node name="obj_a_SWIwall02_02_336" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -36)
+
+[node name="obj_a_SWIwall02_02_155" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -36)
+
+[node name="obj_a_SWIwall02_337" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, 0, -36)
+
+[node name="obj_a_SWIwall02_338" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 80, 0, -36)
+
+[node name="obj_a_SWIwall02_339" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 83, -2e-06, -36)
+
+[node name="obj_a_SWIwall02_340" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -36)
+
+[node name="obj_a_SWIwall02_02_342" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -50)
+
+[node name="obj_a_SWIwall02_02_344" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -50)
+
+[node name="obj_a_SWIwall02_02_345" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -36)
+
+[node name="obj_a_SWIwall02_347" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 80, 0, -36)
+
+[node name="obj_a_SWIwall02_348" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 82, 0, -36)
+
+[node name="obj_a_SWIwall02_350" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88, 0, -36)
+
+[node name="obj_a_SWIwall02_351" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 90, 0, -36)
+
+[node name="obj_a_SWIwall02_02_343" parent="Props" instance=ExtResource("ext_29")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -36)
+
+[node name="obj_a_SWIwall02_352" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, 0, -50)
+
+[node name="obj_a_SWIwall02_353" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 80, 0, -50)
+
+[node name="obj_a_SWIwall02_05_370" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -47.5)
+
+[node name="obj_a_SWIwall02_05_371" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -43.5)
+
+[node name="obj_a_SWIwall02_05_372" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -39.5)
+
+[node name="obj_a_SWIwall02_380" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83, 0, -50)
+
+[node name="obj_a_SWIwall02_381" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 80, 0, -50)
+
+[node name="obj_a_SWIwall02_03_322" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 76, 0, -50)
+
+[node name="obj_a_SWIwall02_05_387" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -57.5)
+
+[node name="obj_a_SWIwall02_05_388" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -53.5)
+
+[node name="obj_a_SWIwall02_03_397" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -28)
+
+[node name="obj_a_SWIdoor01_02_398" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -38)
+
+[node name="obj_a_SWIdoor01_02_399" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -47)
+
+[node name="obj_a_SWIdoor01_02_400" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -52)
+
+[node name="obj_a_SWItstair01_302" parent="Props" instance=ExtResource("ext_27")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 14.2, -2e-06, -58)
+
+[node name="obj_a_SWltdesk01_401" parent="Props" instance=ExtResource("ext_39")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11.5, 0.2, -56.7)
+
+[node name="obj_a_SWldesk01_432" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -53.4)
+
+[node name="obj_a_SWldesk01_444" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -51.4)
+
+[node name="obj_a_SWldesk01_445" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -51.4)
+
+[node name="obj_a_SWldesk01_447" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -49.4)
+
+[node name="obj_a_SWldesk01_448" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -49.4)
+
+[node name="obj_a_SWIbook02_450" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 17.8, 0, -44.3)
+
+[node name="obj_a_SWIwb01_451" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14.4, 0, -44)
+
+[node name="obj_a_SWIchest01_452" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 6, 0, -44.3)
+
+[node name="obj_a_SWIframe04_453" parent="Props" instance=ExtResource("ext_15")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6, 0, -44.25)
+
+[node name="obj_a_SWIsafe01_454" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 13, 0, -45.35)
+
+[node name="obj_a_SWIsafe01_455" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -45.35)
+
+[node name="obj_a_SWIsafe01_456" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11, 0, -45.35)
+
+[node name="obj_a_SWIsafe01_457" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 10, 0, -45.35)
+
+[node name="obj_a_SWIsafe01_458" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0, -45.35)
+
+[node name="obj_a_SWIwb02_459" parent="Props" instance=ExtResource("ext_38")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 7.1, 0, -44.4)
+
+[node name="obj_a_SWldesk01_433" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -53.4)
+
+[node name="obj_a_SWldesk01_438" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -47.4)
+
+[node name="obj_a_SWldesk01_460" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -47.4)
+
+[node name="obj_a_SWIwall02_03_130" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 18, 0, -30)
+
+[node name="obj_a_SWIwall02_03_131" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -30)
+
+[node name="obj_a_SWIbook01_476" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -51)
+
+[node name="obj_a_SWIbook01_477" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -49.85)
+
+[node name="obj_a_SWIgen02_478" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(-0.999999, 0, -0.001533, 0, 1, -0, 0.001533, -0, -0.999999, 17.6, 1.25, -49.9)
+
+[node name="obj_a_SWIgen02_479" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(-0.999999, 0, -0.001533, 0, 1, -0, 0.001533, -0, -0.999999, 17.6, 1.25, -53.05)
+
+[node name="obj_a_SWIbook01_162" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -53)
+
+[node name="obj_a_SWIbook01_475" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -54.15)
+
+[node name="obj_a_SWldesk01_434" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -53.4)
+
+[node name="obj_a_SWldesk01_435" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -51.4)
+
+[node name="obj_a_SWldesk01_436" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 1e-06, -49.4)
+
+[node name="obj_a_SWldesk01_437" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -47.4)
+
+[node name="obj_a_SWldesk01_440" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -53.4)
+
+[node name="obj_a_SWldesk01_441" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -51.4)
+
+[node name="obj_a_SWldesk01_443" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -49.4)
+
+[node name="obj_a_SWldesk01_446" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 1e-06, -47.4)
+
+[node name="obj_a_SWItalk02_480" parent="Props" instance=ExtResource("ext_25")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.7, 1, -43.95)
+
+[node name="obj_a_SWItstair01_1" parent="Props" instance=ExtResource("ext_27")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 14.25, 0, -44)
+
+[node name="obj_a_SWltdesk01_129" parent="Props" instance=ExtResource("ext_39")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11.5, 0.2, -42.7)
+
+[node name="obj_a_SWldesk01_481" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -39.5)
+
+[node name="obj_a_SWldesk01_482" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -39.5)
+
+[node name="obj_a_SWldesk01_483" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -39.5)
+
+[node name="obj_a_SWldesk01_484" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -39.5)
+
+[node name="obj_a_SWldesk01_485" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -37.5)
+
+[node name="obj_a_SWldesk01_486" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -37.5)
+
+[node name="obj_a_SWldesk01_487" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -37.5)
+
+[node name="obj_a_SWldesk01_488" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -37.5)
+
+[node name="obj_a_SWldesk01_489" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -35.5)
+
+[node name="obj_a_SWldesk01_490" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -35.5)
+
+[node name="obj_a_SWldesk01_491" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -35.5)
+
+[node name="obj_a_SWldesk01_492" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -35.5)
+
+[node name="obj_a_SWldesk01_494" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -33.5)
+
+[node name="obj_a_SWldesk01_495" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -33.5)
+
+[node name="obj_a_SWldesk01_496" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -33.5)
+
+[node name="obj_a_SWldesk01_497" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -33.5)
+
+[node name="obj_a_SWIbook01_513" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -39)
+
+[node name="obj_a_SWIbook01_514" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 17.7, 0, -40.1)
+
+[node name="obj_a_SWIbook01_515" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -36.5)
+
+[node name="obj_a_SWIbook01_516" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.7, 0, -35.35)
+
+[node name="obj_a_SWIbook02_517" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 17.6, 0, -30.25)
+
+[node name="obj_a_SWIsafe01_519" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 13, 0, -31.25)
+
+[node name="obj_a_SWIsafe01_520" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -31.25)
+
+[node name="obj_a_SWIsafe01_521" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11, 0, -31.25)
+
+[node name="obj_a_SWIsafe01_518" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 10, 0, -31.25)
+
+[node name="obj_a_SWIwb01_522" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14.2, 0, -30)
+
+[node name="obj_a_SWIsafe01_523" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0, -31.25)
+
+[node name="obj_a_SWIwb02_524" parent="Props" instance=ExtResource("ext_38")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 7, 0, -30.25)
+
+[node name="obj_a_SWIchest01_525" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 6, 0, -30.25)
+
+[node name="obj_a_SWItalk02_526" parent="Props" instance=ExtResource("ext_25")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.75, 1, -29.95)
+
+[node name="obj_a_SWIgen02_527" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(-1, 0, -0.000767, 0, 1, -0, 0.000767, -0, -1, 17.56, 1.22, -35.31)
+
+[node name="obj_a_SWIgen02_528" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(-1, 0, -0.000767, 0, 1, -0, 0.000767, -0, -1, 17.65, 1.22, -39)
+
+[node name="obj_a_SWIwall02_05_21" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 35, 0, -50)
+
+[node name="obj_a_SWIwall02_05_22" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 39, 0, -50)
+
+[node name="obj_a_SWIwall02_05_23" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 43, 0, -50)
+
+[node name="obj_a_SWIwat04_411" parent="Props" instance=ExtResource("ext_36")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 68.7, 0, -48.9)
+
+[node name="obj_a_SWIwb01_549" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 68.6, 0, -47.7)
+
+[node name="obj_a_SWIfwpot04_548" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 64.6, 0, -47.7)
+
+[node name="obj_a_SWIclock03_3" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 4.3, 0, -53.75)
+
+[node name="obj_a_SWIclock03_562" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 4.4, 0, -39.75)
+
+[node name="obj_a_SWIwall02_03_362" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -64)
+
+[node name="obj_a_SWIwall02_363" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -64)
+
+[node name="obj_a_SWIwall02_364" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 82, 0, -64)
+
+[node name="obj_a_SWIwall02_256" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -64)
+
+[node name="obj_a_SWIwall02_266" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 80, 0, -22)
+
+[node name="obj_a_SWIwall02_312" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83, 0, -22)
+
+[node name="obj_a_SWIwall02_313" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 86, 0, -22)
+
+[node name="obj_a_SWIwall02_319" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89, 0, -22)
+
+[node name="obj_a_SWIwall02_05_323" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -33.5)
+
+[node name="obj_a_SWIwall02_05_325" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -29.5)
+
+[node name="obj_a_SWIwall02_05_326" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -25.5)
+
+[node name="obj_a_SWIwall02_03_327" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 90, 0, -22)
+
+[node name="obj_a_SWIwall02_05_24" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 0, -50)
+
+[node name="obj_a_SWIwall02_03_68" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -50)
+
+[node name="obj_a_SWIwall02_75" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -49)
+
+[node name="obj_a_SWIwall02_292" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -46)
+
+[node name="obj_a_SWIwall02_03_294" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 50, 0, -36)
+
+[node name="obj_a_SWIwall02_409" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -40)
+
+[node name="obj_a_SWIchest04_428" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 49.6, 0, -40)
+
+[node name="obj_a_SWIwall02_05_740" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 90, 0, -61.5)
+
+[node name="obj_a_SCspeaker01_743" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, -0, -0.707107, -0, -0.707107, 49.6, 0, -49.4)
+
+[node name="obj_a_SCspeaker01_744" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(0.707106, 0, 0.707107, 0, 1, -0, -0.707107, -0, 0.707106, 49.4, 0, -36.4)
+
+[node name="obj_a_SCcabinet01_746" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -48.0001)
+
+[node name="obj_a_SCcabinet01_747" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -46.9501)
+
+[node name="obj_a_SCspeaker01_742" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, -0, -0.707107, -0, -0.707107, 18, 0, -57.7)
+
+[node name="obj_a_SCspeaker01_750" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(-0.707106, 0, -0.707107, 0, 1, -0, 0.707107, -0, -0.707106, 4.65, 0, -57.6)
+
+[node name="obj_a_SCspeaker01_751" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, -0, -0.707107, -0, -0.707107, 18, 0, -43.6)
+
+[node name="obj_a_SCspeaker01_752" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(-0.707106, 0, -0.707107, 0, 1, -0, 0.707107, -0, -0.707106, 4.6, 0, -43.6)
+
+[node name="obj_a_SWIwall02_03_773" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 90, 0, -50)
+
+[node name="obj_a_SWIfwpot03_777" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(2.0736, 0, -0, 0, 2.0736, -0, -0, -0, 2.0736, 48.05, 0, -48.3)
+
+[node name="obj_a_SWIfwpot04_788" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60.5, 0, -28.3)
+
+[node name="obj_a_SWIfwpot04_789" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.44, 0, -0, 0, 1.44, -0, -0, -0, 1.44, 50.1, 0, -25.3)
+
+[node name="obj_a_SWIfwpot03_810" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.2, 0, -0, 0, 1.2, -0, -0, -0, 1.2, 12.9, 0, -30)
+
+[node name="obj_a_SCcabinet01_811" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 5.5, 0, -44)
+
+[node name="obj_a_SCcabinet01_812" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 5.5, 0, -58)
+
+[node name="obj_a_SWIfwpot04_809" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13, 0, -44)
+
+[node name="obj_a_SWIchest02_813" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 6, 0, -57.8)
+
+[node name="obj_a_SCgen49_814" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0.8, -57)
+
+[node name="obj_a_SCgen49_815" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6.35, 1, -30)
+
+[node name="obj_a_SWIfwpot03_816" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.4641, 0, -0, 0, 1.4641, -0, -0, -0, 1.4641, 6.9, 0, -29.9)
+
+[node name="obj_a_SCgen17_817" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -51.1)
+
+[node name="obj_a_SCgen16_818" parent="Props" instance=ExtResource("ext_48")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 21.5, 0.5, -65.9)
+
+[node name="obj_a_SCgen17_71" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 20.3, 0, -66)
+
+[node name="obj_a_SCgen17_822" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -37)
+
+[node name="obj_a_SWIfwpot04_823" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(2.0736, 0, -0, 0, 2.0736, -0, -0, -0, 2.0736, 25.3, 0, -28)
+
+[node name="obj_a_SCgen17_824" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 48.3, 0, -36)
+
+[node name="obj_a_SCgen17_825" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16.9, 0, -58)
+
+[node name="obj_a_SCgen17_826" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16.9, 0, -44)
+
+[node name="obj_a_SWIfwpot04_827" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.331, 0, -0, 0, 1.331, -0, -0, -0, 1.331, 59.6, 0, -25.2)
+
+[node name="obj_a_SCgen17_829" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -33.1)
+
+[node name="obj_a_SCgen16_832" parent="Props" instance=ExtResource("ext_48")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 64.1, 0.5, -49)
+
+[node name="obj_a_SCgen17_541" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62.8, 0, -49)
+
+[node name="obj_a_SWIfwpot03_836" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(2.0736, 0, -0, 0, 2.0736, -0, -0, -0, 2.0736, 61.3, 0, -47.2)
+
+[node name="obj_a_SCgen16_837" parent="Props" instance=ExtResource("ext_48")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 72.5, 0.5, -72)
+
+[node name="obj_a_SCgen17_261" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 71, 0, -72)
+
+[node name="obj_a_SWIfwpot04_839" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 74.2999, 0, -70.8)
+
+[node name="obj_a_SCgen17_840" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 69, 0, -57)
+
+[node name="obj_a_SWIfwpot04_843" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 38.5, 0, -28.3)
+
+[node name="obj_a_SWIfwpot04_844" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48.9, 0, -35)
+
+[node name="obj_a_SWIfwpot04_846" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48.9, 0, -28.1)
+
+[node name="obj_a_SWIfwpot04_69" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 23.7, 0, -64.8)
+
+[node name="obj_a_SCgen17_830" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -48.1)
+
+[node name="obj_a_SCgen17_871" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -62.5)
+
+[node name="obj_a_SClamp01_874" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 21, 0, -66)
+
+[node name="obj_a_SWIdoor01_01_54" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -55)
+
+[node name="obj_a_SClamp01_5" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -62)
+
+[node name="obj_a_SClamp01_876" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 18, 0, -56)
+
+[node name="obj_a_SClamp01_877" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -46)
+
+[node name="obj_a_SClamp01_880" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 24.97, -1e-06, -50.5)
+
+[node name="obj_a_SClamp01_883" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 25, 0, -39)
+
+[node name="obj_a_SClamp01_878" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -42)
+
+[node name="obj_a_SClamp01_884" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -32)
+
+[node name="obj_a_SWIwall02_06_59" parent="Props" instance=ExtResource("ext_33")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -61)
+
+[node name="obj_a_SClamp01_875" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 22, 0, -30)
+
+[node name="obj_a_SClamp01_881" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 31, 0, -28)
+
+[node name="obj_a_SClamp01_886" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 0, -27.96)
+
+[node name="obj_a_SClamp01_887" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 56, 0, -25.06)
+
+[node name="obj_a_SClamp01_889" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 64.6, 0, -49)
+
+[node name="obj_a_SClamp01_890" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69.4, 0, -27.99)
+
+[node name="obj_a_SClamp01_891" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 76, 0, -33)
+
+[node name="obj_a_SClamp01_892" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 76, 0, -39)
+
+[node name="obj_a_SClamp01_893" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 76, 0, -48)
+
+[node name="obj_a_SClamp01_894" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 76, 0, -53)
+
+[node name="obj_a_SClamp01_895" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 69, 0, -52)
+
+[node name="obj_a_SClamp01_896" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 69, 0, -60)
+
+[node name="obj_a_SClamp01_897" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(2e-06, 0, -1, 0, 1, -0, 1, -0, 2e-06, 72, 0, -72)
+
+[node name="obj_a_SClamp01_888" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 50, 0, -38)
+
+[node name="obj_a_SClamp01_898" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 50, 0, -45)
+
+[node name="obj_a_SClamp01_899" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 49, 0, -36)
+
+[node name="obj_a_SClamp01_900" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -28)
+
+[node name="obj_a_SWIwall02_03_4" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -50)
+
+[node name="obj_a_SWIwall02_05_6" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-2e-06, 0, 1, 0, 1, -0, -1, -0, -2e-06, 27, 0, -50)
+
+[node name="obj_a_SWIwall02_05_7" parent="Props" instance=ExtResource("ext_32")]
+transform = Transform3D(-2e-06, 0, 1, 0, 1, -0, -1, -0, -2e-06, 31, 0, -50)
+
+[node name="obj_a_SWIwall02_03_10" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 25, 0, -36)
+
+[node name="obj_a_SWIwall02_11" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -46)
+
+[node name="obj_a_SWIwall02_17" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -40)
+
+[node name="obj_a_SWIwall02_18" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -37)
+
+[node name="obj_a_SWIdoor01_01_19" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 26, 0, -36)
+
+[node name="obj_a_SWIdoor01_01_20" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 29, 0, -36)
+
+[node name="obj_a_SWIdoor01_01_26" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 45, 0, -36)
+
+[node name="obj_a_SWIdoor01_01_27" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 48, 0, -36)
+
+[node name="obj_a_SWIdoor01_02_28" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 47, 0, -36)
+
+[node name="obj_a_SWIdoor01_02_33" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 28, 0, -36)
+
+[node name="obj_a_SWIwall02_301" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 35, 0, -36)
+
+[node name="obj_a_SWIwall02_367" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 38, 0, -36)
+
+[node name="obj_a_SWIwall02_297" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 41, 0, -36)
+
+[node name="obj_a_SWIwall02_378" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 44, 0, -36)
+
+[node name="obj_a_SClamp01_391" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, -2e-06, -36)
+
+[node name="obj_a_SClamp01_395" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 38, 0, -36.06)
+
+[node name="obj_a_SWIwall02_293" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -43)
+
+[node name="obj_a_SWIdesk05_403" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -40)
+
+[node name="obj_a_SWIdesk05_405" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -40)
+
+[node name="obj_a_SWIdesk05_412" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -40)
+
+[node name="obj_a_SWIdesk05_415" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -40)
+
+[node name="obj_a_SWIdesk05_416" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -45)
+
+[node name="obj_a_SWIdesk05_417" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -45)
+
+[node name="obj_a_SWIdesk05_423" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -45)
+
+[node name="obj_a_SWIdesk05_424" parent="Props" instance=ExtResource("ext_11")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -45)
+
+[node name="obj_a_SCgen34_633" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 28.8, 0, -42.45)
+
+[node name="obj_a_SWIdesk06_402" parent="Props" instance=ExtResource("ext_12")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 29, 0, -42)
+
+[node name="obj_a_SCgen37_634" parent="Props" instance=ExtResource("ext_55")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25.6, 0, -37)
+
+[node name="obj_a_SCgen39_635" parent="Props" instance=ExtResource("ext_56")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 26.5, 0, -38.6)
+
+[node name="obj_a_SCboard03_16" parent="Props" instance=ExtResource("ext_46")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 25, 0, -43)
+
+[node name="obj_a_SWIwall02_636" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -43)
+
+[node name="obj_a_SWIchest01_639" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 25.3, 0, -48)
+
+[node name="obj_a_SWItalk02_640" parent="Props" instance=ExtResource("ext_25")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 26.2, 1, -48)
+
+[node name="obj_a_SWIbook02_644" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 49.8, 0, -46.1499)
+
+[node name="obj_a_SCgen39_553" parent="Props" instance=ExtResource("ext_56")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 45.2, 0, -36.7)
+
+[node name="obj_a_SWIchest02_554" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 44.75, 0, -36.3)
+
+[node name="obj_a_SWIchest02_555" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 44, 0, -36.3)
+
+[node name="obj_a_SWIchest02_556" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 43.25, 0, -36.3)
+
+[node name="obj_a_SWIscien01_557" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40.6, 0, -36.3)
+
+[node name="obj_a_SWIscien01_558" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39.75, 0, -36.3)
+
+[node name="obj_a_SWIscien01_559" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 38.8, 0, -36.3)
+
+[node name="obj_a_SWIscien01_560" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.87, 0, -36.3)
+
+[node name="obj_a_SWIbook02_645" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 38, 0, -36.3)
+
+[node name="obj_a_SWIbook02_646" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 35.65, 0, -36.3)
+
+[node name="obj_a_SWIbook01_561" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 32.9, 0, -36.3)
+
+[node name="obj_a_SWIbook01_647" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 31.75, 0, -36.3)
+
+[node name="obj_a_SCgen17_649" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -36)
+
+[node name="obj_a_SCgen17_701" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48.1, 0, -36)
+
+[node name="obj_a_SWIwb02_648" parent="Props" instance=ExtResource("ext_38")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 49.3, 0, -37.9)
+
+[node name="obj_a_SWIwb01_702" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 48.9, 0, -37.1)
+
+[node name="obj_a_SCboard02_703" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 49.9, 1.2, -41.4)
+
+[node name="obj_a_SWIclock03_734" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 37.98, 0, -49.7)
+
+[node name="obj_a_SWItstair01_14" parent="Props" instance=ExtResource("ext_27")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 86, 0, -64)
+
+[node name="obj_a_SWItstair01_15" parent="Props" instance=ExtResource("ext_27")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 86, 2e-06, -50)
+
+[node name="obj_a_SWltdesk01_357" parent="Props" instance=ExtResource("ext_39")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83.5, 0.2, -62.7)
+
+[node name="obj_a_SWldesk01_375" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -59.3)
+
+[node name="obj_a_SWldesk01_384" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, -2e-06, -59.3)
+
+[node name="obj_a_SWldesk01_386" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 2e-06, -57.3)
+
+[node name="obj_a_SWldesk01_390" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -57.3)
+
+[node name="obj_a_SWldesk01_565" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 2e-06, -55.3)
+
+[node name="obj_a_SWldesk01_566" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -55.3)
+
+[node name="obj_a_SWldesk01_567" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -53.3)
+
+[node name="obj_a_SWldesk01_568" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -53.3)
+
+[node name="obj_a_SWldesk01_569" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 2e-06, -59.3)
+
+[node name="obj_a_SWldesk01_570" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -59.3)
+
+[node name="obj_a_SWldesk01_573" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -57.3)
+
+[node name="obj_a_SWldesk01_575" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -57.3)
+
+[node name="obj_a_SWldesk01_576" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -55.3)
+
+[node name="obj_a_SWldesk01_578" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 2e-06, -55.3)
+
+[node name="obj_a_SWldesk01_579" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -53.3)
+
+[node name="obj_a_SWldesk01_580" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -53.3)
+
+[node name="obj_a_SWldesk01_572" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -45.3)
+
+[node name="obj_a_SWldesk01_581" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -45.3)
+
+[node name="obj_a_SWldesk01_582" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -43.3)
+
+[node name="obj_a_SWldesk01_583" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -43.3)
+
+[node name="obj_a_SWldesk01_584" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -41.3)
+
+[node name="obj_a_SWldesk01_585" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -41.3)
+
+[node name="obj_a_SWldesk01_586" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -39.3)
+
+[node name="obj_a_SWldesk01_587" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -39.3)
+
+[node name="obj_a_SWldesk01_588" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -45.3)
+
+[node name="obj_a_SWldesk01_589" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -45.3)
+
+[node name="obj_a_SWldesk01_590" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -43.3)
+
+[node name="obj_a_SWldesk01_591" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -43.3)
+
+[node name="obj_a_SWldesk01_592" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -41.3)
+
+[node name="obj_a_SWldesk01_593" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -41.3)
+
+[node name="obj_a_SWldesk01_594" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -39.3)
+
+[node name="obj_a_SWldesk01_595" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -39.3)
+
+[node name="obj_a_SCcabinet01_597" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 77.2, 0, -22.1)
+
+[node name="obj_a_SCcabinet01_598" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 78.2, 0, -22.2)
+
+[node name="obj_a_SCcabinet01_599" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 79.2, 0, -22.1)
+
+[node name="obj_a_SCcabinet01_600" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.9, 0, -22.7)
+
+[node name="obj_a_SCcabinet01_601" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.9, 0, -22.7)
+
+[node name="obj_a_SCcabinet01_602" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -22.6)
+
+[node name="obj_a_sefire03_603" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 77.9, 1.8, -22.6)
+
+[node name="obj_a_SWIsport01_604" parent="Props" instance=ExtResource("ext_24")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 82, 0, -23.65)
+
+[node name="obj_a_SWIsport01_605" parent="Props" instance=ExtResource("ext_24")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 82, 0, -22.5)
+
+[node name="obj_a_SWIsport01_606" parent="Props" instance=ExtResource("ext_24")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 82.7, 0, -23)
+
+[node name="obj_a_SWldesk02_611" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.3, 0, -22.4)
+
+[node name="obj_a_SWldesk02_675" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.8, 0, -22.4)
+
+[node name="obj_a_SWldesk02_676" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.6, 0, -24.6)
+
+[node name="obj_a_SWldesk02_677" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.1, 0, -24.6)
+
+[node name="obj_a_SWldesk02_678" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89, 1.1, -23.9001)
+
+[node name="obj_a_SWldesk02_679" parent="Props" instance=ExtResource("ext_41")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87.5, 1.1, -23.9001)
+
+[node name="obj_a_sefire04_680" parent="Props" instance=ExtResource("ext_59")]
+transform = Transform3D(0.628297, 0, 0.777974, 0, 1, -0, -0.777974, -0, 0.628297, 88.5, 2.2, -23.8001)
+
+[node name="obj_a_sefire04_681" parent="Props" instance=ExtResource("ext_59")]
+transform = Transform3D(-0.994444, 0, -0.105266, 0, 1, -0, 0.105266, -0, -0.994444, 88.9, 2.2, -23.8001)
+
+[node name="obj_a_sefire04_686" parent="Props" instance=ExtResource("ext_59")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 2.2, -22.9)
+
+[node name="obj_a_sefire04_687" parent="Props" instance=ExtResource("ext_59")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 2.2, -23.5)
+
+[node name="obj_a_sefire04_688" parent="Props" instance=ExtResource("ext_59")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 2.2, -24.1)
+
+[node name="obj_a_SWIpart01_683" parent="Props" instance=ExtResource("ext_21")]
+transform = Transform3D(1, 0, -0, 0, 0.973644, -0.228072, -0, 0.228072, 0.973644, 84, 0, -22.6)
+
+[node name="obj_a_SWIpart01_684" parent="Props" instance=ExtResource("ext_21")]
+transform = Transform3D(1, 0, -0, 0, 0.920018, -0.391877, -0, 0.391877, 0.920018, 84, 0, -23.1)
+
+[node name="obj_a_SWItalk03_685" parent="Props" instance=ExtResource("ext_26")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87, 0, -35.3)
+
+[node name="obj_a_SWItalk03_689" parent="Props" instance=ExtResource("ext_26")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87, 0, -34.9)
+
+[node name="obj_a_SWItalk03_690" parent="Props" instance=ExtResource("ext_26")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87, 0, -34.5)
+
+[node name="obj_a_SWldesk01_332" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 89.9, 0.8, -28)
+
+[node name="obj_a_SWldesk01_691" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 89.9, 0.8, -29)
+
+[node name="obj_a_SWldesk01_692" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 89.9, 0.8, -30)
+
+[node name="obj_a_SWldesk01_698" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0.8, -30)
+
+[node name="obj_a_SWldesk01_735" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0.8, -29)
+
+[node name="obj_a_SWldesk01_697" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.8, 0, -28)
+
+[node name="obj_a_SWldesk01_737" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.8, 0, -29)
+
+[node name="obj_a_SWldesk01_738" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -30)
+
+[node name="obj_a_SWldesk01_739" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -30)
+
+[node name="obj_a_SWldesk01_741" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -29)
+
+[node name="obj_a_SWldesk01_745" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -28)
+
+[node name="obj_a_SWldesk01_748" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.1, 0, -30)
+
+[node name="obj_a_SWldesk01_749" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.1, 0, -29)
+
+[node name="obj_a_SWldesk01_753" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.1, 0, -28)
+
+[node name="obj_a_SWldesk01_754" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.2, 0, -30)
+
+[node name="obj_a_sefire03_755" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.7, 0, -29.2)
+
+[node name="obj_a_sefire03_756" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.7, 0, -28.35)
+
+[node name="obj_a_sefire03_757" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.1, 0, -29.1)
+
+[node name="obj_a_sefire03_758" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.1, 0, -28.35)
+
+[node name="obj_a_sefire02_760" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84.6, 0, -30.4)
+
+[node name="obj_a_sefire02_761" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84.5, 0, -30.7)
+
+[node name="obj_a_sefire02_762" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84.2, 0, -30)
+
+[node name="obj_a_sefire03_596" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 86.1, 0, -27.9)
+
+[node name="obj_a_sefire03_763" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.1, 0.5, -29)
+
+[node name="obj_a_sefire03_764" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.2, 0.5, -28)
+
+[node name="obj_a_sefire02_765" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, 0, -30.8)
+
+[node name="obj_a_sefire02_766" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, -1e-06, -30.1)
+
+[node name="obj_a_sefire02_767" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, 0, -30.4)
+
+[node name="obj_a_SWIchest01_785" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89.6, 0, -34.2)
+
+[node name="obj_a_SWIchest01_786" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88.2, 0, -34.2)
+
+[node name="obj_a_sefire02_759" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, -0, -0.707107, -0, 0.707107, 84.1, 0, -30.4)
+
+[node name="obj_a_SWIbook02_02_787" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 84.4, 0, -35.7)
+
+[node name="obj_a_SWIbook02_02_790" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 82.1, 0, -35.7)
+
+[node name="obj_a_SWIbook02_02_791" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 81.2, 0, -34.9)
+
+[node name="obj_a_SWIbook02_02_792" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 83.6, 0, -34.9)
+
+[node name="obj_a_spiderline01_793" parent="Props" instance=ExtResource("ext_87")]
+transform = Transform3D(0.5, 0, 0, 0, -0.5, 0, 0, 0, -0.5, 88.8, 4, -35.3)
+
+[node name="obj_a_SWIchest04_794" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 0, -24.1)
+
+[node name="obj_a_SWIchest04_795" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 0, -25)
+
+[node name="obj_a_SWIchest04_796" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.8, 0, -25.1)
+
+[node name="obj_a_SWIchest04_797" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.9, 0, -24.1)
+
+[node name="obj_a_SWIchest04_798" parent="Props" instance=ExtResource("ext_9")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.3, 0, -25.2)
+
+[node name="obj_a_SWIchest02_799" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -26.1)
+
+[node name="obj_a_SWIchest02_800" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -26.8)
+
+[node name="obj_a_SWIchest02_801" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.7, 0, -26.8)
+
+[node name="obj_a_SWIchest03_802" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 0, -28.9)
+
+[node name="obj_a_SWIchest03_803" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 0, -29.8)
+
+[node name="obj_a_SWIchest03_804" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.9, 0, -28.9)
+
+[node name="obj_a_SWIchest03_805" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.9, 0, -29.8)
+
+[node name="obj_a_sefire03_806" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 77.1, 0.82, -30.1)
+
+[node name="obj_a_sefire03_807" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 77.2, 0.82, -29.5)
+
+[node name="obj_a_sefire03_808" parent="Props" instance=ExtResource("ext_61")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 77.1, 0.82, -28.9)
+
+[node name="obj_a_SCgen39_821" parent="Props" instance=ExtResource("ext_56")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 76.9, 0, -26.5)
+
+[node name="obj_a_SCgen03_831" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -28)
+
+[node name="obj_a_SCgen03_841" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.5, 0, -28)
+
+[node name="obj_a_spiderline04_847" parent="Props" instance=ExtResource("ext_64")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 88.9, 0.95, -23.3001)
+
+[node name="obj_a_spiderline03_845" parent="Props" instance=ExtResource("ext_63")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.4, 0.5, -23.4)
+
+[node name="obj_a_SWIpart01_682" parent="Props" instance=ExtResource("ext_21")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -22)
+
+[node name="obj_a_spiderline01_848" parent="Props" instance=ExtResource("ext_62")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89, -1.35, -25.9)
+
+[node name="obj_a_SWIclock03_625" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76.3, 0, -43.45)
+
+[node name="obj_a_SWIclock03_849" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76.3, 0, -57.25)
+
+[node name="obj_a_SWIwall02_236" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -43)
+
+[node name="obj_a_SWIwall02_314" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -40)
+
+[node name="obj_a_SCboard03_851" parent="Props" instance=ExtResource("ext_46")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 83, 0, -64)
+
+[node name="obj_a_SCboard03_852" parent="Props" instance=ExtResource("ext_46")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 83, 0, -50)
+
+[node name="obj_a_SWIbook02_853" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 79.5, 4e-06, -50.3)
+
+[node name="obj_a_SWIbook02_854" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 79.3, 0, -36)
+
+[node name="obj_a_SWIwb01_856" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 78.7, 0, -36)
+
+[node name="obj_a_SWIwb01_857" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 4e-06, -49.9999)
+
+[node name="obj_a_SWIwb02_858" parent="Props" instance=ExtResource("ext_38")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 87, 4e-06, -36.7)
+
+[node name="obj_a_SWIwb02_859" parent="Props" instance=ExtResource("ext_38")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 87.2, 0, -50.7)
+
+[node name="obj_a_SWIchest01_860" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.3, 0, -50.3)
+
+[node name="obj_a_SWltdesk01_341" parent="Props" instance=ExtResource("ext_39")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83.5, 0.2, -48.7)
+
+[node name="obj_a_SWIsafe01_861" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 82, 0, -51.2)
+
+[node name="obj_a_SWIsafe01_862" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83, 0, -51.2)
+
+[node name="obj_a_SWIsafe01_863" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 84, 0, -51.2)
+
+[node name="obj_a_SWIsafe01_864" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 85, 0, -51.2)
+
+[node name="obj_a_SWIsafe01_865" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 86, 0, -51.2)
+
+[node name="obj_a_SWIdoor01_01_246" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -60)
+
+[node name="obj_a_SWIdoor01_01_247" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -63)
+
+[node name="obj_a_SWIdoor01_02_248" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 1e-06, -61)
+
+[node name="obj_a_SClamp01_318" parent="Props" instance=ExtResource("ext_58")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -62)
+
+[node name="obj_a_SWIchest01_866" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.1, -1e-06, -36.2)
+
+[node name="obj_a_SWIsafe01_867" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 86, 1e-06, -37.2)
+
+[node name="obj_a_SWIsafe01_868" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 85, -1e-06, -37.2)
+
+[node name="obj_a_SWIsafe01_869" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 84, 1e-06, -37.2)
+
+[node name="obj_a_SWIsafe01_872" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83, -1e-06, -37.2)
+
+[node name="obj_a_SWIsafe01_873" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 82, -1e-06, -37.2)
+
+[node name="obj_a_SWIwall02_349" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 85, 0, -36)
+
+[node name="obj_a_SWIwall02_355" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -50)
+
+[node name="obj_a_SWIwall02_377" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89, 0, -50)
+
+[node name="obj_a_SCcabinet01_626" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88.5, 0, -64)
+
+[node name="obj_a_SCcabinet01_879" parent="Props" instance=ExtResource("ext_42")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 87.8, 0, -50)
+
+[node name="obj_a_SWIfwpot04_885" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 0, -63)
+
+[node name="obj_a_SWIfwpot04_901" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 80, 0, -36)
+
+[node name="obj_a_SWIfwpot04_902" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.61051, 0, -0, 0, 1.61051, -0, -0, -0, 1.61051, 88.1, -2e-06, -48.5)
+
+[node name="obj_a_SWIfwpot04_903" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.21, 0, -0, 0, 1.21, -0, -0, -0, 1.21, 80, 0, -50)
+
+[node name="obj_a_SWIfwpot03_904" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -30)
+
+[node name="obj_a_SWIfwpot03_905" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79.6, 0, -50.0999)
+
+[node name="obj_a_SWItalk02_906" parent="Props" instance=ExtResource("ext_25")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.1, 1, -36.1)
+
+[node name="obj_a_SWItalk02_907" parent="Props" instance=ExtResource("ext_25")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.1, 1, -49.9999)
+
+[node name="obj_a_SCgen49_908" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.6, 1, -50.0999)
+
+[node name="obj_a_SWIwall02_365" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, 0, -64)
+
+[node name="obj_a_SWIframe04_910" parent="Props" instance=ExtResource("ext_15")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 77.9, 0, -49.7001)
+
+[node name="obj_a_SCgen41_911" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 28.8, 0, -43.6)
+
+[node name="obj_a_SCgen34_912" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30.5, 0.35, -40.3)
+
+[node name="obj_a_SCgen34_913" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30.5, 0.35, -45.1)
+
+[node name="obj_a_SCgen34_914" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35.5, 0.35, -40.2)
+
+[node name="obj_a_SCgen34_915" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35.5, 0.35, -45.1)
+
+[node name="obj_a_SCgen34_916" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40.5, 0.35, -45.1)
+
+[node name="obj_a_SCgen34_917" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40.5, 0.35, -40.2)
+
+[node name="obj_a_SCgen34_918" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45.5, 0.35, -45.2)
+
+[node name="obj_a_SCgen34_919" parent="Props" instance=ExtResource("ext_54")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45.5, 0.35, -40.3)
+
+[node name="obj_a_SCgen33_920" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 46.1, 0.35, -39.8)
+
+[node name="obj_a_SCgen33_921" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 46.1, 0.35, -44.8)
+
+[node name="obj_a_SCgen33_922" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41.1, 0.35, -44.8)
+
+[node name="obj_a_SCgen33_923" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 41.1, 0.35, -39.8)
+
+[node name="obj_a_SCgen33_924" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 27.8, 0, -43.6)
+
+[node name="obj_a_SCgen33_925" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 31.1, 0.35, -39.8)
+
+[node name="obj_a_SCgen33_926" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 31.1, 0.35, -44.8)
+
+[node name="obj_a_SCgen33_927" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 36.1, 0.35, -39.9)
+
+[node name="obj_a_SCgen33_928" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 36.1, 0.35, -44.8)
+
+[node name="obj_a_SCgen41_929" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31.3, 0.35, -40.5)
+
+[node name="obj_a_SCgen41_930" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31.3, 0.35, -45.4)
+
+[node name="obj_a_SCgen41_931" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36.3, 0.35, -40.4)
+
+[node name="obj_a_SCgen41_932" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36.3, 0.35, -45.4)
+
+[node name="obj_a_SCgen41_933" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41.3, 0.35, -40.4)
+
+[node name="obj_a_SCgen41_934" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41.3, 0.35, -45.5)
+
+[node name="obj_a_SCgen41_935" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46.3, 0.35, -40.5)
+
+[node name="obj_a_SCgen41_936" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46.3, 0.35, -45.5)
+
+[node name="obj_a_SCgen41_937" parent="Props" instance=ExtResource("ext_57")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 28.2, 0, -42.2)
+
+[node name="obj_a_SWIfwpot03_938" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.331, 0, -0, 0, 1.331, -0, -0, -0, 1.331, 48.4, 0, -35.9)
+
+[node name="obj_a_book01_939" parent="Props" instance=ExtResource("ext_43")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 28.1, 0.8, -41.3)
+
+[node name="obj_a_SWIfwpot04_941" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25.9, 0, -48.9)
+
+[node name="obj_a_SWIfwpot03_942" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.21, 0, -0, 0, 1.21, -0, -0, -0, 1.21, 25.1, 0, -36.3)
+
+[node name="obj_a_SCboard01_943" parent="Props" instance=ExtResource("ext_44")]
+transform = Transform3D(-0.000768, 0, 1, 0, 1, -0, -1, -0, -0.000768, 83.4, 1, -36)
+
+[node name="obj_a_SCboard01_944" parent="Props" instance=ExtResource("ext_44")]
+transform = Transform3D(-2e-06, 0, 1, 0, 1, -0, -1, -0, -2e-06, 83.4, 1, -50)
+
+[node name="obj_a_SWIwall02_354" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 86, 0, -50)
+
+[node name="obj_a_SWIwall02_379" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 83, 0, -50)
+
+[node name="obj_a_SCboard02_946" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 78, 1.2, -63.5)
+
+[node name="obj_a_SCgen33_947" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.3, 0.3, -36.7)
+
+[node name="obj_a_SCgen33_948" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.7, 0.3, -36.7)
+
+[node name="obj_a_SCgen33_949" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.5, 0.3, -36.7)
+
+[node name="obj_a_SCgen33_950" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.9, 0.3, -36.7)
+
+[node name="obj_a_SCgen33_951" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.3, 0.3, -36.9)
+
+[node name="obj_a_SCgen33_952" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.5, 0.3, -36.9)
+
+[node name="obj_a_SCgen33_953" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.7, 0.3, -36.9)
+
+[node name="obj_a_SCgen33_954" parent="Props" instance=ExtResource("ext_53")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37.9, 0.3, -36.9)
+
+[node name="obj_a_SCspeaker01_955" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -48)
+
+[node name="obj_a_SCspeaker01_956" parent="Props" instance=ExtResource("ext_51")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -38)
+
+[node name="obj_a_SWIbooks03_959" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25.4, 0, -46.8)
+
+[node name="obj_a_SCgen03_960" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41.9, 0.8, -36.3)
+
+[node name="obj_a_SCgen03_961" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 28, 0.8, -41)
+
+[node name="obj_a_SCgen49_962" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 26.15, 1.3, -46.8)
+
+[node name="obj_a_SCgen03_965" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(-0.266715, 0, 0.963776, 0, 1, -0, -0.963776, -0, -0.266715, 43.6, 0.8, -35.9)
+
+[node name="obj_a_SWIbooks04_02_966" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(-0.74812, 0, -0.663564, 0, 1, -0, 0.663564, -0, -0.74812, 17.4, 1.2, -40.3)
+
+[node name="obj_a_SWIsafe01_967" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12.99, 0.48, -31.25)
+
+[node name="obj_a_SWIsafe01_968" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11.99, 0.48, -31.25)
+
+[node name="obj_a_SWIsafe01_969" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11, 0.48, -31.25)
+
+[node name="obj_a_SWIsafe01_970" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 10, 0.48, -31.25)
+
+[node name="obj_a_SWIsafe01_971" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0.48, -31.25)
+
+[node name="obj_a_SCboard03_972" parent="Props" instance=ExtResource("ext_46")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 11.3, 0, -44)
+
+[node name="obj_a_SCframe03_973" parent="Props" instance=ExtResource("ext_52")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10.1, 2, -29.95)
+
+[node name="obj_a_SWIchest01_974" parent="Props" instance=ExtResource("ext_6")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 6.3, 0, -43.7)
+
+[node name="obj_a_SWIgen02_975" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 6.3, 1, -43.6)
+
+[node name="obj_a_SWIsafe01_976" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12.99, 0.45, -45.35)
+
+[node name="obj_a_SWIsafe01_977" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0.45, -45.35)
+
+[node name="obj_a_SWIsafe01_978" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 11, 0.45, -45.34)
+
+[node name="obj_a_SWIsafe01_979" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 10, 0.45, -45.34)
+
+[node name="obj_a_SWIsafe01_980" parent="Props" instance=ExtResource("ext_20")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0.45, -45.36)
+
+[node name="obj_a_SCboard02_981" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 10.1, 1.1, -44)
+
+[node name="obj_a_SCboard03_982" parent="Props" instance=ExtResource("ext_46")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 11.1, 0, -58)
+
+[node name="obj_a_SWldesk01_983" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.2, 0, -29)
+
+[node name="obj_a_SWldesk01_984" parent="Props" instance=ExtResource("ext_40")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.2, 0, -28)
+
+[node name="obj_a_spiderline04_985" parent="Props" instance=ExtResource("ext_64")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 89.4, -0.5, -30.7)
+
+[node name="obj_a_SWIpart01_991" parent="Props" instance=ExtResource("ext_21")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -23.6)
+
+[node name="obj_a_SWIpart01_992" parent="Props" instance=ExtResource("ext_21")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -24.1)
+
+[node name="obj_a_sefire02_998" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 83, 0, -31)
+
+[node name="obj_a_sefire02_999" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 0.046386, 0.998924, -0, -0.998924, 0.046386, 83.5, 0.3, -31.2)
+
+[node name="obj_a_sefire02_1000" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -31)
+
+[node name="obj_a_SCboard02_1008" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 56.5, 1.1, -25)
+
+[node name="obj_a_SCgen17_1011" parent="Props" instance=ExtResource("ext_49")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 59, 0, -25)
+
+[node name="obj_a_SWIchest03_963" parent="Props" instance=ExtResource("ext_8")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 29, 0, -42)
+
+[node name="obj_a_SWIbook02_1001" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 55, -2e-06, -25.2)
+
+[node name="obj_a_SWIfwpot03_1002" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.77156, 0, -0, 0, 1.77156, -0, -0, -0, 1.77156, 18.2, 0, -64.5)
+
+[node name="obj_a_SWIfwpot04_1003" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 24, 0, -54)
+
+[node name="obj_a_SWIscien01_1014" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 30, 0, -49.6)
+
+[node name="obj_a_SWIscien01_1016" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 34, 0, -49.6)
+
+[node name="obj_a_SWIscien01_1017" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 38, 0, -49.6)
+
+[node name="obj_a_SWIscien01_1018" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 42, 0, -49.6)
+
+[node name="obj_a_SWIscien01_1019" parent="Props" instance=ExtResource("ext_23")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 46, -1e-06, -49.6)
+
+[node name="obj_a_SWIbook01_1015" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -59.1)
+
+[node name="obj_a_SWIbook01_1020" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -58)
+
+[node name="obj_a_SWIbook01_1021" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.3, 2e-06, -55.1)
+
+[node name="obj_a_SWIbook01_1022" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.3, 2e-06, -54)
+
+[node name="obj_a_SWIbook01_1023" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -45)
+
+[node name="obj_a_SWIbook01_1024" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, -2e-06, -44)
+
+[node name="obj_a_SWIbook01_1025" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 2e-06, -41)
+
+[node name="obj_a_SWIbook01_1026" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76.2, 0, -40)
+
+[node name="obj_a_SWIwb01_1027" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.5, 0, -35)
+
+[node name="obj_a_SWIwb01_1028" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, 0, -35)
+
+[node name="obj_a_SWIwb01_1029" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.5, 0, -35)
+
+[node name="obj_a_SWIwb01_1030" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.5, 0.2, -35)
+
+[node name="obj_a_SWIwb01_1031" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, 0.2, -35)
+
+[node name="obj_a_SWIwb01_1032" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.5, 0.2, -35)
+
+[node name="obj_a_SWIwb01_1033" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.5, 0.4, -35)
+
+[node name="obj_a_SWIwb01_1034" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, 0.4, -35)
+
+[node name="obj_a_SWIwb01_1035" parent="Props" instance=ExtResource("ext_37")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.5, 0.4, -35)
+
+[node name="obj_a_SWIbook02_02_1036" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 80, 0, -33)
+
+[node name="obj_a_SWIbook02_02_1037" parent="Props" instance=ExtResource("ext_65")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79.1, 0, -33)
+
+[node name="obj_a_SCgen03_1038" parent="Props" instance=ExtResource("ext_47")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 75.7, 1.23, -45)
+
+[node name="obj_a_SWIgen02_1039" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 1.23, -44)
+
+[node name="obj_a_SWIgen02_1040" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 1.23, -41)
+
+[node name="obj_a_SCgen49_1042" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.1, 1.23, -40)
+
+[node name="obj_a_SWIbooks04_01_1041" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, -0, -0.707107, -0, -0.707107, 76.6, 1.23, -55)
+
+[node name="obj_a_SWIbooks04_02_1043" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.2, 1.23, -55)
+
+[node name="obj_a_SWIgen02_1044" parent="Props" instance=ExtResource("ext_18")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.3, 1.23, -58)
+
+[node name="obj_a_SWIgen03_1045" parent="Props" instance=ExtResource("ext_19")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76.3, 1.23, -60)
+
+[node name="obj_a_SWIchest02_1046" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89.7, 0, -60.2)
+
+[node name="obj_a_SWIchest02_1047" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89.7, 0, -56.2)
+
+[node name="obj_a_SWIclock03_1050" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -44.525)
+
+[node name="obj_a_SWIclock03_1051" parent="Props" instance=ExtResource("ext_10")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -58.525)
+
+[node name="obj_a_SWIchest02_1048" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89.8, 0, -46.3)
+
+[node name="obj_a_SWIchest02_1049" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 89.8, 0, -42.3)
+
+[node name="obj_a_SWIchest02_1055" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.2, 0, -53.6)
+
+[node name="obj_a_SWIchest02_1056" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.2, 0, -49.1)
+
+[node name="obj_a_SWIchest02_1057" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.2, 0, -39.5)
+
+[node name="obj_a_SWIchest02_1058" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.2, 2e-06, -35.1)
+
+[node name="obj_a_SWIfwpot04_1089" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.28, 0, -0, 0, 1.28, -0, -0, -0, 1.28, 66, 0, -43.4)
+
+[node name="obj_a_SWIfwpot04_1064" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.21, 0, -0, 0, 1.21, -0, -0, -0, 1.21, 65, 0, -31.4)
+
+[node name="obj_a_SWIfwpot04_1065" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.1, 0, -0, 0, 1.1, -0, -0, -0, 1.1, 64, 0, -43.4)
+
+[node name="obj_a_SWIfwpot04_1066" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1.21, 0, -0, 0, 1.21, -0, -0, -0, 1.21, 63, 0, -31.4)
+
+[node name="obj_a_SWIfwpot03_1067" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.331, 0, -0, 0, 1.331, -0, -0, -0, 1.331, 66, 0, -31.3)
+
+[node name="obj_a_SWIfwpot03_1068" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.4635, 0, -0.042105, 0, 1.4641, -0, 0.042105, -0, 1.4635, 64.7, 0, -43.3)
+
+[node name="obj_a_SWIfwpot03_1069" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.331, 0, -0, 0, 1.331, -0, -0, -0, 1.331, 64, 0, -31.3)
+
+[node name="obj_a_SWIfwpot03_1070" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.77156, 0, -0, 0, 1.77156, -0, -0, -0, 1.77156, 62.8, 0, -43.3)
+
+[node name="obj_a_SWIfwpot03_1074" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.77156, 0, -0, 0, 1.77156, -0, -0, -0, 1.77156, 65.5, 0, -37)
+
+[node name="obj_a_SWIfwpot03_1077" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(0.003736, 0, -1.94871, 0, 1.94872, -0, 1.94871, -0, 0.003736, 64.5, 0, -38.9)
+
+[node name="obj_a_SWIfwpot03_1078" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.77156, 0, -0, 0, 1.77156, -0, -0, -0, 1.77156, 63.5, 0, -37)
+
+[node name="obj_a_SWIfwpot03_1080" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1.77156, 0, -0, 0, 1.77156, -0, -0, -0, 1.77156, 62.5, 0, -37.2)
+
+[node name="obj_a_SWIfwpot03_1082" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 38, 0, -35)
+
+[node name="obj_a_SCboard02_1084" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15.7, 1, -58.0001)
+
+[node name="obj_a_SCboard02_1085" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15.6, 1.2, -44)
+
+[node name="obj_a_SWIdoor01_01_1083" parent="Props" instance=ExtResource("ext_13")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 76, 0, -69)
+
+[node name="obj_a_SWIwashWall03_1091" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -64)
+
+[node name="obj_a_SWIwashWall03_1092" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -72)
+
+[node name="obj_a_SWIwashWall01_1090" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 81, 0, -64)
+
+[node name="obj_a_SWIwashWall05_1093" parent="Props" instance=ExtResource("ext_67")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 83, 0, -64)
+
+[node name="obj_a_SWIwashWall05_1094" parent="Props" instance=ExtResource("ext_67")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 85, 0, -64)
+
+[node name="obj_a_SWIwashWall03_1096" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 90, 0, -64)
+
+[node name="obj_a_SWIwashWall01_1095" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 87.5, 0, -64)
+
+[node name="obj_a_SWIwashWall01_1097" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -72)
+
+[node name="obj_a_SWIwashWall01_1098" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 82, 0, -72)
+
+[node name="obj_a_SWIwashWall03_1099" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -72)
+
+[node name="obj_a_SWIwashWall02_1100" parent="Props" instance=ExtResource("ext_76")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, 0, -72)
+
+[node name="obj_a_SWIwashWall04_1101" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85, -1e-06, -72)
+
+[node name="obj_a_SWIwashWall04_1102" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 82, 0, -72)
+
+[node name="obj_a_SWIwashWall04_1103" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -72)
+
+[node name="obj_a_SWIwashWall04_1104" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87.5, 0, -72)
+
+[node name="obj_a_SWIwashWall01_1105" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -69)
+
+[node name="obj_a_SWIwashWall04_1106" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -69)
+
+[node name="obj_a_SWItalk01_1107" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77, -2e-06, -64.3)
+
+[node name="obj_a_SWIpart01_01_1108" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 80, -1e-06, -64.3)
+
+[node name="obj_a_SWIpart01_01_1109" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 81.1, 1e-06, -64.3)
+
+[node name="obj_a_SWIpart01_01_1110" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 82.2, 0, -64.3)
+
+[node name="obj_a_SWIpart01_01_1111" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 83.3, 1e-06, -64.3)
+
+[node name="obj_a_SWIpart01_01_1112" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 84.4, 0, -64.3)
+
+[node name="obj_a_SWItalk01_1114" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.8, 0, -64.3)
+
+[node name="obj_a_SWIclean01_01_1113" parent="Props" instance=ExtResource("ext_69")]
+transform = Transform3D(-0.839059, 0, -0.54404, 0, 1, -0, 0.54404, -0, -0.839059, 89.3, 0, -64.0499)
+
+[node name="obj_a_SWIclean01_02_1115" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.6, 0, -65)
+
+[node name="obj_a_SWIclean01_02_1116" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.9, 0, -65)
+
+[node name="obj_a_SWIclean01_02_1117" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.3, 0, -64.9999)
+
+[node name="obj_a_SWIfan02_1118" parent="Props" instance=ExtResource("ext_66")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.8, 0, -72)
+
+[node name="obj_a_SWIclean01_1119" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88, 0, -64.7999)
+
+[node name="obj_a_SWIclean01_1120" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88, 0, -65.2999)
+
+[node name="obj_a_SWIframe05_1121" parent="Props" instance=ExtResource("ext_72")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -70.65)
+
+[node name="obj_a_SWIwater03_1122" parent="Props" instance=ExtResource("ext_79")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -66)
+
+[node name="obj_a_SWIwater03_1123" parent="Props" instance=ExtResource("ext_79")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -68)
+
+[node name="obj_a_SWIwater02_1124" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76.6, 0, -72)
+
+[node name="obj_a_SWIwater02_1125" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 77.6, 0, -72)
+
+[node name="obj_a_SWIstool01_1126" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 82.9, 0, -71.7)
+
+[node name="obj_a_SWIstool01_1127" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -71.7)
+
+[node name="obj_a_SWIstool01_1128" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 85.8, 1e-06, -71.7)
+
+[node name="obj_a_SWIstool01_1129" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86.75, 0, -71.7)
+
+[node name="obj_a_SWIstool01_1130" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.4, -1e-06, -71.7)
+
+[node name="obj_a_SWIstool01_1131" parent="Props" instance=ExtResource("ext_74")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.4, 0, -71.7)
+
+[node name="obj_a_SWIchest02_1132" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 79.1, 0, -71.7)
+
+[node name="obj_a_SWIchest02_1133" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 80.4, 0, -71.7)
+
+[node name="obj_a_SWIclean01_1134" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.1, 0, -69)
+
+[node name="obj_a_SWIclean01_02_1135" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(0.534672, 0, 0.84506, 0, 1, -0, -0.845059, -0, 0.534672, 88.9, 0, -69.4001)
+
+[node name="obj_a_SWIclean01_01_1136" parent="Props" instance=ExtResource("ext_69")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 89.72, -1e-06, -68)
+
+[node name="obj_a_SWIclean01_02_1137" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.7, 0, -67)
+
+[node name="obj_a_SWIclean01_02_1138" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.4, 0, -67)
+
+[node name="obj_a_SWIclean01_02_1139" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.1, 0, -67)
+
+[node name="obj_a_SWIclean01_02_1140" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(0.973644, 0.228072, -0, -0.227978, 0.973242, 0.028758, 0.006559, -0.028, 0.999586, 88.7, 0, -67)
+
+[node name="obj_a_SWIclean01_1141" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89.5, 0, -66.5)
+
+[node name="obj_a_SWIclean01_1142" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(0.998346, -0.05749, -0, 0.05749, 0.998346, -0, -0, -0, 1, 88.8, 0, -66.5)
+
+[node name="obj_a_SWIwashWall03_1143" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -58)
+
+[node name="obj_a_SWIwashWall03_1144" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 18, 0, -66)
+
+[node name="obj_a_SWIwashWall03_1145" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 4, 0, -58)
+
+[node name="obj_a_SWIwashWall03_1146" parent="Props" instance=ExtResource("ext_71")]
+transform = Transform3D(1, 0, 3e-06, 0, 1, -0, -3e-06, -0, 1, 4, 0, -66)
+
+[node name="obj_a_SWIwashWall02_1147" parent="Props" instance=ExtResource("ext_76")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 11, 0, -66)
+
+[node name="obj_a_SWIwashWall02_1148" parent="Props" instance=ExtResource("ext_76")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -66)
+
+[node name="obj_a_SWIwashWall01_1149" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13, 0, -66)
+
+[node name="obj_a_SWIwashWall01_1150" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6.5, 0, -66)
+
+[node name="obj_a_SWIwashWall01_1151" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15, 0, -58)
+
+[node name="obj_a_SWIwashWall01_1152" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -58)
+
+[node name="obj_a_SWIwashWall02_1153" parent="Props" instance=ExtResource("ext_76")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, 0, -58)
+
+[node name="obj_a_SWIwashWall04_1154" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 15, -1e-06, -58)
+
+[node name="obj_a_SWIwashWall04_1155" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 12, 0, -58)
+
+[node name="obj_a_SWIwashWall04_1156" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9, -1e-06, -58)
+
+[node name="obj_a_SWIwashWall04_1157" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6.5, 0, -58)
+
+[node name="obj_a_SWIwashWall04_1158" parent="Props" instance=ExtResource("ext_77")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, -1e-06, -61)
+
+[node name="obj_a_SWItalk01_1159" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 16, 0, -65.3)
+
+[node name="obj_a_SWItalk01_1161" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6, 0, -65.2)
+
+[node name="obj_a_SWIpart01_01_1162" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 8.8, 0, -66)
+
+[node name="obj_a_SWIpart01_01_1163" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9.9, 0, -66)
+
+[node name="obj_a_SWIpart01_01_1164" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 11, 0, -66)
+
+[node name="obj_a_SWIpart01_01_1165" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12.1, 0, -66)
+
+[node name="obj_a_SWIpart01_01_1166" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 13.2, -1e-06, -66)
+
+[node name="obj_a_SWIpart01_01_1167" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14.3, 0, -66)
+
+[node name="obj_a_SWIpart01_01_1168" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 5.3, -1e-06, -58.3)
+
+[node name="obj_a_SWIpart01_01_1169" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 7, 1e-06, -58.3)
+
+[node name="obj_a_SWIpart01_01_1170" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 9.50001, 0, -58.3)
+
+[node name="obj_a_SWIwater02_1173" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 17.5, 0, -58)
+
+[node name="obj_a_SWIwater02_1174" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 16.4, 0, -58)
+
+[node name="obj_a_SWIwater02_1175" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 14.7, 0, -58)
+
+[node name="obj_a_SWIwater02_1176" parent="Props" instance=ExtResource("ext_78")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 13.4, 0, -58)
+
+[node name="obj_a_SWIfan02_1171" parent="Props" instance=ExtResource("ext_66")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 5.2, 0, -58)
+
+[node name="obj_a_SWIwashWall01_73" parent="Props" instance=ExtResource("ext_75")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 4, 0, -61)
+
+[node name="obj_a_SWIpart01_01_77" parent="Props" instance=ExtResource("ext_73")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 15.4, 0, -66)
+
+[node name="obj_a_SWIclean01_01_84" parent="Props" instance=ExtResource("ext_69")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 5.29999, 0, -65.75)
+
+[node name="obj_a_SWIclean01_02_145" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.59999, -2e-06, -63.9)
+
+[node name="obj_a_SWIclean01_02_1160" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(0.650263, 0, 0.759709, 0, 1, -0, -0.759709, -0, 0.650263, 5.59999, 0, -63.9)
+
+[node name="obj_a_SWIclean01_02_1172" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.99999, 0, -63.9)
+
+[node name="obj_a_SWIclean01_02_1177" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(-0.011123, 0, 0.999938, 0, 1, -0, -0.999938, -0, -0.011123, 4.69999, 0, -63.3)
+
+[node name="obj_a_SWIclean01_02_1178" parent="Props" instance=ExtResource("ext_68")]
+transform = Transform3D(0.017637, 0, 0.999844, 0, 1, -0, -0.999844, -0, 0.017637, 5.29999, 0, -63.3)
+
+[node name="obj_a_SWIclean01_1180" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 6.1, 0, -65.7002)
+
+[node name="obj_a_SWIclean01_1182" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 4.89998, 0, -61.9)
+
+[node name="obj_a_SWIframe05_1183" parent="Props" instance=ExtResource("ext_72")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -59.4)
+
+[node name="obj_a_SWIwater03_1184" parent="Props" instance=ExtResource("ext_79")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -64)
+
+[node name="obj_a_SWIwater03_1185" parent="Props" instance=ExtResource("ext_79")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -62)
+
+[node name="obj_a_SWIclean01_1186" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 5.8, 0, -65.3)
+
+[node name="obj_a_SWIchest02_1179" parent="Props" instance=ExtResource("ext_7")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 11.8, 0, -58.5)
+
+[node name="obj_a_SWIclean01_1190" parent="Props" instance=ExtResource("ext_70")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.5, 0, -68.7)
+
+[node name="obj_a_SWItalk01_1191" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -60.3)
+
+[node name="obj_a_SWItalk01_1192" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -56.2)
+
+[node name="obj_a_SWItalk01_1193" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -52.2)
+
+[node name="obj_a_SWItalk01_1194" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -46.3)
+
+[node name="obj_a_SWItalk01_1195" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -42.3)
+
+[node name="obj_a_SWItalk01_1196" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89.7, 0, -38.1)
+
+[node name="obj_a_SWItalk01_1006" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1007" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1009" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1010" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 39, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1013" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 43, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1197" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46.8, 0, -49.2)
+
+[node name="obj_a_SWItalk01_1198" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -54.7)
+
+[node name="obj_a_SWItalk01_1199" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -50.2)
+
+[node name="obj_a_SWItalk01_1200" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -45.8)
+
+[node name="obj_a_SWItalk01_1201" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -40.6)
+
+[node name="obj_a_SWItalk01_1202" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -36.2)
+
+[node name="obj_a_SWItalk01_1203" parent="Props" instance=ExtResource("ext_80")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4.8, 0, -31.7)
+
+[node name="obj_a_SWIfwpot03_1205" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 59.4, 0, -38.3)
+
+[node name="obj_a_SWIfwpot03_1206" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 58.8, 0, -38.3)
+
+[node name="obj_a_SWIfwpot03_1207" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 59.4, 0, -36.8)
+
+[node name="obj_a_SWIfwpot03_1208" parent="Props" instance=ExtResource("ext_16")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 59.8, 0, -36.8)
+
+[node name="obj_a_SWIfwpot04_964" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 69.6, 0, -70.7)
+
+[node name="obj_a_SWIdoor01_01_01_119" parent="Props" instance=ExtResource("ext_82")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 76, 0, -66)
+
+[node name="obj_a_SWIdoor01_02_147" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 76, 0, -68)
+
+[node name="obj_a_SCgen49_1086" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 80.1, 0.8, -70.9001)
+
+[node name="obj_a_SCgen49_1181" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81.4, 0.8, -70.9001)
+
+[node name="obj_a_SCgen49_1187" parent="Props" instance=ExtResource("ext_50")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 11.8, 0.8, -58.3)
+
+[node name="obj_a_SWIstair02_430" parent="Props" instance=ExtResource("ext_81")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 56, 0, -55)
+
+[node name="obj_a_SWIfwpot04_529" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 60.8, 2.3, -54)
+
+[node name="obj_a_SWIfwpot04_1210" parent="Props" instance=ExtResource("ext_17")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 50.3, 2.3, -54)
+
+[node name="obj_a_SWIdoor01_01_01_1211" parent="Props" instance=ExtResource("ext_82")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -64)
+
+[node name="obj_a_SWIdoor01_02_1212" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -62)
+
+[node name="obj_a_SWIdoor01_02_1213" parent="Props" instance=ExtResource("ext_14")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -57)
+
+[node name="obj_a_sefire02_1214" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(0.381616, 0, 0.924321, 0, 1, -0, -0.924321, -0, 0.381616, 84.5, 0, -31.5)
+
+[node name="obj_a_sefire02_1215" parent="Props" instance=ExtResource("ext_60")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84.5, 0, -31.2)
+
+[node name="obj_a_SWIwall02_08_2" parent="Props" instance=ExtResource("ext_35")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 58.9, 0, -37.5)
+
+[node name="obj_a_SWIwall02_08_8" parent="Props" instance=ExtResource("ext_35")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 59, 0, -43)
+
+[node name="obj_a_SWIwall02_08_9" parent="Props" instance=ExtResource("ext_35")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 59, 0, -32)
+
+[node name="obj_a_SWIwall01_12" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6, 0, -30)
+
+[node name="obj_a_SWIwall01_13" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 4, 0, -34)
+
+[node name="obj_a_SWIwall01_25" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 4, 0, -34.5)
+
+[node name="obj_a_SWIwall01_29" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -39)
+
+[node name="obj_a_SWIwall01_30" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -38.5)
+
+[node name="obj_a_SWIwall01_31" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -48)
+
+[node name="obj_a_SWIwall01_32" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -48.5)
+
+[node name="obj_a_SWIwall01_34" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -52.5)
+
+[node name="obj_a_SWIwall01_35" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 4, 0, -53)
+
+[node name="obj_a_SWIwall01_37" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 18, 0, -38)
+
+[node name="obj_a_SWIwall01_36" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 18, 0, -37)
+
+[node name="obj_a_SWIwall02_03_38" parent="Props" instance=ExtResource("ext_30")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 18, 0, -44)
+
+[node name="obj_a_SWIwall01_39" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 18, 0, -44)
+
+[node name="obj_a_SWIwall01_40" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 18, 0, -52)
+
+[node name="obj_a_SWIwall01_41" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-2e-06, 0, 1, 0, 1, -0, -1, -0, -2e-06, 18, -1e-06, -51)
+
+[node name="obj_a_SWIwall02_42" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 18, -1e-06, -58)
+
+[node name="obj_a_SWIwall01_43" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 18, 0, -64)
+
+[node name="obj_a_SWIwall01_44" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 16, 0, -58)
+
+[node name="obj_a_SWIwall01_45" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 17, 0, -58)
+
+[node name="obj_a_SWIwall02_46" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 21, 0, -66)
+
+[node name="obj_a_SWIwall02_47" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 18, 0, -66)
+
+[node name="obj_a_SWIwall01_48" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 16, 1e-06, -44)
+
+[node name="obj_a_SWIwall01_49" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 17, -1e-06, -44)
+
+[node name="obj_a_SWIwall02_06_50" parent="Props" instance=ExtResource("ext_33")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -52)
+
+[node name="obj_a_SWIwall02_52" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -50)
+
+[node name="obj_a_SWIwall02_56" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -47)
+
+[node name="obj_a_SWIwall02_60" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -44)
+
+[node name="obj_a_SWIwall02_64" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -41)
+
+[node name="obj_a_SWIwall01_65" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -38)
+
+[node name="obj_a_SWIwall01_70" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -37)
+
+[node name="obj_a_SWIwall01_72" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 25, 0, -36)
+
+[node name="obj_a_SWIwall02_04_74" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -36)
+
+[node name="obj_a_SWIwall02_76" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 22, 0, -30)
+
+[node name="obj_a_SWIwall02_78" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 25, 0, -30)
+
+[node name="obj_a_SWIwall01_79" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 25, 0, -29)
+
+[node name="obj_a_SWIwall02_04_80" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 25, 0, -30)
+
+[node name="obj_a_SWIwall02_81" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 29, 0, -28)
+
+[node name="obj_a_SWIwall02_94" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 32, 0, -28)
+
+[node name="obj_a_SWIwall02_105" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 35, 1e-06, -28)
+
+[node name="obj_a_SWIwall02_107" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 38, 0, -28)
+
+[node name="obj_a_SWIwall02_108" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 41, 0, -28)
+
+[node name="obj_a_SWIwall02_109" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 44, 0, -28)
+
+[node name="obj_a_SWIwall02_110" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 47, 0, -28)
+
+[node name="obj_a_SWIwall02_111" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 50, 0, -28)
+
+[node name="obj_a_SWIwall01_112" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -26)
+
+[node name="obj_a_SWIwall01_115" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -27)
+
+[node name="obj_a_SWIwall02_116" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 54, 1e-06, -25)
+
+[node name="obj_a_SWIwall02_117" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 57, 0, -25)
+
+[node name="obj_a_SWIwall02_121" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 60, 0, -25)
+
+[node name="obj_a_SWIwall02_04_122" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 50, 0, -28)
+
+[node name="obj_a_SWIwall02_04_123" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 61, 0, -28)
+
+[node name="obj_a_SWIwall01_127" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 61, -1e-06, -27)
+
+[node name="obj_a_SWIwall01_128" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 61, 0, -28)
+
+[node name="obj_a_SWIwall02_133" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 75, 0, -28)
+
+[node name="obj_a_SWIwall02_135" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 72, 0, -28)
+
+[node name="obj_a_SWIwall02_137" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 69, -1e-06, -28)
+
+[node name="obj_a_SWIwall02_138" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 66, 0, -28)
+
+[node name="obj_a_SWIwall01_139" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 63, 0, -28)
+
+[node name="obj_a_SWIwall01_141" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 62, 0, -28)
+
+[node name="obj_a_SWIwall01_142" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 76, 0, -29)
+
+[node name="obj_a_SWIwall01_143" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 76, 0, -30)
+
+[node name="obj_a_SWIwall01_144" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -31)
+
+[node name="obj_a_SWIwall01_146" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -30)
+
+[node name="obj_a_SWIwall02_148" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -37)
+
+[node name="obj_a_SWIwall02_149" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -46)
+
+[node name="obj_a_SWIwall02_152" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -43)
+
+[node name="obj_a_SWIwall02_158" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -60)
+
+[node name="obj_a_SWIwall02_159" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -57)
+
+[node name="obj_a_SWIwall02_163" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -66)
+
+[node name="obj_a_SWIwall01_164" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -71)
+
+[node name="obj_a_SWIwall01_165" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -70)
+
+[node name="obj_a_SWIwall01_166" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -50)
+
+[node name="obj_a_SWIwall01_167" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -50)
+
+[node name="obj_a_SWIwall01_168" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 76, 0, -51)
+
+[node name="obj_a_SWIwall01_169" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -35.5)
+
+[node name="obj_a_SWIwall01_173" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -31.5)
+
+[node name="obj_a_SWIwall01_174" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -24)
+
+[node name="obj_a_SWIwall01_175" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -27.5)
+
+[node name="obj_a_SWIwall01_172" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -37.5)
+
+[node name="obj_a_SWIwall01_176" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -41.5)
+
+[node name="obj_a_SWIwall01_177" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -45.5)
+
+[node name="obj_a_SWIwall01_178" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -49.5)
+
+[node name="obj_a_SWIwall01_179" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -34)
+
+[node name="obj_a_SWIwall01_180" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -59.5)
+
+[node name="obj_a_SWIwall01_181" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -55.5)
+
+[node name="obj_a_SWIwall01_182" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -51.5)
+
+[node name="obj_a_SWIwall01_183" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 90, 0, -63)
+
+[node name="obj_a_SWIwall01_184" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 76, 0, -63)
+
+[node name="obj_a_SWIwall02_186" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, 0, -68)
+
+[node name="obj_a_SWIwall02_187" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, -1e-06, -65)
+
+[node name="obj_a_SWIwall02_188" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, -1e-06, -62)
+
+[node name="obj_a_SWIwall02_189" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, 1e-06, -59)
+
+[node name="obj_a_SWIwall02_190" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, 0, -56)
+
+[node name="obj_a_SWIwall02_191" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, 0, -53)
+
+[node name="obj_a_SWIwall02_192" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 69, 0, -50)
+
+[node name="obj_a_SWIwall01_185" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 69, 0, -49)
+
+[node name="obj_a_SWIwall02_193" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 62, 0, -49)
+
+[node name="obj_a_SWIwall02_196" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 65, 0, -49)
+
+[node name="obj_a_SWIwall01_198" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 68, 0, -49)
+
+[node name="obj_a_SWIwall02_04_199" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 69, 0, -49)
+
+[node name="obj_a_SWIwall02_200" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -36)
+
+[node name="obj_a_SWIwall02_201" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -36)
+
+[node name="obj_a_SWIwall02_202" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -36)
+
+[node name="obj_a_SWIwall02_203" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 38, 0, -36)
+
+[node name="obj_a_SWIwall02_204" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -36)
+
+[node name="obj_a_SWIwall01_205" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 29, 0, -50)
+
+[node name="obj_a_SWIwall01_206" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 33, 0, -50)
+
+[node name="obj_a_SWIwall01_207" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -50)
+
+[node name="obj_a_SWIwall01_208" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 1e-06, -50)
+
+[node name="obj_a_SWIwall01_209" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, -1e-06, -50)
+
+[node name="obj_a_SWIwall02_210" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 32, 0, -36)
+
+[node name="obj_a_SWIwall01_211" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 44, 0, -36)
+
+[node name="obj_a_SWIwall01_212" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 45, 0, -36)
+
+[node name="obj_a_SWIwall01_213" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -1e-06, 0, 1, -0, 1e-06, -0, -1, 49, 0, -36)
+
+[node name="obj_a_SWIwall01_214" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 48, 0, -36)
+
+[node name="obj_a_SWIwall01_215" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 49, 0, -36)
+
+[node name="obj_a_SWIwall02_216" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -36)
+
+[node name="obj_a_SWIwall02_217" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -39)
+
+[node name="obj_a_SWIwall02_218" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -42)
+
+[node name="obj_a_SWIwall02_219" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -45)
+
+[node name="obj_a_SWIwall02_220" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -48)
+
+[node name="obj_a_SWIwall02_221" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(-1e-06, 0, 1, 0, 1, -0, -1, -0, -1e-06, 50, 0, -51)
+
+[node name="obj_a_SWIwall01_222" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 50, 0, -54)
+
+[node name="obj_a_SWIwall02_04_223" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 50, 0, -36)
+
+[node name="obj_a_SWIwall02_04_224" parent="Props" instance=ExtResource("ext_31")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 62, 0, -49)
+
+[node name="obj_a_SWIwall02_225" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 62, 0, -52)
+
+[node name="obj_a_SWIwall02_226" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1e-06, 0, -1, 0, 1, -0, 1, -0, 1e-06, 62, 0, -55)
+
+[node name="obj_a_SCboard02_227" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 87.4, 1.2, -64)
+
+[node name="obj_a_SWIwall01_228" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88, 0, -64)
+
+[node name="obj_a_SCboard02_229" parent="Props" instance=ExtResource("ext_45")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 87, 1.2, -50)
+
+[node name="obj_a_SWIwall02_230" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 70, 0, -72)
+
+[node name="obj_a_SWIwall02_231" parent="Props" instance=ExtResource("ext_28")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 73, 0, -72)
+
+[node name="obj_a_SWIwall01_233" parent="Props" instance=ExtResource("ext_22")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 6, 1e-06, -44)
+
+[node name="obj_c_SWIchair06_425" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -39)
+
+[node name="obj_c_SWIchair06_426" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -39)
+
+[node name="obj_c_SWIchair06_427" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -39)
+
+[node name="obj_c_SWIchair06_531" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -41)
+
+[node name="obj_c_SWIchair06_533" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -41)
+
+[node name="obj_c_SWIchair06_545" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -41)
+
+[node name="obj_c_SWIchair06_563" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -44)
+
+[node name="obj_c_SWIchair06_564" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -44)
+
+[node name="obj_c_SWIchair06_571" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -44)
+
+[node name="obj_c_SWIchair06_574" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 30, 0, -46)
+
+[node name="obj_c_SWIchair06_577" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 31, 0, -46)
+
+[node name="obj_c_SWIchair06_617" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 32, 0, -46)
+
+[node name="obj_c_SWIchair06_627" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -41)
+
+[node name="obj_c_SWIchair06_628" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -39)
+
+[node name="obj_c_SWIchair06_629" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36, 0, -39)
+
+[node name="obj_c_SWIchair06_630" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36, 0, -41)
+
+[node name="obj_c_SWIchair06_631" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -41)
+
+[node name="obj_c_SWIchair06_632" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -39)
+
+[node name="obj_c_SWIchair06_704" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -44)
+
+[node name="obj_c_SWIchair06_705" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36, 0, -44)
+
+[node name="obj_c_SWIchair06_706" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -44)
+
+[node name="obj_c_SWIchair06_707" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 35, 0, -46)
+
+[node name="obj_c_SWIchair06_708" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 36, 0, -46)
+
+[node name="obj_c_SWIchair06_709" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 37, 0, -46)
+
+[node name="obj_c_SWIchair06_710" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -39)
+
+[node name="obj_c_SWIchair06_711" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -39)
+
+[node name="obj_c_SWIchair06_712" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 42, 0, -39)
+
+[node name="obj_c_SWIchair06_713" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -41)
+
+[node name="obj_c_SWIchair06_714" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -41)
+
+[node name="obj_c_SWIchair06_715" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 42, 0, -41)
+
+[node name="obj_c_SWIchair06_716" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -44)
+
+[node name="obj_c_SWIchair06_717" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -44)
+
+[node name="obj_c_SWIchair06_718" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 42, 0, -44)
+
+[node name="obj_c_SWIchair06_719" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 40, 0, -46)
+
+[node name="obj_c_SWIchair06_720" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 41, 0, -46)
+
+[node name="obj_c_SWIchair06_721" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 42, 0, -46)
+
+[node name="obj_c_SWIchair06_722" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -44)
+
+[node name="obj_c_SWIchair06_723" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46, 0, -44)
+
+[node name="obj_c_SWIchair06_724" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 47, 0, -44)
+
+[node name="obj_c_SWIchair06_725" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -46)
+
+[node name="obj_c_SWIchair06_726" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46, 0, -46)
+
+[node name="obj_c_SWIchair06_727" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 47, 0, -46)
+
+[node name="obj_c_SWIchair06_728" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -41)
+
+[node name="obj_c_SWIchair06_729" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46, 0, -41)
+
+[node name="obj_c_SWIchair06_730" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 47, 0, -41)
+
+[node name="obj_c_SWIchair06_731" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -39)
+
+[node name="obj_c_SWIchair06_732" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 46, 0, -39)
+
+[node name="obj_c_SWIchair06_733" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 47, 0, -39)
+
+[node name="obj_c_SWIchair01_768" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -31)
+
+[node name="obj_c_SWIchair01_769" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -31.4)
+
+[node name="obj_c_SWIchair01_770" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 89, 0, -31.8)
+
+[node name="obj_c_SWIchair01_771" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.4, 0, -31.6)
+
+[node name="obj_c_SWIchair01_772" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.4, 0, -31.2)
+
+[node name="obj_c_SWIchair01_774" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 88.4, 0, -30.8)
+
+[node name="obj_c_SWIchair01_775" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.8, 0, -31.3)
+
+[node name="obj_c_SWIchair01_776" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 87.8, 0, -31.7)
+
+[node name="obj_c_SWIchair01_778" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88.9, 1e-06, -30.8)
+
+[node name="obj_c_SWIchair01_779" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88.5, 1e-06, -30.8)
+
+[node name="obj_c_SWIchair01_780" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 88.3, -1e-06, -31.4)
+
+[node name="obj_c_SWIchair06_781" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 89, -1e-06, -32.2)
+
+[node name="obj_c_SWIchair06_782" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.6, 0, -32.1)
+
+[node name="obj_c_SWIchair06_783" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 88.2, 0, -32.1)
+
+[node name="obj_c_SWIchair06_784" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87.8, 0, -32.1)
+
+[node name="obj_c_SWIchair06_940" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 27.5, 0, -42.5)
+
+[node name="obj_c_SWIchair06_986" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87.2, 0, -32.3)
+
+[node name="obj_c_SWIchair06_987" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86.8, 0, -31.9)
+
+[node name="obj_c_SWIchair06_988" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86.8, 0, -32.3)
+
+[node name="obj_c_SWIchair06_989" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87, 0.5, -32.1)
+
+[node name="obj_c_SWIchair06_990" parent="Props" instance=ExtResource("ext_83")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 87, 0, -31)
+
+[node name="trigger_c_SWIchair01_439" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_442" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_465" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -47.5)
+
+[node name="trigger_c_SWIchair01_466" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -49.5)
+
+[node name="trigger_c_SWIchair01_467" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -51.5)
+
+[node name="trigger_c_SWIchair01_468" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -51.5)
+
+[node name="trigger_c_SWIchair01_469" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -49.5)
+
+[node name="trigger_c_SWIchair01_470" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -47.5)
+
+[node name="trigger_c_SWIchair01_449" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_461" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -51.5)
+
+[node name="trigger_c_SWIchair01_462" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -49.5)
+
+[node name="trigger_c_SWIchair01_463" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 1e-06, -47.5)
+
+[node name="trigger_c_SWIchair01_464" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 1e-06, -47.5)
+
+[node name="trigger_c_SWIchair01_471" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -49.5)
+
+[node name="trigger_c_SWIchair01_472" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -51.5)
+
+[node name="trigger_c_SWIchair01_473" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_493" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -39.6)
+
+[node name="trigger_c_SWIchair01_498" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -39.6)
+
+[node name="trigger_c_SWIchair01_499" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -39.6)
+
+[node name="trigger_c_SWIchair01_500" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -39.6)
+
+[node name="trigger_c_SWIchair01_501" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -37.6)
+
+[node name="trigger_c_SWIchair01_502" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -37.6)
+
+[node name="trigger_c_SWIchair01_503" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -37.6)
+
+[node name="trigger_c_SWIchair01_504" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -37.6)
+
+[node name="trigger_c_SWIchair01_505" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -35.6)
+
+[node name="trigger_c_SWIchair01_506" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -35.6)
+
+[node name="trigger_c_SWIchair01_507" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -35.6)
+
+[node name="trigger_c_SWIchair01_508" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -35.6)
+
+[node name="trigger_c_SWIchair01_509" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 7, 0, -33.6)
+
+[node name="trigger_c_SWIchair01_510" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 9, 0, -33.6)
+
+[node name="trigger_c_SWIchair01_511" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 12, 0, -33.6)
+
+[node name="trigger_c_SWIchair01_512" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 14, 0, -33.6)
+
+[node name="trigger_c_SWIchair01_612" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -45.5)
+
+[node name="trigger_c_SWIchair01_613" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -45.5)
+
+[node name="trigger_c_SWIchair01_614" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -45.5)
+
+[node name="trigger_c_SWIchair01_615" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -45.5)
+
+[node name="trigger_c_SWIchair01_616" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -59.5)
+
+[node name="trigger_c_SWIchair01_618" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -59.5)
+
+[node name="trigger_c_SWIchair01_619" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -59.5)
+
+[node name="trigger_c_SWIchair01_620" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -59.5)
+
+[node name="trigger_c_SWIchair01_621" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -57.5)
+
+[node name="trigger_c_SWIchair01_622" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -57.5)
+
+[node name="trigger_c_SWIchair01_623" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -57.5)
+
+[node name="trigger_c_SWIchair01_624" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, -2e-06, -57.5)
+
+[node name="trigger_c_SWIchair01_654" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -55.5)
+
+[node name="trigger_c_SWIchair01_655" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 2e-06, -55.5)
+
+[node name="trigger_c_SWIchair01_656" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -55.5)
+
+[node name="trigger_c_SWIchair01_657" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -55.5)
+
+[node name="trigger_c_SWIchair01_659" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_660" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_661" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 2e-06, -53.5)
+
+[node name="trigger_c_SWIchair01_662" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -53.5)
+
+[node name="trigger_c_SWIchair01_663" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -43.5)
+
+[node name="trigger_c_SWIchair01_664" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -43.5)
+
+[node name="trigger_c_SWIchair01_665" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -43.5)
+
+[node name="trigger_c_SWIchair01_666" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -43.5)
+
+[node name="trigger_c_SWIchair01_667" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -41.5)
+
+[node name="trigger_c_SWIchair01_668" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -41.5)
+
+[node name="trigger_c_SWIchair01_669" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -41.5)
+
+[node name="trigger_c_SWIchair01_670" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -41.5)
+
+[node name="trigger_c_SWIchair01_671" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 79, 0, -39.5)
+
+[node name="trigger_c_SWIchair01_672" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 81, 0, -39.5)
+
+[node name="trigger_c_SWIchair01_673" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 84, 0, -39.5)
+
+[node name="trigger_c_SWIchair01_674" parent="Props" instance=ExtResource("ext_84")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 86, 0, -39.5)
+
+[node name="trigger_c_SWIchair05a_1052" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 67, 0, -33)
+
+[node name="trigger_c_SWIchair05a_1053" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 65, 0, -33)
+
+[node name="trigger_c_SWIchair05a_1054" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 63, 0, -31)
+
+[node name="trigger_c_SWIchair05a_1059" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -31)
+
+[node name="trigger_c_SWIchair05a_1060" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 63, 0, -43)
+
+[node name="trigger_c_SWIchair05a_1061" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -43)
+
+[node name="trigger_c_SWIchair05a_1062" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 65, 0, -45)
+
+[node name="trigger_c_SWIchair05a_1063" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, 1e-06, 0, 1, -0, -1e-06, -0, 1, 67, 0, -45)
+
+[node name="trigger_c_SWIchair05a_1012" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 67, -2e-06, -39)
+
+[node name="trigger_c_SWIchair05a_1071" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 65, 0, -39)
+
+[node name="trigger_c_SWIchair05a_1072" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 65, 0, -37)
+
+[node name="trigger_c_SWIchair05a_1073" parent="Props" instance=ExtResource("ext_85")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 63, 0, -37)

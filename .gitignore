@@ -26,3 +26,6 @@ ytref
 
 # OS
 .DS_Store
+
+# Probe/eval artifacts
+reports/

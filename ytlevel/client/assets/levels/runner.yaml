@@ -1,0 +1,12 @@
+# Avatar runner config — default outfits (part variant codes) + movement.
+male_hair: M0203
+male_upper: M0001
+male_lower: M0001
+male_hands: M0004
+male_feet: M0001
+female_hair: F0101
+female_upper: F0001
+female_lower: F0001
+female_hands: F0004
+female_feet: F0001
+move_speed: 4.0

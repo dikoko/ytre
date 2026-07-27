@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_bookcase02.glb" id="ext_1"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_fd05door01.glb" id="ext_2"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_fd05door02.glb" id="ext_3"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_fd05stair.glb" id="ext_4"]
+[ext_resource type="PackedScene" path="res://assets/props/models/active/a_bookcase04.glb" id="ext_5"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWAbari05.glb" id="ext_6"]
+[ext_resource type="PackedScene" path="res://assets/props/models/artificial/a_SWAbari04.glb" id="ext_7"]
+[ext_resource type="PackedScene" path="res://assets/props/models/pointlight/light.glb" id="ext_8"]
+[ext_resource type="PackedScene" path="res://assets/props/models/effect/light.glb" id="ext_9"]
+[ext_resource type="Script" path="res://scripts/terrain_loader.gd" id="ext_10"]
+[ext_resource type="Script" path="res://scripts/fly_camera.gd" id="ext_11"]
+[ext_resource type="Script" path="res://scripts/map_editor.gd" id="ext_12"]
+[ext_resource type="Script" path="res://scripts/prop_lighting.gd" id="ext_13"]
+
+[sub_resource type="Environment" id="env_1"]
+background_mode = 1
+background_color = Color(0.6, 0.75, 0.9, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7, 0.7, 0.75, 1)
+ambient_light_energy = 0.6
+
+[node name="FD000105" type="Node3D"]
+script = ExtResource("ext_12")
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+script = ExtResource("ext_10")
+metadata/heightmap_path = "res://assets/maps/FD000105/FD000105.png"
+metadata/tilemap_path = "res://assets/maps/FD000105/FD000105_tilemap.png"
+metadata/tiles_dir = "res://assets/maps/FD000105/FD000105_tiles"
+metadata/visibility_path = "res://assets/maps/FD000105/FD000105_visibility.png"
+metadata/sun_direction = Vector3(-0.11, -1, 0.31)
+metadata/sun_diffuse = Color(0.372549, 0.372549, 0.372549, 1)
+metadata/sun_ambient = Color(0.8, 0.6, 0, 1)
+metadata/point_light_count = 1
+metadata/point_lights = PackedFloat32Array(44.5532, 3, -55.5365, 1, 0.501961, 0, 1, 0, 0, 15, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+script = ExtResource("ext_11")
+transform = Transform3D(1, 0, 0, 0, 0.707, 0.707, 0, -0.707, 0.707, 75, 60, -40)
+current = true
+fov = 60.0
+far = 500.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env_1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 50, 50, 50)
+light_energy = 0.8
+shadow_enabled = true
+shadow_opacity = 0.4
+
+[node name="Props" type="Node3D" parent="."]
+script = ExtResource("ext_13")
+metadata/sun_direction = Vector3(-0.11, -1, 0.31)
+metadata/sun_diffuse = Color(0.372549, 0.372549, 0.372549, 1)
+metadata/sun_ambient = Color(0.8, 0.6, 0, 1)
+metadata/point_light_count = 1
+metadata/point_lights = PackedFloat32Array(44.5532, 3, -55.5365, 1, 0.501961, 0, 1, 0, 0, 15, 0, 1, 0)
+
+[node name="obj_a_fd05door01_0" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-1, 0, -0, 0, 1, -0, -0, -0, -1, 45, -2e-06, -79)
+
+[node name="obj_a_fd05door01_1" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-0.809107, 0, 0.587661, 0, 1, -0, -0.587661, -0, -0.809107, 58.5, 2e-06, -74.6)
+
+[node name="obj_a_fd05door01_2" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-0.309309, 0, 0.950962, 0, 1, -0, -0.950962, -0, -0.309309, 66.8, 0, -63.2)
+
+[node name="obj_a_fd05door01_3" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0.30858, 0, 0.951199, 0, 1, -0, -0.951199, -0, 0.30858, 66.8, 0, -49)
+
+[node name="obj_a_fd05door01_4" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0.808656, 0, 0.588281, 0, 1, -0, -0.588281, -0, 0.808656, 58.5, 0, -37.6)
+
+[node name="obj_a_fd05door01_5" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0.809107, 0, -0.587661, 0, 1, -0, 0.587661, -0, 0.809107, 31.6, 0, -37.5)
+
+[node name="obj_a_fd05door01_6" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(0.309309, 0, -0.950962, 0, 1, -0, 0.950962, -0, 0.309309, 23.2, 0, -48.9)
+
+[node name="obj_a_fd05door01_7" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-0.308579, 0, -0.951199, 0, 1, -0, 0.951199, -0, -0.308579, 23.1, 0, -63.1)
+
+[node name="obj_a_fd05door01_8" parent="Props" instance=ExtResource("ext_2")]
+transform = Transform3D(-0.808656, 0, -0.588281, 0, 1, -0, 0.588281, -0, -0.808656, 31.5, 0, -74.6)
+
+[node name="obj_a_bookcase02_9" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -24.4)
+
+[node name="obj_a_bookcase02_10" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -22.4)
+
+[node name="obj_a_bookcase02_11" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -20.4)
+
+[node name="obj_a_bookcase02_12" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -18.4)
+
+[node name="obj_a_bookcase02_13" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -16.4)
+
+[node name="obj_a_bookcase02_14" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -14.4)
+
+[node name="obj_a_bookcase02_15" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -12.4)
+
+[node name="obj_a_bookcase02_16" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -10.4)
+
+[node name="obj_a_bookcase02_17" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -8.4)
+
+[node name="obj_a_bookcase02_18" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 42, 3.2, -6.4)
+
+[node name="obj_a_bookcase02_19" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -24.4)
+
+[node name="obj_a_bookcase02_20" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -22.4)
+
+[node name="obj_a_bookcase02_21" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -20.4)
+
+[node name="obj_a_bookcase02_22" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -18.4)
+
+[node name="obj_a_bookcase02_23" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -16.4)
+
+[node name="obj_a_bookcase02_24" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -14.4)
+
+[node name="obj_a_bookcase02_25" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -12.4)
+
+[node name="obj_a_bookcase02_26" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -10.4)
+
+[node name="obj_a_bookcase02_27" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -8.4)
+
+[node name="obj_a_bookcase02_28" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(0, 0, 1, 0, 1, -0, -1, -0, 0, 47, 3.2, -6.4)
+
+[node name="obj_a_bookcase02_29" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 43, 3.2, -6.4)
+
+[node name="obj_a_bookcase02_30" parent="Props" instance=ExtResource("ext_1")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 3.2, -6.4)
+
+[node name="obj_a_fd05door02_31" parent="Props" instance=ExtResource("ext_3")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 45, 0, -33.3)
+
+[node name="obj_a_fd05stair_32" parent="Props" instance=ExtResource("ext_4")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 44.5, 0, -55.5)
+
+[node name="trigger_a_bookcase04_33" parent="Props" instance=ExtResource("ext_5")]
+transform = Transform3D(1, 0, -0, 0, 1, -0, -0, -0, 1, 44.5, -0.1, -55.6)
