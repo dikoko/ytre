@@ -4,6 +4,24 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.6.1] - 2026-07-26
+
+### Added
+- **Auction house design specification**
+  (`docs/original/design/auction-system.md`) — a complete, implementable
+  write-up of the original game's auction house: listing and bid data
+  models, listing/bid state machines, the category filter encoding, fee
+  and timer rules (6/12/24 h durations, tiered listing fee, 72 h claim
+  window), the client/server protocol, the auction-window UX, and a list
+  of the original's weak points worth fixing rather than reproducing.
+
+### Changed
+- **Documentation reorganized** under `docs/original/`, split into
+  `design/` (game-system specifications) and `protocol/` (network
+  protocol), with an index at `docs/original/README.md`. The legacy
+  network protocol document moved to
+  `docs/original/protocol/LEGACY_PROTOCOL.md`.
+
 ## [0.6.0] - 2026-07-26
 
 First public release of **YTLevel** — the level/map viewer and its export

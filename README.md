@@ -2,7 +2,7 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
-**Current release: 0.6.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+**Current release: 0.6.1** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
 
 ## Projects
 
@@ -37,6 +37,7 @@ ytre/
 ├── ytavatar/    Godot 4 client — model viewer + game-ready asset library
 ├── ytlevel/     Godot 4 client — level tool + exported map scenes
 ├── tools/       Asset conversion pipelines and developer tooling
+├── docs/        Reconstructed documentation of the original game's systems
 ├── refs/        Original Yogurting game assets (read-only reference data)
 ├── LICENSE      CC BY-NC-SA 4.0 (this project's code and original work)
 └── NOTICE.md    IP attribution and third-party-asset terms
@@ -56,6 +57,10 @@ Developer tooling. Currently contains a single subproject:
 
 - [`tools/avatar_export/`](tools/avatar_export/) — Python (uv-managed) pipeline that converts Yogurting's proprietary `.TMD`, `.mlib`, `.PRT`, `.SWP`, and `.BMP` files from `refs/` into the GLB / PNG / JSON assets consumed by the Godot client. Includes 19 numbered pipeline scripts (export + verification gates), debug visualizers, and a pytest suite. See [`tools/avatar_export/README.md`](tools/avatar_export/README.md).
 - [`tools/level_export/`](tools/level_export/) — Python pipeline that converts the terrain data (`.qqq`, `.ocg`, `.cvs`, `.tcg`, `.wtr`, `.plt`, height BMPs) and prop TMDs from `refs/` into the map scenes, tile textures, GLB props, and navmesh/wall blobs consumed by the level tool, plus a map evaluation harness (data checks + rendered-capture detectors).
+
+### [`docs/`](docs/) — reconstructed documentation
+
+Write-ups of how the original game worked, for rebuilding its systems faithfully. [`docs/original/design/`](docs/original/design/) holds game-system specifications (rules, data models, state machines, UI flows) and [`docs/original/protocol/`](docs/original/protocol/) the network protocol. See [`docs/original/README.md`](docs/original/README.md) for the index.
 
 ### [`refs/`](refs/) — original game assets
 

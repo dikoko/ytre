@@ -24,7 +24,7 @@ It covers only the legacy 2006 binary protocol.
 - **Era**: 2006 retail client/server
 - **Transport**: Raw TCP sockets (Windows IOCP on the server)
 - **Encryption**: AES-128-CBC on the packet **body** only (header stays plaintext for routing)
-- **Serialization**: Custom binary format (`MD::MSGDAT<T>`) with 4-byte alignment
+- **Serialization**: Custom binary struct format with 4-byte alignment
 - **Header**: 6 bytes (4-byte length + 2-byte message ID)
 - **Version**: `MSG_VERSION = 2006101201`
 
@@ -42,7 +42,8 @@ It covers only the legacy 2006 binary protocol.
 - **MsgID**: WORD (little-endian) — message type identifier
 - **Body**: AES-128 encrypted, custom binary serialization
 - The 6-byte header (length + MsgID) is **not** encrypted, so the server can route packets
-  without decrypting the body. `GNMsgDataCheck` validates packet boundaries.
+  without decrypting the body; a boundary check on the length field guards against
+  truncated or oversized packets.
 
 ---
 
@@ -74,12 +75,12 @@ const unsigned char _ENC_KEY[16] = {
 
 ## Serialization
 
-The original protocol uses custom binary serialization (`MD::MSGDAT<T>`) with:
+The original protocol uses a custom binary struct serialization with:
 
 - 4-byte struct alignment (`#pragma pack(push, 4)`)
 - Little-endian byte order
-- Fixed-size strings using `GNWStrN<N>` templates
-- Variable-length arrays using `MD::Vector<T>` and `MD::List<T>`
+- Fixed-size wide-character string fields with a compile-time capacity
+- Variable-length arrays and lists, length-prefixed
 
 ---
 
@@ -210,8 +211,8 @@ struct MSG_CHECK_VERSION_NTF {
 
 ```cpp
 struct MSG_ERR_MSG_NTF {
-    MD::MSG_INFO msgInfo;
-    MD::String msg;
+    MsgInfo      msgInfo;
+    String     msg;
 };
 ```
 
@@ -267,7 +268,7 @@ struct MSG_ENTER_ATS_NTF {
 
 ```cpp
 struct MSG_GAME_UPDATE_ITEM_NTF {
-    MD::Vector<_ITEM> items;
+    Vector<_ITEM> items;
 };
 ```
 
@@ -277,7 +278,7 @@ struct MSG_GAME_UPDATE_ITEM_NTF {
 
 ```cpp
 struct MSG_GAME_REMOVE_ITEM_NTF {
-    MD::Vector<_ITEM> items;
+    Vector<_ITEM> items;
 };
 ```
 
@@ -325,8 +326,8 @@ struct MSG_GAME_NPC_DIALOG_EX_RESPONSE_NTF {
     int idNpc;
     int idDialog;
     int cateCutIn;
-    MD::String sDialogText;
-    MD::Vector<DIALOG_SELECTION> vecSelectionText;
+    String     sDialogText;
+    Vector<DIALOG_SELECTION> vecSelectionText;
     int nTimeOut;
     int idChoiceOnTimeOut;
     BOOL bShowCloseButton;
@@ -389,7 +390,7 @@ struct MSG_SVR_INFO_NTF {
     WORD snWorld;
     WORD typeServer;
     WORD snServer;
-    MD::String strName;
+    String     strName;
 };
 ```
 
