@@ -25,10 +25,17 @@ episode, fly around with the explore camera, click portals to travel, or press
 - **Map scenes** for the school maps and the first episode
   (`client/scenes/maps/`, assets under `client/assets/maps/`): terrain with
   the original tile textures, ~5,200 placed props, water surfaces and beach
-  shore-waves, fixed-function sun and point lighting, per-map navigation
-  mesh and wall grid for Run mode.
-- **1,576 static prop models** (`client/assets/props/`) exported from TMD
-  with embedded textures.
+  shore-waves, fixed-function sun and point lighting, and per-map
+  navigation data for Run mode (navigation mesh, wall grid, and the
+  movement grid — the same walkability data the original game used).
+- **1,576 prop models** (`client/assets/props/`) exported from TMD with
+  embedded textures — 187 of them with their authored keyframe animation
+  (looping fires, portals, crystals) and per-object alpha fade curves.
+- **Portal travel effects**: the warp depart/arrive puffs and sounds play
+  when the Run-mode avatar takes a portal.
+- **Camera occlusion fading** in Run mode: props that block the camera's
+  view of the character ghost to half-transparent (mesh-accurate, with
+  anti-flicker hysteresis).
 - **The export pipeline** (`../tools/level_export/`) that produced all of it
   from the original data in `../refs/` — any remaining map of the 325-map
   fleet can be exported locally.
@@ -48,8 +55,11 @@ python scripts/30_export_map.py SF001001
 # Export terrain tiles from .cvs/.tcg data
 python scripts/31_export_terrain.py SF001001
 
-# Export per-map navmesh + wall grid blobs
+# Export per-map navigation blobs (navmesh, wall grid, movement grid)
 python scripts/34_export_navmesh.py
+
+# Re-export the animated props (all 187 in one pass)
+python scripts/22_export_props.py --animated
 
 # Regenerate viewer heightmap PNGs from {code}_h.bmp
 python scripts/35_export_heightmaps.py --all

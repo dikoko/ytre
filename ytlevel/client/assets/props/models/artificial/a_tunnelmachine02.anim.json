@@ -1,0 +1,46 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "a_tunnelmachine02_obj3": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    7.0,
+    0.990384578704834
+   ],
+   [
+    15.0,
+    0.0
+   ]
+  ],
+  "a_tunnelmachine02_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    15.0,
+    0.0
+   ]
+  ]
+ }
+}

@@ -42,6 +42,12 @@ var minimap: MinimapOverlay
 
 var _camera: Camera3D
 var portal_markers: PortalMarkers
+var warp_effects: WarpEffects
+var occlusion: CameraOcclusion
+# Travel-commit latch: the depart puff plays for DEPART_DELAY before the map
+# swaps; dwell keeps firing during that window and must not re-trigger.
+var _warp_traveling := false
+const DEPART_DELAY := 0.8
 
 # Deferred portal-click travel: the FIRST press of a double-click sequence
 # also reports double_click == false, so a plain "pressed and not double_click"
@@ -70,10 +76,17 @@ func _ready() -> void:
 	portal_markers = PortalMarkers.new()
 	portal_markers.name = "PortalMarkers"
 	add_child(portal_markers)
+	warp_effects = WarpEffects.new()
+	warp_effects.name = "WarpEffects"
+	add_child(warp_effects)
+	occlusion = CameraOcclusion.new()
+	occlusion.name = "CameraOcclusion"
+	add_child(occlusion)
 	runner = AvatarRunner.new()
 	runner.name = "AvatarRunner"
 	add_child(runner)
 	runner.setup(height_service, _camera, catalog.load_runner_config(), nav_service)
+	occlusion.setup(_camera, runner)
 	runner.set_portal_markers(portal_markers)
 	runner.portal_entered.connect(_on_portal_travel)
 	runner.portal_dwelling.connect(_on_portal_dwelling)
@@ -97,6 +110,9 @@ func load_level(code: String) -> void:
 	if code.is_empty() or not catalog.is_available(code):
 		return
 	var from_code := level_code
+	# Old-map puffs die with the map — a depart puff must not float at its
+	# source coordinates inside the destination map.
+	warp_effects.clear()
 	if map_host.load_map(code):
 		level_code = code
 		height_service.load_map(code)
@@ -104,13 +120,24 @@ func load_level(code: String) -> void:
 		# Feed the map's FF sun (Terrain metadata, same source the prop and
 		# terrain shaders use) to the runner so the avatar is lit to match.
 		var terrain := map_host.get_terrain()
+		var sun := {}
 		if terrain != null and terrain.has_meta("sun_direction"):
 			runner.set_sun(terrain.get_meta("sun_direction"),
 					terrain.get_meta("sun_diffuse", Color(1, 1, 1)),
 					terrain.get_meta("sun_ambient", Color(1, 1, 1)))
+			sun = {
+				"direction": terrain.get_meta("sun_direction"),
+				"diffuse": terrain.get_meta("sun_diffuse", Color(1, 1, 1)),
+				"ambient": terrain.get_meta("sun_ambient", Color(1, 1, 1)),
+			}
 		(_camera as ExploreCamera).setup(height_service)
 		(_camera as ExploreCamera).reset_view()
-		portal_markers.build(catalog.get_level(code), catalog, height_service)
+		portal_markers.build(catalog.get_level(code), catalog, height_service, sun)
+		warp_effects.set_sun(sun)
+		# Index only the CURRENT map's props (map_host also hosts prefetched
+		# neighbours — their meshes must not register as occluders).
+		occlusion.rebuild(map_host.current_map.get_node_or_null("Props")
+				if map_host.current_map != null else null)
 		minimap.show_map(code, catalog.get_level(code))
 		_select_containing_group(code)
 		_prefetch_neighbors()
@@ -119,6 +146,10 @@ func load_level(code: String) -> void:
 			if spawn == Vector3.INF:
 				spawn = _default_spawn(code)
 			runner.enter(catalog.get_level(code), spawn)
+			# Materialize puff on arrival — only for actual travel, not the
+			# initial entry into Run mode on the current map.
+			if not from_code.is_empty() and from_code != code:
+				warp_effects.play_arrive(runner.avatar_transform(), code)
 		_sync_gui()
 
 
@@ -339,7 +370,9 @@ func _toggle_run() -> void:
 		cam.set_top_down(false)   # never hand the runner an ortho projection
 		cam.active = false
 		runner.enter(catalog.get_level(level_code), _default_spawn(level_code))
+		occlusion.set_active(true)
 	else:
+		occlusion.set_active(false)
 		runner.exit()
 		if _saved_cam_top_down:
 			cam.set_top_down(true)   # restores projection + recomputes size...
@@ -367,6 +400,8 @@ func _on_portal_dwelling(dest: String) -> void:
 
 
 func _on_portal_travel(dest: String) -> void:
+	if _warp_traveling:
+		return
 	toast_label.text = "→ " + catalog.display_name(dest)
 	toast_label.visible = true
 	_toast_serial += 1
@@ -375,6 +410,17 @@ func _on_portal_travel(dest: String) -> void:
 		if serial == _toast_serial:
 			toast_label.visible = false
 	)
+	# Run-mode travel plays the depart puff at the avatar and holds the map
+	# swap briefly so the dissolve reads at the source — the original's
+	# depart-skill-then-warp sequence. Explore-mode click travel has no
+	# avatar, so it swaps immediately as before.
+	if run_mode and runner != null and runner.active:
+		_warp_traveling = true
+		warp_effects.play_depart(runner.avatar_transform(), level_code)
+		runner.set_process(false)   # freeze mid-dissolve; dwell stops too
+		await get_tree().create_timer(DEPART_DELAY).timeout
+		runner.set_process(true)
+		_warp_traveling = false
 	load_level(dest)
 
 

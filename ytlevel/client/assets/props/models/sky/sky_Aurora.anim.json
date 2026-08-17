@@ -1,0 +1,24 @@
+{
+ "clips": {
+  "default": {
+   "end": 4800.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 4800.0,
+ "visibility": {
+  "sky_Aurora_obj0": [
+   [
+    0.0,
+    0.800000011920929
+   ],
+   [
+    4800.0,
+    0.800000011920929
+   ]
+  ]
+ }
+}

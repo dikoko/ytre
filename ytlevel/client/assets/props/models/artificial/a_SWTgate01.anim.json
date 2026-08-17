@@ -1,0 +1,18 @@
+{
+ "clips": {
+  "range_0": {
+   "end": 30.0,
+   "loop": false,
+   "start": 1.0
+  },
+  "range_1": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  }
+ },
+ "default_clip": "range_1",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {}
+}

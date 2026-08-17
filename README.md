@@ -2,7 +2,7 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
-**Current release: 0.6.4** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+**Current release: 0.7.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
 
 ## Projects
 
@@ -21,9 +21,9 @@ Avatar, monster, and NPC model viewer and asset pipeline. Converts proprietary g
 
 Level/map viewer and terrain export pipeline. Converts the game's proprietary terrain data (QQQ, OCG, CVS, TCG) and prop models (TMD) to Godot 4 scenes.
 
-- In-game level tool: browse the school and episode maps, fly-camera exploration, portal travel, walkable Run mode with the avatar
-- Terrain with original tile textures, ~5,200 placed props per campus map, water and shore-wave rendering, fixed-function sun/point lighting
-- Navigation-mesh ground contact and wall blocking in Run mode
+- In-game level tool: browse the school and episode maps, fly-camera exploration, portal travel with warp effects, walkable Run mode with the avatar
+- Terrain with original tile textures, ~5,200 placed props per campus map (187 props animated with their authored keyframes), water and shore-wave rendering, fixed-function sun/point lighting
+- Run mode uses the original game's own movement grid for walkability, navigation-mesh ground contact, and camera-occlusion ghosting for props that hide the character
 
 **Quick start:** Open `ytlevel/client/project.godot` in Godot 4.6+, press F5.
 **User guide:** [`ytlevel/docs/user-guide.md`](ytlevel/docs/user-guide.md)

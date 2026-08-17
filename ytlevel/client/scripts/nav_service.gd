@@ -1,12 +1,13 @@
 class_name NavService
 extends RefCounted
-## Navigation mesh + wall grid sampling — the walkable-prop tier.
+## Navigation mesh + wall grid + movement grid sampling.
 ##
 ## Data stays in ORIGINAL (D3D) space exactly as exported; queries take Godot
 ## coordinates and convert at the boundary (dz = -z), so the ported lookup
 ## math is sign-identical to the original and the y it returns is already
 ## Godot Y. Ports the original client's navmesh height lookup (tile-indexed
-## cell walk, plane-equation height) and its wall-grid line-cross test.
+## cell walk, plane-equation height), its wall-grid line-cross test, and its
+## movement attribute grid (the walkability data its pathfinder walks).
 ##
 ## Navmesh heights are true prop surfaces at raw authored heights — the
 ## terrain renderer also draws at raw decoded heights (no offset), so the
@@ -23,6 +24,9 @@ var _tiles := {}                     # Vector2i(x, z) -> PackedInt32Array
 var _wall_w := 0
 var _wall_h := 0
 var _walls := PackedByteArray()
+var _move_w := 0
+var _move_h := 0
+var _move := PackedByteArray()       # SIGNED movement attributes (stored raw)
 
 
 func load_map(code: String) -> bool:
@@ -32,8 +36,13 @@ func load_map(code: String) -> bool:
 	_walls = PackedByteArray()
 	_wall_w = 0
 	_wall_h = 0
+	_move = PackedByteArray()
+	_move_w = 0
+	_move_h = 0
 	var any := _load_navmesh("res://assets/maps/%s/navmesh.bin" % code)
 	if _load_walls("res://assets/maps/%s/walls.bin" % code):
+		any = true
+	if _load_move("res://assets/maps/%s/move.bin" % code):
 		any = true
 	return any
 
@@ -44,6 +53,10 @@ func has_navmesh() -> bool:
 
 func has_walls() -> bool:
 	return _wall_w > 0
+
+
+func has_move_grid() -> bool:
+	return _move_w > 0
 
 
 func _load_navmesh(path: String) -> bool:
@@ -101,6 +114,45 @@ func _load_walls(path: String) -> bool:
 		_wall_h = 0
 		return false
 	return _wall_w > 0
+
+
+func _load_move(path: String) -> bool:
+	var f := FileAccess.open(path, FileAccess.READ)
+	if f == null:
+		return false
+	if f.get_buffer(4).get_string_from_ascii() != "YTMV":
+		push_warning("nav_service: bad magic in %s" % path)
+		return false
+	var version := f.get_32()
+	if version != 1:
+		push_warning("nav_service: %s version %d unsupported" % [path, version])
+		return false
+	_move_w = f.get_16()
+	_move_h = f.get_16()
+	_move = f.get_buffer(_move_w * _move_h)
+	if _move.size() != _move_w * _move_h:
+		push_warning("nav_service: %s truncated (expected %d move bytes, got %d)" %
+				[path, _move_w * _move_h, _move.size()])
+		_move = PackedByteArray()
+		_move_w = 0
+		_move_h = 0
+		return false
+	return _move_w > 0
+
+
+func movable(x: float, z: float) -> bool:
+	## The original's walkability authority (its A* pathfinder walks this
+	## grid; the wall grid is line-of-sight data). Movable iff the SIGNED
+	## attribute byte > 0; out-of-bounds is blocked. Same 1 m
+	## truncated-world-coordinate cell convention as the wall grid.
+	if _move_w == 0:
+		return false
+	var cx := int(x)
+	var cz := int(-z)
+	if cx < 0 or cz < 0 or cx >= _move_w or cz >= _move_h:
+		return false
+	var v := _move[cz * _move_w + cx]
+	return v > 0 and v <= 127   # bytes above 127 are negative attributes
 
 
 func sample(x: float, z: float) -> float:
@@ -166,9 +218,9 @@ func crosses_wall(from_x: float, from_z: float, to_x: float, to_z: float) -> boo
 	if _wall_w == 0:
 		return false
 	# Dominant-axis DDA over cell indices, endpoint-exclusive, skipping the
-	# origin cell, round-half-up on the minor axis — same walk as the
-	# original client. The original omits bounds checks; we clamp instead of
-	# reading out of bounds.
+	# origin cell, round-half-up on the minor axis — matching the original
+	# client's wall line-cross walk. The original omits bounds checks; we
+	# clamp instead of reading out of bounds.
 	var px := int(from_x)
 	var pz := int(-from_z)
 	var tx := int(to_x)

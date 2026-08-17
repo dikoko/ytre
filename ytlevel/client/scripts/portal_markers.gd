@@ -7,10 +7,23 @@ extends Node3D
 const CLICK_RADIUS_PX := 24.0
 const TRAVEL_RADIUS := 1.5
 
+## Gate models PRELOADED, not load()-ed in build(): build runs while
+## map_host has threaded neighbor prefetches in flight, and the gate GLB is
+## also placed as a prop INSIDE map scenes — a sync load() of a resource a
+## worker thread may be loading is the documented engine cache race
+## (map_host hardening 2026-07-26; the 2026-08-12 portal-travel freeze).
+## The whole fleet ships exactly one gate model; a future new model must be
+## added here (an unknown model falls back to the ring, never a sync load).
+const GATE_SCENES := {
+	"p_portal003a": preload("res://assets/props/models/portal/p_portal003a.glb"),
+}
+const PROP_LIGHTING: Script = preload("res://scripts/prop_lighting.gd")
+
 var _portals: Array = []   # [{pos: Vector3, dest: String, label: String}]
 
 
-func build(level: Dictionary, catalog: LevelCatalog, hs: HeightService) -> void:
+func build(level: Dictionary, catalog: LevelCatalog, hs: HeightService,
+		sun: Dictionary = {}) -> void:
 	for c in get_children():
 		c.queue_free()
 	_portals.clear()
@@ -24,24 +37,31 @@ func build(level: Dictionary, catalog: LevelCatalog, hs: HeightService) -> void:
 				else "(destination unknown)"
 		var uid: int = int(p.get("uid", -1))
 		_portals.append({"pos": pos, "dest": dest, "label": label, "uid": uid})
-		add_child(_make_marker(p, pos, label, not dest.is_empty()))
+		add_child(_make_marker(p, pos, label, not dest.is_empty(), sun))
 
 
-func _make_marker(p: Dictionary, pos: Vector3, label: String, known: bool) -> Node3D:
+func _make_marker(p: Dictionary, pos: Vector3, label: String, known: bool,
+		sun: Dictionary) -> Node3D:
 	var root := Node3D.new()
 	root.position = pos
 	var model_file: String = str(p.get("model_file", ""))
 	var mesh_added := false
-	if not model_file.is_empty():
-		for cat in ["portal", "artificial", "active", "structure"]:
-			var glb := "res://assets/props/models/%s/%s.glb" % [cat, model_file]
-			if ResourceLoader.exists(glb):
-				var packed := load(glb) as PackedScene
-				if packed != null:
-					root.add_child(packed.instantiate())
-					mesh_added = true
-					break
-				# Corrupt/unimportable GLB: fall through to the ring below
+	var packed: PackedScene = GATE_SCENES.get(model_file)
+	if packed != null:
+		# A raw instantiate renders the gate's glow materials as opaque
+		# emissive geometry (the "solid white portal") and never plays its
+		# animation. Wrap it in a node running prop_lighting so it gets the
+		# same runtime treatment as in-map props: FF material swap, additive
+		# self-illum pass, and a PropAnimator for clips + fade curves.
+		var lit := Node3D.new()
+		lit.name = "GateModel"
+		lit.set_meta("sun_direction", sun.get("direction", Vector3(0, -1, 0)))
+		lit.set_meta("sun_diffuse", sun.get("diffuse", Color(1, 1, 1)))
+		lit.set_meta("sun_ambient", sun.get("ambient", Color(1, 1, 1)))
+		lit.set_script(PROP_LIGHTING)
+		lit.add_child(packed.instantiate())
+		root.add_child(lit)
+		mesh_added = true
 				# instead of crashing on a null instantiate().
 	if not mesh_added:
 		var ring := MeshInstance3D.new()

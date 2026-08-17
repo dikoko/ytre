@@ -48,6 +48,26 @@ TEXTURE_SEARCH_DIRS: list[Path] = [
 ]
 
 
+# Skill-effect TMDs exported for the viewer (portal warp puffs). OPT-IN:
+# deliberately not part of CATEGORIES/discover_props() — the terrain censuses
+# and the static byte-identity gate must never see them. Sub-project C will
+# widen this list when battle effects arrive.
+SKILL_TMD_DIR = YTREF_ROOT / "models" / "raw" / "Skill.IRD" / "TMD"
+SKILL_EFFECT_IDS = [
+    "sfx_ava_spwan1_small",   # arrive/materialize puff ("spwan" sic, authored)
+    "sfx_mon_dead1_small",    # depart/vanish puff
+]
+
+
+def discover_skill_effects() -> list[tuple[str, str, Path]]:
+    """The opt-in skill-effect props, same tuple shape as discover_props."""
+    return [
+        ("skillfx", pid, SKILL_TMD_DIR / f"{pid}.TMD")
+        for pid in SKILL_EFFECT_IDS
+        if (SKILL_TMD_DIR / f"{pid}.TMD").exists()
+    ]
+
+
 def discover_props(categories: list[str] | None = None) -> list[tuple[str, str, Path]]:
     """Discover all prop TMD files across categories.
 

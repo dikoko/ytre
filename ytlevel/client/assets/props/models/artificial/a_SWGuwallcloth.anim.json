@@ -1,0 +1,24 @@
+{
+ "clips": {
+  "default": {
+   "end": 40.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 40.0,
+ "visibility": {
+  "a_SWGuwallcloth_obj1": [
+   [
+    0.0,
+    0.699999988079071
+   ],
+   [
+    40.0,
+    0.699999988079071
+   ]
+  ]
+ }
+}

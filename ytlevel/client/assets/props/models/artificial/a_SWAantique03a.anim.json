@@ -1,0 +1,67 @@
+{
+ "clips": {
+  "range_12": {
+   "end": 120.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_13": {
+   "end": 120.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_14": {
+   "end": 120.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_15": {
+   "end": 260.0,
+   "loop": false,
+   "start": 140.0
+  },
+  "range_16": {
+   "end": 420.0,
+   "loop": false,
+   "start": 300.0
+  },
+  "range_17": {
+   "end": 420.0,
+   "loop": false,
+   "start": 300.0
+  },
+  "range_18": {
+   "end": 420.0,
+   "loop": false,
+   "start": 300.0
+  },
+  "range_3": {
+   "end": 550.0,
+   "loop": false,
+   "start": 450.0
+  }
+ },
+ "default_clip": "range_12",
+ "fps": 30.0,
+ "total_frames": 600.0,
+ "visibility": {
+  "a_SWAantique03a_obj25": [
+   [
+    140.0,
+    0.0
+   ],
+   [
+    145.0,
+    0.800000011920929
+   ],
+   [
+    255.0,
+    0.800000011920929
+   ],
+   [
+    260.0,
+    0.0
+   ]
+  ]
+ }
+}

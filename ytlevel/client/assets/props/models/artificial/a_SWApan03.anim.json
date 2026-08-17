@@ -1,0 +1,24 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "a_SWApan03_obj3": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    31.0,
+    1.0
+   ]
+  ]
+ }
+}

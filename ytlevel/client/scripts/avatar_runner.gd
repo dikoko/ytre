@@ -67,22 +67,45 @@ func setup(hs: HeightService, cam: Camera3D, runner_cfg: Dictionary,
 
 
 func step_blocked(next_x: float, next_z: float) -> bool:
-	## The original's wall line-cross test is endpoint-EXCLUSIVE — correct for
-	## its own purpose (long-segment line of sight) but blind to a per-frame step that
-	## simply enters a wall cell (~0.067 m at speed 4). Movement therefore also
-	## tests the destination cell. Escape hatch: if the avatar is already inside
-	## a wall cell (a spawn can land in one — the default spawn is portals[0],
-	## which on some maps sits inside a building), it may move freely within
-	## that cell and out to open ground, but it may never tunnel into a NEW
-	## wall cell — the hatch is OUTBOUND-only, not a general free-move grant.
+	## Walkability authority: the ported .map movement grid — the SAME data
+	## the original's A* pathfinder walks (its only movement authority; the
+	## wall grid is line-of-sight data and every wall cell is also unmovable
+	## in .map, so the LOS path below is strictly a fallback for a map
+	## shipping no .map). Escape hatch in both paths: a spawn can land in a
+	## blocked cell (the default spawn is portals[0], which on some maps sits
+	## inside a building) — movement within that cell and OUT to open ground
+	## stays free, but never into a NEW blocked cell; the original has the
+	## same concept (its negative-start mode).
 	if _nav == null:
+		return false
+	if _nav.has_move_grid():
+		var same_cell := int(next_x) == int(avatar_position.x) \
+				and int(-next_z) == int(-avatar_position.z)
+		if not _nav.movable(avatar_position.x, avatar_position.z):
+			return not same_cell and not _nav.movable(next_x, next_z)
+		if not _nav.movable(next_x, next_z):
+			return true
+		# Diagonal corner rule (the original applies it to path steps): a
+		# step entering a diagonally-adjacent cell must have BOTH orthogonal
+		# neighbor cells open — no squeezing through touching corners.
+		var cx := int(avatar_position.x)
+		var cz := int(-avatar_position.z)
+		var nx := int(next_x)
+		var nz := int(-next_z)
+		if cx != nx and cz != nz:
+			if not _nav.movable(float(nx) + 0.5, -(float(cz) + 0.5)) \
+					or not _nav.movable(float(cx) + 0.5, -(float(nz) + 0.5)):
+				return true
+		return false
+	# LOS-wall fallback. The original client's wall line-cross test is
+	# endpoint-EXCLUSIVE — correct for its own purpose (long-segment line of
+	# sight) but blind to a per-frame step that simply enters a wall cell
+	# (~0.067 m at speed 4), so movement also tests the destination cell.
+	if not is_nan(_nav.sample(next_x, next_z)):
 		return false
 	if _nav.crosses_wall(avatar_position.x, avatar_position.z, next_x, next_z):
 		return true
 	if _nav.is_wall(avatar_position.x, avatar_position.z):
-		# Trapped (a spawn can land inside a wall cell — the default spawn is
-		# portals[0], which on some maps sits inside a building). Allow moving
-		# within this cell and out to open ground, never into a NEW wall cell.
 		var same_cell := int(next_x) == int(avatar_position.x) \
 				and int(-next_z) == int(-avatar_position.z)
 		return not same_cell and _nav.is_wall(next_x, next_z)
@@ -90,8 +113,8 @@ func step_blocked(next_x: float, next_z: float) -> bool:
 
 
 func ground_height(x: float, z: float) -> float:
-	## Original client priority: the navmesh is
-	## consulted for every position and the heightfield is the fallback.
+	## Original client priority: the navmesh is consulted for every
+	## position and the heightfield is the fallback.
 	## Both are raw authored heights; the renderer draws terrain raw too.
 	if _nav != null:
 		var ny := _nav.sample(x, z)
@@ -145,6 +168,14 @@ func _collect_shader_materials(node: Node) -> Array:
 	for child in node.get_children():
 		found.append_array(_collect_shader_materials(child))
 	return found
+
+
+func avatar_transform() -> Transform3D:
+	## World transform of the avatar (position + facing) — the anchor for
+	## warp effects, which inherit the character's frame in the original.
+	if _avatar != null:
+		return _avatar.global_transform
+	return Transform3D(Basis.IDENTITY, avatar_position)
 
 
 func enter(level: Dictionary, spawn: Vector3) -> void:
@@ -261,6 +292,72 @@ func _play(kind: String) -> void:
 	_avatar.play_animation(name)
 
 
+func _move_step(dir: Vector3, delta: float) -> bool:
+	## One frame of steering movement. The original never dead-stopped on a
+	## blocked cell — its click-to-move A* routed around it — so keyboard
+	## steer needs two graces on top of the raw grid test:
+	## 1. Wall slide: if the straight step is blocked, try each axis alone
+	##    (glide along block boundaries instead of freezing).
+	## 2. Corner rounding: on a dead head-on block, shimmy one lane sideways
+	##    — but ONLY toward a lane that is open both beside the avatar and
+	##    diagonally ahead, so 1-cell obstacles (balustrade posts, the
+	##    plaza strays) are walked around while a solid wall still stops
+	##    cleanly with no endless lateral drift.
+	var next := avatar_position + dir * _speed * delta
+	if _try_step(next):
+		return true
+	if _try_step(Vector3(next.x, 0.0, avatar_position.z)):
+		return true
+	if _try_step(Vector3(avatar_position.x, 0.0, next.z)):
+		return true
+	return _corner_round(dir, delta)
+
+
+func _corner_round(dir: Vector3, delta: float) -> bool:
+	if _nav == null or not _nav.has_move_grid():
+		return false
+	var step := _speed * delta
+	var next := avatar_position + dir * step
+	# Forward cell row/column (original-space cell coords of the block).
+	var fz := int(-next.z)
+	var fx := int(next.x)
+	if absf(dir.z) >= absf(dir.x):
+		# Moving mostly along Z: lanes are X columns.
+		var lane := int(avatar_position.x)
+		var frac := avatar_position.x - float(lane)
+		for side: int in ([-1, 1] if frac < 0.5 else [1, -1]):
+			var l := lane + side
+			# The lane must be open beside the avatar AND diagonally ahead.
+			if _nav.movable(float(l) + 0.5, avatar_position.z) \
+					and _nav.movable(float(l) + 0.5, -(float(fz) + 0.5)):
+				return _try_step(avatar_position + Vector3(float(side) * step, 0.0, 0.0))
+	else:
+		var lane := int(-avatar_position.z)
+		var frac := -avatar_position.z - float(lane)
+		for side: int in ([-1, 1] if frac < 0.5 else [1, -1]):
+			var l := lane + side
+			if _nav.movable(avatar_position.x, -(float(l) + 0.5)) \
+					and _nav.movable(float(fx) + 0.5, -(float(l) + 0.5)):
+				return _try_step(avatar_position + Vector3(0.0, 0.0, float(-side) * step))
+	return false
+
+
+func _try_step(next: Vector3) -> bool:
+	## One movement attempt: bounds + walkability grid + the STEP_LIMIT
+	## height rule. On success the avatar advances (y snapped to ground).
+	if not _hs.in_bounds(next.x, next.z) or step_blocked(next.x, next.z):
+		return false
+	# No-op steps (an axis-slide candidate can equal the current position)
+	# must not count as movement.
+	if next.x == avatar_position.x and next.z == avatar_position.z:
+		return false
+	var h := ground_height(next.x, next.z)
+	if absf(h - avatar_position.y) > STEP_LIMIT:
+		return false
+	avatar_position = Vector3(next.x, h, next.z)
+	return true
+
+
 func _process(delta: float) -> void:
 	if not active or _avatar == null:
 		return
@@ -275,14 +372,9 @@ func _process(delta: float) -> void:
 	if input != Vector2.ZERO:
 		var fwd := Vector3(sin(_yaw), 0, cos(_yaw))    # camera sits at -fwd
 		var dir := fwd * input.y
-		var next := avatar_position + dir * _speed * delta
-		if _hs.in_bounds(next.x, next.z) and not step_blocked(next.x, next.z):
-			var h := ground_height(next.x, next.z)
-			if absf(h - avatar_position.y) <= STEP_LIMIT:
-				next.y = h
-				avatar_position = next
-				# Face movement direction (model faces -Z ⇒ rotate to dir):
-				_avatar.rotation.y = atan2(dir.x, dir.z) + PI
+		if _move_step(dir, delta):
+			# Face steering direction (model faces -Z ⇒ rotate to dir):
+			_avatar.rotation.y = atan2(dir.x, dir.z) + PI
 		_play("run")
 	else:
 		_play("stand")

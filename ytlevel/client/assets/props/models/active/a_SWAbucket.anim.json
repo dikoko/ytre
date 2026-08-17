@@ -1,0 +1,81 @@
+{
+ "clips": {
+  "range_12": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_13": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_14": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_15": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_16": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_17": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_18": {
+   "end": 0.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_3": {
+   "end": 40.0,
+   "loop": false,
+   "start": 1.0
+  }
+ },
+ "default_clip": "range_12",
+ "fps": 30.0,
+ "total_frames": 40.0,
+ "visibility": {
+  "a_SWAbucket_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    21.0,
+    0.0
+   ]
+  ],
+  "a_SWAbucket_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    15.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.4407902956008911
+   ]
+  ]
+ }
+}

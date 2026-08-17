@@ -1,0 +1,55 @@
+{
+ "clips": {
+  "range_10": {
+   "end": 1200.0,
+   "loop": false,
+   "start": 900.0
+  },
+  "range_11": {
+   "end": 2400.0,
+   "loop": false,
+   "start": 2100.0
+  },
+  "range_8": {
+   "end": 900.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_9": {
+   "end": 2100.0,
+   "loop": false,
+   "start": 1200.0
+  }
+ },
+ "default_clip": "range_8",
+ "fps": 30.0,
+ "total_frames": 2400.0,
+ "visibility": {
+  "sky_Dome0001_obj2": [
+   [
+    900.0,
+    0.0
+   ],
+   [
+    1050.0,
+    1.0
+   ],
+   [
+    1200.0,
+    0.0
+   ],
+   [
+    2100.0,
+    0.0
+   ],
+   [
+    2250.0,
+    1.0
+   ],
+   [
+    2400.0,
+    0.0
+   ]
+  ]
+ }
+}

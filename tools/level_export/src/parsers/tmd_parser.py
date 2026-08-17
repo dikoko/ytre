@@ -230,6 +230,16 @@ class TMDScaleKey:
 
 
 @dataclass
+class TMDScaleAxisKey:
+    """Scale-axis keyframe — the frame the scale is applied about."""
+    frame: int = 0
+    rotation: Quaternion = field(default_factory=Quaternion)
+    tension: float = 0.0
+    continuity: float = 0.0
+    bias: float = 0.0
+
+
+@dataclass
 class TMDAnimation:
     """Animation track for an object."""
     object_id: int = -1
@@ -239,6 +249,41 @@ class TMDAnimation:
     position_keys: list[TMDPositionKey] = field(default_factory=list)
     rotation_keys: list[TMDRotationKey] = field(default_factory=list)
     scale_keys: list[TMDScaleKey] = field(default_factory=list)
+    scale_axis_keys: list[TMDScaleAxisKey] = field(default_factory=list)
+    inheritance: int = 0
+
+
+@dataclass
+class TMDProperty:
+    """A raw PROPERTYTRACK record: a name plus its typed params."""
+    object_ordinal: int = -1   # -1 == the object group (whole prop)
+    name: str = ""
+    params: list = field(default_factory=list)
+
+
+@dataclass
+class TMDAnimRange:
+    """A named animation range derived from an ANIMATION property.
+
+    The original client reads param[0] as the start frame and param[1] as
+    the end frame, after the range id has been consumed as the property id.
+    """
+    object_ordinal: int = -1
+    range_id: int = 0
+    start_frame: float = 0.0
+    end_frame: float = 0.0
+
+
+@dataclass
+class TMDVisibilityTrack:
+    """Per-object alpha fade curve (VISIBILITYOBJECT chunk).
+
+    NOT a visibility boolean. The original client samples this linearly
+    into a per-object alpha and keeps drawing at partial alpha; only a
+    near-zero value hides the object.
+    """
+    object_ordinal: int = -1
+    keys: list[tuple[float, float]] = field(default_factory=list)
 
 
 @dataclass
@@ -265,6 +310,9 @@ class TMDModel:
     objects: list[TMDObject] = field(default_factory=list)
     bones: list[TMDBone] = field(default_factory=list)
     animations: list[TMDAnimation] = field(default_factory=list)
+    visibility_tracks: list[TMDVisibilityTrack] = field(default_factory=list)
+    properties: list[TMDProperty] = field(default_factory=list)
+    anim_ranges: list[TMDAnimRange] = field(default_factory=list)
 
     @property
     def meshes(self) -> list[TMDMesh]:
@@ -465,6 +513,10 @@ class TMDParser:
             TMDCHUNK_SOFTSKINTRACK: self._handle_softskintrack,
             TMDCHUNK_BONE: self._handle_bone,
             TMDCHUNK_DUMMY: self._handle_dummy,
+            TMDCHUNK_PROPERTYBLOCK: self._handle_container,
+            TMDCHUNK_PROPERTYTRACK: self._handle_propertytrack,
+            TMDCHUNK_VISIBILITYTRACK: self._handle_container,
+            TMDCHUNK_VISIBILITYOBJECT: self._handle_visibilityobject,
             TMDCHUNK_XFORMBLOCK: self._handle_container,
             TMDCHUNK_XFORMOBJECT: self._handle_xformobject,
             TMDCHUNK_XFORMOBJECT_NUM: self._handle_xformobject_num,
@@ -473,6 +525,8 @@ class TMDParser:
             TMDCHUNK_POSITIONLIST: self._handle_positionlist,
             TMDCHUNK_ROTATELIST: self._handle_rotatelist,
             TMDCHUNK_SCALELIST: self._handle_scalelist,
+            TMDCHUNK_SCALEAXISLIST: self._handle_scaleaxislist,
+            TMDCHUNK_INHERITANCEFLAG: self._handle_inheritanceflag,
         }
         return handlers.get(chunk_id)
 
@@ -793,6 +847,145 @@ class TMDParser:
         self._model.objects.append(self._current_object)
         self._current_object = None
 
+    def _handle_scaleaxislist(self, chunk_len: int) -> None:
+        """Handle SCALEAXISLIST chunk.
+
+        NOT the ROTATELIST layout: there is no ORT block (the axis reuses the
+        ORT the SCALE track already read) and no TCB block.
+
+            uint32 n
+            repeat n { uint32 frame; float axis[4] }
+
+        Files older than TMD_VERSION_20040304 take a different reader
+        entirely (:1343-1390) — see _handle_stretchrot. Both are live in the
+        shipped props: 69 modern, 4 legacy.
+        """
+        if not self._current_animation:
+            self._skip_bytes(chunk_len)
+            return
+        if self.version < TMD_VERSION_20040304:
+            self._handle_stretchrot(chunk_len)
+            return
+        key_count = self._read_uint()
+        for _ in range(key_count):
+            frame = self._read_frame()
+            rotation = self._read_quaternion()
+            self._current_animation.scale_axis_keys.append(
+                TMDScaleAxisKey(frame=frame, rotation=rotation)
+            )
+
+    def _handle_stretchrot(self, chunk_len: int) -> None:
+        """Legacy stretch-rotate track.
+
+            uint32 n
+            ORT (2 x int32)
+            repeat n { uint32 frame; float scale[3]; float axis[4] }
+
+        Emits BOTH the scale and the scale-axis track from one chunk, and
+        negates axis[3] (`axis[3] *= -1` at :1384) — the w component is
+        stored with the opposite sign in this older format.
+        """
+        key_count = self._read_uint()
+        if key_count < 1:
+            return
+        self._read_ort()
+        scale_keys: list[TMDScaleKey] = []
+        for _ in range(key_count):
+            frame = self._read_frame()
+            scale = self._read_vector3()
+            axis = self._read_quaternion()
+            axis.w = -axis.w
+            scale_keys.append(TMDScaleKey(frame=frame, scale=scale))
+            self._current_animation.scale_axis_keys.append(
+                TMDScaleAxisKey(frame=frame, rotation=axis)
+            )
+        # tmdTrackInit ASSIGNS the track (to->Scale = track), so this chunk
+        # replaces any scale track read earlier rather than appending to it.
+        self._current_animation.scale_keys = scale_keys
+
+    def _handle_inheritanceflag(self, chunk_len: int) -> None:
+        """Handle INHERITANCEFLAG chunk (inheritance bit flags)."""
+        flags = self._read_int()
+        if self._current_animation:
+            self._current_animation.inheritance = flags
+
+    # typed-parameter type ids
+    _GTPARAM_INT = 1
+    _GTPARAM_FLOAT = 2
+    _GTPARAM_BUFFER = 3
+
+    def _read_param_track(self) -> tuple[str, list]:
+        """Read one name + typed params block."""
+        name_len = self._read_int()
+        name = self._read_bytes(name_len).decode("ascii", errors="replace")
+        param_num = self._read_int()
+        params: list = []
+        for _ in range(param_num):
+            ptype = self._read_int()
+            if ptype == self._GTPARAM_INT:
+                params.append(self._read_int())
+            elif ptype == self._GTPARAM_FLOAT:
+                params.append(self._read_float())
+            elif ptype == self._GTPARAM_BUFFER:
+                blen = self._read_int()
+                params.append(self._read_bytes(blen))
+            else:
+                # Unknown param type: the payload length is unknowable, so
+                # stop rather than desync the chunk stream. _parse_chunk
+                # re-seeks end_pos, so the file stays parseable.
+                raise ValueError(f"unknown GTPARAM type {ptype}")
+        return name, params
+
+    def _handle_propertytrack(self, end_pos: int) -> None:
+        """Handle PROPERTYTRACK chunk.
+
+            int32 objectID          # -1 == the object group
+            int32 propertyCount
+            repeat propertyCount { param track }
+        """
+        object_ordinal = self._read_int()
+        property_count = self._read_int()
+        for _ in range(property_count):
+            try:
+                name, params = self._read_param_track()
+            except ValueError:
+                return  # _parse_chunk re-seeks end_pos
+            self._model.properties.append(
+                TMDProperty(object_ordinal=object_ordinal, name=name, params=params)
+            )
+            # The original client treats params[0] as the id and shifts the
+            # rest down; the animation range then reads [0]=start, [1]=end
+            # from the shifted list.
+            if name == "ANIMATION" and len(params) >= 3:
+                self._model.anim_ranges.append(TMDAnimRange(
+                    object_ordinal=object_ordinal,
+                    range_id=int(params[0]),
+                    start_frame=float(params[1]),
+                    end_frame=float(params[2]),
+                ))
+
+    def _handle_visibilityobject(self, end_pos: int) -> None:
+        """Handle VISIBILITYOBJECT chunk.
+
+        Layout:
+            uint32 objectOrdinal
+            uint32 keyCount           # loader early-outs when < 1
+            repeat keyCount { uint32 frame; float value }
+        Negative frames are clamped to 0 by the engine, with a log line.
+        """
+        ordinal = self._read_uint()
+        key_count = self._read_uint()
+        if key_count < 1:
+            return
+        keys: list[tuple[float, float]] = []
+        for _ in range(key_count):
+            frame = self._read_int()
+            value = self._read_float()
+            keys.append((float(max(frame, 0)), value))
+        self._model.visibility_tracks.append(
+            TMDVisibilityTrack(object_ordinal=ordinal, keys=keys)
+        )
+
     def _handle_xformobject(self, end_pos: int) -> None:
         """Handle XFORMOBJECT chunk (animation track container)."""
         self._current_animation = TMDAnimation()
@@ -820,6 +1013,18 @@ class TMDParser:
         if self._current_animation:
             self._current_animation.parent_name = parent_name
 
+    def _read_frame(self) -> int:
+        """Read a keyframe number the way the engine does.
+
+        The field is stored as UTdword but every track reader casts it back
+        to signed and clamps negatives to 0 (verified against retail
+        client behavior for rotation and scale-axis tracks).
+        Reading it as plain unsigned turns an authored -1 into 4294967295,
+        which lands ~1.07e8 seconds down the timeline at 30 fps.
+        """
+        value = self._read_int()
+        return value if value > 0 else 0
+
     def _read_ort(self) -> tuple[int, int]:
         """Read out-of-range types."""
         before = self._read_int()
@@ -845,18 +1050,15 @@ class TMDParser:
         self._read_ort()
 
         for _ in range(key_count):
-            frame = self._read_uint()
+            # frame + vec3 and NOTHING else — 16 bytes/key. No TCB fields
+            # exist on disk (the original client reads only the frame number
+            # and position); chunk arithmetic agrees: a 25-key POSITIONLIST
+            # is 412 payload bytes = 4 + 8 (ORT) + 25 x 16.
+            frame = self._read_frame()
             position = self._read_vector3()
-            tcb = self._read_tcb_key()
-
-            key = TMDPositionKey(
-                frame=frame,
-                position=position,
-                tension=tcb[0],
-                continuity=tcb[1],
-                bias=tcb[2],
+            self._current_animation.position_keys.append(
+                TMDPositionKey(frame=frame, position=position)
             )
-            self._current_animation.position_keys.append(key)
 
     def _handle_rotatelist(self, chunk_len: int) -> None:
         """Handle ROTATELIST chunk."""
@@ -868,18 +1070,12 @@ class TMDParser:
         self._read_ort()
 
         for _ in range(key_count):
-            frame = self._read_uint()
+            # frame + quaternion only — 20 bytes/key.
+            frame = self._read_frame()
             rotation = self._read_quaternion()
-            tcb = self._read_tcb_key()
-
-            key = TMDRotationKey(
-                frame=frame,
-                rotation=rotation,
-                tension=tcb[0],
-                continuity=tcb[1],
-                bias=tcb[2],
+            self._current_animation.rotation_keys.append(
+                TMDRotationKey(frame=frame, rotation=rotation)
             )
-            self._current_animation.rotation_keys.append(key)
 
     def _handle_scalelist(self, chunk_len: int) -> None:
         """Handle SCALELIST chunk."""
@@ -891,15 +1087,9 @@ class TMDParser:
         self._read_ort()
 
         for _ in range(key_count):
-            frame = self._read_uint()
+            # frame + vec3 only — 16 bytes/key.
+            frame = self._read_frame()
             scale = self._read_vector3()
-            tcb = self._read_tcb_key()
-
-            key = TMDScaleKey(
-                frame=frame,
-                scale=scale,
-                tension=tcb[0],
-                continuity=tcb[1],
-                bias=tcb[2],
+            self._current_animation.scale_keys.append(
+                TMDScaleKey(frame=frame, scale=scale)
             )
-            self._current_animation.scale_keys.append(key)

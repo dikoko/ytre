@@ -34,7 +34,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from scripts._map_compat import classify_map, list_map_codes
 
 REPO_ROOT = PROJECT_ROOT.parent.parent
-BASELINES_DIR = REPO_ROOT / "docs" / "superpowers" / "eval-baselines"
+BASELINES_DIR = REPO_ROOT / "docs" / "eval-baselines"
 DEFAULT_RESULTS = BASELINES_DIR / "2026-07-15-map-sweep.json"
 REPORTS_DIR = PROJECT_ROOT / "reports"
 EXPORT_TIMEOUT = 600

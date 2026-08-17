@@ -140,17 +140,17 @@ def embed_textures(glb_path: Path, model_dir: Path, model, texture_dirs: list[Pa
             mat_kwargs["alphaCutoff"] = 0.5
             mat_kwargs["doubleSided"] = True
         elif tmd_mat.two_sided:
-            # The TMD per-material two-sided flag disables culling in the
+            # The TMD two-sided material flag disables culling in the
             # original client; materials without it were backface-culled.
             mat_kwargs["doubleSided"] = True
 
         if tmd_mat.self_illumination > 0:
-            # A self-illumination value > 0 routes the mesh to the ADDITIVE
+            # A positive self-illumination routes the mesh to the ADDITIVE
             # full-bright pass in the original client (lights off, ambient
             # white, src-alpha + one blending). Carried through the GLB
             # as emissiveFactor so prop_lighting.gd can swap in the additive
             # fixed-function material at runtime. The magnitude is informative
-            # only — the original client checks strictly > 0.
+            # only — the original checks strictly > 0.
             si = min(1.0, tmd_mat.self_illumination)
             mat_kwargs["emissiveFactor"] = [si, si, si]
 
@@ -168,26 +168,16 @@ def embed_textures(glb_path: Path, model_dir: Path, model, texture_dirs: list[Pa
         mat_map[mat_idx] = gltf_mat_idx
 
     if gltf.meshes and mat_map:
-        prim_mat_list = []
-        for mesh in model.meshes:
-            unique_mats = set(mesh.vertex_materials.values()) if mesh.vertex_materials else set()
-            if len(unique_mats) > 1:
-                mat_faces: dict[int, bool] = {}
-                for face in mesh.faces:
-                    face_mat = mesh.vertex_materials.get(face[0], mesh.material_index)
-                    mat_faces[face_mat] = True
-                for mat_idx in sorted(mat_faces.keys()):
-                    prim_mat_list.append(mat_idx)
-            else:
-                prim_mat_list.append(mesh.material_index)
-
-        # Walk primitives across ALL meshes in order — export_prop chunks
-        # >256-primitive props into multiple meshes (Godot's per-mesh
-        # surface cap), and prim_mat_list follows that same global order.
-        all_prims = [p for mesh in gltf.meshes for p in mesh.primitives]
-        for prim_idx, prim in enumerate(all_prims):
-            if prim_idx < len(prim_mat_list):
-                tmd_mat_idx = prim_mat_list[prim_idx]
+        # Each primitive arrives stamped with its TMD material index by
+        # export_prop; remap it to the real glTF material. Never assign by
+        # primitive POSITION: the animated export path emits animated
+        # objects' meshes mid-walk and chunks static primitives after it, so
+        # positional zipping against model.meshes scrambled the mapping (the
+        # 2026-08-08 street-lamp regression — glow quads wearing the lamp
+        # diffuse, housings going additive).
+        for mesh in gltf.meshes:
+            for prim in mesh.primitives:
+                tmd_mat_idx = prim.material
                 if tmd_mat_idx in mat_map:
                     prim.material = mat_map[tmd_mat_idx]
                 elif 0 in mat_map:

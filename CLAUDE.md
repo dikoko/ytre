@@ -43,7 +43,7 @@ Part metadata (`parts_metadata.json`, `parts_metadata_female.json`) maps which b
 
 `tools/level_export/` converts terrain data from `refs/models/raw/Terrain/` into the level tool's assets:
 - **QQQ** → prop placements (quadtree binary, 4x4 transforms), **OCG** → model index, **CVS/TCG** → terrain tile canvas + registry, **WTR** → water, **PLT** → lighting, `{code}_h.bmp` → heightmaps
-- Key scripts: `22_export_props.py` (prop GLBs), `30_export_map.py` (map scene assembly), `31_export_terrain.py` (tiles), `34_export_navmesh.py` (navmesh + wall grids), `35_export_heightmaps.py`
+- Key scripts: `22_export_props.py` (prop GLBs), `30_export_map.py` (map scene assembly), `31_export_terrain.py` (tiles), `34_export_navmesh.py` (navmesh + wall + movement grids), `35_export_heightmaps.py`
 - `mapeval/` — evaluation harness: data invariants + Godot rendered-capture detectors
 - The shipped level catalog (`ytlevel/client/assets/levels/levels.yaml`/`.json`) is pre-generated data
 - Tile texture folders (`ytlevel/client/assets/maps/*/*_tiles/`) are `.gdignore`d on purpose — the runtime loads them raw; do not route them through the Godot importer

@@ -1,0 +1,24 @@
+{
+ "clips": {
+  "default": {
+   "end": 80.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 80.0,
+ "visibility": {
+  "a_SWAhole03_obj5": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    80.0,
+    1.0
+   ]
+  ]
+ }
+}

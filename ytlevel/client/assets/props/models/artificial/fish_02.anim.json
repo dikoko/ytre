@@ -1,0 +1,13 @@
+{
+ "clips": {
+  "default": {
+   "end": 450.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 450.0,
+ "visibility": {}
+}

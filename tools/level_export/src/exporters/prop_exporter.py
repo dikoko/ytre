@@ -21,11 +21,17 @@ import numpy as np
 from pygltflib import (
     GLTF2, Asset, Scene, Node, Mesh, Primitive, Attributes,
     Accessor, BufferView, Buffer,
-    UNSIGNED_SHORT, UNSIGNED_INT, FLOAT, SCALAR, VEC2, VEC3,
+    Animation, AnimationChannel, AnimationChannelTarget, AnimationSampler,
+    UNSIGNED_SHORT, UNSIGNED_INT, FLOAT, SCALAR, VEC2, VEC3, VEC4,
     ARRAY_BUFFER, ELEMENT_ARRAY_BUFFER,
 )
 
 from src.parsers.tmd_parser import TMDModel
+from src.exporters.prop_animation import (
+    build_animation_plan, d3d_rotation_matrix, godot_local_factors, has_shear,
+    local_trs_d3d, quat_from_d3d_matrix, to_godot_basis, to_godot_matrix,
+    to_godot_translation,
+)
 
 # Godot's RenderingServer refuses surfaces past this per-mesh cap
 # (RS::MAX_MESH_SURFACES) — meshes with more primitives get truncated with
@@ -85,9 +91,10 @@ def _build_prop_primitive(
 
     # Bake TMD per-object world transforms into vertices/normals.
     #
-    # These are RENDER transforms, not metadata: the original client stores
-    # each object's world matrix on the object at load and composes it onto
-    # the vertex stream at draw time. Vertices/normals as stored in the TMD file are
+    # These are RENDER transforms, not metadata: the original client
+    # stores the per-object world matrix on the object at load time and
+    # composes it onto the vertex stream at draw time. Vertices/normals
+    # as stored in the TMD file are
     # therefore raw/LOCAL model space, not the authored world-space geometry
     # — ~300 non-identity objects (recount: 309) in SF001001's models alone carry
     # non-identity world transforms (mirrors, rotations, scale up to det 5.56,
@@ -150,7 +157,7 @@ def _build_prop_primitive(
 
     # Round 5: uniform winding reversal.
     #
-    # The original client renders with CCW culling (the D3D default) — i.e. the
+    # D3D renders with counter-clockwise culling — i.e. the
     # front face is the one whose vertex order is CW in D3D's left-handed
     # view, which is the same side as the RH cross product of the stored
     # index order. Godot's front face is also the +RH-cross side of its
@@ -206,7 +213,7 @@ def _build_prop_primitive(
     # (e.g. the running track) are authored the opposite way (consistently),
     # and others are internally mixed (c_SEbench03: 56/56 faces each way).
     # The original engine hid this: fixed-function D3D9 with a forced
-    # material ambient of 0.7 (the TMD loader's default-material path) was
+    # material ambient of 0.7 (the loader's default-material path) was
     # ambient-dominant, so normal direction barely affected shading. Godot's
     # lighting exposes it directly (props render near-black when their
     # normals face away from the camera/light).
@@ -302,6 +309,207 @@ def _build_prop_primitive(
     )
 
 
+def _mirror_x_conjugate(basis: np.ndarray) -> np.ndarray:
+    """Layer the extra X mirror onto an already-Godot-space basis."""
+    mx = np.diag([-1.0, 1.0, 1.0])
+    return mx @ basis @ mx
+
+
+def _decompose_trs(basis: np.ndarray, trans) -> tuple[list, list, list]:
+    """Godot-space basis + translation -> glTF (translation, rotation, scale).
+
+    Scale comes from the column norms. A negative determinant cannot be
+    carried by a rotation quaternion, so the reflection is folded into the
+    X scale — glTF permits negative scale and Godot honours it.
+    """
+    scale = np.linalg.norm(basis, axis=0)
+    safe = np.where(scale < 1e-12, 1.0, scale)
+    rot_only = basis / safe
+    scale = scale.astype(np.float64).copy()
+    if np.linalg.det(rot_only) < 0.0:
+        rot_only = rot_only.copy()
+        rot_only[:, 0] *= -1.0
+        scale[0] *= -1.0
+    # quat_from_d3d_matrix expects the D3D (row-vector) orientation, which is
+    # the transpose of the column-vector basis we hold here.
+    quat = quat_from_d3d_matrix(rot_only.T)
+    return ([float(v) for v in trans], list(quat), [float(s) for s in scale])
+
+
+def _node_trs_from_local(anim, mirror_x: bool, key_index: int = 0):
+    """glTF TRS for an animated node at a key index."""
+    basis_d3d, trans_d3d = local_trs_d3d(anim, key_index)
+    basis = to_godot_basis(basis_d3d)
+    trans = to_godot_translation(trans_d3d)
+    if mirror_x:
+        basis = _mirror_x_conjugate(basis)
+        trans = (-trans[0], trans[1], trans[2])
+    return _decompose_trs(basis, trans)
+
+
+def _rotation_list(basis: np.ndarray, mirror_x: bool) -> list[float]:
+    """glTF rotation quaternion for a pure-rotation Godot-space basis."""
+    if mirror_x:
+        basis = _mirror_x_conjugate(basis)
+    if np.linalg.det(basis) < 0.0:
+        # Shouldn't happen for A/Q (both proper rotations), but never emit a
+        # reflection as a quaternion — it would silently drop the mirror.
+        raise ValueError("reflection passed to _rotation_list")
+    return list(quat_from_d3d_matrix(basis.T))
+
+
+def _column_major(m: np.ndarray) -> list[float]:
+    """glTF node.matrix is column-major (glTF 2.0 spec)."""
+    return [float(v) for v in np.asarray(m, dtype=np.float64).T.reshape(-1)]
+
+
+def _push_sampler(gltf: GLTF2, buf: bytearray, samplers: list,
+                  frames: list[float], values: np.ndarray, fps: float) -> int:
+    """Pack one animation sampler into the GLB; returns its index in `samplers`.
+
+    Interpolation is LINEAR for every track: the original client lerps
+    position and scale and slerps rotation, and the slerp's `spin` term
+    always evaluates to 0 (|w1-w0| <= 2 < 2*pi), so it is
+    plain shortest-path slerp. glTF LINEAR plus Godot's Quaternion.slerp
+    match that exactly, so sparse keys need no resampling.
+    """
+    times = np.asarray([f / fps for f in frames], dtype=np.float32)
+    values = np.asarray(values, dtype=np.float32)
+
+    t_bin = times.tobytes()
+    t_offset = len(buf)
+    buf.extend(t_bin)
+    v_bin = values.tobytes()
+    v_offset = len(buf)
+    buf.extend(v_bin)
+
+    bv = len(gltf.bufferViews)
+    gltf.bufferViews.extend([
+        BufferView(buffer=0, byteOffset=t_offset, byteLength=len(t_bin)),
+        BufferView(buffer=0, byteOffset=v_offset, byteLength=len(v_bin)),
+    ])
+    acc = len(gltf.accessors)
+    gltf.accessors.extend([
+        Accessor(bufferView=bv, componentType=FLOAT, count=len(times),
+                 type=SCALAR, min=[float(times.min())], max=[float(times.max())]),
+        Accessor(bufferView=bv + 1, componentType=FLOAT, count=len(values),
+                 type=VEC4 if values.shape[1] == 4 else VEC3),
+    ])
+    samplers.append(AnimationSampler(input=acc, output=acc + 1,
+                                     interpolation="LINEAR"))
+    return len(samplers) - 1
+
+
+def _same_hemisphere(quats: np.ndarray) -> np.ndarray:
+    """Make consecutive quaternions lie in the same hemisphere.
+
+    q and -q are the same rotation, but a LINEAR sampler interpolates the raw
+    components — a sign flip between neighbouring keys would spin the long way
+    round. The original client handles this at sample time (the `flip` term in
+    quaternion slerp); glTF has to bake it into the data.
+    """
+    out = np.asarray(quats, dtype=np.float64).copy()
+    for i in range(1, len(out)):
+        if float(np.dot(out[i - 1], out[i])) < 0.0:
+            out[i] = -out[i]
+    return out
+
+
+def _track_frames(keys) -> list[float]:
+    return [float(k.frame) for k in keys]
+
+
+def _build_animations(gltf: GLTF2, buf: bytearray, plan, anim_targets: dict,
+                      mirror_x: bool) -> None:
+    """Emit glTF animation channels for every animated object in the plan.
+
+    Each authored track maps onto exactly one node so nothing has to be
+    resampled or merged: position and rotation drive the outer node, scale
+    drives the diagonal node, and the scale-axis drives the two rotation
+    nodes that bracket it (as Q^T and Q).
+    """
+    fps = plan.fps or 30.0
+    samplers: list = []
+    channels: list = []
+
+    def add(node_idx: int, path: str, frames: list[float], values) -> None:
+        if node_idx is None or len(frames) < 2:
+            return
+        idx = _push_sampler(gltf, buf, samplers, frames, values, fps)
+        channels.append(AnimationChannel(
+            sampler=idx,
+            target=AnimationChannelTarget(node=node_idx, path=path),
+        ))
+
+    for obj_index, node in plan.animated.items():
+        targets = anim_targets.get(obj_index)
+        if not targets:
+            continue
+        anim = node.animation
+        sheared = "axis" in targets
+
+        if len(anim.position_keys) > 1:
+            vals = np.array([to_godot_translation(k.position.to_list())
+                             for k in anim.position_keys])
+            if mirror_x:
+                vals = vals.copy()
+                vals[:, 0] *= -1.0
+            add(targets["translation"], "translation",
+                _track_frames(anim.position_keys), vals)
+
+        if len(anim.rotation_keys) > 1:
+            quats = []
+            for k in anim.rotation_keys:
+                basis = to_godot_basis(d3d_rotation_matrix(k.rotation))
+                if mirror_x:
+                    basis = _mirror_x_conjugate(basis)
+                quats.append(quat_from_d3d_matrix(basis.T))
+            add(targets["rotation"], "rotation",
+                _track_frames(anim.rotation_keys), _same_hemisphere(quats))
+
+        if len(anim.scale_keys) > 1:
+            if sheared:
+                # The diagonal factor D; the tilt lives on the axis nodes.
+                vals = np.array([k.scale.to_list() for k in anim.scale_keys])
+                add(targets["scale"], "scale",
+                    _track_frames(anim.scale_keys), vals)
+            else:
+                # No shear: fold scale straight onto the single TRS node,
+                # recomputing per key so a mirror stays in the scale sign.
+                vals = []
+                for k in range(len(anim.scale_keys)):
+                    trs = _node_trs_from_local(anim, mirror_x, k)
+                    vals.append(trs[2])
+                add(targets["scale"], "scale",
+                    _track_frames(anim.scale_keys), np.array(vals))
+
+        if sheared and len(anim.scale_axis_keys) > 1:
+            frames = _track_frames(anim.scale_axis_keys)
+            q_quats, qt_quats = [], []
+            for k in range(len(anim.scale_axis_keys)):
+                _a, qt_m, _d, q_m = godot_local_factors(anim, k)
+                if mirror_x:
+                    q_m = _mirror_x_conjugate(q_m)
+                    qt_m = _mirror_x_conjugate(qt_m)
+                q_quats.append(quat_from_d3d_matrix(q_m.T))
+                qt_quats.append(quat_from_d3d_matrix(qt_m.T))
+            add(targets["axis"], "rotation", frames, _same_hemisphere(q_quats))
+            add(targets["axis_inv"], "rotation", frames,
+                _same_hemisphere(qt_quats))
+
+    if not channels:
+        return
+
+    # One full-timeline animation. Named ranges are NOT emitted as glTF
+    # animations: they would be full-length copies under a range name, which
+    # the runtime once mistook for trimmed clips (the street lamp played its
+    # entire off->on->off cycle instead of holding idle). Range windows live
+    # in the sidecar; the runtime seeks within "default".
+    gltf.animations.append(
+        Animation(name="default", samplers=samplers, channels=channels)
+    )
+
+
 def export_prop(
     model: TMDModel,
     output_path: Path | str,
@@ -333,14 +541,113 @@ def export_prop(
     # association — node-transform baking (node_rot_T/node_rot_inv/trans) is
     # per-object, driven by that object's own world_transform. flip_winding
     # itself is now uniform (see the Round 5 comment in
-    # _build_prop_primitive), not object-dependent. model.meshes is defined
-    # as [obj.mesh for obj in objects if obj.mesh is not None] (same order),
-    # so this doesn't change primitive order / the materials mapping used by
-    # embed_textures.
-    for obj in model.objects:
+    # _build_prop_primitive), not object-dependent. Primitive ORDER is no
+    # longer stable across paths (animated meshes emit mid-walk, static
+    # primitives chunk after it), so every primitive is stamped with its TMD
+    # material index and embed_textures remaps by that stamp, never by
+    # position.
+    plan = build_animation_plan(model, prop_id)
+    # glTF node index of each animated object's mesh-bearing node, so later
+    # passes (parenting, animation channels) can find them by object index.
+    anim_node_idx: dict[int, int] = {}
+    anim_pivot_idx: dict[int, int] = {}
+    # Which glTF node carries which authored track, per animated object.
+    # Plain objects put everything on one TRS node; sheared objects spread
+    # the four factors across the chain (see godot_local_factors).
+    anim_targets: dict[int, dict[str, int]] = {}
+
+    for obj_index, obj in enumerate(model.objects):
         mesh = obj.mesh
         if mesh is None:
             continue
+
+        node = plan.animated.get(obj_index)
+        if node is not None:
+            # ---- animated path: geometry stays in object-LOCAL space ----
+            #
+            # The per-vertex Z-negation still happens inside
+            # _build_prop_primitive, in the object's own frame. The node
+            # transforms are the mirrored local matrix and pivot. Because
+            # S.S == I, composing them reproduces the mirrored world result:
+            #     godot(P) @ godot(L) @ (S.v) == S . (v . L . P)
+            # so no extra compensation is needed anywhere.
+            flip_winding = not mirror_x
+            local_prims = []
+            for mat_idx, face_list in _split_mesh_by_material(mesh):
+                prim = _build_prop_primitive(
+                    gltf, buf, mesh, face_list, v_flip, flip_winding, mirror_x,
+                    node_rot_T=None, node_rot_inv=None, node_trans=None,
+                )
+                # Provisional TMD material index; embed_textures remaps it to
+                # the real glTF material (see the comment on the static path).
+                prim.material = mat_idx
+                local_prims.append(prim)
+            mesh_idx = len(gltf.meshes)
+            gltf.meshes.append(
+                Mesh(name=f"{node.node_name}_mesh", primitives=local_prims)
+            )
+
+            pivot_godot = to_godot_matrix(node.pivot_d3d)
+            if mirror_x:
+                mxm = np.diag([-1.0, 1.0, 1.0, 1.0])
+                pivot_godot = mxm @ pivot_godot @ mxm
+            pivot = Node(name=node.pivot_name, matrix=_column_major(pivot_godot))
+            anim_pivot_idx[obj_index] = len(gltf.nodes)
+            gltf.nodes.append(pivot)
+
+            if has_shear(node.animation):
+                # A scale about a tilted axis is a shear, which a single TRS
+                # node cannot hold. Split it into the four factors of
+                # godot_local_factors (M = A . Q^T . D . Q); each is
+                # TRS-representable and each maps 1:1 onto one authored track,
+                # so all four stay animatable rather than frozen.
+                a_m, qt_m, d_v, q_m = godot_local_factors(node.animation, 0)
+                _basis, trans_d3d = local_trs_d3d(node.animation, 0)
+                trans = to_godot_translation(trans_d3d)
+                if mirror_x:
+                    trans = (-trans[0], trans[1], trans[2])
+
+                chain = [
+                    Node(name=f"{node.node_name}_a",
+                         translation=list(trans),
+                         rotation=_rotation_list(a_m, mirror_x)),
+                    Node(name=f"{node.node_name}_axisinv",
+                         rotation=_rotation_list(qt_m, mirror_x)),
+                    Node(name=f"{node.node_name}_scale",
+                         scale=[float(v) for v in d_v]),
+                    Node(name=node.node_name, mesh=mesh_idx,
+                         rotation=_rotation_list(q_m, mirror_x)),
+                ]
+                first = len(gltf.nodes)
+                for offset, chain_node in enumerate(chain):
+                    if offset + 1 < len(chain):
+                        chain_node.children = [first + offset + 1]
+                    gltf.nodes.append(chain_node)
+                pivot.children = [first]
+                anim_node_idx[obj_index] = first + len(chain) - 1
+                anim_targets[obj_index] = {
+                    "translation": first,       # _a  (position keys)
+                    "rotation": first,          # _a  (rotation keys -> A)
+                    "axis_inv": first + 1,      # _axisinv (scale-axis -> Q^T)
+                    "scale": first + 2,         # _scale   (scale keys -> D)
+                    "axis": first + 3,          # mesh node (scale-axis -> Q)
+                }
+                continue
+
+            trs = _node_trs_from_local(node.animation, mirror_x, 0)
+            anim_node = Node(name=node.node_name, mesh=mesh_idx,
+                             translation=trs[0], rotation=trs[1], scale=trs[2])
+            anim_node_idx[obj_index] = len(gltf.nodes)
+            gltf.nodes.append(anim_node)
+            pivot.children = [anim_node_idx[obj_index]]
+            anim_targets[obj_index] = {
+                "translation": anim_node_idx[obj_index],
+                "rotation": anim_node_idx[obj_index],
+                "scale": anim_node_idx[obj_index],
+            }
+            continue
+
+        # ---- static path: unchanged, bake the world transform ----
         rot = np.array(obj.world_transform.rotation.data, dtype=np.float64).reshape(3, 3)
         trans = np.array(obj.world_transform.translation.to_tuple(), dtype=np.float64)
         det = np.linalg.det(rot)
@@ -361,11 +668,19 @@ def export_prop(
         node_rot_T = rot.T
         node_rot_inv = np.linalg.inv(rot) if abs(det) >= 1e-8 else None
         mat_groups = _split_mesh_by_material(mesh)
-        for _mat_idx, face_list in mat_groups:
+        for mat_idx, face_list in mat_groups:
             prim = _build_prop_primitive(
                 gltf, buf, mesh, face_list, v_flip, flip_winding, mirror_x,
                 node_rot_T=node_rot_T, node_rot_inv=node_rot_inv, node_trans=trans,
             )
+            # Provisional TMD material index, remapped by embed_textures.
+            # The old contract — embed_textures zips primitives against
+            # model.meshes in object order — broke the day animated objects
+            # started emitting their own meshes mid-walk while static
+            # primitives collect into a chunk mesh after it (the 2026-08-08
+            # street-lamp regression: glow quads wearing the lamp diffuse).
+            # Stamping the index here makes the mapping order-independent.
+            prim.material = mat_idx
             primitives.append(prim)
 
     # Godot caps a single Mesh at 256 surfaces (RS::MAX_MESH_SURFACES) and
@@ -380,6 +695,24 @@ def export_prop(
         gltf.meshes.append(Mesh(name=f"{prop_id}_mesh{suffix}", primitives=chunk))
         node_ids.append(len(gltf.nodes))
         gltf.nodes.append(Node(name=f"{prop_id}{suffix}", mesh=mesh_idx))
+
+    # Parent each pivot under its parent object's ANIMATED node; pivots whose
+    # object has no animated parent become scene roots. Done after the loop so
+    # forward references (child emitted before parent) resolve.
+    for obj_index, node in plan.animated.items():
+        pivot_idx = anim_pivot_idx.get(obj_index)
+        if pivot_idx is None:
+            continue
+        parent_idx = anim_node_idx.get(node.parent_object_index)
+        if parent_idx is None:
+            node_ids.append(pivot_idx)
+            continue
+        parent = gltf.nodes[parent_idx]
+        if parent.children is None:
+            parent.children = []
+        parent.children.append(pivot_idx)
+
+    _build_animations(gltf, buf, plan, anim_targets, mirror_x)
 
     scene = Scene(nodes=node_ids)
     gltf.scenes.append(scene)

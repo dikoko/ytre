@@ -1,0 +1,28 @@
+{
+ "clips": {
+  "default": {
+   "end": 600.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 600.0,
+ "visibility": {
+  "a_SWAbook02A_obj1": [
+   [
+    25.0,
+    0.0
+   ],
+   [
+    29.0,
+    1.0
+   ],
+   [
+    45.0,
+    0.0
+   ]
+  ]
+ }
+}

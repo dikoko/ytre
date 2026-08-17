@@ -1,0 +1,48 @@
+{
+ "clips": {
+  "range_12": {
+   "end": 20.0,
+   "loop": false,
+   "start": 0.0
+  },
+  "range_13": {
+   "end": 30.0,
+   "loop": false,
+   "start": 20.0
+  },
+  "range_14": {
+   "end": 30.0,
+   "loop": false,
+   "start": 30.0
+  },
+  "range_15": {
+   "end": 40.0,
+   "loop": false,
+   "start": 30.0
+  },
+  "range_16": {
+   "end": 40.0,
+   "loop": false,
+   "start": 40.0
+  },
+  "range_17": {
+   "end": 60.0,
+   "loop": false,
+   "start": 40.0
+  },
+  "range_18": {
+   "end": 60.0,
+   "loop": false,
+   "start": 60.0
+  },
+  "range_3": {
+   "end": 60.0,
+   "loop": false,
+   "start": 60.0
+  }
+ },
+ "default_clip": "range_12",
+ "fps": 30.0,
+ "total_frames": 60.0,
+ "visibility": {}
+}

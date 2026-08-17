@@ -306,4 +306,3 @@ func _ready():
 
 - `client/scripts/avatar_tool.gd` — Full viewer using all three addons as a consumer reference
 - `client/scripts/test_avatar_character.gd` — Multi-avatar test scene with keyboard controls
-- `docs/superpowers/specs/2026-03-22-monster-character-addon-design.md` — MonsterCharacter design spec

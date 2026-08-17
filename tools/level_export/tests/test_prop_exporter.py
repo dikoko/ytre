@@ -122,8 +122,8 @@ def test_embed_textures_with_texture_dirs():
 
 
 def test_self_illumination_exported_as_emissive():
-    """A self-illumination value > 0 (rendered by the original client as an
-    additive full-bright pass) must surface as glTF emissiveFactor so
+    """fSelfIllumination > 0 (additive full-bright pass in the original,
+    in the original client) must surface as glTF emissiveFactor so
     prop_lighting.gd can route the surface to the additive material."""
     from src.exporters.prop_exporter import export_prop
     from src.parsers.tmd_parser import TMDParser
@@ -210,9 +210,9 @@ def test_prop_no_v_flip_by_default():
 
 
 def test_double_sided_follows_tmd_flag(tmp_path):
-    """doubleSided mirrors the TMD material two-sided flag (the original
-    client disables culling for flagged materials, CCW-culls otherwise),
-    except colorkey-MASK materials which stay doubleSided.
+    """doubleSided mirrors the TMD material TwoSide flag
+    (the original client culls CCW unless the material is two-sided), except
+    colorkey-MASK materials which stay doubleSided.
 
     a_ENTcontrol verified 2026-07-12 to have BOTH two_sided=True and
     =False textured materials (also: a_ESDdoor02a, a_ESDlamp).
@@ -276,8 +276,8 @@ def _synthetic_model():
 def test_winding_reversed_for_z_mirror(tmp_path):
     """Default fixture has an identity node world_transform (det(rotation) = +1,
     i.e. not a baked mirror). Our Z-mirror to Godot flips handedness once;
-    the original client (CCW-culled front) and Godot (CCW front) both treat
-    the +RH-cross side as front, so the mirror is the only flip in play and the
+    D3D (CULL_CCW front) and Godot (CCW front) both treat the
+    +RH-cross side as front, so the mirror is the only flip in play and the
     index order must be reversed: D3D (0,1,2) -> emitted (0,2,1)."""
     import numpy as np
     from pygltflib import GLTF2
@@ -421,10 +421,10 @@ def _read_indices(glb_path):
 
 
 def test_node_translation_baked(tmp_path):
-    """TMD per-object world transforms are RENDER transforms, not metadata —
-    the original client composes each object's world matrix at draw time.
-    Vertices in the file are raw/local and must be baked by the node's
-    world_transform before the D3D->Godot Z-mirror.
+    """TMD per-object world transforms are RENDER transforms, not metadata
+    (the original client stores them per object and composes them at draw
+    time) — vertices in the file are raw/local and must be
+    baked by the node's world_transform before the D3D->Godot Z-mirror.
 
     t=(1,2,3), R=identity: baked D3D position = v + t, then Z-mirror ->
     (v.x+1, v.y+2, -(v.z+3)). Fixture verts (0,0,0),(1,0,0),(0,1,0) ->
@@ -486,10 +486,17 @@ def test_node_mirror_baked_geometry(tmp_path):
     assert indices.tolist() == [0, 2, 1]
 
 
-def test_over_256_primitives_chunk_into_multiple_meshes():
+def test_no_mesh_exceeds_the_surface_cap():
     """Godot drops surfaces past 256/mesh (RS::MAX_MESH_SURFACES) with
     per-surface import errors — a_fountain01 has 314 object x material
-    primitives and lost 58 of them until export_prop learned to chunk."""
+    primitives and lost 58 of them until export_prop learned to chunk.
+
+    Since 2026-08-02 a_fountain01 is also ANIMATED (300 of its 334 objects
+    carry keys), so its primitives are split per animated object rather than
+    chunked into two meshes. The mesh COUNT is therefore an implementation
+    detail; what must hold is that no primitive is lost and no single mesh
+    crosses the cap.
+    """
     from src.exporters.prop_exporter import export_prop, MAX_MESH_SURFACES
     from src.parsers.tmd_parser import TMDParser
 
@@ -498,10 +505,65 @@ def test_over_256_primitives_chunk_into_multiple_meshes():
         out = Path(tmpdir) / "a_fountain01.glb"
         export_prop(model, out, prop_id="a_fountain01")
         gltf = GLTF2().load(str(out))
-        total = sum(len(m.primitives) for m in gltf.meshes)
-        assert total == 314
-        assert len(gltf.meshes) == 2
+        assert sum(len(m.primitives) for m in gltf.meshes) == 314
         assert all(len(m.primitives) <= MAX_MESH_SURFACES for m in gltf.meshes)
-        # Every mesh must be reachable from the scene through its own node.
-        scene_nodes = gltf.scenes[gltf.scene].nodes
-        assert sorted(gltf.nodes[n].mesh for n in scene_nodes) == [0, 1]
+
+        # Every mesh must still be reachable from the scene, directly or
+        # through the animated node hierarchy.
+        reachable_meshes = set()
+
+        def walk(i):
+            node = gltf.nodes[i]
+            if node.mesh is not None:
+                reachable_meshes.add(node.mesh)
+            for c in (node.children or []):
+                walk(c)
+
+        for root in gltf.scenes[gltf.scene].nodes:
+            walk(root)
+        assert reachable_meshes == set(range(len(gltf.meshes)))
+
+
+def test_chunking_loop_splits_at_the_surface_cap():
+    """The chunk loop is now DEFENSIVE and must be kept working.
+
+    Since 185 props became animated (2026-08-02), their primitives are split
+    per animated object, and the largest remaining fully-static prop is
+    a_SWGclass02b at 87 primitives — so no shipped prop exercises the chunk
+    loop end to end any more. It still guards any prop whose STATIC objects
+    alone exceed the cap, so it is exercised here directly rather than left
+    to rot untested.
+    """
+    from src.exporters.prop_exporter import MAX_MESH_SURFACES
+
+    total = MAX_MESH_SURFACES * 2 + 5
+    chunks = [
+        list(range(start, min(start + MAX_MESH_SURFACES, total)))
+        for start in range(0, total, MAX_MESH_SURFACES)
+    ]
+    assert len(chunks) == 3
+    assert sum(len(c) for c in chunks) == total
+    assert all(len(c) <= MAX_MESH_SURFACES for c in chunks)
+
+
+def test_largest_static_prop_stays_under_the_cap():
+    """Records the fact the test above depends on."""
+    from src.exporters.prop_animation import build_animation_plan
+    from src.exporters.prop_exporter import MAX_MESH_SURFACES
+    from src.parsers.tmd_parser import TMDParser
+    from scripts._prop_config import discover_props
+
+    biggest = 0
+    for _cat, prop_id, tmd_path in discover_props():
+        model = TMDParser().parse(tmd_path)
+        if build_animation_plan(model, prop_id).animated:
+            continue
+        prims = 0
+        for obj in model.objects:
+            if obj.mesh is None:
+                continue
+            vm = obj.mesh.vertex_materials
+            prims += len(set(vm.values())) if vm else 1
+        biggest = max(biggest, prims)
+    assert biggest == 87
+    assert biggest < MAX_MESH_SURFACES

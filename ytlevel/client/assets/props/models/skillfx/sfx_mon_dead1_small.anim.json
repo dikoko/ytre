@@ -1,0 +1,46 @@
+{
+ "clips": {
+  "default": {
+   "end": 60.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 60.0,
+ "visibility": {
+  "sfx_mon_dead1_small_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    54.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_mon_dead1_small_obj2": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ]
+ }
+}

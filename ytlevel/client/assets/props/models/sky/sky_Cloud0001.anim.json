@@ -1,0 +1,36 @@
+{
+ "clips": {
+  "default": {
+   "end": 2400.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 2400.0,
+ "visibility": {
+  "sky_Cloud0001_obj0": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    600.0,
+    0.5
+   ],
+   [
+    1200.0,
+    1.0
+   ],
+   [
+    1800.0,
+    0.5
+   ],
+   [
+    2400.0,
+    1.0
+   ]
+  ]
+ }
+}

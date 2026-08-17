@@ -4,6 +4,39 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.7.0] - 2026-08-16
+
+### Added
+- **Animated props** — 187 prop models now carry their authored keyframe
+  animation: campfires flicker, portals swirl, crystals pulse. Props whose
+  animation is a trigger- or time-of-day state machine hold their authored
+  idle state instead of looping through every state. 157 props also carry
+  per-object alpha fade curves (exported as sidecar data, applied at
+  runtime).
+- **Portal travel effects** — taking a portal in Run mode now plays the
+  original depart/arrive warp puffs with the indoor/outdoor warp sounds,
+  and portal gates render with the same lighting and animation treatment
+  as in-map props.
+- **Camera occlusion fading** (viewer enhancement — the original had
+  none): props that block the Run-mode camera's view of the character
+  fade to a half-transparent ghost. Detection is mesh-accurate (a huge
+  building no longer fades when you merely stand near it), requires the
+  prop to actually hide the character, and restores with a short delay so
+  razor-edge camera angles don't flicker.
+- **Movement grid** — Run-mode walkability now comes from the original
+  game's own per-map movement data (all 325 maps), replacing the previous
+  line-of-sight approximation. The avatar also slides along obstacle
+  boundaries and steps around small obstacles instead of stopping dead,
+  matching how the original's click-to-move pathfinding felt.
+
+### Fixed
+- School front stairs and other authored walkways are walkable again
+  (the old wall data blocked some visually open flights).
+- Portal travel no longer risks a freeze when neighboring maps are still
+  loading in the background.
+- Street-lamp glow quads and other multi-material animated props keep
+  their correct textures (material assignment is now pinned per node).
+
 ## [0.6.4] - 2026-07-26
 
 ### Added

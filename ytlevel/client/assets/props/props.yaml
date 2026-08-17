@@ -27,6 +27,7 @@ props:
   - sfx_bonefire_smoke02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: a_ENTcontrol
   category: artificial
   textures:
@@ -34,6 +35,7 @@ props:
   - sfx_common_flashwall1_yellow
   - sfx_common_particlebeam_pink
   - sfx_common_flashring1_blue
+  animated: true
 - id: a_ENTfreezer
   category: artificial
   textures:
@@ -67,6 +69,7 @@ props:
   - sfx_common_flashlight1_purple
   - a_ESDdoor02a01
   - a_ESDdoor02a02
+  animated: true
 - id: a_ESDdoor02b
   category: artificial
   textures:
@@ -118,6 +121,7 @@ props:
   - a_SElamp01
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_cyan_01
+  animated: true
 - id: a_ESDmashin01
   category: artificial
   textures:
@@ -369,6 +373,7 @@ props:
   - a_FANbottle_04
   - a_FANbottle_02
   - a_FANbottle_ef
+  animated: true
 - id: a_FANcircle01
   category: artificial
   textures:
@@ -381,19 +386,23 @@ props:
   category: artificial
   textures:
   - a_FANwallp04
+  animated: true
 - id: a_FANpan02
   category: artificial
   textures:
   - a_FANwallp05
   - a_FANneon
+  animated: true
 - id: a_FANpan03
   category: artificial
   textures:
   - a_FANwallg03
+  animated: true
 - id: a_FANpan04
   category: artificial
   textures:
   - a_FANwally03
+  animated: true
 - id: a_FANpan05
   category: artificial
   textures:
@@ -404,10 +413,12 @@ props:
   textures:
   - a_FANpan06
   - a_FANneon
+  animated: true
 - id: a_FANpan07
   category: artificial
   textures:
   - a_FANwallo04
+  animated: true
 - id: a_FANpan08
   category: artificial
   textures:
@@ -419,6 +430,7 @@ props:
   - a_FANwallo04
   - a_FANwallp04
   - a_FANwally03
+  animated: true
 - id: a_FANwallg01
   category: artificial
   textures:
@@ -598,6 +610,7 @@ props:
   category: artificial
   textures:
   - a_SCbookcase01
+  animated: true
 - id: a_SCbookcase02
   category: artificial
   textures:
@@ -743,6 +756,7 @@ props:
   category: artificial
   textures:
   - a_SCdoor01
+  animated: true
 - id: a_SCdoor05
   category: artificial
   textures:
@@ -1291,6 +1305,7 @@ props:
   - sfx_bonefire_smoke02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: a_SCwall03_2
   category: artificial
   textures:
@@ -1601,6 +1616,7 @@ props:
   - n_treevine01
   - a_SEcage02_02
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_SEcall01
   category: artificial
   textures:
@@ -1758,6 +1774,7 @@ props:
   - a_SEground02
   - a_SEground02a
   - a_SEground02a_01a
+  animated: true
 - id: a_SEground02_02
   category: artificial
   textures:
@@ -1765,6 +1782,7 @@ props:
   - a_SEground02b
   - a_SEground02
   - a_SEground02a
+  animated: true
 - id: a_SElamp02
   category: artificial
   textures:
@@ -2008,6 +2026,7 @@ props:
   - a_SEwirefenceA
   - a_SEwirefenceB
   - a_SEwirefenceC
+  animated: true
 - id: a_SEwirefence04
   category: artificial
   textures:
@@ -2039,6 +2058,7 @@ props:
   - a_SWAantique01b
   - a_SWAantigue01c
   - sfx_common_thunder1
+  animated: true
 - id: a_SWAantigue01a
   category: artificial
   textures:
@@ -2046,6 +2066,7 @@ props:
   - a_SWAantique01b
   - a_SWAantigue01c
   - sfx_common_thunder1
+  animated: true
 - id: a_SWAantigue02
   category: artificial
   textures:
@@ -2053,21 +2074,25 @@ props:
   - a_SWAantigue01c
   - a_SWAantique01b
   - a_SWAantique01a
+  animated: true
 - id: a_SWAantique03a
   category: artificial
   textures:
   - a_SWAantigue01c
   - n_ESWtree02effect01a
+  animated: true
 - id: a_SWAantique03b
   category: artificial
   textures:
   - n_ESWtree02effect01a
+  animated: true
 - id: a_SWAantique03c
   category: artificial
   textures:
   - a_SWAantigue01c
   - sfx_common_flashwall1_cyan
   - sfx_common_flashring3_blue2
+  animated: true
 - id: a_SWAball01
   category: artificial
   textures:
@@ -2143,6 +2168,7 @@ props:
   - a_ESWAboard01h
   - a_ESWAboard01g
   - a_ESWAboard01f
+  animated: true
 - id: a_SWAbox01
   category: artificial
   textures:
@@ -2254,6 +2280,7 @@ props:
   - sfx_common_dust04
   - sfx_common_dust03
   - sfx_common_flashwall1_cyan
+  animated: true
 - id: a_SWAdrum01
   category: artificial
   textures:
@@ -2345,6 +2372,7 @@ props:
   textures:
   - a_ESDwall01b
   - a_SWAhole03
+  animated: true
 - id: a_SWAhole04
   category: artificial
   textures:
@@ -2366,6 +2394,7 @@ props:
   category: artificial
   textures:
   - a_SWAlever01
+  animated: true
 - id: a_SWAlobby01
   category: artificial
   textures:
@@ -2377,6 +2406,7 @@ props:
   - a_ESWAboard01a
   - a_ESWAboard01h
   - E_SWAlobby02
+  animated: true
 - id: a_SWAmakeup01
   category: artificial
   textures:
@@ -2418,22 +2448,26 @@ props:
   category: artificial
   textures:
   - a_SWAorgel01
+  animated: true
 - id: a_SWApan
   category: artificial
   textures:
   - a_SWApan02
   - red light
+  animated: true
 - id: a_SWApan01
   category: artificial
   textures:
   - a_SWApan01
   - yellow light
+  animated: true
 - id: a_SWApan03
   category: artificial
   textures:
   - a_SWApan03
   - a_SWApan03-
   - blue light
+  animated: true
 - id: a_SWApan_a
   category: artificial
   textures:
@@ -2443,16 +2477,19 @@ props:
   textures:
   - a_SWApan02_02
   - blue light
+  animated: true
 - id: a_SWApan_c
   category: artificial
   textures:
   - a_SWApan02_03
   - green light
+  animated: true
 - id: a_SWApan_d
   category: artificial
   textures:
   - a_SWApan02_01
   - yellow light
+  animated: true
 - id: a_SWApart01
   category: artificial
   textures:
@@ -2473,11 +2510,13 @@ props:
   - a_SWApot04
   - n_SWTgrass02
   - a_SWApot02
+  animated: true
 - id: a_SWApot02_1
   category: artificial
   textures:
   - a_SWApot02
   - a_SWApot03
+  animated: true
 - id: a_SWApump01
   category: artificial
   textures:
@@ -2488,6 +2527,7 @@ props:
   - a_SWApurifier01-01a
   - a_SWApurifier01-01b
   - sfx_bonefire_smoke02
+  animated: true
 - id: a_SWApurifier01-02
   category: artificial
   textures:
@@ -2498,6 +2538,7 @@ props:
   - sfx_bonefire02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: a_SWArepairkit01
   category: artificial
   textures:
@@ -2507,6 +2548,7 @@ props:
   - a_SWIsand02a
   - a_SWGutele01
   - a_SWGutele03
+  animated: true
 - id: a_SWArice
   category: artificial
   textures:
@@ -2541,6 +2583,7 @@ props:
   textures:
   - a_SWAsonic01
   - a_SWAball02a
+  animated: true
 - id: a_SWAspring01
   category: artificial
   textures:
@@ -2611,18 +2654,22 @@ props:
   category: artificial
   textures:
   - a_SWAtrash01_n01
+  animated: true
 - id: a_SWAtrash01_n02
   category: artificial
   textures:
   - a_SWAtrash01_n02
+  animated: true
 - id: a_SWAtrash01_n03
   category: artificial
   textures:
   - a_SWAtrash01_n03
+  animated: true
 - id: a_SWAtreasure01
   category: artificial
   textures:
   - a_SWAtreasure01
+  animated: true
 - id: a_SWAtreasure01_effect
   category: artificial
   textures:
@@ -2632,6 +2679,7 @@ props:
   - sfx_common_flashlight1_pink
   - sfx_common_flashlight1_red
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: a_SWAtunnel01
   category: artificial
   textures:
@@ -2648,6 +2696,7 @@ props:
   - a_tunnelwall_floor_02
   - a_tunnelwall_coner02
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAwall01a
   category: artificial
   textures:
@@ -3111,6 +3160,7 @@ props:
   - a_SWElamp01a
   - sfx_common_flashlight1_yellow1
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: a_SWEpform01
   category: artificial
   textures:
@@ -3235,21 +3285,25 @@ props:
   textures:
   - a_SWFcrys01-1
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_SWFcrys02
   category: artificial
   textures:
   - a_SWFcrys01-1
   - sfx_common_flashlight1_cyan_01
+  animated: true
 - id: a_SWFcrys03
   category: artificial
   textures:
   - a_SWFgotree_c
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_SWFcrys04
   category: artificial
   textures:
   - a_SWFgotree_c
   - sfx_common_flashlight1_cyan_01
+  animated: true
 - id: a_SWFdoor01
   category: artificial
   textures:
@@ -3259,6 +3313,7 @@ props:
   textures:
   - a_SWAbigstone01
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWFfox01
   category: artificial
   textures:
@@ -3305,6 +3360,7 @@ props:
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_yellow
   - n_SEctree01_a
+  animated: true
 - id: a_SWFire01
   category: artificial
   textures:
@@ -3319,12 +3375,14 @@ props:
   - a_SWFlamp01
   - a_SWFgotree_c
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_SWFlamp02
   category: artificial
   textures:
   - a_SWFlamp02
   - LampFire
   - sfx_common_flashlight1_pink
+  animated: true
 - id: a_SWFlamp03
   category: artificial
   textures:
@@ -3519,6 +3577,7 @@ props:
   - sfx_common_flashlight1_purple
   - a_SWAball02a
   - a_SWFtower01
+  animated: true
 - id: a_SWFume01
   category: artificial
   textures:
@@ -3815,6 +3874,7 @@ props:
   textures:
   - a_SWGubarrier
   - n_ESWtree02effect01a
+  animated: true
 - id: a_SWGuboard01
   category: artificial
   textures:
@@ -3832,31 +3892,37 @@ props:
   textures:
   - a_SWAball02a
   - a_SWGubox01a
+  animated: true
 - id: a_SWGubox01b
   category: artificial
   textures:
   - a_SWAball02a
   - a_SWGubox01a
+  animated: true
 - id: a_SWGubox01c
   category: artificial
   textures:
   - a_SWGubox01a
   - a_SWAball02a
+  animated: true
 - id: a_SWGubox02a
   category: artificial
   textures:
   - a_SWAball02a
   - a_SWGubox02a
+  animated: true
 - id: a_SWGubox02b
   category: artificial
   textures:
   - a_SWAball02a
   - a_SWGubox02a
+  animated: true
 - id: a_SWGubox02c
   category: artificial
   textures:
   - a_SWGubox02a
   - a_SWAball02a
+  animated: true
 - id: a_SWGubox03A
   category: artificial
   textures:
@@ -3904,6 +3970,7 @@ props:
   textures:
   - a_SWGudoor02a
   - a_SWGudoor02b
+  animated: true
 - id: a_SWGudoor02b
   category: artificial
   textures:
@@ -3911,6 +3978,7 @@ props:
   - a_SWGudoor02a
   - a_SWGudoor02d
   - a_SWAball02a
+  animated: true
 - id: a_SWGumirror01
   category: artificial
   textures:
@@ -3941,6 +4009,7 @@ props:
   textures:
   - a_SWAball02a
   - a_SWGushovel02
+  animated: true
 - id: a_SWGutele01
   category: artificial
   textures:
@@ -3952,10 +4021,12 @@ props:
   category: artificial
   textures:
   - s_poolpost03
+  animated: true
 - id: a_SWGuthunder01
   category: artificial
   textures:
   - s_poolpost03
+  animated: true
 - id: a_SWGutile01
   category: artificial
   textures:
@@ -3997,6 +4068,7 @@ props:
   - sfx_bonefire_smoke02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: a_SWGutorch02
   category: artificial
   textures:
@@ -4007,12 +4079,14 @@ props:
   - sfx_bonefire03
   - a_SWFstair01
   - a_bonfire02
+  animated: true
 - id: a_SWGuwall01
   category: artificial
   textures:
   - a_SWGuwall01
   - a_SWGuwall01a
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: a_SWGuwall01a
   category: artificial
   textures:
@@ -4108,11 +4182,13 @@ props:
   textures:
   - a_SWGuwall02a
   - a_SWAball02a
+  animated: true
 - id: a_SWGuwallcloth
   category: artificial
   textures:
   - a_SWGuwall01a
   - a_SWGuwallcloth
+  animated: true
 - id: a_SWGuwood01A
   category: artificial
   textures:
@@ -4322,6 +4398,7 @@ props:
   textures:
   - a_SCwall01_02
   - a_SWIdoor02
+  animated: true
 - id: a_SWIdoor01_04
   category: artificial
   textures:
@@ -4790,6 +4867,7 @@ props:
   - a_SWTwall01B
   - a_SWTgate01C
   - a_SWTwall01D
+  animated: true
 - id: a_SWTgate02
   category: artificial
   textures:
@@ -4798,6 +4876,7 @@ props:
   - a_SWTwall01A
   - a_SWTwall01B
   - a_SWTwall01D
+  animated: true
 - id: a_SWTgen01
   category: artificial
   textures:
@@ -4958,6 +5037,7 @@ props:
   - a_SWTrgate01B
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWTsetA
   category: artificial
   textures:
@@ -5052,12 +5132,14 @@ props:
   - a_SWWgate
   - n_SWEwtree01d
   - sfx_common_flashlight1_cyan_02
+  animated: true
 - id: a_SWWgate02
   category: artificial
   textures:
   - a_SWWgate
   - n_SWEwtree01d
   - sfx_common_flashlight1_cyan_02
+  animated: true
 - id: a_SWlaff01
   category: artificial
   textures:
@@ -5241,6 +5323,7 @@ props:
   - sfx_bonefire03
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_cyan_02
+  animated: true
 - id: a_fd05door01a
   category: artificial
   textures:
@@ -5258,6 +5341,7 @@ props:
   - sfx_bonefire03
   - sfx_common_flashlight1_cyan_02
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_fd05door02
   category: artificial
   textures:
@@ -5275,6 +5359,7 @@ props:
   - sfx_bonefire03
   - sfx_common_flashlight1_cyan_02
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: a_fd05stair
   category: artificial
   textures:
@@ -5312,6 +5397,7 @@ props:
   - sfx_bucket02
   - sfx_fountain_particle
   - a_fountain02
+  animated: true
 - id: a_garden01
   category: artificial
   textures:
@@ -5488,6 +5574,7 @@ props:
   - a_SElamp01
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_cyan_01
+  animated: true
 - id: a_separt01
   category: artificial
   textures:
@@ -5560,6 +5647,7 @@ props:
   - a_tube01
   - ct0011
   - a_tube03a
+  animated: true
 - id: a_tube01_01
   category: artificial
   textures:
@@ -5567,6 +5655,7 @@ props:
   - a_tube01
   - ct0011
   - a_tube03a
+  animated: true
 - id: a_tube01_02
   category: artificial
   textures:
@@ -5574,6 +5663,7 @@ props:
   - a_tube01
   - ct0011
   - a_tube03a
+  animated: true
 - id: a_tube02
   category: artificial
   textures:
@@ -5581,6 +5671,7 @@ props:
   - a_tube04
   - ct0011
   - a_tube02a
+  animated: true
 - id: a_tube02_01
   category: artificial
   textures:
@@ -5588,6 +5679,7 @@ props:
   - a_tube04
   - ct0011
   - a_tube02a
+  animated: true
 - id: a_tube02_02
   category: artificial
   textures:
@@ -5595,6 +5687,7 @@ props:
   - a_tube04
   - ct0011
   - a_tube02a
+  animated: true
 - id: a_tunnelmachine01
   category: artificial
   textures:
@@ -5606,6 +5699,7 @@ props:
   - a_tunnelmachine02_02
   - a_tunnelmachine02_button
   - a_tunnelmachine02_dust
+  animated: true
 - id: a_tunnelmachine03
   category: artificial
   textures:
@@ -5616,6 +5710,7 @@ props:
   textures:
   - a_tunnelmachine04_01
   - a_tunnelmachine04_02
+  animated: true
 - id: a_tunnelroom_wall01
   category: artificial
   textures:
@@ -5755,6 +5850,7 @@ props:
   - sfx_fountain02
   - sfx_bucket01
   - sfx_bucket02
+  animated: true
 - id: a_wbucket01_a
   category: artificial
   textures:
@@ -5765,6 +5861,7 @@ props:
   - bf_01
   - bf_01a
   - bf_a
+  animated: true
 - id: c_SCchair04_a
   category: artificial
   textures:
@@ -5773,14 +5870,17 @@ props:
   category: artificial
   textures:
   - fish
+  animated: true
 - id: fish_02
   category: artificial
   textures:
   - fish
+  animated: true
 - id: lightningbug_01
   category: artificial
   textures:
   - bf_a
+  animated: true
 - id: m_endoor01
   category: artificial
   textures:
@@ -5811,6 +5911,7 @@ props:
   category: artificial
   textures:
   - n_ESWtree02effect01a
+  animated: true
 - id: n_SWCgrass01
   category: artificial
   textures:
@@ -5836,11 +5937,13 @@ props:
   textures:
   - sfx_sunlight
   - sfx_common_flashlight1_cyan_02
+  animated: true
 - id: sunlight
   category: artificial
   textures:
   - sfx_sunlight
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: wground
   category: artificial
   textures:
@@ -5944,6 +6047,7 @@ props:
   - n_SEbtree01_e_chrirtmas02
   - n_SEbtree01_e_chrirtmas03
   - sfx_common_flashlight1_cyan
+  animated: true
 - id: n_SEbtree03
   category: nature
   textures:
@@ -6063,6 +6167,7 @@ props:
   - n_SWFgogra02
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_red
+  animated: true
 - id: n_SWFgogra01a
   category: nature
   textures:
@@ -6070,12 +6175,14 @@ props:
   - n_SWFgogra02
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_red
+  animated: true
 - id: n_SWFgogra01b
   category: nature
   textures:
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_red
   - n_SWFgogra01
+  animated: true
 - id: n_SWFgogra01c
   category: nature
   textures:
@@ -6083,6 +6190,7 @@ props:
   - n_SWFgogra02
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_red
+  animated: true
 - id: n_SWFgogra02
   category: nature
   textures:
@@ -6092,6 +6200,7 @@ props:
   - sfx_common_flashlight1_red
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra02a
   category: nature
   textures:
@@ -6101,6 +6210,7 @@ props:
   - sfx_common_flashlight1_red
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra02b
   category: nature
   textures:
@@ -6110,6 +6220,7 @@ props:
   - sfx_common_flashlight1_red
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra02c
   category: nature
   textures:
@@ -6119,18 +6230,21 @@ props:
   - sfx_common_flashlight1_yellow
   - n_SWFgogra01
   - n_SWFgogra02
+  animated: true
 - id: n_SWFgogra03
   category: nature
   textures:
   - n_SWFgogra02
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra03a
   category: nature
   textures:
   - n_SWFgogra02
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra03b
   category: nature
   textures:
@@ -6150,6 +6264,7 @@ props:
   - n_SWFgogra05
   - sfx_common_flashlight1_purple
   - sfx_common_flashlight1_red
+  animated: true
 - id: n_SWFgogra04b
   category: nature
   textures:
@@ -6157,6 +6272,7 @@ props:
   - sfx_common_flashlight1_red
   - n_SWFgogra04
   - n_SWFgogra05
+  animated: true
 - id: n_SWFgogra04c
   category: nature
   textures:
@@ -6164,6 +6280,7 @@ props:
   - sfx_common_flashlight1_red
   - n_SWFgogra04
   - n_SWFgogra05
+  animated: true
 - id: n_SWFgogra05a
   category: nature
   textures:
@@ -6173,6 +6290,7 @@ props:
   - sfx_common_flashlight1_red
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra05b
   category: nature
   textures:
@@ -6182,6 +6300,7 @@ props:
   - sfx_common_flashlight1_yellow
   - n_SWFgogra04
   - n_SWFgogra05
+  animated: true
 - id: n_SWFgogra05c
   category: nature
   textures:
@@ -6193,6 +6312,7 @@ props:
   - n_SWFgogra05
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_yellow
+  animated: true
 - id: n_SWFgogra06b
   category: nature
   textures:
@@ -6306,6 +6426,7 @@ props:
   - n_SWTstone02
   - n_SWWtree04
   - a_SWEwtree_c
+  animated: true
 - id: n_bigrock01
   category: nature
   textures:
@@ -6816,16 +6937,19 @@ props:
   - sfx_bonefire_smoke02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: E_SCfire_2
   category: active
   textures:
   - sfx_bonefire_smoke01
   - sfx_bonefire_smoke02
+  animated: true
 - id: a_SEbooth04
   category: active
   textures:
   - a_SEbooth01
   - a_SEbooth02
+  animated: true
 - id: a_SEwirefence01_a
   category: active
   textures:
@@ -6836,6 +6960,7 @@ props:
   category: active
   textures:
   - a_keypillar01
+  animated: true
 - id: a_SWAattack01
   category: active
   textures:
@@ -6843,18 +6968,21 @@ props:
   - sfx_common_flashbeam1_pink
   - sfx_common_flashring1_red
   - sfx_common_flashblade1_red
+  animated: true
 - id: a_SWAball02_01
   category: active
   textures:
   - a_SWAball02
   - a_SWAball02a
   - a_SWAball02b
+  animated: true
 - id: a_SWAball03_01
   category: active
   textures:
   - a_SWAball02b
   - a_SWAball02a
   - a_SWAball03
+  animated: true
 - id: a_SWAbari01
   category: active
   textures:
@@ -6879,12 +7007,14 @@ props:
   - a_ESWAboard01h
   - a_ESWAboard01g
   - a_ESWAboard01f
+  animated: true
 - id: a_SWAbomb01
   category: active
   textures:
   - a_SWAbomb01
   - E_bomb01
   - sfx_common_flashlight1_cyan_03
+  animated: true
 - id: a_SWAbook01A
   category: active
   textures:
@@ -6902,10 +7032,12 @@ props:
   textures:
   - a_SWAbook02A
   - a_SWAball02a
+  animated: true
 - id: a_SWAbook02B
   category: active
   textures:
   - a_SWAbook02B
+  animated: true
 - id: a_SWAbook02c
   category: active
   textures:
@@ -6916,6 +7048,7 @@ props:
   - a_wbucket01
   - sfx_fountain02
   - a_SWGbucket
+  animated: true
 - id: a_SWAcircuit
   category: active
   textures:
@@ -6926,36 +7059,42 @@ props:
   - a_SWAdoll01_a
   - sfx_common_flashdust1_brown1
   - a_SWAball02a
+  animated: true
 - id: a_SWAdoll01_b
   category: active
   textures:
   - a_SWAdoll01_a
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAdoll01_c
   category: active
   textures:
   - a_SWAdoll02_b
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAdoll02_a
   category: active
   textures:
   - a_SWAdoll01_a
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAdoll02_b
   category: active
   textures:
   - a_SWAdoll02_b
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAdoll02_c
   category: active
   textures:
   - a_SWAdoll02_b
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWAlobby01a
   category: active
   textures:
@@ -6966,6 +7105,7 @@ props:
   - a_ESWAboard01b
   - a_ESWAboard01a
   - a_ESWAboard01h
+  animated: true
 - id: a_SWAlobby01b
   category: active
   textures:
@@ -6976,6 +7116,7 @@ props:
   - a_ESWAboard01b
   - a_ESWAboard01a
   - a_ESWAboard01h
+  animated: true
 - id: a_SWAlobby01c
   category: active
   textures:
@@ -6987,10 +7128,12 @@ props:
   - a_ESWAboard01b
   - a_ESWAboard01a
   - a_ESWAboard01h
+  animated: true
 - id: a_SWAmachine01
   category: active
   textures:
   - a_SWAmachine01
+  animated: true
 - id: a_SWApot03
   category: active
   textures:
@@ -7005,10 +7148,12 @@ props:
   - a_SWApot03
   - a_SWAheart01a
   - a_stairkc
+  animated: true
 - id: a_SWApta01
   category: active
   textures:
   - a_SWApta01
+  animated: true
 - id: a_SWAptameet01
   category: active
   textures:
@@ -7029,6 +7174,7 @@ props:
   - a_SWAseal01c
   - a_SWAseal01b
   - a_SWAball02a
+  animated: true
 - id: a_SWAteam_b
   category: active
   textures:
@@ -7104,11 +7250,13 @@ props:
   - a_SWGbod03B
   - a_SWAball02a
   - sfx_common_flashdust1_brown1
+  animated: true
 - id: a_SWGbucket
   category: active
   textures:
   - a_SWGbucket
   - a_SWAball02a
+  animated: true
 - id: a_SWGbucket01
   category: active
   textures:
@@ -7118,36 +7266,43 @@ props:
   textures:
   - a_SWGcase01A_b
   - a_SWAball02a
+  animated: true
 - id: a_SWGcase02b
   category: active
   textures:
   - a_SWGcase02b
   - a_SWAball02a
+  animated: true
 - id: a_SWGcase02b_01
   category: active
   textures:
   - a_SWGcase02b
   - a_SWAball02a
+  animated: true
 - id: a_SWGcase03b
   category: active
   textures:
   - a_SWGcase03b
   - a_SWAball02a
+  animated: true
 - id: a_SWGcase03b01
   category: active
   textures:
   - a_SWGcase03b
   - a_SWAball02a
+  animated: true
 - id: a_SWGchair01A_B01
   category: active
   textures:
   - c_SWGchair01A_b
   - a_SWAball02a
+  animated: true
 - id: a_SWGchair01A_b
   category: active
   textures:
   - c_SWGchair01A_b
   - a_SWAball02a
+  animated: true
 - id: a_SWGcwall01B
   category: active
   textures:
@@ -7214,6 +7369,7 @@ props:
   - a_SWGdesk03b
   - a_SWGdesk01b_a
   - a_SWAball02a
+  animated: true
 - id: a_SWGdoor01B
   category: active
   textures:
@@ -7246,6 +7402,7 @@ props:
   textures:
   - a_SWGfoot01b
   - a_SWAball02a
+  animated: true
 - id: a_SWGfoot01b02
   category: active
   textures:
@@ -7274,6 +7431,7 @@ props:
   - a_SWGwall02B
   - a_SWGwall02C
   - a_SWAball02a
+  animated: true
 - id: a_SWGiall01B_03
   category: active
   textures:
@@ -7305,6 +7463,7 @@ props:
   - a_SWGwall02B
   - a_SWGwall02C
   - a_SWAball02a
+  animated: true
 - id: a_SWGiwall01B_02
   category: active
   textures:
@@ -7312,6 +7471,7 @@ props:
   - a_SWGwall02B
   - a_SWGwall02C
   - a_SWAball02a
+  animated: true
 - id: a_SWGiwall01B_03
   category: active
   textures:
@@ -7365,6 +7525,7 @@ props:
   textures:
   - a_SWGtdesk01b
   - a_SWAball02a
+  animated: true
 - id: a_SWGtdesk01b01
   category: active
   textures:
@@ -7374,10 +7535,12 @@ props:
   textures:
   - a_SWGtdesk01b
   - a_SWAball02a
+  animated: true
 - id: a_SWGutile_1
   category: active
   textures:
   - A_SWGutile_1
+  animated: true
 - id: a_SWGwall01B
   category: active
   textures:
@@ -7385,6 +7548,7 @@ props:
   - a_SWGwall02B
   - a_SWGwall02C
   - a_SWAball02a
+  animated: true
 - id: a_SWGwall01B_01
   category: active
   textures:
@@ -7397,6 +7561,7 @@ props:
   - sfx_common_flashdust1_brown1
   - a_SWIdoor02
   - a_SWAball02a
+  animated: true
 - id: a_SWIframe05a
   category: active
   textures:
@@ -7410,6 +7575,7 @@ props:
   - a_bonfire02
   - sfx_bonefire_smoke01
   - sfx_bonefire03
+  animated: true
 - id: a_bonfire02
   category: active
   textures:
@@ -7420,6 +7586,7 @@ props:
   - sfx_bonefire03
   - a_bonfire02
   - a_bonfire02a
+  animated: true
 - id: a_bookcase04
   category: active
   textures:
@@ -7442,13 +7609,17 @@ props:
   textures:
   - c_SWGchair01A_b
 - id: c_SWGchair02A_b01
-  category: chair
+  category: active
   textures:
   - c_SWGchair02A_b01
+  - a_SWAball02a
+  animated: true
 - id: c_SWGchair02A_b02
-  category: chair
+  category: active
   textures:
   - c_SWGchair02A_b01
+  - a_SWAball02a
+  animated: true
 - id: c_SWGchair02A_b03
   category: active
   textures:
@@ -7462,6 +7633,7 @@ props:
   textures:
   - c_SWGchair02A_b01
   - a_SWAball02a
+  animated: true
 - id: c_SWGchair03b
   category: active
   textures:
@@ -7483,6 +7655,7 @@ props:
   textures:
   - c_SWGchair04b
   - a_SWAball02a
+  animated: true
 - id: c_SWGchair04b03
   category: active
   textures:
@@ -7496,28 +7669,34 @@ props:
   textures:
   - c_SWGchair04b
 - id: c_SWGchair05A_b
-  category: chair
+  category: active
   textures:
   - c_SWGchair05A_b
+  - a_SWAball02a
+  animated: true
 - id: c_SWGchair05Ab01
   category: active
   textures:
   - c_SWGchair05A_b
   - a_SWAball02a
+  animated: true
 - id: m_stepbutton01
   category: active
   textures:
   - m_stepbutton01
+  animated: true
 - id: m_tunneldoor00
   category: active
   textures:
   - m_tunneldoor00_3
   - m_tunneldoor00_1
   - m_tunneldoor00_2
+  animated: true
 - id: m_tunnellever00
   category: active
   textures:
   - m_tunnellever
+  animated: true
 - id: m_tunnellever00_open
   category: active
   textures:
@@ -7696,6 +7875,7 @@ props:
   - s_SWCshrine_a
   - sfx_common_flashlight1_cyan
   - sfx_common_flashlight1_purple
+  animated: true
 - id: s_SWEhall01
   category: structure
   textures:
@@ -8098,6 +8278,7 @@ props:
   - p_portal001_04
   - p_portal001_03
   - p_portal001_02
+  animated: true
 - id: p_portal001b
   category: portal
   textures:
@@ -8106,18 +8287,21 @@ props:
   - p_portal001_04
   - p_portal001_03
   - p_portal001_02
+  animated: true
 - id: p_portal002a
   category: portal
   textures:
   - p_portal002_00
   - p_portal001_02
   - p_portal001_04
+  animated: true
 - id: p_portal002b
   category: portal
   textures:
   - p_portal002_00
   - p_portal001_02
   - p_portal001_04
+  animated: true
 - id: p_portal003a
   category: portal
   textures:
@@ -8129,6 +8313,7 @@ props:
   - a_ESWAboard01b
   - a_ESWAboard01h
   - portal_1a
+  animated: true
 - id: p_portal003b
   category: portal
   textures:
@@ -8137,20 +8322,24 @@ props:
   category: sky
   textures:
   - sky_Aurora
+  animated: true
 - id: sky_Cloud0001
   category: sky
   textures:
   - sky_Cloud0001
+  animated: true
 - id: sky_Cloud0002
   category: sky
   textures:
   - sky_Cloud0002
+  animated: true
 - id: sky_Dome0001
   category: sky
   textures:
   - sky_Dome0001_day
   - sky_Dome0001_night
   - sky_Dome0001_sunset
+  animated: true
 - id: sky_Dome0002
   category: sky
   textures:
@@ -8194,3 +8383,15 @@ props:
   category: pointlight
   textures:
   - light
+- id: sfx_ava_spwan1_small
+  category: skillfx
+  textures:
+  - sfx_common_flashwall1_cyan
+  - sfx_common_flashlight1_pink
+  animated: true
+- id: sfx_mon_dead1_small
+  category: skillfx
+  textures:
+  - sfx_common_flashlight1_pink
+  - sfx_common_flashwall1_cyan
+  animated: true

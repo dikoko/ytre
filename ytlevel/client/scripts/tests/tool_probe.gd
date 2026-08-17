@@ -112,32 +112,38 @@ func _probe_map(tool: Node, code: String) -> void:
 			var next_gh := runner.ground_height(npx, npz)
 			_check(is_equal_approx(next_gh, n_next),
 					"%s step onto adjacent porch cell stays on navmesh (%.2f == %.2f)" % [code, next_gh, n_next])
-		# Wall blocking (Critical finding, nm-task-5): a per-frame step that
-		# lands INSIDE a wall cell must be blocked even though it never
-		# CROSSES one (the line-cross test is endpoint-exclusive). Find a real wall
-		# cell + an adjacent open cell so the check runs against real data,
-		# not a hardcoded guess.
-		var wall := Vector2i(-1, -1)
+		# Movement blocking (movement-grid port, 2026-08-16): a per-frame
+		# step that lands INSIDE a blocked cell must be blocked. The
+		# authority is the ported .map attribute grid (what the original's
+		# pathfinder walks), NOT the LOS wall grid. Find a real blocked cell
+		# with a movable west/east neighbor so the check runs against real
+		# data, not a hardcoded guess.
+		var blocked := Vector2i(-1, -1)
+		var open_cx := -1
 		for cz in range(0, 149):
-			for cx in range(0, 149):
-				if nav.is_wall(float(cx) + 0.5, -(float(cz) + 0.5)):
-					wall = Vector2i(cx, cz)
-					break
-			if wall.x >= 0:
+			for cx in range(1, 148):
+				var wz_c := -(float(cz) + 0.5)
+				if not nav.movable(float(cx) + 0.5, wz_c):
+					if nav.movable(float(cx) - 0.5, wz_c):
+						blocked = Vector2i(cx, cz)
+						open_cx = cx - 1
+					elif nav.movable(float(cx) + 1.5, wz_c):
+						blocked = Vector2i(cx, cz)
+						open_cx = cx + 1
+					if blocked.x >= 0:
+						break
+			if blocked.x >= 0:
 				break
-		_check(wall.x >= 0, "%s found a wall cell (%s)" % [code, wall])
-		if wall.x >= 0:
-			var open_cx := wall.x - 1
-			if open_cx < 0 or nav.is_wall(float(open_cx) + 0.5, -(float(wall.y) + 0.5)):
-				open_cx = wall.x + 1   # west neighbor is also wall (or off-grid): try east
-			var wx := float(wall.x) + 0.5
-			var wz := -(float(wall.y) + 0.5)
+		_check(blocked.x >= 0, "%s found a blocked cell (%s)" % [code, blocked])
+		if blocked.x >= 0:
+			var wx := float(blocked.x) + 0.5
+			var wz := -(float(blocked.y) + 0.5)
 			var ox := float(open_cx) + 0.5
 			runner.avatar_position = Vector3(ox, runner.ground_height(ox, wz), wz)
 			_check(runner.step_blocked(wx, wz),
-					"%s step into wall cell is blocked" % code)
+					"%s step into blocked cell is blocked" % code)
 			_check(not runner.step_blocked(ox, wz),
-					"%s step to open ground is not blocked" % code)
+					"%s step within open ground is not blocked" % code)
 	tool._toggle_run()
 	# Camera handoff (F1): explore camera fov/projection must be restored
 	# after a full Explore->Run->Explore round-trip, not left at the

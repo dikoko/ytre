@@ -56,6 +56,62 @@ func _init() -> void:
 		_check(a or nav.crosses_wall(wx, wz - 6.0, wx, wz + 6.0),
 				"a segment through the wall cell is blocked")
 
+	# Movement grid (.map port, 2026-08-16 plaza report): the original's
+	# walkability authority. Fixture values verified against the parsed
+	# source data (test_map_parser.py pins the same cells).
+	_check(nav.has_move_grid(), "SF001001 move grid loads")
+	# School porch/stairs: movable (the LOS wall grid falsely blocked here).
+	_check(nav.movable(123.5, -76.5), "porch cluster movable")
+	# Stray plaza island (the 2026-08-16 "blocked in open space" spot):
+	# blocked in the original's own data — a balustrade-post-class obstacle.
+	_check(not nav.movable(66.5, -102.5), "stray plaza cell blocked")
+	_check(nav.movable(66.5, -101.5), "cell south of the stray open")
+	# Out of bounds is blocked (the original client's walkability rule).
+	_check(not nav.movable(-1.0, -0.5), "out-of-bounds blocked")
+
+	# Runner against the move grid: diagonal corner rule + wall slide.
+	var runner001 := AvatarRunner.new()
+	runner001.setup(hs, null, {}, nav)
+	# Corner rule: (71,88)->(72,89) are both movable but diagonal, and the
+	# shared orthogonal neighbor (72,88) is blocked -> no corner squeeze.
+	runner001.avatar_position = Vector3(71.5, 0.0, -88.5)
+	_check(runner001.step_blocked(72.5, -89.5),
+			"diagonal corner squeeze blocked")
+	_check(not runner001.step_blocked(71.5, -89.5),
+			"straight step beside the corner open")
+	# Slide: heading NE into the stray (66,102) — the straight step is
+	# blocked, the X-axis slide candidate advances along the boundary.
+	runner001.avatar_position = Vector3(65.7, 0.0, -101.7)
+	runner001.avatar_position.y = runner001.ground_height(65.7, -101.7)
+	_check(not runner001._try_step(Vector3(66.3, 0.0, -102.3)),
+			"straight step into stray blocked")
+	_check(runner001._try_step(Vector3(66.3, 0.0, -101.7)),
+			"axis slide along the stray advances")
+	_check(not runner001._try_step(runner001.avatar_position),
+			"no-op step does not count as movement")
+	# Corner rounding: marching straight north into the 1-cell stray at
+	# (66,102) must WALK AROUND it (the original's pathfinder never dead-
+	# stopped on a 1-cell island), while the solid planter band at rows
+	# 89-90 must still stop cleanly with no lateral drift.
+	runner001.avatar_position = Vector3(66.5, 0.0, -103.6)
+	runner001.avatar_position.y = runner001.ground_height(66.5, -103.6)
+	var north := Vector3(0.0, 0.0, 1.0)
+	for i in 120:
+		runner001._move_step(north, 1.0 / 60.0)
+	_check(runner001.avatar_position.z > -102.0,
+			"corner rounding passes the plaza stray (z=%.2f)" % runner001.avatar_position.z)
+	# Lane x=57 has a clean band front (rows 89-90 blocked across all
+	# adjacent lanes, no islands in front) — head-on stop, zero drift.
+	runner001.avatar_position = Vector3(57.5, 0.0, -94.5)
+	runner001.avatar_position.y = runner001.ground_height(57.5, -94.5)
+	for i in 120:
+		runner001._move_step(north, 1.0 / 60.0)
+	_check(runner001.avatar_position.z < -90.5,
+			"solid band still stops (z=%.2f)" % runner001.avatar_position.z)
+	_check(absf(runner001.avatar_position.x - 57.5) < 0.01,
+			"no lateral drift along the band (x=%.2f)" % runner001.avatar_position.x)
+	runner001.free()
+
 	# Escape-hatch regression (nm-task-5 final review): SF002013's default
 	# spawn (portals[0].pos = (64.0, 0.0, -68.0)) lands inside a wall cell —
 	# this is the exact fixture the reviewer used to prove that an
@@ -65,6 +121,9 @@ func _init() -> void:
 	var nav2013 := NavService.new()
 	_check(nav2013.load_map("SF002013"), "SF002013 blobs load")
 	_check(nav2013.has_walls(), "SF002013 has walls")
+	# The spawn cell is blocked in the movement grid too (att 0), so the
+	# hatch exercises the move-grid path since the .map port (2026-08-16).
+	_check(nav2013.has_move_grid(), "SF002013 has move grid")
 	var hs2013 := HeightService.new()
 	_check(hs2013.load_map("SF002013"), "SF002013 heightmap loads")
 	var spawn_x := 64.0

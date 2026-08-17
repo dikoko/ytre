@@ -53,6 +53,17 @@ func _ready() -> void:
 				swapped += 1
 	print("prop_lighting: swapped %d surfaces to fixed-function materials" % swapped)
 
+	# Animation runs AFTER the material swap — prop_animator binds uniforms on
+	# the ShaderMaterials created above, which do not exist until now.
+	# `anim_disabled` meta is the eval harness's A-side switch: lighting only,
+	# which is exactly the pre-animation (origin/main) look.
+	if get_meta("anim_disabled", false):
+		return
+	var animator := PropAnimator.new()
+	animator.name = "PropAnimator"
+	add_child(animator)
+	animator.build(self)
+
 
 func _owning_prop_name(node: Node) -> String:
 	# Name of the direct child of this Props node the mesh belongs to
@@ -71,8 +82,8 @@ func _ff_material(src: StandardMaterial3D, sun_direction: Vector3,
 		return _converted[key]
 
 	# Self-illuminated materials (exported as emissiveFactor from the TMD's
-	# fSelfIllumination) render additively full-bright in the original —
-	# their ONLY pass in the retail client. No sun involved.
+	# self-illumination field) render additively full-bright in the original
+	# client — their ONLY pass. No sun involved.
 	# NOTE: Godot's GLTF importer sets emission_enabled=true on EVERY
 	# material — only a non-black emission color marks real self-illum.
 	var self_illum: bool = src.emission.get_luminance() > 0.0
