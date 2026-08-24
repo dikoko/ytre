@@ -1,0 +1,210 @@
+{
+ "clips": {
+  "default": {
+   "end": 20.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 20.0,
+ "visibility": {
+  "sfx_mura_classic_attack3_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    12.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj1": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    14.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj10": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj11": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj12": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj13": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj14": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj15": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj5": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj6": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj7": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj8": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack3_obj9": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ]
+ }
+}

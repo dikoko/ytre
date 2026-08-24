@@ -1,0 +1,224 @@
+{
+ "clips": {
+  "default": {
+   "end": 20.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 20.0,
+ "visibility": {
+  "sfx_blade_heavy_attack3_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    19.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj10": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj11": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj12": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj13": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj14": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    12.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj15": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    14.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj3": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj4": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj5": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj6": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj7": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj8": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_attack3_obj9": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ]
+ }
+}

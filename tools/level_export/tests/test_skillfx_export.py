@@ -1,4 +1,4 @@
-"""Skill-effect (warp puff) export — sub-project B.
+"""Skill-effect (warp puff) export.
 
 The two warp TMDs export through the ordinary animated-prop path but live
 in an opt-in `skillfx` category: discover_props() must never see them, or
@@ -27,7 +27,7 @@ def test_skill_effects_are_opt_in():
 
 
 def test_warp_effect_plans_match_the_spec_table():
-    """Spec 1.4 — the design's data expectations, asserted."""
+    """The warp effects' data expectations, asserted."""
     expected = {
         "sfx_ava_spwan1_small": {"objects": 8, "animated": 3, "fades": 3,
                                  "frames": 30.0},
@@ -80,3 +80,36 @@ def test_warp_effect_export_roundtrip(tmp_path):
         assert set(side["clips"]) == {"default"}
         assert side["clips"]["default"]["loop"] is True  # rangeless default
         assert side["visibility"], "fade curves are the effect's core"
+
+
+def test_discover_effects_full_set():
+    from scripts._prop_config import discover_effects, discover_props
+    effects = discover_effects()
+    assert len(effects) == 352
+    # opt-in: the terrain census must never see them
+    assert not (set(effects) & set(discover_props()))
+
+
+def test_catalog_skip_reason_covers_any_out_dir_not_just_effects():
+    """Review finding (2026-08-17): the catalog skip must not be narrowly
+    gated on --effects — --out-dir is unrestricted on the CLI (nothing
+    stops e.g. --all --out-dir /tmp/x), and writing props.yaml against the
+    default OUTPUT_MODELS while GLBs actually landed under a custom
+    --out-dir would silently claim models exist in this repo's shipped
+    tree that don't.
+    """
+    import importlib
+    export_props = importlib.import_module("scripts.22_export_props")
+    skip = export_props.catalog_skip_reason
+
+    # Normal full/partial exports (no --out-dir): catalog is written.
+    assert skip(effects=False, out_dir=None) is None
+
+    # --effects always skips, --out-dir or not.
+    assert skip(effects=True, out_dir=None) is not None
+    assert skip(effects=True, out_dir=Path("/tmp/x")) is not None
+
+    # The landmine this fixes: --all/--category/--ids combined with
+    # --out-dir must ALSO skip, not just --effects.
+    assert skip(effects=False, out_dir=Path("/tmp/x")) is not None
+

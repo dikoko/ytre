@@ -1,0 +1,190 @@
+{
+ "clips": {
+  "default": {
+   "end": 40.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 40.0,
+ "visibility": {
+  "sfx_blade_normal_woodensword_avatar1_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj10": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj2": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj3": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj4": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj5": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj6": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj7": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj8": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_normal_woodensword_avatar1_obj9": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ]
+ }
+}

@@ -192,6 +192,12 @@ var _blink_frame_timer: Timer
 var _all_animations: PackedStringArray = []
 var _current_anim_name: String = ""
 
+# Motion-id playback + stance (weapon-skill binding)
+var _motion_ids: Dictionary = {}       # per current gender: id(String) -> clip name
+var _stance_stand := 0                 # 0 = no stance
+var _stance_run := 0
+var _bone_attachments: Dictionary = {} # bone name -> BoneAttachment3D
+
 
 # === LIFECYCLE ===
 
@@ -355,6 +361,61 @@ func resume_animation() -> void:
 
 func is_animation_playing() -> bool:
 	return _animation_player != null and _animation_player.is_playing()
+
+
+func current_animation() -> String:
+	return _current_anim_name
+
+
+# === PUBLIC API: Motion-id playback + stance ===
+
+func has_motion_id(motion_id: int) -> bool:
+	var clip: String = _motion_ids.get(str(motion_id), "")
+	return not clip.is_empty() and _animation_player != null \
+			and _animation_player.has_animation(clip)
+
+
+func play_motion_id(motion_id: int, loop: bool = false) -> bool:
+	# Integer-keyed motion playback (the original's only in-game path —
+	# the .skl lib-name string is editor-only). Missing id = silent no-op,
+	# matching the original (motion absent -> character keeps its current
+	# motion while the rest of the skill still plays).
+	if not has_motion_id(motion_id):
+		return false
+	var clip: String = _motion_ids[str(motion_id)]
+	var anim := _animation_player.get_animation(clip)
+	anim.loop_mode = Animation.LOOP_LINEAR if loop else Animation.LOOP_NONE
+	_animation_player.play(clip)
+	_current_anim_name = clip
+	animation_started.emit(clip)
+	return true
+
+
+func set_stance(stand_id: int, run_id: int) -> void:
+	# Weapon equipped IS battle stance (no draw/sheath in the original):
+	# idle becomes the style's stand clip; a finished one-shot returns here.
+	_stance_stand = stand_id
+	_stance_run = run_id
+	play_motion_id(stand_id, true)
+
+
+func clear_stance() -> void:
+	_stance_stand = 0
+	_stance_run = 0
+	play_motion_id(0, true)   # motion 0 = {gender} basic stand
+
+
+func get_bone_attachment(bone_name: String) -> BoneAttachment3D:
+	if _bone_attachments.has(bone_name):
+		return _bone_attachments[bone_name]
+	if _skeleton == null or _skeleton.find_bone(bone_name) < 0:
+		return null
+	var att := BoneAttachment3D.new()
+	att.name = "FxBone_" + bone_name.trim_prefix("@")
+	_skeleton.add_child(att)
+	att.bone_name = bone_name
+	_bone_attachments[bone_name] = att
+	return att
 
 
 func get_face_type_index() -> int:
@@ -602,6 +663,8 @@ func _build_avatar() -> void:
 		if _animation_player.has_animation(stand):
 			play_animation(stand)
 
+	_load_motion_ids()
+
 
 func _teardown_avatar() -> void:
 	for slot in _current_parts:
@@ -631,6 +694,13 @@ func _teardown_avatar() -> void:
 	_material_meshes.clear()
 	_all_animations = PackedStringArray()
 	_current_anim_name = ""
+
+	# bone attachment nodes die with the skeleton above; motion ids are
+	# gender-specific and repopulated on rebuild. Stance ids (_stance_stand/
+	# _stance_run) deliberately persist across a gender rebuild so the tool
+	# can re-apply the stance by calling set_stance again.
+	_bone_attachments.clear()
+	_motion_ids.clear()
 
 
 func _apply_initial_parts() -> void:
@@ -712,6 +782,26 @@ func _get_part_hides_materials(part_name: String) -> Array:
 	if _parts_metadata.has(part_name):
 		return _parts_metadata[part_name].get("hides_materials", [])
 	return []
+
+
+# === INTERNAL: Motion ids ===
+
+func _load_motion_ids() -> void:
+	_motion_ids = {}
+	var path := _asset("base/motion_ids.json")
+	var file := FileAccess.open(path, FileAccess.READ)
+	if not file:
+		push_warning("motion_ids.json not found: " + path)
+		return
+	var json_text := file.get_as_text()
+	file.close()
+	var json := JSON.new()
+	if json.parse(json_text) != OK:
+		push_error("Failed to parse motion_ids.json: " + json.get_error_message())
+		return
+	var doc = json.get_data()
+	if doc is Dictionary and doc.has(gender):
+		_motion_ids = doc[gender]
 
 
 # === INTERNAL: Materials ===
@@ -947,6 +1037,8 @@ func _unequip_internal() -> void:
 
 func _on_animation_finished(anim_name: StringName) -> void:
 	animation_finished.emit(String(anim_name))
+	if _stance_stand > 0:
+		play_motion_id(_stance_stand, true)
 
 
 # === INTERNAL: Variant extraction ===

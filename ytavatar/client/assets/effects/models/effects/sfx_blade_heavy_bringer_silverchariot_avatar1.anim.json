@@ -1,0 +1,164 @@
+{
+ "clips": {
+  "default": {
+   "end": 40.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 40.0,
+ "visibility": {
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj0": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    11.0,
+    1.0
+   ],
+   [
+    22.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj1": [
+   [
+    12.0,
+    0.0
+   ],
+   [
+    13.0,
+    1.0
+   ],
+   [
+    24.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj10": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    37.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj11": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    37.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj2": [
+   [
+    14.0,
+    0.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    26.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    39.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj6": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    39.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj8": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    39.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_heavy_bringer_silverchariot_avatar1_obj9": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    37.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ]
+ }
+}

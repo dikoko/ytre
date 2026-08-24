@@ -26,6 +26,7 @@ Proprietary binary formats are pre-converted to GLB (binary GLTF):
 - **MLIB** → Animation libraries (skeleton hierarchy, motion clips)
 - **PRT** → Swappable body parts (subset meshes)
 - **SWP** → Vertex hiding maps for part layering
+- **SKL** → Skill scripts (effect/motion/sound/color tracks, decoded by `tools/avatar_export/src/parsers/skl_parser.py`)
 
 Pipeline documentation lives in `ytavatar/docs/` (avatar, monster, and NPC pipeline references).
 
@@ -51,7 +52,9 @@ Part metadata (`parts_metadata.json`, `parts_metadata_female.json`) maps which b
 ### Code Structure
 
 All runtime logic is GDScript under `ytavatar/client/scripts/`:
-- `avatar_tool.gd` (2,215 LOC) — Main viewer: character selection, part swapping, equipment, animation controls, orbit camera
+- `avatar_tool.gd` — Main viewer: character selection, part swapping, equipment, animation controls, Skills dock, orbit camera
+- `skill_player.gd` — Plays a `skills.json` entry against a character: effect models, caster motion (by motion id, per gender), sound, color flash, on one 30 fps clock; independent glow loop; bone-anchored effect wrappers
+- `skill_catalog.gd` — Read-only wrapper over `skills.json` / `weapons.json` / `bones.json` (skill sets per weapon, families, bone names)
 - `test_avatar_parts.gd`, `test_avatar_female.gd` — Standalone avatar test scripts
 - `test_monster.gd` — Monster viewer test
 
@@ -63,9 +66,11 @@ Tool (WIP): `ytavatar/client/tools/avatar_composer/`
 ```
 ytavatar/client/assets/
 ├── avatars/
-│   ├── base/          # Base skeletons + bone_names.json (54 bones)
+│   ├── base/          # Base skeletons + bone_names.json (54 bones) + motion_ids.json
 │   ├── parts/         # Male/female swappable parts + metadata JSONs
 │   └── weapons/       # blade/, mura/, spirit/ GLB variants
+├── effects/           # skills.json + weapons.json + bones.json + models/effects/ (skill-effect GLBs + fade sidecars)
+├── sounds/            # combat/skill .wav sound effects
 ├── monsters/          # monsters.yaml config + models/ + textures/
 └── npcs/              # npcs.yaml config + models/ + textures/
 ```

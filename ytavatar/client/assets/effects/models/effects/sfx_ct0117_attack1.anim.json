@@ -1,0 +1,32 @@
+{
+ "clips": {
+  "default": {
+   "end": 55.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 55.0,
+ "visibility": {
+  "sfx_ct0117_attack1_obj0": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    21.0,
+    1.0
+   ],
+   [
+    26.0,
+    1.0
+   ],
+   [
+    27.0,
+    0.0
+   ]
+  ]
+ }
+}

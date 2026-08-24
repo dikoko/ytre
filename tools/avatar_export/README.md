@@ -42,7 +42,7 @@ tools/avatar_export/
 ├── pyproject.toml       # uv project config + pytest config
 ├── scripts/             # runnable pipeline + debug scripts (see below)
 ├── src/
-│   ├── parsers/         # tmd_parser, mlib_parser, swp_parser
+│   ├── parsers/         # tmd_parser, mlib_parser, swp_parser, skl_parser
 │   ├── exporters/       # mesh / skeleton / animation / part / material /
 │   │                    # weapon / prop
 │   ├── validators/      # mesh + skeleton sanity checks (used by tests)
@@ -70,7 +70,17 @@ uv run python scripts/16_export_weapons.py
 # Monsters and NPCs (independent of the avatar pipeline)
 uv run python scripts/20_export_monsters.py
 uv run python scripts/21_export_npcs.py
+
+# Motion-id map for the skill system (reads the MLIBs, writes
+# ytavatar/client/assets/avatars/base/motion_ids.json)
+uv run python scripts/47_export_motion_ids.py
 ```
+
+The skill and weapon catalogs (`ytavatar/client/assets/effects/skills.json`,
+`weapons.json`, `bones.json`) ship pre-generated — their generator depends
+on tooling not included here. The `.skl` skill-script parser
+(`src/parsers/skl_parser.py`) and its test suite run against the bundled
+`refs/` data directly.
 
 ## Scripts reference
 

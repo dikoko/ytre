@@ -1,0 +1,122 @@
+{
+ "clips": {
+  "default": {
+   "end": 70.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 70.0,
+ "visibility": {
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj0": [
+   [
+    24.0,
+    0.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    28.0,
+    1.0
+   ],
+   [
+    30.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj1": [
+   [
+    25.0,
+    0.0
+   ],
+   [
+    26.0,
+    1.0
+   ],
+   [
+    29.0,
+    1.0
+   ],
+   [
+    31.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj2": [
+   [
+    27.0,
+    0.0
+   ],
+   [
+    28.0,
+    1.0
+   ],
+   [
+    31.0,
+    1.0
+   ],
+   [
+    33.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj3": [
+   [
+    28.0,
+    0.0
+   ],
+   [
+    29.0,
+    1.0
+   ],
+   [
+    32.0,
+    1.0
+   ],
+   [
+    34.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj4": [
+   [
+    29.0,
+    0.0
+   ],
+   [
+    30.0,
+    1.0
+   ],
+   [
+    33.0,
+    1.0
+   ],
+   [
+    35.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_valkyliewing_valkylie_avatar1_obj6": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ]
+ }
+}

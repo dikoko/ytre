@@ -1,0 +1,56 @@
+{
+ "clips": {
+  "default": {
+   "end": 20.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 20.0,
+ "visibility": {
+  "sfx_common_condition_white_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    7.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_white_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    9.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_white_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    11.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ]
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "clips": {
+  "default": {
+   "end": 80.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 80.0,
+ "visibility": {
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    25.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    55.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    25.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    55.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj3": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    29.0,
+    0.0
+   ],
+   [
+    30.0,
+    1.0
+   ],
+   [
+    51.0,
+    1.0
+   ],
+   [
+    57.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    29.0,
+    0.0
+   ],
+   [
+    30.0,
+    1.0
+   ],
+   [
+    51.0,
+    1.0
+   ],
+   [
+    57.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj5": [
+   [
+    25.0,
+    0.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    45.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj6": [
+   [
+    30.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj7": [
+   [
+    35.0,
+    0.0
+   ],
+   [
+    45.0,
+    1.0
+   ],
+   [
+    55.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj8": [
+   [
+    40.0,
+    0.0
+   ],
+   [
+    50.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_matial_chunbangglorb_chunbangdrive_obj9": [
+   [
+    45.0,
+    0.0
+   ],
+   [
+    55.0,
+    1.0
+   ],
+   [
+    65.0,
+    0.0
+   ]
+  ]
+ }
+}

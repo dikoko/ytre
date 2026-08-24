@@ -13,6 +13,7 @@ Usage:
     python scripts/22_export_props.py --category artificial     # Export by category
     python scripts/22_export_props.py --animated                # Only animated props
     python scripts/22_export_props.py --all --dry-run           # List without exporting
+    python scripts/22_export_props.py --effects --out-dir PATH  # Full battle-effects set, elsewhere
 """
 
 import argparse
@@ -32,7 +33,7 @@ from src.exporters.prop_animation import build_animation_plan, has_visible_anima
 from scripts._export_common import embed_textures
 from scripts._prop_config import (
     TEXTURE_SEARCH_DIRS, OUTPUT_BASE, OUTPUT_MODELS, CATEGORIES,
-    discover_props, discover_skill_effects,
+    discover_props, discover_skill_effects, discover_effects,
 )
 
 
@@ -43,13 +44,13 @@ def _is_animated(tmd_path: Path, prop_id: str) -> bool:
 
 
 def export_single_prop(
-    category: str, prop_id: str, tmd_path: Path,
+    category: str, prop_id: str, tmd_path: Path, models_dir: Path = OUTPUT_MODELS,
 ) -> tuple[bool, str, dict | None]:
     """Export a single prop to GLB. Returns (success, message, catalog_entry)."""
     try:
         model = TMDParser().parse(tmd_path)
 
-        out_dir = OUTPUT_MODELS / category
+        out_dir = models_dir / category
         out_dir.mkdir(parents=True, exist_ok=True)
         glb_path = out_dir / f"{prop_id}.glb"
 
@@ -93,6 +94,21 @@ def export_single_prop(
         return False, f"{prop_id}: ERROR - {e}", None
 
 
+def catalog_skip_reason(effects: bool, out_dir: Path | None) -> str | None:
+    """Why (if at all) this run should skip the props.yaml catalog write.
+
+    Returns None when the catalog should be written normally. Any run using
+    --out-dir (not just --effects) redirects the GLBs away from this repo's
+    shipped client/assets/props/models/ tree, so a props.yaml entry pointing
+    at OUTPUT_MODELS would claim models exist there that don't.
+    """
+    if effects:
+        return "--effects exports out-of-repo"
+    if out_dir is not None:
+        return "--out-dir redirects output away from the shipped tree"
+    return None
+
+
 def write_catalog(entries: list[dict], output_path: Path, merge: bool = False) -> None:
     """Write props.yaml catalog.
 
@@ -125,16 +141,33 @@ def main():
                         help="Export only props that carry keyframe animation")
     parser.add_argument("--skillfx", action="store_true",
                         help="Export the opt-in skill-effect props (warp puffs)")
+    parser.add_argument("--effects", action="store_true",
+                        help="Export the opt-in full battle-effects set "
+                             "(352 Skill.IRD/TMD models, sub-project C)")
+    parser.add_argument("--out-dir", type=Path,
+                        help="Override the models output directory for this "
+                             "run (e.g. to export --effects straight into "
+                             "another repo's asset tree)")
     args = parser.parse_args()
 
-    if not (args.all or args.ids or args.category or args.animated or args.skillfx):
+    if not (args.all or args.ids or args.category or args.animated
+            or args.skillfx or args.effects):
         parser.print_help()
         sys.exit(1)
 
-    # Discover props. Skill effects are opt-in only: never part of --all /
-    # --animated sweeps, so the terrain censuses stay untouched.
+    if args.effects and (args.all or args.ids or args.skillfx):
+        parser.error("--effects is mutually exclusive with --all/--ids/--skillfx")
+
+    # Discover props. Skill effects and battle effects are opt-in only:
+    # never part of --all / --animated sweeps, so the terrain censuses stay
+    # untouched.
     cat_filter = args.category if args.category else None
-    all_props = discover_skill_effects() if args.skillfx else discover_props(cat_filter)
+    if args.effects:
+        all_props = discover_effects()
+    elif args.skillfx:
+        all_props = discover_skill_effects()
+    else:
+        all_props = discover_props(cat_filter)
 
     # Filter by IDs if specified
     if args.ids:
@@ -154,7 +187,8 @@ def main():
             print(f"  [{cat}] {prop_id}")
         return
 
-    OUTPUT_MODELS.mkdir(parents=True, exist_ok=True)
+    models_dir = args.out_dir if args.out_dir else OUTPUT_MODELS
+    models_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Exporting {len(all_props)} props...")
     start = time.time()
@@ -162,18 +196,23 @@ def main():
     catalog_entries = []
 
     for cat, prop_id, tmd_path in all_props:
-        ok, msg, entry = export_single_prop(cat, prop_id, tmd_path)
+        ok, msg, entry = export_single_prop(cat, prop_id, tmd_path, models_dir)
         print(f"  {'OK' if ok else 'FAIL'} [{cat}] {msg}")
         if ok:
             success_count += 1
             if entry:
                 catalog_entries.append(entry)
 
-    # Write catalog — partial exports merge into the existing catalog
-    catalog_path = OUTPUT_BASE / "props.yaml"
-    write_catalog(catalog_entries, catalog_path, merge=not args.all)
-    print(f"\nCatalog {'merged' if not args.all else 'written'}: "
-          f"{catalog_path} ({len(catalog_entries)} entries this run)")
+    # Write catalog — partial exports merge into the existing catalog.
+    skip_reason = catalog_skip_reason(args.effects, args.out_dir)
+    if skip_reason:
+        print(f"\nCatalog write skipped ({skip_reason}, "
+              f"{len(catalog_entries)} models this run)")
+    else:
+        catalog_path = OUTPUT_BASE / "props.yaml"
+        write_catalog(catalog_entries, catalog_path, merge=not args.all)
+        print(f"\nCatalog {'merged' if not args.all else 'written'}: "
+              f"{catalog_path} ({len(catalog_entries)} entries this run)")
 
     animated_count = sum(1 for e in catalog_entries if e.get("animated"))
     elapsed = time.time() - start

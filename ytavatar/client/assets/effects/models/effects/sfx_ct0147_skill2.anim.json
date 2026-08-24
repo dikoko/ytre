@@ -1,0 +1,32 @@
+{
+ "clips": {
+  "default": {
+   "end": 45.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 45.0,
+ "visibility": {
+  "sfx_ct0147_skill2_obj0": [
+   [
+    21.0,
+    0.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    43.0,
+    1.0
+   ],
+   [
+    45.0,
+    0.0
+   ]
+  ]
+ }
+}

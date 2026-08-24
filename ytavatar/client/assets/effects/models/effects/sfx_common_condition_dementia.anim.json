@@ -1,0 +1,92 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "sfx_common_condition_dementia_obj1": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    17.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_dementia_obj3": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    17.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_dementia_obj5": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    17.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_dementia_obj7": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    15.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    30.0,
+    0.0
+   ]
+  ],
+  "sfx_common_condition_dementia_obj8": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.0,
+    0.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    30.0,
+    0.0
+   ]
+  ]
+ }
+}

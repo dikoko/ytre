@@ -1,0 +1,104 @@
+{
+ "clips": {
+  "default": {
+   "end": 70.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 70.0,
+ "visibility": {
+  "sfx_glorb_boxing_gamblehand_target1_obj0": [
+   [
+    4.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_boxing_gamblehand_target1_obj1": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    11.0,
+    1.0
+   ],
+   [
+    45.0,
+    1.0
+   ],
+   [
+    55.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_boxing_gamblehand_target1_obj2": [
+   [
+    23.0,
+    0.0
+   ],
+   [
+    24.0,
+    1.0
+   ],
+   [
+    50.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_boxing_gamblehand_target1_obj3": [
+   [
+    44.0,
+    0.0
+   ],
+   [
+    45.0,
+    1.0
+   ],
+   [
+    55.0,
+    1.0
+   ],
+   [
+    65.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_boxing_gamblehand_target1_obj4": [
+   [
+    49.0,
+    0.0
+   ],
+   [
+    50.0,
+    1.0
+   ],
+   [
+    60.0,
+    1.0
+   ],
+   [
+    70.0,
+    0.0
+   ]
+  ]
+ }
+}

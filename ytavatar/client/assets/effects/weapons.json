@@ -1,0 +1,3440 @@
+{
+ "version": 1,
+ "weapons": {
+  "blade_A0001": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "스팅거",
+   "skills": [
+    20001
+   ],
+   "sn": 10001,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0002": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "바로 소드",
+   "skills": [
+    20002
+   ],
+   "sn": 10002,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0003": {
+   "base_attacks": [
+    10101,
+    10102,
+    10103,
+    10104
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "작은 해머",
+   "skills": [
+    20003,
+    20004
+   ],
+   "sn": 10003,
+   "stance": {
+    "run": 10112,
+    "stand": 10111
+   },
+   "style": {
+    "id": 101,
+    "name_ko": "무식하게 때리는 무기",
+    "token": "blade_stick"
+   }
+  },
+  "blade_A0004": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "덩굴 레이피어",
+   "skills": [
+    20005,
+    20006
+   ],
+   "sn": 10004,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0005": {
+   "base_attacks": null,
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)"
+   ],
+   "name_ko": "링 대거",
+   "skills": [],
+   "sn": 10005,
+   "stance": null,
+   "style": null
+  },
+  "blade_A0006": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "목도",
+   "skills": [
+    20008
+   ],
+   "sn": 10006,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0007": {
+   "base_attacks": [
+    10101,
+    10102,
+    10103,
+    10104
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "못박힌 배트",
+   "skills": [
+    20009,
+    20010
+   ],
+   "sn": 10007,
+   "stance": {
+    "run": 10112,
+    "stand": 10111
+   },
+   "style": {
+    "id": 101,
+    "name_ko": "무식하게 때리는 무기",
+    "token": "blade_stick"
+   }
+  },
+  "blade_A0008": {
+   "base_attacks": [
+    10101,
+    10102,
+    10103,
+    10104
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "왕 프라이팬",
+   "skills": [
+    20030
+   ],
+   "sn": 10008,
+   "stance": {
+    "run": 10112,
+    "stand": 10111
+   },
+   "style": {
+    "id": 101,
+    "name_ko": "무식하게 때리는 무기",
+    "token": "blade_stick"
+   }
+  },
+  "blade_A0009": {
+   "base_attacks": [
+    10101,
+    10102,
+    10103,
+    10104
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "이브닝 스타",
+   "skills": [
+    20011
+   ],
+   "sn": 10009,
+   "stance": {
+    "run": 10112,
+    "stand": 10111
+   },
+   "style": {
+    "id": 101,
+    "name_ko": "무식하게 때리는 무기",
+    "token": "blade_stick"
+   }
+  },
+  "blade_A0010": {
+   "base_attacks": null,
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)"
+   ],
+   "name_ko": "부엌칼",
+   "skills": [],
+   "sn": 10010,
+   "stance": null,
+   "style": null
+  },
+  "blade_A0011": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 610011,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "소닉블레이드",
+   "skills": [
+    20014,
+    20015
+   ],
+   "sn": 10011,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0012": {
+   "base_attacks": [
+    10101,
+    10102,
+    10103,
+    10104
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "패닉 해머",
+   "skills": [
+    20032
+   ],
+   "sn": 10012,
+   "stance": {
+    "run": 10112,
+    "stand": 10111
+   },
+   "style": {
+    "id": 101,
+    "name_ko": "무식하게 때리는 무기",
+    "token": "blade_stick"
+   }
+  },
+  "blade_A0013": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "저거넌트 해머",
+   "skills": [
+    20018
+   ],
+   "sn": 10013,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0014": {
+   "base_attacks": null,
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)"
+   ],
+   "name_ko": "어쌔신 썬더",
+   "skills": [],
+   "sn": 10014,
+   "stance": null,
+   "style": null
+  },
+  "blade_A0015": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 610015,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "선더 세이버",
+   "skills": [
+    20021
+   ],
+   "sn": 10015,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0016": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "카타나",
+   "skills": [
+    20022,
+    20023
+   ],
+   "sn": 10016,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0017": {
+   "base_attacks": null,
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)"
+   ],
+   "name_ko": "아수라 블레이드",
+   "skills": [],
+   "sn": 10017,
+   "stance": null,
+   "style": null
+  },
+  "blade_A0018": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "앤티크 슬레이어",
+   "skills": [],
+   "sn": 10018,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0019": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 610019,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "스크류 드라이버",
+   "skills": [
+    20016
+   ],
+   "sn": 10019,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A0020": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "무사예프 소드",
+   "skills": [],
+   "sn": 10020,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0021": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "브링거",
+   "skills": [
+    20028
+   ],
+   "sn": 10021,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0022": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 610022,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "시위드",
+   "skills": [
+    20029
+   ],
+   "sn": 10022,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0023": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "스팅거 FE",
+   "skills": [],
+   "sn": 10023,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A0024": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "라이트 세이버",
+   "skills": [],
+   "sn": 10024,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A1001": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "스팅거 안나",
+   "skills": [
+    20001
+   ],
+   "sn": 11001,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A1002": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "블러디 바로 소드",
+   "skills": [
+    20002
+   ],
+   "sn": 11002,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1004": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "바인 레이피어",
+   "skills": [
+    20005,
+    20006
+   ],
+   "sn": 11004,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1006": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "실전 목도",
+   "skills": [
+    20008
+   ],
+   "sn": 11006,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1011": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 611011,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "데인져러스 소닉",
+   "skills": [
+    20014,
+    20015
+   ],
+   "sn": 11011,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1013": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "기간틱 해머",
+   "skills": [
+    20018
+   ],
+   "sn": 11013,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A1015": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 611015,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "크림슨 선더 세이버",
+   "skills": [
+    20021
+   ],
+   "sn": 11015,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1016": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "진홍의 카타나",
+   "skills": [
+    20022,
+    20023
+   ],
+   "sn": 11016,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1019": {
+   "base_attacks": [
+    10401,
+    10402,
+    10403,
+    10404
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 611019,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "스크류 드릴 드라이버",
+   "skills": [
+    20016
+   ],
+   "sn": 11019,
+   "stance": {
+    "run": 10412,
+    "stand": 10411
+   },
+   "style": {
+    "id": 104,
+    "name_ko": "보통의 가벼운 무기",
+    "token": "blade_normal"
+   }
+  },
+  "blade_A1021": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "레드 브링거",
+   "skills": [
+    20028
+   ],
+   "sn": 11021,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "blade_A1022": {
+   "base_attacks": [
+    10201,
+    10202,
+    10203,
+    10204
+   ],
+   "cate": 1,
+   "class": "blade",
+   "gender": 0,
+   "glow": 611022,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "에메랄드 시위드",
+   "skills": [
+    20029
+   ],
+   "sn": 11022,
+   "stance": {
+    "run": 10212,
+    "stand": 10211
+   },
+   "style": {
+    "id": 102,
+    "name_ko": "크고 무거운 무기",
+    "token": "blade_heavy"
+   }
+  },
+  "glorb_A0001": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "유비무환 글로브",
+   "skills": [
+    40001
+   ],
+   "sn": 20001,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0002": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620002,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "호연지기 너클",
+   "skills": [
+    40030,
+    40002
+   ],
+   "sn": 20002,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0003": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "자린고비 피스트",
+   "skills": [
+    40003
+   ],
+   "sn": 20003,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0004": {
+   "base_attacks": null,
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 0,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)",
+    "skill sn(s) [40004] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "죽마고우 클로",
+   "skills": [
+    40003
+   ],
+   "sn": 20004,
+   "stance": null,
+   "style": null
+  },
+  "glorb_A0005": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620005,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "레인보우 피스트",
+   "skills": [
+    40006
+   ],
+   "sn": 20005,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0006": {
+   "base_attacks": [],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "base attack id(s) [30401, 30402, 30403, 30404] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "맥시머 건틀릿",
+   "skills": [],
+   "sn": 20006,
+   "stance": {
+    "run": 30412,
+    "stand": 30411
+   },
+   "style": {
+    "id": 304,
+    "name_ko": "헤비기어형 글로브",
+    "token": "glorb_heavy"
+   }
+  },
+  "glorb_A0007": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620007,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "겜블 핸드",
+   "skills": [
+    40008,
+    40009
+   ],
+   "sn": 20007,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A0008": {
+   "base_attacks": [
+    30301,
+    30302,
+    30303,
+    30304
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "배틀 클로",
+   "skills": [
+    40010
+   ],
+   "sn": 20008,
+   "stance": {
+    "run": 30312,
+    "stand": 30311
+   },
+   "style": {
+    "id": 303,
+    "name_ko": "크로우형 글로브",
+    "token": "glorb_claw"
+   }
+  },
+  "glorb_A0009": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "천방지축 글로브",
+   "skills": [
+    40011
+   ],
+   "sn": 20009,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0010": {
+   "base_attacks": [
+    30301,
+    30302,
+    30303,
+    30304
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "블레이드 핸드",
+   "skills": [
+    40012
+   ],
+   "sn": 20010,
+   "stance": {
+    "run": 30312,
+    "stand": 30311
+   },
+   "style": {
+    "id": 303,
+    "name_ko": "크로우형 글로브",
+    "token": "glorb_claw"
+   }
+  },
+  "glorb_A0011": {
+   "base_attacks": [
+    30301,
+    30302,
+    30303,
+    30304
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "바이팅 기어",
+   "skills": [
+    40013
+   ],
+   "sn": 20011,
+   "stance": {
+    "run": 30312,
+    "stand": 30311
+   },
+   "style": {
+    "id": 303,
+    "name_ko": "크로우형 글로브",
+    "token": "glorb_claw"
+   }
+  },
+  "glorb_A0013": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620013,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "피닉스 너클",
+   "skills": [
+    40016
+   ],
+   "sn": 20013,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0014": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "쾌도난마 피스트",
+   "skills": [
+    40017,
+    40018
+   ],
+   "sn": 20014,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A0015": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "바이퍼 너클",
+   "skills": [
+    40020,
+    40021
+   ],
+   "sn": 20015,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A0016": {
+   "base_attacks": [
+    30301,
+    30302,
+    30303,
+    30304
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "이글 클로",
+   "skills": [
+    40023
+   ],
+   "sn": 20016,
+   "stance": {
+    "run": 30312,
+    "stand": 30311
+   },
+   "style": {
+    "id": 303,
+    "name_ko": "크로우형 글로브",
+    "token": "glorb_claw"
+   }
+  },
+  "glorb_A0017": {
+   "base_attacks": [],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "base attack id(s) [30401, 30402, 30403, 30404] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "풍비박산 피스트",
+   "skills": [],
+   "sn": 20017,
+   "stance": {
+    "run": 30412,
+    "stand": 30411
+   },
+   "style": {
+    "id": 304,
+    "name_ko": "헤비기어형 글로브",
+    "token": "glorb_heavy"
+   }
+  },
+  "glorb_A0018": {
+   "base_attacks": [],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "base attack id(s) [30401, 30402, 30403, 30404] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "얼티밋 기어",
+   "skills": [],
+   "sn": 20018,
+   "stance": {
+    "run": 30412,
+    "stand": 30411
+   },
+   "style": {
+    "id": 304,
+    "name_ko": "헤비기어형 글로브",
+    "token": "glorb_heavy"
+   }
+  },
+  "glorb_A0019": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620019,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "페노메터 기어",
+   "skills": [
+    40014
+   ],
+   "sn": 20019,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A0021": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 620021,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "죠의 붕대",
+   "skills": [
+    40028
+   ],
+   "sn": 20021,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A0022": {
+   "base_attacks": [],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [
+    "base attack id(s) [30401, 30402, 30403, 30404] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "폭주 기어",
+   "skills": [],
+   "sn": 20022,
+   "stance": {
+    "run": 30412,
+    "stand": 30411
+   },
+   "style": {
+    "id": 304,
+    "name_ko": "헤비기어형 글로브",
+    "token": "glorb_heavy"
+   }
+  },
+  "glorb_A1001": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "무비유환 글로브",
+   "skills": [
+    40001
+   ],
+   "sn": 21001,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1002": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621002,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "호연장귀 너클",
+   "skills": [
+    40030,
+    40002
+   ],
+   "sn": 21002,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1003": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "The 자린고비 피스트",
+   "skills": [
+    40003
+   ],
+   "sn": 21003,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1005": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621005,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "바이올렛 피스트",
+   "skills": [
+    40006
+   ],
+   "sn": 21005,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1007": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621007,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "스페이드 핸드",
+   "skills": [
+    40008,
+    40009
+   ],
+   "sn": 21007,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A1009": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "천방지방 글로브",
+   "skills": [
+    40011
+   ],
+   "sn": 21009,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1013": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621013,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "헤븐리 피닉스 너클",
+   "skills": [
+    40016
+   ],
+   "sn": 21013,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1014": {
+   "base_attacks": [
+    30201,
+    30202,
+    30203,
+    30204
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "쾌도봉마 피스트",
+   "skills": [
+    40017,
+    40018
+   ],
+   "sn": 21014,
+   "stance": {
+    "run": 30212,
+    "stand": 30211
+   },
+   "style": {
+    "id": 302,
+    "name_ko": "권법형 글로브",
+    "token": "glorb_matial"
+   }
+  },
+  "glorb_A1015": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "서펜트 너클",
+   "skills": [
+    40020,
+    40021
+   ],
+   "sn": 21015,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A1019": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621019,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "페노미터 프로브",
+   "skills": [
+    40014
+   ],
+   "sn": 21019,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "glorb_A1021": {
+   "base_attacks": [
+    30101,
+    30102,
+    30103,
+    30104
+   ],
+   "cate": 2,
+   "class": "glorb",
+   "gender": 0,
+   "glow": 621021,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "죠의 낡은 붕대",
+   "skills": [
+    40028
+   ],
+   "sn": 21021,
+   "stance": {
+    "run": 30112,
+    "stand": 30111
+   },
+   "style": {
+    "id": 301,
+    "name_ko": "복싱형 글로브",
+    "token": "glorb_boxing"
+   }
+  },
+  "mura_A0001": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "드로운",
+   "skills": [
+    60001
+   ],
+   "sn": 30001,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0002": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "샤먼 봉고",
+   "skills": [
+    60002,
+    60003
+   ],
+   "sn": 30002,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A0003": {
+   "base_attacks": null,
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 0,
+   "issues": [
+    "idCateWeapon=0: no basic attacks (cut item)"
+   ],
+   "name_ko": "트럼파워",
+   "skills": [],
+   "sn": 30003,
+   "stance": null,
+   "style": null
+  },
+  "mura_A0004": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630004,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "The DJ",
+   "skills": [
+    60006,
+    60005
+   ],
+   "sn": 30004,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A0005": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630005,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "플루피",
+   "skills": [
+    60029,
+    60007
+   ],
+   "sn": 30005,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0006": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630006,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "팬 플룻",
+   "skills": [
+    60030
+   ],
+   "sn": 30006,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0007": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630007,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "심벌린",
+   "skills": [
+    60009,
+    60031
+   ],
+   "sn": 30007,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0008": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "바이얼리노",
+   "skills": [
+    60032,
+    60010
+   ],
+   "sn": 30008,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0009": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "피아니오",
+   "skills": [
+    60011
+   ],
+   "sn": 30009,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0010": {
+   "base_attacks": [
+    50201,
+    50202,
+    50203,
+    50204
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630021,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "보사노붐붐",
+   "skills": [
+    60012
+   ],
+   "sn": 30010,
+   "stance": {
+    "run": 50212,
+    "stand": 50211
+   },
+   "style": {
+    "id": 502,
+    "name_ko": "큐트 댄스형 뮤라",
+    "token": "mura_cute"
+   }
+  },
+  "mura_A0011": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630011,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "클라리네츠",
+   "skills": [
+    60013
+   ],
+   "sn": 30011,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0012": {
+   "base_attacks": [
+    50601,
+    50602,
+    50603,
+    50604
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "우기 우기",
+   "skills": [
+    60020
+   ],
+   "sn": 30012,
+   "stance": {
+    "run": 50612,
+    "stand": 50611
+   },
+   "style": {
+    "id": 506,
+    "name_ko": "파워풀 댄스형 뮤라",
+    "token": "mura_powerful"
+   }
+  },
+  "mura_A0017": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630017,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "엔젤릭 보이스",
+   "skills": [
+    60024,
+    60023
+   ],
+   "sn": 30017,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A0019": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630019,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "탐탐 머플러",
+   "skills": [
+    60014
+   ],
+   "sn": 30019,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A0020": {
+   "base_attacks": [
+    50601,
+    50602,
+    50603,
+    50604
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 630020,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "헤네시 스웜프",
+   "skills": [
+    60015,
+    60016
+   ],
+   "sn": 30020,
+   "stance": {
+    "run": 50612,
+    "stand": 50611
+   },
+   "style": {
+    "id": 506,
+    "name_ko": "파워풀 댄스형 뮤라",
+    "token": "mura_powerful"
+   }
+  },
+  "mura_A0021": {
+   "base_attacks": [
+    50401,
+    50402,
+    50403,
+    50404
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "우탕카",
+   "skills": [],
+   "sn": 30021,
+   "stance": {
+    "run": 50412,
+    "stand": 50411
+   },
+   "style": {
+    "id": 504,
+    "name_ko": "퍼니 댄스형 뮤라",
+    "token": "mura_funny"
+   }
+  },
+  "mura_A0022": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "타부카이",
+   "skills": [
+    60028
+   ],
+   "sn": 30022,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A0023": {
+   "base_attacks": [
+    50301,
+    50302,
+    50303,
+    50304
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "핑크 서펀트",
+   "skills": [],
+   "sn": 30023,
+   "stance": {
+    "run": 50312,
+    "stand": 50311
+   },
+   "style": {
+    "id": 503,
+    "name_ko": "섹시 댄스형 뮤라",
+    "token": "mura_sexy"
+   }
+  },
+  "mura_A0024": {
+   "base_attacks": [
+    50301,
+    50302,
+    50303,
+    50304
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [],
+   "name_ko": "블랙 카마엘",
+   "skills": [],
+   "sn": 30024,
+   "stance": {
+    "run": 50312,
+    "stand": 50311
+   },
+   "style": {
+    "id": 503,
+    "name_ko": "섹시 댄스형 뮤라",
+    "token": "mura_sexy"
+   }
+  },
+  "mura_A1001": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "브로운",
+   "skills": [
+    60001
+   ],
+   "sn": 31001,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1002": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "기쁨의 샤먼 봉고",
+   "skills": [
+    60002,
+    60003
+   ],
+   "sn": 31002,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A1004": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631004,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "The DJ aka P",
+   "skills": [
+    60006,
+    60005
+   ],
+   "sn": 31004,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A1005": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631005,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "골든 플루피",
+   "skills": [
+    60029,
+    60007
+   ],
+   "sn": 31005,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1006": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631006,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "골든 팬 플룻",
+   "skills": [
+    60030
+   ],
+   "sn": 31006,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1007": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631007,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "골든 심벌린",
+   "skills": [
+    60009,
+    60031
+   ],
+   "sn": 31007,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1008": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "블랙 바이얼리노",
+   "skills": [
+    60032,
+    60010
+   ],
+   "sn": 31008,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1011": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631011,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "크리스탈 클라리네츠",
+   "skills": [
+    60013
+   ],
+   "sn": 31011,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1017": {
+   "base_attacks": [
+    50101,
+    50102,
+    50103,
+    50104
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631017,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "루시펠 보이스",
+   "skills": [
+    60024,
+    60023
+   ],
+   "sn": 31017,
+   "stance": {
+    "run": 50112,
+    "stand": 50111
+   },
+   "style": {
+    "id": 501,
+    "name_ko": "클래식 댄스형 뮤라",
+    "token": "mura_classic"
+   }
+  },
+  "mura_A1019": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": 631019,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "탐탐^2 머플러",
+   "skills": [
+    60014
+   ],
+   "sn": 31019,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "mura_A1022": {
+   "base_attacks": [
+    50501,
+    50502,
+    50503,
+    50504
+   ],
+   "cate": 3,
+   "class": "mura",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "베놈 타부카이",
+   "skills": [
+    60028
+   ],
+   "sn": 31022,
+   "stance": {
+    "run": 50512,
+    "stand": 50511
+   },
+   "style": {
+    "id": 505,
+    "name_ko": "펑키 댄스형 뮤라",
+    "token": "mura_funky"
+   }
+  },
+  "spirit_A0001": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "아쿠아마린",
+   "skills": [
+    80001
+   ],
+   "sn": 40001,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0002": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640002,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "살라만더",
+   "skills": [
+    80002
+   ],
+   "sn": 40002,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0003": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640003,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "코브라 백",
+   "skills": [
+    80003
+   ],
+   "sn": 40003,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0004": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "언더테이커",
+   "skills": [
+    80004
+   ],
+   "sn": 40004,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0005": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640005,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "베스파",
+   "skills": [
+    80006
+   ],
+   "sn": 40005,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A0006": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "흡혈귀의 트렁크",
+   "skills": [
+    80007
+   ],
+   "sn": 40006,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0008": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640008,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "봄버윙",
+   "skills": [
+    80009
+   ],
+   "sn": 40008,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A0009": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "헬 하운드",
+   "skills": [
+    80010
+   ],
+   "sn": 40009,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0010": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640010,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "야차의 등",
+   "skills": [
+    80011
+   ],
+   "sn": 40010,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A0012": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "범생 가방",
+   "skills": [
+    80013
+   ],
+   "sn": 40012,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A0013": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640013,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "발키리의 날개",
+   "skills": [
+    80014
+   ],
+   "sn": 40013,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0014": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "네필림 호른",
+   "skills": [
+    80015
+   ],
+   "sn": 40014,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0015": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640015,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "블루 호프",
+   "skills": [
+    80017
+   ],
+   "sn": 40015,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0016": {
+   "base_attacks": [],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "style has no stance row (unshipped)",
+    "base attack id(s) [70301, 70302, 70303, 70304] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "아파치",
+   "skills": [
+    80027
+   ],
+   "sn": 40016,
+   "stance": null,
+   "style": {
+    "id": 703,
+    "name_ko": "변종 지시형 스피릿",
+    "token": "spirit_order2"
+   }
+  },
+  "spirit_A0018": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 5,
+   "issues": [],
+   "name_ko": "나이트메어",
+   "skills": [
+    80029
+   ],
+   "sn": 40018,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0019": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640019,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "터틀 플레이트",
+   "skills": [
+    80028
+   ],
+   "sn": 40019,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A002": {
+   "base_attacks": [],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "style has no stance row (unshipped)",
+    "base attack id(s) [70301, 70302, 70303, 70304] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "프레이야의 날개",
+   "skills": [],
+   "sn": 40023,
+   "stance": null,
+   "style": {
+    "id": 703,
+    "name_ko": "변종 지시형 스피릿",
+    "token": "spirit_order2"
+   }
+  },
+  "spirit_A0020": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 640020,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "엑소토파즈",
+   "skills": [
+    80027
+   ],
+   "sn": 40020,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A0021": {
+   "base_attacks": [],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 6,
+   "issues": [
+    "style has no stance row (unshipped)",
+    "base attack id(s) [70301, 70302, 70303, 70304] not shipped as .skl (dropped)"
+   ],
+   "name_ko": "제노 사이드",
+   "skills": [],
+   "sn": 40021,
+   "stance": null,
+   "style": {
+    "id": 703,
+    "name_ko": "변종 지시형 스피릿",
+    "token": "spirit_order2"
+   }
+  },
+  "spirit_A1001": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "이온마린",
+   "skills": [
+    80001
+   ],
+   "sn": 41001,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1002": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641002,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "빙염의 살라만더",
+   "skills": [
+    80002
+   ],
+   "sn": 41002,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1003": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641003,
+   "grade": 1,
+   "issues": [],
+   "name_ko": "나쟈 백",
+   "skills": [
+    80003
+   ],
+   "sn": 41003,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1004": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "하데스 언더테이커",
+   "skills": [
+    80004
+   ],
+   "sn": 41004,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1005": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641005,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "베스파 알파",
+   "skills": [
+    80006
+   ],
+   "sn": 41005,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A1006": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": null,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "흡혈희의 트렁크",
+   "skills": [
+    80007
+   ],
+   "sn": 41006,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1008": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641008,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "보밍윙",
+   "skills": [
+    80009
+   ],
+   "sn": 41008,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A1010": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641010,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "명계의 야차등",
+   "skills": [
+    80011
+   ],
+   "sn": 41010,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A1013": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641013,
+   "grade": 4,
+   "issues": [],
+   "name_ko": "블러디 발키리",
+   "skills": [
+    80014
+   ],
+   "sn": 41013,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  },
+  "spirit_A1019": {
+   "base_attacks": [
+    70201,
+    70202,
+    70203,
+    70204
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641019,
+   "grade": 2,
+   "issues": [],
+   "name_ko": "시터틀 플레이트",
+   "skills": [
+    80028
+   ],
+   "sn": 41019,
+   "stance": {
+    "run": 70212,
+    "stand": 70211
+   },
+   "style": {
+    "id": 702,
+    "name_ko": "살짝 몸을 굽히는 형 스피릿",
+    "token": "spirit_lower"
+   }
+  },
+  "spirit_A1020": {
+   "base_attacks": [
+    70101,
+    70102,
+    70103,
+    70104
+   ],
+   "cate": 4,
+   "class": "spirit",
+   "gender": 0,
+   "glow": 641020,
+   "grade": 3,
+   "issues": [],
+   "name_ko": "베놈 엑소토파즈",
+   "skills": [
+    80027
+   ],
+   "sn": 41020,
+   "stance": {
+    "run": 70112,
+    "stand": 70111
+   },
+   "style": {
+    "id": 701,
+    "name_ko": "지시형 스피릿",
+    "token": "spirit_order"
+   }
+  }
+ }
+}

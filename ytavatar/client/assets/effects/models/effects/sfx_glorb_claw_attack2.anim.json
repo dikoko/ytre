@@ -1,0 +1,68 @@
+{
+ "clips": {
+  "default": {
+   "end": 8.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 8.0,
+ "visibility": {
+  "sfx_glorb_claw_attack2_obj0": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    7.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_claw_attack2_obj1": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    7.0,
+    0.0
+   ]
+  ],
+  "sfx_glorb_claw_attack2_obj2": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    7.0,
+    0.0
+   ]
+  ]
+ }
+}

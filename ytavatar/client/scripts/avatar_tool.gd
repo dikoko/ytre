@@ -114,6 +114,35 @@ func _process(_delta: float) -> void:
 		_fit_frames_pending -= 1
 		if _fit_frames_pending == 0:
 			_camera_auto_fit()
+	if _combo_active:
+		_process_combo()
+
+
+func _process_combo() -> void:
+	var code: String = _combo_codes[_combo_step]
+	var info: Dictionary = skill_player.skill_info(code)
+	var notify := int(info.get("notify_frame", 0))
+	var fr := skill_player.current_frame()
+	var advance := false
+	if notify > 0 and fr >= notify:
+		advance = true                     # original chains at NotifyEndAnimation
+	elif fr < 0 and skill_active_code != code:
+		advance = true                     # finished (notify 0 fallback)
+	if advance:
+		_combo_step += 1
+		if _combo_step >= _combo_codes.size():
+			_combo_active = false
+			return
+		_play_skill(String(_combo_codes[_combo_step]), true)
+
+
+func _start_combo(codes: Array) -> void:
+	if codes.is_empty():
+		return
+	_combo_codes = codes
+	_combo_step = 0
+	_combo_active = true
+	_play_skill(String(_combo_codes[0]), true)
 
 const MODEL_VIEWER_CONFIG := {
 	CharacterMode.MONSTER: {
@@ -144,6 +173,26 @@ var monster_next_btn: Button
 var monster_selector_container: HBoxContainer
 var left_panel: PanelContainer
 var slot_name_labels: Dictionary = {}
+
+# === SKILLS PANEL (sub-project C skill-effects browser) ===
+var skill_player: SkillPlayer
+var skill_catalog: SkillCatalog
+var skill_tabs: TabContainer
+var equipped_header: Label
+var equipped_list: ItemList
+var combo_button: Button
+var glow_check: CheckButton
+var skill_filter_edit: LineEdit
+var skill_list: ItemList
+var skill_active_label: Label
+var skill_filter_text: String = ""
+var skill_active_code: String = ""
+
+# === WEAPON-DRIVEN SKILLS: combo runner (chained at the previous step's
+# notify_frame, falling back to natural finish when notify_frame is 0) ===
+var _combo_active := false
+var _combo_step := 0
+var _combo_codes: Array = []
 
 # === GENDER CONFIG (UI cycling data only) ===
 
@@ -583,8 +632,27 @@ func _ready() -> void:
 	monster_root = $MonsterRoot
 	_setup_orbit_camera()
 	_initialize_avatar()
+	_init_skill_player()
 	_build_gui()
 	_sync_gui()
+
+
+func _init_skill_player() -> void:
+	skill_player = SkillPlayer.new()
+	skill_player.name = "SkillPlayer"
+	add_child(skill_player)
+	skill_player.load_catalog()
+	skill_player.finished.connect(_on_skill_finished)
+	skill_catalog = SkillCatalog.new()
+	skill_catalog.load()
+
+
+func _current_character() -> Node3D:
+	## Whatever the tool currently displays — the avatar in Male/Female
+	## mode, the loaded monster/NPC model otherwise.
+	if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC]:
+		return _model_char
+	return _avatar
 
 
 func _initialize_avatar() -> void:
@@ -638,6 +706,7 @@ func _switch_gender() -> void:
 
 	_initialize_avatar()
 	_sync_gui()
+	_apply_weapon_binding()
 
 
 func _enter_model_viewer(mode: int) -> void:
@@ -774,6 +843,151 @@ func _apply_equipment() -> void:
 			_avatar.equip_weapon("spirit", _extract_variant_code(spirit_variants[spirit_variant_index]))
 		EquipmentType.NONE:
 			_avatar.unequip_weapon()
+	_apply_weapon_binding()
+
+
+func _equipped_weapon_key() -> String:
+	## Maps current_equipment + the current variant arrays to "{type}_{variant}",
+	## matching weapons.json's keys (e.g. "blade_A0011"). Empty for
+	## Monster/NPC modes and when nothing is equipped.
+	if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC]:
+		return ""
+	match current_equipment:
+		EquipmentType.BLADE:
+			return "blade_" + _extract_variant_code(blade_variants[blade_variant_index])
+		EquipmentType.GLORB:
+			return "glorb_" + _extract_variant_code(part_variants["glorb"][variant_index["glorb"]])
+		EquipmentType.MURA:
+			return "mura_" + _extract_variant_code(mura_variants[mura_variant_index])
+		EquipmentType.SPIRIT:
+			return "spirit_" + _extract_variant_code(spirit_variants[spirit_variant_index])
+		_:
+			return ""
+
+
+func _apply_weapon_binding() -> void:
+	skill_player.stop_loop()
+	_combo_active = false
+	var av := _avatar
+	if av == null:
+		return
+	var key := _equipped_weapon_key()      # e.g. "blade_A0011"; "" if none
+	if key.is_empty():
+		av.clear_stance()
+		_refresh_equipped_tab({})
+		return
+	var s := skill_catalog.skill_set_for_weapon(key)
+	if s.is_empty():
+		av.clear_stance()
+		_refresh_equipped_tab({})
+		return
+	if s.get("stance") != null:
+		av.set_stance(int(s.stance.stand), int(s.stance.run))
+	else:
+		av.clear_stance()
+	if s.get("glow") != null and glow_check != null and glow_check.button_pressed:
+		skill_player.play_loop(SkillCatalog.code_for_id(int(s.glow)), av)
+	_refresh_equipped_tab(s)
+
+
+func _weapon_skill_codes(s: Dictionary) -> Array:
+	## Every playable skill code in a weapon set (base attacks + named
+	## skills), used to tell whether an "All" tab code belongs to the
+	## currently equipped weapon.
+	var codes: Array = []
+	var base_attacks = s.get("base_attacks")
+	if base_attacks != null:
+		for id in base_attacks:
+			codes.append(SkillCatalog.code_for_id(int(id)))
+	for id in s.get("skills", []):
+		codes.append(SkillCatalog.code_for_id(int(id)))
+	return codes
+
+
+func _current_weapon_skill_codes() -> Array:
+	var key := _equipped_weapon_key()
+	if key.is_empty():
+		return []
+	var s := skill_catalog.skill_set_for_weapon(key)
+	if s.is_empty():
+		return []
+	return _weapon_skill_codes(s)
+
+
+func _class_for_code(code: String) -> String:
+	## Derives the weapon class a base-attack/weapon-skill code needs from
+	## its id's family digits: sk{DD}xxxx where DD in 01/02=blade,
+	## 03/04=glorb, 05/06=mura, 07/08=spirit (base attacks use the odd
+	## digit, weapon skills the even one).
+	if not code.begins_with("sk") or code.length() < 4:
+		return ""
+	var digit := int(code.substr(2, 2))
+	match digit:
+		1, 2:
+			return "blade"
+		3, 4:
+			return "glorb"
+		5, 6:
+			return "mura"
+		7, 8:
+			return "spirit"
+		_:
+			return ""
+
+
+func _refresh_equipped_tab(s: Dictionary) -> void:
+	if equipped_list == null:
+		return
+	equipped_list.clear()
+	if s.is_empty():
+		var empty_idx := equipped_list.add_item("equip a weapon")
+		equipped_list.set_item_disabled(empty_idx, true)
+		if equipped_header:
+			equipped_header.text = ""
+		if combo_button:
+			combo_button.disabled = true
+		if glow_check:
+			glow_check.disabled = true
+		return
+
+	if equipped_header:
+		var style: Variant = s.get("style")
+		var style_name := String(style.get("name_ko", "")) if style != null else ""
+		equipped_header.text = "%s · %s · %s · grade %d" % [
+			String(s.get("name_ko", "")), String(s.get("class", "")),
+			style_name, int(s.get("grade", 0)),
+		]
+
+	var base_attacks = s.get("base_attacks")
+	var attacks_count: int = base_attacks.size() if base_attacks != null else 0
+	for i in range(4):
+		var idx := equipped_list.add_item("Attack %d" % (i + 1))
+		if i < attacks_count:
+			equipped_list.set_item_metadata(idx, SkillCatalog.code_for_id(int(base_attacks[i])))
+		else:
+			equipped_list.set_item_disabled(idx, true)
+			equipped_list.set_item_tooltip(idx, "unshipped")
+
+	for id in s.get("skills", []):
+		var code := SkillCatalog.code_for_id(int(id))
+		var info: Dictionary = skill_catalog.skill_info(code)
+		var label := "%s  %s  CD %.1fs SP %d" % [
+			code, String(info.get("name_ko", "")),
+			float(info.get("cooltime", 0.0)), int(info.get("sp", 0)),
+		]
+		if info.has("atk_rate"):
+			label += "  ATK %d%%" % int(info.get("atk_rate", 0))
+		var idx := equipped_list.add_item(label)
+		equipped_list.set_item_metadata(idx, code)
+		var missing: Array = info.get("missing", [])
+		if not missing.is_empty():
+			equipped_list.set_item_disabled(idx, true)
+			equipped_list.set_item_tooltip(idx, "Missing: " + ", ".join(PackedStringArray(missing)))
+
+	if combo_button:
+		combo_button.disabled = attacks_count < 4
+	if glow_check:
+		glow_check.disabled = s.get("glow") == null
 
 
 func _unequip() -> void:
@@ -794,6 +1008,7 @@ func _unequip() -> void:
 		animation_index = stand_idx if stand_idx >= 0 else 0
 		_play_current_animation()
 	_sync_gui()
+	_apply_weapon_binding()
 
 
 # === FACE (delegates to addon) ===
@@ -1104,6 +1319,89 @@ func _build_gui() -> void:
 	viewport_fill.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	content.add_child(viewport_fill)
 
+	_build_skills_panel(content)
+
+
+func _build_skills_panel(content: Control) -> void:
+	var skills_panel = PanelContainer.new()
+	skills_panel.custom_minimum_size.x = 260
+	skills_panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	skills_panel.mouse_filter = Control.MOUSE_FILTER_STOP
+	content.add_child(skills_panel)
+
+	var skills_layout = VBoxContainer.new()
+	skills_layout.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	skills_layout.add_theme_constant_override("separation", 4)
+	skills_panel.add_child(skills_layout)
+
+	var skills_title = Label.new()
+	skills_title.text = "Skills"
+	skills_title.add_theme_font_size_override("font_size", 11)
+	skills_layout.add_child(skills_title)
+
+	skill_tabs = TabContainer.new()
+	skill_tabs.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	skills_layout.add_child(skill_tabs)
+
+	# --- "Equipped" tab: weapon-driven attacks/skills/combo/glow ---
+	var equipped_tab = VBoxContainer.new()
+	equipped_tab.name = "Equipped"
+	equipped_tab.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	equipped_tab.add_theme_constant_override("separation", 4)
+	skill_tabs.add_child(equipped_tab)
+
+	equipped_header = Label.new()
+	equipped_header.text = ""
+	equipped_header.add_theme_font_size_override("font_size", 11)
+	equipped_header.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	equipped_tab.add_child(equipped_header)
+
+	equipped_list = ItemList.new()
+	equipped_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	equipped_list.item_activated.connect(_on_equipped_item_activated)
+	equipped_tab.add_child(equipped_list)
+
+	var combo_row = HBoxContainer.new()
+	equipped_tab.add_child(combo_row)
+
+	combo_button = Button.new()
+	combo_button.text = "Combo 1-4"
+	combo_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	combo_button.pressed.connect(_on_combo_button_pressed)
+	combo_row.add_child(combo_button)
+
+	glow_check = CheckButton.new()
+	glow_check.text = "Glow"
+	glow_check.toggled.connect(_on_glow_toggled)
+	combo_row.add_child(glow_check)
+
+	# --- "All" tab: existing filter + full catalog list, unchanged behavior ---
+	var all_tab = VBoxContainer.new()
+	all_tab.name = "All"
+	all_tab.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	all_tab.add_theme_constant_override("separation", 4)
+	skill_tabs.add_child(all_tab)
+
+	skill_filter_edit = LineEdit.new()
+	skill_filter_edit.placeholder_text = "filter (e.g. sk1000)"
+	skill_filter_edit.text_changed.connect(_on_skill_filter_changed)
+	all_tab.add_child(skill_filter_edit)
+
+	skill_list = ItemList.new()
+	skill_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	skill_list.item_activated.connect(_on_skill_item_activated)
+	all_tab.add_child(skill_list)
+
+	# Shared between both tabs — stays visible regardless of the active tab.
+	skill_active_label = Label.new()
+	skill_active_label.text = ""
+	skill_active_label.add_theme_font_size_override("font_size", 11)
+	skill_active_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	skills_layout.add_child(skill_active_label)
+
+	_refresh_skill_list()
+	_refresh_equipped_tab({})
+
 
 func _build_slot_row(parent: Control, slot_name: String, display_name: String) -> void:
 	var container = VBoxContainer.new()
@@ -1148,6 +1446,14 @@ func _sync_gui() -> void:
 	anim_mode_select.visible = not is_monster
 	monster_selector_container.visible = is_monster
 	left_panel.visible = not is_monster
+
+	if skill_tabs:
+		# Monster/NPC modes have no weapon to drive the Equipped tab (spec
+		# §5: "All tab only") — hide it and force-select All; MALE/FEMALE
+		# unhide it (existing tab selection left alone).
+		skill_tabs.set_tab_hidden(0, is_monster)
+		if is_monster:
+			skill_tabs.current_tab = 1
 
 	if is_monster:
 		animation_select.clear()
@@ -1301,6 +1607,109 @@ func _on_monster_selected(index: int) -> void:
 		_load_monster(index)
 		_sync_gui()
 
+
+# === SKILLS PANEL CALLBACKS ===
+
+func _on_skill_filter_changed(text: String) -> void:
+	skill_filter_text = text
+	_refresh_skill_list()
+
+
+func _refresh_skill_list() -> void:
+	if skill_list == null or skill_player == null:
+		return
+	skill_list.clear()
+	var filter := skill_filter_text.strip_edges().to_lower()
+	for code in skill_player.skill_ids():
+		if not filter.is_empty() and not code.to_lower().contains(filter):
+			continue
+		var info: Dictionary = skill_player.skill_info(code)
+		var deferred: Array = info.get("deferred", [])
+		var missing: Array = info.get("missing", [])
+		var name_ko := String(info.get("name_ko", ""))
+		var family := String(info.get("family", ""))
+		var label := "%s  %s [%s]" % [code, name_ko, family]
+		if not deferred.is_empty():
+			label += " [partial]"
+		var idx := skill_list.add_item(label)
+		skill_list.set_item_metadata(idx, code)
+		if not missing.is_empty():
+			# Non-empty `missing` = unresolvable asset ref(s); SkillPlayer.play()
+			# refuses these outright, so grey the entry out rather than let it
+			# look playable.
+			skill_list.set_item_disabled(idx, true)
+			skill_list.set_item_tooltip(idx, "Missing: " + ", ".join(PackedStringArray(missing)))
+		elif not deferred.is_empty():
+			skill_list.set_item_tooltip(idx, "Deferred (not played): " + ", ".join(PackedStringArray(deferred)))
+
+
+func _on_skill_item_activated(index: int) -> void:
+	if skill_list.is_item_disabled(index):
+		return
+	var code: String = skill_list.get_item_metadata(index)
+	if code.is_empty():
+		return
+	_play_skill(code)
+
+
+func _on_equipped_item_activated(index: int) -> void:
+	if equipped_list.is_item_disabled(index):
+		return
+	var code: String = equipped_list.get_item_metadata(index)
+	if code == null or String(code).is_empty():
+		return
+	_play_skill(String(code))
+
+
+func _on_combo_button_pressed() -> void:
+	var key := _equipped_weapon_key()
+	if key.is_empty():
+		return
+	var s := skill_catalog.skill_set_for_weapon(key)
+	var base_attacks = s.get("base_attacks")
+	if base_attacks == null:
+		return
+	var codes: Array = []
+	for id in base_attacks:
+		codes.append(SkillCatalog.code_for_id(int(id)))
+	_start_combo(codes)
+
+
+func _on_glow_toggled(_pressed: bool) -> void:
+	_apply_weapon_binding()
+
+
+func _play_skill(code: String, from_combo: bool = false) -> void:
+	if not from_combo:
+		# Any skill NOT initiated by the combo runner (a direct "All"/
+		# "Equipped" row click, a monster/NPC playback, ...) cancels a
+		# running combo — prevents _process_combo's clock from firing a
+		# stale step over whatever the user just played by hand.
+		_combo_active = false
+	skill_player.stop()
+	var character := _current_character()
+	if character == null:
+		skill_active_code = ""
+		skill_active_label.text = "No character loaded"
+		return
+	if skill_player.play(code, character):
+		skill_active_code = code
+		var family := skill_catalog.family(code)
+		if family in ["base_attack", "weapon_skill"] and not _current_weapon_skill_codes().has(code):
+			skill_active_label.text = "Playing: %s (needs %s)" % [code, _class_for_code(code)]
+		else:
+			skill_active_label.text = "Playing: " + code
+	else:
+		skill_active_code = ""
+		skill_active_label.text = "Refused: " + code
+
+
+func _on_skill_finished(code: String) -> void:
+	if skill_active_code == code:
+		skill_active_code = ""
+	skill_active_label.text = ""
+
+
 func _on_slot_prev(slot_name: String) -> void:
 	_gui_cycle_slot(slot_name, -1)
 
@@ -1403,6 +1812,23 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed:
+		return
+
+	if event.keycode == KEY_ESCAPE:
+		if skill_player:
+			skill_player.stop()   # one-shot only — never stop_loop(); glow persists
+		skill_active_code = ""
+		_combo_active = false
+		if skill_active_label:
+			skill_active_label.text = ""
+		get_viewport().set_input_as_handled()
+		return
+
+	if skill_filter_edit != null and skill_filter_edit.has_focus():
+		# _input() fires before Control._gui_input(): without this guard,
+		# hotkeys sharing letters/digits with the filter text (e.g. "1" =
+		# cycle hair, "0" = remove all parts) would fire the avatar tool's
+		# bindings while the user is typing into the filter box.
 		return
 
 	# Monster/NPC mode

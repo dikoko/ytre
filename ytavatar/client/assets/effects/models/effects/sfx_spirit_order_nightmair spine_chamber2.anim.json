@@ -1,0 +1,86 @@
+{
+ "clips": {
+  "default": {
+   "end": 100.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 100.0,
+ "visibility": {
+  "sfx_spirit_order_nightmair spine_chamber2_obj1": [
+   [
+    54.0,
+    0.0
+   ],
+   [
+    55.0,
+    1.0
+   ],
+   [
+    57.0,
+    1.0
+   ],
+   [
+    59.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_nightmair spine_chamber2_obj2": [
+   [
+    55.0,
+    0.0
+   ],
+   [
+    56.0,
+    1.0
+   ],
+   [
+    58.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_nightmair spine_chamber2_obj4": [
+   [
+    54.0,
+    0.0
+   ],
+   [
+    55.0,
+    1.0
+   ],
+   [
+    57.0,
+    1.0
+   ],
+   [
+    59.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_nightmair spine_chamber2_obj5": [
+   [
+    53.0,
+    0.0
+   ],
+   [
+    54.0,
+    1.0
+   ],
+   [
+    56.0,
+    1.0
+   ],
+   [
+    58.0,
+    0.0
+   ]
+  ]
+ }
+}

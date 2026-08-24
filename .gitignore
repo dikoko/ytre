@@ -29,3 +29,7 @@ ytref
 
 # Probe/eval artifacts
 reports/
+
+# Godot importer texture extractions next to effect GLBs (regenerable)
+ytavatar/client/assets/effects/models/effects/*_[0-9].png
+ytavatar/client/assets/effects/models/effects/*_[0-9][0-9].png

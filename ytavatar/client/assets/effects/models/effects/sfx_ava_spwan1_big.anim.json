@@ -1,0 +1,56 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "sfx_ava_spwan1_big_obj0": [
+   [
+    6.0,
+    0.0
+   ],
+   [
+    11.0,
+    1.0
+   ],
+   [
+    26.0,
+    0.0
+   ]
+  ],
+  "sfx_ava_spwan1_big_obj1": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    8.0,
+    1.0
+   ],
+   [
+    23.0,
+    0.0
+   ]
+  ],
+  "sfx_ava_spwan1_big_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ]
+ }
+}

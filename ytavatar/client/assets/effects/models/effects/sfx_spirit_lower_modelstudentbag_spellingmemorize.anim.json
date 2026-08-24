@@ -1,0 +1,212 @@
+{
+ "clips": {
+  "default": {
+   "end": 26.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 26.0,
+ "visibility": {
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    19.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    23.0,
+    1.0
+   ],
+   [
+    24.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj10": [
+   [
+    16.0,
+    0.0
+   ],
+   [
+    17.0,
+    1.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    21.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    16.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj3": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj5": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj6": [
+   [
+    16.0,
+    0.0
+   ],
+   [
+    19.0,
+    1.0
+   ],
+   [
+    22.0,
+    1.0
+   ],
+   [
+    23.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj7": [
+   [
+    19.0,
+    0.0
+   ],
+   [
+    22.0,
+    1.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    26.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj8": [
+   [
+    8.0,
+    0.0
+   ],
+   [
+    9.0,
+    1.0
+   ],
+   [
+    12.0,
+    1.0
+   ],
+   [
+    13.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_modelstudentbag_spellingmemorize_obj9": [
+   [
+    12.0,
+    0.0
+   ],
+   [
+    13.0,
+    1.0
+   ],
+   [
+    16.0,
+    1.0
+   ],
+   [
+    17.0,
+    0.0
+   ]
+  ]
+ }
+}

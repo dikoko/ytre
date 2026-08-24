@@ -1,0 +1,24 @@
+{
+ "clips": {
+  "default": {
+   "end": 35.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 35.0,
+ "visibility": {
+  "sfx_weapon_glorb_A0002_R_obj1": [
+   [
+    0.0,
+    0.5
+   ],
+   [
+    35.0,
+    0.5
+   ]
+  ]
+ }
+}

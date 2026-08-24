@@ -1,0 +1,196 @@
+{
+ "clips": {
+  "default": {
+   "end": 20.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 20.0,
+ "visibility": {
+  "sfx_mura_classic_attack1_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    12.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj10": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj11": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj12": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj13": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj14": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj3": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj4": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj5": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj6": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj7": [
+   [
+    1.0,
+    0.0
+   ],
+   [
+    2.0,
+    1.0
+   ],
+   [
+    5.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj8": [
+   [
+    2.0,
+    0.0
+   ],
+   [
+    3.0,
+    1.0
+   ],
+   [
+    6.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_classic_attack1_obj9": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    4.0,
+    0.0
+   ]
+  ]
+ }
+}

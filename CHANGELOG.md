@@ -4,6 +4,40 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.8.0] - 2026-08-24
+
+### Added
+- **Skill system in the avatar tool** — all 742 skill scripts (`.skl`)
+  decoded and playable: effect models, caster motion, sounds, and
+  character color flashes run in sync on the skill's own 30 fps clock.
+- **Weapon-bound skills** — equipping a weapon now switches the
+  character into that weapon style's battle stance (idle and run), and
+  the new Skills panel's **Equipped** tab shows exactly that item's
+  skill set: the 4-step basic-attack combo (with a Combo button that
+  chains the steps at the authored cue frames), the item's named skills
+  with Korean names, cooldown, SP and attack data, and a toggle for the
+  item's always-on weapon glow, anchored to the correct bone (blade →
+  weapon bone, glorb → hands, mura → head, spirit → spine).
+- **Skills browser** — the **All** tab lists every skill grouped by
+  family (basic attacks, weapon skills, glows, enchants, monster,
+  system) with Korean names and a "needs {class}" hint for weapon
+  skills; caster motion picks the right clip per gender.
+- 352 skill-effect models with their authored animations and fade
+  curves, and 174 combat/skill sounds.
+- Data catalogs: `weapons.json` (126 weapons with class, style, stance,
+  skill set, glow), `skills.json` v2 (per-skill metadata), per-gender
+  `motion_ids.json`, and `bones.json` (effect anchor map).
+- `.skl` parser and motion-id exporter in `tools/avatar_export`, with
+  test suites that run against the bundled game data in `refs/`.
+- YTLevel: opt-in battle-effects export category in the prop exporter
+  (`22_export_props.py --effects`).
+
+### Known limitations
+- Some weapon-glow effect models currently fail Godot import (an
+  exporter fix is queued), so many weapons show no glow yet.
+- Target/hit reactions, enchant glows, particle effects (`.sfd`),
+  camera and path tracks are cataloged but not yet played.
+
 ## [0.7.0] - 2026-08-16
 
 ### Added

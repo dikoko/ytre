@@ -49,6 +49,15 @@ Select from the top-left dropdown:
 | 6-9 | Equip equipment (blade, glorb, mura, spirit) |
 | P | Unequip all |
 
+### Skills
+
+Equipping a weapon (keys **6-9**) switches the avatar into that weapon
+style's battle stance and fills the **Skills** dock's *Equipped* tab with
+the item's own skill set — basic-attack combo, named skills, and weapon
+glow. The *All* tab browses all 742 converted skill scripts with synced
+effect models, caster motion, and sound. See the
+[user guide](docs/user-guide.md#skills) for details.
+
 ### Monster / NPC Mode
 
 **Top bar:**

@@ -1,0 +1,28 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "sfx_ct0111_die_obj0": [
+   [
+    18.0,
+    0.0
+   ],
+   [
+    20.0,
+    0.800000011920929
+   ],
+   [
+    24.0,
+    0.0
+   ]
+  ]
+ }
+}

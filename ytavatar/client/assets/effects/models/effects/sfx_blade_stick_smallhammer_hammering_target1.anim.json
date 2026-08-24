@@ -1,0 +1,70 @@
+{
+ "clips": {
+  "default": {
+   "end": 64.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 64.0,
+ "visibility": {
+  "sfx_blade_stick_smallhammer_hammering_target1_obj0": [
+   [
+    38.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    46.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_hammering_target1_obj1": [
+   [
+    40.0,
+    0.0
+   ],
+   [
+    42.0,
+    1.0
+   ],
+   [
+    48.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_hammering_target1_obj2": [
+   [
+    42.0,
+    0.0
+   ],
+   [
+    44.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_hammering_target1_obj3": [
+   [
+    44.0,
+    0.0
+   ],
+   [
+    46.0,
+    1.0
+   ],
+   [
+    52.0,
+    0.0
+   ]
+  ]
+ }
+}

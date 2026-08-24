@@ -1,0 +1,182 @@
+{
+ "clips": {
+  "default": {
+   "end": 50.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 50.0,
+ "visibility": {
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj0": [
+   [
+    5.0,
+    0.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    35.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj10": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    45.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj2": [
+   [
+    6.0,
+    0.0
+   ],
+   [
+    11.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj3": [
+   [
+    3.0,
+    0.0
+   ],
+   [
+    8.0,
+    1.0
+   ],
+   [
+    47.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj4": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    44.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj6": [
+   [
+    5.0,
+    0.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    30.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj7": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    35.0,
+    1.0
+   ],
+   [
+    45.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj8": [
+   [
+    15.0,
+    0.0
+   ],
+   [
+    25.0,
+    1.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_requiembuster_avatar1_obj9": [
+   [
+    5.0,
+    0.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    30.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ]
+ }
+}

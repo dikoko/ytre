@@ -1,0 +1,124 @@
+{
+ "clips": {
+  "default": {
+   "end": 50.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 50.0,
+ "visibility": {
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.0,
+    0.0
+   ],
+   [
+    22.0,
+    1.0
+   ],
+   [
+    28.0,
+    1.0
+   ],
+   [
+    32.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.0,
+    0.0
+   ],
+   [
+    22.0,
+    1.0
+   ],
+   [
+    29.0,
+    1.0
+   ],
+   [
+    32.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj2": [
+   [
+    45.0,
+    0.0
+   ],
+   [
+    46.0,
+    1.0
+   ],
+   [
+    49.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj3": [
+   [
+    47.0,
+    0.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj4": [
+   [
+    36.0,
+    0.0
+   ],
+   [
+    39.0,
+    1.0
+   ],
+   [
+    44.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj5": [
+   [
+    35.0,
+    0.0
+   ],
+   [
+    37.0,
+    1.0
+   ],
+   [
+    43.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_lower_vespa_woodenscream_avartar2_obj6": [
+   [
+    34.0,
+    0.0
+   ],
+   [
+    36.0,
+    1.0
+   ],
+   [
+    42.0,
+    0.0
+   ]
+  ]
+ }
+}

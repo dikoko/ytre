@@ -68,6 +68,20 @@ def discover_skill_effects() -> list[tuple[str, str, Path]]:
     ]
 
 
+def discover_effects() -> list[tuple[str, str, Path]]:
+    """The full battle-effects set (sub-project C). OPT-IN, same shape as
+    discover_skill_effects() but a full glob of Skill.IRD/TMD instead of the
+    two-id warp-puff whitelist — deliberately not part of CATEGORIES/
+    discover_props() so the terrain censuses and the static byte-identity
+    gate never see them.
+    """
+    return [
+        ("effects", f.stem, f)
+        for f in sorted(SKILL_TMD_DIR.iterdir())
+        if f.suffix.upper() == ".TMD"
+    ]
+
+
 def discover_props(categories: list[str] | None = None) -> list[tuple[str, str, Path]]:
     """Discover all prop TMD files across categories.
 

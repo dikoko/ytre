@@ -1,0 +1,50 @@
+{
+ "clips": {
+  "default": {
+   "end": 94.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 94.0,
+ "visibility": {
+  "sfx_mura_funky_shamanbongo_shamanbell_obj0": [
+   [
+    54.0,
+    0.0
+   ],
+   [
+    56.0,
+    1.0
+   ],
+   [
+    60.0,
+    1.0
+   ],
+   [
+    62.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_funky_shamanbongo_shamanbell_obj1": [
+   [
+    58.0,
+    0.0
+   ],
+   [
+    60.0,
+    1.0
+   ],
+   [
+    66.0,
+    1.0
+   ],
+   [
+    68.0,
+    0.0
+   ]
+  ]
+ }
+}

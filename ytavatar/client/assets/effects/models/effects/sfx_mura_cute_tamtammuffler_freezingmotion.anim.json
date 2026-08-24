@@ -1,0 +1,218 @@
+{
+ "clips": {
+  "default": {
+   "end": 140.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 140.0,
+ "visibility": {
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    120.0,
+    1.0
+   ],
+   [
+    126.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    40.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj10": [
+   [
+    60.0,
+    0.0
+   ],
+   [
+    80.0,
+    1.0
+   ],
+   [
+    100.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj11": [
+   [
+    80.0,
+    0.0
+   ],
+   [
+    100.0,
+    1.0
+   ],
+   [
+    120.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj12": [
+   [
+    105.0,
+    0.0
+   ],
+   [
+    120.0,
+    1.0
+   ],
+   [
+    140.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj14": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    120.0,
+    1.0
+   ],
+   [
+    126.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj2": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    17.0,
+    1.0
+   ],
+   [
+    33.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj3": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    37.0,
+    1.0
+   ],
+   [
+    53.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj4": [
+   [
+    40.0,
+    0.0
+   ],
+   [
+    57.0,
+    1.0
+   ],
+   [
+    73.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj5": [
+   [
+    60.0,
+    0.0
+   ],
+   [
+    77.0,
+    1.0
+   ],
+   [
+    93.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj6": [
+   [
+    80.0,
+    0.0
+   ],
+   [
+    97.0,
+    1.0
+   ],
+   [
+    113.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj7": [
+   [
+    100.0,
+    0.0
+   ],
+   [
+    117.0,
+    1.0
+   ],
+   [
+    133.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj8": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_mura_cute_tamtammuffler_freezingmotion_obj9": [
+   [
+    40.0,
+    0.0
+   ],
+   [
+    60.0,
+    1.0
+   ],
+   [
+    80.0,
+    0.0
+   ]
+  ]
+ }
+}

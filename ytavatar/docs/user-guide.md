@@ -54,6 +54,29 @@ Parts cycle through every converted asset for the active gender:
 The GUI panel mirrors all of this: part pickers, equipment buttons, an
 animation-mode dropdown, and an animation selector.
 
+## Skills
+
+The **Skills** dock (avatar modes) plays the converted skill scripts —
+effect models, caster motion, sound, and color flashes in sync. It has
+two tabs:
+
+- **Equipped** — driven by the weapon slot. Equipping a weapon switches
+  the character into that weapon style's battle stance and lists the
+  item's own skill set: **Attack 1-4** (the style's basic-attack chain),
+  a **Combo** button that plays all four back to back, chaining each
+  step at the authored cue frame, the item's **named skills** (Korean
+  name, cooldown, SP cost, attack %), and a **Glow** toggle for the
+  item's always-on weapon effect, anchored to the correct bone. With no
+  weapon equipped the tab prompts you to equip one.
+- **All** — browse all 742 skills, grouped by family with Korean names
+  and a filter box. Weapon skills play even without the matching weapon
+  (a "needs {class}" hint shows what they belong to).
+
+**Escape** stops the playing skill (and a running combo); the glow loop
+keeps running until toggled off. Some skills reference monster motions or
+unshipped assets and are greyed out with the reason. In Monster/NPC mode
+only the All tab is available.
+
 ## Monster / NPC mode
 
 Pick a model with the **`[<]` dropdown `[>]`** selector, or:

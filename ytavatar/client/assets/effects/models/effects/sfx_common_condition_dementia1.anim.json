@@ -1,0 +1,28 @@
+{
+ "clips": {
+  "default": {
+   "end": 30.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 30.0,
+ "visibility": {
+  "sfx_common_condition_dementia1_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    15.0,
+    1.0
+   ],
+   [
+    30.0,
+    0.0
+   ]
+  ]
+ }
+}

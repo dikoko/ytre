@@ -1,0 +1,34 @@
+{
+ "clips": {
+  "default": {
+   "end": 60.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 60.0,
+ "visibility": {
+  "sfx_weapon_spirit_A0002_obj1": [
+   [
+    0.0,
+    0.5
+   ],
+   [
+    60.0,
+    0.5
+   ]
+  ],
+  "sfx_weapon_spirit_A0002_obj2": [
+   [
+    0.0,
+    0.699999988079071
+   ],
+   [
+    60.0,
+    0.699999988079071
+   ]
+  ]
+ }
+}

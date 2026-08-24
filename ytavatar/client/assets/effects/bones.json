@@ -1,0 +1,17 @@
+{
+ "bones": {
+  "0": "@Root",
+  "1": "@Head",
+  "10": "@Arm2R",
+  "11": null,
+  "2": "@HandL",
+  "3": "@HandR",
+  "4": "@ToeL",
+  "5": "@ToeR",
+  "6": "@Sword",
+  "7": "@Sword",
+  "8": "@Spine3",
+  "9": "@Arm2L"
+ },
+ "version": 1
+}

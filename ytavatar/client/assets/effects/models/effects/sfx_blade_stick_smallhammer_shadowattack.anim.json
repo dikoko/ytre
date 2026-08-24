@@ -1,0 +1,144 @@
+{
+ "clips": {
+  "default": {
+   "end": 75.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 75.0,
+ "visibility": {
+  "sfx_blade_stick_smallhammer_shadowattack_obj10": [
+   [
+    60.0,
+    0.0
+   ],
+   [
+    61.0,
+    1.0
+   ],
+   [
+    65.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj2": [
+   [
+    51.0,
+    0.0
+   ],
+   [
+    53.0,
+    1.0
+   ],
+   [
+    59.0,
+    1.0
+   ],
+   [
+    61.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj3": [
+   [
+    52.0,
+    0.0
+   ],
+   [
+    53.0,
+    1.0
+   ],
+   [
+    57.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj4": [
+   [
+    54.0,
+    0.0
+   ],
+   [
+    55.0,
+    1.0
+   ],
+   [
+    59.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj5": [
+   [
+    55.0,
+    0.0
+   ],
+   [
+    56.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj6": [
+   [
+    55.0,
+    0.0
+   ],
+   [
+    56.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj7": [
+   [
+    56.0,
+    0.0
+   ],
+   [
+    57.0,
+    1.0
+   ],
+   [
+    61.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj8": [
+   [
+    58.0,
+    0.0
+   ],
+   [
+    59.0,
+    1.0
+   ],
+   [
+    63.0,
+    0.0
+   ]
+  ],
+  "sfx_blade_stick_smallhammer_shadowattack_obj9": [
+   [
+    62.0,
+    0.0
+   ],
+   [
+    63.0,
+    1.0
+   ],
+   [
+    67.0,
+    0.0
+   ]
+  ]
+ }
+}

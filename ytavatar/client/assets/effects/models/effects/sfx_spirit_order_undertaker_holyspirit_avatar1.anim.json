@@ -1,0 +1,162 @@
+{
+ "clips": {
+  "default": {
+   "end": 60.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 60.0,
+ "visibility": {
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj1": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    50.0,
+    1.0
+   ],
+   [
+    60.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj10": [
+   [
+    8.0,
+    0.0
+   ],
+   [
+    12.0,
+    1.0
+   ],
+   [
+    16.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj11": [
+   [
+    12.0,
+    0.0
+   ],
+   [
+    16.0,
+    1.0
+   ],
+   [
+    20.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj12": [
+   [
+    10.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    40.0,
+    1.0
+   ],
+   [
+    50.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj13": [
+   [
+    16.0,
+    0.0
+   ],
+   [
+    20.0,
+    1.0
+   ],
+   [
+    24.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj14": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    24.0,
+    1.0
+   ],
+   [
+    28.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj15": [
+   [
+    24.0,
+    0.0
+   ],
+   [
+    28.0,
+    1.0
+   ],
+   [
+    32.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj16": [
+   [
+    28.0,
+    0.0
+   ],
+   [
+    32.0,
+    1.0
+   ],
+   [
+    36.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj8": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    4.0,
+    1.0
+   ],
+   [
+    8.0,
+    0.0
+   ]
+  ],
+  "sfx_spirit_order_undertaker_holyspirit_avatar1_obj9": [
+   [
+    4.0,
+    0.0
+   ],
+   [
+    8.0,
+    1.0
+   ],
+   [
+    12.0,
+    0.0
+   ]
+  ]
+ }
+}

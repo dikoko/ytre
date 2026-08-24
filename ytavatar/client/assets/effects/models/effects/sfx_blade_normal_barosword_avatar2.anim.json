@@ -1,0 +1,28 @@
+{
+ "clips": {
+  "default": {
+   "end": 10.0,
+   "loop": true,
+   "start": 0.0
+  }
+ },
+ "default_clip": "default",
+ "fps": 30.0,
+ "total_frames": 10.0,
+ "visibility": {
+  "sfx_blade_normal_barosword_avatar2_obj0": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    1.0,
+    1.0
+   ],
+   [
+    10.0,
+    0.0
+   ]
+  ]
+ }
+}
