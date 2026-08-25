@@ -4,6 +4,13 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.8.1] - 2026-08-24
+
+### Fixed
+- The Glorb equipment row in the avatar tool now shows the equipped
+  variant (it was stuck on "None" even with gloves equipped) and tracks
+  variant cycling like the other weapon classes.
+
 ## [0.8.0] - 2026-08-24
 
 ### Added

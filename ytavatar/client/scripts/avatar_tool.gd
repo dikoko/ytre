@@ -1523,11 +1523,12 @@ func _sync_gui() -> void:
 		if current_equipment != equip_type_val:
 			slot_name_labels[slot].text = "None"
 		elif slot == "glorb":
-			var glorb_name = current_part_names.get("glorb", "")
-			if glorb_name == "":
-				slot_name_labels[slot].text = "None"
-			else:
-				slot_name_labels[slot].text = glorb_name.trim_prefix(_cfg()["name"] + "_")
+			# Glorb variants live in part_variants (gendered filenames like
+			# "male_glorb_A0001.glb") — derive the label from them directly,
+			# like the other classes; current_part_names is never populated
+			# on equip (2026-08-24 "Glorb row stuck on None" report).
+			var glorb_file: String = part_variants["glorb"][variant_index["glorb"]]
+			slot_name_labels[slot].text = glorb_file.get_basename().trim_prefix(_cfg()["name"] + "_")
 		else:
 			var variants = equip_slots[slot][1]
 			var idx = equip_slots[slot][2]
