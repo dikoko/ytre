@@ -4,6 +4,24 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for content/tool releases (new or re-exported
 assets, pipeline features), **patch** bumps for documentation-only fixes.
 
+## [0.8.2] - 2026-08-26
+
+### Fixed
+- **All 352 skill-effect models now import and render** — 54 previously
+  failed to load (Godot refused the whole model over a dangling material
+  reference), which included most weapon glows; every weapon's glow
+  effect now shows. Root cause: some effect models reference textures
+  from other asset trees by relative path (monster-death effects reuse
+  the monster's own skin; several weapon glows point at the weapon's
+  texture with a mismatched filename case) — the exporter now resolves
+  those, and a model whose texture genuinely ships nowhere gets a plain
+  flat-color material instead of a broken file.
+- 10 more effect models regained a texture layer that had been silently
+  swapped for the wrong one, and the `a_SWAsinkhole` terrain prop now
+  wears its authored tile texture instead of a bathtub texture on part
+  of its faces.
+- This clears the 0.8.0 known limitation about missing weapon glows.
+
 ## [0.8.1] - 2026-08-24
 
 ### Fixed

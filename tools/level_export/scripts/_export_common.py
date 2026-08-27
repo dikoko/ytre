@@ -77,6 +77,35 @@ def texture_has_colorkey(tex_path: Path) -> bool:
     return bool(magenta_mask.sum() > (arr.shape[0] * arr.shape[1] * 0.01))
 
 
+
+def _resolve_relative_texture(tex_name: str, model_dir: Path) -> Path | None:
+    """Resolve a Windows-style relative texture path against the model's own
+    directory, case-insensitively. Bare tree names map to their extracted
+    .IRD directories ("..\\..\\Monster\\ct0113\\ct0113.bmp" resolves to
+    <raw>/Monster.IRD/ct0113/ct0113.bmp) — the original client mounted the
+    asset archives without the suffix. Returns None unless every component
+    resolves to an existing entry and the leaf is a file."""
+    parts = [p for p in tex_name.replace("\\", "/").split("/") if p and p != "."]
+    cur = model_dir
+    for part in parts:
+        if part == "..":
+            cur = cur.parent
+            continue
+        if not cur.is_dir():
+            return None
+        low = part.lower()
+        target = None
+        for cand in cur.iterdir():
+            n = cand.name.lower()
+            if n == low or n == low + ".ird":
+                target = cand
+                break
+        if target is None:
+            return None
+        cur = target
+    return cur if cur.is_file() else None
+
+
 def embed_textures(glb_path: Path, model_dir: Path, model, texture_dirs: list[Path] | None = None) -> None:
     """Embed all TMD material textures into a GLB file."""
     gltf = GLTF2().load(str(glb_path))
@@ -93,15 +122,49 @@ def embed_textures(glb_path: Path, model_dir: Path, model, texture_dirs: list[Pa
     mat_map = {}
     for mat_idx, tmd_mat in enumerate(model.materials):
         tex_name = tmd_mat.texture_filename
-        if not tex_name:
-            continue
+        tex_path = None
+        tex_basename = ""
+        if tex_name:
+            # Extract basename from Windows-style paths like ..\Texture\foo.bmp
+            tex_basename = tex_name.replace("\\", "/").split("/")[-1]
 
-        # Extract basename from Windows-style paths like ..\Texture\foo.bmp
-        tex_basename = tex_name.replace("\\", "/").split("/")[-1]
+            # Search model_dir first, then texture_dirs. The relative-path
+            # resolver runs LAST, so everything that already resolved keeps
+            # its resolution (the static-prop byte-identity gate depends on
+            # that). It exists for effect TMDs referencing OTHER trees'
+            # textures (..\..\Monster\ct0113\ct0113.bmp — a death effect
+            # reusing the monster's own skin; ..\..\Avatar\attach\*.BMP
+            # weapon glows with case-mismatched extensions).
+            tex_path = _find_texture(tex_basename, model_dir, texture_dirs)
+            if tex_path is None:
+                tex_path = _resolve_relative_texture(tex_name, model_dir)
 
-        # Search model_dir first, then texture_dirs
-        tex_path = _find_texture(tex_basename, model_dir, texture_dirs)
         if tex_path is None:
+            # No texture resolvable (empty filename, or a reference that
+            # ships nowhere, e.g. sfx_hellhound.tga). Emit a textureless
+            # fallback material — primitives are stamped with this TMD
+            # material index and MUST land on a real glTF material, or
+            # Godot refuses the whole GLB ("Index material = 0 is out of
+            # bounds (materials.size() = 0)").
+            fb_kwargs = {}
+            if tmd_mat.two_sided:
+                fb_kwargs["doubleSided"] = True
+            if tmd_mat.self_illumination > 0:
+                si = min(1.0, tmd_mat.self_illumination)
+                fb_kwargs["emissiveFactor"] = [si, si, si]
+            d = tmd_mat.diffuse
+            gltf_mat_idx = len(gltf.materials)
+            gltf.materials.append(Material(
+                name=tmd_mat.name or f"mat_{mat_idx}",
+                alphaMode="OPAQUE",
+                pbrMetallicRoughness=PbrMetallicRoughness(
+                    baseColorFactor=[d[0], d[1], d[2], 1.0],
+                    metallicFactor=0.0,
+                    roughnessFactor=1.0,
+                ),
+                **fb_kwargs,
+            ))
+            mat_map[mat_idx] = gltf_mat_idx
             continue
 
         img = Image.open(tex_path).convert("RGBA")
