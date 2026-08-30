@@ -2,9 +2,12 @@ class_name SkillPlayer
 extends Node3D
 ## Plays one `skills.json` catalog entry against a character: the "core
 ## four" component kinds (effect models, caster motion, sound, color
-## flash) on a single 30 fps clock. `sfx`/`camera`/`path`/`sword_trace`
-## tracks are cataloged but deliberately not played here (deferred
-## to the particle/camera phases).
+## flash) on a single 30 fps clock. `sfx`/`camera`/`sword_trace` TRACKS
+## are cataloged but deliberately not played here (deferred to the
+## particle/camera phases). There is
+## no "path" track kind (catalog track kinds: motion/tmd/sfx/sound/camera/
+## sword_trace/color) — path COMMANDS on tmd tracks DO play, since C1.5
+## (see _arm_path/_update_paths).
 ##
 ## Effect-model wrappers reuse the warp-puff shape from ytlevel's
 ## warp_effects.gd: a Node3D running prop_lighting.gd (ported verbatim,
@@ -17,15 +20,20 @@ const PROP_LIGHTING_SCRIPT: Script = preload("res://scripts/prop_lighting.gd")
 const CATALOG_PATH := "res://assets/effects/skills.json"
 const MODELS_DIR := "res://assets/effects/models/effects/"
 const SOUNDS_DIR := "res://assets/sounds/"
-const DEFERRED_KINDS := ["sfx", "camera", "path", "sword_trace"]
+## Track kinds _run_command refuses to play. No track ever has kind "path"
+## (catalog track kinds: motion/tmd/sfx/sound/camera/sword_trace/color) —
+## a "path" entry here was dead-weight cleanup, not a real deferral; path
+## COMMANDS live on tmd tracks and have played since C1.5 (_arm_path/
+## _update_paths), so removing "path" changes no behavior.
+const DEFERRED_KINDS := ["sfx", "camera", "sword_trace"]
 ## Result codes for play_ex(): why a play request did or didn't start.
 ## play() (unchanged signature/behavior for existing callers) is just
 ## `play_ex(...) == PlayResult.OK`.
 enum PlayResult { OK, UNKNOWN, MISSING_ASSETS, NO_CHARACTER }
-## LsAnimationDef.h role bits, high byte of a motion/tmd track's
-## character_type / base_character: ACTOR/TARGET/OTHER/WORLD. Only the
-## ACTOR bit is acted on today — target/other roles need a target dummy
-## that doesn't exist yet (C1 out of scope, see _run_motion_command).
+## Role bits in the high byte of a motion/tmd track's
+## character_type / base_character: ACTOR/TARGET/OTHER/WORLD. Non-actor
+## roles route to the target dummy set via set_target() (C1.5); with no
+## dummy set they skip, as before (see _run_motion_command/_bind_wrapper).
 const ROLE_ACTOR := 0x100
 ## Failsafe teardown for a skill that never satisfies the natural-finish
 ## condition (an effect model whose AnimationPlayer never reports finished —
@@ -79,6 +87,14 @@ var _track_wrappers: Dictionary = {}  # tmd track idx -> wrapper Node3D
 var _track_offsets: Dictionary = {}   # tmd track idx -> {offset, rot, bone, role, inherit_rot}
 var _sound_players: Array = []
 
+## Active flight paths: tmd track idx -> {path: SkillPath, t0: float,
+## play_time: float}. An active path REPLACES the track wrapper's
+## anchoring each frame (the original swaps the whole component matrix
+## for the path pose while a path is set) and holds the end pose after
+## play_time (dt clamps). Cleared by stop().
+var _track_paths: Dictionary = {}
+var _skill_paths: Array = []   # catalog "paths" for the playing skill
+
 ## Glow-loop state: an independent minimal runner alongside the one-shot
 ## session above (never a second full session — glow skills are tmd-only,
 ## frame-0 commands, e.g. sk610011 has 1 track / play+base at frame 0).
@@ -89,6 +105,16 @@ var _loop_code := ""
 var _loop_character: Node3D = null
 var _loop_tracks: Array = []
 var _loop_wrappers: Array = []
+
+## C1.5 target dummy (TargetDummy or duck-typed equivalent). Nullable;
+## null preserves pre-C1.5 behavior exactly (target/other roles skip).
+## Freed-instance safe: every consumer checks is_instance_valid.
+var _target: Node = null
+
+
+func set_target(dummy: Node) -> void:
+	_target = dummy
+
 
 ## Bones a `_bind_wrapper` actor-role lookup wanted but the character's
 ## get_bone_attachment() returned null for — warned once each (spec §6
@@ -166,6 +192,8 @@ func play_ex(code: String, character: Node3D) -> int:
 	if _fps <= 0.0:
 		_fps = 30.0
 	_tracks = info.get("tracks", [])
+	_skill_paths = info.get("paths", [])
+	_track_paths.clear()
 	_catalog_frames = int(info.get("frames", 0))
 	_time = 0.0
 	_fired.clear()
@@ -211,6 +239,7 @@ func stop() -> void:
 			w.queue_free()
 	_wrappers.clear()
 	_track_wrappers.clear()
+	_track_paths.clear()
 	for s in _sound_players:
 		if is_instance_valid(s):
 			s.queue_free()
@@ -304,6 +333,7 @@ func _process(delta: float) -> void:
 		return
 	_time += delta
 	_run_due_commands()
+	_update_paths()
 	_update_color(delta)
 	_maybe_finish()
 
@@ -354,7 +384,13 @@ func _run_due_commands() -> void:
 func _run_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
 	var kind: String = track.get("kind", "")
 	if kind in DEFERRED_KINDS:
-		return  # sfx/camera/path/sword_trace: cataloged, not played (C2/C3)
+		# sfx/camera/sword_trace: cataloged, not played (C2/C3). This also
+		# drops any "path" COMMAND riding an sfx track (80/102 shipped path
+		# commands do) — behaviorally correct today since sfx tracks spawn
+		# no wrapper until C2, so there is nothing to fly yet. When C2 adds
+		# sfx wrappers, they get path flight for free through this same
+		# tmd-track machinery (_arm_path/_update_paths) — no new code needed.
+		return
 	match kind:
 		"tmd":
 			_run_tmd_command(ti, track, cmd)
@@ -387,6 +423,9 @@ func _run_tmd_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
 				"role": role, "inherit_rot": inherit_rot}
 		if _track_wrappers.has(ti):
 			_bind_wrapper(_track_wrappers[ti], _track_offsets[ti])
+		return
+	if cmd_kind == "path":
+		_arm_path(ti, cmd)
 		return
 	if cmd_kind != "play":
 		return  # unrecognized tmd command — ignore, never crash
@@ -458,9 +497,12 @@ func _spawn_effect_wrapper(name: String) -> Node3D:
 func _bind_wrapper(wrapper: Node3D, off: Dictionary, target_character: Node3D = null) -> void:
 	## Anchor rule (the original client's base-command handling): actor-role commands with a
 	## real bone (id != 11 Local) ride the skeleton bone; inherit_rot=false
-	## keeps the wrapper world-aligned at the bone's position. Everything
-	## else (Local, target/other roles until a dummy exists, characters
-	## without bones) stays character-root-relative as before.
+	## keeps the wrapper world-aligned at the bone's position. Non-actor
+	## roles with a target dummy set (C1.5) ride the DUMMY's bone the same
+	## way, resolved through the dummy's own get_bone_attachment() (one
+	## interface — a monster dummy's null/no-skeleton case falls back to
+	## its root exactly like a boneless character does today). Local/no-
+	## dummy/no-bones cases stay character-root-relative as before.
 	##
 	## target_character lets a caller bind against a character OTHER than
 	## the one-shot session's own _character — used by the glow-loop path
@@ -471,14 +513,43 @@ func _bind_wrapper(wrapper: Node3D, off: Dictionary, target_character: Node3D = 
 	## whenever no one-shot happens to be active. Defaults to _character so
 	## both existing one-shot call sites are unchanged two-argument calls.
 	var character: Node3D = target_character if target_character != null else _character
+	var role := int(off.get("role", ROLE_ACTOR))
+	# An explicitly passed target_character (the glow-loop path's
+	# _loop_character) always wins over the dummy — the dummy override
+	# below only applies to the one-shot session's own _character, so a
+	# future non-actor-role loop/glow base command can never have its
+	# explicit loop character silently discarded in favor of the dummy
+	# (fix round 1, code review finding).
+	var use_dummy := target_character == null and role & ROLE_ACTOR == 0 \
+			and _target != null and is_instance_valid(_target) \
+			and _target.has_method("root") and _target.root() != null
+	if use_dummy:
+		# Non-actor base command with a dummy set: anchor on the dummy
+		# (C1.5). All non-actor roles (0x200/0x400/0x800) share the one
+		# dummy — deliberate single-dummy simplification (spec §4).
+		character = _target.root()
 	if character == null or not is_instance_valid(character):
 		return
 	var offset: Vector3 = off.get("offset", Vector3.ZERO)
 	var rot: Vector3 = off.get("rot", Vector3.ZERO)
 	var bone_id := int(off.get("bone", 11))
-	var role := int(off.get("role", ROLE_ACTOR))
 	var bone_name := _catalog_view.bone_name(bone_id)
-	if role & ROLE_ACTOR != 0 and not bone_name.is_empty() \
+	if use_dummy and not bone_name.is_empty() and _target.has_method("get_bone_attachment"):
+		var att: BoneAttachment3D = _target.get_bone_attachment(bone_name)
+		if att != null:
+			if wrapper.get_parent() != att:
+				wrapper.get_parent().remove_child(wrapper)
+				att.add_child(wrapper)
+			if bool(off.get("inherit_rot", true)):
+				wrapper.transform = Transform3D(Basis.from_euler(rot), offset)
+			else:
+				wrapper.position = offset
+				wrapper.global_transform.basis = Basis.from_euler(rot)
+			return
+		elif not _warned_bones.has(bone_name):
+			_warned_bones[bone_name] = true
+			push_warning("SkillPlayer: missing bone attachment '%s' — falling back to character root" % bone_name)
+	elif role & ROLE_ACTOR != 0 and not bone_name.is_empty() \
 			and character.has_method("get_bone_attachment"):
 		var att: BoneAttachment3D = character.get_bone_attachment(bone_name)
 		if att != null:
@@ -499,6 +570,57 @@ func _bind_wrapper(wrapper: Node3D, off: Dictionary, target_character: Node3D = 
 	wrapper.global_transform = Transform3D(
 			char_xform.basis * Basis.from_euler(rot),
 			char_xform.origin + char_xform.basis * offset)
+
+
+func _arm_path(ti: int, cmd: Dictionary) -> void:
+	## Path command: bake the flight frame at
+	## COMMAND time from the live caster/dummy poses, then drive the
+	## track's wrapper from _process. Base frame quirk ported: root
+	## ORIENTATION with base-BONE position.
+	var params: Dictionary = cmd.get("params", {})
+	var pid := int(params.get("path_id", -1))
+	if pid < 0 or pid >= _skill_paths.size():
+		return  # dangling path id — no-op (spec §7)
+	var pd: Dictionary = _skill_paths[pid]
+	var path := SkillPath.from_catalog(pd)
+	if path == null:
+		return
+	if _character == null or not is_instance_valid(_character):
+		return
+	var base_pos := _anchor_pos(_character, int(pd.get("base_bone", 11)))
+	var base_basis: Basis = _character.global_transform.basis
+	var target_pos: Variant = null
+	var tchar := int(pd.get("target_character", 0))
+	if tchar != 0 and _target != null and is_instance_valid(_target) \
+			and _target.has_method("root") and _target.root() != null:
+		target_pos = _anchor_pos(_target.root(), int(pd.get("target_bone", 11)))
+	path.bake(base_pos, base_basis, target_pos)
+	_track_paths[ti] = {"path": path, "t0": _time,
+			"play_time": maxf(0.0, float(params.get("play_time", 0.0)))}
+
+
+func _anchor_pos(character: Node3D, bone_id: int) -> Vector3:
+	## Bone position for the path frame (orientation always comes from the
+	## character root — the original's non-Local-bone quirk).
+	var bone_name := _catalog_view.bone_name(bone_id)
+	if bone_id != 11 and not bone_name.is_empty() \
+			and character.has_method("get_bone_attachment"):
+		var att: BoneAttachment3D = character.get_bone_attachment(bone_name)
+		if att != null:
+			return att.global_position
+	return character.global_position
+
+
+func _update_paths() -> void:
+	for ti in _track_paths:
+		var wrapper: Node3D = _track_wrappers.get(ti)
+		if wrapper == null or not is_instance_valid(wrapper):
+			continue
+		var st: Dictionary = _track_paths[ti]
+		var play_time: float = st["play_time"]
+		var dt: float = _time - float(st["t0"])
+		var t := 1.0 if play_time <= 0.0 else clampf(dt / play_time, 0.0, 1.0)
+		wrapper.global_transform = (st["path"] as SkillPath).sample(t)
 
 
 func _vec3_from(arr: Variant) -> Vector3:
@@ -533,17 +655,24 @@ func _run_sound_command(track: Dictionary, cmd: Dictionary) -> void:
 # === motion track ===
 
 func _run_motion_command(track: Dictionary, cmd: Dictionary) -> void:
-	## Actor-role motion only, by INTEGER motion id (the original's only
-	## in-game path — the lib-name string is editor-only, dropped by the
-	## game's bridge). Target/other-role motion tracks (monster hit
-	## reactions) are deferred until a target dummy exists (C1 out of scope).
+	## Actor motion by INTEGER motion id (the original's only in-game path —
+	## the lib-name string is editor-only, dropped by the game's bridge).
+	## Target/other-role motion tracks (monster hit reactions) route to the
+	## target dummy via `_target.play_hit()` when one is set (C1.5); with
+	## no dummy set they skip, same as pre-C1.5.
 	if String(cmd.get("kind", "")) != "play":
 		return
 	if _character == null or not is_instance_valid(_character):
 		return
 	var ctype := int((track.get("params", {}) as Dictionary).get("character_type", 0))
 	if ctype & ROLE_ACTOR == 0:
-		return  # target/other role — no target dummy yet
+		# Target/other role: route the hit reaction to the dummy if one is
+		# set (C1.5); without a dummy, skip — pre-C1.5 behavior.
+		if _target != null and is_instance_valid(_target) and _target.has_method("play_hit"):
+			var tmid := int((track.get("params", {}) as Dictionary).get("motion_id", -1))
+			if tmid >= 0:
+				_target.play_hit(tmid)
+		return
 	if not _character.has_method("play_motion_id"):
 		return  # no motion-id API (test stub) — also the missing-motion fallback
 	var mid := int((track.get("params", {}) as Dictionary).get("motion_id", -1))

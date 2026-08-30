@@ -214,6 +214,8 @@ func _eval_weapon_binding(sp: SkillPlayer) -> void:
 	await _eval_stance_blade()
 	await _eval_glow_blade(sp)
 	await _eval_motion_per_class(sp)
+	await _eval_target_reaction(sp)
+	await _eval_path_flight(sp)
 
 
 func _load_json(path: String) -> Dictionary:
@@ -351,6 +353,84 @@ func _eval_motion_per_class(sp: SkillPlayer) -> void:
 			continue
 		var skill_code := "sk%06d" % int(skills[0])
 		await _eval_skill(sp, skill_code)
+
+
+## target_reaction: an avatar dummy sits at (0,0,2.5); sk010101 (a basic
+## attack whose actor motion 10101 fires at frame 0 and whose ACTOR-role
+## motion track fires a TARGET-role id-19 hit reaction at frame 15/30fps
+## = 0.5s, verified against skills.json — no substitution needed) must
+## visibly change the DUMMY's own screen region once that hit lands.
+## Region is the measured bbox of hiding the dummy (visible=false vs
+## true), not the fixed avatar rect above — the dummy sits off-center
+## from the caster and a shared/avatar-centered region would dilute or
+## miss a small hit-reaction pose change entirely.
+func _eval_target_reaction(sp: SkillPlayer) -> void:
+	var dummy := TargetDummy.new()
+	dummy.position = Vector3(0, 0, 2.5)
+	root.add_child(dummy)
+	dummy.setup_avatar("male")
+	await process_frame
+	sp.set_target(dummy)
+	# control: dummy idling
+	await _wait_s(0.4)
+	var img_idle := await _shot("target_idle")
+	# the dummy's screen region: bbox of hiding it
+	dummy.visible = false
+	await process_frame
+	var img_hidden := await _shot("target_hidden")
+	dummy.visible = true
+	await process_frame
+	var dummy_rect := _diff_bbox(img_idle, img_hidden)
+	var rect := dummy_rect if dummy_rect.size != Vector2i.ZERO else _rect
+
+	var played := sp.play("sk010101", _avatar)
+	_check(played, "target_reaction: sk010101 plays")
+	if played:
+		await _wait_s(0.5)     # motion id 19 fires at frame 15 (0.5s)
+		var img_hit := await _shot("target_hit")
+		sp.stop()
+		var d := _region_diff(img_idle, img_hit, rect)
+		_check(d > 0.010, "target_reaction: dummy visibly reacts (|diff|=%.4f)" % d)
+
+	sp.set_target(null)
+	dummy.clear()
+	dummy.queue_free()
+	await process_frame
+
+
+## path_flight: sk020014 carries a real 2-point path command (frame 33 =
+## 1.1s at 30fps, play_time 0.4s — verified directly against skills.json;
+## its missing[] is [] fleet-clean, so no substitution from the brief's
+## fallback list was needed). Mid-flight the effect wrapper must sit
+## strictly between caster (z=0) and dummy (z=2.5) — position-based, no
+## pixels needed, since the flight geometry (not its rendered look) is
+## what this scenario is proving.
+func _eval_path_flight(sp: SkillPlayer) -> void:
+	var dummy := TargetDummy.new()
+	dummy.position = Vector3(0, 0, 2.5)
+	root.add_child(dummy)
+	dummy.setup_avatar("male")
+	await process_frame
+	sp.set_target(dummy)
+
+	var ok := sp.play("sk020014", _avatar)
+	_check(ok, "path_flight: sk020014 plays")
+	if ok:
+		# path arms at frame 33 (~1.1s), flies 0.4s
+		await _wait_s(1.3)
+		var moved := false
+		for w in sp._wrappers:
+			if is_instance_valid(w):
+				var z: float = (w as Node3D).global_position.z
+				if z > 0.3 and z < 2.3:
+					moved = true
+		_check(moved, "path_flight: a wrapper is mid-flight between caster and dummy")
+		sp.stop()
+
+	sp.set_target(null)
+	dummy.clear()
+	dummy.queue_free()
+	await process_frame
 
 
 func _eval_skill(sp: SkillPlayer, code: String) -> void:

@@ -72,6 +72,16 @@ two tabs:
   and a filter box. Weapon skills play even without the matching weapon
   (a "needs {class}" hint shows what they belong to).
 
+**Target** (row above the tabs) — place a practice target 2.5 m in
+front of the character: an **Avatar** (the opposite gender) or a
+**Monster** picked from the monster list. With a target set, skills
+aimed at a target actually land: hit-reaction motions play on the
+dummy, target-anchored effects attach to its bones, and projectile
+skills fly their authored flight path from the caster to the target.
+The camera pulls back to frame both. Selecting **No target** (or
+switching to Monster/NPC mode) removes the dummy and restores the
+camera.
+
 **Escape** stops the playing skill (and a running combo); the glow loop
 keeps running until toggled off. Some skills reference monster motions or
 unshipped assets and are greyed out with the reason. In Monster/NPC mode

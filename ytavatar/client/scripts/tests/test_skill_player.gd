@@ -52,6 +52,26 @@ class StubSkeletonCharacter:
 		return _att
 
 
+## Duck-typed TargetDummy stand-in: records hits; bone attachment optional.
+class StubDummy:
+	extends Node3D
+	var hits: Array = []
+	var _att: BoneAttachment3D = null
+	var kind := "avatar"
+
+	func play_hit(mid: int) -> void:
+		hits.append(mid)
+
+	func root() -> Node3D:
+		return self
+
+	func set_attachment(att: BoneAttachment3D) -> void:
+		_att = att
+
+	func get_bone_attachment(_bone_name: String) -> BoneAttachment3D:
+		return _att
+
+
 func _check(cond: bool, label: String) -> void:
 	if cond:
 		print("ok: " + label)
@@ -151,6 +171,161 @@ func _test_bone_anchor() -> void:
 	_check(wrapper != null and wrapper.get_parent() != player, "wrapper parented under bone attachment")
 	player.stop()
 	stub.free()
+
+
+func _test_target_routing() -> void:
+	# sk010101: actor motion 10101 + TWO non-actor motion tracks — target
+	# (character_type 534 = 0x216) and other (1046 = 0x416) — both request
+	# motion id 19 at frame 15 (verified via skills.json; see the existing
+	# _test_motion_by_id comment above, which already notes "two ct000x
+	# tracks"). Both route to the single dummy (spec §4's single-dummy
+	# simplification), so the dummy sees TWO hits, not one.
+	var stub := StubCharacter.new()
+	root.add_child(stub)
+	var dummy := StubDummy.new()
+	root.add_child(dummy)
+
+	# 1) null-target regression: exact current behavior
+	player.set_target(null)
+	_check(player.play("sk010101", stub), "routing: plays with null target")
+	await _wait_finished_or(4.0)
+	_check(stub.played_ids == [10101], "routing: null target — target motion still skipped")
+
+	# 2) with target: hit routed to dummy, caster motion untouched
+	stub.played_ids.clear()
+	player.set_target(dummy)
+	_check(player.play("sk010101", stub), "routing: plays with target set")
+	await _wait_finished_or(4.0)
+	_check(stub.played_ids == [10101], "routing: caster still plays only its own motion")
+	_check(dummy.hits == [19, 19], "routing: both non-actor tracks' motion 19 reached the dummy")
+
+	# 3) target-anchored effect: sk040009's frame-0 tmd track anchors
+	#    base_character=512 (0x200, non-actor) at base_bone=1 (a real bone,
+	#    not 11/Local) — verified via a python read of skills.json (the
+	#    brief's suggested sk020014 does NOT fit: its only frame-0 tmd base
+	#    command is base_character=256, i.e. ACTOR role, and its one 0x200
+	#    base command uses bone 11/Local, which anchors at the dummy ROOT
+	#    rather than a bone attachment; sk040009 has a genuine early 0x200 +
+	#    real-bone base command, so it exercises the bone-attachment path
+	#    the brief describes). Give the dummy a real skeleton attachment;
+	#    the wrapper must land under it (not under the player, not under
+	#    the caster).
+	var skel := Skeleton3D.new()
+	dummy.add_child(skel)
+	var att := BoneAttachment3D.new()
+	skel.add_child(att)
+	dummy.set_attachment(att)
+	_check(player.play("sk040009", stub), "routing: sk040009 plays")
+	await _wait_ms(300)
+	var found_under_dummy := false
+	for w in att.get_children():
+		if String(w.name).begins_with("SkillFx_"):
+			found_under_dummy = true
+	_check(found_under_dummy, "routing: target-anchored wrapper parented under dummy bone")
+	player.stop()
+
+	# 4) freed-dummy safety: set, free, play — must not crash, must skip
+	var dummy2 := StubDummy.new()
+	root.add_child(dummy2)
+	player.set_target(dummy2)
+	dummy2.free()
+	stub.played_ids.clear()
+	_check(player.play("sk010101", stub), "routing: plays after target freed")
+	await _wait_finished_or(4.0)
+	_check(stub.played_ids == [10101], "routing: freed target degrades to skip")
+
+	# 5) precedence: an explicit target_character (glow-loop path) always
+	#    wins over a set dummy, even for a non-actor-role base command —
+	#    direct _bind_wrapper unit check (fix round 1 code review finding:
+	#    the dummy override must never silently discard an explicitly
+	#    passed loop character). No shipped catalog entry currently pairs
+	#    a loop/glow skill with a non-actor base command, so this exercises
+	#    _bind_wrapper directly rather than through play_loop() — the same
+	#    style this file already uses to poke at player._wrappers/_catalog.
+	player.set_target(dummy)
+	dummy.global_position = Vector3(0, 0, 0)
+	var loop_char := StubCharacter.new()
+	root.add_child(loop_char)
+	loop_char.global_position = Vector3(5, 0, 0)  # distinct from dummy's
+	# position, so a discarded target_character (bug) resolves the
+	# wrapper at the dummy's origin instead and this assertion catches it
+	var precedence_wrapper := Node3D.new()
+	player.add_child(precedence_wrapper)
+	player._bind_wrapper(precedence_wrapper, {"role": 512, "bone": 11}, loop_char)
+	_check(precedence_wrapper.get_parent() == player,
+			"routing: explicit target_character keeps the wrapper off the dummy's tree")
+	_check(precedence_wrapper.global_position.is_equal_approx(loop_char.global_position),
+			"routing: explicit target_character wins precedence over a set dummy")
+	precedence_wrapper.queue_free()
+	loop_char.queue_free()
+
+	player.set_target(null)
+	stub.queue_free()
+	dummy.queue_free()
+
+
+func _test_path_playback() -> void:
+	# Hand-built catalog entry: one effect with a path command at frame 0,
+	# flying 0 -> 4 units (authored +z, mirrored to -z) over 0.5 s.
+	# Reuses a real effect model ref so the wrapper actually spawns.
+	var params10: Array = []
+	for i in 10:
+		params10.append(float(i) / 9.0)
+	player._catalog["zzpath"] = {
+		"fps": 30.0, "frames": 30, "missing": [],
+		"paths": [{
+			"input_points": [[0.0, 0.0, 0.0], [0.0, 0.0, 4.0]],
+			"parameters": params10,
+			"base_character": 256, "base_bone": 11,
+			"target_character": 512, "target_bone": 11,
+		}],
+		"tracks": [{
+			"kind": "tmd", "name": "sfx_a_SWAball01.TMD",
+			"commands": [
+				{"frame": 0, "kind": "play", "params": {}},
+				{"frame": 0, "kind": "path",
+					"params": {"path_id": 0, "play_time": 0.5}},
+			],
+		}],
+	}
+	var stub := StubCharacter.new()
+	get_root().add_child(stub)
+	var dummy := StubDummy.new()
+	get_root().add_child(dummy)
+	dummy.position = Vector3(0, 0, 3)
+	player.set_target(dummy)
+
+	_check(player.play("zzpath", stub), "path: zzpath plays")
+	var wrapper: Node3D = null
+	for w in player._wrappers:
+		wrapper = w
+	_check(wrapper != null, "path: wrapper spawned")
+	var start_pos: Vector3 = wrapper.global_position
+	await _wait_ms(250)
+	var mid_pos: Vector3 = wrapper.global_position
+	_check(mid_pos.distance_to(start_pos) > 0.3,
+			"path: wrapper moved mid-flight (%.2f)" % mid_pos.distance_to(start_pos))
+	await _wait_ms(400)
+	var end_pos: Vector3 = wrapper.global_position
+	_check(end_pos.distance_to(dummy.position) < 1.2,
+			"path: wrapper holds near the target after play_time (got %s)" % end_pos)
+	player.stop()
+
+	# No-dummy variant: base-only frame — flies from the caster along its
+	# own forward, must still MOVE (the original client flies base-only paths).
+	player.set_target(null)
+	_check(player.play("zzpath", stub), "path: plays without dummy")
+	var wrapper2: Node3D = null
+	for w in player._wrappers:
+		wrapper2 = w
+	var start2: Vector3 = wrapper2.global_position
+	await _wait_ms(300)
+	_check(wrapper2.global_position.distance_to(start2) > 0.3,
+			"path: base-only flight still animates")
+	player.stop()
+	player._catalog.erase("zzpath")
+	stub.queue_free()
+	dummy.queue_free()
 
 
 func _test_catalog() -> void:
@@ -339,6 +514,8 @@ func _init() -> void:
 	await _test_play_reason()
 	await _test_glow_loop()
 	await _test_bone_anchor()
+	await _test_target_routing()
+	await _test_path_playback()
 
 	sp.free()
 	character.free()

@@ -2,7 +2,7 @@
 
 A revival project for the Yogurting online game, built with Godot 4.
 
-**Current release: 0.8.2** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
+**Current release: 0.9.0** — see [CHANGELOG.md](CHANGELOG.md) for the update history.
 
 ## Projects
 
@@ -13,6 +13,7 @@ Avatar, monster, and NPC model viewer and asset pipeline. Converts proprietary g
 - Customizable male/female avatars with swappable parts and equipment
 - 135 monster models and 78 NPC models
 - Weapon-bound skill system: equip a weapon to take its battle stance and play its basic-attack combo, named skills, and weapon glow — all 742 skill scripts with synced effects, motion, and sound
+- Target dummies: place an avatar or monster as the skill target — hit reactions, target-anchored effects, and projectile flight paths
 - Interactive 3D viewer with animation playback, orbit camera, and keyboard shortcuts
 
 **Quick start:** Open `ytavatar/client/project.godot` in Godot 4.6+, press F5.

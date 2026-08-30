@@ -1,8 +1,31 @@
 # Changelog
 
 Notable changes to the Yogurting Re project. Versions follow a simple
-scheme: **minor** bumps for content/tool releases (new or re-exported
-assets, pipeline features), **patch** bumps for documentation-only fixes.
+scheme: **minor** bumps for new user-facing features, **patch** bumps
+for fixes, asset re-exports, and documentation.
+
+## [0.9.0] - 2026-08-30
+
+### Added
+- **Target dummies** — a new **Target** row in the avatar tool's Skills
+  dock places a practice target (an opposite-gender avatar, or any
+  monster from the list) 2.5 m in front of the character. With a target
+  set, skills aimed at a target actually land: hit-reaction motions
+  play on the dummy (avatars flinch, monsters play their own hit clip
+  and return to idle), and target-anchored effects attach to the
+  dummy's bones instead of being skipped.
+- **Skill flight paths** — projectile skills now fly: path commands
+  drive their effect model along the authored spline path from the
+  caster to the target (or straight out from the caster when no target
+  is set), with the authored time easing, holding the end pose at the
+  destination. All 77 shipped flight paths play.
+- **Camera framing** — setting a target pulls the orbit camera back and
+  recenters between the two characters so both stay in view; clearing
+  the target restores the avatar-only framing.
+
+### Known limitations
+- Flight paths attached to particle-effect tracks wait on the particle
+  system (a later release); today they play on effect-model tracks.
 
 ## [0.8.2] - 2026-08-26
 

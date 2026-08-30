@@ -125,7 +125,7 @@ func _process_combo() -> void:
 	var fr := skill_player.current_frame()
 	var advance := false
 	if notify > 0 and fr >= notify:
-		advance = true                     # original chains at NotifyEndAnimation
+		advance = true                     # original chains at the motion's end-notify
 	elif fr < 0 and skill_active_code != code:
 		advance = true                     # finished (notify 0 fallback)
 	if advance:
@@ -187,6 +187,13 @@ var skill_list: ItemList
 var skill_active_label: Label
 var skill_filter_text: String = ""
 var skill_active_code: String = ""
+
+# === TARGET DUMMY (C1.5): opposing avatar/monster for target-role skills ===
+var target_dummy: TargetDummy = null
+var target_row: HBoxContainer
+var target_mode_option: OptionButton
+var target_monster_option: OptionButton
+const TARGET_DISTANCE := 2.5
 
 # === WEAPON-DRIVEN SKILLS: combo runner (chained at the previous step's
 # notify_frame, falling back to natural finish when notify_frame is 0) ===
@@ -434,6 +441,20 @@ func _load_model_viewer_config(mode: int) -> void:
 			monster_zooms[current_id] = stripped.substr(5).strip_edges().to_float()
 
 	print("Loaded %s config: %d models" % [cfg["label"], monster_list.size()])
+
+
+static func parse_model_ids(config_path: String, config_key: String) -> Array[String]:
+	## Standalone `- id:` parser for the Target monster picker — must NOT
+	## touch monster_list/monster_names (those belong to monster MODE).
+	var out: Array[String] = []
+	var file := FileAccess.open(config_path, FileAccess.READ)
+	if file == null:
+		return out
+	for line in file.get_as_text().split("\n"):
+		var stripped := line.strip_edges()
+		if stripped.begins_with("- id:"):
+			out.append(stripped.substr(5).strip_edges())
+	return out
 
 
 func _monster_display_name(monster_id: String) -> String:
@@ -708,8 +729,17 @@ func _switch_gender() -> void:
 	_sync_gui()
 	_apply_weapon_binding()
 
+	if target_mode_option and target_mode_option.selected == 1:
+		_on_target_mode_selected(1)
+
 
 func _enter_model_viewer(mode: int) -> void:
+	# Target dummy is avatar-mode only (C1.5) — Monster/NPC mode has no
+	# caster avatar to route target-role motions/effects for.
+	if target_mode_option:
+		target_mode_option.select(0)
+	_clear_target_dummy()
+
 	# Clean up previous model viewer state
 	if _model_char:
 		_model_char.queue_free()
@@ -1339,6 +1369,28 @@ func _build_skills_panel(content: Control) -> void:
 	skills_title.add_theme_font_size_override("font_size", 11)
 	skills_layout.add_child(skills_title)
 
+	# --- Target row (C1.5): dummy for target-role reactions/effects ---
+	target_row = HBoxContainer.new()
+	skills_layout.add_child(target_row)
+	var target_label := Label.new()
+	target_label.text = "Target"
+	target_label.add_theme_font_size_override("font_size", 10)
+	target_row.add_child(target_label)
+	target_mode_option = OptionButton.new()
+	target_mode_option.add_item("No target")   # 0
+	target_mode_option.add_item("Avatar")      # 1
+	target_mode_option.add_item("Monster")     # 2
+	target_mode_option.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	target_mode_option.item_selected.connect(_on_target_mode_selected)
+	target_row.add_child(target_mode_option)
+	target_monster_option = OptionButton.new()
+	target_monster_option.visible = false
+	target_monster_option.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	for mid in parse_model_ids("res://assets/monsters/monsters.yaml", "monsters:"):
+		target_monster_option.add_item(mid)
+	target_monster_option.item_selected.connect(_on_target_monster_selected)
+	target_row.add_child(target_monster_option)
+
 	skill_tabs = TabContainer.new()
 	skill_tabs.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	skills_layout.add_child(skill_tabs)
@@ -1454,6 +1506,9 @@ func _sync_gui() -> void:
 		skill_tabs.set_tab_hidden(0, is_monster)
 		if is_monster:
 			skill_tabs.current_tab = 1
+
+	if target_row:
+		target_row.visible = not is_monster
 
 	if is_monster:
 		animation_select.clear()
@@ -1607,6 +1662,103 @@ func _on_monster_selected(index: int) -> void:
 	if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] and index != monster_index:
 		_load_monster(index)
 		_sync_gui()
+
+
+# === TARGET DUMMY CALLBACKS (C1.5) ===
+
+func _on_target_mode_selected(index: int) -> void:
+	# Keep the widget's `.selected` authoritative even when this handler is
+	# invoked directly (tests, the gender-switch rebuild hook) rather than
+	# via the item_selected signal, which only Godot's own UI interaction
+	# updates automatically.
+	target_mode_option.select(index)
+	target_monster_option.visible = index == 2
+	if index == 0:
+		_clear_target_dummy()
+		return
+	_ensure_target_dummy()
+	if index == 1:
+		var opposite := "female" if _cfg()["name"] == "male" else "male"
+		if not target_dummy.setup_avatar(opposite):
+			push_warning("Target dummy: avatar build failed")
+			_clear_target_dummy()
+			target_mode_option.select(0)
+			target_monster_option.visible = false
+			return
+	else:
+		# Empty picker (e.g. an unreadable monsters.yaml leaves 0 items):
+		# guard before ever indexing it — get_item_text(maxi(0, selected))
+		# would error on an empty OptionButton.
+		if target_monster_option.item_count == 0:
+			push_warning("Target dummy: monster picker is empty")
+			_clear_target_dummy()
+			target_mode_option.select(0)
+			target_monster_option.visible = false
+			return
+		var midx := target_monster_option.selected
+		var mid := target_monster_option.get_item_text(maxi(0, midx))
+		if not target_dummy.setup_monster(mid):
+			push_warning("Target dummy: monster '%s' failed to load" % mid)
+			_clear_target_dummy()
+			target_mode_option.select(0)
+			target_monster_option.visible = false
+			return
+	skill_player.set_target(target_dummy)
+	_frame_target_camera()
+
+
+func _frame_target_camera() -> void:
+	## One-shot reframe when a target is set (2026-08-27 request): pivot to
+	## the caster/dummy midpoint and zoom OUT only — never yank in a user
+	## who already pulled back. Manual orbit/zoom stay fully live after.
+	if camera_pivot == null:
+		return
+	camera_pivot.position = Vector3(0, 1.0, TARGET_DISTANCE * 0.5)
+	camera_distance = maxf(camera_distance, 4.5)
+	_update_camera_position()
+
+
+func _restore_avatar_camera() -> void:
+	## Back to the avatar-mode default framing (pivot on the caster).
+	if camera_pivot == null:
+		return
+	camera_pivot.position = Vector3(0, 1.0, 0)
+	camera_distance = 3.0
+	_update_camera_position()
+
+
+func _on_target_monster_selected(_index: int) -> void:
+	if target_mode_option.selected == 2:
+		_on_target_mode_selected(2)
+
+
+func _ensure_target_dummy() -> void:
+	if target_dummy != null and is_instance_valid(target_dummy):
+		return
+	target_dummy = TargetDummy.new()
+	target_dummy.position = Vector3(0, 0, TARGET_DISTANCE)
+	# exported data faces -Z; the caster (rotation.y = PI) faces +Z, so an
+	# unrotated dummy at +2.5 looks straight back at it.
+	add_child(target_dummy)
+
+
+func _clear_target_dummy() -> void:
+	# A dummy freed mid-skill would otherwise strand the wrapper's
+	# animation_finished with no dummy to hang the natural finish on,
+	# stalling teardown until the 4s failsafe — one-shot stop() (NEVER
+	# stop_loop(): the weapon glow rides the caster and must survive
+	# dummy removal) tears the skill down immediately instead.
+	skill_player.stop()
+	skill_player.set_target(null)
+	var had_dummy := target_dummy != null and is_instance_valid(target_dummy)
+	if had_dummy:
+		target_dummy.clear()
+		target_dummy.queue_free()
+	target_dummy = null
+	if had_dummy:
+		# Only un-reframe if a dummy was actually framed — a no-op clear
+		# (e.g. selecting None twice) must not stomp the user's camera.
+		_restore_avatar_camera()
 
 
 # === SKILLS PANEL CALLBACKS ===

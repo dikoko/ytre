@@ -53,8 +53,10 @@ Part metadata (`parts_metadata.json`, `parts_metadata_female.json`) maps which b
 
 All runtime logic is GDScript under `ytavatar/client/scripts/`:
 - `avatar_tool.gd` — Main viewer: character selection, part swapping, equipment, animation controls, Skills dock, orbit camera
-- `skill_player.gd` — Plays a `skills.json` entry against a character: effect models, caster motion (by motion id, per gender), sound, color flash, on one 30 fps clock; independent glow loop; bone-anchored effect wrappers
+- `skill_player.gd` — Plays a `skills.json` entry against a character: effect models, caster motion (by motion id, per gender), sound, color flash, on one 30 fps clock; independent glow loop; bone-anchored effect wrappers; optional target dummy (`set_target`) for target-role motion/effect routing and flight paths
 - `skill_catalog.gd` — Read-only wrapper over `skills.json` / `weapons.json` / `bones.json` (skill sets per weapon, families, bone names)
+- `target_dummy.gd` — Skill-target stand-in (avatar or monster behind one interface): hit reactions, bone attachments, idle re-entry
+- `skill_path.gd` — Skill flight paths: interpolating cubic B-spline through the authored points, live base→target frame, two-level time easing
 - `test_avatar_parts.gd`, `test_avatar_female.gd` — Standalone avatar test scripts
 - `test_monster.gd` — Monster viewer test
 
