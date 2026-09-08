@@ -27,6 +27,7 @@ Proprietary binary formats are pre-converted to GLB (binary GLTF):
 - **PRT** → Swappable body parts (subset meshes)
 - **SWP** → Vertex hiding maps for part layering
 - **SKL** → Skill scripts (effect/motion/sound/color tracks, decoded by `tools/avatar_export/src/parsers/skl_parser.py`)
+- **SFD** → Particle effects (polygon emitters + billboards: value graphs, textures, blend mode; decoded by `tools/avatar_export/src/parsers/sfd_parser.py`, exported by `scripts/48_export_sfx.py` to `effects/sfx.json` + `sfx_random.json` + `sfx_textures/`)
 
 Pipeline documentation lives in `ytavatar/docs/` (avatar, monster, and NPC pipeline references).
 
@@ -57,6 +58,8 @@ All runtime logic is GDScript under `ytavatar/client/scripts/`:
 - `skill_catalog.gd` — Read-only wrapper over `skills.json` / `weapons.json` / `bones.json` (skill sets per weapon, families, bone names)
 - `target_dummy.gd` — Skill-target stand-in (avatar or monster behind one interface): hit reactions, bone attachments, idle re-entry
 - `skill_path.gd` — Skill flight paths: interpolating cubic B-spline through the authored points, live base→target frame, two-level time easing
+- `sfx_object.gd` — One playing particle effect (polygon emitter or billboard): CPU simulation on the real frame delta, one MultiMesh over a per-effect texture atlas, additive or alpha shader (`shaders/sfx_additive.gdshader` / `sfx_alpha.gdshader`)
+- `sfx_graph.gd`, `sfx_random.gd`, `sfx_library.gd` — Value-graph evaluator (stored slopes are the contract), deterministic table-walking random source (`reset()` reproduces a run), and the `sfx.json` loader (Z-negates directional graphs at load, packs atlases)
 - `test_avatar_parts.gd`, `test_avatar_female.gd` — Standalone avatar test scripts
 - `test_monster.gd` — Monster viewer test
 
@@ -72,6 +75,7 @@ ytavatar/client/assets/
 │   ├── parts/         # Male/female swappable parts + metadata JSONs
 │   └── weapons/       # blade/, mura/, spirit/ GLB variants
 ├── effects/           # skills.json + weapons.json + bones.json + models/effects/ (skill-effect GLBs + fade sidecars)
+│                      # + sfx.json + sfx_random.json + sfx_textures/ (particle effects; textures are .gdignore'd and loaded raw)
 ├── sounds/            # combat/skill .wav sound effects
 ├── monsters/          # monsters.yaml config + models/ + textures/
 └── npcs/              # npcs.yaml config + models/ + textures/

@@ -159,7 +159,7 @@ func sample(x: float, z: float) -> float:
 	if _cell_count == 0:
 		return NAN
 	var dz := -z                      # Godot -> original space
-	# `int()` truncation (toward zero) is faithful to the original's `(UTint)`
+	# `int()` truncation (toward zero) is faithful to the original's integer
 	# cast here — do NOT change this to `floor()` to "match" HeightService,
 	# which floors for an unrelated reason (its own pixel-grid lookup).
 	var key := Vector2i(int(x), int(dz))

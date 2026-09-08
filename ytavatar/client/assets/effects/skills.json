@@ -5,7 +5,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -292,7 +291,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -569,7 +567,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -851,7 +848,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -1304,7 +1300,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -1566,7 +1561,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -1828,7 +1822,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -2090,7 +2083,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -2376,7 +2368,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -2638,7 +2629,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -2900,7 +2890,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -3167,7 +3156,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -3478,7 +3466,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uce7c\ub0a0\uc774 \ubd84\ub9ac\ub418\uc5b4 \uc8fc\uc704\ub97c \ub9f4\ub3cc\uba74\uc11c \uc801\uc744 \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac",
@@ -3888,7 +3875,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -4236,7 +4222,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -4714,7 +4699,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -5138,7 +5122,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -5556,7 +5539,6 @@
    "atk_rate": 450,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -5996,7 +5978,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -6415,7 +6396,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -6776,7 +6756,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -7143,7 +7122,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -7607,7 +7585,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -8204,7 +8181,6 @@
    "atk_rate": 450,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -8656,7 +8632,6 @@
    "atk_rate": 200,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ucc0c\ub974\uae30\uc5d0 \ud68c\uc804\ub825\uc744 \ub354\ud558\uc5ec \ub354\uc6b1 \uce58\uba85\uc801\uc778 \uc77c\uaca9\uc744 \ub0a0\ub9ac\ub294 \uae30\uc220",
@@ -9013,7 +8988,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -9400,7 +9374,6 @@
    "atk_rate": 300,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -9837,7 +9810,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -10445,7 +10417,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -10872,7 +10843,6 @@
    "atk_rate": 600,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -11385,7 +11355,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc591\ud314\ub85c \ud798 \uc788\uac8c X\uc790 \ud06c\ub85c\uc2a4 \uada4\uc801\uc744 \uadf8\ub9ac\uba70 \ubca0\uc5b4\ub0b4\ub294 \uae30\uc220",
@@ -11903,7 +11872,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -12410,7 +12378,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -12772,7 +12739,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -13192,7 +13158,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubcf5\uc2f1\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -13429,7 +13394,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubcf5\uc2f1\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -13654,7 +13618,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubcf5\uc2f1\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -13879,7 +13842,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubcf5\uc2f1\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -14133,7 +14095,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uad8c\ubc95\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -14405,7 +14366,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uad8c\ubc95\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -14630,7 +14590,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uad8c\ubc95\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -14870,7 +14829,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uad8c\ubc95\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -15117,7 +15075,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud06c\ub85c\uc6b0\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -15386,7 +15343,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud06c\ub85c\uc6b0\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -15643,7 +15599,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud06c\ub85c\uc6b0\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -15900,7 +15855,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud06c\ub85c\uc6b0\ud615 \uae00\ub85c\ube0c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -16300,7 +16254,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc8fc\uba39\uc744 \ud718\ub458\ub7ec \uc8fc\ubcc0\uc758 \uc801\ub4e4\uc744 \ubc00\uccd0\ub0b8\ub2e4.",
@@ -16705,7 +16658,6 @@
    "atk_rate": 550,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc624\ub978\uc190\uc744 \ud06c\uac8c \ud718\ub458\ub7ec \uad6c\ud615\uc758 \uc5d0\ub108\uc9c0\ubcfc\uc744 \ub0a0\ub9ac\ub294 \uc2a4\ud0ac",
@@ -17254,7 +17206,6 @@
    "atk_rate": 200,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud55c\uc190\uc5d0 \ud798\uc744 \ubaa8\uc740\ub4a4 \ub545\uc744 \ub0b4\ub824\uccd0\uc11c \uadf8 \ucda9\uaca9\ud30c\ub85c \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac.",
@@ -17670,7 +17621,6 @@
    "atk_rate": 450,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ub450 \uc8fc\uba39\uc744 \uad50\ucc28\uc2dc\ud0a4\uba74\uc11c \ud718\ub458\ub7ec\uc11c \uc801\uc744 \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac. \ub9de\uc740 \ub300\uc0c1\uc744 \ub4a4\ub85c \ubc00\uc5b4\ub0b8\ub2e4.(\ubbf8\uad6c\ud604)",
@@ -18000,7 +17950,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "4\uc7a5\uc758 \uce74\ub4dc\ub97c \uacf5\uc911\uc5d0 \ub358\uc9c4\ub4a4 \uadf8\uac83\uc744 \uc870\uc885\ud558\uc5ec \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac",
@@ -18369,7 +18318,6 @@
    "atk_rate": 600,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "5\uc5f0\uaca9\uc744 \ub0a0\ub9ac\ub294 \uc5f0\ud0c0 \uc2a4\ud0ac\uc774\ub2e4. \ub9de\uc740 \ub300\uc0c1\uc744 \ub4a4\ub85c \ubc00\uc5b4\ub0b8\ub2e4. (\ubbf8\uad6c\ud604)",
@@ -18870,7 +18818,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc2a4\ubaa8\uc758 \ubc15\uc218\uce58\uae30\ucc98\ub7fc \uc591 \uc8fc\uba39\uc73c\ub85c \uaf5d \uce5c\ub2e4",
@@ -19247,7 +19194,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -19720,7 +19666,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc6b8\ud2b8\ub77c \ube54 \ud3ec\uc988\ub85c \ube54\uc774 \ubc14\ub78c\uc744 \uac00\ub974\uba74\uc11c \ub098\uac04\ub2e4",
@@ -19955,7 +19900,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc190\uc744 \ubaa8\uc73c\uba74 \uc8fc\uba39\uc5d0\uc11c \uc785\uc774 \ub098\ud0c0\ub098 \uc0c1\ub300\uc5d0\uac8c \uac00\uaca9\ud558\uba74 \uadf8 \uc785\uc774 \ubb3c\uc5b4 \ub72f\ub294\ub2e4",
@@ -20238,7 +20182,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc9c0\ucd95\uc758 \ud798\uc744 \uc774\uc6a9\ud574\uc11c \uc0c1\ub300\ub97c \ud30c\uad34\ud558\ub294 \uae30\uc220",
@@ -20680,7 +20623,6 @@
    "atk_rate": 500,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -21924,7 +21866,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc591\uc190\uc744 \ub4e4\uc5c8\ub2e4\uac00 \ub300\uac01\uc120\uc73c\ub85c \uad50\ucc28\ud558\uba74\uc11c \uc5d1\uc2a4\uc790 \ud06c\ub85c\uc2a4\ub97c \ub0a0\ub9b0\ub2e4",
@@ -22368,7 +22309,6 @@
    "atk_rate": 450,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "10\ub2e8 \ucf64\ubcf4",
@@ -22872,7 +22812,6 @@
    "atk_rate": 200,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -23267,7 +23206,6 @@
    "atk_rate": 332,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -23723,7 +23661,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc810\ud504\ub97c \ub6f0\uc5b4 \uc0c1\ub300\ub97c \ub09a\uc544\ucc48\ub4a4\uc5d0 \ub358\uc9c4\ub2e4",
@@ -24108,7 +24045,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ub0a0\uce74\ub85c\uc6b4 \ubc1c\ud1b1\uc73c\ub85c \uc0c1\ub300\ub97c \ud560\ud034\uc5b4\ubc84\ub9b0\ub2e4",
@@ -24589,7 +24525,6 @@
    "atk_rate": 150,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc5b4\ud37c\ucef7\uc744 \ub0a0\ub9ac\uba74 \ud68c\uc624\ub9ac \ubc14\ub78c\uc774 \uc0dd\uaca8\uc11c \ub0a0\uc544\uac04\ub2e4",
@@ -25552,7 +25487,6 @@
    "atk_rate": 300,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc591\uc8fc\uba39\uc744 \ub9de\uc7a1\uace0 \uacf5\uc911\uc5d0\uc11c \ub0b4\ub824\uce58\ub294 \uc2a4\ud0ac",
@@ -25915,7 +25849,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud074\ub798\uc2dd \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -26390,7 +26323,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud074\ub798\uc2dd \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -26865,7 +26797,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud074\ub798\uc2dd \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -27340,7 +27271,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud074\ub798\uc2dd \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -27827,7 +27757,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud050\ud2b8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -28302,7 +28231,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud050\ud2b8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -28777,7 +28705,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud050\ud2b8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -29252,7 +29179,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud050\ud2b8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -29739,7 +29665,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc139\uc2dc \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -30214,7 +30139,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc139\uc2dc \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -30689,7 +30613,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc139\uc2dc \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -31164,7 +31087,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc139\uc2dc \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -31651,7 +31573,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud37c\ub2c8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -32126,7 +32047,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud37c\ub2c8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -32601,7 +32521,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud37c\ub2c8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -33076,7 +32995,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud37c\ub2c8 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -33563,7 +33481,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud391\ud0a4 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -34038,7 +33955,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud391\ud0a4 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -34513,7 +34429,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud391\ud0a4 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -34988,7 +34903,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud391\ud0a4 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -35463,7 +35377,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud30c\uc6cc\ud480 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -35938,7 +35851,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud30c\uc6cc\ud480 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -36413,7 +36325,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud30c\uc6cc\ud480 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -36888,7 +36799,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud30c\uc6cc\ud480 \ub304\uc2a4\ud615 \ubba4\ub77c \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -37375,7 +37285,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc790\uc2e0\uc744 \uc911\uc2ec\uc73c\ub85c \uc8fc\ubcc0\uc758 \uc801\ub4e4\uc744 \uacf5\uaca9\ud55c\ub2e4.",
@@ -37766,7 +37675,6 @@
    "atk_rate": 0,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc57d\ud55c \ubc94\uc704 \ud68c\ubcf5",
@@ -38338,7 +38246,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -38817,9 +38724,7 @@
   "sk060005": {
    "atk_rate": 0,
    "cooltime": 2.0,
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "desc_ko": "",
    "family": "weapon_skill",
    "fps": 30.0,
@@ -39079,7 +38984,6 @@
    "atk_rate": 400,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -39488,9 +39392,7 @@
   "sk060007": {
    "atk_rate": 0,
    "cooltime": 1.0,
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "desc_ko": "\uc790\uc2e0\uc758 \uc8fc\ubcc0 \uacf5\uae30\ub97c \uc815\ud654\uc2dc\ucf1c \ub3c5 \uc0c1\ud0dc\ub97c \ud574\uc81c\ud558\ub294 \uc2a4\ud0ac",
    "family": "weapon_skill",
    "fps": 30.0,
@@ -39799,9 +39701,7 @@
   "sk060008": {
    "atk_rate": 0,
    "cooltime": 1.0,
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "desc_ko": "\uccad\uc544\ud55c \uc18c\ub9ac\ub85c \ub9c8\uc74c\uc744 \uac00\ubccd\uac8c \ud558\uc5ec \ubab8\uc744 \ubbfc\ucca9\ud558\uac8c \ud574\uc8fc\ub294 \uc2a4\ud0ac",
    "family": "weapon_skill",
    "fps": 30.0,
@@ -40012,7 +39912,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc57d\ud55c \ubc94\uc704 \uc74c\ud30c \uacf5\uaca9",
@@ -40399,9 +40298,7 @@
   "sk060010": {
    "atk_rate": 0,
    "cooltime": 3.0,
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "desc_ko": "\ub9c8\uc74c\uc758 \ud3c9\uc815\uc744 \uc8fc\uc5b4 \uc2ec\uc2e0\uc744 \ud68c\ubcf5 \uc2dc\ud0a4\ub294 \ud6a8\uacfc\uac00 \uc788\ub294 \uc2a4\ud0ac",
    "family": "weapon_skill",
    "fps": 30.0,
@@ -40672,7 +40569,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -40961,7 +40857,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -41376,7 +41271,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -42084,7 +41978,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -42752,8 +42645,7 @@
    "atk_rate": 0,
    "cooltime": 2.0,
    "deferred": [
-    "camera",
-    "sfx"
+    "camera"
    ],
    "desc_ko": "\ubbf8\uc815",
    "family": "weapon_skill",
@@ -43164,7 +43056,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -43685,7 +43576,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -44638,7 +44528,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -45601,7 +45490,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -46011,7 +45899,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -46334,7 +46221,6 @@
    "atk_rate": 400,
    "cooltime": 1.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uba38\ub9ac \uc704\uc5d0 \ud574\uace8\uc774 \ub098\ud0c0\ub098 \uc8fc\uc704\ub97c \ub458\ub7ec\ubcf4\uace0 \uc0ac\ub77c\uc9c4\ub2e4",
@@ -46789,7 +46675,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc74c\ud30c\ub85c \uc8fc\ubcc0\uc758 \uc801\uc744 \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac",
@@ -47095,7 +46980,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc74c\ud30c\ub85c \uc8fc\ubcc0\uc758 \uc801\uc744 \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac",
@@ -47444,7 +47328,6 @@
    "atk_rate": 800,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubd88\uaddc\uce59\uc801\uc73c\ub85c \uc6e8\uc774\ube0c\uac00 \uc0ac\ubc29\ud314\ubc29\uc73c\ub85c \ubed7\uc5b4 \ub098\uac00\ub294 \uc2a4\ud0ac. \ub54c\ub54c\ub85c \ub9c8\ube44\uc758 \ud6a8\uacfc\ub97c \ub3d9\ubc18\ud55c\ub2e4.",
@@ -47856,7 +47739,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc74c\ud30c\ub85c \uc8fc\ubcc0\uc758 \uc801\uc744 \uacf5\uaca9\ud558\ub294 \uc2a4\ud0ac",
@@ -48235,7 +48117,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc9c0\uc2dc\ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -48860,7 +48741,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc9c0\uc2dc\ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -49485,7 +49365,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc9c0\uc2dc\ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -50110,7 +49989,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc9c0\uc2dc\ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -50747,7 +50625,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc0b4\uc9dd \ubab8\uc744 \uad7d\ud788\ub294 \ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 1\ubc88\uc774\ub2e4.",
@@ -51372,7 +51249,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc0b4\uc9dd \ubab8\uc744 \uad7d\ud788\ub294 \ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 2\ubc88\uc774\ub2e4.",
@@ -51997,7 +51873,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc0b4\uc9dd \ubab8\uc744 \uad7d\ud788\ub294 \ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 3\ubc88\uc774\ub2e4.",
@@ -52622,7 +52497,6 @@
    "cooltime": 1.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc0b4\uc9dd \ubab8\uc744 \uad7d\ud788\ub294 \ud615 \uc2a4\ud53c\ub9bf \uae30\ubcf8\uacf5\uaca9 4\ubc88\uc774\ub2e4.",
@@ -53264,7 +53138,6 @@
    "cooltime": 3.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubb3c\uc758 \uc815\ub839\uc744 \uc18c\ud658\ud558\uc5ec \uc801\uc758 \uba38\ub9ac\uc704\uc5d0 \ub5a8\uc5b4\ub728\ub9b0\ub2e4.",
@@ -54206,7 +54079,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc0b4\ub77c\ub9cc\ub354\ub97c \uc18c\ud658\ud558\uc5ec \uc801\uc744 \uacf5\uaca9\ud55c\ub2e4.",
@@ -55014,7 +54886,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc18c\ud658\uccb4\uc758 \ud2b9\uc131\uc744 \uc0b4\ub9b0 \uacf5\uaca9 \uc2a4\ud0ac",
@@ -55329,7 +55200,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc18c\ud658\uccb4\uc758 \ud2b9\uc131\uc744 \uc0b4\ub9b0 \uacf5\uaca9 \uc2a4\ud0ac",
@@ -55755,7 +55625,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uce90\ub9ad\ud130 \uc55e\uc5d0 \ub098\ubb34 \uc218\ud638\ub839\uc774 \ub098\ud0c0\ub098 \ud070\uc18c\ub9ac\ub85c \uc678\uce58\uba74 \uadf8 \ucda9\uaca9\ud30c\ub85c \uc801\uc740 \ud0c0\uaca9\uc744 \uc785\ub294\ub2e4",
@@ -56238,7 +56107,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -56946,7 +56814,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ud3ed\ud0c4\uc744 \ub358\uc9c0\uba74 3\ucd08\uac04 \ubd88\uc774 \ud0c0\ub4e4\uc5b4\uac00\ub2e4\uac00 \ud130\uc9c4\ub2e4. \ub108\ubb34 \uac00\uae4c\uc774\uc5d0 \ub2e4\uac00\uac00\uba74 \uce90\ub9ad\ud130\ub3c4 \uc0c1\ucc98\uc785\ub294\ub2e4",
@@ -58427,7 +58294,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc190\uc5d0\uc11c \ub9cc\ub4e0 \uc5d0\ub108\uc9c0\ud30c\ub85c \ubc14\ub2e5\uc744 \ubd95\uad34\uc2dc\ud0a8\ub2e4.",
@@ -59658,7 +59524,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\uc2a4\ud53c\ub9bf\uc5d0\uc11c \ucee4\ub2e4\ub780 \ucc45\uc744 \uaebc\ub0b4 \ub2e8\uc5b4\ub97c \uc678\uc6b0\uba74 \ub2e8\uc5b4\ub4e4\uc774 \ub098\ud0c0\ub098 \uacf5\uaca9\uc744 \uac00\ud55c\ub2e4",
@@ -61003,7 +60868,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -62143,7 +62007,6 @@
    "cooltime": 0.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -62500,7 +62363,6 @@
    "cooltime": 2.0,
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubc18\uc9dd\uc774\ub294 \ubcf4\uc11d\ub4e4\uc774 \uc801\ub4e4\uc5d0\uac8c \ub2e4\uac00\uac00\uc11c \ud3ed\ubc1c\ud55c\ub2e4",
@@ -62822,7 +62684,6 @@
    "atk_rate": 800,
    "cooltime": 3.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "",
@@ -63347,7 +63208,6 @@
    "atk_rate": 800,
    "cooltime": 2.0,
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "desc_ko": "\ubc14\ub2e5\uc5d0\uc11c \uc218\ub9ce\uc740 \uac15\ucca0 \uac00\uc2dc\uac00 \ud280\uc5b4\ub098\uc628\ub2e4",
@@ -64182,9 +64042,7 @@
    ]
   },
   "sk110001": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -64817,9 +64675,7 @@
    ]
   },
   "sk110002": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -65028,9 +64884,7 @@
    ]
   },
   "sk110003": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -65330,9 +65184,7 @@
    ]
   },
   "sk110004": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -65504,9 +65356,7 @@
    ]
   },
   "sk110005": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -65720,9 +65570,7 @@
    ]
   },
   "sk110006": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -65958,9 +65806,7 @@
    ]
   },
   "sk110007": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -66164,9 +66010,7 @@
    ]
   },
   "sk110008": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -67252,9 +67096,7 @@
    ]
   },
   "sk110015": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 30,
@@ -67725,9 +67567,7 @@
    ]
   },
   "sk110016": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -68031,9 +67871,7 @@
    ]
   },
   "sk110017": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -68337,9 +68175,7 @@
    ]
   },
   "sk110018": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -68675,9 +68511,7 @@
    ]
   },
   "sk110019": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -68981,9 +68815,7 @@
    ]
   },
   "sk110020": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "condition",
    "fps": 30.0,
    "frames": 60,
@@ -69288,8 +69120,7 @@
   },
   "sk110021": {
    "deferred": [
-    "camera",
-    "sfx"
+    "camera"
    ],
    "family": "condition",
    "fps": 30.0,
@@ -69759,8 +69590,7 @@
   },
   "sk110022": {
    "deferred": [
-    "camera",
-    "sfx"
+    "camera"
    ],
    "family": "condition",
    "fps": 30.0,
@@ -70186,7 +70016,6 @@
   "sk200003": {
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -72166,7 +71995,6 @@
   "sk20003_1": {
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -79630,9 +79458,7 @@
    ]
   },
   "sk200201": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 50,
@@ -94705,9 +94531,7 @@
    ]
   },
   "sk200592": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 120,
@@ -95724,9 +95548,7 @@
    ]
   },
   "sk200612": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 35,
@@ -96289,9 +96111,7 @@
    ]
   },
   "sk200622": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 50,
@@ -97312,9 +97132,7 @@
    ]
   },
   "sk200642": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 30,
@@ -99330,9 +99148,7 @@
    ]
   },
   "sk200682": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -101814,9 +101630,7 @@
    ]
   },
   "sk200732": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -102343,9 +102157,7 @@
    ]
   },
   "sk200742": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -102872,9 +102684,7 @@
    ]
   },
   "sk200752": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -103310,9 +103120,7 @@
    ]
   },
   "sk200762": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -103834,9 +103642,7 @@
    ]
   },
   "sk200772": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -106742,9 +106548,7 @@
    ]
   },
   "sk200822": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -109340,9 +109144,7 @@
    ]
   },
   "sk200902": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -110864,9 +110666,7 @@
    ]
   },
   "sk200932": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -113040,9 +112840,7 @@
    ]
   },
   "sk200972": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -113761,9 +113559,7 @@
    ]
   },
   "sk200982": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -121809,9 +121605,7 @@
    ]
   },
   "sk201132": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -122882,9 +122676,7 @@
    ]
   },
   "sk201152": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -123426,9 +123218,7 @@
    ]
   },
   "sk201162": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -126759,9 +126549,7 @@
    ]
   },
   "sk201223": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 80,
@@ -136083,9 +135871,7 @@
    ]
   },
   "sk201413": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 30,
@@ -136549,9 +136335,7 @@
    ]
   },
   "sk201422": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 50,
@@ -137201,9 +136985,7 @@
    ]
   },
   "sk201432": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 40,
@@ -138251,9 +138033,7 @@
    ]
   },
   "sk201442": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 40,
@@ -141104,9 +140884,7 @@
    ]
   },
   "sk201482": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -141751,9 +141529,7 @@
    ]
   },
   "sk201492": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 60,
@@ -142405,9 +142181,7 @@
    ]
   },
   "sk201502": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 90,
@@ -143416,7 +143190,6 @@
   },
   "sk300011": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -143578,7 +143351,6 @@
   },
   "sk300021": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -143723,7 +143495,6 @@
   },
   "sk300031": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -143888,7 +143659,6 @@
   },
   "sk300041": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144053,7 +143823,6 @@
   },
   "sk300051": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144269,7 +144038,6 @@
   },
   "sk300061": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144414,7 +144182,6 @@
   },
   "sk300071": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144559,7 +144326,6 @@
   },
   "sk300081": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144728,7 +144494,6 @@
   },
   "sk300091": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -144873,7 +144638,6 @@
   },
   "sk300101": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -145052,7 +144816,6 @@
   },
   "sk300111": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -145197,7 +144960,6 @@
   },
   "sk300121": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -145408,7 +145170,6 @@
   },
   "sk300131": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -145663,7 +145424,6 @@
   },
   "sk300161": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -145994,7 +145754,6 @@
   },
   "sk300171": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -146154,7 +145913,6 @@
   },
   "sk300181": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -146336,7 +146094,6 @@
   },
   "sk300191": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -146585,7 +146342,6 @@
   },
   "sk300201": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -146802,7 +146558,6 @@
   },
   "sk300211": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -146959,7 +146714,6 @@
   },
   "sk300221": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -147195,7 +146949,6 @@
   },
   "sk300231": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -147328,7 +147081,6 @@
   },
   "sk300241": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -147480,7 +147232,6 @@
   },
   "sk300251": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -147684,7 +147435,6 @@
   },
   "sk300261": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -147848,7 +147598,6 @@
   },
   "sk300271": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148000,7 +147749,6 @@
   },
   "sk300281": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148250,7 +147998,6 @@
   },
   "sk300291": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148407,7 +148154,6 @@
   },
   "sk300301": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148618,7 +148364,6 @@
   },
   "sk300311": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148792,7 +148537,6 @@
   },
   "sk300321": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -148976,7 +148720,6 @@
   },
   "sk300331": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -149172,7 +148915,6 @@
   },
   "sk300341": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -149380,7 +149122,6 @@
   },
   "sk300351": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -149520,7 +149261,6 @@
   },
   "sk300361": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -149719,7 +149459,6 @@
   },
   "sk300371": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -149916,7 +149655,6 @@
   },
   "sk300381": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -150068,7 +149806,6 @@
   },
   "sk300391": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -150232,7 +149969,6 @@
   },
   "sk300461": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -150416,7 +150152,6 @@
   },
   "sk300471": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -150600,7 +150335,6 @@
   },
   "sk300511": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151059,7 +150793,6 @@
   },
   "sk300521": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151240,7 +150973,6 @@
   },
   "sk300531": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151409,7 +151141,6 @@
   },
   "sk300541": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151573,7 +151304,6 @@
   },
   "sk300551": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151742,7 +151472,6 @@
   },
   "sk300561": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -151894,7 +151623,6 @@
   },
   "sk300571": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -152165,7 +151893,6 @@
   },
   "sk300581": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -152380,7 +152107,6 @@
   },
   "sk300591": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -152576,7 +152302,6 @@
   },
   "sk300601": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -152831,7 +152556,6 @@
   },
   "sk300631": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -153000,7 +152724,6 @@
   },
   "sk300651": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -153140,7 +152863,6 @@
   },
   "sk300661": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -153292,7 +153014,6 @@
   },
   "sk300671": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -153513,7 +153234,6 @@
   },
   "sk300681": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -153692,7 +153412,6 @@
   },
   "sk300691": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -154201,7 +153920,6 @@
   },
   "sk300701": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -154389,7 +154107,6 @@
   },
   "sk300711": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -154569,7 +154286,6 @@
   },
   "sk300721": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -154824,7 +154540,6 @@
   },
   "sk300731": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -154994,7 +154709,6 @@
   },
   "sk300741": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -155139,7 +154853,6 @@
   },
   "sk300751": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -155284,7 +154997,6 @@
   },
   "sk300761": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -155717,7 +155429,6 @@
   },
   "sk300791": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -156025,7 +155736,6 @@
   },
   "sk300801": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -156189,7 +155899,6 @@
   },
   "sk300811": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -156329,7 +156038,6 @@
   },
   "sk300821": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -156819,7 +156527,6 @@
   },
   "sk300831": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -157013,7 +156720,6 @@
   },
   "sk300841": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -157170,7 +156876,6 @@
   },
   "sk300851": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -157508,7 +157213,6 @@
   },
   "sk300901": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -157712,7 +157416,6 @@
   },
   "sk300911": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -157869,7 +157572,6 @@
   },
   "sk300921": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158034,7 +157736,6 @@
   },
   "sk300931": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158174,7 +157875,6 @@
   },
   "sk300941": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158319,7 +158019,6 @@
   },
   "sk300951": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158558,7 +158257,6 @@
   },
   "sk300961": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158708,7 +158406,6 @@
   },
   "sk300971": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -158893,7 +158590,6 @@
   },
   "sk300981": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -159078,7 +158774,6 @@
   },
   "sk300991": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -159223,7 +158918,6 @@
   },
   "sk301001": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -159678,7 +159372,6 @@
   },
   "sk301031": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -159875,7 +159568,6 @@
   },
   "sk301041": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160093,7 +159785,6 @@
   },
   "sk301051": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160292,7 +159983,6 @@
   },
   "sk301061": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160452,7 +160142,6 @@
   },
   "sk301071": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160622,7 +160311,6 @@
   },
   "sk301081": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160784,7 +160472,6 @@
   },
   "sk301091": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -160929,7 +160616,6 @@
   },
   "sk301101": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161094,7 +160780,6 @@
   },
   "sk301111": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161227,7 +160912,6 @@
   },
   "sk301121": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161372,7 +161056,6 @@
   },
   "sk301131": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161631,7 +161314,6 @@
   },
   "sk301141": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161796,7 +161478,6 @@
   },
   "sk301151": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -161941,7 +161622,6 @@
   },
   "sk301161": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162084,7 +161764,6 @@
   },
   "sk301171": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162273,7 +161952,6 @@
   },
   "sk301181": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162500,7 +162178,6 @@
   },
   "sk301191": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162610,7 +162287,6 @@
   },
   "sk301201": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162767,7 +162443,6 @@
   },
   "sk301211": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -162912,7 +162587,6 @@
   },
   "sk301221": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163074,7 +162748,6 @@
   },
   "sk301231": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163236,7 +162909,6 @@
   },
   "sk301241": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163398,7 +163070,6 @@
   },
   "sk301251": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163563,7 +163234,6 @@
   },
   "sk301261": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163701,7 +163371,6 @@
   },
   "sk301271": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -163866,7 +163535,6 @@
   },
   "sk301281": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164006,7 +163674,6 @@
   },
   "sk301291": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164171,7 +163838,6 @@
   },
   "sk301301": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164309,7 +163975,6 @@
   },
   "sk301321": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164449,7 +164114,6 @@
   },
   "sk301331": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164614,7 +164278,6 @@
   },
   "sk301341": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -164784,7 +164447,6 @@
   },
   "sk301361": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165000,7 +164662,6 @@
   },
   "sk301371": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165250,7 +164911,6 @@
   },
   "sk301381": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165477,7 +165137,6 @@
   },
   "sk301391": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165627,7 +165286,6 @@
   },
   "sk301401": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165797,7 +165455,6 @@
   },
   "sk301411": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -165961,7 +165618,6 @@
   },
   "sk301421": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166119,7 +165775,6 @@
   },
   "sk301431": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166284,7 +165939,6 @@
   },
   "sk301451": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166417,7 +166071,6 @@
   },
   "sk301461": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166550,7 +166203,6 @@
   },
   "sk301471": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166684,7 +166336,6 @@
   "sk301481": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -166883,7 +166534,6 @@
   "sk301491": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -167075,7 +166725,6 @@
   "sk301501": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -167372,7 +167021,6 @@
   },
   "sk301511": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -167517,7 +167165,6 @@
   },
   "sk400132": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -167950,7 +167597,6 @@
   },
   "sk400161": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -168295,9 +167941,7 @@
    ]
   },
   "sk400162": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "monster",
    "fps": 30.0,
    "frames": 100,
@@ -168759,7 +168403,6 @@
   },
   "sk400191": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -169150,7 +168793,6 @@
   },
   "sk400211": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -169540,7 +169182,6 @@
   },
   "sk400212": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -169877,7 +169518,6 @@
   },
   "sk400241": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -170361,7 +170001,6 @@
   },
   "sk400261": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -170643,7 +170282,6 @@
   },
   "sk400262": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -172274,7 +171912,6 @@
   },
   "sk400301": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -173020,7 +172657,6 @@
   },
   "sk400341": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -173622,7 +173258,6 @@
   },
   "sk400391": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -174256,7 +173891,6 @@
   },
   "sk400392": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -174858,7 +174492,6 @@
   },
   "sk400591": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -175304,7 +174937,6 @@
   },
   "sk400601": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -175636,7 +175268,6 @@
   },
   "sk400602": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -176251,7 +175882,6 @@
   },
   "sk400791": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -176724,7 +176354,6 @@
   "sk400831": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -176943,7 +176572,6 @@
   "sk400832": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -177329,7 +176957,6 @@
   },
   "sk400971": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -177606,7 +177233,6 @@
   },
   "sk401071": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -177807,7 +177433,6 @@
   },
   "sk401072": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -178056,7 +177681,6 @@
   },
   "sk401151": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -178226,7 +177850,6 @@
   },
   "sk401152": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -178435,7 +178058,6 @@
   },
   "sk401211": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -178782,7 +178404,6 @@
   },
   "sk401251": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -179097,7 +178718,6 @@
   },
   "sk401301": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -179487,7 +179107,6 @@
   },
   "sk401302": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -179824,7 +179443,6 @@
   },
   "sk401341": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -181416,7 +181034,6 @@
   "sk401401": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -181729,7 +181346,6 @@
   "sk401402": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -181967,7 +181583,6 @@
   },
   "sk401411": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -182249,7 +181864,6 @@
   },
   "sk401412": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -182555,7 +182169,6 @@
   },
   "sk401431": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -183103,7 +182716,6 @@
   },
   "sk401451": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -183320,7 +182932,6 @@
   },
   "sk401461": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -183520,7 +183131,6 @@
   },
   "sk401471": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -183762,7 +183372,6 @@
   },
   "sk401472": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "monster",
@@ -185730,9 +185339,7 @@
    ]
   },
   "sk630020": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "glow",
    "fps": 30.0,
    "frames": 30,
@@ -186280,9 +185887,7 @@
    ]
   },
   "sk640005": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "glow",
    "fps": 30.0,
    "frames": 30,
@@ -186326,9 +185931,7 @@
    ]
   },
   "sk640008": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "glow",
    "fps": 30.0,
    "frames": 30,
@@ -186820,9 +186423,7 @@
    ]
   },
   "sk641005": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "glow",
    "fps": 30.0,
    "frames": 30,
@@ -186866,9 +186467,7 @@
    ]
   },
   "sk641008": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "glow",
    "fps": 30.0,
    "frames": 30,
@@ -187936,9 +187535,7 @@
    ]
   },
   "sk700001": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 80,
@@ -188046,9 +187643,7 @@
    ]
   },
   "sk700002": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 30,
@@ -188396,9 +187991,7 @@
    ]
   },
   "sk700007": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 120,
@@ -188442,9 +188035,7 @@
    ]
   },
   "sk700008": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 90,
@@ -188488,9 +188079,7 @@
    ]
   },
   "sk700009": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -188791,9 +188380,7 @@
    ]
   },
   "sk700015": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 30,
@@ -189003,9 +188590,7 @@
    ]
   },
   "sk700016": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -189169,9 +188754,7 @@
    ]
   },
   "sk700019": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 120,
@@ -189384,9 +188967,7 @@
    ]
   },
   "sk700023": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -189430,9 +189011,7 @@
    ]
   },
   "sk700024": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 240,
@@ -189508,9 +189087,7 @@
    ]
   },
   "sk700025": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -189591,9 +189168,7 @@
    ]
   },
   "sk700026": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -189674,9 +189249,7 @@
    ]
   },
   "sk700027": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 60,
@@ -189720,9 +189293,7 @@
    ]
   },
   "sk700028": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 120,
@@ -189862,9 +189433,7 @@
    ]
   },
   "sk700029": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 90,
@@ -189940,9 +189509,7 @@
    ]
   },
   "sk800691": {
-   "deferred": [
-    "sfx"
-   ],
+   "deferred": [],
    "family": "misc",
    "fps": 30.0,
    "frames": 95,
@@ -190110,7 +189677,6 @@
   },
   "sk900002": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "misc",
@@ -190271,7 +189837,6 @@
   },
   "sk900003": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "misc",
@@ -190396,7 +189961,6 @@
   "sk900004": {
    "deferred": [
     "camera",
-    "sfx",
     "sword_trace",
     "target_motion"
    ],
@@ -190708,7 +190272,6 @@
   "sk900005": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "misc",
@@ -191024,7 +190587,6 @@
   "sk900006": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "misc",
@@ -191438,7 +191000,6 @@
   },
   "sk900007": {
    "deferred": [
-    "sfx",
     "target_motion"
    ],
    "family": "misc",
@@ -191835,7 +191396,6 @@
   "sk900008": {
    "deferred": [
     "camera",
-    "sfx",
     "target_motion"
    ],
    "family": "misc",

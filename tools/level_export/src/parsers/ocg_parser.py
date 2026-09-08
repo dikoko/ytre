@@ -4,9 +4,9 @@ OCG Parser — Object Category file.
 Maps numeric model IDs to prop filenames.
 Binary format:
   Header: int32 version (20040114) + uint16 count (no padding)
-  Entries: count × (int32 m_bBillboard + char[256] filename)
+  Entries: count × (int32 billboard flag + char[256] filename)
 
-  Note: m_bBillboard is a 4-byte BOOL (int); each record is that flag
+  Note: the billboard flag is a 4-byte BOOL (int); each record is that flag
   followed by a fixed 256-char filename buffer.
 """
 
@@ -18,7 +18,7 @@ from pathlib import Path
 @dataclass
 class OCGEntry:
     index: int
-    billboard: bool  # m_bBillboard from C++ OCG struct, converted from int BOOL
+    billboard: bool  # 4-byte BOOL in the file, converted to bool
     filename: str
     category: str
     model_name: str

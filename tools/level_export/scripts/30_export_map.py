@@ -310,7 +310,7 @@ def write_tscn(
 
         lines.append(f'[node name="{node_name}" parent="Props" instance=ExtResource("{ext_id}")]')
         lines.append(f'transform = {transform_str}')
-        # Emit billboard metadata if this model has m_bBillboard set
+        # Emit billboard metadata if this model's billboard flag is set
         if model_id < len(ocg_entries) and ocg_entries[model_id].billboard:
             lines.append('metadata/billboard = true')
         lines.append('')

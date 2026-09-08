@@ -1016,7 +1016,7 @@ class TMDParser:
     def _read_frame(self) -> int:
         """Read a keyframe number the way the engine does.
 
-        The field is stored as UTdword but every track reader casts it back
+        The field is stored as a 32-bit unsigned but every track reader casts it back
         to signed and clamps negatives to 0 (verified against retail
         client behavior for rotation and scale-axis tracks).
         Reading it as plain unsigned turns an authored -1 into 4294967295,

@@ -328,6 +328,170 @@ func _test_path_playback() -> void:
 	dummy.queue_free()
 
 
+func _sfx_entry(extra_cmds: Array = [], frames := 30) -> Dictionary:
+	## Hand-built catalog entry with ONE sfx track: realtime stashed BEFORE
+	## play (frame 1 realtime / frame 15 play is a real shipped order —
+	## sk010101's ring track), base on the caster root, stop at frame 20.
+	var cmds: Array = [
+		{"frame": 0, "kind": "base", "params": {"base_bone": 11, "base_character": 256,
+			"inherit_pos": true, "inherit_rot": true, "offset": [0.0, 0.7, 0.0], "rot": [0.0, 0.0, 0.0]}},
+		{"frame": 1, "kind": "sfx_realtime", "params": {"real_time": 2.0}},
+		{"frame": 2, "kind": "play", "params": {}},
+		{"frame": 20, "kind": "stop", "params": {}},
+	]
+	cmds.append_array(extra_cmds)
+	return {"fps": 30.0, "frames": frames, "missing": [], "paths": [],
+		"tracks": [{"kind": "sfx", "name": "sfx_common_particledot1_red.sfd", "params": {}, "commands": cmds}]}
+
+
+func _test_sfx_track() -> void:
+	player._catalog["zzsfx"] = _sfx_entry()
+	var stub := _make_stub_character()
+	stub.global_position = Vector3(2, 0, 0)
+	_check(player.play("zzsfx", stub), "sfx: hand-built entry plays")
+	_check(player._sfx_objects.is_empty(), "sfx: nothing spawned before the play command's frame")
+	await _wait_ms(250)   # frame ~7: base, realtime and play have fired
+	_check(player._sfx_objects.size() == 1, "sfx: one SfxObject after play")
+	var obj: SfxObject = player._sfx_objects[0]
+	_check(obj.playing and obj.kind == "emitter_polygon", "sfx: object playing, emitter kind")
+	_check(absf(obj.total_time - 2.0) < 1e-6, "sfx: realtime stashed before PLAY was applied")
+	_check(obj.global_position.is_equal_approx(Vector3(2, 0.7, 0)), "sfx: base offset applied on the caster root")
+	_check(obj.particle_count() > 0, "sfx: particles emitted (ticked from _process)")
+	await _wait_ms(600)   # past frame 20
+	_check(player._sfx_objects.is_empty(), "sfx: STOP frees the object")
+	await _wait_finished_or(3.0)
+	_check(player.current_frame() == -1, "sfx: session finished normally")
+	player._catalog.erase("zzsfx")
+	stub.free()
+
+
+func _test_sfx_disabled() -> void:
+	player._catalog["zzsfx"] = _sfx_entry()
+	var stub := _make_stub_character()
+	player.sfx_enabled = false
+	_check(player.play("zzsfx", stub), "sfx disabled: still plays")
+	await _wait_ms(300)
+	_check(player._sfx_objects.is_empty(), "sfx disabled: no SfxObject spawned")
+	player.stop()
+	player.sfx_enabled = true
+	player._catalog.erase("zzsfx")
+	stub.free()
+
+
+func _test_sfx_path() -> void:
+	## An sfx track riding a path command (80 shipped): the object flies.
+	var params10: Array = []
+	for i in 10:
+		params10.append(float(i) / 9.0)
+	var entry := _sfx_entry([{"frame": 2, "kind": "path", "params": {"path_id": 0, "play_time": 0.4}}])
+	entry["paths"] = [{"input_points": [[0.0, 0.0, 0.0], [0.0, 0.0, 4.0]], "parameters": params10,
+		"base_character": 256, "base_bone": 11, "target_character": 512, "target_bone": 11}]
+	player._catalog["zzsfxpath"] = entry
+	var stub := _make_stub_character()
+	player.set_target(null)
+	_check(player.play("zzsfxpath", stub), "sfx path: plays")
+	await _wait_ms(150)
+	_check(player._sfx_objects.size() == 1, "sfx path: object spawned")
+	var obj: SfxObject = player._sfx_objects[0]
+	var p0: Vector3 = obj.global_position
+	await _wait_ms(250)
+	_check(obj.global_position.distance_to(p0) > 0.3, "sfx path: object moved along the path (%.2f)" % obj.global_position.distance_to(p0))
+	player.stop()
+	player._catalog.erase("zzsfxpath")
+	stub.free()
+
+
+func _test_sfx_loop() -> void:
+	player._catalog["zzsfxloop"] = {"fps": 30.0, "frames": 30, "missing": [], "paths": [],
+		"tracks": [{"kind": "sfx", "name": "sfx_common_particledot1_red.sfd", "params": {}, "commands": [
+			{"frame": 0, "kind": "sfx_realtime", "params": {"real_time": 0.5}},
+			{"frame": 0, "kind": "play", "params": {}}]}]}
+	var stub := _make_stub_character()
+	_check(player.play_loop("zzsfxloop", stub), "sfx loop: starts")
+	_check(player._loop_sfx.size() == 1, "sfx loop: one loop SfxObject")
+	var obj: SfxObject = player._loop_sfx[0]
+	_check(absf(obj.total_time - 0.5) < 1e-6, "sfx loop: realtime applied")
+	await _wait_ms(300)
+	_check(obj.particle_count() > 0, "sfx loop: ticks without a one-shot session")
+	player.stop_loop()
+	_check(player._loop_sfx.is_empty() and (not is_instance_valid(obj) or obj.is_queued_for_deletion()), "sfx loop: stop_loop frees it")
+	player._catalog.erase("zzsfxloop")
+	stub.free()
+
+
+func _test_sfx_replay() -> void:
+	## A second PLAY on a still-live sfx track — 84 of the 921 shipped sfx
+	## tracks do this with NO intervening stop (sk040021 tracks 4/5 play at
+	## 30 and 62; sk040023 track 9 plays at 22 and 33, stops at 49) —
+	## RESTARTS that same emitter's timeline (the original's PLAY semantics:
+	## relative time back to 0, particles kept). It must never leave a second
+	## object running alongside an unaddressable first one (fix round 1).
+	##
+	## Frames are spaced wider than the review's sketch (play@2 / play@20
+	## rather than @2/@8): the "clock restarted" assertion compares a sample
+	## taken just BEFORE the replay against one taken after it, and this
+	## player's `_time += delta` engine clock runs slightly ahead of this
+	## file's wall clock (see the finding-1 note above). At @8 the pre-replay
+	## sample would sit ~16 ms from the boundary — inside that drift. At @20
+	## both samples clear it by hundreds of milliseconds.
+	player._catalog["zzsfxreplay"] = {"fps": 30.0, "frames": 60, "missing": [], "paths": [],
+		"tracks": [{"kind": "sfx", "name": "sfx_common_particledot1_red.sfd", "params": {}, "commands": [
+			{"frame": 0, "kind": "base", "params": {"base_bone": 11, "base_character": 256,
+				"inherit_pos": true, "inherit_rot": true, "offset": [0.0, 0.7, 0.0], "rot": [0.0, 0.0, 0.0]}},
+			{"frame": 2, "kind": "play", "params": {}},
+			{"frame": 20, "kind": "play", "params": {}},
+			{"frame": 40, "kind": "stop", "params": {}}]}]}
+	var stub := _make_stub_character()
+	_check(player.play("zzsfxreplay", stub), "sfx replay: plays")
+	await _wait_ms(150)   # past frame 2 (67 ms)
+	_check(player._sfx_objects.size() == 1, "sfx replay: one object after the first play")
+	var obj: SfxObject = player._sfx_objects[0]
+	await _wait_ms(350)   # ~500 ms in, still well short of frame 20 (667 ms)
+	var rt_before: float = obj.relative_time
+	_check(rt_before > 0.0, "sfx replay: clock advanced before the second play (%.3f)" % rt_before)
+	await _wait_ms(300)   # ~800 ms in, past frame 20
+	_check(player._sfx_objects.size() == 1, "sfx replay: second play did NOT spawn a second object")
+	_check(player._track_wrappers[0] == obj, "sfx replay: the SAME object is still the track's wrapper")
+	_check(obj.relative_time < rt_before,
+			"sfx replay: the live object's clock restarted (%.3f < %.3f)" % [obj.relative_time, rt_before])
+	player.stop()
+	player._catalog.erase("zzsfxreplay")
+	stub.free()
+
+
+func _test_sfx_realtime_after_play() -> void:
+	## An sfx_realtime issued AFTER play (base@0, play@2, sfx_realtime@5,
+	## stop@12, play@20) must stash into _track_sfx_times in addition to
+	## pushing the live object — the original's total-time setting persists for
+	## the component's whole life, so a later PLAY (after an intervening
+	## STOP) must reuse the same realtime rather than falling back to the
+	## 1.0 default (sk040023 track 8: play -> realtime -> stop -> play).
+	player._catalog["zzsfxrealtimeafter"] = {"fps": 30.0, "frames": 40, "missing": [], "paths": [],
+		"tracks": [{"kind": "sfx", "name": "sfx_common_particledot1_red.sfd", "params": {}, "commands": [
+			{"frame": 0, "kind": "base", "params": {"base_bone": 11, "base_character": 256,
+				"inherit_pos": true, "inherit_rot": true, "offset": [0.0, 0.7, 0.0], "rot": [0.0, 0.0, 0.0]}},
+			{"frame": 2, "kind": "play", "params": {}},
+			{"frame": 5, "kind": "sfx_realtime", "params": {"real_time": 3.0}},
+			{"frame": 12, "kind": "stop", "params": {}},
+			{"frame": 20, "kind": "play", "params": {}}]}]}
+	var stub := _make_stub_character()
+	_check(player.play("zzsfxrealtimeafter", stub), "sfx realtime-after-play: plays")
+	await _wait_ms(250)   # past frame 5 (167 ms): base, play and realtime fired
+	_check(player._sfx_objects.size() == 1, "sfx realtime-after-play: live object exists")
+	var live: SfxObject = player._sfx_objects[0]
+	_check(absf(live.total_time - 3.0) < 1e-6,
+			"sfx realtime-after-play: realtime applied to the live object (%.3f)" % live.total_time)
+	await _wait_ms(500)   # ~750ms in, past frame 20 (667ms): stop@12 then re-play@20 have fired
+	_check(player._sfx_objects.size() == 1, "sfx realtime-after-play: re-play spawned exactly one object")
+	var obj2: SfxObject = player._sfx_objects[0]
+	_check(obj2 != live, "sfx realtime-after-play: re-play's object is new, not the pre-STOP instance")
+	_check(absf(obj2.total_time - 3.0) < 1e-6,
+			"sfx realtime-after-play: the stash survived STOP and reapplied on re-play (%.3f)" % obj2.total_time)
+	player.stop()
+	player._catalog.erase("zzsfxrealtimeafter")
+	stub.free()
+
+
 func _test_catalog() -> void:
 	var cat := SkillCatalog.new()
 	_check(cat.load(), "catalog loads")
@@ -516,6 +680,14 @@ func _init() -> void:
 	await _test_bone_anchor()
 	await _test_target_routing()
 	await _test_path_playback()
+
+	# --- Task 10: sfx particle tracks -------------------------------------
+	await _test_sfx_track()
+	await _test_sfx_path()
+	await _test_sfx_loop()
+	await _test_sfx_replay()
+	await _test_sfx_realtime_after_play()
+	await _test_sfx_disabled()
 
 	sp.free()
 	character.free()

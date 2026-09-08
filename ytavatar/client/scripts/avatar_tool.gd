@@ -116,6 +116,7 @@ func _process(_delta: float) -> void:
 			_camera_auto_fit()
 	if _combo_active:
 		_process_combo()
+	_tick_browser_sfx(_delta)
 
 
 func _process_combo() -> void:
@@ -187,6 +188,21 @@ var skill_list: ItemList
 var skill_active_label: Label
 var skill_filter_text: String = ""
 var skill_active_code: String = ""
+
+# === SFX BROWSER (C2): play any raw .sfd standalone ===
+var sfx_filter_edit: LineEdit
+var sfx_list: ItemList
+var sfx_loop_check: CheckButton
+var sfx_hide_check: CheckButton
+var sfx_status_label: Label
+const SFX_TAB := 2
+var _dock_panels: Array[Control] = []   # opaque GUI panels: gestures over them never reach the camera
+var _ground_plane: MeshInstance3D = null
+var _sfx_gizmo: Node3D = null   # origin/axes marker shown in the SFX solo view
+var sfx_filter_text: String = ""
+var _sfx_active: SfxObject = null
+var _sfx_active_name: String = ""
+var _sfx_loop_timer := 0.0
 
 # === TARGET DUMMY (C1.5): opposing avatar/monster for target-role skills ===
 var target_dummy: TargetDummy = null
@@ -651,6 +667,10 @@ func _find_all_meshes(node: Node, out: Array[MeshInstance3D]) -> void:
 func _ready() -> void:
 	camera = $Camera3D
 	monster_root = $MonsterRoot
+	_ground_plane = $GroundPlane
+	_sfx_gizmo = _build_sfx_gizmo()
+	_sfx_gizmo.visible = false
+	add_child(_sfx_gizmo)
 	_setup_orbit_camera()
 	_initialize_avatar()
 	_init_skill_player()
@@ -709,6 +729,7 @@ func _initialize_avatar() -> void:
 	animation_mode = AnimMode.TPOSE
 	animation_paused = false
 	_avatar.stop_animation()
+	_apply_sfx_solo()
 
 	print("Avatar: ", gender_name.to_upper(), ". Animation: T-POSE. Press ` to switch gender, Tab for animation mode.")
 
@@ -771,6 +792,7 @@ func _enter_model_viewer(mode: int) -> void:
 	# exported data faces -Z (map-consistent handedness); face the camera
 	_model_char.rotation.y = PI
 	monster_root.add_child(_model_char)
+	_apply_sfx_solo()
 
 	# Load first model
 	if monster_list.size() > 0:
@@ -1245,6 +1267,7 @@ func _build_gui() -> void:
 	var top_bar = PanelContainer.new()
 	top_bar.mouse_filter = Control.MOUSE_FILTER_STOP
 	root.add_child(top_bar)
+	_dock_panels.append(top_bar)
 
 	var top_layout = HBoxContainer.new()
 	top_layout.add_theme_constant_override("separation", 12)
@@ -1318,6 +1341,7 @@ func _build_gui() -> void:
 	left_panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	left_panel.mouse_filter = Control.MOUSE_FILTER_STOP
 	content.add_child(left_panel)
+	_dock_panels.append(left_panel)
 
 	var scroll = ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -1358,6 +1382,7 @@ func _build_skills_panel(content: Control) -> void:
 	skills_panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	skills_panel.mouse_filter = Control.MOUSE_FILTER_STOP
 	content.add_child(skills_panel)
+	_dock_panels.append(skills_panel)
 
 	var skills_layout = VBoxContainer.new()
 	skills_layout.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -1444,7 +1469,58 @@ func _build_skills_panel(content: Control) -> void:
 	skill_list.item_activated.connect(_on_skill_item_activated)
 	all_tab.add_child(skill_list)
 
-	# Shared between both tabs — stays visible regardless of the active tab.
+	# --- "SFX" tab (C2): every raw .sfd, played standalone on the character ---
+	var sfx_tab = VBoxContainer.new()
+	sfx_tab.name = "SFX"
+	sfx_tab.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	sfx_tab.add_theme_constant_override("separation", 4)
+	skill_tabs.add_child(sfx_tab)
+
+	sfx_filter_edit = LineEdit.new()
+	sfx_filter_edit.placeholder_text = "filter (e.g. particledot)"
+	sfx_filter_edit.text_changed.connect(_on_sfx_filter_changed)
+	sfx_tab.add_child(sfx_filter_edit)
+
+	sfx_list = ItemList.new()
+	sfx_list.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	sfx_list.item_activated.connect(_on_sfx_item_activated)
+	sfx_tab.add_child(sfx_list)
+
+	var sfx_row = HBoxContainer.new()
+	sfx_tab.add_child(sfx_row)
+	var replay_btn = Button.new()
+	replay_btn.text = "Replay"
+	replay_btn.tooltip_text = "Restart with the random tables reset — a bit-identical rerun"
+	replay_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	replay_btn.pressed.connect(_on_sfx_replay)
+	sfx_row.add_child(replay_btn)
+	var stop_btn = Button.new()
+	stop_btn.text = "Stop"
+	stop_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	stop_btn.pressed.connect(_on_sfx_stop)
+	sfx_row.add_child(stop_btn)
+	sfx_loop_check = CheckButton.new()
+	sfx_loop_check.text = "Loop"
+	sfx_row.add_child(sfx_loop_check)
+
+	var sfx_row2 = HBoxContainer.new()
+	sfx_tab.add_child(sfx_row2)
+	sfx_hide_check = CheckButton.new()
+	sfx_hide_check.text = "Hide character"
+	sfx_hide_check.tooltip_text = "A raw .sfd carries no actor/target binding — show the effect alone at the anchor"
+	sfx_hide_check.button_pressed = true
+	sfx_hide_check.toggled.connect(func(_on: bool): _apply_sfx_solo())
+	sfx_row2.add_child(sfx_hide_check)
+	skill_tabs.tab_changed.connect(func(_tab: int): _apply_sfx_solo())
+
+	sfx_status_label = Label.new()
+	sfx_status_label.text = ""
+	sfx_status_label.add_theme_font_size_override("font_size", 11)
+	sfx_status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	sfx_tab.add_child(sfx_status_label)
+	_refresh_sfx_list()
+
+	# Shared between all tabs — stays visible regardless of the active tab.
 	skill_active_label = Label.new()
 	skill_active_label.text = ""
 	skill_active_label.add_theme_font_size_override("font_size", 11)
@@ -1740,6 +1816,7 @@ func _ensure_target_dummy() -> void:
 	# exported data faces -Z; the caster (rotation.y = PI) faces +Z, so an
 	# unrotated dummy at +2.5 looks straight back at it.
 	add_child(target_dummy)
+	_apply_sfx_solo()
 
 
 func _clear_target_dummy() -> void:
@@ -1840,6 +1917,7 @@ func _play_skill(code: String, from_combo: bool = false) -> void:
 		# stale step over whatever the user just played by hand.
 		_combo_active = false
 	skill_player.stop()
+	_stop_sfx()
 	var character := _current_character()
 	if character == null:
 		skill_active_code = ""
@@ -1861,6 +1939,166 @@ func _on_skill_finished(code: String) -> void:
 	if skill_active_code == code:
 		skill_active_code = ""
 	skill_active_label.text = ""
+
+
+# === SFX browser (C2, spec §4.6) ===
+
+func _refresh_sfx_list() -> void:
+	if sfx_list == null or skill_player == null:
+		return
+	sfx_list.clear()
+	var lib := skill_player.sfx_library()
+	var filter := sfx_filter_text.strip_edges().to_lower()
+	for n in lib.names():
+		if not filter.is_empty() and not n.contains(filter):
+			continue
+		var raw: Dictionary = lib.info(n)
+		var idx := sfx_list.add_item("%s [%s]" % [n, "bb" if raw.get("kind", "") == "billboard" else "emt"])
+		sfx_list.set_item_metadata(idx, n)
+		var err := lib.error_for(n)
+		if not err.is_empty():
+			sfx_list.set_item_disabled(idx, true)
+			sfx_list.set_item_tooltip(idx, "Parse error: " + err)
+		elif not (raw.get("missing_textures", []) as Array).is_empty():
+			sfx_list.set_item_tooltip(idx, "Missing textures: " + ", ".join(PackedStringArray(raw["missing_textures"])))
+
+
+func _on_sfx_filter_changed(text: String) -> void:
+	sfx_filter_text = text
+	_refresh_sfx_list()
+
+
+func _on_sfx_item_activated(index: int) -> void:
+	if sfx_list.is_item_disabled(index):
+		return
+	_play_sfx(String(sfx_list.get_item_metadata(index)), false)
+
+
+func _on_sfx_replay() -> void:
+	if not _sfx_active_name.is_empty():
+		_play_sfx(_sfx_active_name, true)
+
+
+func _on_sfx_stop() -> void:
+	_stop_sfx()
+
+
+func _play_sfx(name: String, reset_random: bool) -> bool:
+	## Standalone play: anchored on the loaded character's root (Local bone,
+	## no offset — emitter space = character space, what the effect tool
+	## authored against); world origin with no character. Cancels any
+	## playing skill/combo so the two never overlap.
+	_stop_sfx()
+	_combo_active = false
+	skill_player.stop()
+	if reset_random:
+		SfxRandom.reset()
+	var obj := skill_player.sfx_library().instantiate(name)
+	if obj == null:
+		sfx_status_label.text = "Cannot play: " + name
+		return false
+	add_child(obj)
+	var ch := _current_character()
+	obj.global_transform = ch.global_transform if ch != null else Transform3D.IDENTITY
+	obj.play()
+	_sfx_active = obj
+	_sfx_active_name = SfxLibrary.normalize(name)
+	_sfx_loop_timer = 0.0
+	_update_sfx_status()
+	return true
+
+
+func _stop_sfx() -> void:
+	if _sfx_active != null and is_instance_valid(_sfx_active):
+		_sfx_active.stop()
+		_sfx_active.queue_free()
+	_sfx_active = null
+	_sfx_active_name = ""
+	if sfx_status_label != null:
+		sfx_status_label.text = ""
+
+
+func _tick_browser_sfx(delta: float) -> void:
+	if _sfx_active == null or not is_instance_valid(_sfx_active):
+		return
+	var cam_xf := camera.global_transform if camera != null else Transform3D.IDENTITY
+	_sfx_active.tick(delta, cam_xf)
+	if sfx_loop_check != null and sfx_loop_check.button_pressed:
+		_sfx_loop_timer += delta
+		if _sfx_loop_timer >= _sfx_active.total_time and _sfx_active.total_time > 0.0:
+			_sfx_loop_timer = 0.0
+			_sfx_active.play()   # original PLAY: clock to 0, particles kept
+	_update_sfx_status()
+
+
+func _apply_sfx_solo() -> void:
+	## SFX-tab solo view (2026-09-07 browse-pass request): a raw .sfd has no
+	## actor/target binding (that lives in the skill track, exercised from the
+	## Equipped/All tabs), so while the SFX tab is active and "Hide character"
+	## is ticked the caster and the target dummy are hidden — the effect plays
+	## alone at the anchor. Re-applied on tab change, on the toggle, and after
+	## every character/dummy rebuild (a fresh node defaults to visible).
+	var solo := skill_tabs != null and skill_tabs.current_tab == SFX_TAB \
+		and sfx_hide_check != null and sfx_hide_check.button_pressed
+	var ch := _current_character()
+	if ch != null and is_instance_valid(ch):
+		ch.visible = not solo
+	if target_dummy != null and is_instance_valid(target_dummy):
+		target_dummy.visible = not solo
+	# The 10 m ground plane hides the below-ground half of many effects
+	# (2026-09-07 request) — swap it for a small axes marker at the anchor
+	# the effect plays on (the character's frame: emitter +Z = world -Z).
+	if _ground_plane != null:
+		_ground_plane.visible = not solo
+	if _sfx_gizmo != null:
+		_sfx_gizmo.visible = solo
+		_sfx_gizmo.global_transform = ch.global_transform if ch != null and is_instance_valid(ch) else Transform3D.IDENTITY
+
+
+func _build_sfx_gizmo() -> Node3D:
+	## Origin dot + three 0.5 m axis bars (X red, Y green, Z blue), unshaded
+	## and thin enough not to hide particles. Colours follow the usual DCC
+	## convention so the effect's authored axes read at a glance.
+	var gizmo := Node3D.new()
+	gizmo.name = "SfxGizmo"
+	var dot := MeshInstance3D.new()
+	var sphere := SphereMesh.new()
+	sphere.radius = 0.025
+	sphere.height = 0.05
+	dot.mesh = sphere
+	dot.material_override = _gizmo_material(Color(1, 1, 1))
+	gizmo.add_child(dot)
+	var axes := [
+		[Vector3.RIGHT, Color(0.9, 0.2, 0.2)],
+		[Vector3.UP, Color(0.2, 0.9, 0.2)],
+		[Vector3.BACK, Color(0.25, 0.4, 1.0)],
+	]
+	for axis in axes:
+		var dir: Vector3 = axis[0]
+		var bar := MeshInstance3D.new()
+		var box := BoxMesh.new()
+		box.size = Vector3(0.01, 0.01, 0.01) + dir.abs() * 0.49
+		bar.mesh = box
+		bar.position = dir * 0.25
+		bar.material_override = _gizmo_material(axis[1])
+		gizmo.add_child(bar)
+	return gizmo
+
+
+func _gizmo_material(color: Color) -> StandardMaterial3D:
+	var mat := StandardMaterial3D.new()
+	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	mat.albedo_color = color
+	return mat
+
+
+func _update_sfx_status() -> void:
+	if sfx_status_label == null or _sfx_active == null or not is_instance_valid(_sfx_active):
+		return
+	var raw: Dictionary = skill_player.sfx_library().info(_sfx_active_name)
+	sfx_status_label.text = "%s · %s · %.1fs · %d tex · %d particles" % [
+		_sfx_active_name, _sfx_active.kind.replace("_polygon", ""), _sfx_active.total_time,
+		(raw.get("textures", []) as Array).size(), _sfx_active.particle_count()]
 
 
 func _on_slot_prev(slot_name: String) -> void:
@@ -1931,6 +2169,16 @@ func _gui_cycle_equipment(equip_type: EquipmentType, direction: int) -> void:
 # === INPUT ===
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventPanGesture or event is InputEventMagnifyGesture:
+		# Godot 4.7 marks wheel/button events over a Control as handled, but
+		# trackpad gestures over a Control still fall through to here — two-
+		# finger scrolling the SFX list pitched the camera (2026-09-07
+		# report). Hit-test the dock panels ourselves: the hovered-control
+		# query is not a substitute (it stays null without window focus,
+		# e.g. headless tests and off-screen probe windows).
+		if _dock_covers(event.position):
+			return
+
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			is_dragging = event.pressed
@@ -1961,6 +2209,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		var max_zoom := MONSTER_ZOOM_MAX if current_mode in [CharacterMode.MONSTER, CharacterMode.NPC] else 10.0
 		camera_distance = clamp(camera_distance / event.factor, 1.0, max_zoom)
 		_update_camera_position()
+
+
+func _dock_covers(pos: Vector2) -> bool:
+	for panel in _dock_panels:
+		if panel.visible and panel.get_global_rect().has_point(pos):
+			return true
+	return false
 
 
 func _input(event: InputEvent) -> void:

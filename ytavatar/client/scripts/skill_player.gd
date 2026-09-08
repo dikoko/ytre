@@ -1,13 +1,13 @@
 class_name SkillPlayer
 extends Node3D
-## Plays one `skills.json` catalog entry against a character: the "core
-## four" component kinds (effect models, caster motion, sound, color
-## flash) on a single 30 fps clock. `sfx`/`camera`/`sword_trace` TRACKS
-## are cataloged but deliberately not played here (deferred to the
-## particle/camera phases). There is
+## Plays one `skills.json` catalog entry against a character: effect models,
+## caster motion, sound, color flash AND sfx particle tracks —
+## `SfxObject` wrappers driven by the same base/path machinery as tmd tracks.
+## `camera`/`sword_trace` TRACKS are cataloged but not played (a later
+## phase). There is
 ## no "path" track kind (catalog track kinds: motion/tmd/sfx/sound/camera/
-## sword_trace/color) — path COMMANDS on tmd tracks DO play, since C1.5
-## (see _arm_path/_update_paths).
+## sword_trace/color) — path COMMANDS on tmd AND sfx tracks play (see
+## _arm_path/_update_paths).
 ##
 ## Effect-model wrappers reuse the warp-puff shape from ytlevel's
 ## warp_effects.gd: a Node3D running prop_lighting.gd (ported verbatim,
@@ -23,9 +23,13 @@ const SOUNDS_DIR := "res://assets/sounds/"
 ## Track kinds _run_command refuses to play. No track ever has kind "path"
 ## (catalog track kinds: motion/tmd/sfx/sound/camera/sword_trace/color) —
 ## a "path" entry here was dead-weight cleanup, not a real deferral; path
-## COMMANDS live on tmd tracks and have played since C1.5 (_arm_path/
-## _update_paths), so removing "path" changes no behavior.
-const DEFERRED_KINDS := ["sfx", "camera", "sword_trace"]
+## COMMANDS live on tmd tracks (since C1.5) and sfx tracks (since C2) and
+## play through _arm_path/_update_paths, so removing "path" changed no
+## behavior.
+const DEFERRED_KINDS := ["camera", "sword_trace"]
+## Eval control: false = sfx tracks are silently skipped (sfx_eval.gd's
+## "particles off" control capture). Never toggled by the tool itself.
+var sfx_enabled := true
 ## Result codes for play_ex(): why a play request did or didn't start.
 ## play() (unchanged signature/behavior for existing callers) is just
 ## `play_ex(...) == PlayResult.OK`.
@@ -95,6 +99,16 @@ var _sound_players: Array = []
 var _track_paths: Dictionary = {}
 var _skill_paths: Array = []   # catalog "paths" for the playing skill
 
+## C2 particle state. `_sfx_objects` are the live one-shot SfxObjects (also
+## present in _wrappers/_track_wrappers so path/base/teardown treat them
+## like effect models); `_loop_sfx` the glow-loop set; `_track_sfx_times`
+## stashes a track's sfx_realtime seconds when the command precedes PLAY
+## (a real shipped order — sk010101's ring: realtime at frame 1, play at 15).
+var _sfx_library: SfxLibrary = SfxLibrary.new()
+var _sfx_objects: Array = []
+var _loop_sfx: Array = []
+var _track_sfx_times: Dictionary = {}
+
 ## Glow-loop state: an independent minimal runner alongside the one-shot
 ## session above (never a second full session — glow skills are tmd-only,
 ## frame-0 commands, e.g. sk610011 has 1 track / play+base at frame 0).
@@ -154,6 +168,11 @@ func load_catalog() -> void:
 	else:
 		_catalog = {}
 	_catalog_view.load()
+	_sfx_library.load()
+
+
+func sfx_library() -> SfxLibrary:
+	return _sfx_library
 
 
 func skill_ids() -> PackedStringArray:
@@ -199,6 +218,8 @@ func play_ex(code: String, character: Node3D) -> int:
 	_fired.clear()
 	_track_wrappers.clear()
 	_track_offsets.clear()
+	_track_sfx_times.clear()
+	_sfx_objects.clear()
 	_pending_wrappers = 0
 	_max_command_frame = 0
 	for track in _tracks:
@@ -233,13 +254,18 @@ func stop() -> void:
 	## Immediate teardown: frees every spawned wrapper/sound and restores
 	## character materials bit-exact, whether or not the skill finished.
 	_playing = false
-	set_process(false)
+	# A glow loop's sfx still needs a per-frame tick after the one-shot
+	# session is torn down — loop and one-shot state are independent (see
+	# stop_loop's note), so processing only really stops when neither runs.
+	set_process(not _loop_sfx.is_empty())
 	for w in _wrappers:
 		if is_instance_valid(w):
 			w.queue_free()
 	_wrappers.clear()
 	_track_wrappers.clear()
 	_track_paths.clear()
+	_sfx_objects.clear()
+	_track_sfx_times.clear()
 	for s in _sound_players:
 		if is_instance_valid(s):
 			s.queue_free()
@@ -277,6 +303,9 @@ func stop_loop() -> void:
 		if is_instance_valid(w):
 			w.queue_free()
 	_loop_wrappers.clear()
+	_loop_sfx.clear()
+	if not _playing:
+		set_process(false)  # nothing left to tick (a live one-shot keeps it on)
 	_loop_tracks = []
 	_loop_code = ""
 	_loop_character = null
@@ -296,9 +325,11 @@ func _spawn_loop_wrappers() -> void:
 	## rangeless-loop rule).
 	for track_v in _loop_tracks:
 		var track: Dictionary = track_v
-		if String(track.get("kind", "")) != "tmd":
+		var kind := String(track.get("kind", ""))
+		if kind != "tmd" and kind != "sfx":
 			continue
 		var has_play := false
+		var real_time := -1.0
 		var off: Dictionary = {"offset": Vector3.ZERO, "rot": Vector3.ZERO,
 				"bone": 11, "role": ROLE_ACTOR, "inherit_rot": true}
 		for cmd_v in (track.get("commands", []) as Array):
@@ -306,6 +337,8 @@ func _spawn_loop_wrappers() -> void:
 			var cmd_kind := String(cmd.get("kind", ""))
 			if cmd_kind == "play":
 				has_play = true
+			elif cmd_kind == "sfx_realtime":
+				real_time = float((cmd.get("params", {}) as Dictionary).get("real_time", -1.0))
 			elif cmd_kind == "base":
 				# sk610011's base command runs at spawn time (frame 0):
 				# apply it before "play" spawns rather than waiting for a
@@ -320,6 +353,25 @@ func _spawn_loop_wrappers() -> void:
 				}
 		if not has_play:
 			continue
+		if kind == "sfx":
+			# A glow's sfx track has no AnimationPlayer to force-loop: the
+			# SfxObject just runs its own clock forever off _process (see
+			# _tick_sfx), so the loop set needs processing on regardless of
+			# whether a one-shot session is live.
+			if not sfx_enabled:
+				continue
+			var obj := _sfx_library.instantiate(String(track.get("name", "")))
+			if obj == null:
+				continue
+			add_child(obj)
+			_loop_wrappers.append(obj)
+			_loop_sfx.append(obj)
+			_bind_wrapper(obj, off, _loop_character)
+			if real_time >= 0.0:
+				obj.set_total_time(real_time)
+			obj.play()
+			set_process(true)
+			continue
 		var wrapper := _spawn_effect_wrapper(String(track.get("name", "")))
 		if wrapper == null:
 			continue
@@ -329,13 +381,38 @@ func _spawn_loop_wrappers() -> void:
 
 
 func _process(delta: float) -> void:
+	# Loop sfx tick regardless of the one-shot session (a glow with particles
+	# keeps running while nothing else plays).
 	if not _playing:
+		_tick_sfx(delta, _loop_sfx)
 		return
 	_time += delta
 	_run_due_commands()
+	# After _update_paths(), never before: an sfx object in flight must read
+	# this frame's path pose as its emitter matrix, or every particle spawns
+	# one frame behind the effect it belongs to.
 	_update_paths()
+	_tick_sfx(delta, _sfx_objects)
+	_tick_sfx(delta, _loop_sfx)
 	_update_color(delta)
 	_maybe_finish()
+
+
+func _camera_transform() -> Transform3D:
+	## The emitter's billboard/particle basis comes from the live camera.
+	## Headless runs (unit tests) have no Camera3D at all — identity is the
+	## documented fallback, not an error.
+	var cam := get_viewport().get_camera_3d() if is_inside_tree() else null
+	return cam.global_transform if cam != null else Transform3D.IDENTITY
+
+
+func _tick_sfx(delta: float, objects: Array) -> void:
+	if objects.is_empty():
+		return
+	var cam := _camera_transform()
+	for o in objects:
+		if is_instance_valid(o):
+			(o as SfxObject).tick(delta, cam)
 
 
 func _maybe_finish() -> void:
@@ -384,16 +461,13 @@ func _run_due_commands() -> void:
 func _run_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
 	var kind: String = track.get("kind", "")
 	if kind in DEFERRED_KINDS:
-		# sfx/camera/sword_trace: cataloged, not played (C2/C3). This also
-		# drops any "path" COMMAND riding an sfx track (80/102 shipped path
-		# commands do) — behaviorally correct today since sfx tracks spawn
-		# no wrapper until C2, so there is nothing to fly yet. When C2 adds
-		# sfx wrappers, they get path flight for free through this same
-		# tmd-track machinery (_arm_path/_update_paths) — no new code needed.
+		# camera/sword_trace: cataloged, not played (C3).
 		return
 	match kind:
 		"tmd":
 			_run_tmd_command(ti, track, cmd)
+		"sfx":
+			_run_sfx_command(ti, track, cmd)
 		"sound":
 			_run_sound_command(track, cmd)
 		"motion":
@@ -412,7 +486,8 @@ func _run_tmd_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
 		# base command: {offset, rot, base_bone, base_character, inherit_pos,
 		# inherit_rot} — base_bone/base_character select the anchor
 		# (_bind_wrapper's ROLE_ACTOR + real-bone rule); inherit_pos is not
-		# consulted (glyph coverage TODO, no shipped skill needs it yet).
+		# consulted — 668 tmd tracks and 402 sfx tracks set it, a known
+		# follow-up (see the design doc's §8 known deviations).
 		var params: Dictionary = cmd.get("params", {})
 		var offset := _vec3_from(params.get("offset", []))
 		var rot := _vec3_from(params.get("rot", []))
@@ -454,6 +529,86 @@ func _run_tmd_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
 	if player != null:
 		_pending_wrappers += 1
 		player.animation_finished.connect(_on_wrapper_animation_finished.bind(_session))
+
+
+# === sfx track: particle-effect spawn + bind (C2) ===
+
+func _run_sfx_command(ti: int, track: Dictionary, cmd: Dictionary) -> void:
+	## Port of the sfx component's command handling (spec §4.5): PLAY spawns
+	## an SfxObject on a track with none and RESTARTS the live one otherwise
+	## (never a second object — see the play branch), STOP clears+frees it, realtime
+	## rescales its clock (stashed if it precedes PLAY), base/path reuse the
+	## tmd machinery — the SfxObject reads its own global_transform each
+	## tick as the emitter matrix, so binding and path flight need nothing
+	## sfx-specific. Deliberately NOT counted in _pending_wrappers: an
+	## emitter has no animation_finished to wait on and never "finishes" on
+	## its own, so gating natural finish on one would hang every skill.
+	var cmd_kind: String = cmd.get("kind", "")
+	var live: SfxObject = _track_wrappers.get(ti) as SfxObject
+	if live != null and not is_instance_valid(live):
+		live = null
+	match cmd_kind:
+		"base":
+			var params: Dictionary = cmd.get("params", {})
+			_track_offsets[ti] = {"offset": _vec3_from(params.get("offset", [])),
+					"rot": _vec3_from(params.get("rot", [])),
+					"bone": int(params.get("base_bone", 11)),
+					"role": int(params.get("base_character", ROLE_ACTOR)),
+					"inherit_rot": bool(params.get("inherit_rot", true))}
+			if live != null:
+				_bind_wrapper(live, _track_offsets[ti])
+		"path":
+			_arm_path(ti, cmd)
+		"sfx_realtime":
+			# A realtime is a track property, not a one-shot instruction: it
+			# survives STOP and applies to whatever object PLAY spawns next
+			# (the original's total-time setting persists for the component's
+			# whole life — sk040023 track 8 issues play -> realtime -> stop
+			# -> play and the re-spawned object must keep the same 3.0s).
+			# Always stash it, and also push it live when an object exists
+			# so a mid-play realtime takes effect immediately.
+			var secs := float((cmd.get("params", {}) as Dictionary).get("real_time", 1.0))
+			_track_sfx_times[ti] = secs
+			if live != null:
+				live.set_total_time(secs)
+		"stop":
+			if live != null:
+				live.stop()
+				_wrappers.erase(live)
+				_sfx_objects.erase(live)
+				_track_wrappers.erase(ti)
+				_track_paths.erase(ti)
+				live.queue_free()
+		"play":
+			if live != null:
+				# Re-PLAY on a live track (84 of the 921 shipped sfx tracks do
+				# this with no intervening STOP — sk040021 tracks 4/5, sk040023
+				# track 9): the original restarts the SAME object's timeline
+				# and keeps its particles, which is exactly SfxObject.play().
+				# Never a second object — spawning one orphans the first: it
+				# stays in _wrappers/_sfx_objects ticking and emitting but is
+				# no longer addressable, so a later base/path/sfx_realtime/STOP
+				# reaches only the newer one (double particle density from the
+				# second play on, and an emitter that outlives its own STOP).
+				live.play()
+				return
+			if not sfx_enabled:
+				return
+			var obj := _sfx_library.instantiate(String(track.get("name", "")))
+			if obj == null:
+				return  # unparseable/absent .sfd — skip this component only
+			add_child(obj)
+			_wrappers.append(obj)
+			_sfx_objects.append(obj)
+			_track_wrappers[ti] = obj
+			var off: Dictionary = _track_offsets.get(ti, {"offset": Vector3.ZERO, "rot": Vector3.ZERO,
+					"bone": 11, "role": ROLE_ACTOR, "inherit_rot": true})
+			_bind_wrapper(obj, off)
+			if _track_sfx_times.has(ti):
+				obj.set_total_time(float(_track_sfx_times[ti]))
+			obj.play()
+		_:
+			pass  # camoffset never ships on sfx tracks (census); ignore unknowns
 
 
 func _spawn_effect_wrapper(name: String) -> Node3D:

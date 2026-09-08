@@ -4,6 +4,31 @@ Notable changes to the Yogurting Re project. Versions follow a simple
 scheme: **minor** bumps for new user-facing features, **patch** bumps
 for fixes, asset re-exports, and documentation.
 
+## [0.10.0] - 2026-09-08
+
+### Added
+- **Particle effects** — all 154 shipped particle effects now play.
+  Skill scripts spawn their particle emitters and billboards alongside
+  the effect models, motion, and sound: fire, smoke, sparks, rings,
+  status auras, projectile trails. The simulation follows the original
+  client's particle library — value graphs with their authored slopes,
+  its table-driven randomness (a replay is bit-identical), additive and
+  alpha blending, 8-bit color, and billboard alignment. Flight paths on
+  particle tracks now fly too, lifting the 0.9.0 limitation.
+- **SFX tab** in the Skills dock — browse every particle effect on its
+  own with a filter box; **Replay** (bit-identical rerun), **Stop**,
+  **Loop**, and a **Hide character** toggle that clears the character,
+  target, and ground so the effect plays alone over a small axes marker.
+
+### Fixed
+- Trackpad scrolling or pinching over the Skills dock no longer orbits or
+  zooms the camera.
+
+### Known limitations
+- Camera-shake and sword-trace tracks are still not played.
+- Particle emitters follow the character even on tracks authored not to
+  inherit its position (same as effect models today).
+
 ## [0.9.0] - 2026-08-30
 
 ### Added

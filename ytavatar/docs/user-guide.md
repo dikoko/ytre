@@ -57,8 +57,8 @@ animation-mode dropdown, and an animation selector.
 ## Skills
 
 The **Skills** dock (avatar modes) plays the converted skill scripts —
-effect models, caster motion, sound, and color flashes in sync. It has
-two tabs:
+effect models, particle effects, caster motion, sound, and color flashes
+in sync. It has three tabs:
 
 - **Equipped** — driven by the weapon slot. Equipping a weapon switches
   the character into that weapon style's battle stance and lists the
@@ -71,6 +71,14 @@ two tabs:
 - **All** — browse all 742 skills, grouped by family with Korean names
   and a filter box. Weapon skills play even without the matching weapon
   (a "needs {class}" hint shows what they belong to).
+- **SFX** — browse all 154 particle effects (emitters and billboards)
+  on their own, with a filter box. Double-click one to play it at the
+  character's anchor; **Replay** restarts it as a bit-identical rerun,
+  **Stop** clears it, **Loop** repeats it every cycle. **Hide character**
+  (on by default) hides the character, the target and the ground so the
+  effect plays alone over a small axes marker (X red, Y green, Z blue,
+  in the character's frame). Playing a skill from another tab stops the
+  browser effect and vice versa.
 
 **Target** (row above the tabs) — place a practice target 2.5 m in
 front of the character: an **Avatar** (the opposite gender) or a

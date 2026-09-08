@@ -42,7 +42,7 @@ tools/avatar_export/
 ├── pyproject.toml       # uv project config + pytest config
 ├── scripts/             # runnable pipeline + debug scripts (see below)
 ├── src/
-│   ├── parsers/         # tmd_parser, mlib_parser, swp_parser, skl_parser
+│   ├── parsers/         # tmd_parser, mlib_parser, swp_parser, skl_parser, sfd_parser
 │   ├── exporters/       # mesh / skeleton / animation / part / material /
 │   │                    # weapon / prop
 │   ├── validators/      # mesh + skeleton sanity checks (used by tests)
@@ -74,13 +74,19 @@ uv run python scripts/21_export_npcs.py
 # Motion-id map for the skill system (reads the MLIBs, writes
 # ytavatar/client/assets/avatars/base/motion_ids.json)
 uv run python scripts/47_export_motion_ids.py
+
+# Particle effects (reads every .sfd + the two random tables, writes
+# ytavatar/client/assets/effects/{sfx.json,sfx_random.json,sfx_textures/}
+# and the random-helper parity fixture the Godot tests replay)
+uv run python scripts/48_export_sfx.py
 ```
 
 The skill and weapon catalogs (`ytavatar/client/assets/effects/skills.json`,
 `weapons.json`, `bones.json`) ship pre-generated — their generator depends
 on tooling not included here. The `.skl` skill-script parser
-(`src/parsers/skl_parser.py`) and its test suite run against the bundled
-`refs/` data directly.
+(`src/parsers/skl_parser.py`), the `.sfd` particle-effect parser
+(`src/parsers/sfd_parser.py`) and their test suites run against the
+bundled `refs/` data directly.
 
 ## Scripts reference
 
